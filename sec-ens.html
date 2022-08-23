@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fr-CA">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MaDIR Les ensembles</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathématiques discrètes">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Sauter au contenu</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
+\newcommand{\Z}{\mathbb{Z}}                
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Prob}[1]{\mathbb{P}\left(#1\right)}
+\newcommand{\Probc}[2]{\mathbb{P}\left(#1~\left|\right .~#2\right)}
+\newcommand{\E}[1]{\mathbb{E}\left(#1\right)}
+\newcommand{\Ec}[2]{\mathbb{E}\left(#1~\left|\right .~#2\right)}
+\newcommand{\indicator}[1]{1{\hskip -2.5 pt}\hbox{I}_{\left\{ {#1} \right\} }}
+\newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\RH}{\overset{\text{\scalebox{0.8}{ R.H.}}}{=}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\vecl}[1]{\overrightarrow{#1}}
+\newcommand{\vecd}[2]{\begin{pmatrix}#1 \\ #2\end{pmatrix}}
+\newcommand{\vecddd}[3]{\begin{pmatrix}#1 \\ #2 \\ #3\end{pmatrix}}
+\newcommand{\pscal}[2]{\vecl{#1}\cdot \vecl{#2}}
+\newcommand{\matcold}[4]{\begin{pmatrix}#1 &amp; #3 \\ #2 &amp; #4\end{pmatrix}}
+\newcommand{\matcolt}[9]{\begin{pmatrix}#1 &amp; #4 &amp; #7 \\ #2 &amp; #5 &amp; #8 \\ #3 &amp; #6 &amp; #9\end{pmatrix}}
+\newcommand{\matsimile}[2]{\overset{\scriptsize L_{#1}\leftrightarrow L_{#2}}{\sim}}
+\newcommand{\matsimils}[2]{\overset{\scriptsize #2L_{#1}\rightarrow L_{#1}}{\sim}}
+\newcommand{\matsimilc}[3]{\overset{\scriptsize #2L_{#1}+L_{#3}\rightarrow L_{#3}}{\sim}}
+\newcommand{\matII}{\begin{pmatrix} 1&amp; 0 \\  0 &amp; 1\end{pmatrix}}
+\newcommand{\matIII}{\begin{pmatrix} 1&amp; 0 &amp; 0\\  0 &amp; 1 &amp; 0 \\ 0&amp; 0&amp; 1\end{pmatrix}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\vspan}{span}
+\DeclareMathOperator{\Det}{det}
+\DeclareMathOperator{\pgcd}{pgcd}
+\DeclareMathOperator{\ppcm}{ppcm}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\CQFD}{\begin{flushright}   
+$\blacksquare$
+\end{flushright}}
+\newcommand{\cqfd}{\begin{flushright}
+$\Box$
+\end{flushright}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes:</span> <span class="subtitle">Version préliminaire</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap-ensfct.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-ensfct.html" title="Haut">Haut</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-opens.html" title="Suivant">Suivant</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="chap-ensfct.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-ensfct.html" title="Haut">Haut</a><a class="next-button button toolbar-item" href="sec-opens.html" title="Suivant">Suivant</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chap-ensfct.html" data-scroll="chap-ensfct" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a><ul>
+<li><a href="sec-ens.html" data-scroll="sec-ens" class="active">Les ensembles</a></li>
+<li><a href="sec-opens.html" data-scroll="sec-opens" class="internal">Opérations sur les ensembles</a></li>
+<li><a href="sec-fonctions.html" data-scroll="sec-fonctions" class="internal">Les fonctions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-logique.html" data-scroll="chap-logique" class="internal"><span class="codenumber">2</span> <span class="title">Logique mathématique</span></a><ul>
+<li><a href="sec-logprop.html" data-scroll="sec-logprop" class="internal">La logique propositionnelle</a></li>
+<li><a href="sec-eqlogfnc.html" data-scroll="sec-eqlogfnc" class="internal">Équivalence logique et formes normales</a></li>
+<li><a href="sec-propquant.html" data-scroll="sec-propquant" class="internal">Les propositions quantifiées</a></li>
+<li><a href="sec-circuits.html" data-scroll="sec-circuits" class="internal">Circuits logiques</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-reptheonombres.html" data-scroll="chap-reptheonombres" class="internal"><span class="codenumber">3</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a><ul>
+<li><a href="sec-representation.html" data-scroll="sec-representation" class="internal">Représentation des nombres</a></li>
+<li><a href="sec-divisibilite.html" data-scroll="sec-divisibilite" class="internal">La divisibilité dans les entiers</a></li>
+<li><a href="sec-modulo.html" data-scroll="sec-modulo" class="internal">Arithmétique modulaire</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-denombrement.html" data-scroll="chap-denombrement" class="internal"><span class="codenumber">4</span> <span class="title">Dénombrement</span></a><ul>
+<li><a href="section-11.html" data-scroll="section-11" class="internal">Exercices principes d'étiquetage</a></li>
+<li><a href="section-12.html" data-scroll="section-12" class="internal">Exercices billes et urnes</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Rédigé avec PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-ens"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Les ensembles</span>
+</h2>
+<section class="introduction" id="intro-ens"><p id="p-2">L'objet fondamental à la base des mathématiques discrètes (voire même des mathématiques en général) est une structure appelée <em class="emphasis">ensemble</em>. Un ensemble est une structure qui regroupe des objets. On peut parler de l'ensemble des étudiants du programme Sciences informatiques et mathématiques, de l'ensemble des arbres sur le terrain du cégep ou encore l'ensemble des nombres naturels compris entre <span class="process-math">\(4\)</span>  et <span class="process-math">\(42\text{.}\)</span></p>
+<p id="p-3">Le terme <span class="process-math">\(objet\)</span> est pris dans son sens intuitif et large. Au début de la théorie des ensembles, plusieurs paradoxes furent relevés, le plus célèbre par Bertrand Russel. On peut pallier à ces paradoxes en donnant une définition axiomatique de la théorie des ensembles. Pour ce qui suit, ce n'est pas nécessaire. On utilisera plutôt l'approche naïve de la théorie des ensembles. Un ensemble sera donc bien défini si, étant donné tout objet, on peut déterminer sans aucun doute son appartenance ou non à l'ensemble.</p>
+<p id="p-4">Dans cette section, on définit la notion d'ensemble, la description en extension et en compréhension d'un ensemble, la relation d'appartenance d'un objet à un ensemble, la relation entre deux ensembles et la cardinalité d'un ensemble. On donne aussi des exemples importants d'ensembles, dont l'ensemble vide.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">1.1.1</span> <span class="title">Définitions et exemples</span>
+</h3>
+<p id="p-5">On commence avec la définition d'un ensemble. Un ensemble sera bien défini si on peut toujours déterminer l'appartenance ou non appartenance d'un objet à cet ensemble sans aucun doute. Pour voir un exemple d'ensemble qui n'est pas bien défini, on pourra consulter l'exercice <code class="code-inline tex2jax_ignore">[provisional cross-reference: exo-Russel]</code>.</p>
+<article class="definition definition-like" id="def-ensemble"><h4 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Un ensemble.</span>
+</h4>
+<p id="p-6">Un ensemble est une collection non ordonnée d'objets. On appelle aussi les objets des éléments ou des membres. Typiquement, on dénote un ensemble par une lettre majuscule du début de l'alphabet.</p>
+<p id="p-7">Bien que les ensembles soient normalement utilisés pour regrouper des objets avec des propriétés similaires, rien n'oblige que ce soit le cas. On peut même avoir un ensemble dont les éléments sont eux-mêmes des ensembles.</p></article><p id="p-8">On peut décrire un ensemble de plusieurs manières. La plus simple, mais pas toujours pratique ou même possible, est d'énumérer ses éléments. On dit alors que l'ensemble est décrit en <em class="emphasis">extension</em>. On utilisera les accolades <span class="process-math">\(\{, \}\)</span>pour encadrer les éléments d'un ensemble. Ceci est cohérent avec la notion d'ensemble de plusieurs langages de programmation, dont Python/Sage, qui sera utilisé à plusieurs reprises dans ces notes.</p>
+<article class="example example-like" id="ex-ensext"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-ensext"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Des ensembles décrits en extension.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-ensext"><article class="example example-like"><p id="p-9">On veut décrire les ensembles suivants en extension.</p>
+<ol class="decimal">
+<li id="li-1"><p id="p-10">L'ensemble des entiers compris entre <span class="process-math">\(3\)</span> et <span class="process-math">\(9\text{,}\)</span> inclusivement.</p></li>
+<li id="li-2"><p id="p-11">L'ensemble des lettres de l'alphabet qui composent le nom de famille de l'auteur, sans distinguer majuscule et minuscule.</p></li>
+<li id="li-3"><p id="p-12">L'ensemble des entiers strictement positifs et inférieurs à <span class="process-math">\(100\)</span> qui sont aussi des carrés parfaits.</p></li>
+<li id="li-4"><p id="p-13">L'ensemble dont les éléments sont les trois ensembles précédents.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-14">Il peut y avoir plus d'une manière valide pour décrire chacun de ces ensembles. En voici une:</p>
+<ol class="decimal">
+<li id="li-5"><p id="p-15"><span class="process-math">\(A=\{3,4,5,6,7,8,9\}\text{;}\)</span> 
+              <p id="p-16"><span class="process-math">\(B=\{t,u,r,c,o,e\}\text{;}\)</span></p>
+            </p></li>
+<li id="li-7"><p id="p-17"><span class="process-math">\(C=\{1,4,9,16,\ldots, 64,81\}\text{.}\)</span></p></li>
+<li id="li-8"><p id="p-18"><span class="process-math">\(\displaystyle D=\{A,B,C\}=\{\{3,4,5,6,7,8,9\},\{t,u,r,c,o,e\},\{1,4,9,16,\ldots, 64,81\}\}\)</span></p></li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Remarque</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Répétition d'éléments.</span>
+</h4>
+<p id="p-19">Tel que mentionné dans la <a href="" class="xref" data-knowl="./knowl/def-ensemble.html" title="Définition 1.1.1: Un ensemble">définition</a>, un ensemble est une collection non ordonnée d'objets. Cela signifie que l'ordre n'est pas important dans la description de l'ensemble. Ainsi, l'ensemble <span class="process-math">\(A^{'}=\{4,5,3,7,9,8,6\}\)</span> est en fait le même ensemble que l'ensemble <span class="process-math">\(A\)</span> de l'exemple <a href="" class="xref" data-knowl="./knowl/ex-ensext.html" title="Exemple 1.1.2: Des ensembles décrits en extension">1.1.2</a>. De plus, comme c'est l'appartenance d'un objet à l'ensemble qui est important, la répétion n'est pas nécessaire. L'ensemble <span class="process-math">\(B^{'}=\{t,u,r,c,o,t,t,e\}\)</span> est le même ensemble que l'ensemble <span class="process-math">\(B\)</span> de l'exemple <a href="" class="xref" data-knowl="./knowl/ex-ensext.html" title="Exemple 1.1.2: Des ensembles décrits en extension">1.1.2</a>.</p></article><p id="p-20">Dans la description en extension de l'ensemble des carrés parfaits inférieurs à <span class="process-math">\(100\text{,}\)</span> on a utilisé les «…» afin de limiter l'écriture. On comprend que la suite définie par les premiers termes de la description continue de manière naturelle dans cette omission. Souvent, pour décrire un ensemble contenant beaucoup d'éléments, même une infinité, on utilisera la description en compréhension de l'ensemble. On énonce alors la (ou les) propriété que possèdent les éléments de l'ensemble à l'intérieur même de la description. Dans ce cas, on utilisera souvent pour dénoter un élément arbitraire de l'ensemble une lettre minuscule analogue à celle utilisée pour le nom de l'ensemble ou encore ayant un sens particulier dans le contexte.</p>
+<article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Des ensembles décrits en compréhension.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-21">On veut décrire les ensembles suivants en compréhension.</p>
+<ol class="decimal">
+<li id="li-9"><p id="p-22"><span class="process-math">\(\displaystyle A=\{a,e,i,o,u,y\}\)</span></p></li>
+<li id="li-10"><p id="p-23"><span class="process-math">\(\displaystyle B=\{0,2,4,6,8\}\)</span></p></li>
+<li id="li-11"><p id="p-24"><span class="process-math">\(\displaystyle C=\{J,e,a,n,-,S,é,b,s,t,i\}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-25">Il peut y avoir plus d'une manière valide pour décrire chacun de ces ensembles. En voici une pour chacun:</p>
+<ol class="decimal">
+<li id="li-12"><p id="p-26"><span class="process-math">\(\displaystyle A=\{v~|~ v \text{ est une voyelle de l'alphabet }\}\)</span></p></li>
+<li id="li-13"><p id="p-27"><span class="process-math">\(B=\{b~|~ b \text{ est un chiffre pair}\}\text{;}\)</span></p></li>
+<li id="li-14"><p id="p-28"><span class="process-math">\(C=\{c~|~ c \text{ est un caractère  utilisé pour écrire le prénom de l'auteur}\}\text{.}\)</span></p></li>
+</ol>
+</div></div>
+</div></article></div>
+<p id="p-29">Dans la description en compréhension, on sépare la variable utilisée de la condition avec une barre verticale. Cette barre devrait se lire comme l'expression « tel que ». On voit souvent le «deux points (:) » comme autre possibilité de notation.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">1.1.2</span> <span class="title">Relation entre deux ensembles</span>
+</h3>
+<p id="p-30">Étant donné un objet quelconque <span class="process-math">\(a\)</span> et un ensemble <span class="process-math">\(A\text{,}\)</span> on écrit <span class="process-math">\(a\in A\)</span> (se lit <span class="process-math">\(a\)</span> est dans <span class="process-math">\(A\)</span> ou encore <span class="process-math">\(a\)</span> appartient à <span class="process-math">\(A\)</span>) si <span class="process-math">\(a\)</span> est un élément de l'ensemble <span class="process-math">\(A\)</span> et <span class="process-math">\(a\notin A\)</span> (<span class="process-math">\(a\)</span> n'appartient pas à <span class="process-math">\(A\)</span>) sinon. Puisque plusieurs descriptions sont possibles pour un même ensemble, il peut être pratique de déterminer si deux ensembles sont égaux. On définit ci-dessous deux relations possibles entre deux ensembles, celle d'inclusion et celle d'égalité.</p>
+<article class="definition definition-like" id="def-ssens"><h4 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Relation d'inclusion.</span>
+</h4>
+<p id="p-31">Soit <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> deux ensembles avec la propriété que, pour tout élément <span class="process-math">\(a\in A\text{,}\)</span> on a aussi <span class="process-math">\(a\in B\text{.}\)</span> On dit alors que <span class="process-math">\(A\)</span> est un sous-ensemble de <span class="process-math">\(B\)</span> et on écrit  <span class="process-math">\(A\subseteq B\text{.}\)</span> Si on est certain que les ensembles sont différents, on pourra utiliser le symbole d'inclusion stricte, <span class="process-math">\(\subset\text{.}\)</span> Ces symboles font penser aux symboles pour les inégalités. Ainsi, bien que d'usage beaucoup moins répandu, on peut aussi écrire <span class="process-math">\(B\supseteq A\text{.}\)</span></p>
+<p id="p-32">Ces symboles existent aussi dans leur version «négative» (<span class="process-math">\(\not\subseteq,\not\subset,\not\supseteq,\not\supset\)</span>), utilisés pour la non inclusion d'un ensemble dans un autre. De plus, une variante souvent utilisée pour mettre l'emphase sur un sous-ensemble stricte est le symbole <span class="process-math">\(\subsetneq\text{.}\)</span></p></article><p id="p-33">On peut évidemment vérifier qu'un ensemble est un sous-ensemble d'un autre, mais on peut aussi créer les sous-ensembles à partir d'un ensemble.</p>
+<article class="example example-like" id="ex-enspuiss"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-enspuiss"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Les sous-ensembles d'un ensemble.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-enspuiss"><article class="example example-like"><p id="p-34">On considère l'ensemble <span class="process-math">\(A=\{a,b,c\}\text{.}\)</span> On cherche tous les sous-ensembles de <span class="process-math">\(A\)</span> possibles contenant au moins un élément.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-35">L'ensemble <span class="process-math">\(A\)</span> contient trois éléments. Un sous-ensemble pourrait donc potentiellement contenir un, deux ou même trois éléments. On énumère les possibilités ci-dessous.</p>
+<ul class="disc">
+<li id="li-15"><p id="p-36"><span class="process-math">\(S_1=\{a\},S_2=\{b\}\)</span> et <span class="process-math">\(S_{3}=\{c\}\text{,}\)</span> qui ne contiennent qu'un élément.</p></li>
+<li id="li-16"><p id="p-37"><span class="process-math">\(S_4=\{a,b\},S_{5}=\{a,c\}\)</span> et <span class="process-math">\(S_6=\{b,c\}\)</span> qui en contiennent deux.</p></li>
+<li id="li-17"><p id="p-38"><span class="process-math">\(A=\{a,b,c\}\)</span> lui-même, qui contient trois éléments.</p></li>
+</ul>
+<p id="p-39">Plus tard, on verra comment compter tous les sous-ensembles possibles à partir d'un ensemble ayant <span class="process-math">\(n\)</span> éléments. Avec une petite précision, on reparlera de l'ensemble de tous les sous-ensembles possibles à la définition <a href="" class="xref" data-knowl="./knowl/def-enspuiss.html" title="Définition 1.1.12: L'ensemble des puissances">1.1.12</a>.</p>
+</div></div>
+</div></article></div>
+<article class="definition definition-like" id="def-ensegaux"><h4 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Relation d'égalité.</span>
+</h4>
+<p id="p-40">Soit <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> deux ensembles. On dit que les ensembles sont égaux, et on écrit <span class="process-math">\(A=B\text{,}\)</span> si et seulement s'ils sont formés des mêmes éléments.</p>
+<p id="p-41">Une manière pratique de déterminer si deux ensembles sont égaux est de montrer qu'à la fois <span class="process-math">\(A\subseteq B\)</span> et <span class="process-math">\(B\subseteq A\text{.}\)</span></p></article><p id="p-42">On regarde des exemples de sous-ensembles et d'ensembles égaux.</p>
+<article class="example example-like" id="ex-relens"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-relens"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Sous-ensemble et égalité.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-relens"><article class="example example-like"><p id="p-43">On considère les ensembles suivants:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
+\begin{align*}
+A&amp;=\{2,4,6\}\\
+B&amp;=\{n~|~ n \text{ est un nombre entier compris entre }0\text{ et }9\text{ inclusivement}\}\\
+C&amp;=\{4,6,2\}\\
+D&amp;=\{n~|~ -1\leq n\leq 9\}
+\end{align*}
+</div>
+<p id="p-44">On peut remarquer les relations suivantes: <span class="process-math">\(C\subseteq A\text{,}\)</span><span class="process-math">\(A\subseteq C\text{,}\)</span><span class="process-math">\(A\subseteq B\text{,}\)</span><span class="process-math">\(B\subset D\text{,}\)</span><span class="process-math">\(A=C\text{.}\)</span> On aurait pu noter sans problème que <span class="process-math">\(B\subsetneq D\)</span> (équivalent à <span class="process-math">\(\subset\text{,}\)</span> ou même <span class="process-math">\(B\subseteq D\)</span> (moins strict, mais quand même vrai), mais pas que <span class="process-math">\(A\subset C\text{.}\)</span></p></article></div>
+<p id="p-45">Le nombre d'éléments dans un ensemble est appelé la <em class="emphasis">cardinalité</em> de l'ensemble. Pour un ensemble <span class="process-math">\(A\text{,}\)</span> on la note <span class="process-math">\(\text{card}(A)=|A|\text{.}\)</span> Les ensembles <span class="process-math">\(A,B,C\)</span> de l'exemple <a href="" class="xref" data-knowl="./knowl/ex-relens.html" title="Exemple 1.1.8: Sous-ensemble et égalité">1.1.8</a> ont respectivement comme cardinalité <span class="process-math">\(|A|=3,|B|=10\)</span> et <span class="process-math">\(|C|=3\text{.}\)</span></p>
+<p id="p-46">La cardinalité d'un ensemble peut être n'importe quel nombre naturel ou même infini. Un ensemble est dit fini si sa cardinalité est un nombre naturel et infini sinon.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">1.1.3</span> <span class="title">Représentation graphique d'ensembles</span>
+</h3>
+<p id="p-47">Il peut être utile d'avoir une représentation graphique de la notion d'ensemble et des concepts associés. Pour cela on peut utiliser un diagramme de Venn. Dans un tel diagramme, on identifie l'ensemble des tous les objets étudiés par un rectangle. On le notera <span class="process-math">\(\Omega\)</span> (la lettre grecque omega, majuscule). On l'appelle souvent le référentiel ou encore l'ensemble univers. Dans ce rectangle, un certain nombre d'ensembles peuvent être illustrés, souvent par des cercles.</p>
+<p id="p-48">À titre d'exemple, on prend comme ensemble univers les  chiffres arabes <span class="process-math">\(\Omega=\{0,1,\ldots ,9\}\)</span> et on considère les deux sous-ensembles suivants: <span class="process-math">\(A=\{1,2,3,4\},B=\{3,4,5,6\}\text{.}\)</span> La figure suivante illustre un diagramme de Venn de ces ensembles.</p>
+<figure class="figure figure-like" id="fig-Venn1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/img-Venn1.svg" role="img" class="contained" alt="Le diagramme de Venn des ensembles Omega, A et B est illustré. On voit les éléments à l'intérieur de chaque ensemble."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.9<span class="period">.</span></span><span class="space"> </span>Un diagramme de Venn</figcaption></figure><p id="p-49">On peut remarquer dans la figure <a href="" class="xref" data-knowl="./knowl/fig-Venn1.html" title="Figure 1.1.9">1.1.9</a> que les éléments <span class="process-math">\(3,4\)</span> sont à la fois dans <span class="process-math">\(A\)</span> et dans <span class="process-math">\(B\text{.}\)</span> C'est un cas particulier de l'intersection de deux ensembles, qui sera défini dans la section <a href="sec-opens.html" class="internal" title="Section 1.2: Opérations sur les ensembles">1.2</a>.</p>
+<article class="example example-like" id="ex-Venn"><a href="" data-knowl="" class="id-ref example-knowl original has-interactive" data-refid="hk-ex-Venn"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Diagramme de Venn: dynamique.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-Venn"><article class="example example-like"><p id="p-50">On peut voir un diagramme de Venn associé à trois ensembles <span class="process-math">\(A,B,C\text{.}\)</span></p>
+<figure class="figure figure-like" id="fig-sageVenn1"><div style="width:600px;">Il est possible de modifier les éléments des ensembles et de visualiser dynamiquement comment le diagramme évolue.</div>
+<iframe id="interactive-1" width="600" height="750" src="interactive-1-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.11<span class="period">.</span></span><span class="space"> </span>Diagramme de Venn interactif</figcaption></figure></article></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">1.1.4</span> <span class="title">Ensembles particuliers</span>
+</h3>
+<p id="p-51">On donne maintenant la définition de certains ensembles importants. L'un deux, l'ensemble univers a déjà été mentionné. Un autre ensemble d'une grande importance est l'ensemble vide. On le note par <span class="process-math">\(\emptyset\)</span> ou encore <span class="process-math">\(\{\}\text{.}\)</span> Sa cardinalité est de <span class="process-math">\(0\text{.}\)</span> C'est le seul ensemble qui possède cette propriété. Il possède aussi la propriété d'être un sous-ensemble de tous les ensembles, incluant lui-même.  .</p>
+<p id="p-52">Un autre sous-ensemble a été évoqué à l'exemple <a href="" class="xref" data-knowl="./knowl/ex-enspuiss.html" title="Exemple 1.1.6: Les sous-ensembles d'un ensemble">1.1.6</a>. On en donne une définition plus précise ci-bas.</p>
+<article class="definition definition-like" id="def-enspuiss"><h4 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">L'ensemble des puissances.</span>
+</h4>Étant donné un ensemble <span class="process-math">\(A\text{,}\)</span> l'ensemble de tous les sous-ensembles formés des éléments de <span class="process-math">\(A\)</span> est appelé l'ensemble des puissances (ou des parties) de <span class="process-math">\(A\text{.}\)</span> On le note par <span class="process-math">\(\mathscr{P}(A)\text{.}\)</span></article><p id="p-53">Si on ajoute l'ensemble vide au sous-ensembles trouvés à l'exemple <a href="" class="xref" data-knowl="./knowl/ex-enspuiss.html" title="Exemple 1.1.6: Les sous-ensembles d'un ensemble">1.1.6</a>, on obtient l'ensemble des puissances de <span class="process-math">\(A\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-enspuiss.html">
+\begin{equation*}
+\mathscr{P}(A)=\{\emptyset,A_1,A_2,A_3,A_4,A_5,A_6,A\}\text{.}
+\end{equation*}
+</div>
+<p id="p-54">On termine avec la liste des principaux ensembles de nombres qui seront utilisés dans ces notes.</p>
+<ul class="disc">
+<li id="li-18"><p id="p-55">L'ensemble des nombres naturels, noté <span class="process-math">\(\mathbb{N}=\{0,1,2,\ldots\}\text{.}\)</span><aside class="aside aside-like" id="aside-1"><h4 class="heading"><span class="title">En passant.</span></h4>
+<p id="p-56">Il n'y a pas de consensus quant à l'inclusion de l'élément <span class="process-math">\(0\)</span> dans l'ensemble des nombres naturels. Certains auteurs vont l'inclure, d'autres non. L'important est la cohérence à même un texte. Parce qu'on fera une utilisation du langage informatique python/Sage et que ceux-ci commencent leur numérotation à <span class="process-math">\(0\text{,}\)</span> on a choisit de l'inclure ici. Si on veut parler des naturels en excluant <span class="process-math">\(0\text{,}\)</span> on le mentionnera explicitement et on dénotera l'ensemble par <span class="process-math">\(\N^{*}\)</span> ou encore <span class="process-math">\(\N\backslash\{0\}\)</span> (l'opération <span class="process-math">\(\backslash\)</span> sera définie dans la section <a href="sec-opens.html" class="internal" title="Section 1.2: Opérations sur les ensembles">1.2</a>).</p></aside></p></li>
+<li id="li-19"><p id="p-57">L'ensemble des entiers, noté <span class="process-math">\(\Z=\{\ldots, -2,-1,0,1,2,\ldots \}\text{.}\)</span></p></li>
+<li id="li-20"><p id="p-58">L'ensemble des nombres rationnels, noté <span class="process-math">\(\Q=\left\{\left.\frac{a}{b}~\right|~ a,b\in \Z \text{ et } b\neq 0\right\}\text{.}\)</span></p></li>
+<li id="li-21"><p id="p-59">L'ensemble des nombres réels, noté <span class="process-math">\(\R\text{.}\)</span> Pour cet ensemble, on se fie à l'intuition de ce que sont les nombres réels, par exemple les nombres situé sur une droite infinie, car donner une définition précise est difficile. Cet ensemble sera peu utilisé, sa nature étant davantage du côté continu que discret.</p></li>
+</ul>
+<p id="p-60">Dans la description d'un ensemble en compréhension, lorsque les éléments sont des nombres, il est de bon usage de spécifier dans quel ensemble ces nombres se trouvent. Il n'y a pas de manière unique de le faire, en voici deux:</p>
+<ul class="disc">
+<li id="li-22"><p id="p-61"><span class="process-math">\(A=\{k\in \Z ~|~ k^2\leq 16\}\text{;}\)</span></p></li>
+<li id="li-23"><p id="p-62"><span class="process-math">\(A=\{k~|~ k\in \Z \text{ et } k^2\leq 16\}\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">On pourrait traduire ces deux écritures respectivement par</p>
+<ul class="disc">
+<li id="li-24"><p id="p-63">L'ensemble <span class="process-math">\(A\)</span> est composé des entiers <span class="process-math">\(k\)</span> tels que leur carré est inférieur ou égal à <span class="process-math">\(16\text{;}\)</span></p></li>
+<li id="li-25"><p id="p-64">L'ensemble <span class="process-math">\(A\)</span> est composé d'éléments <span class="process-math">\(k\)</span> tels que <span class="process-math">\(k\)</span> est un entier dont le carré est inférieur ou égal à <span class="process-math">\(16\text{.}\)</span></p></li>
+</ul>
+<p id="p-65">La précision de l'ensemble permet de déterminer avec certitude les éléments de l'ensemble. Par exemple, l'ensemble <span class="process-math">\(A\)</span> ci-dessus est <span class="process-math">\(A=\{-4,-3,-2,-1,0,1,2,3,4\}\text{,}\)</span> mais l'ensemble <span class="process-math">\(B=\{k\in \N~|~ k^2\leq 16\}\)</span> ne contient que les éléments <span class="process-math">\(\{0,1,2,3,4\}\text{.}\)</span></p>
+<article class="remark remark-like" id="remark-2"><h4 class="heading">
+<span class="type">Remarque</span><span class="space"> </span><span class="codenumber">1.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Les intervalles.</span>
+</h4>
+<p id="p-66">On délimite les ensembles par les paires d'accolades, soit en énumérant les éléments ou en donnant une description des membres. Pour les ensembles dont la cardinalité est infinie, il peut être difficile ou impossible d'énumérer les éléments. En particulier, certains sous-ensembles des nombres réels sont assez importants pour qu'on leur donne une notation propre à eux. Ce sont les intervalles. Voici quatre exemples de cette notation:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+\begin{align*}
+[a,b]&amp;=\{x\in \R~|~ a\leq x\leq b\}\\
+[a,b[&amp;=\{x\in \R~|~ a\leq x&lt; b\}\\
+]a,b]&amp;=\{x\in \R~|~ a&lt; x\leq b\}\\
+]a,b[&amp;=\{x\in \R~|~ a&lt; x&lt; b\}\text{.}
+\end{align*}
+</div>
+<p id="p-67">De plus, lorsque l'inégalité est stricte, on admet la possibilité que <span class="process-math">\(a\)</span> soit remplacé par <span class="process-math">\(-\infty\)</span> et <span class="process-math">\(b\)</span> par <span class="process-math">\(\infty\text{.}\)</span></p></article></section><section class="conclusion" id="concl-ens"><h3 class="heading">En résumé.<span></span>
+</h3>
+<p id="p-68">Les points importants de cette section sont:</p>
+<ul class="disc">
+<li id="li-26"><p id="p-69">La définition d'un <a href="" class="xref" data-knowl="./knowl/def-ensemble.html" title="Définition 1.1.1: Un ensemble">ensemble</a>.</p></li>
+<li id="li-27"><p id="p-70">Les écritures en extension et en compréhension d'un ensemble.</p></li>
+<li id="li-28"><p id="p-71">La relation <a href="" class="xref" data-knowl="./knowl/def-ssens.html" title="Définition 1.1.5: Relation d'inclusion">d'inclusion</a>, de sous-ensemble.</p></li>
+<li id="li-29"><p id="p-72">La notion <a href="" class="xref" data-knowl="./knowl/def-ensegaux.html" title="Définition 1.1.7: Relation d'égalité">d'égalité</a> entre deux ensembles.</p></li>
+<li id="li-30"><p id="p-73">L'ensemble univers <span class="process-math">\(\Omega\)</span> et l'ensemble vide <span class="process-math">\(\emptyset\text{.}\)</span></p></li>
+</ul></section><section class="exercises" id="exo-ens"><h3 class="heading hide-type">
+<span class="type">Exercices</span> <span class="codenumber">1.1.5</span> <span class="title">Exercices</span>
+</h3>
+<article class="subexercises" id="subexercises-1"><h4 class="heading"><span class="title">À faire en classe</span></h4>
+<div class="introduction" id="introduction-3"><p id="p-74">Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></div>
+<article class="exercise exercise-like" id="exercise-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-4"><p id="p-75">Écrire les ensembles suivants en extension et dire si <span class="process-math">\(-2\)</span> et <span class="process-math">\(5\)</span> font partie de ces ensembles:</p></div>
+<article class="task exercise-like" id="task-1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-76"><span class="process-math">\(\{z\in \Z~|~ -3\leq z&lt; 5\}\text{;}\)</span></p></article><article class="task exercise-like" id="task-2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-77"><span class="process-math">\(\{\frac{a}{b}~|~ a,b\in \{-5,2,10\}\}\text{;}\)</span></p></article><article class="task exercise-like" id="task-3"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-78"><span class="process-math">\(\{n\in \N~|~ n \text{ est un facteur de } 60\}\text{;}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-5"><p id="p-79">Écrire les ensembles suivants en compréhension:</p></div>
+<article class="task exercise-like" id="task-4"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-80"><span class="process-math">\(\{1,2,3,4\}\)</span></p></article><article class="task exercise-like" id="task-5"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-81"><span class="process-math">\(\{1,1,-1\}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-82">Est-ce que <span class="process-math">\(\{5,13,1,8\}\)</span> est un sous-ensemble de <span class="process-math">\(\{1,2,3,5,8,13,21\}\text{?}\)</span> Justifier</p></article><article class="exercise exercise-like" id="exercise-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-83">Donner le diagramme de Venn correspondant aux ensembles suivants : <span class="process-math">\(\Omega=\{1,2,3,4,5,6\},A=\{1,3,5\},B=\{3,4,5,6\}\text{.}\)</span></p></article><article class="exercise exercise-like" id="exo-ABconfrel"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-84">Soit <span class="process-math">\(A,B\subseteq\Omega\)</span> deux ensembles quelconques non vides. Dessiner toutes les configurations relatives possibles que peuvent avoir <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> dans un diagramme de Venn (en supposant que si un sous-ensemble est vide, il est absent).</p></article><article class="exercise exercise-like" id="exercise-6"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-85">Donner <span class="process-math">\(\mathscr{P}(A)\)</span> si <span class="process-math">\(A=\{a,3,\Delta\}\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-7"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-6"><p id="p-86">Donner la cardinalité des ensembles suivants:</p></div>
+<article class="task exercise-like" id="task-6"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-87"><span class="process-math">\(\{a\}\)</span></p></article><article class="task exercise-like" id="task-7"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-88"><span class="process-math">\(\{a,b\}\)</span></p></article><article class="task exercise-like" id="exo-ensdansens1"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-89"><span class="process-math">\(\{\{a,b\},a\}\)</span></p></article><article class="task exercise-like" id="exo-ensdansens2"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-90"><span class="process-math">\(\{\{a,b\},\{a\}\}\)</span></p></article><article class="task exercise-like" id="task-10"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-91"><span class="process-math">\(\emptyset\)</span></p></article><article class="task exercise-like" id="task-11"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-92"><span class="process-math">\(\{\emptyset\}\)</span></p></article><article class="task exercise-like" id="exo-ensvide1"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-93"><span class="process-math">\(\{\emptyset,\emptyset\}\)</span></p></article><article class="task exercise-like" id="exo-ensvide2"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-94"><span class="process-math">\(\{\emptyset,\{\emptyset\}\}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-8"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<p id="p-95">Exprimer en mots la différence entre les ensembles des exercices <a href="" class="xref" data-knowl="./knowl/exo-ensdansens1.html" title="Tâche 1.1.5.7.c">1.1.5.7.c</a> et <a href="" class="xref" data-knowl="./knowl/exo-ensdansens2.html" title="Tâche 1.1.5.7.d">1.1.5.7.d</a>.</p></article><article class="exercise exercise-like" id="exercise-9"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<p id="p-96">Exprimer pourquoi la cardinalité des ensembles des exercices <a href="" class="xref" data-knowl="./knowl/exo-ensvide1.html" title="Tâche 1.1.5.7.g">1.1.5.7.g</a> et <a href="" class="xref" data-knowl="./knowl/exo-ensvide2.html" title="Tâche 1.1.5.7.h">1.1.5.7.h</a> est différente.</p></article></article></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
