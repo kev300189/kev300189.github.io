@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue un fichier auxiliaire du livre                    -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exo-eqlogfnc">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Exercices </title>
+    <!-- 
+   <exercise xml:id="exo-nom">
+    <introduction>
+    <p>L'énoncé de l'exercice.</p>
+    </introduction>
+    <task>
+            <statement>
+                <p>La première lettre de la question.</p>
+            </statement>
+            <answer>
+                <p> La réponse suivra. </p>
+            </answer>
+            <solution>
+                <p> La solution suivra. </p>
+            </solution>
+    </task>
+    </exercise>
+    -->
+    <exercisegroup>
+    <title>À faire en classe</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <exercise><introduction><p>Déterminer si les expressions suivantes sont des tautologies, des contradictions ou des propositions quelconques.</p></introduction>
+    <task><statement><p><m>p\wedge \neg (q\rightarrow p)</m></p></statement></task>
+    <task><statement><p><m>((p\rightarrow q)\wedge \neg q)\rightarrow \neg p</m></p></statement></task>
+    <task><statement><p><m>((p\rightarrow q)\vee \neg q)\rightarrow p</m></p></statement></task>
+    <task><statement><p><m>(p\wedge (p\rightarrow q))\rightarrow q</m></p></statement></task>
+    </exercise>
+  <exercise>
+  <statement><p>Déterminer si <m>p\rightarrow (q\wedge r)</m> est équivalent à <m>(p\rightarrow q)\wedge (p\rightarrow r)</m>, à savoir si l'implication se distribue sur la conjonction.</p></statement>
+  </exercise>
+  <exercise><introduction><p>Démontrer les équivalences suivantes sans utiliser de table de vérité.</p></introduction>
+  <task><statement><p><m>\neg(p\vee(\neg p\wedge q))\equiv \neg(p\vee q)</m></p></statement></task>
+   <task><statement><p><m>(p\rightarrow \neg q)\wedge (p\rightarrow \neg r)\equiv \neg( p\wedge(q\vee r))</m></p></statement></task>
+  </exercise>
+  <exercise xml:id="exo-negationxor"><statement><p>Montrer que <m>\neg (p\oplus q)\equiv \neg p\oplus q\equiv p\oplus \neg q</m>.</p></statement></exercise>
+  <exercise><!-- inspiré de http://discrete.openmathbooks.org/dmoi3/sec_propositional.html#rWC --><!-- Section 1?-->
+  <statement><p>Batman a capturé le Sphynx et lui demande d'avouer ses plus récents crimes. Le sphynx étant ce qu'il est, il propose au chevalier noir l'énigme suivante. Il lui dit:
+  <blockquote>
+  J'ai capturé la fille du commissaire Gordon ou posé la bombe dans la banque de Gotham. De plus si j'ai piraté les archives du palais de justice, alors j'ai donné un pot-de-vin à un procureur. Par contre je n'ai pas donné de pot-de-vin ni incendié l'hôpital.
+  </blockquote></p>
+  <p>Connaissant bien le Sphynx, Batman sait que tout ce qu'il vient d'affirmer est faux. Il réussit à déterminer les deux crimes commis par le Sphynx. Que sont-ils?</p></statement></exercise>
+  <exercise><statement><p>Donner une forme normale disjonctive et une forme normale conjonctive de <m>p\oplus q</m>.</p></statement></exercise>
+  <exercise><statement><p>Transformer l'expression <m>(\neg p \wedge q) \vee \neg (\neg r \vee \neg q)</m> en  forme normale disjonctive en utilisant une table de vérité.</p></statement></exercise>
+   <exercise><statement><p>Transformer l'expression <m>(\neg p \wedge q) \vee \neg (\neg r \vee \neg q)</m> en  forme normale conjonctive en utilisant une table de vérité.</p></statement></exercise>
+   <exercise><introduction><p>Donner une forme normale disjonctive et une forme normale conjonctive des propositions suivantes.</p></introduction>
+   <task><statement><p><m>(p\vee q)\rightarrow(p\oplus q)</m></p></statement></task>
+   <task><statement><p><m>(p\vee q)\rightarrow(\neg p\wedge r)</m></p></statement></task>
+   <task><statement><p><m>(p\leftrightarrow q)\oplus(\neg p\leftrightarrow q)</m></p></statement></task>
+   </exercise>
+   <exercise><introduction><p>Donner une proposition sous forme normale disjonctive qui possède la table de vérité suivante.</p></introduction>
+    <task><statement><p>
+    <table>
+    <title>Table de vérité de <m>f(p,q,r)</m> </title>
+  <tabular top="major">
+   
+    <row>
+      <cell>
+        <m>p</m>
+      </cell>
+      <cell>
+        <m>q</m>
+      </cell>
+      <cell right="medium">
+        <m>r</m>
+      </cell>
+      <cell>
+        <m>f(p,q,r)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell>
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row>
+      <cell>
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell>
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row bottom="major">
+      <cell>
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+  </tabular>
+</table>
+</p></statement></task>
+    <task><statement><p>
+<table> <title>Table de vérité de <m>f(p,q)</m> </title>
+  <tabular top="major">
+   
+    <row>
+      <cell>
+        <m>p</m>
+      </cell>
+      <cell right="medium">
+        <m>q</m>
+      </cell>
+      <cell>
+        <m>f(p,q,r)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row bottom="major">
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+  </tabular>
+</table>
+</p></statement></task>
+    </exercise>
+  </exercisegroup>
+    <exercisegroup>
+    <title>Exercices supplémentaires</title>
+    <exercise><statement><p>Utiliser les autres <xref ref="li-oplogprop" text="custom">équivalences </xref> de la logique pour démontrer les <xref ref="li-oplogabs" text="custom">propriétés d'absorption</xref>.</p></statement></exercise>
+    <exercise><introduction><p>Utiliser les lois de De Morgan pour donner la négation des propositions suivantes.</p></introduction>
+    <task><statement><p>Alex est en sciences de la nature et Omar est en sciences informatiques et mathématiques.</p></statement></task>
+    <task><statement><p>L'autobus est en retard ou ma montre est en avance.</p></statement></task>
+    <task><statement><p>Une année est bissextile si elle est divisible par <m>4</m> mais pas par <m>100</m>, ou si elle est divisible par <m>400</m>.</p></statement></task>
+    <task><statement><p>J'ai trois enfants et un chien, ou j'ai un chat ou une fille.</p></statement></task>
+    </exercise>
+    <exercise><introduction><p>Donner une proposition sous forme normale disjonctive qui possède la table de vérité suivante.</p></introduction>
+    <task><statement><p>
+    <table><title>Table de vérité de <m>f(p,q)</m> </title>
+  <tabular top="major">
+    
+    <row>
+      <cell>
+        <m>p</m>
+      </cell>
+      <cell right="medium">
+        <m>q</m>
+      </cell>
+      <cell>
+        <m>f(p,q,r)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row bottom="major">
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+  </tabular>
+</table></p></statement></task>
+    <task><statement><p>
+    <table>
+    <title>Table de vérité de <m>f(p,q,r)</m> </title>
+  <tabular top="major">
+   
+    <row>
+      <cell>
+        <m>p</m>
+      </cell>
+      <cell>
+        <m>q</m>
+      </cell>
+      <cell right="medium">
+        <m>r</m>
+      </cell>
+      <cell>
+        <m>f(p,q,r)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell>
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell>
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell>
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row bottom="major">
+      <cell>
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+  </tabular>
+</table></p></statement></task>
+    </exercise>
+    <exercise xml:id="exo-Sheffer">
+    <title>La barre de Sheffer</title>
+    <introduction>
+    <p>On a vu qu'on pouvait réduire le nombre d'opérateurs nécessaires pour décrire des propositions à trois, en utilisant la conjonction, la disjonction et la négation. Pour cela, on a pu réécrire les implications simple et double et le ou exclusif avec ces trois opérateurs. Il existe un opérateur particulier qui possède la propriété que tous les autres opérateurs peuvent s'écrire uniquement avec cet opérateur. On l'appelle la barre de Sheffer, définie comme suit:</p>
+<table xml:id="tab-Sheffer"><title>Table de vérité de la barre de Sheffer</title>
+  <tabular top="major">
+    <row>
+      <cell>
+        <m>p</m>
+      </cell>
+      <cell right="medium">
+        <m>q</m>
+      </cell>
+      <cell>
+        <m>f(p,q,r)</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell>
+        V
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row>
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        V
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+    <row bottom="major">
+      <cell>
+        F
+      </cell>
+      <cell right="medium">
+        F
+      </cell>
+      <cell>
+        V
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </introduction>
+    <task><statement><p>En utilisant des tables de vérité, montrer que 
+    <me>
+    p\uparrow q\equiv \neg(p\wedge q)
+    </me>.</p>
+    <p>On appelle souvent la barre de Sheffer le <q>NAND</q> en informatique, car c'est la négation (N) du et (AND).</p>
+    </statement></task>
+    <task><statement><p>Montrer que <m>\neg p\equiv p\uparrow p</m>.</p></statement></task>
+    <task><statement><p>Montrer que <m>p\wedge q\equiv (p\uparrow q)\uparrow(p\uparrow q)</m>.</p></statement></task>
+    <task><statement><p>Montrer que <m>p\vee q\equiv (p\uparrow p)\uparrow(q\uparrow q)</m>.</p></statement></task>
+    <task><statement><p>Montrer que <m>p\rightarrow q\equiv p\uparrow(q\uparrow q)</m>.</p></statement></task> <!-- Aussi p\uparrow (p\uparrow q)-->
+    </exercise>
+    <exercise><statement><p>Démontrer à nouveau les équivalences de l'exercice <xref ref="exo-Sheffer"/> en utilisant la définition de la barre de Sheffer et les propriétés des opérateurs logiques.</p></statement></exercise>
+    </exercisegroup>
+</exercises>

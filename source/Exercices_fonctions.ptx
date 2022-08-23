@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue un fichier auxiliaire du livre                    -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exo-">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Exercices </title>
+    <!-- 
+   <exercise xml:id="exo-nom">
+    <introduction>
+    <p>L'énoncé de l'exercice.</p>
+    </introduction>
+    <task>
+            <statement>
+                <p>La première lettre de la question.</p>
+            </statement>
+            <answer>
+                <p> La réponse suivra. </p>
+            </answer>
+            <solution>
+                <p> La solution suivra. </p>
+            </solution>
+    </task>
+    </exercise>
+    -->
+    <exercisegroup>
+    <title>À faire en classe au cours A</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <exercise xml:id="exo-fctintro">
+    <introduction><p>Soit <m>A=\{0,1,2,3,4,5\}</m>,<m>B=\{a,b,c,d,e\}</m> et <m>C=\{!,@,\#,a\}</m>. On considère les fonctions <m>g:A\to B</m> et <m>f:B\to C</m> définies comme suit: </p>
+    <sidebyside> 
+    <ul>
+    <li><p><m>g(0)=b</m></p></li>
+    <li><p><m>g(1)=a</m></p></li>
+    <li><p><m>g(2)=d</m></p></li>
+    <li><p><m>g(3)=b</m></p></li>
+    <li><p><m>g(4)=a</m></p></li>
+    <li><p><m>g(5)=c</m></p></li>
+    </ul>
+    <ul>
+    <li><p><m>f(a)=!</m></p></li>
+    <li><p><m>f(b)=\#</m></p></li>
+    <li><p><m>f(c)=\#</m></p></li>
+    <li><p><m>f(d)=@</m></p></li>
+    <li><p><m>f(e)=a</m></p></li>
+    </ul>
+    </sidebyside>
+    <p>Déterminer</p>
+    </introduction>
+    <task>
+    <statement>
+    <p>L'image de <m>3</m> par <m>g</m>;</p>
+    </statement>
+    </task>
+    <task><statement><p>La préimage de <m>a</m> par  <m>f</m>;</p></statement></task>
+    <task><statement><p>La préimage de <m>a</m> par  <m>g</m>;</p></statement></task>
+    <task><statement><p>Le domaine, le codomaine et l'image de <m>g</m></p></statement></task>
+    <task><statement><p>Le domaine, le codomaine et l'image de <m>f</m></p></statement></task>
+    <task><statement><p>Le domaine, le codomaine et l'image de <m>f\circ g</m></p></statement></task>
+    <task><statement><p>L'image de <m>0</m> par la composition <m>f\circ g</m>;</p></statement></task>
+    <task><statement><p>La préimage de <m>\#</m> par la composition <m>f\circ g</m>;</p></statement></task>
+    </exercise>
+    <exercise><statement><p>Quel est l'image de la fonction <m>f:\emptyset\to B</m>?</p></statement>
+    <hint><p>Quel est le produit cartésien de <m>\emptyset</m> et <m>B</m>?</p></hint></exercise>
+    <exercise xml:id="exo-fctrest">
+    <!-- Dépendant de "exo-fctintro" -->
+    <introduction><p>Soit <m>f:A\to B</m> une fonction et <m>C\subseteq A</m> un sous-ensemble de <m>A</m>. On définit la restriction de <m>f</m> sur <m>A</m> comme étant le sous-ensemble de <m>A\times B</m> donné par
+    <me>
+    f|_C=f(C)=\{(c,f(c))\in A\times B~|~ c\in C\}
+    </me>. On écrit parfois aussi <m>f(C)=\{f(c)\in B~|~ c\in C\}</m>. C'est le sous-ensemble des images provenant de <m>C</m>. On considère à nouveau les fonctions de l'exercice <xref ref="exo-fctintro"/>.</p></introduction>
+    <task><statement><p>Déterminer <m>g(\{3,4,5\})</m>;</p></statement></task>
+    <task><statement><p>Déterminer <m>f(\{b,c\})</m>;</p></statement></task>
+    <task><statement><p>Déterminer <m>(f\circ g)(\{3,4,5\})</m>.</p></statement></task>
+    </exercise>
+    <exercise><statement><p>Soit <m>h:A\to B, g:B\to C</m> et <m>f:C\to D</m> trois fonctions quelconques. Montrer que
+    <me>
+    (f\circ g)\circ h=f\circ (g\circ h)
+    </me>, soit que le composition est associative.</p></statement>
+    </exercise>
+    <exercise><statement><p>Parmi les énoncées suvants, lesquels représentent une définition équivalente du concept de fonction:
+    <ol>
+    <li><p>Une relation <m>f:A\to B</m> qui satisfait la propriété que si <m>f(a_1)\neq f(a_2)</m>, alors <m>a_1\neq a_2</m> pour tous les <m>a_1,a_2\in A</m>.</p></li>
+    <li><p>Un ensemble <m>\{(a,b)~|~a\in A \text{ et } b\in B\}</m>.</p></li>
+    <li><p>Un ensemble <m>\{(a,f(a))~|~a\in A \}</m>.</p></li>
+    </ol>
+    </p></statement></exercise>
+    <exercise>
+    <introduction><p>Pour chacune des fonctions suivantes, déterminer 
+    <ol><li><p>L'image de <m>42</m>;</p></li>
+    <li><p>L'image;</p></li>
+    <li><p>La préimage de <m>7</m>.</p></li>
+    </ol>
+    </p></introduction>
+    <task><statement><p>La fonction <m>f_1:\Z\to \Z</m> qui associe à <m>z\in \Z</m> son dernier chiffre.</p></statement></task>
+    <task><statement><p>La fonction <m>f_2:\N\to \N</m> qui associe à <m>n\in \N</m> son premier chiffre chiffre.</p></statement></task>
+    <task><statement><p>La fonction <m>f_3:\R\to \R</m> qui associe à un nombre <m>r\in\R</m> le plus petit entier supérieur ou égal à <m>r</m>.</p></statement></task>
+    <task><statement><p>La fonction <m>f_4:\R\to \R</m> qui associe à un nombre <m>r\in\R</m> le plus grand entier inférieur ou égal à <m>r</m>.</p></statement></task>
+    </exercise>
+    <exercise><introduction><p>Soit <m>f,g,h</m> des fonctions définies de <m>\Z</m> vers <m>\Z</m> par <m>f(n)=n^2,g(n)=n-1</m> et <m>h(n)=n+1</m>. Donner une formule pour les compositons suivantes.</p></introduction>
+    <task><statement><p><m>f\circ g\circ h</m></p></statement></task>
+    <task><statement><p><m> g\circ f\circ h</m></p></statement></task>
+    <task><statement><p><m> h\circ f\circ g</m></p></statement></task>
+    </exercise>
+    <exercise><introduction><p>Soit <m>A,B</m> deux ensembles et <m>f:A\to B</m> une fonction. Soit <m>C,D\subseteq A</m> deux sous-ensembles de <m>A</m>. Montrer que</p></introduction>
+    <task>
+    <statement><p><m>f(C\cup D)=f(C)\cup f(D)</m>;</p></statement>
+    </task>
+    <task>
+    <statement><p><m>f(C\cap D)\subseteq f(C)\cap f(D)</m>;</p></statement>
+    </task>
+    <task><introduction><p>Trouver deux ensembles <m>A,B</m> et des sous-ensembles <m>C,D\subseteq A</m> tels que 
+    <ul><li><p><m>C\cap D \neq \emptyset</m>,</p></li>
+    <li><p><m>C\neq D</m>,</p></li>
+    </ul>
+    pour lesquels
+    </p></introduction>
+    <task><statement><p><m>f(C\cap D)=f(C)\cap f(D)</m></p></statement>
+    <!--<answer><p>Soit <m>A=\{0,1,2,3\},B=\{0,1,2\},C=\{0,1,2\}</m> et <m>D=\{2,3\}</m> avec <m>f(0)=0,f(1)=1,f(2)=1,f(3)=2</m>.</p></answer>-->
+    </task>
+    <task><statement><p><m>f(C\cap D)\subset f(C)\cap f(D)</m></p></statement>
+    <!--<answer><p>Soit <m>A=\{0,1,2,3\},B=\{0,1,2\},C=\{0,1,2\}</m> et <m>D=\{2,3\}</m> avec <m>f(0)=0,f(1)=1,f(2)=2,f(3)=1</m>.</p></answer>-->
+    </task>
+    </task>
+    </exercise>
+    <exercise xml:id="exo-fctcar"><introduction><p>Soit <m>A</m> un ensemble et soit <m>C\subseteq  A</m> un sous-ensemble. La fonction caractéristique de <m>C</m>, notée <m>\mathbb{1}_C</m> est une fonction de <m>A</m> vers <m>\{0,1\}</m> définie par
+    <me>
+    \mathbb{1}_C(a)=\begin{cases}
+    1 &amp; \text{ si } a\in C \\
+    0 &amp; \text{ si } a\notin C
+    \end{cases}
+    </me>.</p></introduction>
+    <task><statement><p>À titre d'exemple, on considère l'ensemble  <m>A=\{a,b,c\}</m> et le sous-ensemble <m>C=\{a,b\}</m>. Quels sont les éléments de <m>\mathbb{1}_C</m>?</p></statement></task>
+    <task><statement><p>Pour des ensembles <m>C,D\subseteq A</m> quelconques, montrer que <m>\mathbb{1}_{C\cap D}=\mathbb{1}_C\cdot\mathbb{1}_D</m>. </p></statement></task>
+    <task><statement><p>Pour des ensembles <m>C,D\subseteq A</m> quelconques, montrer que <m>\mathbb{1}_{C\cup D}=\mathbb{1}_C+\mathbb{1}_D-\mathbb{1}_C\cdot\mathbb{1}_D</m>. </p></statement></task>
+    <task><statement><p>Trouver une expression pour la fonction caractéristique du complément de <m>C</m> en fonction de celle de <m>C</m>.</p></statement></task>
+    </exercise>
+    </exercisegroup>
+    <exercisegroup>
+    <title>À faire en classe au cours B</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et d'atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <exercise><introduction><p>On considère les ensembles <m>A=\{0,1\}</m> et <m>B=\{a,b,c\}</m>.</p></introduction>
+    <task><introduction><p>On considère les fonctions de <m>A</m> vers <m>B</m>.</p></introduction>
+    <task><statement><p>Combien y a-t-il de fonctions possibles?</p></statement></task>
+    <task><statement><p>Combien sont injectives? Si possible, donner un exemple.</p></statement></task>
+    <task><statement><p>Combien sont surjectives? Si possible, donner un exemple.</p></statement></task>
+    <task><statement><p>Combien sont bijectives? Si possible, donner un exemple.</p></statement></task>
+    </task>
+    <task><statement><p>Répondre aux mêmes questions, mais avec les fonctions de <m>B</m> vers <m>A</m>.</p></statement></task>
+    </exercise>
+    <exercise><introduction><p>Que peut-on dire de la cardinalité des ensembles <m>A,B</m> s'il existe une fonction <m>f:A\to B</m> qui est</p></introduction>
+    <task><statement><p>injective? Justifier</p></statement></task>
+    <task><statement><p>surjective? Justifier</p></statement></task>
+    <task><statement><p>bijective? Justifier</p></statement></task>
+    </exercise>
+    <exercise><introduction><p>Donner une fonction de <m>\N</m> vers <m>\N</m> qui est </p></introduction>
+    <task><statement><p>injective, mais pas surjective;</p></statement></task>
+    <task><statement><p>surjective, mais pas injective;</p></statement></task>
+    <task><statement><p>bijective;</p></statement></task>
+    <task><statement><p>ni injective ni surjective.</p></statement></task>
+    </exercise>
+    <exercise><introduction><p>Soit <m>g:A\to B</m> et <m>f:B\to C</m> des fonctions.</p></introduction>
+    <task><statement><p>Montrer que si <m>f,g</m> sont injectives, alors <m>f\circ g</m> l'est aussi.</p></statement></task>
+    <task><statement><p>Montrer que si <m>f,g</m> sont surjectives, alors <m>f\circ g</m> l'est aussi.</p></statement></task>
+    </exercise>
+    <exercise><statement><p>Montrer que si <m>g:A\to B</m> et <m>f:B\to C</m> sont deux fonctions inversibles, alors la composition est inversible et
+    <me>
+    (f\circ g)^{-1}=g^{-1}\circ f^{-1}    </me>.
+    </p></statement></exercise>
+    <exercise xml:id="exo-compofprei"><introduction><p>Dans cet exercice, <m>f^{-1}</m> fait référence à la préimage de <m>f</m>, pas nécessairment à l'inverse.</p>
+    <p>Soit <m>f:A\to B</m> une fonction et soit <m>C\subseteq A</m> et <m>D\subseteq B</m> des sous-ensembles. Analyser les égalités suivantes. Sont-elles toujours/jamais vraies ou seulement parfois? Si c'est parfois, quelle propriété doit avoir <m>f</m> pour garantir qu'elles soient vraies.</p></introduction>
+    <task><statement><p><m>f^{-1}(f(A))=A</m></p></statement>
+    <!-- <answer><p> Parfois,  f injective  </p></answer> -->
+    </task>
+    <task><statement><p><m>f(f^{-1}(B))=B</m></p></statement>
+    <!-- <answer><p>parfois, f surjective</p> </answer>-->
+    </task>
+    </exercise>
+    <exercise>
+    <title>La cardinalité et l'infini</title>
+    <introduction><p>Y a-t-il plus de nombres naturels que de nombres naturles pairs? À priori, cela peut sembler évident puisque les nombres pairs sont inclus dans les naturels et que certains naturels ne sont pas pais. Dénontant les nombres pairs par <m>2\N</m>, on a donc <m>2\N\subset N</m>. Or les deux ensembles contiennent une infinité d'éléments. Ont-ils donc la même cardinalité? Comment la cardinalité de ces deux ensembles se compare-elle par rapport à la cardinalité des nombres réels compris entre <m>0</m> et <m>1</m>?</p>
+    <p>Ces questions ont longtemps embêté les mathématiciens et c'est la notion de bijection qui est venue trancher le débat.</p>
+    <p>On dit que deux ensembles <m>A,B</m> ont la même cardinalité s'il existe une bijection entre <m>A</m> et <m>B</m>. Le principe est évident et anodin pour les ensembles de cardinalité finie, mais apporte son lot de surprise pour les ensembles infinis.</p>
+    </introduction>
+    <task><statement><p>Trouver une bijection entre les nombres naturels et les nombres naturels pairs. Ceci montre que <m>|\N|=|2\N|</m>, même si <m>2\N\subset N</m>.</p>
+    <p>Un ensemble qui a la même cardinalité que <m>\N</m> ou qui est de cardinalité finie est dit dénombrable.</p>
+    </statement></task>
+    <task xml:id="exo-diagocantor"><statement><p>On considère maintenant l'ensemble <m>\N</m> et l'ensemble <m>]0,1[</m> des nombres réels compris entre <m>0</m> et <m>1</m> (exclusivement, mais ne c'est pas important). On suppose qu'il existe une bijection entre ces deux ensembles. En particulier, on peut déterminer l'image de chaque naturel et lui associer un réel. On peut donc lister les nombres réels. Voici à quoi ressemblerait cette liste:
+    <md>
+    <mrow>f(0)&amp;=0.d_{0,0}d_{0,1}d_{0,2}d_{0,3}d_{0,4}\cdots</mrow>
+    <mrow>f(1)&amp;=0.d_{1,0}d_{1,1}d_{1,2}d_{1,3}d_{1,4}\cdots</mrow>
+    <mrow>f(2)&amp;=0.d_{2,0}d_{2,1}d_{2,2}d_{2,3}d_{2,4}\cdots</mrow>
+    <mrow>f(3)&amp;=0.d_{3,0}d_{3,1}d_{3,2}d_{3,3}d_{3,4}\cdots</mrow>
+    <mrow>\vdots&amp;= \vdots</mrow>
+    </md>.</p>
+    <p>Chaque <m>d_{i,j}</m> représente un chiffre correspondant à la position décimale. Par exemple, si <m>f(2)=0.230984\ldots</m>, alors <m>d_{2,0}=2,d_{2,1}=3,d_{2,2}=0</m> et ainsi de suite.</p>
+    <p>Donc on prétend avoir cette bijection entre les deux ensembles. On considère le nombre réel <m>r=0.r_0r_1r_2r_3\cdots</m> formé de la manière suivante: <m>r_i=0</m> si <m>d_{i,i}\neq 0</m> et <m>r_i=1</m> si <m>d_{i,i}=0</m>. Que peut-on conclure grâce à ce nombre?</p>
+    </statement>
+    <hint><p>Quel nombre naturel a pour image <m>r</m>?</p></hint>
+    </task>
+    </exercise>
+    </exercisegroup>
+    <exercisegroup>
+    <title>Exercices supplémentaires</title>
+    <exercise><introduction><p>Soit <m>A=\{n\in\N~|~ 1\leq n\leq 12\}</m> et <m>B=\{1,2,3,4,6,12\}</m>. On définit la relation <m>PGCD_{12}:A\to B</m> qui associe à <m>a\in A</m> le plus grand commun diviseur de <m>a</m> et <m>12</m>.</p></introduction>
+    <task><statement><p>Montrer que cette relation est une fonction.</p></statement></task>
+    <task><statement><p>Déterminer l'image de <m>8</m>.</p></statement></task>
+    <task><statement><p>Déterminer la préimage de <m>3</m>.</p></statement></task>
+    <task><statement><p>Est-ce que la fonction est injective? Surjective?</p></statement></task>
+    </exercise>
+    <exercise><statement><p>On considère la fonction caractéristique définie à l'exercice <xref ref="exo-fctcar"/> et la différence symétrique de l'exercice <xref ref="exo-diffsym"/>. Montrer que
+    <me>
+    \mathbb{1}_{A\oplus B}=\mathbb{1}_A+\mathbb{1}_B-2\mathbb{1}_{A\cap B}
+    </me>.</p></statement></exercise>
+    <exercise>
+    <introduction><p>Dans l'exercice <xref ref="exo-compofprei"/>, on a analysé le comportement de <m>f^{-1}(f(A))</m> et de <m>f(f^{-1}(B))</m>.</p></introduction>
+    <task><statement><p>Montrer que <m>f^{-1}(f(A))\supseteq A</m>. Donner un exemple où <m>f^{-1}(f(A))\supset A</m> et un exemple où <m>f^{-1}(f(A))= A</m>.</p></statement></task>
+    <task><statement><p>Montrer que <m>f(f^{-1}(B))\subseteq B</m>. Donner un exemple où <m>f(f^{-1}(B))\subset B</m> et un exemple où <m>f(f^{-1}(B))= B</m>.</p></statement></task>
+    </exercise>
+    <exercise><statement><p>Soit <m>A,B</m> deux ensembles de cardinalité infinie dénombrable. Trouver une bijection entre <m>\N</m> et <m>A\cup B</m> pour montrer que l'union est aussi dénombrable.</p></statement></exercise>
+    <exercise><statement><p>Soit <m>A\subseteq B</m> des ensembles avec <m>B</m> de cardinalité infinie dénombrable. Montrer que <m>A</m> est aussi dénombrable.</p></statement></exercise>
+    <exercise><statement><p>Considérer l'ensemble <m>A</m> des nombres entre <m>0</m> et <m>1</m> dont le développement décimal ne contient de que des <m>0</m> ou des <m>1</m>, par exemple <m>0.1001000100001\cdots</m>. Montrer que cet ensemble est non dénombrable en modifiant l'argument présenté à l'exercice <xref ref="exo-diagocantor"/>.</p></statement></exercise>
+    <exercise><introduction><p>Considérer la table infinie suivante, dans laquelle des nombres rationnels strictement positifs apparaissent.</p>
+    <table>    
+<title>Énumération des rationnels</title>
+  <tabular top="major">
+    <row>
+      <cell>
+       Numérateur\Dénominateur
+      </cell>
+      <cell bottom="medium">
+        <m>1</m>
+      </cell>
+      <cell bottom="medium">
+        <m>2</m>
+      </cell>
+      <cell bottom="medium">
+        <m>3</m>
+      </cell>
+      <cell bottom="medium">
+        <m>4</m>
+      </cell>
+      <cell bottom="medium">
+        <m>5</m>
+      </cell>
+      <cell bottom="medium">
+        <m>6</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\cdots</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>\frac{1}{1}</m>
+      </cell>
+      <cell>
+        <m>\frac{1}{2}</m>
+      </cell>
+      <cell>
+        <m>\frac{1}{3}</m>
+      </cell>
+      <cell>
+        <m>\frac{1}{4}</m>
+      </cell>
+      <cell>
+        <m>\frac{1}{5}</m>
+      </cell>
+      <cell>
+        <m>\frac{1}{6}</m>
+      </cell>
+      <cell>
+        <m>\cdots</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>2</m>
+      </cell>
+      <cell>
+        <m>\frac{2}{1}</m>
+      </cell>
+      <cell>
+        <m>\frac{2}{2}</m>
+      </cell>
+      <cell>
+        <m>\frac{2}{3}</m>
+      </cell>
+      <cell>
+        <m>\frac{2}{4}</m>
+      </cell>
+      <cell>
+        <m>\frac{2}{5}</m>
+      </cell>
+      <cell>
+        <m>\frac{2}{6}</m>
+      </cell>
+      <cell>
+        <m>\cdots</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>3</m>
+      </cell>
+      <cell>
+        <m>\frac{3}{1}</m>
+      </cell>
+      <cell>
+        <m>\frac{3}{2}</m>
+      </cell>
+      <cell>
+        <m>\frac{3}{3}</m>
+      </cell>
+      <cell>
+        <m>\frac{3}{4}</m>
+      </cell>
+      <cell>
+        <m>\frac{3}{5}</m>
+      </cell>
+      <cell>
+        <m>\frac{3}{6}</m>
+      </cell>
+      <cell>
+        <m>\cdots</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>4</m>
+      </cell>
+      <cell>
+        <m>\frac{4}{1}</m>
+      </cell>
+      <cell>
+        <m>\frac{4}{2}</m>
+      </cell>
+      <cell>
+        <m>\frac{4}{3}</m>
+      </cell>
+      <cell>
+        <m>\frac{4}{4}</m>
+      </cell>
+      <cell>
+        <m>\frac{4}{5}</m>
+      </cell>
+      <cell>
+        <m>\frac{4}{6}</m>
+      </cell>
+      <cell>
+        <m>\cdots</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>5</m>
+      </cell>
+      <cell>
+        <m>\frac{5}{1}</m>
+      </cell>
+      <cell>
+        <m>\frac{5}{2}</m>
+      </cell>
+      <cell>
+        <m>\frac{5}{3}</m>
+      </cell>
+      <cell>
+        <m>\frac{5}{4}</m>
+      </cell>
+      <cell>
+        <m>\frac{5}{5}</m>
+      </cell>
+      <cell>
+        <m>\frac{5}{6}</m>
+      </cell>
+      <cell>
+        <m>\cdots</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>6</m>
+      </cell>
+      <cell>
+        <m>\frac{6}{1}</m>
+      </cell>
+      <cell>
+        <m>\frac{6}{2}</m>
+      </cell>
+      <cell>
+        <m>\frac{6}{3}</m>
+      </cell>
+      <cell>
+        <m>\frac{6}{4}</m>
+      </cell>
+      <cell>
+        <m>\frac{6}{5}</m>
+      </cell>
+      <cell>
+        <m>\frac{6}{6}</m>
+      </cell>
+      <cell>
+        <m>\cdots</m>
+      </cell>
+    </row>
+    <row bottom="major">
+      <cell right="medium">
+        <m>\vdots</m>
+      </cell>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+      <cell>
+        <m>\vdots</m>
+      </cell>
+      <cell>
+        <m>\ddots</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </introduction>
+    <task><statement><p>Est-ce que tous les rationnels strictement positifs apparaissent? Justifier </p></statement></task>
+    <task><statement>Créer une bijection de <m>\N</m> vers l'ensemble des rationnels strictement positifs afin de montrer que cet ensemble est aussi dénombrable.</statement></task>
+    </exercise>
+    </exercisegroup>
+</exercises>

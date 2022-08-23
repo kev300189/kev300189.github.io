@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue un fichier auxiliaire du livre                    -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exo-divisibilite">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Exercices </title>
+    <!-- 
+   <exercise xml:id="exo-nom">
+    <introduction>
+    <p>L'énoncé de l'exercice.</p>
+    </introduction>
+    <task>
+            <statement>
+                <p>La première lettre de la question.</p>
+            </statement>
+            <answer>
+                <p> La réponse suivra. </p>
+            </answer>
+            <solution>
+                <p> La solution suivra. </p>
+            </solution>
+    </task>
+    </exercise>
+    -->
+    <subexercises>
+    <title>À faire en classe</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <exercise>
+    <introduction><p>Convertir les nombres suivants dans la base demandée en utilisant un tableau de division.</p></introduction>
+    <task><p><statement><p><m>1775</m> en binaire.</p></statement></p></task>
+    <task><p><statement><p><m>2730</m> en binaire</p></statement></p></task>
+    <task><p><statement><p><m>10632005</m> en hexadécimale</p></statement></p></task>
+    </exercise>
+    <exercise><introduction><p>Donner la liste de tous les diviseurs de chaque nombre et déduire le <m>\pgcd</m>.</p></introduction>
+    <task><statement><p><m>27</m> et <m>72</m>.</p></statement></task>
+    <task><statement><p><m>66</m> et <m>111</m>.</p></statement></task>
+    <task><statement><p><m>60</m> et <m>100</m>.</p></statement></task>
+    </exercise>
+    <exercise>
+    <introduction><p>Calculer le <m>\pgcd</m> des paires de nombres suivants en utilisant l'algorithme d'Euclide.</p></introduction>
+    <task><statement><p><m>1988</m> et <m>1992</m></p></statement></task>
+    <task><statement><p><m>1234</m> et <m>5678</m></p></statement></task>
+    <task><statement><p><m>1357</m> et <m>2468</m></p></statement></task>
+    <task><statement><p><m>1272</m> et <m>1488</m></p></statement></task>
+    <task><statement><p><m>2184</m> et <m>6138</m></p></statement></task>
+    <task><statement><p><m>1339</m> et <m>7828</m></p></statement></task>
+    </exercise>
+    <exercise><statement><p>Donner une explication intuitive du fait que si <m>a,b\in \mathbb{N}</m> sont des naturels non nuls et que <m>\pgcd(a,b)=d</m>, alors <m>\pgcd{\left(\frac{a}{d},\frac{b}{d}\right)}=1</m>.</p></statement>
+    <hint><p>Si le <m>\pgcd{\(left\frac{a}{d},\frac{b}{d}\right)</m> était égal à <m>c>1</m>, que pourrait-on dire que <m>d</m>?</p></hint></exercise>
+    <exercise>
+    <introduction><p>L'algorithme d'Euclide permet de trouver le <m>\pgcd</m> d'entiers strictement positifs. On peut toutefois facilement étendre la notion aux entiers quelconques.</p></introduction>
+    <task><statement><p>Montrer que si <m>a&gt;0</m>, alors <m>\pgcd(a,0)=a</m>.</p></statement></task>
+    <task><statement><p>Montrer que si <m>a&lt;0</m> et <m>b\geq 0</m>, alors <m>\pgcd{(a,b)}=\pgcd{(|a|,b)}</m>.</p></statement></task>
+    <task><statement><p>Montrer que pour <m>a,b\in \Z</m>, on a <m>\pgcd{(a,b)}=\pgcd{(|a|,|b|)}</m>.</p></statement></task>
+    </exercise>
+    <exercise xml:id="exo-Bezout">
+    <title>Le lemme de Bézout</title>
+    <introduction>
+    <p>Soit <m>a,b</m> des naturels non nuls tels que <m>\pgcd{(a,b)}=d</m>. Alors il existe <m>x,y\in \Z</m> tels que 
+    <me>
+    d=ax+by
+    </me></p>
+    <p>Cette relation a des conséquences importantes en théorie des nombres. On montre dans cet exercice comment démontrer l'existence des entiers <m>x,y</m> et on explique comment on peut trouver de tels entiers.</p>
+    </introduction>
+    <task><statement><p>On considère l'ensemble <m>S=\{n\in \N~|~ n=ax+by \text{ avec } x,y\in \Z\text{ et } n>0\}</m>. C'est donc l'ensemble des naturels plus grands que zéro qu'il est possible de former avec <m>a,b</m> en les combinant avec des entiers quelconques.</p>
+    <p>Montrer que <m>S</m> est non vide. En particulier, puisque <m>S</m> est un ensemble de nombres naturels, il existe un plus petit élément.</p>
+    </statement></task>
+    <task><introduction><p>On pose <m>d\in S</m> le plus petit élément de cet ensemble. On veut montrer que <m>d|a</m> et <m>d|b</m>.</p></introduction>
+    <task><statement><p>On considère la division de <m>a</m> par <m>d</m>, qu'on écrit sous la forme quotient reste
+    <me>
+    a=bq+r
+    </me>.</p>
+    <p>Montrer que <m>r\in S\cup\{0\}</m> en l'écrivant comme <m>ax+by</m> avec <m>x,y\in \mathbb{Z}</m>. </p>
+    </statement></task>
+    <task><statement><p>Utiliser le fait que dans la forme quotient reste, on a <m>0\leq r&lt; d</m>, le fait que <m>r\in S\cup\{0\}</m> et le fait que <m>d</m> est le plus petit élément de <m>S</m> pour déterminer la valeur de <m>r</m>.</p></statement></task>
+    <task><statement><p>Conclure que <m>d|a</m>.</p></statement></task>
+    </task>
+    <task><statement><p>Argumenter que <m>d</m> divise aussi <m>b</m> pour les mêmes raisons.</p></statement></task>
+    <task><statement><p>Le plus petit élément de <m>S</m> est donc un diviseur de <m>a</m> et <m>b</m>. On va maintenant montrer que c'est nécessairement le <m>\pgcd</m> de ces deux nombres.</p>
+    <p>Si <m>c</m> est un diviseur commun de <m>a</m> et <m>b</m>, montrer que <m>c</m> divise <m>a</m> en utilisant l'équation
+    <me>
+    d=as+bt
+    </me> pour certains <m>s,t\in \mathbb{Z}</m>. Si <m>c|d</m>, alors nécessairement <m>c\leq d</m>, ce qui complète la preuve.</p></statement></task>
+    </exercise>
+    </subexercises>
+    <subexercises>
+    <title>Exercices supplémentaires</title>
+    <exercise>
+    <title>Le plus petit commun multiple</title>
+    <introduction>
+    <p>Soit <m>a,b\in \Z</m> deux entiers non nuls. On définit le plus petit commun multiple de <m>a,b</m>, noté <m>\ppcm{(a,b)}</m> comme étant le nombre <m>m</m> qui satisfait les propriétés suivantes:
+    <ol>
+    <li><p><m>m&gt;0</m>;</p></li>
+    <li><p><m>a|m</m> et <m>b|m</m>;</p></li>
+    <li><p>Pour tout <m>n\in \mathbb{Z}</m>, si <m>a|n</m> et <m>b|n</m>, alors <m>m\leq n</m>.</p></li>
+ </ol>
+   Calculer les plus petits communs multiples suivants. </p>
+    </introduction>
+    <task><statement><p><m>\ppcm{(2,3)}</m></p></statement></task>
+    <task><statement><p><m>\ppcm{(2,4)}</m></p></statement></task>
+    <task><statement><p><m>\ppcm{(12,18)}</m></p></statement></task>
+    <task><statement><p><m>\ppcm{(2^2\cdot 3,2\cdot 3^2)}</m></p></statement></task>
+    <task><statement><p><m>\ppcm{(2^4\cdot 3\cdot 4,2^2\cdot 3^3\cdot 7)}</m></p></statement></task>
+    </exercise>
+    </subexercises>
+</exercises>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue un fichier auxiliaire du livre                    -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exo-ens">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Exercices </title>
+    <!-- 
+   <exercise xml:id="exo-nom">
+    <introduction>
+    <p>L'énoncé de l'exercice.</p>
+    </introduction>
+    <task>
+            <statement>
+                <p>La première lettre de la question.</p>
+            </statement>
+            <answer>
+                <p> La réponse suivra. </p>
+            </answer>
+            <solution>
+                <p> La solution suivra. </p>
+            </solution>
+    </task>
+    </exercise>
+    -->
+    <subexercises>
+    <title>À faire en classe</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+      <exercise>
+  <introduction>
+  <p>Écrire les ensembles suivants en extension et dire si <m>-2</m> et <m>5</m> font partie de ces ensembles:</p>
+  </introduction>
+  <task>
+  <statement><p><m>\{z\in \Z~|~ -3\leq z&lt; 5\}</m>;</p></statement>
+  </task>
+   <task>
+  <statement><p><m>\{\frac{a}{b}~|~ a,b\in \{-5,2,10\}\}</m>;</p></statement>
+  </task>
+   <task>
+  <statement><p><m>\{n\in \N~|~ n \text{ est un facteur de } 60\}</m>;</p></statement>
+  </task>
+  </exercise>
+  <exercise>
+  <introduction>
+  <p>Écrire les ensembles suivants en compréhension:</p>
+  </introduction>
+  <task>
+  <statement>
+  <p><m>\{1,2,3,4\}</m></p>
+  </statement></task>
+  <task>
+  <statement>
+  <p><m>\{1,1,-1\}</m></p>
+  </statement>
+  </task>
+  </exercise>
+  <exercise>
+  <statement><p>Est-ce que <m>\{5,13,1,8\}</m> est un sous-ensemble de <m>\{1,2,3,5,8,13,21\}</m>? Justifier</p></statement>
+  </exercise>
+  <exercise><statement><p>Donner le diagramme de Venn correspondant aux ensembles suivants : <m>\Omega=\{1,2,3,4,5,6\},A=\{1,3,5\},B=\{3,4,5,6\}</m>.</p></statement></exercise>
+  <exercise xml:id="exo-ABconfrel"><statement ><p>Soit <m>A,B\subseteq\Omega</m> deux ensembles quelconques non vides. Dessiner toutes les configurations relatives possibles que peuvent avoir <m>A</m> et <m>B</m> dans un diagramme de Venn (en supposant que si un sous-ensemble est vide, il est absent). </p></statement></exercise>
+  <exercise><statement><p>Donner <m>\mathscr{P}(A)</m> si <m>A=\{a,3,\Delta\}</m>.</p></statement></exercise>
+  <exercise><introduction><p>Donner la cardinalité des ensembles suivants:</p></introduction>
+  <task><statement><p><m>\{a\}</m></p></statement></task>
+  <task><statement><p><m>\{a,b\}</m></p></statement></task>
+  <task xml:id="exo-ensdansens1"><statement><p><m>\{\{a,b\},a\}</m></p></statement></task>
+  <task xml:id="exo-ensdansens2"><statement><p><m>\{\{a,b\},\{a\}\}</m></p></statement></task>
+  <task><statement><p><m>\emptyset</m></p></statement></task>
+  <task><statement><p><m>\{\emptyset\}</m></p></statement></task>
+  <task xml:id="exo-ensvide1"><statement><p><m>\{\emptyset,\emptyset\}</m></p></statement></task>
+  <task xml:id="exo-ensvide2"><statement><p><m>\{\emptyset,\{\emptyset\}\}</m></p></statement></task>
+  </exercise>
+  <exercise><statement><p>Exprimer en mots la différence entre les ensembles des exercices <xref ref="exo-ensdansens1"/> et <xref ref="exo-ensdansens2"/>.</p></statement></exercise>
+  <exercise><statement><p>Exprimer pourquoi la cardinalité des ensembles des exercices <xref ref="exo-ensvide1"/> et <xref ref="exo-ensvide2"/> est différente.</p></statement></exercise>
+    </subexercises>
+    <!--<subexercises>
+    <title>Exercices supplémentaires</title>
+    </subexercises>-->
+</exercises>

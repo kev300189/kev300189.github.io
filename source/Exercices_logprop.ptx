@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue un fichier auxiliaire du livre                    -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exo-logprop">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Exercices </title>
+    <!-- 
+   <exercise xml:id="exo-nom">
+    <introduction>
+    <p>L'énoncé de l'exercice.</p>
+    </introduction>
+    <task>
+            <statement>
+                <p>La première lettre de la question.</p>
+            </statement>
+            <answer>
+                <p> La réponse suivra. </p>
+            </answer>
+            <solution>
+                <p> La solution suivra. </p>
+            </solution>
+    </task>
+    </exercise>
+    -->
+    <exercisegroup>
+    <title>Exercices à faire en classe</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <exercise>
+    <statement><p>Construire la table de vérité pour <me>(p\vee q)\wedge (p\vee \neg q)</me>.</p></statement>
+    </exercise>
+    <exercise>
+    <introduction><p>Dans chacune des propositions suivantes, est-il plus probable que le &#x00AB; ou &#x00BB; soit inclusif ou exclusif? Justifier</p></introduction>
+    <task><statement><p>Je vais prendre du riz ou des frites avec mon poulet.</p></statement></task><!-- Les deux s'argumentent -->
+    <task><statement><p>Pour s'inscrire à ce cours, il faut avoir réussi deux cours de mathématiques ou trois cours de physique.</p></statement></task> <!-- inclusif -->
+    <task><statement><p>Le Canadien a gagné ou perdu hier.</p></statement></task> <!-- exclisif-->
+    </exercise>
+    <exercise>
+    <introduction><p>On considère les propositions
+    <ul>
+    <li><p><m>p:</m> J'ai passé le cours de mathématiques discrètes. </p></li>
+    <li><p><m>q:</m> J'ai réussi mon examen final avec <m>70%</m>.</p></li>
+    <li><p><m>r:</m> Je n'ai pas fait tous les devoirs recommandés par mon professeur.</p></li>
+    </ul></p>
+    <p>Écrire les propositions suivantes en langage courant.</p>
+    </introduction>
+    <task><statement>
+    <p><m>p\wedge q</m></p>
+    </statement></task>
+    <task><statement><p><m>\neg p \wedge r</m></p></statement></task>
+    <task><statement><p><m>q\rightarrow p</m></p></statement></task>
+    <task><statement><p><m>\neg p\rightarrow (\neg q\vee r)</m></p></statement></task>
+    <task><statement><p><m>(p\wedge q)\leftrightarrow \neg r</m></p></statement></task>
+    </exercise>
+    <exercise>
+    <introduction><p>Écrire les phrases suivantes en proposition logique n'utilisant que des variables <m>p,q,r</m> et des connecteurs de la section. Lorsqu'un &#x00AB; ou &#x00BB; devrait être exclusif, utiliser <m>\oplus</m>.</p></introduction>
+    <task><statement><p>J'irai à l'épicerie et chercher les enfants.</p></statement></task>
+    <task><statement><p>Si tu m'entends chanter, c'est que je suis sous la douche.</p></statement></task>
+    <task><statement><p>Quand je prends une douche, je chante</p></statement></task>
+    <task><statement><p>C'est nuageux, mais il n'y a pas de pluie.</p></statement></task>
+    <task><statement><p>Je chante sous la douche ou seul dans ma voiture.</p></statement></task>
+    <task><statement><p>S'il fait chaud et que vous êtes sage, on ira à la plage.</p></statement></task>
+    <task><statement><p>Si vous achetez cette voiture, je vous propose <m>1000</m>$ de rabais au comptant ou un rabais de <m>1\%</m> sur le financement.</p></statement></task>
+    </exercise>
+    <exercise><introduction>
+    <p>Construire la table de vérité des propositions suivantes.</p>
+    </introduction>
+    <task><statement><p><m>(p\vee q)\rightarrow (p\wedge q)</m> Donner une explication en mots de cette implication et donner un exemple concret en langage usuel.</p></statement></task>
+    <task><statement><p><m>(p\wedge q)\rightarrow \neg r</m> Donner une explication en mots de cette implication et donner un exemple concret en langage usuel.</p></statement></task>
+    <task><statement><p><m>(p\vee q)\rightarrow \neg r</m> Donner une explication en mots de cette implication et donner un exemple concret en langage usuel.</p></statement></task>
+    <task><statement><p><m>(p\leftrightarrow q)\vee (\neg p \leftrightarrow r)</m></p></statement></task>
+    </exercise>
+    <exercise xml:id="exo-negdisj"><introduction><p>Dans cet exercice, on réfléchit à la négation de la disjonction, soit <m>\neg(p\vee q)</m>. Plus particulièrement, on veut trouver une autre formulation. </p></introduction>
+    <task><statement><p>Quelle est la table de vérité de la négation de la disjonction?</p></statement></task>
+    <task><statement><p>En regardant l'unique ligne qui a pour valeur <q>vrai</q>, donner une formulation pour <m>\neg(p\vee q)</m>.</p></statement></task>
+    <task><statement><p>Donner la négation de <q>Je n'ai pas fait tous les exercices  ou j'ai passé le cours</q> sous la forme trouvée ci-dessus.</p></statement></task>
+    </exercise>
+    <exercise xml:id="exo-negimplication"><introduction><p>Dans cet exercice, on réfléchit à la négation de l'implication, soit <m>\neg(p\rightarrow q)</m>. Plus particulièrement, on veut trouver une autre formulation. </p></introduction>
+    <task><statement><p>Quelle est la table de vérité de la négation de l'implication?</p></statement></task>
+    <task><statement><p>En regardant l'unique ligne qui a pour valeur <q>vrai</q>, donner une formulation pour <m>\neg(p\rightarrow q)</m> qui n'utilise pas l'implication.</p></statement></task>
+    <task><statement><p>Donner la négation de <q>Si je fais tous les exercices, alors je vais passer le cours</q> sous la forme trouvée ci-dessus.</p></statement></task>
+    </exercise>
+    <exercise><introduction><p>Pour les phrases suivantes, énoncer en langage courant l'implication, la négation, la réciproque et la contraposée.</p></introduction>
+    <task><statement><p>Si je fais mes exercices, je vais passer le cours.</p></statement></task>
+    <task><statement><p>Quand je travaille de nuit, je dors jusqu'à 14:00.</p></statement></task>
+    <task><statement><p>Pour être riche, il suffit de gagner à la loterie</p></statement></task>
+    <task><statement><p>Pour être riche, il est nécessaire de gagner à la loterie.</p></statement></task>
+    <task><statement><p>Le gazon est mouillé chaque fois qu'il pleut.</p></statement></task>
+    </exercise>
+    </exercisegroup>
+    <exercisegroup>
+    <title>Exercices supplémentaires</title>
+    <!-- Exercices réécrire des ensembles avec logique -->
+    <exercise>
+    <introduction><p>Il est possible de réécrire la définition d'un ensemble à partir de propositions et de connecteurs logiques. Par exemple, l'union de deux ensembles peut s'écrire 
+    <me>
+    A\cup B=\{c~|~ c\in A \vee c\in B\}
+    </me>.</p>
+    <p>Écrire les ensembles suivants en utilisant les symboles logiques.</p></introduction>
+    <task><statement><p><m>A\cap B</m></p></statement></task>
+    <task><statement><p><m>A\times B</m></p></statement></task>
+    <task><statement><p><m>A\oplus B</m>, sans utiliser le symbole logique <m>\oplus</m>.</p></statement></task>
+    </exercise>
+    <exercise><introduction><p>Dans cet exercice, on réfléchit à la négation de la conjonction, soit <m>\neg(p\wedge q)</m>. Plus particulièrement, on veut trouver une autre formulation. </p></introduction>
+    <task><statement><p>Quelle est la table de vérité de la négation de la conjonction?</p></statement></task>
+    <task><statement><p>En regardant les lignes qui ont pour valeur <q>vrai</q>, donner une formulation pour <m>\neg(p\wedge q)</m>.</p></statement></task>
+    <task><statement><p>Donner la négation de <q>J'ai fait tous les exercices  et j'ai passé le cours</q> sous la forme trouvée ci-dessus.</p></statement></task>
+    </exercise>
+    <exercise xml:id="exo-egenslog"><statement><p>Dans la section <xref ref="sec-opens"/>, on a donné deux moyens pour démontrer l'égalité de deux ensembles, soit avec une table d'appartenance ou avec un argument de double inclusion. On démontre ci-dessous la deuxième <xref ref="li-opensDeMorgan" text="custom">loi de De Morgan</xref> à l'aide d'une troisième méthode, utilisant la logique. </p>
+    <p>On veut montrer que <m>(A\cup B)^c=A^c\cap B^c</m>. Par définition, on a <m>A\cup B=\{c~|~ c\in A\vee c\in B\}</m>. D'un point de vue de la logique, le complément représente la négation. On a alors
+    <md>
+    <mrow>(A\cup B)^c&amp;=\{c~|~\neg ( c\in A\vee c\in B)\}</mrow>
+    <mrow>           &amp;=\{c~|~\neg (c\in A)\wedge \neg( c\in B)\} &amp; &amp; \text{Selon } <xref ref="exo-negdisj"/></mrow>
+    <mrow>           &amp;=\{c~|~c\notin A\wedge c\notin B)\}&amp; &amp; \text{négation de ka relation d'appartenance}</mrow>
+    <mrow>           &amp;=A^c\cap B^c &amp;&amp; \text{définition de l'intersection}</mrow>
+    </md>
+    </p>
+    <p>Démontrer la première <xref ref="li-opensDeMorgan" text="custom">loi de De Morgan</xref> avec cette méthode. </p>
+    </statement></exercise>
+    </exercisegroup>
+</exercises>

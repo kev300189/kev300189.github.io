@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Ce fichier constitue un fichier auxiliaire du livre                    -->
+<!--                                                                        -->
+<!--      Mathématiques discrètes : Intuition et rigueur                    -->
+<!--                                                                        -->
+<!-- Creative Commons Attribution Share Alike 4.0 International             -->
+<!-- CC-BY-4.0                                                              -->
+<!-- Jean-Sébastien Turcotte                                                -->
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exo-modulo">   <!-- Ajouter l'identifiant de la section après le - du xml:id -->
+    <title> Exercices </title>
+    <!-- 
+   <exercise xml:id="exo-nom">
+    <introduction>
+    <p>L'énoncé de l'exercice.</p>
+    </introduction>
+    <task>
+            <statement>
+                <p>La première lettre de la question.</p>
+            </statement>
+            <answer>
+                <p> La réponse suivra. </p>
+            </answer>
+            <solution>
+                <p> La solution suivra. </p>
+            </solution>
+    </task>
+    </exercise>
+    -->
+    <subexercises>
+    <title>À faire en classe</title>
+    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <exercise><introduction><p>Déterminer le plus petit entier positif congru à <m>5^{2021}</m> modulo:</p></introduction>
+    <task><statement><p><m>2</m>;</p></statement></task>
+    <task><statement><p><m>3</m>;</p></statement></task>
+    <task><statement><p><m>4</m>;</p></statement></task>
+    <task><statement><p><m>6</m>;</p></statement></task>
+    </exercise>
+    <exercise><introduction>Pour chaque opération ci-dessous, donner la réponse sous la forme d'un entier entre <m>0</m> et <m>51</m>.</introduction>
+    <task><statement><p><m>(121\mod 52 +95 \mod 52)\mod 52</m>;</p></statement></task>
+    <task><statement><p><m>(121\mod 52 -95 \mod 52)\mod 52</m>;</p></statement></task>
+    <task><statement><p><m>((121\mod 52) \times (95 \mod 52))\mod 52</m>;</p></statement></task>
+    <!--<task><statement><p><m>3</m>;</p></statement></task>-->
+    </exercise>
+    <exercise><statement><p>Donner les réponses aux calculs de l'exercice précédent sous la forme d'un entier entre <m>-51</m> et <m>0</m>.</p></statement></exercise>
+    <exercise><statement><p>Montrer que chacune des classes d'équivalence modulo <m>5</m>, obtenues à l'exemple <xref ref="ex-modulo5"/>, peut être écrite sous la forme de l'ensemble <m>E_{r,5}=\{x\in \mathbb{Z}~|~ x=r+5k \,\text{pour un certain } k\in \mathbb{Z}\}</m>.</p></statement></exercise>
+    <exercise><statement><p>On considère les entiers impairs <m>I=\{1,3,5,7,9,\ldots\}</m>. Pour <m>n\in I</m>, calculer <m>n^2\mod 8</m> pour quelques entiers. Comment démontrer que cela sera toujours vrai?</p></statement></exercise>
+    <exercise><introduction><p>Un tableau contenant une infinité de lignes et <m>5</m> colonnes contenant les nombres naturels est construit. Les premières lignes sont données à la table ci-dessous. On considère l'élément à la première ligne et la première colonne comme la position <m>(0,0)</m>. De manière générale, un élément en position <m>(i,j)</m> est à la ligne <m>i</m> et colonne <m>j</m>. Par exemple, <m>15</m> est à la position <m>(2,3)</m>.</p>
+    <table>
+  <title>Un tableau de nombres</title>
+  <tabular>
+    <row>
+      <cell>
+        <m>0</m>
+      </cell>
+      <cell>
+        <m>1</m>
+      </cell>
+      <cell>
+        <m>2</m>
+      </cell>
+      <cell>
+        <m>3</m>
+      </cell>
+      <cell>
+        <m>4</m>
+      </cell>
+      <cell>
+        <m>5</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>6</m>
+      </cell>
+      <cell>
+        <m>7</m>
+      </cell>
+      <cell>
+        <m>8</m>
+      </cell>
+      <cell>
+        <m>9</m>
+      </cell>
+      <cell>
+        <m>10</m>
+      </cell>
+      <cell>
+        <m>11</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>12</m>
+      </cell>
+      <cell>
+        <m>13</m>
+      </cell>
+      <cell>
+        <m>14</m>
+      </cell>
+      <cell>
+        <m>15</m>
+      </cell>
+      <cell>
+        <m>16</m>
+      </cell>
+      <cell>
+        <m>17</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>18</m>
+      </cell>
+      <cell>
+        <m>19</m>
+      </cell>
+      <cell>
+        <m>20</m>
+      </cell>
+      <cell>
+        <m>21</m>
+      </cell>
+      <cell>
+        <m>22</m>
+      </cell>
+      <cell>
+        <m>23</m>
+      </cell>
+    </row>
+    <row>
+      <cell>
+        <m>24</m>
+      </cell>
+      <cell>
+        <m>25</m>
+      </cell>
+      <cell>
+        <m>26</m>
+      </cell>
+      <cell>
+        <m>27</m>
+      </cell>
+      <cell>
+        <m>28</m>
+      </cell>
+      <cell>
+        <m>29</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+    </introduction>
+    <task><statement><p>À quelle ligne et quelle colonne retrouve-t-on le nombre <m>33</m>?</p></statement></task>
+    <task><statement><p>À quelle ligne et quelle colonne retrouve-t-on le nombre <m>66</m>?</p></statement></task>
+    <task><statement><p>À quelle ligne et quelle colonne retrouve-t-on le nombre <m>87</m>?</p></statement></task>
+    <task><statement><p>À quelle ligne et quelle colonne retrouve-t-on votre numéro de  DA?</p></statement></task>
+    </exercise>
+    <exercise>
+    <introduction><p>Résoudre les congruences suivantes ou expliquer pourquoi il n'y a pas de solutions.</p></introduction>
+    <task><statement><p><m>2x\equiv 1\mod 5</m></p></statement></task>
+    <task><statement><p><m>3x\equiv 1\mod 4</m></p></statement></task>
+    <task><statement><p><m>3x\equiv 1\mod 7</m></p></statement></task>
+    <task><statement><p><m>4x\equiv 1\mod 6</m></p></statement></task>
+    <task><statement><p><m>5x\equiv 1\mod 7</m></p></statement></task>
+    </exercise>
+    <exercise>
+    <introduction><p>Résoudre les congruences suivantes sans essayer toutes les possibilités ou expliquer pourquoi il n'y a pas de solutions.</p></introduction>
+    <task><statement><p><m>2x\equiv 3\mod 5</m></p></statement></task>
+    <task><statement><p><m>3x\equiv 2\mod 4</m></p></statement></task>
+    <task><statement><p><m>3x\equiv 6\mod 7</m></p></statement></task>
+    <task><statement><p><m>4x\equiv 5\mod 6</m></p></statement></task>
+    <task><statement><p><m>5x\equiv 3\mod 7</m></p></statement></task>
+    <hint><p>Les résultats de l'exercice précédent peuvent être utile.</p></hint>
+    </exercise>
+    <exercise><statement><p>Sachant que <m>x=68</m> est une solution à l'équation <m>5x\equiv 1\mod 113</m>, trouver une solution à <me>
+    5x\equiv 34\mod 113
+    </me>.</p></statement></exercise>
+    <exercise><statement><p>On consdière la paire de congruences suivantes:
+    <md>
+    <mrow>x&amp;\equiv 2\mod 3</mrow>
+    <mrow>x&amp;\equiv 3\mod 5</mrow>
+    </md>.</p>
+    <p>Trouver une valeur de <m>x</m> qui satisfait simultanément ces deux équations.</p>
+    </statement>
+    <hint><p>Écrire la soution à la première congruence comme <m>x=2+3k</m> et remplacer dans la deuxième.</p></hint>
+    </exercise>
+    </subexercises>
+    <subexercises>
+    <title>Exercices supplémentaires</title>
+    <exercise><statement><p>Une relation <m>R</m> entre deux objets est une relation d'équivalence si pour <m>a,b,c</m> on a 
+    <ul>
+    <li><p>que la relation est symétrique, c'est-à-dire que si <m>(a,b)\in R</m>, alors <m>(b,a)\in R</m>;</p></li>
+    <li><p>que la relation est réflexive, c'est-à-dire que <m>(a,a)\in R</m>;</p></li>
+    <li><p>que la relation est transitive, c'est-à-dire que si <m>(a,b)\in R</m> et <m>(b,c)\in R</m>, alors <m>(a,c)\in R</m>.</p></li>
+    </ul></p>
+    <p>Pour la congruence modulo <m>n</m>, on peut plus simplement écrire <m>(a,b) \leftrightarrow a\equiv b\mod n</m>. Montrer que la congruence modulo est une relation d'équivalence.</p>
+    </statement></exercise>
+    <exercise><introduction><p>Encoder les messages suivants avec le décalage de César précisé avec le message.</p></introduction>
+    <task><p><c>Mon enseignant est le meilleur</c> avec décalage <m>22</m></p></task>
+    <task><p><c>Je vais faire tous les devoirs</c> avec décalage <m>9</m></p></task>
+    <task><p><c>Un jour je serai le meilleur dresseur</c> avec décalage <m>1</m></p></task>
+    </exercise>
+    <exercise><introduction><p>Décoder les messages suivants, qui ont été chiffrés par un décalage de César précisé avec le message.</p></introduction>
+    <task><p><c>EHBWEPXAWQZADKNO</c> avec décalage <m>22</m></p></task>
+    <task><p><c>MNBYXVVNBMNBYXRANBMNBJWJWJB</c> avec décalage <m>9</m></p></task>
+    <task><p><c>MFTNBUIFNBUJRVFTEJTDSFUFTDFTUWSBJNFOUHFOJBM</c> avec décalage <m>1</m></p></task>
+    </exercise>
+    <exercise><introduction><p>Encoder les messages suivants avec le système RSA dont les paramètres sont précisés avec le message.</p></introduction>
+    <task><p><c>Mon enseignant est le meilleur</c> avec paramètres <m>pq=2077, e=15841</m></p></task>
+    <task><p><c>Je vais faire tous les devoirs</c> avec paramètres <m>pq=18871, e=3261</m></p></task>
+    <task><p><c>Un jour je serai le meilleur dresseur</c> avec paramètres <m>pq=45113,e=5555</m></p></task>
+    <task><p>Qui a-t-il de particulier avec ces messages codés? Est-ce qu'il y a une lettre qui est facile à décoder? En utilisant des blocs de lettres comme dans le vrai RSA, ceci ne se produit pas.</p></task>
+    </exercise>
+    <exercise><introduction><p>Décoder les messages suivants, qui ont été chiffrés par RSA avec paramètres précisés avec le message.</p></introduction>
+    <task><p><c>[8, 349, 1231, 64, 1000, 1, 684, 125, 807, 8, 349, 1231, 64]</c> avec <m>p=89,q=17,e=531</m></p></task>
+    <task><p><c>[6041, 80552, 64471, 1, 40280, 76462, 6041, 75310, 6041, 40280, 2122, 78295, 80552, 16446, 1, 32487, 2122, 80552, 6041, 73799, 1, 20790, 3336, 6041, 40280, 20790, 16446, 1, 79033, 2122, 46951, 6415, 70263, 2122, 46951, 40280]</c> avec <m>p=389,q=233,e=111</m></p></task>
+    <task><p><c>[10, 1, 7357, 15878, 6017, 16044, 6017, 1172, 6017, 341, 6017, 10370, 341, 6017, 13378, 1, 16044, 11527, 341, 1518, 11527, 7357, 3855]</c> avec <m>p=101,q=167,e=333</m></p></task>
+    </exercise>
+    <exercise><title>QFINXUFWNYNTS</title><statement><p>Le message
+    <cd>
+    AYHOPYXBPKPZWHYBAKHUZSHKPZWHYPAPVUYHCPYHPAHBSPZHUAZBIAPSAVBAWSHPZPYTVABZKVUJZBYSPUJVUUBUVFHBTHUXBHUA
+    </cd>
+    a été encodé à l'aide d'un décalage César, mais le décalage est inconnu. Déterminer le message original, sans essayer toutes les possibilités.
+    </p></statement>
+    <hint><p>Si même après avoir déterminé quelles lettres sont les plus fréquentes le message ne se déchiffre toujours pas, un indice avec décalage 5 a été crypté dans le titre de l'exercice.</p> </hint>
+    <hint><p>Ne pas lire avant d'avoir réfléchi et cherché à propos de l'indice 1. L'indice ci-dessous est un décalage de César avec décalage <m>21</m>. Décoder chaque phrase individuellement pour une meilleure lisibilité.</p>
+    <p>QFINXUFWNYNTSJXYZSWTRFSIJLJTWLJUJWJHVZNJXYJHWNYXFSXZYNQNXJWQFQJYYWJJ</p>
+    <p>FUWJXJVZJQQJXTSYQJXQJYYWJXQJXUQZXZYNQNXJJXIJQFQFSLZJKWFSHFNXJ</p>
+    </hint>
+    <answer><p>Le message est un résumé du livre la disparition de George Perec, que l'on peut lire sur le site de <url href="https://www.renaud-bray.com/Livres_Produit.aspx?id=15116&amp;def=Disparition(La)%2cPEREC%2c+GEORGES%2c9782070715237">Renaud-Bray</url>. Ce livre a la particularité qu'il ne contient pas la lettre <q>e</q>, sauf pour le nom de l'auteur.</p></answer>
+    </exercise>
+    </subexercises>
+</exercises>
