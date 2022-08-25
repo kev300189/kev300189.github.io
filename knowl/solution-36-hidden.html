@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<p>Le plus simple pour construire le circuit associé à une table de vérité est de construire la forme normale disjonctive de l'expression. Comme il y a deux sorties qui donnent <span class="process-math">\(1\text{.}\)</span> On joint les lignes de ces sorties par des disjonctions. On obtient <span class="process-math">\(X\vee (\neg X\wedge Y\wedge Z)\text{.}\)</span> Il faudra donc combiner l'inverse de <span class="process-math">\(X\)</span> avec <span class="process-math">\(Y\)</span> et ensuite combiner ce résultat avec <span class="process-math">\(Z\)</span> dans des portes ET. Ensuite, on combine cette sortie avec <span class="process-math">\(X\)</span> dans une porte OU. À noter qu'à l'exercice <a href="" class="xref" data-knowl="./knowl/exo-ETmultiple.html" title="Exercice 2.4.4.1">2.4.4.1</a>, on verra qu'on peut combiner plus de deux entrées dans une porte ET grâce à l'associativité.</p>
+<p>Le circuit associé à cette table de vérité est illustré ci-dessous.</p>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit5.svg" class="contained" alt="Un circuit à trois entrées est illustré. L'entrée X est inversée et combinée avec l'entrée Y dans une porte ET. Ensuite, la sortie de cette porte est combinée avec Z dans une autre porte ET. Finalement le résultat de cette seconde porte ET est combinée avec X dans une porte OU."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.14<span class="period">.</span></span><span class="space"> </span>Le circuit associé à la table de vérité</figcaption></figure>
+</div></body>
+</html>
