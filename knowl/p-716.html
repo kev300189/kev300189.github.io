@@ -12,11 +12,21 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<p>On pose <span class="process-math">\(P=(\neg p \vee q)\)</span> et <span class="process-math">\(Q=p\wedge \neg r\text{.}\)</span> La proposition à nier est équivalente à <span class="process-math">\(P\wedge Q\text{.}\)</span> Selon la <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">loi de De Morgan</a> pour la conjonction, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
-\begin{equation*}
-\neg(P\wedge Q)=\neg P\vee \neg Q\text{.}
-\end{equation*}
+<p>On doit maintenant écrire les négations respectives de <span class="process-math">\(P=\neg p \vee q\)</span> et <span class="process-math">\(Q=p\wedge \neg r\text{.}\)</span> Pour <span class="process-math">\(P\text{,}\)</span> on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
+\begin{align*}
+\neg P&amp;=\neg (\neg p\vee q)\\
+&amp;=(\neg (\neg p))\wedge \neg q &amp; &amp; \text{selon } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;= p\wedge \neg q &amp;&amp; \text{selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
+\end{align*}
+</div>
+<p class="continuation">Pour <span class="process-math">\(Q\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
+\begin{align*}
+\neg Q&amp;=\neg(p\wedge \neg r)\\
+&amp;=(\neg p)\vee(\neg (\neg r))&amp; &amp; \text{selon } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;= \neg p\vee  r &amp;&amp; \text{selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
+\end{align*}
 </div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-716" class="internal">Contexte</a></span>
 </body>

@@ -12,11 +12,19 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<p>D'une manière similaire, on pose <span class="process-math">\(P=\neg (p\wedge q)\)</span> et <span class="process-math">\(Q=r\vee q\)</span> de sorte <span class="process-math">\(\neg (p\wedge q)\vee (r\vee q)=P\vee Q\text{.}\)</span> Selon la <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">loi de De Morgan</a> pour la conjonction, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
-\begin{equation*}
-\neg(P\vee Q)=\neg P\wedge \neg Q\text{.}
-\end{equation*}
+<p>On doit maintenant écrire les négations respectives de <span class="process-math">\(P=\neg (p \wedge \neg q)\)</span> et <span class="process-math">\(Q=r\vee  q\text{.}\)</span> Pour <span class="process-math">\(P\text{,}\)</span> on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogcomp.html ./knowl/li-oplogDeMorgan.html">
+\begin{align*}
+\neg P&amp;=\neg \neg (p \wedge \neg q)\\
+&amp;= p \wedge \neg q &amp;&amp; \text{selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
+\end{align*}
+</div>
+<p class="continuation">Pour <span class="process-math">\(Q\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogcomp.html ./knowl/li-oplogDeMorgan.html">
+\begin{align*}
+\neg Q&amp;=\neg(r\vee q)\\
+&amp;=\neg r\wedge \neg q&amp; &amp; \text{selon } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\text{.}
+\end{align*}
 </div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-719" class="internal">Contexte</a></span>
 </body>
