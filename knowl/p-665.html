@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraphe</span></h6>
-<p>Dans la section <a href="sec-opens.html" class="internal" title="Section 1.2: Opérations sur les ensembles">1.2</a>, on a donné deux moyens pour démontrer l'égalité de deux ensembles, soit avec une table d'appartenance ou avec un argument de double inclusion. On démontre ci-dessous la deuxième <a href="" class="xref" data-knowl="./knowl/li-opensDeMorgan.html" title="Point 1.2.13:9">loi de De Morgan</a> à l'aide d'une troisième méthode, utilisant la logique.</p>
+<p>On veut montrer que <span class="process-math">\((A\cup B)^c=A^c\cap B^c\text{.}\)</span> Par définition, on a <span class="process-math">\(A\cup B=\{c~|~ c\in A\vee c\in B\}\text{.}\)</span> D'un point de vue de la logique, le complément représente la négation. On a alors</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negdisj.html">
+\begin{align*}
+(A\cup B)^c&amp;=\{c~|~\neg ( c\in A\vee c\in B)\}\\
+&amp;=\{c~|~\neg (c\in A)\wedge \neg( c\in B)\} &amp; &amp; \text{Selon } \knowl{./knowl/exo-negdisj.html}{\text{2.1.5.6}}\\
+&amp;=\{c~|~c\notin A\wedge c\notin B)\}&amp; &amp; \text{négation de ka relation d'appartenance}\\
+&amp;=A^c\cap B^c &amp;&amp; \text{définition de l'intersection}
+\end{align*}
+</div>
 <span class="incontext"><a href="sec-logprop.html#p-665" class="internal">Contexte</a></span>
 </body>
 </html>
