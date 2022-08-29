@@ -11,14 +11,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraphe</span></h5>
-<p>Au final, on peut montrer que</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-hexaafinir.html">
+<h4 class="heading"><span class="type">Paragraphe</span></h4>
+<p>La base hexadécimale est beaucoup utilisée en informatique, car on peut passer facilement de binaire à hexadécimale ou l'inverse sans passer par l'intermédiaire de la base dix. De plus, un nombre en base seize est moins long à écrire qu'un nombre en base deux (en terme de nombre de caractère à utiliser). Pour voir comment passer de la base deux vers la base hexadécimale, on considère l'exemple suivant. On veut convertir le nombre <span class="process-math">\(110110010110_{2}\)</span> sous forme hexadécimale. Exprimé sous forme de puissances de deux, ce nombre est</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-987654321=3ADE68B1_{16}\text{.}
+1\cdot 2^{11}+1\cdot 2^{10}+0\cdot 2^9+1\cdot 2^8+1\cdot 2^7+0\cdot 2^6+0\cdot 2^5+1\cdot 2^4+0\cdot 2^3+1\cdot 2^2+1\cdot 2^1+0\cdot 2^0\text{.}
 \end{equation*}
 </div>
-<p class="continuation">L'exercice <a href="" class="xref" data-knowl="./knowl/exo-hexaafinir.html" title="Exercice 3.1.7.6">3.1.7.6</a> demande le reste de la démarche.</p>
+<p class="continuation">On regroupe maintenant ces termes en paquets de quatre, en effectuant une mise en évidence de la plus grande puissance de deux possible. On obtient alors</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(1\cdot 2^{11}+1\cdot 2^{10}+0\cdot 2^9+1\cdot 2^8)+(1\cdot 2^7+0\cdot 2^6+0\cdot 2^5+1\cdot 2^4)+(0\cdot 2^3+1\cdot 2^2+1\cdot 2^1+0\cdot 2^0)=(1\cdot 2^{3}+1\cdot 2^{2}+0\cdot 2^1+1\cdot 2^0)2^8+(1\cdot 2^3+0\cdot 2^2+0\cdot 2^1+1\cdot 2^0)2^4+(0\cdot 2^3+1\cdot 2^2+1\cdot 2^1+0\cdot 2^0)2^0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">On peut maintenant remarquer deux choses. Dans un premier temps, on a <span class="process-math">\(2^8=(2^4)^2=16^2, 2^4=16^1\)</span> et <span class="process-math">\(2^0=16^0\text{.}\)</span> En regroupant comme cela, on fait ressortir des puissances de 16, justement les puissances nécessaires pour écrire en base hexadécimale. Ensuite, dans les parenthèses, il ne reste que des puissance de deux entre <span class="process-math">\(0\)</span> et <span class="process-math">\(3\text{.}\)</span> Avec quatre chiffre binaire, on peut obtenir n'importe quel nombre entre <span class="process-math">\(0000_2=0\)</span> et <span class="process-math">\(1111_2=15\text{,}\)</span> exactement le nombre de caractères utilisés dans la base hexadécimale. Le nombre peut donc se réécrire comme suit:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align}
+(1\cdot 2^{3}+1\cdot 2^{2}+0\cdot 2^1+1\cdot 2^0)16^2+(1\cdot 2^3+0\cdot 2^2+0\cdot 2^1+1\cdot 2^0)16^1+(0\cdot 2^3+1\cdot 2^2+1\cdot 2^1+0\cdot 2^0)16^0 &amp;=(1101_2)16^2+(1001_2)16^1+(0110_2)16^0\tag{✶}\\
+&amp;=D\cdot 16^2+9\cdot 16^1+6\cdot 16^0\notag\\
+&amp;=D96_{16}\text{.}\notag
+\end{align}
+</div>
 <span class="incontext"><a href="sec-representation.html#p-1153" class="internal">Contexte</a></span>
 </body>
 </html>

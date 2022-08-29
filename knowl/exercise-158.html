@@ -12,13 +12,14 @@
 </head>
 <body class="ignore-math">
 <article class="exercise exercise-like"><h5 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">11<span class="period">.</span></span>
+<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">16<span class="period">.</span></span>
 </h5>
-<div class="introduction"><p>Effectuer les divisions suivantes afin de trouver le quotient et le reste.</p></div>
+<div class="introduction"><p>On considère le circuit de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit9.html" title="Figure 3.1.21">3.1.21</a>, qui prend deux nombres binaires écrits à l'aide de deux chiffres.</p></div>
 <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p><span class="process-math">\(1101001_2\div 11_2\)</span></p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p><span class="process-math">\(1011101_2\div 110_2\)</span></p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p><span class="process-math">\(110001_2\div 1111_2\)</span></p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p><span class="process-math">\(101110111_2\div 11011_2\)</span></p></article></article><span class="incontext"><a href="sec-representation.html#exercise-158" class="internal">Contexte</a></span>
+<p>Comparer différentes possibilités de <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> afin de déterminer ce que fait ce circuit.</p>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit9.svg" class="contained" alt="Un circuit à quatre entrées et une sortie est représentée. L'entrée A0 se combine avec la négation de l'entrée B0 dans une porte ET. Les entrées A1 et B1 se combinent dans une porte NXOR (non ou exclusif). La sortie de cette porte se combine avec la sortie de la première porte ET dans une deuxième porte ET. Ensuite, A1 se combine cette fois avec la négation de B1 dans une porte ET, et le résultat de cette porte se combine dans une porte OU avec le résultat de la deuxième porte ET pour produire la sortie finale du circuit."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.21<span class="period">.</span></span><span class="space"> </span>Un circuit pour nombres binaires à deux chiffres</figcaption></figure></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p>Vérifier que le cicuit correspond à l'expression <span class="process-math">\((A_1\wedge \neg B_1)\vee ((A_1=B_1)\wedge(A_0\wedge \neg B_0))\text{,}\)</span> où l'expression <span class="process-math">\(A_1=B_1\)</span> vaut <span class="process-math">\(1\)</span> si les deux entrées ont la même valeur et <span class="process-math">\(0\)</span> sinon.</p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p>En utilisant une boite générique pour illustrer le circuit d'égalité de l'exercice <a href="" class="xref" data-knowl="./knowl/exo-circuitegalite.html" title="Exercice 3.1.7.15">3.1.7.15</a>, illustrer un circuit permettant de généraliser celui de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit9.html" title="Figure 3.1.21">3.1.21</a> pour des nombres à <span class="process-math">\(\text{}\)</span> chiffres.</p></article></article><span class="incontext"><a href="sec-representation.html#exercise-158" class="internal">Contexte</a></span>
 </body>
 </html>
