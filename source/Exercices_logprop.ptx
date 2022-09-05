@@ -30,7 +30,7 @@
     -->
     <exercisegroup>
     <title>Exercices à faire en classe</title>
-    <introduction><p>Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.</p></introduction>
+    <introduction><p>Ces exercices servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés. Ils sont à faire d'ici le prochain cours</p></introduction>
     <exercise>
     <statement><p>Construire la table de vérité pour <me>(p\vee q)\wedge (p\vee \neg q)</me>.</p></statement>
     </exercise>

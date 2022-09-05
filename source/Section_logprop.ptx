@@ -238,7 +238,7 @@
 <statement><p>On considère la proposition <m>p\vee \neg (p\wedge q)</m> et on cherche à déterminer sous quelle condition elle est vraie. On utilise une table de vérité.</p></statement>
 <solution><p>Pour ce type de proposition, il convient de décomposer en plus petits morceaux et d'analyser chacun de ces morceaux afin de former le tout. La table de vérité</p>
 <table>
-<title>Table de vérité de la conjonction</title>
+<title>Table de vérité d'une proposition complexe</title>
   <tabular top="major">
     <row>
       <cell>
@@ -565,7 +565,7 @@ Dans les deux premier cas, la conclusion est vraie. L'implication est alors vér
     </conclusion>
     <reading-questions>
     <introduction>
-  <p>Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</p>
+  <p>Ces questions sont à faire durant le cours et à compléter à la maison.</p>
   </introduction>
   <exercise><introduction><p>Parmi les énoncés suivants, lesquels sont des propositions? Justifier brièvement.</p></introduction>
   <task><statement><p>Il est 8 heures.</p></statement></task>
