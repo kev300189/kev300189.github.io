@@ -11,11 +11,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negimplication.html ./knowl/exo-negimplication.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
 \begin{align*}
-\neg (p\vee q)\vee (r\wedge \neg q)&amp;\equiv\neg((p\wedge q\wedge r)\vee (p\wedge q\wedge \neg r)\vee (p\wedge \neg q\wedge \neg r)\vee (\neg p\wedge q\wedge r)\vee (\neg p \wedge q \wedge \neg r))\\
-&amp;\equiv \neg(p\wedge q\wedge r)\wedge \neg(p\wedge q\wedge \neg r)\wedge \neg(p\wedge \neg q\wedge \neg r)\wedge \neg(\neg p\wedge q\wedge r)\wedge \neg(\neg p \wedge q \wedge \neg r)\\
-&amp;\equiv (\neg p\vee \neg q\vee \neg r)\wedge (\neg p\vee \neg q\vee r)\wedge (\neg p\vee  q\vee  r)\wedge ( p\vee\neg q\vee \neg r)\wedge ( p \vee\neg q \vee  r)
+p\rightarrow q&amp;\equiv\neg \neg (p\rightarrow q) \\
+&amp;\equiv\neg (p\wedge \neg q) &amp;&amp; \text{Selon } \knowl{./knowl/exo-negimplication.html}{\text{2.1.5.7}}\\
+&amp;\equiv \neg p \vee \neg\neg q &amp;&amp; \text{Selon De Morgan } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}} \\
+&amp;\equiv \neg p \vee q &amp;&amp; \text{Selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}
 \end{align*}
 </div>
 <span class="incontext"><a href="sec-eqlogfnc.html#md-14" class="internal">Contexte</a></span>

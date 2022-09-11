@@ -11,10 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-puissmoinsnombre.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negationxor.html ./knowl/exo-circuitretenue.html">
 \begin{align*}
-A-B&amp;=A-B+2^n-2^n\\
-&amp;=A+(2^n-B)-2^n
+S&amp;\equiv(\neg A\wedge \neg B\wedge P)\vee (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)&amp;&amp;\\
+&amp;\equiv (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)\vee(\neg A\wedge \neg B\wedge P)&amp;&amp;\text{commutativité de l'union}\\
+&amp;\equiv((\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P))\vee ((A\wedge B\wedge P)\vee(\neg A\wedge \neg B\wedge P)&amp;&amp;\text{associativité de l'union})\\
+&amp;\equiv(((\neg A\wedge B)\vee(A\wedge \neg B))\wedge \neg P)\vee(((\neg A\wedge \neg B)\vee(A\wedge  B))\wedge P)&amp;&amp;\text{distributivité de l'intersection sur l'union}\\
+&amp;\equiv((A\oplus B)\wedge \neg P)\vee ((\neg A\oplus B)\wedge P)&amp;&amp; \text{définition du ou exclusif}\\
+&amp;\equiv((A\oplus B)\wedge \neg P)\vee (\neg( A\oplus B)\wedge P)&amp;&amp;\text{voir l'exercice }\knowl{./knowl/exo-negationxor.html}{\text{2.2.4.4}}\\
+&amp;\equiv(A\oplus B)\oplus P &amp;&amp;\text{définition du ou exclusif}
 \end{align*}
 </div>
 <span class="incontext"><a href="sec-representation.html#md-28" class="internal">Contexte</a></span>

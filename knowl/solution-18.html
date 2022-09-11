@@ -18,15 +18,15 @@
 <p>La différence de deux ensembles s'écrit d'un point de vu logique comme</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
 \begin{equation*}
-A-B=\{a~|~ x\in A\wedge x\notin B\}\text{.}
+A-B=\{x~|~ x\in A\wedge x\notin B\}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">On cherche le complément de cet ensemble, et donc la négation de la proposition <span class="process-math">\(x\in A\wedge x\notin B\text{.}\)</span> On a</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
 \begin{align*}
-(A-B)^c&amp;=\{a~|~ \neg(x\in A\wedge x\notin B)\}\\
-&amp;=\{a~|~ \neg(x\in A)\vee \neg (x\notin B)&amp;&amp; \text{Selon De Morgan} \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
-&amp;=\{a~|~ x\notin A \vee x\in B\} &amp;&amp; \text{La négation de la relation d'appartenance est la non appartenance et vice-versa}\\
+(A-B)^c&amp;=\{x~|~ \neg(x\in A\wedge x\notin B)\}\\
+&amp;=\{x~|~ \neg(x\in A)\vee \neg (x\notin B)&amp;&amp; \text{Selon De Morgan} \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;=\{x~|~ x\notin A \vee x\in B\} &amp;&amp; \text{La négation de la relation d'appartenance est la non appartenance et vice-versa}\\
 &amp;= A^c\cup B&amp;&amp;\text{Définition de l'union et du complément}\text{.}
 \end{align*}
 </div>

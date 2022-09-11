@@ -12,55 +12,14 @@
 </head>
 <body class="ignore-math">
 <article class="exercise exercise-like"><h5 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">14<span class="period">.</span></span><span class="space"> </span><span class="title">La complémentation à <span class="process-math">\(2\)</span>.</span>
+<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">16<span class="period">.</span></span>
 </h5>
-<div class="introduction">
-<p>On a vu dans le texte, faire une soustraction est une opération difficile comparativement à faire une addition. L'exercice <a href="" class="xref" data-knowl="./knowl/exo-puissmoinsnombre.html" title="Exercice 3.1.7.13">3.1.7.13</a> laisse entrevoir une manière différente de faire les soustractions. C'est d'ailleurs avec cette méthode (un peu modifiée) qu'un ordinateur effectue les soustractions. La méthode est basée sur l'observation suivante:</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-puissmoinsnombre.html">
-\begin{align*}
-A-B&amp;=A-B+2^n-2^n\\
-&amp;=A+(2^n-B)-2^n\text{.}
-\end{align*}
-</div>
-<p>Pour soustraire <span class="process-math">\(B\)</span> à <span class="process-math">\(A\text{,}\)</span> on lui additionne plutôt le <em class="emphasis">complément à <span class="process-math">\(2\)</span></em> de <span class="process-math">\(B\)</span> selon la puissance <span class="process-math">\(n\text{.}\)</span> On décortique la méthode ci-dessous.</p>
-</div>
+<div class="introduction"><p>On considère le circuit de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit9.html" title="Figure 3.1.21">3.1.21</a>, qui prend deux nombres binaires écrits à l'aide de deux chiffres.</p></div>
 <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="introduction">
-<p>Le complément à <span class="process-math">\(2\)</span> selon la puissance <span class="process-math">\(n\)</span> d'un nombre binaire <span class="process-math">\(B\)</span> est le nombre obtenu en faisant la soustraction <span class="process-math">\(2^n_{10}-B_{10}\text{.}\)</span> Grâce à l'exercice <a href="" class="xref" data-knowl="./knowl/exo-puissmoinsnombre.html" title="Exercice 3.1.7.13">3.1.7.13</a>, on peut observer ceci. Le complément par rapport à une puissance <span class="process-math">\(n\)</span> est obtenu en écrivant le nombre avec <span class="process-math">\(n\)</span> chiffres, ajoutant au besoin des zéros à gauche. Par la suite:</p>
-<ol class="lower-alpha">
-<li><p>À partir de la droite, on garde les premiers zéros et le premier un.</p></li>
-<li><p>Tous les autres chiffres sont inversés. Les zéros deviennent des uns et les uns deviennent des zéros.</p></li>
-</ol>
-<p>Par exemple, le complément de <span class="process-math">\(1010_2\)</span> par rapport à la puissance <span class="process-math">\(n=5\)</span> est</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-complementexemple.html">
-\begin{equation*}
-(01010_2)^{c}=(10101_2)\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Celui-ci correspond à la réponse de la soustraction à l'exercice <a href="" class="xref" data-knowl="./knowl/exo-complementexemple.html" title="Tâche 3.1.7.13.j">3.1.7.13.j</a>.</p>
-</div>
-<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(i)</span></h6>
-<p>Vérifier les réponses de l'exercice <a href="" class="xref" data-knowl="./knowl/exo-puissmoinsnombre.html" title="Exercice 3.1.7.13">3.1.7.13</a> en utilisant la méthode du complément.</p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
-<p>Trouver le complément de <span class="process-math">\(11101_2\)</span> par rapport à la puissance <span class="process-math">\(n=8\text{.}\)</span></p></article></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="introduction"><p>Pour revenir à la soustraction <span class="process-math">\(A-B\text{,}\)</span> une fois le complément de <span class="process-math">\(B\)</span> calculé, on additionne <span class="process-math">\(A+B^c\text{,}\)</span> ce qui donne un nombre à au plus <span class="process-math">\(n\)</span> chiffres significatifs (à partir du premier <span class="process-math">\(1\)</span> à gauche). On distingue alors deux cas, selon si <span class="process-math">\(A&gt;B\)</span> ou <span class="process-math">\(A&lt;B\text{.}\)</span></p></div>
-<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(i)</span></h6>
-<p>Vérifier que <span class="process-math">\(101011_2-1101_2=0101011_2+(0001101_2)^c-1000000_2=0101011_2+(1110011_2)^c-1000000_2=\)</span> et que le résultat correspond au résultat de <span class="process-math">\(0101011_2+(0001101_2)^c\)</span> en ignorant le chiffre le plus à droite.</p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
-<p>Calculer <span class="process-math">\(11001_2-10100_2\)</span> en utilisant l'observation ci-dessus.</p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
-<div class="introduction">
-<p>Lorsque <span class="process-math">\(A&lt;B\text{,}\)</span> l'algorithme de soustraction ne fonctionne pas. On a alors deux options. La première consiste à faire <span class="process-math">\(B-A\)</span> à la place et de mettre un signe négatif devant la réponse, puisque <span class="process-math">\(A-B=-(B-A)\text{.}\)</span> L'autre option utilise un argument similaire pour montrer que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-A-B=A+B^c-2^n=-(2^n-(A+B^c))\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Le membre de droite de l'équation précédente n'est rien d'autre que le complément de <span class="process-math">\(A+B^c\text{.}\)</span> On a donc</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-A-B=(A+B^c)^c\text{.}
-\end{equation*}
-</div>
-</div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(iv)</span></h6>
-<p>Utiliser la première méthode pour calculer <span class="process-math">\(1011_2-10101_2\text{.}\)</span></p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(v)</span></h6>
-<p>Utiliser la seconde méthode pour calculer <span class="process-math">\(111_2-10111_2\text{.}\)</span></p></article></article></article><span class="incontext"><a href="sec-representation.html#exercise-159" class="internal">Contexte</a></span>
+<p>Comparer différentes possibilités de <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> afin de déterminer ce que fait ce circuit.</p>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit9.svg" class="contained" alt="Un circuit à quatre entrées et une sortie est représentée. L'entrée A0 se combine avec la négation de l'entrée B0 dans une porte ET. Les entrées A1 et B1 se combinent dans une porte NXOR (non ou exclusif). La sortie de cette porte se combine avec la sortie de la première porte ET dans une deuxième porte ET. Ensuite, A1 se combine cette fois avec la négation de B1 dans une porte ET, et le résultat de cette porte se combine dans une porte OU avec le résultat de la deuxième porte ET pour produire la sortie finale du circuit."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.21<span class="period">.</span></span><span class="space"> </span>Un circuit pour nombres binaires à deux chiffres</figcaption></figure></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p>Vérifier que le cicuit correspond à l'expression <span class="process-math">\((A_1\wedge \neg B_1)\vee ((A_1=B_1)\wedge(A_0\wedge \neg B_0))\text{,}\)</span> où l'expression <span class="process-math">\(A_1=B_1\)</span> vaut <span class="process-math">\(1\)</span> si les deux entrées ont la même valeur et <span class="process-math">\(0\)</span> sinon.</p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p>En utilisant une boite générique pour illustrer le circuit d'égalité de l'exercice <a href="" class="xref" data-knowl="./knowl/exo-circuitegalite.html" title="Exercice 3.1.7.15">3.1.7.15</a>, illustrer un circuit permettant de généraliser celui de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit9.html" title="Figure 3.1.21">3.1.21</a> pour des nombres à <span class="process-math">\(\text{}\)</span> chiffres.</p></article></article><span class="incontext"><a href="sec-representation.html#exercise-159" class="internal">Contexte</a></span>
 </body>
 </html>

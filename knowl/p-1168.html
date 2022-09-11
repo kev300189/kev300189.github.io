@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraphe</span></h4>
-<p>Dans la deuxième colonne, il a été nécessaire de faire un emprunt. On a donc remplacé le <span class="process-math">\(0\)</span> de la première colonne par <span class="process-math">\(10_2\)</span> et en soustrayant le <span class="process-math">\(1\text{,}\)</span> on obtient <span class="process-math">\(10_2-1_2=1_2\text{.}\)</span> Il a aussi fallu emprunter dans la troisième colonne. Comme la quatrième est aussi nulle, on emprunte à la cinquième, ainsi <span class="process-math">\(100_2\)</span> devient <span class="process-math">\(011_2\)</span> avec le dernier <span class="process-math">\(1\)</span> considéré comme <span class="process-math">\(10_2\text{.}\)</span> La troisième colonne devient <span class="process-math">\(10_2-1_2=1_2\text{,}\)</span> la quatrième <span class="process-math">\(1_2-0_2=1_2\)</span> et la cinquième <span class="process-math">\(0_2-0_2=0_2\text{.}\)</span> Finalement, la dernière colonne est <span class="process-math">\(1_2-1_2=0_2\text{.}\)</span> Au final on a <span class="process-math">\(1100101_2-1001010_2=11011_2\text{.}\)</span></p>
+<p>On veut maintenant effectuer une multiplication de deux nombres binaires. L'algorithme utilisé pour faire une multiplication en base dix peut être repris, mais on utilise une approche différente, similaire à la manière dont les ordinateurs font les calculs. Celle-ci exploite le fait que multiplié un nombre par une puissance de deux est équivalents à ajouter un certain nombre de zéros à la fin, comme multiplié par <span class="process-math">\(10,100,1000,\)</span> etc. en base dix. Par exemple, pour faire <span class="process-math">\(1101_2\times 100_2\)</span> on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+1101_2\times 100_2&amp;=(2^3+2^2+2^0)\times 2^2\\
+&amp;=2^3\times 2^2+2^2\times 2^2+2^0\times 2^2\\
+&amp;=2^5+2^4+2^2\\
+&amp;=110100_2\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="sec-representation.html#p-1168" class="internal">Contexte</a></span>
 </body>
 </html>
