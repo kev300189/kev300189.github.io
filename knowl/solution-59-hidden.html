@@ -11,9 +11,82 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>On débute avec l'expression logique. On voit que la sortie sera obtenue après une porte ET qui combine les deux paires de parenthèses. Dans la première paire, le <span class="process-math">\(X\)</span> est combiné à la négation de <span class="process-math">\(Z\)</span> par une porte OU et dans la seconde, c'est la négation de <span class="process-math">\(Y\)</span> qui est combinée à <span class="process-math">\(Z\text{,}\)</span> aussi par une porte OU.</p>
-<p>Comme <span class="process-math">\(Z\)</span> apparait dans les deux paires de parenthèses, il faudra séparer l'entrée en deux. Une solution possible est donner ci-dessous.</p>
-<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit4.svg" class="contained" alt="Un circuit à trois entrées est illustré. L'entrée X est combinée avec l'inverse de l'entrée Z dans une porte OU. L'entrée Y est inversée et combinée avec l'entrée Z, aussi dans une porte OU. Le résultat de ces deux portes OU est finalement combiné dans une porte ET."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.13<span class="period">.</span></span><span class="space"> </span>Le circuit associé à l'expression logique</figcaption></figure>
+<p>Souvent, il est plus simple de déterminer d'abord l'expression logique et à partir de celle-ci, écrire la table de vérité. C'est l'approche préconisée ici.</p>
+<p>On peut procéder comme dans le circuit à deux entrées. On peut aussi procéder de la sortie vers les entrées. La porte finale est une porte ET. On sait donc qu'on aura une conjonction de deux propositions. La première partie de la conjonction correspond à la sortie de la porte OU, qui combine le <span class="process-math">\(X\)</span> et le <span class="process-math">\(Y\text{.}\)</span> La seconde partie de la porte finale est la sortie d'une inversion. On aura donc une négation. Ce qui est inversé, c'est le résultat de la porte ET, qui combine le <span class="process-math">\(Y\)</span> et le <span class="process-math">\(Z\text{.}\)</span> En combinant ces informations, on obtient <span class="process-math">\((X\vee Y)\wedge \neg(Y\wedge Z)\text{.}\)</span></p>
+<p>On peut ensuite trouver la table de vérité ci-dessous.</p>
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.10<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(X\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(Y\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(Z\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(X\vee Y\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(\neg(Y\wedge Z)\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\((X\vee Y)\wedge \neg(Y\wedge Z)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">0</td>
+<td class="l m b3 r0 l0 t0 lines">0</td>
+<td class="l m b3 r2 l0 t0 lines">0</td>
+<td class="l m b3 r2 l0 t0 lines">0</td>
+<td class="l m b3 r2 l0 t0 lines">1</td>
+<td class="l m b3 r0 l0 t0 lines">0</td>
+</tr>
+</table></div></figure>
 </div></body>
 </html>

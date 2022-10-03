@@ -13,13 +13,26 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.6.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.5.2</span><span class="period">.</span>
 </h4>
-<p>On décompose le nombre selon les puissances négatives de <span class="process-math">\(2\)</span> pour obtenir</p>
+<p>On montre une manière plus concise d'écrire le raisonnement précédent. La plus grande puissance de <span class="process-math">\(2\)</span> qui est inférieure ou égale à <span class="process-math">\(187\)</span> est <span class="process-math">\(128\text{.}\)</span> On a donc</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-0.1011_2=1\times 2^{-1}+0\times 2^{-2}+1\times 2^{-3}+1\times 2^{-4}=0.5+0.125+0.0625=0.6875\text{.}
-\end{equation*}
+\begin{align*}
+187&amp;=128+\text{quelque chose}\\
+\end{align*}
+<p class="intertext">Puisque 187-128=59 et que la plus grande puissance de 2 inférieure à 59 est 32, on a</p>
+\begin{align*}
+187&amp;=128+32+\text{autre chose}\\
+\end{align*}
+<p class="intertext">autre chose doit être égal à 27 lorsqu'on fait la soustraction. La plus grande puissance inférieure à cela est 16 et donc</p>
+\begin{align*}
+187&amp;=128+32+16+\text{quelque chose d'autre}\\
+\end{align*}
+<p class="intertext">on poursuit ainsi et on obtient finalement</p>
+\begin{align*}
+187&amp;=128+32+16+8+2+1\\
+187&amp;=10111011_2
+\end{align*}
 </div>
 </div>
 <span class="incontext"><a href="sec-representation.html#solution-65" class="internal">Contexte</a></span>

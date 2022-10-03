@@ -816,7 +816,19 @@ p\rightarrow q&amp;\equiv\neg \neg (p\rightarrow q) \\
 <article class="exercise exercise-like" id="exercise-89"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
 <div class="introduction" id="introduction-79"><p id="p-809">Déterminer si les expressions suivantes sont des tautologies, des contradictions ou des propositions quelconques.</p></div>
 <article class="task exercise-like" id="task-219"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-810"><span class="process-math">\(p\wedge \neg (q\rightarrow p)\)</span></p></article><article class="task exercise-like" id="task-220"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-810"><span class="process-math">\(p\wedge \neg (q\rightarrow p)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">On montre que cette proposition est une contradiction. En effet, on a montrer en classe que <span class="process-math">\(p\rightarrow q \equiv \neg p \vee q \text{.}\)</span> Ainsi,<div class="displaymath process-math" data-contains-math-knowls="" id="md-19">
+\begin{align*}
+p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
+&amp;\equiv p \wedge \neg\neg q \wedge \neg p \text{ par De Morgan.}\\
+&amp;\equiv p \wedge q\wedge \neg p\\
+&amp;\equiv p \wedge \neg p \wedge \neg q\\
+&amp;\equiv F \wedge \neg q \equiv F
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-220"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-811"><span class="process-math">\(((p\rightarrow q)\wedge \neg q)\rightarrow \neg p\)</span></p></article><article class="task exercise-like" id="task-221"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-812"><span class="process-math">\(((p\rightarrow q)\vee \neg q)\rightarrow p\)</span></p></article><article class="task exercise-like" id="task-222"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <p id="p-813"><span class="process-math">\((p\wedge (p\rightarrow q))\rightarrow q\)</span></p></article></article><article class="exercise exercise-like" id="exercise-90"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>

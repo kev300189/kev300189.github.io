@@ -13,10 +13,13 @@
 <body class="ignore-math">
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-\neg(\forall n\in \N\, n^2=n+2)&amp;\equiv \exists n\in \N \neg(n^2=n+2)\\
-&amp;\equiv \exists n\in \N n^2\neq n+2
+p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
+&amp;\equiv p \wedge \neg\neg q \wedge \neg p \text{ par De Morgan.}\\
+&amp;\equiv p \wedge q\wedge \neg p\\
+&amp;\equiv p \wedge \neg p \wedge \neg q\\
+&amp;\equiv F \wedge \neg q \equiv F
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-propquant.html#md-19" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#md-19" class="internal">Contexte</a></span>
 </body>
 </html>

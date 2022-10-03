@@ -12,15 +12,18 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.3.1.1</span><span class="period">.</span>
-</h4>
-<ol class="decimal">
-<li><p>Lorsque <span class="process-math">\(x=1\text{,}\)</span> la proposition <span class="process-math">\(P_1(1)\)</span> est <span class="process-math">\(1&gt;4\text{,}\)</span> qui est fausse.</p></li>
-<li><p>La proposition <span class="process-math">\(P_2(1,3)\)</span> est <span class="process-math">\(1\leq 3\text{,}\)</span> qui est vraie.</p></li>
-<li><p>Puisque <span class="process-math">\(1+3=4\text{,}\)</span> la proposition <span class="process-math">\(P_3(1,3)\)</span> est fausse.</p></li>
-</ol>
+<h6 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.4.1.a.1</span><span class="period">.</span>
+</h6>On montre que cette proposition est une contradiction. En effet, on a montrer en classe que <span class="process-math">\(p\rightarrow q \equiv \neg p \vee q \text{.}\)</span> Ainsi,<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
+&amp;\equiv p \wedge \neg\neg q \wedge \neg p \text{ par De Morgan.}\\
+&amp;\equiv p \wedge q\wedge \neg p\\
+&amp;\equiv p \wedge \neg p \wedge \neg q\\
+&amp;\equiv F \wedge \neg q \equiv F
+\end{align*}
 </div>
-<span class="incontext"><a href="sec-propquant.html#solution-47" class="internal">Contexte</a></span>
+</div>
+<span class="incontext"><a href="sec-eqlogfnc.html#solution-47" class="internal">Contexte</a></span>
 </body>
 </html>
