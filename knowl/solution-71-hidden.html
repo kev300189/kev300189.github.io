@@ -11,24 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>Pour trouver un inverse, il faut trouver <span class="process-math">\(x\)</span> tel que <span class="process-math">\(72\mid (5x-1)\text{.}\)</span> En d'autres mots, <span class="process-math">\(5x-1=72y\)</span> pour un certain <span class="process-math">\(y\in \mathbb{Z}\text{.}\)</span> En réécrivant, on remarque qu'il faut que <span class="process-math">\(5x-72y=1\)</span> et de plus, <span class="process-math">\(\pgcd{(5,72)}=1\text{.}\)</span> Le <a href="" class="xref" data-knowl="./knowl/exo-Bezout.html" title="Exercice 3.2.5.6: Le lemme de Bézout">lemme de Bézout</a> et l'algorithme d'Euclide seront utiles pour trouver l'inverse. D'une part, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-Bezout.html">
+<p>Puisque <span class="process-math">\(1010_2=1000_2+0010_2\text{,}\)</span> on aura</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1001_2\times 1010_2=1001_2\times (1000_2+10_2)=1001_2\times 1000_2+1001_2\times 10_2\text{.}
+\end{equation*}
+</div>
+<p class="continuation">On ajoute à chaque terme le bon nombre de zéros et on obtient <span class="process-math">\(1001000_2+10010_2\text{.}\)</span> Finalement, on additionne</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-72&amp;=5\times 14+2\\
-5&amp;=2\times 2+1\\
-2&amp;=1\times 2+0\text{,}
+&amp; &amp; 10 01000_2&amp;\\
+&amp;+&amp;{}{}10010_2&amp;\\
+\hline&amp; &amp; 10 11010_2&amp; 
 \end{align*}
 </div>
-<p class="continuation">selon l'algorithme d'Euclide. Puis, en réorganisant ces équations, on trouve</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-Bezout.html">
-\begin{align*}
-1&amp;=5-2\times 2\\
-1&amp;=5-(72-5\times 14)\times 2\\
-1&amp;=5-72\times 2+5\times 28\\
-1&amp;=5(1+28)-72\times2\\
-1&amp;=5\times (29)-72\times 2\text{.}
-\end{align*}
-</div>
-<p><span class="process-math">\(29\)</span> est donc un inverse à <span class="process-math">\(5\)</span> modulo <span class="process-math">\(72\text{.}\)</span></p>
 </div></body>
 </html>

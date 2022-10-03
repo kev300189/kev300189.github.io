@@ -11,12 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
 \begin{align*}
-\neg(\forall x \forall y\, P(x,y))&amp;\equiv \exists x\, \neg(\forall y\, P(x,y))\\
-&amp;\equiv \exists x\, \exists y\,\neg P(x,y)
+(A-B)^c&amp;=\{x~|~ \neg(x\in A\wedge x\notin B)\}\\
+&amp;=\{x~|~ \neg(x\in A)\vee \neg (x\notin B)&amp;&amp; \text{Selon De Morgan} \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;=\{x~|~ x\notin A \vee x\in B\} &amp;&amp; \text{La négation de la relation d'appartenance est la non appartenance et vice-versa}\\
+&amp;= A^c\cup B&amp;&amp;\text{Définition de l'union et du complément}
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-propquant.html#md-17" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#md-16" class="internal">Contexte</a></span>
 </body>
 </html>

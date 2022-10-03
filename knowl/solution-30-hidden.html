@@ -10,5 +10,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><p>Cette fois-ci, il n'est pas suffisant de trouver deux formes de la même couleur. Il faut s'assurer que pour chaque triangle, il existe un carré ayant la même couleur. On identifie trois triangles, soit <span class="process-math">\(d,f\)</span> et <span class="process-math">\(i\text{.}\)</span> Le triangle <span class="process-math">\(d\)</span> est vert. On vérifie sur la figure <a href="" class="xref" data-knowl="./knowl/fig-Tarski1.html" title="Figure 2.3.9">2.3.9</a> que le carré <span class="process-math">\(e\)</span> est aussi vert. Le triangle <span class="process-math">\(f\)</span> est rouge, tout comme le triangle <span class="process-math">\(i\text{.}\)</span> Dans les deux cas, le carré <span class="process-math">\(g\)</span> ou le carré <span class="process-math">\(h\)</span> sont aussi rouges. La propriété est donc vraie.</p></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<p>Soit <span class="process-math">\(a\ in A\text{,}\)</span> on veut comparer <span class="process-math">\(\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)\\)</span> à <span class="process-math">\(\mathbb{1}_{C\cap D}(a)\text{.}\)</span></p>
+<p>Si <span class="process-math">\(a\in C\cup D\text{,}\)</span> alors <span class="process-math">\(\mathbb{1}_{C\cap D}(a)=1\text{.}\)</span> De plus, on a que <span class="process-math">\(a\in C\)</span> et <span class="process-math">\(a \in D\text{.}\)</span> Ainsi, <span class="process-math">\(\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)=1\cdot 1=1\\)</span></p>
+<p>Si <span class="process-math">\(a\notin C\cup D\text{,}\)</span> alors <span class="process-math">\(\mathbb{1}_{C\cap D}(a)=0\text{.}\)</span> De plus, on a que <span class="process-math">\(a\notin C\)</span> ou <span class="process-math">\(a \notin D\text{.}\)</span> Ainsi, <span class="process-math">\(\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)=0\cdot 1=0\\text{.}\)</span></p>
+</div></body>
 </html>

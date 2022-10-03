@@ -12,7 +12,22 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<p>Soit <span class="process-math">\(p,q,r\)</span> des variables propositionnelles. Donner une proposition moléculaire formée à partir de <span class="process-math">\(p,q,r\)</span> qui est vraie quand exactement deux variables sont vraies et fausse dans les autres cas.</p>
+<p>On doit maintenant écrire les négations respectives de <span class="process-math">\(P\equiv\neg p \vee q\)</span> et <span class="process-math">\(Q\equivp\wedge \neg r\text{.}\)</span> Pour <span class="process-math">\(P\text{,}\)</span> on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
+\begin{align*}
+\neg P&amp;\equiv\neg (\neg p\vee q)\\
+&amp;\equiv(\neg (\neg p))\wedge \neg q &amp; &amp; \text{selon } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;\equiv p\wedge \neg q &amp;&amp; \text{selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
+\end{align*}
+</div>
+<p class="continuation">Pour <span class="process-math">\(Q\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
+\begin{align*}
+\neg Q&amp;\equiv\neg(p\wedge \neg r)\\
+&amp;\equiv(\neg p)\vee(\neg (\neg r))&amp; &amp; \text{selon } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;\equiv \neg p\vee  r &amp;&amp; \text{selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-761" class="internal">Contexte</a></span>
 </body>
 </html>

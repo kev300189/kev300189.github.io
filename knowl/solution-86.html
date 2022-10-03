@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.7.1</span><span class="period">.</span>
+</h4>
+<p>L'idée est de décomposer le nombre <span class="process-math">\(2^{345}\)</span> en quelque chose de plus petit et dont on connait le reste de la division par <span class="process-math">\(7\text{.}\)</span> Dans ce cas-ci, on voit que <span class="process-math">\(345=5\times 69\)</span> et donc <span class="process-math">\(2^{345}=(2^5)^{69}\text{.}\)</span> Comme <span class="process-math">\(2^5=32\equiv 4\mod 7\text{,}\)</span> la troisième propriété appliquée à répétition nous permet de dire que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+2^{345}\equiv 4^{69}\mod 7\text{.}
+\end{equation*}
+</div>
+<p class="continuation">On peut ensuite observer que <span class="process-math">\(4^3=64\equiv 1\mod 7\)</span> et puisque <span class="process-math">\(69=3\times 23\text{,}\)</span> alors</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+2^{345}&amp;\equiv 4^{69}\mod 7\\
+&amp;\equiv (4^3)^{23}\mod 7\\
+&amp;\equiv 1^{23}\mod 7\\
+&amp;\equiv 1\mod 7\text{.}
+\end{align*}
+</div>
+<p>Le reste de la division par <span class="process-math">\(7\)</span> du nombre <span class="process-math">\(2^{345}\)</span> est donc <span class="process-math">\(1\text{.}\)</span> On note au passage qu'on aurait pu y arriver plus rapidement en divisant <span class="process-math">\(345\)</span> par <span class="process-math">\(3\)</span> plutôt que par <span class="process-math">\(5\)</span> initialement.</p>
+</div>
+<span class="incontext"><a href="sec-modulo.html#solution-86" class="internal">Contexte</a></span>
+</body>
+</html>

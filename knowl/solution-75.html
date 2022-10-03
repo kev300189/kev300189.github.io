@@ -12,14 +12,53 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.6.d.i.1</span><span class="period">.</span>
-</h6>
-<p>Cette-fois, on distingue trois cas: Christian est présent, mais pas Sophie, Sophie est présent, mais pas Christian ou ni Sophie ni Christian sont présents. Ces trois cas sont disctincts et le principe d'addition permettra d'obtenir l'ensemble des possibilités.</p>
-<p>Si Christian est présent, il faut ensuite choisir les <span class="process-math">\(9\)</span> autres invités parmi les <span class="process-math">\(12\)</span> personnes qui ne sont pas Sophie (ou Christian). Cela donne <span class="process-math">\(\frac{12!}{9!3!}\text{.}\)</span> Le même argument montre que si Sophie est présente, mais pas Christian, le nombre de possibilités est aussi <span class="process-math">\(\frac{12!}{9!3!}\text{.}\)</span></p>
-<p>Finalement, si les deux sont absents, il faut choisir les <span class="process-math">\(10\)</span> invités parmi les <span class="process-math">\(12\)</span> autres possibilités. On obtient alors <span class="process-math">\(\frac{12!}{10!2!}\text{.}\)</span></p>
-<p>En combinant le tout, il y a <span class="process-math">\(2\times \frac{12!}{9!3!}+\frac{12!}{10!2!}\)</span> possibilités.</p>
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.6.1</span><span class="period">.</span>
+</h4>
+<p>On utilise une table dans laquelle on note les quotients et les restes. Ceux-ci peuvent être calculés avec Sage.</p>
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.7<span class="period">.</span></span><span class="space"> </span>Conversion de 987654321 en hexadécimale avec la méthode des quotients et des restes</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(987654321\div\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(16\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">Quotients</td>
+<td class="l m b2 r0 l0 t0 lines">Restes</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(61728395\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3858024\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(11=B\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(241126\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(15070\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(941\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(14=E\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(58\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(13=D\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10=A\)</span></td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b3 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+</tr>
+</table></div></figure><p>Le résultat est donc bel et bien <span class="process-math">\(987654321=3ADE68B1_{16}\text{.}\)</span></p>
 </div>
-<span class="incontext"><a href="section-11.html#solution-75" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-divisibilite.html#solution-75" class="internal">Contexte</a></span>
 </body>
 </html>

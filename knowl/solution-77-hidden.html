@@ -11,11 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>Ceci correspond à l'entrée des billes identiques dans des urnes identiques. Les beignes sont les billes et les urnes les sacs. Il y aurait <span class="process-math">\(3\)</span> manières:</p>
-<ul class="disc">
-<li><p>Un sac avec quatre beignes et deux sacs avec un beignes;</p></li>
-<li><p>Un sac avec trois beignes, un sac avec deux beignes et un sac avec un beigne;</p></li>
-<li><p>Trois sacs avec deux beignes.</p></li>
-</ul>
+<p>Cette fois-ci, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+147&amp;=74\times 1+73\\
+74&amp;=73\times 1+1\\
+73&amp;=1\times 73+0\text{.}
+\end{align*}
+</div>
+<p class="continuation">Selon l'algorithme d'Euclide, <span class="process-math">\(\pgcd{(147,74)}=1\text{,}\)</span> le dernier reste non nul. Ces nombres sont donc copremiers.</p>
 </div></body>
 </html>

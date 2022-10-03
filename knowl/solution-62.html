@@ -13,25 +13,43 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.7.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.4.1</span><span class="period">.</span>
 </h4>
-<p>L'idée est de décomposer le nombre <span class="process-math">\(2^{345}\)</span> en quelque chose de plus petit et dont on connait le reste de la division par <span class="process-math">\(7\text{.}\)</span> Dans ce cas-ci, on voit que <span class="process-math">\(345=5\times 69\)</span> et donc <span class="process-math">\(2^{345}=(2^5)^{69}\text{.}\)</span> Comme <span class="process-math">\(2^5=32\equiv 4\mod 7\text{,}\)</span> la troisième propriété appliquée à répétition nous permet de dire que</p>
+<ol class="decimal">
+<li>
+<p>On réécrit avec les puissances de deux</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-2^{345}\equiv 4^{69}\mod 7\text{.}
+100110_2=1\times 32+0\times 16+0\times 8+1\times 4+1\times 2+0\times 1=38\text{.}
 \end{equation*}
 </div>
-<p class="continuation">On peut ensuite observer que <span class="process-math">\(4^3=64\equiv 1\mod 7\)</span> et puisque <span class="process-math">\(69=3\times 23\text{,}\)</span> alors</p>
+</li>
+<li>
+<p>On réécrit avec les puissances de deux</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-2^{345}&amp;\equiv 4^{69}\mod 7\\
-&amp;\equiv (4^3)^{23}\mod 7\\
-&amp;\equiv 1^{23}\mod 7\\
-&amp;\equiv 1\mod 7\text{.}
-\end{align*}
+\begin{equation*}
+110111_2=1\times 32+1\times 16+0\times 8+1\times 4+1\times 2+1\times 1=55\text{.}
+\end{equation*}
 </div>
-<p>Le reste de la division par <span class="process-math">\(7\)</span> du nombre <span class="process-math">\(2^{345}\)</span> est donc <span class="process-math">\(1\text{.}\)</span> On note au passage qu'on aurait pu y arriver plus rapidement en divisant <span class="process-math">\(345\)</span> par <span class="process-math">\(6\)</span> plutôt que par <span class="process-math">\(5\)</span> initialement.</p>
+</li>
+<li>
+<p>On réécrit avec les puissances de deux</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+111111_2=1\times 32+1\times 16+1\times 8+1\times 4+1\times 2+1\times 1=63\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-modulo.html#solution-62" class="internal">Contexte</a></span>
+</li>
+<li>
+<p>On réécrit avec les puissances de deux</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+100100100_2= 1\times 256+ 0\times 128+ 0\times 64+1\times 32+0\times 16+0\times 8+1\times 4+0\times 2+0\times 1=292\text{.}
+\end{equation*}
+</div>
+</li>
+</ol>
+</div>
+<span class="incontext"><a href="sec-representation.html#solution-62" class="internal">Contexte</a></span>
 </body>
 </html>

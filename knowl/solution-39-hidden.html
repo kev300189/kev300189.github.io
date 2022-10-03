@@ -11,46 +11,44 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>On sait qu'un nombre en binaire va s'écrire sous la forme <span class="process-math">\(d_n2^n+d_{n-1}2^{n-1}+\cdots + d_12^1+d_02^0\)</span> avec tous les <span class="process-math">\(d_k\in \{0,1\}\text{.}\)</span> Pour trouver <span class="process-math">\(n\text{,}\)</span> on cherche la plus grande puissance de la base qui est plus petite ou égale au  nombre à convertir. Le nombre <span class="process-math">\(n\)</span> sera celui la valeur de cette puissance. Ainsi pour <span class="process-math">\(101\text{,}\)</span> la plus grande puissance qui est plus petite est <span class="process-math">\(2^6=64\text{.}\)</span> On a donc</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-101=d_62^6+d_{5}2^{5}+\cdots + d_12^1+d_02^0\text{.}
-\end{equation*}
-</div>
-<p>Il faut ensuite choisir la plus grande valeur de <span class="process-math">\(d_n\)</span> possible de sorte que <span class="process-math">\(d_n b^n\)</span> soit inférieure au nombre <span class="process-math">\(n\text{.}\)</span> Pour la base deux, le choix est simple et sera toujours <span class="process-math">\(1\text{.}\)</span> Ainsi pour <span class="process-math">\(101\text{,}\)</span> on a <span class="process-math">\(d_6=1\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-101=2^6+d_{5}2^{5}+\cdots + d_12^1+d_02^0\text{.}
-\end{equation*}
-</div>
-<p class="continuation">On envoie le terme trouvé du côté du nombre <span class="process-math">\(n\)</span> en soustrayant et on répète ce processus jusqu'à ce que tous les <span class="process-math">\(d_k\)</span> soient déterminés.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-101-2^6&amp;=d_{5}2^{5}+d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0\\
-37&amp;=d_{5}2^{5}+d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0\\
-\end{align*}
-<p class="intertext">La plus grande puissance plus petite que le nombre à gauche est <span class="process-math">\(2^5\)</span></p>
-\begin{align*}
-37&amp;=2^5+d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0\\
-37-2^5&amp;=d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0\\
-5&amp;=d_{4}2^{4}+d_{3}2^{3}+d_{2}2^{2} + d_12^1+d_02^0\\
-\end{align*}
-<p class="intertext">La plus grande puissance qui est plus petite que 5 est 4. Les puissances précédente qui ne sont pas utilisées sont multipliées par zéro.</p>
-\begin{align*}
-5&amp;=0\times 2^{4}+0\times 2^{3}+2^{2} + d_12^1+d_02^0\\
-5-2^2&amp;=d_1 2^1+d_02^0\\
-1&amp;=d_1 2^1+d_02^0\\
-\end{align*}
-<p class="intertext">La puissance 0 est égale à 1 et donc</p>
-\begin{align*}
-1&amp;=0\times 2^1+2^0\text{.}
-\end{align*}
-</div>
-<p class="continuation">En reprenant les valeurs de <span class="process-math">\(d_k\)</span> non nulles, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-101=1100101_2\text{.}
-\end{equation*}
-</div>
+<p>Pour ce type de proposition, il convient de décomposer en plus petits morceaux et d'analyser chacun de ces morceaux afin de former le tout. La table de vérité</p>
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.8<span class="period">.</span></span><span class="space"> </span>Table de vérité d'une proposition complexe</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\)</span></td>
+<td class="l m b0 r1 l0 t3 lines"><span class="process-math">\(q\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\wedge q\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(\neg(p\wedge q)\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\vee \neg(p\wedge q)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r1 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r1 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r1 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">F</td>
+<td class="l m b3 r1 l0 t0 lines">F</td>
+<td class="l m b3 r0 l0 t0 lines">F</td>
+<td class="l m b3 r2 l0 t0 lines">V</td>
+<td class="l m b3 r0 l0 t0 lines">V</td>
+</tr>
+</table></div></figure><p>Comme on peut le voir, la proposition finale est toujours vraie, indépendamment de la véracité des propositions individuelles <span class="process-math">\(p,q\text{.}\)</span> En fait, l'auteur n'a pas de soeur et il est bien connu que le ciel n'est pas rouge. Si on décortique la proposition étudiée, <span class="process-math">\(p\wedge q\)</span> est fausse, car individuellement <span class="process-math">\(p\)</span> et <span class="process-math">\(q\)</span> le sont. On prend la négation de cette proposition, qui est par la suite connectée à <span class="process-math">\(p\)</span> par une disjonction. La proposition complète est donc vraie.</p>
+<p>Les autres cas peuvent s'analyser aussi de cette manière.</p>
 </div></body>
 </html>

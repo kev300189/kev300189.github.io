@@ -10,5 +10,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><p>Tel que discuté précédemment, il n'y a pas d'année bissextile en <span class="process-math">\(2022\)</span> ni en <span class="process-math">\(2023\text{.}\)</span> Ces deux années comptent donc pour <span class="process-math">\(730\)</span> jours. Puisque <span class="process-math">\(730\equiv 2\mod 7\text{,}\)</span> la journée de la semaine deux ans après l'écriture de ces lignes est un dimanche.</p></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<p>L'idée est la même que celle utilisée à l'exemple <a href="" class="xref" data-knowl="./knowl/ex-decimalebinaire.html" title="Exemple 3.1.5: De la base dix vers le binaire">3.1.5</a>. On cherche la plus grande puissance de <span class="process-math">\(2\)</span> qui est plus petite ou égale à <span class="process-math">\(0.40625\text{.}\)</span> Dans ce cas, c'est <span class="process-math">\(2^{-2}=0.25\text{.}\)</span> On a donc</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-decimalebinaire.html">
+\begin{align*}
+0.40625&amp;=0\times 2^{-1}+1\times 2^{-2}+\text{autre chose}\\
+\end{align*}
+<p class="intertext">En soustrayant,  il reste 0.15625, pour lequel 0.125 est la plus grande puissance inférieure ou égale à ce nombre. On a alors</p>
+\begin{align*}
+0.40625&amp;=0\times 2^{-1}+\times 2^{-2}+\times 2^{-3}+\text{quelque chose}\\
+\end{align*}
+<p class="intertext">On soustrait une autre fois et on obtient 0.03125, qui est une puissance exacte de 2. Alors</p>
+\begin{align*}
+0.40625&amp;=0\times 2^{-1}+ 2^{-2}+ 2^{-3}+2^{-5}\\
+0.40625&amp;=0.01101_2\text{.}
+\end{align*}
+</div>
+</div></body>
 </html>

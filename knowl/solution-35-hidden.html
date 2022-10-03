@@ -10,10 +10,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<p>On débute avec l'expression logique. On voit que la sortie sera obtenue après une porte ET qui combine les deux paires de parenthèses. Dans la première paire, le <span class="process-math">\(X\)</span> est combiné à la négation de <span class="process-math">\(Z\)</span> par une porte OU et dans la seconde, c'est la négation de <span class="process-math">\(Y\)</span> qui est combinée à <span class="process-math">\(Z\text{,}\)</span> aussi par une porte OU.</p>
-<p>Comme <span class="process-math">\(Z\)</span> apparait dans les deux paires de parenthèses, il faudra séparer l'entrée en deux. Une solution possible est donner ci-dessous.</p>
-<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit4.svg" class="contained" alt="Un circuit à trois entrées est illustré. L'entrée X est combinée avec l'inverse de l'entrée Z dans une porte OU. L'entrée Y est inversée et combinée avec l'entrée Z, aussi dans une porte OU. Le résultat de ces deux portes OU est finalement combiné dans une porte ET."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.13<span class="period">.</span></span><span class="space"> </span>Le circuit associé à l'expression logique</figcaption></figure>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like">Soit <span class="process-math">\(a_1,\ a_2\in A\text{,}\)</span> supposons que <span class="process-math">\(f\circ g(a_1) = f\circ g(a_2)\text{.}\)</span> Par définition de <span class="process-math">\(f\circ g\text{,}\)</span> on a que<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f(g(a_1))&amp; = f(g(a_2)) \\
+g(a_1)&amp; = g(a_2)\text{ car } f \text{ est injective}  \\
+a_1&amp; = a_2\text{ car } g \text{ est injective}  
+\end{align*}
+</div>Ainsi, <span class="process-math">\(f\circ g\)</span> est injective.</div></body>
 </html>

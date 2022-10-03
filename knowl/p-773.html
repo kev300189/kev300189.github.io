@@ -11,8 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraphe</span></h6>
-<p>Montrer que <span class="process-math">\(\neg (p\oplus q)\equiv \neg p\oplus q\equiv p\oplus \neg q\text{.}\)</span></p>
+<h5 class="heading"><span class="type">Paragraphe</span></h5>
+<p>La différence de deux ensembles s'écrit d'un point de vu logique comme</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+A-B=\{x~|~ x\in A\wedge x\notin B\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">On cherche le complément de cet ensemble, et donc la négation de la proposition <span class="process-math">\(x\in A\wedge x\notin B\text{.}\)</span> On a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{align*}
+(A-B)^c&amp;=\{x~|~ \neg(x\in A\wedge x\notin B)\}\\
+&amp;=\{x~|~ \neg(x\in A)\vee \neg (x\notin B)&amp;&amp; \text{Selon De Morgan} \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;=\{x~|~ x\notin A \vee x\in B\} &amp;&amp; \text{La négation de la relation d'appartenance est la non appartenance et vice-versa}\\
+&amp;= A^c\cup B&amp;&amp;\text{Définition de l'union et du complément}\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-773" class="internal">Contexte</a></span>
 </body>
 </html>

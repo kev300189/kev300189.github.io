@@ -10,5 +10,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><p>On doit vérifier la condition pour chaque triangle. Pour le triangle <span class="process-math">\(d\text{,}\)</span> il est vrai de dire que tous les carrés sont sur une ligne inférieure, comme on peut le voir sur la figure <a href="" class="xref" data-knowl="./knowl/fig-Tarski1.html" title="Figure 2.3.9">2.3.9</a>. Par contre il y a des carrés sur la même ligne que le triangle <span class="process-math">\(f\)</span> (les carrés <span class="process-math">\(e,g\)</span>) et des carrés sur des lignes supérieures au triangle <span class="process-math">\(i\)</span>(toujours les carrés <span class="process-math">\(e,g\)</span>). Pour ces raisons, la proposition est fausse.</p></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<p>Soit <span class="process-math">\(a\ in A\text{,}\)</span> on veut comparer <span class="process-math">\(\mathbb{1}_C(a)+ \mathbb{1}_D(a)-\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)\\)</span> à <span class="process-math">\(\mathbb{1}_{C\cup D}(a)\text{.}\)</span></p>
+<p>Si <span class="process-math">\(a\in C\cup D\text{,}\)</span> alors <span class="process-math">\(\mathbb{1}_{C\cup D}(a)=1\text{.}\)</span></p>
+<p>De plus, si <span class="process-math">\(a\in C\cap D\text{,}\)</span> alors <span class="process-math">\(\mathbb{1}_C(a)+\mathbb{1}_D(a)-\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)=1+1-1\cdot 1=1\\)</span></p>
+<p>De plus, si <span class="process-math">\(a\notin C\cap D\text{,}\)</span> alors <span class="process-math">\(\mathbb{1}_C(a)+\mathbb{1}_D(a)-\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)=1+0-0\cdot 1=1\\)</span></p>
+<p>Si <span class="process-math">\(a\notin C\cup D\text{,}\)</span> alors <span class="process-math">\(\mathbb{1}_{C\cap D}(a)=0\text{.}\)</span> De plus, on a que <span class="process-math">\(a\notin C\)</span> et <span class="process-math">\(a \notin D\text{.}\)</span> Ainsi, <span class="process-math">\(\mathbb{1}_C(a)+\mathbb{1}_D(a)-\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)=0+0-0\cdot 0=0\\text{.}\)</span></p>
+</div></body>
 </html>

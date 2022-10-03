@@ -10,5 +10,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><p>Dans les quatre années suivant <span class="process-math">\(2021\text{,}\)</span> il y a nécessairement une année bissextile. Celle-ci se trouve en <span class="process-math">\(2024\text{.}\)</span> Donc pour calculer le jour de la semaine, il faut ajouter <span class="process-math">\(4\times 365+1\)</span> jours au vendredi <span class="process-math">\((5)\)</span> de <span class="process-math">\(2021\)</span> et travailler encore une fois modulo <span class="process-math">\(7\text{.}\)</span> On trouve alors <span class="process-math">\(5+4\times 365+1=1466\equiv 3\mod 7\text{.}\)</span> Le <span class="process-math">\(17\)</span> septembre <span class="process-math">\(2025\)</span> sera (était?) donc un mercredi.</p></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<p>On débute avec l'expression logique. On voit que la sortie sera obtenue après une porte ET qui combine les deux paires de parenthèses. Dans la première paire, le <span class="process-math">\(X\)</span> est combiné à la négation de <span class="process-math">\(Z\)</span> par une porte OU et dans la seconde, c'est la négation de <span class="process-math">\(Y\)</span> qui est combinée à <span class="process-math">\(Z\text{,}\)</span> aussi par une porte OU.</p>
+<p>Comme <span class="process-math">\(Z\)</span> apparait dans les deux paires de parenthèses, il faudra séparer l'entrée en deux. Une solution possible est donner ci-dessous.</p>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit4.svg" class="contained" alt="Un circuit à trois entrées est illustré. L'entrée X est combinée avec l'inverse de l'entrée Z dans une porte OU. L'entrée Y est inversée et combinée avec l'entrée Z, aussi dans une porte OU. Le résultat de ces deux portes OU est finalement combiné dans une porte ET."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.13<span class="period">.</span></span><span class="space"> </span>Le circuit associé à l'expression logique</figcaption></figure>
+</div></body>
 </html>

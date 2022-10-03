@@ -13,24 +13,24 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.8.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.7.1</span><span class="period">.</span>
 </h4>
-<p>L'idée est la même que celle utilisée à l'exemple <a href="" class="xref" data-knowl="./knowl/ex-decimalebinaire.html" title="Exemple 3.1.5: De la base dix vers le binaire">3.1.5</a>. On cherche la plus grande puissance de <span class="process-math">\(2\)</span> qui est plus petite ou égale à <span class="process-math">\(0.40625\text{.}\)</span> Dans ce cas, c'est <span class="process-math">\(2^{-2}=0.25\text{.}\)</span> On a donc</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-decimalebinaire.html">
+<p>La différence de deux ensembles s'écrit d'un point de vu logique comme</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+A-B=\{x~|~ x\in A\wedge x\notin B\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">On cherche le complément de cet ensemble, et donc la négation de la proposition <span class="process-math">\(x\in A\wedge x\notin B\text{.}\)</span> On a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
 \begin{align*}
-0.40625&amp;=0\times 2^{-1}+1\times 2^{-2}+\text{autre chose}\\
-\end{align*}
-<p class="intertext">En soustrayant,  il reste 0.15625, pour lequel 0.125 est la plus grande puissance inférieure ou égale à ce nombre. On a alors</p>
-\begin{align*}
-0.40625&amp;=0\times 2^{-1}+\times 2^{-2}+\times 2^{-3}+\text{quelque chose}\\
-\end{align*}
-<p class="intertext">On soustrait une autre fois et on obtient 0.03125, qui est une puissance exacte de 2. Alors</p>
-\begin{align*}
-0.40625&amp;=0\times 2^{-1}+ 2^{-2}+ 2^{-3}+2^{-5}\\
-0.40625&amp;=0.01101_2\text{.}
+(A-B)^c&amp;=\{x~|~ \neg(x\in A\wedge x\notin B)\}\\
+&amp;=\{x~|~ \neg(x\in A)\vee \neg (x\notin B)&amp;&amp; \text{Selon De Morgan} \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;=\{x~|~ x\notin A \vee x\in B\} &amp;&amp; \text{La négation de la relation d'appartenance est la non appartenance et vice-versa}\\
+&amp;= A^c\cup B&amp;&amp;\text{Définition de l'union et du complément}\text{.}
 \end{align*}
 </div>
 </div>
-<span class="incontext"><a href="sec-representation.html#solution-42" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#solution-42" class="internal">Contexte</a></span>
 </body>
 </html>

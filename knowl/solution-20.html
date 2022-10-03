@@ -12,36 +12,16 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.9.1</span><span class="period">.</span>
-</h4>
-<p>Il faut utiliser la loi de  <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">De Morgan</a> afin d'enlever la négation devant la première parenthèse. Celle-ci devient</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
-\begin{equation*}
-\neg(p\vee q)\equiv\neg p \wedge \neg q\text{.}
-\end{equation*}
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.2.4.13.2</span><span class="period">.</span>
+</h5>
+<p>D'une part, si <span class="process-math">\(a \in A\text{,}\)</span> alors soit <span class="process-math">\(a \in B\)</span> ou $a \notin B$.</p>
+<p>Si <span class="process-math">\(a \in B\)</span> alors <span class="process-math">\(a \notin A \oplus B \text{.}\)</span> Ainsi <span class="process-math">\(a \in \left(A\oplus B\right)\oplus B\text{,}\)</span> car c'est un élément de <span class="process-math">\(B\text{,}\)</span> mais pas de <span class="process-math">\(A \oplus B\text{.}\)</span></p>
+<p>Si <span class="process-math">\(a \notin B\text{,}\)</span> alors <span class="process-math">\(a\in A\oplus B\text{.}\)</span> Ainsi <span class="process-math">\(a\ in \left(A\oplus B\right)\oplus B\text{,}\)</span> car c'est un élément de <span class="process-math">\(A\oplus B\text{,}\)</span> mais pas de <span class="process-math">\(B\)</span></p>
+<p>D'autre part, si <span class="process-math">\(a \in \left(A\oplus B\right)\oplus\text{,}\)</span> alors soit <span class="process-math">\(a \in A\oplus B\)</span> ou <span class="process-math">\(a\in B\text{,}\)</span> mais pas les deux en même temps.</p>
+<p>Si <span class="process-math">\(a\in A\oplus B\)</span> et <span class="process-math">\(a\notin B\text{,}\)</span> alors <span class="process-math">\(a\)</span> est un élément de <span class="process-math">\(A\)</span> ou de <span class="process-math">\(B\text{,}\)</span> mais on sait que <span class="process-math">\(a\notin B\text{,}\)</span> donc <span class="process-math">\(a\)</span> est un élément de <span class="process-math">\(A\text{.}\)</span></p>
+<p>Si <span class="process-math">\(a \notin A\oplus B\)</span> et <span class="process-math">\(a \in B\text{,}\)</span> alors <span class="process-math">\(a \in A\text{.}\)</span></p>
 </div>
-<p class="continuation">On peut ensuite réécrire la proposition comme étant</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
-\begin{equation*}
-\neg(p\vee q)\vee (r\wedge \neg q)\equiv(\neg p \wedge \neg q)\vee (r\wedge \neg q)\text{,}
-\end{equation*}
-</div>
-<p class="continuation">qui est une forme normale disjonctive.</p>
-<p>Pour la seconde proposition, il faut distribuer la disjonction dans l'expression <span class="process-math">\((p\wedge q)\vee r\text{.}\)</span> En utilisant <a href="" class="xref" data-knowl="./knowl/li-oplogdis.html" title="Point 2.2.5:8">la distributivité</a>, on obtient</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogdis.html">
-\begin{equation*}
-(p\wedge q)\vee r\equiv(p\vee r)\wedge (q\vee r)\text{.}
-\end{equation*}
-</div>
-<p class="continuation">En combinant avec le reste de la proposition initiale, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogdis.html">
-\begin{equation*}
-((p\wedge q)\vee r)\wedge (q\vee \neg r)\equiv (p\vee r)\wedge (q\vee r)\wedge (q\vee \neg r)\text{,}
-\end{equation*}
-</div>
-<p class="continuation">qui est une forme normale conjonctive.</p>
-</div>
-<span class="incontext"><a href="sec-eqlogfnc.html#solution-20" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-opens.html#solution-20" class="internal">Contexte</a></span>
 </body>
 </html>

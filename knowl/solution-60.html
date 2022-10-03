@@ -13,11 +13,13 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.3.6</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.4.11.2</span><span class="period">.</span>
 </h4>
-<p>À partir d'ici, les choses se compliquent légèrement. La difficulté vient du fait que les mois n'ont pas tous le même nombre de jours et donc, on ne peut pas travailler modulo un entier régulier. On commence par ajouter les <span class="process-math">\(35\)</span> jours à <span class="process-math">\(17\)</span> pour obtenir <span class="process-math">\(35+17=52\text{.}\)</span> Puisque septembre compte <span class="process-math">\(30\)</span> jours, on travaillera modulo <span class="process-math">\(30\text{.}\)</span> On apportera toutefois une précision dans la prochaine solution.</p>
-<p>Donc, <span class="process-math">\(52\equiv 22\mod 30\text{,}\)</span> ce qui signifie que la date <span class="process-math">\(35\)</span> jours après le <span class="process-math">\(17\)</span> septembre est équivalent à un <span class="process-math">\(22\)</span> et donc, le <span class="process-math">\(22\)</span> octobre.</p>
+<p>Le plus simple pour construire le circuit associé à une table de vérité est de construire la forme normale disjonctive de l'expression. Comme toutes les sorties tels que <span class="process-math">\(X\)</span> est <span class="process-math">\(1\)</span> donnent <span class="process-math">\(1\text{,}\)</span>en combinant <span class="process-math">\(X\)</span> à la cinquième ligne, on obtient <span class="process-math">\(X\vee (\neg X\wedge Y\wedge Z)\text{.}\)</span> Il faudra donc combiner l'inverse de <span class="process-math">\(X\)</span> avec <span class="process-math">\(Y\)</span> et ensuite combiner ce résultat avec <span class="process-math">\(Z\)</span> dans des portes ET. Ensuite, on combine cette sortie avec <span class="process-math">\(X\)</span> dans une porte OU. À noter qu'à l'exercice <a href="" class="xref" data-knowl="./knowl/exo-ETmultiple.html" title="Exercice 2.4.4.1">2.4.4.1</a>, on verra qu'on peut combiner plus de deux entrées dans une porte ET grâce à l'associativité.</p>
+<p>Le circuit associé à cette table de vérité est illustré ci-dessous.</p>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit5.svg" class="contained" alt="Un circuit à trois entrées est illustré. L'entrée X est inversée et combinée avec l'entrée Y dans une porte ET. Ensuite, la sortie de cette porte est combinée avec Z dans une autre porte ET. Finalement le résultat de cette seconde porte ET est combinée avec X dans une porte OU."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.14<span class="period">.</span></span><span class="space"> </span>Le circuit associé à la table de vérité</figcaption></figure>
 </div>
-<span class="incontext"><a href="sec-modulo.html#solution-60" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-circuits.html#solution-60" class="internal">Contexte</a></span>
 </body>
 </html>

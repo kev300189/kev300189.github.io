@@ -9,11 +9,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Évaluer (Sage)'});
+</script>
 </head>
 <body class="ignore-math">
 <article class="exercise exercise-like"><h4 class="heading">
-<span class="type">Question de compréhension</span><span class="space"> </span><span class="codenumber">3<span class="period">.</span></span>
+<span class="type">Question de compréhension</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
 </h4>
-<p>Convertir les nombres de l'exercice <a href="" class="xref" data-knowl="./knowl/exo-conversionbinaire.html" title="Exercice 3.1.7.1">3.1.7.1</a> en binaire en utilisant la méthode des divisions.</p></article><span class="incontext"><a href="sec-divisibilite.html#exercise-162" class="internal">Contexte</a></span>
+<p>Que fait l'algorithme suivant?</p>
+<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-py">def algo(n):
+    laliste = [1]
+    d = 2
+    while d &lt; n:
+        if n % d == 0:
+            laliste.append(d)
+        d = d + 1
+    if n &gt; 1:
+        laliste.append(n)
+    return laliste
+</code></pre></div>
+<figcaption><span class="type">Bloc de code</span><span class="space"> </span><span class="codenumber">3.2.11<span class="period">.</span></span><span class="space"> </span>Une algorithme sur les entiers</figcaption></figure><pre class="ptx-sagecell sagecell-sage" id="sage-9"><script type="text/x-sage">
+</script></pre></article><span class="incontext"><a href="sec-divisibilite.html#exercise-162" class="internal">Contexte</a></span>
 </body>
 </html>
