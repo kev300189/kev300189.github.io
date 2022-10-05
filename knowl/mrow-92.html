@@ -12,13 +12,16 @@
 </head>
 <body class="ignore-math">
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{alignat*}{6}
-&amp; &amp;&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;&amp;\scriptsize{(\text{retenues})}&amp;\\
-&amp; &amp;&amp;&amp;1&amp;1&amp;0&amp;1&amp;0&amp;1_2&amp;&amp;\\
-&amp;+&amp;&amp;&amp;1&amp;0&amp;1&amp;1&amp;1&amp;1_2&amp;&amp;\\
-\hline&amp;&amp;&amp;1&amp;1&amp;0&amp;0&amp;1&amp;0&amp;0_2&amp;&amp;
-\end{alignat*}
+\begin{align*}
+\neg (p \vee (\neg p \wedge q)) &amp; \neg p \wedge \neg(\neg p \wege q) \text{ par De Morgan.} \\
+&amp; \neg p \wedge (\neg\neg p \vee \neg q) \text{ par De Morgan.} \\
+&amp; \neg p \wedge (p \vee \neg q) \text{ par De Morgan.} \\
+&amp; (\neg p \wedge p) \vee (\neg p \wedge \neg q) \text{ par distributivité.} \\
+&amp; (V) \vee (\neg p \wedge \neg q) \text{ par les propriétés de la négation.} \\
+&amp; (\neg p \wedge \neg q) \text{ par l'identité.} \\
+&amp; \neg( p \vee q) \text{ par De Morgan.} 
+\end{align*}
 </div>
-<span class="incontext"><a href="sec-representation.html#md-26" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#md-23" class="internal">Contexte</a></span>
 </body>
 </html>

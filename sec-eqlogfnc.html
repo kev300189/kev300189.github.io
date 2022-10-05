@@ -821,36 +821,111 @@ p\rightarrow q&amp;\equiv\neg \neg (p\rightarrow q) \\
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">On montre que cette proposition est une contradiction. En effet, on a montrer en classe que <span class="process-math">\(p\rightarrow q \equiv \neg p \vee q \text{.}\)</span> Ainsi,<div class="displaymath process-math" data-contains-math-knowls="" id="md-19">
 \begin{align*}
 p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
-&amp;\equiv p \wedge \neg\neg q \wedge \neg p \text{ par De Morgan.}\\
-&amp;\equiv p \wedge q\wedge \neg p\\
-&amp;\equiv p \wedge \neg p \wedge \neg q\\
-&amp;\equiv F \wedge \neg q \equiv F
+&amp;\equiv p \wedge (\neg\neg q \wedge \neg p) \text{   par De Morgan.}\\
+&amp;\equiv p \wedge q\wedge \neg p \text{   par propriétés de la négations et associativité.}\\
+&amp;\equiv p \wedge \neg p \wedge q \text{   par commutativité.}\\
+&amp;\equiv F \wedge q \equiv F \text{   par propriétés de la négation et domination.}
 \end{align*}
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-220"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-811"><span class="process-math">\(((p\rightarrow q)\wedge \neg q)\rightarrow \neg p\)</span></p></article><article class="task exercise-like" id="task-221"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-812"><span class="process-math">\(((p\rightarrow q)\vee \neg q)\rightarrow p\)</span></p></article><article class="task exercise-like" id="task-222"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-813"><span class="process-math">\((p\wedge (p\rightarrow q))\rightarrow q\)</span></p></article></article><article class="exercise exercise-like" id="exercise-90"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-814">Déterminer si <span class="process-math">\(p\rightarrow (q\wedge r)\)</span> est équivalent à <span class="process-math">\((p\rightarrow q)\wedge (p\rightarrow r)\text{,}\)</span> à savoir si l'implication se distribue sur la conjonction.</p></article><article class="exercise exercise-like" id="exercise-91"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-811"><span class="process-math">\(((p\rightarrow q)\wedge \neg q)\rightarrow \neg p\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like">On veut montrer que cette proposition est une tautologie. On a:<div class="displaymath process-math" data-contains-math-knowls="" id="md-20">
+\begin{align*}
+((p\rightarrow q)\wedge \neg q)\rightarrow \neg p &amp; \neg((\neg p \vee q)\wedge \neg q) \vee \neg p   \\
+&amp; (\neg(\neg p \vee q)\vee \neg\neg q) \vee \neg p \text{ par De Morgan.}   \\
+&amp; ((\neg\neg p \wedge \neg q)\vee q) \vee \neg p \text{  par De Morgan.}   \\
+&amp; ((p \wedge \neg q)\vee q) \vee \neg p \\
+&amp; ((p\vee q) \wedge (\neg q\vee q)) \vee \neg p \text{   par la distributivité.} \\
+&amp; ((p\vee q) \wedge V ) \vee \neg p \text{   par domination.} \\
+&amp; p\vee q   \vee \neg p \text{   par identité et associativité.} \\
+&amp; p\vee \neg p   \vee q \text{   par commutativité.} \\
+&amp; V \vee q  \text{   par les propriétés de négation.}\\
+&amp; V  \text{   par domination.} 
+\end{align*}
+</div>Ainsi, cette proposition est une tautologie.</div></div>
+</div></article><article class="task exercise-like" id="task-221"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-812"><span class="process-math">\(((p\rightarrow q)\vee \neg q)\rightarrow p\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-49"><div class="solution solution-like">À l'aide d'un tableau de vérité, on peut vérifier que si <span class="process-math">\(p\)</span> est vraie et <span class="process-math">\(q\)</span> est vraie, alors cette proposition est vraie. De plus, si <span class="process-math">\(p\)</span> est fausse et <span class="process-math">\(q\)</span> est vraie, alors la proposition est fausse. Ainsi, cette proposition est une proposition quelconque. En fait, on peut montrer que cette proposition est équivalente à <span class="process-math">\(p\text{.}\)</span>
+</div></div>
+</div></article><article class="task exercise-like" id="task-222"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-813"><span class="process-math">\((p\wedge (p\rightarrow q))\rightarrow q\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-50" id="solution-50"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-50"><div class="solution solution-like">On veut montrer que cette proposition est une tautologie. En effet, on a<div class="displaymath process-math" data-contains-math-knowls="" id="md-21">
+\begin{align*}
+(p\wedge (p\rightarrow q))\rightarrow q&amp;\equiv \neg(p\wedge (\neg p\vee q))\vee q\\
+&amp;\equiv \neg((p\wedge\neg p) \vee (p\wedge q) )\vee q \text{ par distributivité.}\\
+&amp;\equiv \neg( F \vee (p\wedge q) )\vee q \text{ par les propriétés de la négation.}\\
+&amp; \equiv \neg( p\wedge q )\vee q \text{ par la propriété de l'identité.}\\
+&amp;\equiv  \neg p \vee (\neg q \vee q) \text{ par De Morgan et associativité.}\\
+&amp;\equiv  \neg p \vee V \text{ par les proporiétés de la négation.}\\
+&amp;\equiv  V \text{ par domination.}
+\end{align*}
+</div>Ainsi, cette proposition toujours vraie, et donc est une tautologie.</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-90"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-814">Déterminer si <span class="process-math">\(p\rightarrow (q\wedge r)\)</span> est équivalent à <span class="process-math">\((p\rightarrow q)\wedge (p\rightarrow r)\text{,}\)</span> à savoir si l'implication se distribue sur la conjonction.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-51" id="solution-51"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-51"><div class="solution solution-like">On a que<div class="displaymath process-math" data-contains-math-knowls="" id="md-22">
+\begin{align*}
+p\rightarrow (q \wedge r) &amp;\equiv \neg p \vee (q\wedge r) \equiv (\neg p \vee q )\wedge (\neg p \vee r) \text{ par la distributivité.} \\
+&amp;\equiv (p\rightarrow q)\wedge (p\rightarrow r)
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-91"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="introduction" id="introduction-80"><p id="p-815">Démontrer les équivalences suivantes sans utiliser de table de vérité.</p></div>
 <article class="task exercise-like" id="task-223"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-816"><span class="process-math">\(\neg(p\vee(\neg p\wedge q))\equiv \neg(p\vee q)\)</span></p></article><article class="task exercise-like" id="task-224"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-817"><span class="process-math">\((p\rightarrow \neg q)\wedge (p\rightarrow \neg r)\equiv \neg( p\wedge(q\vee r))\)</span></p></article></article><article class="exercise exercise-like" id="exo-negationxor"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<p id="p-818">Montrer que <span class="process-math">\(\neg (p\oplus q)\equiv \neg p\oplus q\equiv p\oplus \neg q\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-93"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-816"><span class="process-math">\(\neg(p\vee(\neg p\wedge q))\equiv \neg(p\vee q)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-52" id="solution-52"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-52"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="md-23">
+\begin{align*}
+\neg (p \vee (\neg p \wedge q)) &amp; \neg p \wedge \neg(\neg p \wege q) \text{ par De Morgan.} \\
+&amp; \neg p \wedge (\neg\neg p \vee \neg q) \text{ par De Morgan.} \\
+&amp; \neg p \wedge (p \vee \neg q) \text{ par De Morgan.} \\
+&amp; (\neg p \wedge p) \vee (\neg p \wedge \neg q) \text{ par distributivité.} \\
+&amp; (V) \vee (\neg p \wedge \neg q) \text{ par les propriétés de la négation.} \\
+&amp; (\neg p \wedge \neg q) \text{ par l'identité.} \\
+&amp; \neg( p \vee q) \text{ par De Morgan.} 
+\end{align*}
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-224"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-817"><span class="process-math">\((p\rightarrow \neg q)\wedge (p\rightarrow \neg r)\equiv \neg( p\wedge(q\vee r))\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-53"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="md-24">
+\begin{align*}
+\neg (p \wedge (q \vee r)) &amp; \neg p \vee \neg(q \vee r) \text{ par De Morgan.} \\
+&amp; \neg p \vee (\neg q \wedge \neg r) \text{ par De Morgan.} \\
+&amp; (\neg p \vee \neg q) \wedge (\neg p \vee \neg r) \text{ par distributivité.} \\
+&amp; (p \rightarrow \neg q) \wedge ( p \rightarrow \neg r) 
+\end{align*}
+</div></div></div>
+</div></article></article><article class="exercise exercise-like" id="exo-negationxor"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-818">Montrer que <span class="process-math">\(\neg (p\oplus q)\equiv \neg p\oplus q\equiv p\oplus \neg q\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-87" id="answer-87"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-87"><div class="answer solution-like">À l'aide de la table de vérité, on vérifie que ces trois propositions ont toujours les mêmes valeurs de vérités.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-93"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
 <p id="p-819">Batman a capturé le Sphynx et lui demande d'avouer ses plus récents crimes. Le sphynx étant ce qu'il est, il propose au chevalier noir l'énigme suivante. Il lui dit: <blockquote class="blockquote" id="blockquote-1">J'ai capturé la fille du commissaire Gordon ou posé la bombe dans la banque de Gotham. De plus si j'ai piraté les archives du palais de justice, alors j'ai donné un pot-de-vin à un procureur. Par contre je n'ai pas donné de pot-de-vin ni incendié l'hôpital.</blockquote></p>
-<p id="p-820">Connaissant bien le Sphynx, Batman sait que tout ce qu'il vient d'affirmer est faux. Il réussit à déterminer les deux crimes commis par le Sphynx. Que sont-ils?</p></article><article class="exercise exercise-like" id="exo-ouexclusifnormal"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<p id="p-821">Donner une forme normale disjonctive et une forme normale conjonctive de <span class="process-math">\(p\oplus q\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-95"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<p id="p-822">Transformer l'expression <span class="process-math">\((\neg p \wedge q) \vee \neg (\neg r \vee \neg q)\)</span> en  forme normale disjonctive en utilisant une table de vérité.</p></article><article class="exercise exercise-like" id="exercise-96"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<p id="p-823">Transformer l'expression <span class="process-math">\((\neg p \wedge q) \vee \neg (\neg r \vee \neg q)\)</span> en  forme normale conjonctive en utilisant une table de vérité.</p></article><article class="exercise exercise-like" id="exercise-97"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-81"><p id="p-824">Donner une forme normale disjonctive et une forme normale conjonctive des propositions suivantes.</p></div>
+<p id="p-820">Connaissant bien le Sphynx, Batman sait que tout ce qu'il vient d'affirmer est faux. Il réussit à déterminer les deux crimes commis par le Sphynx. Que sont-ils?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-54"><div class="solution solution-like">
+<p id="p-821">Sachant que l'énnoncé “J'ai capturé la fille du commissaire Gordon ou posé la bombe dans la banque de Gotham” est fausse, on sait que le Sphynx n'a ni capturé la fille du commisaaire Gordon ni posé la bombe dans la banque de Gotham.</p>
+<p id="p-822">Sachant que l'énnoncé “Si j'ai piraté les archives du palais de justice, alors j'ai donné un pot-de-vin à un procureur.” est fausse, on sait que le Sphynx a piraté les archives du palais de justice, mais il n'a pas donné un pot-de-vin à un procureur.</p>
+<p id="p-823">Sachant que l'énnocné “Je n'ai pas donné de pot-de-vin ni incendié l'hôpital” est fausse. alors soit il a donné un pot-de-vin, soit il a incendié l'hôpital. On sait déjà qu'il n'a pas donné de pot-de-vin, on sait qu'il doit avoir incendié l'hôpital.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exo-ouexclusifnormal"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-824">Donner une forme normale disjonctive et une forme normale conjonctive de <span class="process-math">\(p\oplus q\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-95"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<p id="p-828">Transformer l'expression <span class="process-math">\((\neg p \wedge q) \vee \neg (\neg r \vee \neg q)\)</span> en  forme normale disjonctive en utilisant une table de vérité.</p></article><article class="exercise exercise-like" id="exercise-96"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<p id="p-829">Transformer l'expression <span class="process-math">\((\neg p \wedge q) \vee \neg (\neg r \vee \neg q)\)</span> en  forme normale conjonctive en utilisant une table de vérité.</p></article><article class="exercise exercise-like" id="exercise-97"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-81"><p id="p-830">Donner une forme normale disjonctive et une forme normale conjonctive des propositions suivantes.</p></div>
 <article class="task exercise-like" id="task-225"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-825"><span class="process-math">\((p\vee q)\rightarrow(p\oplus q)\)</span></p></article><article class="task exercise-like" id="task-226"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-826"><span class="process-math">\((p\vee q)\rightarrow(\neg p\wedge r)\)</span></p></article><article class="task exercise-like" id="task-227"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-827"><span class="process-math">\((p\leftrightarrow q)\oplus(\neg p\leftrightarrow q)\)</span></p></article></article><article class="exercise exercise-like" id="exercise-98"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-82"><p id="p-828">Donner une proposition sous forme normale disjonctive qui possède la table de vérité suivante.</p></div>
+<p id="p-831"><span class="process-math">\((p\vee q)\rightarrow(p\oplus q)\)</span></p></article><article class="task exercise-like" id="task-226"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-832"><span class="process-math">\((p\vee q)\rightarrow(\neg p\wedge r)\)</span></p></article><article class="task exercise-like" id="task-227"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-833"><span class="process-math">\((p\leftrightarrow q)\oplus(\neg p\leftrightarrow q)\)</span></p></article></article><article class="exercise exercise-like" id="exercise-98"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-82"><p id="p-834">Donner une proposition sous forme normale disjonctive qui possède la table de vérité suivante.</p></div>
 <article class="task exercise-like" id="task-228"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-829"><figure class="table table-like" id="table-14"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.14<span class="period">.</span></span><span class="space"> </span>Table de vérité de <span class="process-math">\(f(p,q,r)\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<p id="p-835"><figure class="table table-like" id="table-14"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.14<span class="period">.</span></span><span class="space"> </span>Table de vérité de <span class="process-math">\(f(p,q,r)\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(q\)</span></td>
@@ -905,8 +980,11 @@ p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
 <td class="l m b3 r2 l0 t0 lines">F</td>
 <td class="l m b3 r0 l0 t0 lines">V</td>
 </tr>
-</table></div></figure></p></article><article class="task exercise-like" id="task-229"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-830"><figure class="table table-like" id="table-15"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.15<span class="period">.</span></span><span class="space"> </span>Table de vérité de <span class="process-math">\(f(p,q)\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+</table></div></figure></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-55" id="solution-55"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-55"><div class="solution solution-like"><span class="process-math">\(f(p,q,r)\equiv (p \wedge q \wedge r)\vee(p \wedge q \wedge \neg r)\vee (p \wedge \neg q \wedge r)\vee(\neg p \wedge q \wedge r)\vee(\neg p \wedge \neg q \wedge \neg r)\)</span></div></div>
+</div></article><article class="task exercise-like" id="task-229"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-836"><figure class="table table-like" id="table-15"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.15<span class="period">.</span></span><span class="space"> </span>Table de vérité de <span class="process-math">\(f(p,q)\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
@@ -932,23 +1010,26 @@ p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
 <td class="l m b3 r2 l0 t0 lines">F</td>
 <td class="l m b3 r0 l0 t0 lines">F</td>
 </tr>
-</table></div></figure></p></article></article>
+</table></div></figure></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like"><span class="process-math">\(f(p,q) \equiv (p \wedge \neg q)\vee(\neg p \wedge q)\)</span></div></div>
+</div></article></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-10">
 <h4 class="heading"><span class="title">Exercices supplémentaires.</span></h4>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-99"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
-<p id="p-831">Utiliser les autres <a href="" class="xref" data-knowl="./knowl/li-oplogprop.html" title="Liste 2.2.5: Équivalences logiques de base">équivalences</a> de la logique pour démontrer les <a href="" class="xref" data-knowl="./knowl/li-oplogabs.html" title="Point 2.2.5:5">propriétés d'absorption</a>.</p></article><article class="exercise exercise-like" id="exercise-100"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-83"><p id="p-832">Utiliser les lois de De Morgan pour donner la négation des propositions suivantes.</p></div>
+<p id="p-837">Utiliser les autres <a href="" class="xref" data-knowl="./knowl/li-oplogprop.html" title="Liste 2.2.5: Équivalences logiques de base">équivalences</a> de la logique pour démontrer les <a href="" class="xref" data-knowl="./knowl/li-oplogabs.html" title="Point 2.2.5:5">propriétés d'absorption</a>.</p></article><article class="exercise exercise-like" id="exercise-100"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-83"><p id="p-838">Utiliser les lois de De Morgan pour donner la négation des propositions suivantes.</p></div>
 <article class="task exercise-like" id="task-230"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-833">Alex est en sciences de la nature et Omar est en sciences informatiques et mathématiques.</p></article><article class="task exercise-like" id="task-231"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-834">L'autobus est en retard ou ma montre est en avance.</p></article><article class="task exercise-like" id="task-232"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-835">Une année est bissextile si elle est divisible par <span class="process-math">\(4\)</span> mais pas par <span class="process-math">\(100\text{,}\)</span> ou si elle est divisible par <span class="process-math">\(400\text{.}\)</span></p></article><article class="task exercise-like" id="task-233"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-836">J'ai trois enfants et un chien, ou j'ai un chat ou une fille.</p></article></article><article class="exercise exercise-like" id="exercise-101"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-84"><p id="p-837">Donner une proposition sous forme normale disjonctive qui possède la table de vérité suivante.</p></div>
+<p id="p-839">Alex est en sciences de la nature et Omar est en sciences informatiques et mathématiques.</p></article><article class="task exercise-like" id="task-231"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-840">L'autobus est en retard ou ma montre est en avance.</p></article><article class="task exercise-like" id="task-232"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-841">Une année est bissextile si elle est divisible par <span class="process-math">\(4\)</span> mais pas par <span class="process-math">\(100\text{,}\)</span> ou si elle est divisible par <span class="process-math">\(400\text{.}\)</span></p></article><article class="task exercise-like" id="task-233"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-842">J'ai trois enfants et un chien, ou j'ai un chat ou une fille.</p></article></article><article class="exercise exercise-like" id="exercise-101"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-84"><p id="p-843">Donner une proposition sous forme normale disjonctive qui possède la table de vérité suivante.</p></div>
 <article class="task exercise-like" id="task-234"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-838"><figure class="table table-like" id="table-16"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.16<span class="period">.</span></span><span class="space"> </span>Table de vérité de <span class="process-math">\(f(p,q)\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<p id="p-844"><figure class="table table-like" id="table-16"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.16<span class="period">.</span></span><span class="space"> </span>Table de vérité de <span class="process-math">\(f(p,q)\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
@@ -975,7 +1056,7 @@ p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
 <td class="l m b3 r0 l0 t0 lines">V</td>
 </tr>
 </table></div></figure></p></article><article class="task exercise-like" id="task-235"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-839"><figure class="table table-like" id="table-17"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.17<span class="period">.</span></span><span class="space"> </span>Table de vérité de <span class="process-math">\(f(p,q,r)\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<p id="p-845"><figure class="table table-like" id="table-17"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.17<span class="period">.</span></span><span class="space"> </span>Table de vérité de <span class="process-math">\(f(p,q,r)\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(q\)</span></td>
@@ -1034,7 +1115,7 @@ p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
 <span class="codenumber">14<span class="period">.</span></span><span class="space"> </span><span class="title">La barre de Sheffer.</span>
 </h5>
 <div class="introduction" id="introduction-85">
-<p id="p-840">On a vu qu'on pouvait réduire le nombre d'opérateurs nécessaires pour décrire des propositions à trois, en utilisant la conjonction, la disjonction et la négation. Pour cela, on a pu réécrire les implications simple et double et le ou exclusif avec ces trois opérateurs. Il existe un opérateur particulier qui possède la propriété que tous les autres opérateurs peuvent s'écrire uniquement avec cet opérateur. On l'appelle la barre de Sheffer, définie comme suit:</p>
+<p id="p-846">On a vu qu'on pouvait réduire le nombre d'opérateurs nécessaires pour décrire des propositions à trois, en utilisant la conjonction, la disjonction et la négation. Pour cela, on a pu réécrire les implications simple et double et le ou exclusif avec ces trois opérateurs. Il existe un opérateur particulier qui possède la propriété que tous les autres opérateurs peuvent s'écrire uniquement avec cet opérateur. On l'appelle la barre de Sheffer, définie comme suit:</p>
 <figure class="table table-like" id="tab-Sheffer"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.18<span class="period">.</span></span><span class="space"> </span>Table de vérité de la barre de Sheffer</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\)</span></td>
@@ -1064,18 +1145,18 @@ p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
 </table></div></figure>
 </div>
 <article class="task exercise-like" id="task-236"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-841">En utilisant des tables de vérité, montrer que</p>
+<p id="p-847">En utilisant des tables de vérité, montrer que</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 p\uparrow q\equiv \neg(p\wedge q)\text{.}
 \end{equation*}
 </div>
-<p id="p-842">On appelle souvent la barre de Sheffer le “NAND” en informatique, car c'est la négation (N) du et (AND).</p></article><article class="task exercise-like" id="task-237"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-843">Montrer que <span class="process-math">\(\neg p\equiv p\uparrow p\text{.}\)</span></p></article><article class="task exercise-like" id="task-238"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-844">Montrer que <span class="process-math">\(p\wedge q\equiv (p\uparrow q)\uparrow(p\uparrow q)\text{.}\)</span></p></article><article class="task exercise-like" id="task-239"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-845">Montrer que <span class="process-math">\(p\vee q\equiv (p\uparrow p)\uparrow(q\uparrow q)\text{.}\)</span></p></article><article class="task exercise-like" id="task-240"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-846">Montrer que <span class="process-math">\(p\rightarrow q\equiv p\uparrow(q\uparrow q)\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-103"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
-<p id="p-847">Démontrer à nouveau les équivalences de l'exercice <a href="" class="xref" data-knowl="./knowl/exo-Sheffer.html" title="Exercice 2.2.4.14: La barre de Sheffer">2.2.4.14</a> en utilisant la définition de la barre de Sheffer et les propriétés des opérateurs logiques.</p></article>
+<p id="p-848">On appelle souvent la barre de Sheffer le “NAND” en informatique, car c'est la négation (N) du et (AND).</p></article><article class="task exercise-like" id="task-237"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-849">Montrer que <span class="process-math">\(\neg p\equiv p\uparrow p\text{.}\)</span></p></article><article class="task exercise-like" id="task-238"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-850">Montrer que <span class="process-math">\(p\wedge q\equiv (p\uparrow q)\uparrow(p\uparrow q)\text{.}\)</span></p></article><article class="task exercise-like" id="task-239"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-851">Montrer que <span class="process-math">\(p\vee q\equiv (p\uparrow p)\uparrow(q\uparrow q)\text{.}\)</span></p></article><article class="task exercise-like" id="task-240"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-852">Montrer que <span class="process-math">\(p\rightarrow q\equiv p\uparrow(q\uparrow q)\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-103"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<p id="p-853">Démontrer à nouveau les équivalences de l'exercice <a href="" class="xref" data-knowl="./knowl/exo-Sheffer.html" title="Exercice 2.2.4.14: La barre de Sheffer">2.2.4.14</a> en utilisant la définition de la barre de Sheffer et les propriétés des opérateurs logiques.</p></article>
 </div>
 </div></section></section></div></main>
 </div>

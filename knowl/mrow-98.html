@@ -12,13 +12,13 @@
 </head>
 <body class="ignore-math">
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{alignat*}{6}
-&amp; &amp;&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;\small{1}&amp;&amp;\scriptsize{(\text{retenues})}&amp;\\
-&amp; &amp;&amp;&amp;1&amp;1&amp;0&amp;1&amp;0&amp;1_2&amp;&amp;\\
-&amp;+&amp;&amp;&amp;1&amp;0&amp;1&amp;1&amp;1&amp;1_2&amp;&amp;\\
-\hline&amp;&amp;&amp;1&amp;1&amp;0&amp;0&amp;1&amp;0&amp;0_2&amp;&amp;
-\end{alignat*}
+\begin{align*}
+p \oplus q \equiv \neg(\neg(p \oplus q))&amp;\equiv \neg ( (p \wedge q)\vee(\neg p \wedge \neg q)  )\\
+&amp;\equiv \neg (p \wedge q)\wedge\neg(\neg p \wedge \neg q) \\
+&amp;\equiv (\neg p \vee \neg q)\wedge(\neg\neg p \vee \neg\neg q) \\
+&amp;\equiv (\neg p \vee \neg q)\wedge(p \vee q) 
+\end{align*}
 </div>
-<span class="incontext"><a href="sec-representation.html#md-27" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#md-25" class="internal">Contexte</a></span>
 </body>
 </html>

@@ -10,5 +10,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><p>L'année <span class="process-math">\(2022\)</span> et l'année <span class="process-math">\(2023\)</span> ne sont pas des années bissextiles. Elle contiennent donc chacun <span class="process-math">\(365\)</span> jours. Pour trouver le jour de la semaine <span class="process-math">\(2\)</span> ans après le <span class="process-math">\(17\)</span> septembre <span class="process-math">\(2021\text{,}\)</span> il suffit de travailler modulo <span class="process-math">\(7\)</span> avec le vendredi de <span class="process-math">\(2021\text{.}\)</span> En ajoutant les <span class="process-math">\(365+365\)</span> journées de ces deux années, on trouve <span class="process-math">\(5+365+365=735\text{,}\)</span> qui est congru à <span class="process-math">\(0\)</span> modulo <span class="process-math">\(7\text{.}\)</span> Dans deux ans, le <span class="process-math">\(17\)</span> septembre sera donc un dimanche.</p></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<p>La conversion d'hexadécimal vers la base dix étant plus simple, on débute par celle-ci. On a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^1+3\times 16^0\\
+&amp;=10\times 16^5+14\times 16^3+2\times 16^2+15\times 16^1+3\times 16^0\\
+\end{align*}
+<p class="intertext">qui après addition de toutes ces puissances donne</p>
+\begin{align*}
+&amp;=10543859\text{.}
+\end{align*}
+</div>
+</div></body>
 </html>

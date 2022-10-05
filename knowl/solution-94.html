@@ -13,10 +13,18 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.14.2</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.10.2</span><span class="period">.</span>
 </h4>
-<p>Pour la seconde congruence, il peut être une bonne idée de réduire dans un premier temps modulo <span class="process-math">\(9\)</span> les membres de chaque côté de l'équation. En effet, si <span class="process-math">\(122=9q_1+r_1\)</span> et <span class="process-math">\(83=9q_2+r_2\text{,}\)</span> alors la congruence peut s'écrire de manière plus simple <span class="process-math">\(r_1x\equiv r_2\mod 9\text{.}\)</span> Puisque <span class="process-math">\(122\equiv 5 \mod 9 \)</span> et <span class="process-math">\(83\equiv 2\mod 9\text{,}\)</span> la congruence peut s'écrire <span class="process-math">\(5x\equiv 2\mod 9\text{.}\)</span> Cette fois, ajouter <span class="process-math">\(9\)</span> ne sera pas suffisant, mais si on ajoute <span class="process-math">\(18\equiv 0\mod 9\text{,}\)</span> on obtient <span class="process-math">\(5x\equiv 20\mod 9\)</span> et en divisant, on conclut que <span class="process-math">\(x\equiv 4\mod 9\text{.}\)</span> Les solutions sont donc tous les nombres congrus à <span class="process-math">\(4\)</span> modulo <span class="process-math">\(9\text{.}\)</span></p>
+<p>Cette fois-ci, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+147&amp;=74\times 1+73\\
+74&amp;=73\times 1+1\\
+73&amp;=1\times 73+0\text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="sec-modulo.html#solution-94" class="internal">Contexte</a></span>
+<p class="continuation">Selon l'algorithme d'Euclide, <span class="process-math">\(\pgcd{(147,74)}=1\text{,}\)</span> le dernier reste non nul. Ces nombres sont donc copremiers.</p>
+</div>
+<span class="incontext"><a href="sec-divisibilite.html#solution-94" class="internal">Contexte</a></span>
 </body>
 </html>

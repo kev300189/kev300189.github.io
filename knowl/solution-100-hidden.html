@@ -10,10 +10,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<p>Cette-fois, on distingue trois cas: Christian est présent, mais pas Sophie, Sophie est présent, mais pas Christian ou ni Sophie ni Christian sont présents. Ces trois cas sont disctincts et le principe d'addition permettra d'obtenir l'ensemble des possibilités.</p>
-<p>Si Christian est présent, il faut ensuite choisir les <span class="process-math">\(9\)</span> autres invités parmi les <span class="process-math">\(12\)</span> personnes qui ne sont pas Sophie (ou Christian). Cela donne <span class="process-math">\(\frac{12!}{9!3!}\text{.}\)</span> Le même argument montre que si Sophie est présente, mais pas Christian, le nombre de possibilités est aussi <span class="process-math">\(\frac{12!}{9!3!}\text{.}\)</span></p>
-<p>Finalement, si les deux sont absents, il faut choisir les <span class="process-math">\(10\)</span> invités parmi les <span class="process-math">\(12\)</span> autres possibilités. On obtient alors <span class="process-math">\(\frac{12!}{10!2!}\text{.}\)</span></p>
-<p>En combinant le tout, il y a <span class="process-math">\(2\times \frac{12!}{9!3!}+\frac{12!}{10!2!}\)</span> possibilités.</p>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><p>Dans les quatre années suivant <span class="process-math">\(2021\text{,}\)</span> il y a nécessairement une année bissextile. Celle-ci se trouve en <span class="process-math">\(2024\text{.}\)</span> Donc pour calculer le jour de la semaine, il faut ajouter <span class="process-math">\(4\times 365+1\)</span> jours au vendredi <span class="process-math">\((5)\)</span> de <span class="process-math">\(2021\)</span> et travailler encore une fois modulo <span class="process-math">\(7\text{.}\)</span> On trouve alors <span class="process-math">\(5+4\times 365+1=1466\equiv 3\mod 7\text{.}\)</span> Le <span class="process-math">\(17\)</span> septembre <span class="process-math">\(2025\)</span> sera (était?) donc un mercredi.</p></div></body>
 </html>

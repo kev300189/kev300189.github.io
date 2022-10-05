@@ -11,15 +11,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>On a</p>
+<p><p>L'idée est de reprendre le principe de la décomposition sous une forme des puissances de <span class="process-math">\(4\text{.}\)</span></p></p>
+<ol class="decimal">
+<li>
+<p>On a donc</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-402&amp;=312\times 1+90\\
-312&amp;=90\times 3+42\\
-90&amp;=42\times 2+6\\
-42&amp;=6\times 7+0 \text{.}
-\end{align*}
+\begin{equation*}
+123_4=1\times 4^2+2\times 4^1 +3\times 4^0=16+8+3=27\text{.}
+\end{equation*}
 </div>
-<p class="continuation">Selon l'algorithme d'Euclide, <span class="process-math">\(\pgcd{(402,312)}=6\text{,}\)</span> le dernier reste non nul.</p>
+</li>
+<li>
+<p>De plus,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+102030_4=1\times 4^5 + 0\times 4^4 + 2\times 4^3 + 0\times 4^2 + 3\times 4^1 + 0\times 4^0=1164 \text{.}
+\end{equation*}
+</div>
+</li>
+<li>
+<p>Finalement,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+3223_4=3\times4^3+2\times 4^2+2\times 4^1+3\times 4^0=235\text{.}
+\end{equation*}
+</div>
+</li>
+</ol>
 </div></body>
 </html>

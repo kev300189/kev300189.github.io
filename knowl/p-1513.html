@@ -12,22 +12,16 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<p>Puisque <span class="process-math">\(a\equiv b\mod n\)</span> et <span class="process-math">\(c\equiv d \mod n\text{,}\)</span> on sait qu'il existe <span class="process-math">\(q_1,q_2,q_3,q_4,r_1,r_2\in \mathbb{Z}\)</span> tels que <span class="process-math">\(a=nq_1+r_1,b=nq_2+r_1,c=nq_3+r_2\)</span> et <span class="process-math">\(d=nq_4+r_2\text{.}\)</span> En additionnant <span class="process-math">\(a+c\)</span> et <span class="process-math">\(b+d\text{,}\)</span> on trouve</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<p>Dans un premier temps, on suppose que <span class="process-math">\(a\equiv b\mod n\)</span> au sens de la définition <a href="" class="xref" data-knowl="./knowl/def-modulo.html" title="Définition 3.3.1: Congruence modulo n">3.3.1</a>. On tente maintenant de montrer que <span class="process-math">\(n\)</span> divise <span class="process-math">\(a-b\text{.}\)</span> D'une part, on sait qu'il existe <span class="process-math">\(q_1,r_1\in \mathbb{Z}\)</span> tels que <span class="process-math">\(a=nq_1+r_1\text{.}\)</span> De plus,  on sait qu'il existe <span class="process-math">\(q_2,r_2\in \mathbb{Z}\)</span> tels que <span class="process-math">\(b=nq_2+r_2\text{.}\)</span> Puisque <span class="process-math">\(a\equiv b\mod n\text{,}\)</span> on doit avoir <span class="process-math">\(r_1=r_2\text{.}\)</span> On peut alors écrire</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-modulo.html">
 \begin{align*}
-a+c&amp;=nq_1+r_1+nq_3+r_2\\
-&amp;=nq_1+nq_3+r_1+r_2\\
-&amp;=n(q_1+q_3)+(r_1+r_2)\text{.}
+a-b&amp;=nq_1+r_1-(nq_2+r_2)\\
+&amp;=nq_1+r_1-nq_2-r_2\\
+&amp;=nq_1-nq_2+r_1-r_2\\
+&amp;=n(q_1-q_2)+0\text{.}
 \end{align*}
 </div>
-<p class="continuation">De même</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-b+d&amp;=nq_2+r_1+nq_4+r_2\\
-&amp;=nq_2+nq_4+r_1+r_2\\
-&amp;=n(q_2+q_4)+(r_1+r_2)\text{.}
-\end{align*}
-</div>
+<p class="continuation">Ainsi, puisque <span class="process-math">\(a-b=n(q_1-q_2)\text{,}\)</span> on conclut que <span class="process-math">\(n\mid(a-b)\text{.}\)</span></p>
 <span class="incontext"><a href="sec-modulo.html#p-1513" class="internal">Contexte</a></span>
 </body>
 </html>

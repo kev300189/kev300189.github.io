@@ -10,10 +10,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><ol class="decimal">
-<li><p>On peut essayer de trouver un exemple qui fonctionne. Rapidement, on voit que <span class="process-math">\(n=2\)</span> est une solution. La proposition est donc vraie.</p></li>
-<li><p>Puisque Jean-Sébastien ne contient aucune des lettres u,v,w,x,y et z, la proposition est fausse.</p></li>
-<li><p>Il y a en fait deux types de mammifères qui pondent des oeufs. L'ornithorynque est probablement l'exemple le plus connu, mais il y a aussi  les échidnés.</p></li>
-<li><p>Ceci constitue un bon exemple de l'existence d'une valeur, sans toutefois pouvoir la déterminer. Comme la croissance d'une personne est un processus continu et qu'un humain nait normalement entre 46 et 56 cm (le record étant de 71!), il existe bel et bien un moment où l'auteur mesurait 100 cm. Bien malin toutefois celui qui pourra dire quand cela s'est produit.</p></li>
-</ol></div></body>
+<body class="ignore-math"><div class="solution solution-like">On veut montrer que cette proposition est une tautologie. En effet, on a<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+(p\wedge (p\rightarrow q))\rightarrow q&amp;\equiv \neg(p\wedge (\neg p\vee q))\vee q\\
+&amp;\equiv \neg((p\wedge\neg p) \vee (p\wedge q) )\vee q \text{ par distributivité.}\\
+&amp;\equiv \neg( F \vee (p\wedge q) )\vee q \text{ par les propriétés de la négation.}\\
+&amp; \equiv \neg( p\wedge q )\vee q \text{ par la propriété de l'identité.}\\
+&amp;\equiv  \neg p \vee (\neg q \vee q) \text{ par De Morgan et associativité.}\\
+&amp;\equiv  \neg p \vee V \text{ par les proporiétés de la négation.}\\
+&amp;\equiv  V \text{ par domination.}
+\end{align*}
+</div>Ainsi, cette proposition toujours vraie, et donc est une tautologie.</div></body>
 </html>

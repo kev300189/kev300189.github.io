@@ -12,14 +12,12 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.5.1</span><span class="period">.</span>
-</h6>
-<p>Des <span class="process-math">\(3^3\)</span> fonctions de <span class="process-math">\(A\)</span> vers <span class="process-math">\(A\text{,}\)</span> on cherche à compter celles qui sont monotones. On imagine la représentation d'une fonction en termes de billes et d'urnes. Par exemple, la figure suivante représente la fonction donné en exemple dans l'énoncé.</p>
-<figure class="figure figure-like">On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. Dans la première urne, une bille identifiée 1 est présente et des billes identifiées respectivement 2 et 3 sont présentes dans l'urne 2. La troisième urne est vide.<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p>La figure ci-dessous représente quant à elle la fonction non monotone <span class="process-math">\(f(1)=2,f(2)=3,f(3)=2\text{.}\)</span> Les mêmes urnes contiennent le même nombre de billes, mais les billes sont différentes.</p>
-<figure class="figure figure-like">On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. Dans l'urne 2, on peut voir des billes identifiées respectivement 1 et 3 et dans l'urne 3, on voit une bille identifiée 2. L'urne 1 est vide.<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p>On prend maintenant une configuration arbitraire de trois billes identiques dans trois urnes distinctes.</p>
-<figure class="figure figure-like">On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. L'urne 2 contient deux billes et l'urne 3 en contient une, mais les billes ne sont pas identifiées.<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p>À partir de cette configuration, il n'y a qu'une seule manière de créer une fonction monotone. On prend les billes de la première urne non vide (identifiée par le plus petit nombre) et on numérotte ses billes par les plus petits éléments du domaine. On poursuit ainsi avec les autres urnes non vide. On obtient alors une fonction monotone. Avec la configuration de la figure <a href="" class="xref" data-knowl="./knowl/fig-billesurnes3.html" title="Figure 4.2.3">4.2.3</a>, on obtient <span class="process-math">\(f(1)=2,f(2)=2,f(3)=3\text{.}\)</span></p>
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.3.6</span><span class="period">.</span>
+</h4>
+<p>À partir d'ici, les choses se compliquent légèrement. La difficulté vient du fait que les mois n'ont pas tous le même nombre de jours et donc, on ne peut pas travailler modulo un entier régulier. On commence par ajouter les <span class="process-math">\(35\)</span> jours à <span class="process-math">\(17\)</span> pour obtenir <span class="process-math">\(35+17=52\text{.}\)</span> Puisque septembre compte <span class="process-math">\(30\)</span> jours, on travaillera modulo <span class="process-math">\(30\text{.}\)</span> On apportera toutefois une précision dans la prochaine solution.</p>
+<p>Donc, <span class="process-math">\(52\equiv 22\mod 30\text{,}\)</span> ce qui signifie que la date <span class="process-math">\(35\)</span> jours après le <span class="process-math">\(17\)</span> septembre est équivalent à un <span class="process-math">\(22\)</span> et donc, le <span class="process-math">\(22\)</span> octobre.</p>
 </div>
-<span class="incontext"><a href="section-12.html#solution-101" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-modulo.html#solution-101" class="internal">Contexte</a></span>
 </body>
 </html>

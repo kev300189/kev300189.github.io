@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraphe</span></h4>
-<p>Si on veut multiplier des nombres réels avec un nombre fini de chiffre après le point, on procède comme suit. Une puissance négative de deux équivaut à déplacer le point vers la gauche, de un chiffre par valeur de <span class="process-math">\(n\)</span> dans <span class="process-math">\(2^{-n}\text{.}\)</span> Ainsi, <span class="process-math">\(1101.01_2\times 0.01_2=11.0101\text{,}\)</span> puisque <span class="process-math">\(0.01_2=2^{-2}\text{.}\)</span> On considère un exemple plus complexe.</p>
+<p>Les soustractions fonctionnent aussi de manière similaire à l'arithmétique en base dix. Au lieu d'avoir des retenues, on fait des emprunts lorsqu'on doit soustraire <span class="process-math">\(1\)</span> à <span class="process-math">\(0\text{.}\)</span> Dans ce cas, la soustraction <span class="process-math">\(0_2-1_2\)</span>  devient <span class="process-math">\(10_2-1_2=1_2\)</span> après emprunt, et l'emprunt se fait vers la gauche sur le prochain chiffre non nul (on ne peut emprunter à un <span class="process-math">\(0\)</span>). Voici un exemple de la soustraction de <span class="process-math">\(1100101_2\)</span> et <span class="process-math">\(1001010_2\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{alignat*}{7}
+&amp; &amp; &amp; &amp; &amp;\small{0}&amp;\small{1}&amp;\small{1}&amp;\small{0}&amp;\small{1}&amp;&amp;\scriptsize{(\text{emprunts})}&amp;\\
+&amp; &amp; &amp; &amp;1&amp;\bcancel{1}&amp;0&amp;0&amp;{\bcancel{1}}&amp;0&amp;1_2&amp;&amp;\\
+&amp;- &amp; &amp; &amp;1&amp;0&amp;0&amp;1&amp;0&amp;1&amp;0_2&amp;&amp;\\
+\hline&amp; &amp; &amp; &amp;0&amp;0&amp;1&amp;1&amp;0&amp;1&amp;1_2&amp;&amp;
+\end{alignat*}
+</div>
 <span class="incontext"><a href="sec-representation.html#p-1217" class="internal">Contexte</a></span>
 </body>
 </html>

@@ -13,10 +13,18 @@
 <body class="ignore-math">
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-\neg(\forall x \forall y\, P(x,y))&amp;\equiv \exists x\, \neg(\forall y\, P(x,y))\\
-&amp;\equiv \exists x\, \exists y\,\neg P(x,y)
+((p\rightarrow q)\wedge \neg q)\rightarrow \neg p &amp; \neg((\neg p \vee q)\wedge \neg q) \vee \neg p   \\
+&amp; (\neg(\neg p \vee q)\vee \neg\neg q) \vee \neg p \text{ par De Morgan.}   \\
+&amp; ((\neg\neg p \wedge \neg q)\vee q) \vee \neg p \text{  par De Morgan.}   \\
+&amp; ((p \wedge \neg q)\vee q) \vee \neg p \\
+&amp; ((p\vee q) \wedge (\neg q\vee q)) \vee \neg p \text{   par la distributivité.} \\
+&amp; ((p\vee q) \wedge V ) \vee \neg p \text{   par domination.} \\
+&amp; p\vee q   \vee \neg p \text{   par identité et associativité.} \\
+&amp; p\vee \neg p   \vee q \text{   par commutativité.} \\
+&amp; V \vee q  \text{   par les propriétés de négation.}\\
+&amp; V  \text{   par domination.} 
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-propquant.html#md-21" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#md-20" class="internal">Contexte</a></span>
 </body>
 </html>

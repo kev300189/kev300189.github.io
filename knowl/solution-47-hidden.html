@@ -13,10 +13,10 @@
 <body class="ignore-math"><div class="solution solution-like">On montre que cette proposition est une contradiction. En effet, on a montrer en classe que <span class="process-math">\(p\rightarrow q \equiv \neg p \vee q \text{.}\)</span> Ainsi,<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
 p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
-&amp;\equiv p \wedge \neg\neg q \wedge \neg p \text{ par De Morgan.}\\
-&amp;\equiv p \wedge q\wedge \neg p\\
-&amp;\equiv p \wedge \neg p \wedge \neg q\\
-&amp;\equiv F \wedge \neg q \equiv F
+&amp;\equiv p \wedge (\neg\neg q \wedge \neg p) \text{   par De Morgan.}\\
+&amp;\equiv p \wedge q\wedge \neg p \text{   par propriétés de la négations et associativité.}\\
+&amp;\equiv p \wedge \neg p \wedge q \text{   par commutativité.}\\
+&amp;\equiv F \wedge q \equiv F \text{   par propriétés de la négation et domination.}
 \end{align*}
 </div>
 </div></body>

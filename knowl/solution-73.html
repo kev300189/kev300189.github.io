@@ -13,27 +13,47 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.15.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.4.7.1</span><span class="period">.</span>
 </h4>
-<p>En suivant la méthode pour les entiers, on décompose l'un des facteur en une somme de de puissances de deux. Ici, on choisit de décomposer le deuxième facteur, puisqu'il contient moins de chiffre. On a</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-101.101_2=100_2+1_2+0.1_2+0.001_2\text{.}
-\end{equation*}
+<p>On débute par la table de vérité de ce circuit.</p>
+<p>On commence avec la paire d'entrées <span class="process-math">\(1\)</span>-<span class="process-math">\(1\text{.}\)</span> La porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span> La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(0\text{,}\)</span> la porte ET retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</p>
+<p>Pour la paire d'entrée <span class="process-math">\(1\)</span>-<span class="process-math">\(0\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(1\text{,}\)</span> la porte ET retourne <span class="process-math">\(1\)</span> comme sortie du circuit.</p>
+<p>Pour la paire d'entrée <span class="process-math">\(0\)</span>-<span class="process-math">\(1\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(0\text{,}\)</span> la porte ET retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</p>
+<p>Pour la paire d'entrée <span class="process-math">\(0\)</span>-<span class="process-math">\(0\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET.  La valeur du Y a été inversée et est maintenant <span class="process-math">\(1\text{,}\)</span> mais la porte OU a retourné <span class="process-math">\(0\text{.}\)</span> La porte ET finale retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</p>
+<p>Le résumé de ces calculs se trouve dans la table ci-dessous.</p>
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.9<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(X\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(Y\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(X\vee Y\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\((X\vee Y)\wedge \neg Y\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">0</td>
+<td class="l m b3 r2 l0 t0 lines">0</td>
+<td class="l m b3 r2 l0 t0 lines">0</td>
+<td class="l m b3 r2 l0 t0 lines">0</td>
+</tr>
+</table></div></figure><p>Pour ce qui est de l'expression logique, en suivant le raisonnement des calculs précédents, on arrive à <span class="process-math">\((X\vee Y)\wedge (\neg Y)\text{.}\)</span></p>
 </div>
-<p class="continuation">Le produit devient</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-10011.1011_2\times 101.101_2&amp;=10011.1011_2\times (100_2+1_2+0.1_2+0.001_2)\\
-&amp;=10011.1011_2\times 100_2+10011.1011_2\times 1_2+10011.1011_2\times 0.1_2+10011.1011_2\times 0.001_2.\\
-\end{align*}
-<p class="intertext">En déplaçant le point, on trouve</p>
-\begin{align*}
-\phantom{10011.1011_2\times 101.101_2}&amp;=1001110.11_2+10011.1011_2+1001.11011_2+10.0111011_2\\
-\phantom{10011.1011_2\times 101.101_2}&amp;=1101110.1011111
-\end{align*}
-</div>
-</div>
-<span class="incontext"><a href="sec-representation.html#solution-73" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-circuits.html#solution-73" class="internal">Contexte</a></span>
 </body>
 </html>

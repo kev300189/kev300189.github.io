@@ -12,15 +12,22 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.3.1.1</span><span class="period">.</span>
-</h4>
-<ol class="decimal">
-<li><p>Lorsque <span class="process-math">\(x=1\text{,}\)</span> la proposition <span class="process-math">\(P_1(1)\)</span> est <span class="process-math">\(1&gt;4\text{,}\)</span> qui est fausse.</p></li>
-<li><p>La proposition <span class="process-math">\(P_2(1,3)\)</span> est <span class="process-math">\(1\leq 3\text{,}\)</span> qui est vraie.</p></li>
-<li><p>Puisque <span class="process-math">\(1+3=4\text{,}\)</span> la proposition <span class="process-math">\(P_3(1,3)\)</span> est fausse.</p></li>
-</ol>
-</div>
-<span class="incontext"><a href="sec-propquant.html#solution-48" class="internal">Contexte</a></span>
+<h6 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.4.1.b.1</span><span class="period">.</span>
+</h6>On veut montrer que cette proposition est une tautologie. On a:<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+((p\rightarrow q)\wedge \neg q)\rightarrow \neg p &amp; \neg((\neg p \vee q)\wedge \neg q) \vee \neg p   \\
+&amp; (\neg(\neg p \vee q)\vee \neg\neg q) \vee \neg p \text{ par De Morgan.}   \\
+&amp; ((\neg\neg p \wedge \neg q)\vee q) \vee \neg p \text{  par De Morgan.}   \\
+&amp; ((p \wedge \neg q)\vee q) \vee \neg p \\
+&amp; ((p\vee q) \wedge (\neg q\vee q)) \vee \neg p \text{   par la distributivité.} \\
+&amp; ((p\vee q) \wedge V ) \vee \neg p \text{   par domination.} \\
+&amp; p\vee q   \vee \neg p \text{   par identité et associativité.} \\
+&amp; p\vee \neg p   \vee q \text{   par commutativité.} \\
+&amp; V \vee q  \text{   par les propriétés de négation.}\\
+&amp; V  \text{   par domination.} 
+\end{align*}
+</div>Ainsi, cette proposition est une tautologie.</div>
+<span class="incontext"><a href="sec-eqlogfnc.html#solution-48" class="internal">Contexte</a></span>
 </body>
 </html>
