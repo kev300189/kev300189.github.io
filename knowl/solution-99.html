@@ -12,11 +12,22 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.3.4</span><span class="period">.</span>
-</h4>
-<p>L'année <span class="process-math">\(2022\)</span> et l'année <span class="process-math">\(2023\)</span> ne sont pas des années bissextiles. Elle contiennent donc chacun <span class="process-math">\(365\)</span> jours. Pour trouver le jour de la semaine <span class="process-math">\(2\)</span> ans après le <span class="process-math">\(17\)</span> septembre <span class="process-math">\(2021\text{,}\)</span> il suffit de travailler modulo <span class="process-math">\(7\)</span> avec le vendredi de <span class="process-math">\(2021\text{.}\)</span> En ajoutant les <span class="process-math">\(365+365\)</span> journées de ces deux années, on trouve <span class="process-math">\(5+365+365=735\text{,}\)</span> qui est congru à <span class="process-math">\(0\)</span> modulo <span class="process-math">\(7\text{.}\)</span> Dans deux ans, le <span class="process-math">\(17\)</span> septembre sera donc un dimanche.</p>
+<h6 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.5.3.b.1</span><span class="period">.</span>
+</h6>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+5678\amp = 1234\cdot 4 + 742 \\
+1234\amp = 742\cdot 1 +492 \\
+742\amp = 492\cdot 1 + 250\\
+492\amp = 250\cdot 1 + 242\\
+250\amp = 242\cdot 1 + 8\\
+242\amp = 8\cdot 30 + 2\\
+8\amp = 2\cdot 4 
+\end{align*}
 </div>
-<span class="incontext"><a href="sec-modulo.html#solution-99" class="internal">Contexte</a></span>
+<p>Ainsi, <span class="process-math">\(\text{pgcd}(1234,5678)=2\)</span></p>
+</div>
+<span class="incontext"><a href="sec-divisibilite.html#solution-99" class="internal">Contexte</a></span>
 </body>
 </html>

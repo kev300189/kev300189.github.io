@@ -11,21 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>L'idée est de décomposer le nombre <span class="process-math">\(2^{345}\)</span> en quelque chose de plus petit et dont on connait le reste de la division par <span class="process-math">\(7\text{.}\)</span> Dans ce cas-ci, on voit que <span class="process-math">\(345=5\times 69\)</span> et donc <span class="process-math">\(2^{345}=(2^5)^{69}\text{.}\)</span> Comme <span class="process-math">\(2^5=32\equiv 4\mod 7\text{,}\)</span> la troisième propriété appliquée à répétition nous permet de dire que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-2^{345}\equiv 4^{69}\mod 7\text{.}
-\end{equation*}
-</div>
-<p class="continuation">On peut ensuite observer que <span class="process-math">\(4^3=64\equiv 1\mod 7\)</span> et puisque <span class="process-math">\(69=3\times 23\text{,}\)</span> alors</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-2^{345}&amp;\equiv 4^{69}\mod 7\\
-&amp;\equiv (4^3)^{23}\mod 7\\
-&amp;\equiv 1^{23}\mod 7\\
-&amp;\equiv 1\mod 7\text{.}
+7828\amp = 1339\cdot 5 + 1133 \\
+1339\amp = 1133\cdot 1 + 206\\
+1133\amp = 206\cdot 5 + 103\\
+206\amp = 103\cdot 2 
 \end{align*}
 </div>
-<p>Le reste de la division par <span class="process-math">\(7\)</span> du nombre <span class="process-math">\(2^{345}\)</span> est donc <span class="process-math">\(1\text{.}\)</span> On note au passage qu'on aurait pu y arriver plus rapidement en divisant <span class="process-math">\(345\)</span> par <span class="process-math">\(3\)</span> plutôt que par <span class="process-math">\(5\)</span> initialement.</p>
+<p>Ainsi, <span class="process-math">\(\text{pgcd}(7828,1339)=103\)</span></p>
 </div></body>
 </html>

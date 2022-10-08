@@ -10,5 +10,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><p>Dans les quatre années suivant <span class="process-math">\(2021\text{,}\)</span> il y a nécessairement une année bissextile. Celle-ci se trouve en <span class="process-math">\(2024\text{.}\)</span> Donc pour calculer le jour de la semaine, il faut ajouter <span class="process-math">\(4\times 365+1\)</span> jours au vendredi <span class="process-math">\((5)\)</span> de <span class="process-math">\(2021\)</span> et travailler encore une fois modulo <span class="process-math">\(7\text{.}\)</span> On trouve alors <span class="process-math">\(5+4\times 365+1=1466\equiv 3\mod 7\text{.}\)</span> Le <span class="process-math">\(17\)</span> septembre <span class="process-math">\(2025\)</span> sera (était?) donc un mercredi.</p></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+2468\amp = 1357\cdot 1 + 1111 \\
+1357\amp = 1111\cdot 1 +246 \\
+1111\amp = 246\cdot 4 + 127\\
+246\amp = 127\cdot 1 + 119\\
+127\amp = 119\cdot 1 + 8\\
+119\amp = 8\cdot 14 + 7\\
+8\amp = 7\cdot 1+1 \\
+7\amp = 1\cdot 7 
+\end{align*}
+</div>
+<p>Ainsi, <span class="process-math">\(\text{pgcd}(1357,2468)=1\)</span></p>
+</div></body>
 </html>

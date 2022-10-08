@@ -12,12 +12,19 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.3.6</span><span class="period">.</span>
-</h4>
-<p>À partir d'ici, les choses se compliquent légèrement. La difficulté vient du fait que les mois n'ont pas tous le même nombre de jours et donc, on ne peut pas travailler modulo un entier régulier. On commence par ajouter les <span class="process-math">\(35\)</span> jours à <span class="process-math">\(17\)</span> pour obtenir <span class="process-math">\(35+17=52\text{.}\)</span> Puisque septembre compte <span class="process-math">\(30\)</span> jours, on travaillera modulo <span class="process-math">\(30\text{.}\)</span> On apportera toutefois une précision dans la prochaine solution.</p>
-<p>Donc, <span class="process-math">\(52\equiv 22\mod 30\text{,}\)</span> ce qui signifie que la date <span class="process-math">\(35\)</span> jours après le <span class="process-math">\(17\)</span> septembre est équivalent à un <span class="process-math">\(22\)</span> et donc, le <span class="process-math">\(22\)</span> octobre.</p>
+<h6 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.5.3.d.1</span><span class="period">.</span>
+</h6>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+1488\amp = 1272\cdot 1 + 216 \\
+1272\amp = 216\cdot 5 + 192\\
+216\amp = 192\cdot 1 + 24\\
+192\amp = 24\cdot 8 
+\end{align*}
 </div>
-<span class="incontext"><a href="sec-modulo.html#solution-101" class="internal">Contexte</a></span>
+<p>Ainsi, <span class="process-math">\(\text{pgcd}(1272,1488)=24\)</span></p>
+</div>
+<span class="incontext"><a href="sec-divisibilite.html#solution-101" class="internal">Contexte</a></span>
 </body>
 </html>
