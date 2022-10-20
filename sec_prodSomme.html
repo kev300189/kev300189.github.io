@@ -382,50 +382,114 @@ B\amp=B_1+B_{00}-B_{100}=2^7+2^6-2^5\\
 <article class="exercise exercise-like" id="exercise-200"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
 <div class="introduction" id="introduction-169"><p id="p-1743">Combien de chaînes de quatre chiffres</p></div>
 <article class="task exercise-like" id="task-490"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1744">sont formées de chiffres différents?</p></article><article class="task exercise-like" id="task-491"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1745">se terminent par un nombre pair?</p></article><article class="task exercise-like" id="task-492"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1746">ont exactement trois chiffres qui sont des <span class="process-math">\(9\text{?}\)</span></p></article><article class="task exercise-like" id="task-493"><h6 class="heading"><span class="codenumber">(d)</span></h6>se terminent par un nombre pair?</article></article><article class="exercise exercise-like" id="exercise-201"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-1747">Lors de la finale de la course du <span class="process-math">\(100\)</span> mètres aux derniers jeux Olympiques, il y avait <span class="process-math">\(8\)</span> coureurs. De combien de manières possibles le podium pouvait-il être composé?</p>
+<p id="p-1744">sont formées de chiffres différents?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-201" id="answer-201"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-201"><div class="answer solution-like"><p id="p-1748"><span class="process-math">\(\frac{8!}{5!1!1!1!}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-201" id="answer-201"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-201"><div class="answer solution-like"><p id="p-1745"><span class="process-math">\(10\cdot 9\cdot 8\cdot 7=5040 \text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-156" id="solution-156"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-156"><div class="solution solution-like"><p id="p-1746">Lorsqu'on choisit le premier chiffre, il y a <span class="process-math">\(10\)</span> possibilités. Pour chaque chiffre qu'on choisit par la suite, il y a toujours un choix de moins que pour le chiffre précédent.Ainsi, par le principe du produit, on a <span class="process-math">\(10\cdot 9\cdot 8\cdot 7=5040 \)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-491"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1747">se terminent par un nombre pair?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-202" id="answer-202"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-202"><div class="answer solution-like"><p id="p-1748"><span class="process-math">\(5\cdot 10^3 = 5\,000\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-157" id="solution-157"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-157"><div class="solution solution-like"><p id="p-1749">On commence par choisir le dernier chiffre. Pour que celui-ci soit pair, il y a <span class="process-math">\(5\)</span> choix possibles. Pour chacun des autres chiffres, il y a <span class="process-math">\(10\)</span> possibilités, car les chiffres peuvent se répéter.</p></div></div>
+</div></article><article class="task exercise-like" id="task-492"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1750">ont exactement trois chiffres qui sont des <span class="process-math">\(9\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-203" id="answer-203"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-203"><div class="answer solution-like"><p id="p-1751"><span class="process-math">\(9+9+9+9=36\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-158" id="solution-158"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-158"><div class="solution solution-like">
+<p id="p-1752">On conditionne sur la position du chiffre qui n'est pas un <span class="process-math">\(9\text{.}\)</span> C'est à dire qu'on utilise le principe de la somme selon la position du chiffre qui n'est pas <span class="process-math">\(9\)</span></p>
+<p id="p-1753">Le chiffre est soit à la position <span class="process-math">\(1\text{,}\)</span> soit à la position <span class="process-math">\(2\text{,}\)</span> soit à la position <span class="process-math">\(3\)</span> ou bien à la position <span class="process-math">\(4\text{.}\)</span> Dans chacun des cas, il ne reste qu'à trouver la valeur de ce chiffre, car on sait que les autres chiffres sont des <span class="process-math">\(9\text{.}\)</span> Il y aura donc <span class="process-math">\(9\)</span> possibilités, car le chiffre ne peut pas être <span class="process-math">\(9\text{.}\)</span></p>
+<p id="p-1754">Ainsi, par le principe de la somme, il y a <span class="process-math">\(9+9+9+9=36\)</span> possibilités.</p>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-201"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-1755">Lors de la finale de la course du <span class="process-math">\(100\)</span> mètres aux derniers jeux Olympiques, il y avait <span class="process-math">\(8\)</span> coureurs. De combien de manières possibles le podium pouvait-il être composé?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-204" id="answer-204"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-204"><div class="answer solution-like"><p id="p-1756"><span class="process-math">\(\frac{8!}{5!}=8\cdot 7\cdot 6\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-202"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-170"><p id="p-1749">Combien de chaînes de sept lettres minuscules y a-t-il</p></div>
-<article class="task exercise-like" id="task-494"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1750">si les lettres peuvent se répéter?</p></article><article class="task exercise-like" id="task-495"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1751">si les lettres ne peuvent pas se répéter?</p></article><article class="task exercise-like" id="task-496"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1752">qui commencent par un “x”, si les lettres peuvent se répéter?</p></article><article class="task exercise-like" id="task-497"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1753">qui commencent par un “x”, si les lettres ne peuvent pas se répéter?</p></article><article class="task exercise-like" id="task-498"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-1754">qui commencent et se terminent par un “x”, si les lettres peuvent se répéter?</p></article><article class="task exercise-like" id="task-499"><h6 class="heading"><span class="codenumber">(f)</span></h6>
-<p id="p-1755">qui commencent par les lettres “bo” (dans cet ordre), si les lettres peuvent se répéter?</p></article><article class="task exercise-like" id="task-500"><h6 class="heading"><span class="codenumber">(g)</span></h6>
-<p id="p-1756">qui commencent  <em class="emphasis">et</em> se terminent par les lettres “bo” (dans cet ordre), si les lettres peuvent se répéter?</p></article><article class="task exercise-like" id="task-501"><h6 class="heading"><span class="codenumber">(h)</span></h6>
-<p id="p-1757">qui commencent  <em class="emphasis">ou</em> se terminent par les lettres “bo” (dans cet ordre), si les lettres peuvent se répéter?</p></article></article><article class="exercise exercise-like" id="exercise-203"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-171"><p id="p-1761">On considère les entiers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(0\lt n\lt 1\,000\,000\text{.}\)</span></p></div>
-<article class="task exercise-like" id="task-502"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1762">Combien de ces entiers <span class="process-math">\(n\)</span> sont divisibles par <span class="process-math">\(4\)</span> ou <span class="process-math">\(6\text{?}\)</span></p></article><article class="task exercise-like" id="task-503"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1763">Combien de ces entiers <span class="process-math">\(n\)</span> ne sont divisibles ni par <span class="process-math">\(4\)</span> ni par <span class="process-math">\(6\text{?}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-204"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-172"><p id="p-1764">Supposons qu'un mot de passe pour un système informatique doit avoir entre <span class="process-math">\(8\)</span> et <span class="process-math">\(12\)</span> (incusivement) caractères, où chaque caractère est soit une lettre, un chiffre ou l'un des caractères spéciaux  <span class="process-math">\(\ast,\, \gt,\,\lt,\,!,\,+\text{ et }= \text{.}\)</span></p></div>
-<article class="task exercise-like" id="task-504"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1765">Combien de mots de passe différents sont disponibles pour ce système informatique?</p></article><article class="task exercise-like" id="task-505"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1766">Combien de ces mots de passe contiennent au moins un des caractères spéciaux?</p></article></article><article class="exercise exercise-like" id="exercise-205"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-173"><p id="p-1768">On considère l'ensemble des propositions formées à partir de <span class="process-math">\(n\)</span> propositions atomiques.</p></div>
-<article class="task exercise-like" id="task-506"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1769">Combien de lignes possède le tableau de vérité d'une de ces propositions?</p></article><article class="task exercise-like" id="task-507"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1770">Combien de tableaux de vérité différents y a-t-il pour ces propositions? On considère que deux tableaux sont les mêmes si leur dernière colone sont les mêmes.</p></article></article><article class="exercise exercise-like" id="exercise-206"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-174"><p id="p-1771">On considère les fonctions <span class="process-math">\(f:\{1,2,\dots,n\}\to \{0,1\}\)</span> où <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span></p></div>
-<article class="task exercise-like" id="task-508"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1772">Conbien de ces fonctions sont injectives?</p></article><article class="task exercise-like" id="task-509"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1773">Combien de ces fonctions sont telles que <span class="process-math">\(f(1)=f(n)=0\text{?}\)</span></p></article><article class="task exercise-like" id="task-510"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1774">Combien de ces fonctions sont telles que <span class="process-math">\(|f^{-1}(1)\cap\{1,2,\dots,n-1\}|=1\text{?}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-207"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-175"><p id="p-1775">De combien de façons différentes est-ce qu'un photographe peu arranger en une ligne <span class="process-math">\(6\)</span> personnes d'un groupe de <span class="process-math">\(10\text{,}\)</span> où les mariés sont dans le groupe de, si</p></div>
-<article class="task exercise-like" id="task-511"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1776">la mariée doit être sur la photo?</p></article><article class="task exercise-like" id="task-512"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1777">les mariés doivent tous deux être sur la photo?</p></article><article class="task exercise-like" id="task-513"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1778">exactement un des mariés doit être sur la photo?</p></article></article><article class="exercise exercise-like" id="exercise-208"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-176"><p id="p-1779">De combien de façons différentes est-ce qu'un photographe peu arranger en une ligne <span class="process-math">\(6\)</span> personnes, incluant les mariés, si</p></div>
-<article class="task exercise-like" id="task-514"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1780">les mariés doivent être l'un à côté de l'autre?</p></article><article class="task exercise-like" id="task-515"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1781">la mariée n'est pas à côté du marié?</p></article><article class="task exercise-like" id="task-516"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1782">la mariée est quelque part à gauche du marié?</p></article></article></article><article class="subexercises" id="subexercises-14"><h4 class="heading"><span class="title">Exercices supplémentaires</span></h4></article></section></section></div></main>
+<div class="introduction" id="introduction-170"><p id="p-1757">Combien de chaînes de sept lettres minuscules y a-t-il</p></div>
+<article class="task exercise-like" id="task-493"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1758">si les lettres peuvent se répéter?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-205" id="answer-205"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-205"><div class="answer solution-like"><p id="p-1759"><span class="process-math">\(26^7 \)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-494"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1760">si les lettres ne peuvent pas se répéter?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-206" id="answer-206"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-206"><div class="answer solution-like"><p id="p-1761"><span class="process-math">\(26\cdot 25\cdot 24\cdot 23\cdot 22\cdot 21 \cdot 20  \)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-495"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1762">qui commencent par un “x”, si les lettres peuvent se répéter?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-207" id="answer-207"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-207"><div class="answer solution-like"><p id="p-1763"><span class="process-math">\(26^6 \)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-496"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1764">qui commencent par un “x”, si les lettres ne peuvent pas se répéter?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-208" id="answer-208"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-208"><div class="answer solution-like"><p id="p-1765"><span class="process-math">\(25\cdot 24\cdot 23\cdot 22\cdot 21 \cdot 20  \)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-497"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1766">qui commencent et se terminent par un “x”, si les lettres peuvent se répéter?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-209" id="answer-209"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-209"><div class="answer solution-like"><p id="p-1767"><span class="process-math">\(26^5 \)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-498"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-1768">qui commencent par les lettres “bo” (dans cet ordre), si les lettres peuvent se répéter?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-210" id="answer-210"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-210"><div class="answer solution-like"><p id="p-1769"><span class="process-math">\(26^5 \)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-499"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-1770">qui commencent  <em class="emphasis">et</em> se terminent par les lettres “bo” (dans cet ordre), si les lettres peuvent se répéter?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-211" id="answer-211"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-211"><div class="answer solution-like"><p id="p-1771"><span class="process-math">\(26^3 \)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-500"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-1772">qui commencent  <em class="emphasis">ou</em> se terminent par les lettres “bo” (dans cet ordre), si les lettres peuvent se répéter?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-212" id="answer-212"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-212"><div class="answer solution-like"><p id="p-1773"><span class="process-math">\(26^5+26^5-26^3 \)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="dur"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-1774">Combien de chaînes binaires de longueur <span class="process-math">\(10\)</span> contiennent cinq <span class="process-math">\(1\)</span> consécutifs ou cinq <span class="process-math">\(0\)</span> consécutifs?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-213" id="answer-213"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-213"><div class="answer solution-like"><span class="process-math">\(222\)</span></div></div>
+</div></article><article class="exercise exercise-like" id="Tresdur"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-1775">Combien de chaînes binaires de longueur <span class="process-math">\(10\)</span> contiennent cinq <span class="process-math">\(1\)</span> consécutifs ou cinq <span class="process-math">\(0\)</span> consécutifs?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-214" id="answer-214"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-214"><div class="answer solution-like"><span class="process-math">\(147\)</span></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-205"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-1776">Soit <span class="process-math">\(E\)</span> un ensemble tel que <span class="process-math">\(|E|=100\text{.}\)</span> Combien de sous-ensembles de <span class="process-math">\(E\)</span> possède plus d'un élément?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-215" id="answer-215"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-215"><div class="answer solution-like"><p id="p-1777"><span class="process-math">\(2^100-101\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-206"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-171"><p id="p-1778">On considère les entiers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(0\lt n\lt 1\,000\,000\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-501"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1779">Combien de ces entiers <span class="process-math">\(n\)</span> sont divisibles par <span class="process-math">\(4\)</span> ou <span class="process-math">\(6\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-216" id="answer-216"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-216"><div class="answer solution-like"><p id="p-1780"><span class="process-math">\(333\,332 \)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-502"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1781">Combien de ces entiers <span class="process-math">\(n\)</span> ne sont divisibles ni par <span class="process-math">\(4\)</span> ni par <span class="process-math">\(6\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-217" id="answer-217"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-217"><div class="answer solution-like"><p id="p-1782"><span class="process-math">\(666\,667\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-207"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-172"><p id="p-1783">Supposons qu'un mot de passe pour un système informatique doit avoir entre <span class="process-math">\(8\)</span> et <span class="process-math">\(12\)</span> (inclusivement) caractères, où chaque caractère est soit une lettre minuscule ou manjuscule, un chiffre ou l'un des caractères spéciaux  <span class="process-math">\(\ast,\, \gt,\,\lt,\,!,\,+\text{ et }= \text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-503"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1784">Combien de mots de passe différents sont disponibles pour ce système informatique?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-218" id="answer-218"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-218"><div class="answer solution-like"><p id="p-1785"><span class="process-math">\(9\,920\,671\,339\,261\,325\,541\,376\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-504"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1786">Combien de ces mots de passe contiennent au moins un des caractères spéciaux?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-219" id="answer-219"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-219"><div class="answer solution-like"><p id="p-1787"><span class="process-math">\(6\,641\,514\,961\,387\,068\,437\,760\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-208"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-173"><p id="p-1788">On considère l'ensemble des propositions formées à partir de <span class="process-math">\(n\)</span> propositions atomiques.</p></div>
+<article class="task exercise-like" id="task-505"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1789">Combien de lignes possède le tableau de vérité d'une de ces propositions?</p></article><article class="task exercise-like" id="task-506"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1790">Combien de tableaux de vérité différents y a-t-il pour ces propositions? On considère que deux tableaux sont les mêmes si leur dernière colone sont les mêmes.</p></article></article><article class="exercise exercise-like" id="exercise-209"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-174"><p id="p-1791">On considère les fonctions <span class="process-math">\(f:\{1,2,\dots,n\}\to \{0,1\}\)</span> où <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-507"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1792">Conbien de ces fonctions sont injectives?</p></article><article class="task exercise-like" id="task-508"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1793">Combien de ces fonctions sont telles que <span class="process-math">\(f(1)=f(n)=0\text{?}\)</span></p></article><article class="task exercise-like" id="task-509"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1794">Combien de ces fonctions sont telles que <span class="process-math">\(|f^{-1}(1)\cap\{1,2,\dots,n-1\}|=1\text{?}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-210"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-175"><p id="p-1795">De combien de façons différentes est-ce qu'un photographe peu arranger en une ligne <span class="process-math">\(6\)</span> personnes d'un groupe de <span class="process-math">\(10\text{,}\)</span> où les mariés sont dans le groupe de, si</p></div>
+<article class="task exercise-like" id="task-510"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1796">la mariée doit être sur la photo?</p></article><article class="task exercise-like" id="task-511"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1797">les mariés doivent tous deux être sur la photo?</p></article><article class="task exercise-like" id="task-512"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1798">exactement un des mariés doit être sur la photo?</p></article></article><article class="exercise exercise-like" id="exercise-211"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-176"><p id="p-1799">De combien de façons différentes est-ce qu'un photographe peu arranger en une ligne <span class="process-math">\(6\)</span> personnes, incluant les mariés, si</p></div>
+<article class="task exercise-like" id="task-513"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1800">les mariés doivent être l'un à côté de l'autre?</p></article><article class="task exercise-like" id="task-514"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1801">la mariée n'est pas à côté du marié?</p></article><article class="task exercise-like" id="task-515"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1802">la mariée est quelque part à gauche du marié?</p></article></article></article><article class="subexercises" id="subexercises-14"><h4 class="heading"><span class="title">Exercices supplémentaires</span></h4></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
