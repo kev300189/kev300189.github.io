@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><p>On commence par choisir les <span class="process-math">\(n_1\)</span> positions parmi les <span class="process-math">\(n\)</span> positions totales pour les objets de type <span class="process-math">\(1\text{.}\)</span> Il y a <span class="process-math">\(\Binomial{n}{n_1}\)</span> façons de le faire.</p>
+<p>Par la suite, on choisit les <span class="process-math">\(n_2\)</span> positions parmi les <span class="process-math">\(n-n_1\)</span> positions restantes pour les objets de type <span class="process-math">\(2\text{.}\)</span>  Il y a <span class="process-math">\(\Binomial{n-n_1}{n_2}\)</span> façons de le faire.</p>
+<p>On doit maintenant choisir les <span class="process-math">\(n_3\)</span> positions parmi les <span class="process-math">\(n-n_1-n_2\)</span> positions restantes pour les objets de type <span class="process-math">\(3\text{.}\)</span>  Il y a <span class="process-math">\(\Binomial{n-n_1-n_2}{n_3}\)</span> façons de le faire.</p>
+<p>En poursuivant ainsi, jusqu'aux objets de type <span class="process-math">\(k\text{,}\)</span> et en utilisant le principe du produit, on a que le nombres de permutations est</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\amp = \Binomial{n}{n_1}\Binomial{n-n_1}{n_2}\cdots \Binomial{n-n_1-n_2-\cdots-n_{k-1}}{n_{k}}\\
+\amp = \frac{n!}{(n-n_1)!n_1!}\frac{(n-n_1)!}{(n-n_1-n_2)!n_2!}\cdots \frac{(n-n_1-n_2-\cdots-n_{k-1})!}{0!n_{k}!}\\
+\amp = \frac{n!}{n_1!n_2!\cdots n_k!}
+\end{align*}
+</div></article></body>
+</html>
