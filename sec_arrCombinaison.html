@@ -386,7 +386,240 @@ x_1+x_2+\cdots + x_r = n
 <li id="li-401"><p id="p-1907">Les <a href="" class="xref" data-knowl="./knowl/prop-permInd.html" title="Proposition 4.2.17">permutations d'objets indiscernables</a>;</p></li>
 <li id="li-402"><p id="p-1908">Les <a href="" class="xref" data-knowl="./knowl/prop-permRep.html" title="Proposition 4.2.18">permutations avec répétition</a>;</p></li>
 <li id="li-403"><p id="p-1909">Les <a href="" class="xref" data-knowl="./knowl/prop-combRep.html" title="Proposition 4.2.20">combinaisons avec répétitions</a>.</p></li>
-</ul></section></section></div></main>
+</ul></section><section class="exercises" id="exo-combinatoire"><h3 class="heading hide-type">
+<span class="type">Exercices</span> <span class="codenumber">4.2.4</span> <span class="title">Exercices</span>
+</h3>
+<article class="subexercises" id="subexercises-15"><h4 class="heading"><span class="title">À faire à la maison.</span></h4>
+<div class="introduction" id="introduction-183"><p id="p-1910">Ces servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés. Il sont à faire d'ici le prochain cours.</p></div>
+<article class="exercise exercise-like" id="exercise-212"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-1911">Combien de permutations de l'ensemble <span class="process-math">\(\{a,b,c,d,e,f,g\}\)</span> y a-t-il?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-236" id="answer-236"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-236"><div class="answer solution-like"><span class="process-math">\(\Permutation{6}{6}=6!\)</span></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-213"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-1912">Combien de permutations de l'ensemble <span class="process-math">\(\{a,b,c,d,e,f,g\}\)</span> commencent par <span class="process-math">\(g\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-237" id="answer-237"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-237"><div class="answer solution-like"><span class="process-math">\(5!\)</span></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-173" id="solution-173"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-173"><div class="solution solution-like">Puisque <span class="process-math">\(g\)</span> est fixé en première position, il suffit de compter les permutations des lettres restantes. Il y en a <span class="process-math">\(5!\text{.}\)</span>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-214"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-184"><p id="p-1913">On lance une pièce à deux faces à <span class="process-math">\(8\)</span> reprises. Le résultat est Pile ou Face. Combien de résultats:</p></div>
+<article class="task exercise-like" id="task-522"><h6 class="heading"><span class="codenumber">(a)</span></h6>y a-t-il au total?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-238" id="answer-238"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-238"><div class="answer solution-like"><span class="process-math">\(2^8\text{.}\)</span></div></div>
+</div></article><article class="task exercise-like" id="task-523"><h6 class="heading"><span class="codenumber">(b)</span></h6>contiennent exactement deux Face?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-239" id="answer-239"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-239"><div class="answer solution-like"><span class="process-math">\(\Binomial{8}{2}=\frac{8!}{6!2!}\)</span></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-174" id="solution-174"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-174"><div class="solution solution-like">On choisit deux positions parmi les <span class="process-math">\(8\)</span> possibles pour les Face.</div></div>
+</div></article><article class="task exercise-like" id="task-524"><h6 class="heading"><span class="codenumber">(c)</span></h6>contiennent exactement trois Pile?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-240" id="answer-240"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-240"><div class="answer solution-like"><span class="process-math">\(\Binomial{8}{3}=\frac{8!}{3!5!}\)</span></div></div>
+</div></article><article class="task exercise-like" id="task-525"><h6 class="heading"><span class="codenumber">(d)</span></h6>contiennent le même nombre de Pile que de Face?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-241" id="answer-241"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-241"><div class="answer solution-like"><span class="process-math">\(\Binomial{8}{4}=\frac{8!}{4!4!}\)</span></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-215"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-1914">De combien de manières peut-on sélectionner <span class="process-math">\(5\)</span> volontaires dans la classe? (On suppose qu'il y a <span class="process-math">\(n\)</span> personnes dans la classe.)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-175" id="solution-175"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-175"><div class="solution solution-like">
+<p id="p-1915">Soit <span class="process-math">\(n\)</span> le nombre de personnes dans la classe. Si <span class="process-math">\(n&lt; 5\text{,}\)</span> alors c'est impossible. Sinon, le nombre de possibilités est</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{n!}{5!(n-5)!}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Pour cela, on identifie les personnes avec <span class="process-math">\(5\)</span> étiquettes <span class="process-math">\(V\)</span> pour volontaires et <span class="process-math">\(n-5\)</span> étiquettes <span class="process-math">\(N\)</span> pour non volontaires.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-216"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-1916">Aux olympiades scolaire de l'école du Bonheur, tous les participants gagnent une médaille. S'il y a <span class="process-math">\(24\)</span> élèves et qu'on attribue <span class="process-math">\(5\)</span> médailles d'or, <span class="process-math">\(7\)</span> médailles d'argent et le reste en bronze, de combien de manières est-ce que la distribution peut être faite?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-242" id="answer-242"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-242"><div class="answer solution-like"><p id="p-1917"><span class="process-math">\(\frac{24!}{5!7!12!}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-217"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-1918">Dans un groupe de <span class="process-math">\(25\)</span> personnes, on veut former deux équipes. La première sera composée de <span class="process-math">\(3\)</span> attaquants, <span class="process-math">\(2\)</span> défenseurs, <span class="process-math">\(2\)</span> gardiens et <span class="process-math">\(3\)</span> réservistes. La deuxième équipe sera formée de <span class="process-math">\(2\)</span> avants, <span class="process-math">\(1\)</span> passeur,<span class="process-math">\(3\)</span> arrières et <span class="process-math">\(2\)</span> réservistes. On suppose que personne ne fait partie des deux équipes. Combien y a-t-il de possibilités?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-243" id="answer-243"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-243"><div class="answer solution-like"><p id="p-1919"><span class="process-math">\(\frac{25!}{3!2!2!3!2!1!3!2!7!}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-218"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-185"><p id="p-1920">Pour une fin de semaine au chalet, on veut apporter <span class="process-math">\(5\)</span> jeux de société. Dans la collection, on trouve <span class="process-math">\(5\)</span> jeux coopératifs et <span class="process-math">\(8\)</span> jeux de stratégies. Combien de possibilités y a-t-il si:</p></div>
+<article class="task exercise-like" id="task-526"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1921">On ne donne aucune restriction?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-244" id="answer-244"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-244"><div class="answer solution-like"><span class="process-math">\(\Binomial{13}{5}=\frac{13!}{8!5!}\)</span></div></div>
+</div></article><article class="task exercise-like" id="task-527"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1922">On souhaite avoir exactement deux jeux coopératifs?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-245" id="answer-245"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-245"><div class="answer solution-like"><span class="process-math">\(\frac{8!}{3!2!3!}\)</span></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-176" id="solution-176"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-176"><div class="solution solution-like">On utilise le principe du produit pour séparer la tâche en deux étapes. Premièrement, on choisit deux jeux coopratif <em class="emphasis">et ensuite</em> on choisit trois jeux de statégies. Ainsi, la réponse sera<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\Binomial{5}{2}\Binomial{8}{3}=\frac{5!}{3!2!}\frac{8!}{5!3!}=\frac{8!}{3!2!3!}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-528"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1923">Pour des raisons évidentes, on décide d'exclure des jeux coopératifs le jeu “Pandémie” et si on veut absolument apporter le jeu de stratégie “Smallworld”?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-246" id="answer-246"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-246"><div class="answer solution-like"><span class="process-math">\(\Binomial{11}{4}=\frac{11!}{4!7!}\)</span></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-219"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-186"><p id="p-1924">Pour mon anniversaire, je souhaite faire un petit événement avec <span class="process-math">\(10\)</span> invités. J'ai <span class="process-math">\(8\)</span> bons amis hommes et <span class="process-math">\(6\)</span> bonnes amies femmes que je considère inviter. Combien de choix est-ce que j'ai si:</p></div>
+<article class="task exercise-like" id="task-529"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1925">Je ne mets aucune restriction?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-247" id="answer-247"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-247"><div class="answer solution-like"><p id="p-1926"><span class="process-math">\(\frac{14!}{10!4!}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-530"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1927">Je veux <span class="process-math">\(5\)</span> hommes et <span class="process-math">\(5\)</span> femmes?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-248" id="answer-248"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-248"><div class="answer solution-like"><p id="p-1928"><span class="process-math">\(\frac{8!}{5!3!}\frac{6!}{5!1!}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-531"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="introduction" id="introduction-187"><p id="p-1929">Roxanne et Samuel forme un couple. Si je décide d'en inviter un des deux, l'autre doit venir aussi.</p></div>
+<article class="task exercise-like" id="task-532"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-1930">Combien de possibilités s'il n'y a pas d'autres restrictions?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-177" id="solution-177"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-177"><div class="solution solution-like">
+<p id="p-1931">On commence par décider si le couple est invité ou non. On obtient leur présence ou absence entraine deux sous-ensembles disjoints de possibilités. Si le couple fait partie des invités, alors il reste <span class="process-math">\(8\)</span> places à combler, à choisir parmi les <span class="process-math">\(12\)</span> autres personnes. Cela fait <span class="process-math">\(\frac{12!}{8!4!}\text{.}\)</span></p>
+<p id="p-1932">À cela, on ajoute les possibilités où Roxanne et Samuel ne sont pas invités. Il faut alors choisir les <span class="process-math">\(10\)</span> invités parmi les <span class="process-math">\(12\)</span> personnes. Cela fait <span class="process-math">\(\frac{12!}{10!2!}\text{.}\)</span></p>
+<p id="p-1933">Par le principe d'addition, on a un total de <span class="process-math">\(\frac{12!}{8!4!}+\frac{12!}{10!2!}\)</span> possibilités.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-533"><h6 class="heading"><span class="codenumber">(ii)</span></h6>Parmi celles-ci, combien comprennent le couple?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-249" id="answer-249"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-249"><div class="answer solution-like"><p id="p-1934"><span class="process-math">\(\frac{12!}{8!4!}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-534"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-1935">Combien de possibilités si je veux avoir au total <span class="process-math">\(5\)</span> hommes et <span class="process-math">\(5\)</span> femmes?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-178" id="solution-178"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-178"><div class="solution solution-like">
+<p id="p-1936">Encore une fois, on sépare en deux cas distincts, selon si Roxanne et Samuel sont présents ou non. Dans le cas où ils sont présent, on doit ensute choisir <span class="process-math">\(4\)</span> hommes parmi les <span class="process-math">\(7\)</span> restant et <span class="process-math">\(4\)</span> femmes parmi les <span class="process-math">\(5\)</span> restant. Selon le principe de multiplication, ceci donnera <span class="process-math">\(\frac{7!}{4!3!}\times\frac{5!}{4!1!}\text{.}\)</span></p>
+<p id="p-1937">À cela, on doit ajouter les possiblités où Roxanne et Samuel sont absents. Il faut choisir <span class="process-math">\(5\)</span> hommes parmi les <span class="process-math">\(7\)</span> qui ne sont pas Samuel et <span class="process-math">\(5\)</span> femmes parmi les <span class="process-math">\(5\)</span> qui ne sont pas Roxanne. On obtient alors, par le principe de multiplication <span class="process-math">\(\frac{7!}{5!2!}\times \frac{5!}{5!0!}\text{.}\)</span></p>
+<p id="p-1938">On combine finalement avec le principe d'addition pour avoir un total de <span class="process-math">\(\frac{7!}{4!3!}\times\frac{5!}{4!1!}+\frac{7!}{5!2!}\times \frac{5!}{5!0!}\)</span> possibilités.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-535"><h6 class="heading"><span class="codenumber">(iv)</span></h6>Parmi celles-ci, combien comprennent le couple?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-250" id="answer-250"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-250"><div class="answer solution-like"><p id="p-1939"><span class="process-math">\(\frac{7!}{4!3!}\times\frac{5!}{4!1!}\)</span></p></div></div>
+</div></article></article><article class="task exercise-like" id="task-536"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="introduction" id="introduction-188"><p id="p-1940">Parmi mes amis, il y a aussi Christian et Sophie, qui sont en chicane et ne peuvent pas être tous les deux présents.</p></div>
+<article class="task exercise-like" id="task-537"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-1941">Combien de possibilités y a-t-il s'il n'y a pas d'autres restrictions?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-179" id="solution-179"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-179"><div class="solution solution-like">
+<p id="p-1942">Cette-fois, on distingue trois cas: Christian est présent, mais pas Sophie, Sophie est présent, mais pas Christian ou ni Sophie ni Christian sont présents. Ces trois cas sont disctincts et le principe d'addition permettra d'obtenir l'ensemble des possibilités.</p>
+<p id="p-1943">Si Christian est présent, il faut ensuite choisir les <span class="process-math">\(9\)</span> autres invités parmi les <span class="process-math">\(12\)</span> personnes qui ne sont pas Sophie (ou Christian). Cela donne <span class="process-math">\(\frac{12!}{9!3!}\text{.}\)</span> Le même argument montre que si Sophie est présente, mais pas Christian, le nombre de possibilités est aussi <span class="process-math">\(\frac{12!}{9!3!}\text{.}\)</span></p>
+<p id="p-1944">Finalement, si les deux sont absents, il faut choisir les <span class="process-math">\(10\)</span> invités parmi les <span class="process-math">\(12\)</span> autres possibilités. On obtient alors <span class="process-math">\(\frac{12!}{10!2!}\text{.}\)</span></p>
+<p id="p-1945">En combinant le tout, il y a <span class="process-math">\(2\times \frac{12!}{9!3!}+\frac{12!}{10!2!}\)</span> possibilités.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-538"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-1946">Combien de possibilités si je veux avoir au total <span class="process-math">\(5\)</span> hommes et <span class="process-math">\(5\)</span> femmes?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-251" id="answer-251"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-251"><div class="answer solution-like"><p id="p-1947"><span class="process-math">\(\frac{7!}{4!3!}\frac{5!}{5!0!}+\frac{7!}{5!2!}\frac{5!}{4!1!}+\frac{7!}{5!2!}\frac{5!}{5!0!}\)</span></p></div></div>
+</div></article></article></article></article><article class="subexercises" id="subexercises-16"><h4 class="heading"><span class="title">À faire à la maison.</span></h4>
+<article class="exercise exercise-like" id="exercise-220"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-189"><p id="p-1948">Soit <span class="process-math">\(A=\{1,2,3,4,5\}\)</span> et <span class="process-math">\(B=\{1,2,3,4\}\)</span></p></div>
+<article class="task exercise-like" id="task-539"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1949">Combien y a-t-il de fonctions <span class="process-math">\(f:A\to B\)</span> et <span class="process-math">\(g:B\to A\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-252" id="answer-252"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-252"><div class="answer solution-like">Il y a <span class="process-math">\(4^5\)</span> fonctions <span class="process-math">\(f:A\to B\text{,}\)</span> alors qu'il y a <span class="process-math">\(5^4\)</span> fonctions <span class="process-math">\(g:B\to A\text{.}\)</span>
+</div></div>
+</div></article><article class="task exercise-like" id="task-540"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1950">Combien y a-t-il de fonctions <span class="process-math">\(h:A\to B\)</span> qui sont surjectives?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-253" id="answer-253"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-253"><div class="answer solution-like"></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-180" id="solution-180"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-180"><div class="solution solution-like">
+<p id="p-1951">Pour que la fonction <span class="process-math">\(h\)</span> soit surjective, on doit avoir <span class="process-math">\(|f^{-1}(b)|\geq 1\)</span> pour <span class="process-math">\(b\in\, B\text{,}\)</span> et on doit aussi avoir <span class="process-math">\(|f^{-1}(1)|+|f^{-1}(2)|+|f^{-1}(3)|+|f^{-1}(4)|=5\text{.}\)</span> Ainsi, il doit y avoir avoir exactement un élément <span class="process-math">\(b\in\,B\)</span> tel que <span class="process-math">\(|f^{-1}(b)|=2\)</span> alors que tous les autres éléments aurons une seule préimage.</p>
+<p id="p-1952">Donc, pour définir une fonction surjective <span class="process-math">\(h:B\to A\text{,}\)</span> on doit choisir l'élément <span class="process-math">\(b\)</span> de <span class="process-math">\(B\)</span> ayant deux préimages (<span class="process-math">\(4\)</span> possibilité). Enusite, on choisit les deux préimage de <span class="process-math">\(b\)</span> (il y \Binomial{5}{2} possibilités.) Finalement, on doit choisir la préimage des autres éléments de <span class="process-math">\(B\text{.}\)</span> Ceci evient à permuter trois éléments (il y a <span class="process-math">\(3!\)</span> possibilités).</p>
+<p id="p-1953">Ainsi, par le principe du produit, il y a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+4\cdot \Binomial{5}{2}\cdot 3!=4\cdot \frac{5!}{3!2!}\cdot 3!=2\cdot 5!
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-541"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1954">Combien y a-t-il de fonctions <span class="process-math">\(k:B\to A\)</span> qui sont injectives?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-254" id="answer-254"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-254"><div class="answer solution-like">\Permutation{5}{4}=\frac{5!}{(5-4)!}=5!</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-221"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-190"><p id="p-1955">Soit <span class="process-math">\(x+y+z+w=24\text{.}\)</span> Combien de solutions y a-t-il si</p></div>
+<article class="task exercise-like" id="task-542"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1956"><span class="process-math">\(x,y,z,w\)</span> sont des naturels (plus grands ou égaux à <span class="process-math">\(0\)</span>)?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-255" id="answer-255"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-255"><div class="answer solution-like"><span class="process-math">\(\Binomial{27}{3}=\frac{27!}{3!24!}\)</span></div></div>
+</div></article><article class="task exercise-like" id="task-543"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1957"><span class="process-math">\(x,y,z,w\)</span> sont des naturels plus grands ou égaux à <span class="process-math">\(1\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-256" id="answer-256"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-256"><div class="answer solution-like"><span class="process-math">\(\Binomial{27-4}{3}=\Binomial{23}{3}=\frac{23!}{3!20!}\)</span></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-222"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<p id="p-1958">Soit <span class="process-math">\(A\)</span> un ensemble à <span class="process-math">\(n\)</span> éléments. Une <span class="process-math">\(k\)</span>-partition de <span class="process-math">\(A\)</span> est un ensemble de <span class="process-math">\(k\)</span> sous-ensembles de <span class="process-math">\(A\)</span> qui ont les propriétés suivantes:</p>
+<ul class="disc">
+<li id="li-404"><p id="p-1959">ils sont non vides, c'est à dire <span class="process-math">\(A_i\neq \emptyset\text{;}\)</span></p></li>
+<li id="li-405"><p id="p-1960">leur intersection deux à deux sont vides, c'est-à-dire <span class="process-math">\(A_i\cap A_j=\emptyset\)</span> si <span class="process-math">\(i\neq j\text{;}\)</span></p></li>
+<li id="li-406"><p id="p-1961">leur union donne <span class="process-math">\(A\text{,}\)</span> c'est-à-dire <span class="process-math">\(A_1\cup A_2\cup \cdots \cup A_k=A\text{.}\)</span></p></li>
+</ul>
+<p id="p-1962">Par exemple, pour <span class="process-math">\(A=\{1,2,3,4\}\text{,}\)</span> les ensembles <span class="process-math">\(A_1=\{1,3\},A_2=\{2\}\)</span> et <span class="process-math">\(A_{3}=\{4\}\)</span> forment une <span class="process-math">\(3\)</span>-partition de <span class="process-math">\(A\text{.}\)</span> Combien y a-t-il de <span class="process-math">\(3\)</span>-partition de <span class="process-math">\(A\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-40" id="hint-40"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-40"><div class="hint solution-like">Chaque <span class="process-math">\(3\)</span>-partition de <span class="process-math">\(A\)</span> est formé de deux ensembles de cardinalité <span class="process-math">\(1\)</span> et un ensemble de cardinalité <span class="process-math">\(2\text{.}\)</span>
+</div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-41" id="hint-41"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-41"><div class="hint solution-like">Chaque <span class="process-math">\(3\)</span>-partition est uniquement définie par le sous-ensemble de carinalité <span class="process-math">\(2\)</span> qu'elle contient.</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-257" id="answer-257"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-257"><div class="answer solution-like"><span class="process-math">\(6\)</span></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-223"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<p id="p-1963">Une éducatrice en garderie a un groupe de <span class="process-math">\(8\)</span> enfants. De combien de manières peut-elle former trois sous-groupes? On suppose qu'un groupe n'est pas vide, mais pourrait contenir un seul enfant.</p></article><article class="exercise exercise-like" id="exercise-224"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<p id="p-1964">On considère l'ensemble <span class="process-math">\(A=\{1,2,3\}\text{.}\)</span> Combien de fonctions de <span class="process-math">\(A\)</span> vers <span class="process-math">\(A\)</span> ont la propriété que, si <span class="process-math">\(a\leq b\text{,}\)</span> alors <span class="process-math">\(f(a)\leq f(b)\text{.}\)</span> Par exemple, <span class="process-math">\(f(1)=1,f(2)=2,f(3)=2\)</span> est un telle fonction.</p>
+<p id="p-1965">Une telle fonction est dite monotone.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-42" id="hint-42"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-42"><div class="hint solution-like"><p id="p-1966">Ce problème est difficile si on ne le prend pas sous le bon angle. Commencer par énumer les possibilités. Il y en a <span class="process-math">\(10\text{.}\)</span> Considérer les éléments du codomaine comme étant les urnes et les éléments du domaines comme étant les billes.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-181" id="solution-181"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-181"><div class="solution solution-like">
+<p id="p-1967">Des <span class="process-math">\(3^3\)</span> fonctions de <span class="process-math">\(A\)</span> vers <span class="process-math">\(A\text{,}\)</span> on cherche à compter celles qui sont monotones. On imagine la représentation d'une fonction en termes de billes et d'urnes. Par exemple, la figure suivante représente la fonction donné en exemple dans l'énoncé.</p>
+<figure class="figure figure-like" id="fig-billesurnes1">On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. Dans la première urne, une bille identifiée 1 est présente et des billes identifiées respectivement 2 et 3 sont présentes dans l'urne 2. La troisième urne est vide.<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.22<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-1968">La figure ci-dessous représente quant à elle la fonction non monotone <span class="process-math">\(f(1)=2,f(2)=3,f(3)=2\text{.}\)</span> Les mêmes urnes contiennent le même nombre de billes, mais les billes sont différentes.</p>
+<figure class="figure figure-like" id="fig-billesurnes2">On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. Dans l'urne 2, on peut voir des billes identifiées respectivement 1 et 3 et dans l'urne 3, on voit une bille identifiée 2. L'urne 1 est vide.<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.23<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-1969">On prend maintenant une configuration arbitraire de trois billes identiques dans trois urnes distinctes.</p>
+<figure class="figure figure-like" id="fig-billesurnes3">On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. L'urne 2 contient deux billes et l'urne 3 en contient une, mais les billes ne sont pas identifiées.<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.24<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-1970">À partir de cette configuration, il n'y a qu'une seule manière de créer une fonction monotone. On prend les billes de la première urne non vide (identifiée par le plus petit nombre) et on numérotte ses billes par les plus petits éléments du domaine. On poursuit ainsi avec les autres urnes non vide. On obtient alors une fonction monotone. Avec la configuration de la figure <a href="" class="xref" data-knowl="./knowl/fig-billesurnes3.html" title="Figure 4.2.24">4.2.24</a>, on obtient <span class="process-math">\(f(1)=2,f(2)=2,f(3)=3\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-225"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-191">Une boite de beignes d'une chaine populaire contient six compartiments qu'un employé remplit pour un client selon les règles suivantes.</div>
+<article class="task exercise-like" id="task-544"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1971">Il y a trois sortes de beignes, par exemple Chocolat, Erable et Vanille et on remplit la boite. Par exemple VVECCV est une configuration.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-258" id="answer-258"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-258"><div class="answer solution-like"><p id="p-1972"><span class="process-math">\(729\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-545"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1973">Même chose, mais on permet de laisser un compartiment vide (et le client sera potentiellement déçu). Par exemple, VVE_C_ est une configuration où _ représente l'absence d'un beigne.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-259" id="answer-259"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-259"><div class="answer solution-like"><p id="p-1974"><span class="process-math">\(4096\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-546"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1975">On remplit tous les compartiments, en s'assurant que chaque sorte de beignes soit présente dans la boite.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-43" id="hint-43"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-43"><div class="hint solution-like">Il faut utiliser le principe d'inclusion-exclusion à plusieurs reprises.</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-260" id="answer-260"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-260"><div class="answer solution-like"><p id="p-1976"><span class="process-math">\(540\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-547"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1977">On remplit tous les compartiments, mais il y a maintenant <span class="process-math">\(12\)</span> sortes de beignes!</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-261" id="answer-261"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-261"><div class="answer solution-like"><p id="p-1978"><span class="process-math">\(2 985 984\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="exo-beignes1"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1979">L'employé, un peu maladroit remplit la boite avec six beignes à la vanille, mais en met potentiellement plus d'un par compartiment. Par exemple VV,V,_,VV,_,V est une configuration possible.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-262" id="answer-262"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-262"><div class="answer solution-like"><p id="p-1980"><span class="process-math">\(462\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-549"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-1981">Même chose que la partie <a href="" class="xref" data-knowl="./knowl/exo-beignes1.html" title="Tâche 4.2.4.14.e">4.2.4.14.e</a>, mais on utilise six beignes différents.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-263" id="answer-263"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-263"><div class="answer solution-like"><p id="p-1982"><span class="process-math">\(46 656\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-550"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-1983">C'est presque l'heure de la fermeture et il ne reste que <span class="process-math">\(12\)</span> beignes dans le présentoir, tous de différentes sortes. On veut remplir la boite de <span class="process-math">\(6\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-264" id="answer-264"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-264"><div class="answer solution-like"><p id="p-1984"><span class="process-math">\(665 280\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-551"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-1985">On ne met que des beignes au chocolat, en laissant possiblement des compartiments vides.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-265" id="answer-265"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-265"><div class="answer solution-like"><p id="p-1986"><span class="process-math">\(64\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-552"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-1987">C'est le printemps, le sirop d'érable coule en flot. Obtenez dix beignes à l'érable dans une boite de six! (Aucun compartiment ne sera laissé vide). Par exemple, EE,E,EEE,E,EE,E représenterait une configuration où deux beignes sont placés dans les compartiments 1 et 5, trois beignes sont placés dans le compartiment 3 et un beigne est placé dans chacun des compartiments 2,4 et 6.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-266" id="answer-266"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-266"><div class="answer solution-like"><p id="p-1988"><span class="process-math">\(126\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-553"><h6 class="heading"><span class="codenumber">(j)</span></h6>
+<p id="p-1989">Il n'y a plus de boite, alors on met les beignes dans des sacs identiques. On veut mettre six beignes à la vanille dans trois sacs (évidemment, aucun sac ne sera vide, pour éviter le gaspillage).</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-44" id="hint-44"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-44"><div class="hint solution-like"><p id="p-1990">Énumérer les possibilités, il n'y en a pas beaucoup.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-267" id="answer-267"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-267"><div class="answer solution-like"><p id="p-1991"><span class="process-math">\(3\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-182" id="solution-182"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-182"><div class="solution solution-like">
+<p id="p-1992">Voici les <span class="process-math">\(3\)</span> manières différentes:</p>
+<ul class="disc">
+<li id="li-407"><p id="p-1993">Un sac avec quatre beignes et deux sacs avec un beignes;</p></li>
+<li id="li-408"><p id="p-1994">Un sac avec trois beignes, un sac avec deux beignes et un sac avec un beigne;</p></li>
+<li id="li-409"><p id="p-derived-li-409">Trois sacs avec deux beignes.</p></li>
+</ul>
+</div></div>
+</div></article><article class="task exercise-like" id="task-554"><h6 class="heading"><span class="codenumber">(k)</span></h6>
+<p id="p-1995">Même chose que précédemment, mais avec six beignes différents.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-45" id="hint-45"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like"><p id="p-1996">C'est un cas plus difficile que ce qu'on a vue en classe! C'est un défi pour le moment!</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-46" id="hint-46"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-46"><div class="hint solution-like"><p id="p-1997">Cela correspond à compter les <span class="process-math">\(3\)</span>-partition d'un ensemble à <span class="process-math">\(6\)</span> éléments.</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-47" id="hint-47"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-47"><div class="hint solution-like"><p id="p-1998">Si on note <span class="process-math">\(S(n,k)\)</span> le nombre de <span class="process-math">\(k\)</span>-partitions d'un ensemble de cardinalité <span class="process-math">\(n\text{,}\)</span> on peut montrer (comment?) que <span class="process-math">\(S(n,k)=k\cdot S(n-1,k)+S(n-1,k-1)\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-183" id="solution-183"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-183"><div class="solution solution-like"><p id="p-1999">Cela correspond à compter les <span class="process-math">\(3\)</span>-partition d'un ensemble à <span class="process-math">\(6\)</span> éléments. Il y aurait <span class="process-math">\(90\)</span> manières de le faire.</p></div></div>
+</div></article></article></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
