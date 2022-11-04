@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fr-CA">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MaDIR Principe des tiroirs de Dirichlet</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathématiques discrètes">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_green_plum.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Sauter au contenu</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
+\newcommand{\Z}{\mathbb{Z}}                
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Prob}[1]{\mathbb{P}\left(#1\right)}
+
+\newcommand{\Permutation}[2]{P_{#2}^{#1}}
+\newcommand{\Binomial}[2]{C_{#2}^{#1}}
+
+\newcommand{\Probc}[2]{\mathbb{P}\left(#1~\left|\right .~#2\right)}
+\newcommand{\E}[1]{\mathbb{E}\left(#1\right)}
+\newcommand{\Ec}[2]{\mathbb{E}\left(#1~\left|\right .~#2\right)}
+\newcommand{\indicator}[1]{1{\hskip -2.5 pt}\hbox{I}_{\left\{ {#1} \right\} }}
+\newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\RH}{\overset{\text{\scalebox{0.8}{ R.H.}}}{=}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\vecl}[1]{\overrightarrow{#1}}
+\newcommand{\vecd}[2]{\begin{pmatrix}#1 \\ #2\end{pmatrix}}
+\newcommand{\vecddd}[3]{\begin{pmatrix}#1 \\ #2 \\ #3\end{pmatrix}}
+\newcommand{\pscal}[2]{\vecl{#1}\cdot \vecl{#2}}
+\newcommand{\matcold}[4]{\begin{pmatrix}#1 &amp; #3 \\ #2 &amp; #4\end{pmatrix}}
+\newcommand{\matcolt}[9]{\begin{pmatrix}#1 &amp; #4 &amp; #7 \\ #2 &amp; #5 &amp; #8 \\ #3 &amp; #6 &amp; #9\end{pmatrix}}
+\newcommand{\matsimile}[2]{\overset{\scriptsize L_{#1}\leftrightarrow L_{#2}}{\sim}}
+\newcommand{\matsimils}[2]{\overset{\scriptsize #2L_{#1}\rightarrow L_{#1}}{\sim}}
+\newcommand{\matsimilc}[3]{\overset{\scriptsize #2L_{#1}+L_{#3}\rightarrow L_{#3}}{\sim}}
+\newcommand{\matII}{\begin{pmatrix} 1&amp; 0 \\  0 &amp; 1\end{pmatrix}}
+\newcommand{\matIII}{\begin{pmatrix} 1&amp; 0 &amp; 0\\  0 &amp; 1 &amp; 0 \\ 0&amp; 0&amp; 1\end{pmatrix}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\vspan}{span}
+\DeclareMathOperator{\Det}{det}
+\DeclareMathOperator{\pgcd}{pgcd}
+\DeclareMathOperator{\ppcm}{ppcm}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\CQFD}{\begin{flushright}   
+$\blacksquare$
+\end{flushright}}
+\newcommand{\cqfd}{\begin{flushright}
+$\Box$
+\end{flushright}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes:</span> <span class="subtitle">Version préliminaire</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_methodePreuve.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><span id="nextbutton" class="next-button button toolbar-item disabled">Suivant</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="sec_methodePreuve.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><span class="next-button button toolbar-item disabled">Suivant</span>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chap-ensfct.html" data-scroll="chap-ensfct" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a><ul>
+<li><a href="sec-ens.html" data-scroll="sec-ens" class="internal">Les ensembles</a></li>
+<li><a href="sec-opens.html" data-scroll="sec-opens" class="internal">Opérations sur les ensembles</a></li>
+<li><a href="sec-fonctions.html" data-scroll="sec-fonctions" class="internal">Les fonctions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-logique.html" data-scroll="chap-logique" class="internal"><span class="codenumber">2</span> <span class="title">Logique mathématique</span></a><ul>
+<li><a href="sec-logprop.html" data-scroll="sec-logprop" class="internal">La logique propositionnelle</a></li>
+<li><a href="sec-eqlogfnc.html" data-scroll="sec-eqlogfnc" class="internal">Équivalence logique et formes normales</a></li>
+<li><a href="sec-propquant.html" data-scroll="sec-propquant" class="internal">Les propositions quantifiées</a></li>
+<li><a href="sec-circuits.html" data-scroll="sec-circuits" class="internal">Circuits logiques</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-reptheonombres.html" data-scroll="chap-reptheonombres" class="internal"><span class="codenumber">3</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a><ul>
+<li><a href="sec-representation.html" data-scroll="sec-representation" class="internal">Représentation des nombres</a></li>
+<li><a href="sec-divisibilite.html" data-scroll="sec-divisibilite" class="internal">La divisibilité dans les entiers</a></li>
+<li><a href="sec-modulo.html" data-scroll="sec-modulo" class="internal">Arithmétique modulaire</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-denombrement.html" data-scroll="chap-denombrement" class="internal"><span class="codenumber">4</span> <span class="title">Dénombrement</span></a><ul>
+<li><a href="sec_prodSomme.html" data-scroll="sec_prodSomme" class="internal">Méthodes de dénombrement: Principes de base</a></li>
+<li><a href="sec_arrCombinaison.html" data-scroll="sec_arrCombinaison" class="internal">Permutations et combinaisons</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-preuveMath.html" data-scroll="chap-preuveMath" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a><ul>
+<li><a href="sec_methodePreuve.html" data-scroll="sec_methodePreuve" class="internal">Méthodes de preuves</a></li>
+<li><a href="sec_pidgeonHoles.html" data-scroll="sec_pidgeonHoles" class="active">Principe des tiroirs de Dirichlet</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Rédigé avec PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_pidgeonHoles"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Principe des tiroirs de Dirichlet</span>
+</h2>
+<section class="subsection" id="subs_statement"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">5.2.1</span> <span class="title"></span>
+</h3>
+<section class="introduction" id="introduction-201"><p id="p-2053">Le principe des tiroirs de Dirichlet (ou le principe des nids de piegons), est un principle très simple, qui peut être utilisé afin de démontrer des résultats complexe, si on l'utilise de façon intelligente.</p></section><article class="proposition theorem-like" id="proposition-18"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Principe des tiroirs de Dirichlet.</span>
+</h4>Soit <span class="process-math">\(k\in\, \N^\ast\text{,}\)</span> et supposons qu'on veut placer au moins <span class="process-math">\(k+1\)</span> objets dans <span class="process-math">\(k\)</span> boites, alors il existe au moins une boite contenant au moins <span class="process-math">\(2\)</span> de ces objets.</article><article class="example example-like" id="ex_basePigeon"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex_basePigeon"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_basePigeon"><article class="example example-like">Soit une classe formée de <span class="process-math">\(27\)</span> étudiants ou plus, alors il existe au moins deux étudiants tels que leur prénom commence par la même lettre.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-196" id="solution-196"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-196"><div class="solution solution-like">On étiquette <span class="process-math">\(26\)</span> boites de A à Z. On place chaque étudiant dans la boite correspondant à la première lettre de son prénom. Par le principe des tiroirs de Dirichlet, il y a au moins deux étudiants dans la même boite. Ainsi, il y a au moins deux étudiants dont la première lettre de leur prénom est la même.</div></div>
+</div></article></div>
+<p id="p-2054">Tel que mentionné plus haut (et comme on peut le constater avec l'exemple précédent), le principe est assez simple et semble même anodin. Cependant, avec un peu d'immagination, on peut s'en servir pour résoudre des problèmes complexes. La partie importante ici est avec un peu d'immagination.</p>
+<article class="example example-like" id="ex_complexPigeon"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex_complexPigeon"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_complexPigeon"><article class="example example-like">Montrer que pour n'importe quel <span class="process-math">\(n\in \N\ n&gt;0\text{,}\)</span> il existe un multiple de <span class="process-math">\(n\)</span> qui est écrit uniquement avec des <span class="process-math">\(0\)</span>s et des <span class="process-math">\(1\)</span> dans sa représentation en base dix.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-197" id="solution-197"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-197"><div class="solution solution-like">
+<p id="p-2055">On considère les <span class="process-math">\(n+1\)</span> nombres suivants: <span class="process-math">\(1,\ 11,\ 111\,\dots,\ 11\dots 1\text{,}\)</span> où le dernier nombre est l'entier formé de <span class="process-math">\(n+1\)</span> chiffres <span class="process-math">\(1\)</span> dans sa représentation en base dix. On numérote <span class="process-math">\(n\)</span> boites de <span class="process-math">\(0\)</span> à <span class="process-math">\(n-1\text{.}\)</span> Ensuite on place chacun des <span class="process-math">\(n+1\)</span> nombres précédents dans la boite étiquettée par sont reste lors de la division par <span class="process-math">\(n\text{.}\)</span></p>
+<p id="p-2056">Puisqu'il y a <span class="process-math">\(n+1\)</span> nombres et <span class="process-math">\(n\)</span> boites (restes), par le principe des tiroirs de Dirichlet, il existe deux de ces entiers, disons <span class="process-math">\(k_1\gt k_2\text{,}\)</span> tels que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+k_1\equiv k_2 \mod n\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Par la définition équivalente decongruence, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+n\mid (k_1-k_2)\text{.}
+\end{equation*}
+</div>
+<p id="p-2057">Ainsi, <span class="process-math">\(k_1-k_2\)</span> est un multiple de <span class="process-math">\(n\)</span> et il s'écrit avec uniquement des <span class="process-math">\(1\)</span>s et des <span class="process-math">\(0\)</span>s.</p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="ex_nbrRationnel"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex_nbrRationnel"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_nbrRationnel"><article class="example example-like">Montrer que, soit <span class="process-math">\(\frac{a}{b}\in \Q\text{,}\)</span>  alors la représentation en base dix de <span class="process-math">\(\frac{a}{b}\)</span> possède une partie fractionnaire périodique de période <span class="process-math">\(p \leq n-1\)</span></article></div>
+<article class="example example-like" id="ex_elegantPigeon1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex_elegantPigeon1"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_elegantPigeon1"><article class="example example-like">Durant un mois de <span class="process-math">\(30\)</span> jours, une équipe de baseball joue au moins un match par jour, mais moins de <span class="process-math">\(45\)</span> matchs durant le mois. Montrer qu'il existe un nombre de jours consécutifs durant lesquels l'équipe doit jouer exatement <span class="process-math">\(14\)</span> matchs.</article></div>
+<article class="example example-like" id="ex_elegantPigeon2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex_elegantPigeon2"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.2.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_elegantPigeon2"><article class="example example-like">Montrer que si on prend nimporte quelle ensemble <span class="process-math">\(A\)</span> formé de <span class="process-math">\(n+1\)</span> nombres entiers strictement positifs et inférieur ou égal à <span class="process-math">\(2n\text{,}\)</span> alors au moins un des éléments de <span class="process-math">\(A\)</span> divise un autre élément de <span class="process-math">\(A\text{.}\)</span> Symboliquement, si <span class="process-math">\(A\subset \{1,2,\dots,2n\}\)</span> avec <span class="process-math">\(|A|=n+1\text{,}\)</span> alors il existe <span class="process-math">\(a_1\in\ A\)</span> et <span class="process-math">\(a_2\in\ A\)</span> tels que <span class="process-math">\(a_1\neq a_2\)</span> et <span class="process-math">\(a_1\mid a_2\text{.}\)</span></article></div></section><section class="exercises" id="exo-pigronHoles"><h3 class="heading hide-type">
+<span class="type">Exercices</span> <span class="codenumber">5.2.2</span> <span class="title">Exercices</span>
+</h3>
+<article class="subexercises" id="subexercises-17"><h4 class="heading"><span class="title">À faire à la maison</span></h4>
+<div class="introduction" id="introduction-202"><p id="p-2058">Ces exercices servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés. Ils sont à faire d'ici le prochain cours.</p></div>
+<article class="exercise exercise-like" id="exercise-244"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>Montrer que si un élève assiste à six cours durant la semaine, chacun des cours se déroulant la même journée à chaque semaine, alors il y a un jour durant lequel l'élève assiste à au moins deux cours.</article><article class="exercise exercise-like" id="exercise-245"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-203">Une urne contient <span class="process-math">\(10\)</span> billes rouges et <span class="process-math">\(10\)</span> billes bleues. Une personne pige au hasard des billes sans les remettre dans l'urne.</div>
+<article class="task exercise-like" id="task-555"><h6 class="heading"><span class="codenumber">(a)</span></h6>Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes de la même couleur?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-268" id="answer-268"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-268"><div class="answer solution-like">
+<span class="process-math">\(3\)</span> billes.</div></div>
+</div></article><article class="task exercise-like" id="task-556"><h6 class="heading"><span class="codenumber">(b)</span></h6>Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes bleues?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-269" id="answer-269"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-269"><div class="answer solution-like">
+<span class="process-math">\(12\)</span> billes.</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-246"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>Montrer que si on choisit aléatoirement cinq nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par <span class="process-math">\(4\text{.}\)</span></article><article class="exercise exercise-like" id="exercise-247"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>Soit <span class="process-math">\(d\in\,\N^\ast\text{.}\)</span> Montrer que si on choisit aléatoirement <span class="process-math">\(d+1\)</span> nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par <span class="process-math">\(d\text{.}\)</span></article><article class="exercise exercise-like" id="exercise-248"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>On choisit aléatoirement cinq entiers dans l'ensemble <span class="process-math">\(\{1,2,3,4,5,6,7,8\}.\)</span> Montrer qu'il doit y avoir une paire telle que sa somme est <span class="process-math">\(9\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-60" id="hint-60"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-60"><div class="hint solution-like">Condidérer les ensembles <span class="process-math">\(\{1,8\},\,\{2,7\},\,\{3,6\}\)</span> et <span class="process-math">\(\{4,5\}\text{.}\)</span>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-249"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>On choisit aléatoirement sept entiers dans l'ensemble <span class="process-math">\(\{1,2,3,4,5,6,7,8,9,10\}.\)</span> Montrer qu'il doit y avoir une paire telle que sa somme est <span class="process-math">\(11\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-61" id="hint-61"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-61"><div class="hint solution-like">Condidérer les ensembles <span class="process-math">\(\{1,10\},\,\{2,9\},\,\{3,8\}\,\{4,7\}\)</span> et <span class="process-math">\(\{5,6\}\text{.}\)</span>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-250"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>Conbiens d'entiers doit-on choisir aléatoirement dans l'ensemble <span class="process-math">\(\{1,2,3,4,5,6\}\)</span> afin de garantir qu'au moins une paire aura une somme de <span class="process-math">\(7\text{?}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-270" id="answer-270"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-270"><div class="answer solution-like">On doit en choisir <span class="process-math">\(4\text{.}\)</span>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-251"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>Soit <span class="process-math">\(f\)</span> est une fonction <span class="process-math">\(f:A\to B\text{.}\)</span> En utilisant le principe des tiroires de Dirichlet, montrer que si <span class="process-math">\(|B|\lt |A|\lt \infty\text{,}\)</span> alors la fonction n'est pas injective.</article><article class="exercise exercise-like" id="exercise-252"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>Soit <span class="process-math">\((a_i,b_i),\)</span> des paires d'entiers ordonnés (c'est-à-dire <span class="process-math">\(a_i,\,b_i\in\,\Z\)</span>) pour <span class="process-math">\(i=1,2,3,\dots,17.\)</span> Montrer qu'il existe, parmi ces <span class="process-math">\(17\)</span> paires d'entirs, deux paires d'entiers <span class="process-math">\((a,b)\)</span> et <span class="process-math">\((c,d)\)</span> telles que <span class="process-math">\(a\equiv c\mod 5 \)</span> et <span class="process-math">\(b \equiv d \mod 5\)</span></article><article class="exercise exercise-like" id="exercise-253"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>Soit <span class="process-math">\((x_i,y_i),\,i=1,2,3,4,5,\)</span> cinq points du plan cartésien <span class="process-math">\(\R^2\text{.}\)</span> Montrer que si <span class="process-math">\(x_i,\,y_i\in\,\Z\)</span> pour <span class="process-math">\(i=1,2,3,4,5,\)</span> alors le point milieu d'au moins un des segments reliant une paire de ces points a des coordonnées entières.<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-62" id="hint-62"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-62"><div class="hint solution-like">Le point milieu entre le point <span class="process-math">\((x_1,y_1)\)</span> et le point <span class="process-math">\((x_2,y_2)\)</span> est le point <span class="process-math">\(\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)\text{.}\)</span>
+</div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-63" id="hint-63"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-63"><div class="hint solution-like">À quel moment est-ce que <span class="process-math">\(\frac{x_i+x_j}{2}\)</span> et <span class="process-math">\(\frac{y_i+y_j}{2}\)</span> sont des entiers?</div></div>
+</div></article></article></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

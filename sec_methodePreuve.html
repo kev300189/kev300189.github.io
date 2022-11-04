@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fr-CA">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MaDIR Méthodes de preuves</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathématiques discrètes">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_green_plum.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Sauter au contenu</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
+\newcommand{\Z}{\mathbb{Z}}                
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Prob}[1]{\mathbb{P}\left(#1\right)}
+
+\newcommand{\Permutation}[2]{P_{#2}^{#1}}
+\newcommand{\Binomial}[2]{C_{#2}^{#1}}
+
+\newcommand{\Probc}[2]{\mathbb{P}\left(#1~\left|\right .~#2\right)}
+\newcommand{\E}[1]{\mathbb{E}\left(#1\right)}
+\newcommand{\Ec}[2]{\mathbb{E}\left(#1~\left|\right .~#2\right)}
+\newcommand{\indicator}[1]{1{\hskip -2.5 pt}\hbox{I}_{\left\{ {#1} \right\} }}
+\newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\RH}{\overset{\text{\scalebox{0.8}{ R.H.}}}{=}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\vecl}[1]{\overrightarrow{#1}}
+\newcommand{\vecd}[2]{\begin{pmatrix}#1 \\ #2\end{pmatrix}}
+\newcommand{\vecddd}[3]{\begin{pmatrix}#1 \\ #2 \\ #3\end{pmatrix}}
+\newcommand{\pscal}[2]{\vecl{#1}\cdot \vecl{#2}}
+\newcommand{\matcold}[4]{\begin{pmatrix}#1 &amp; #3 \\ #2 &amp; #4\end{pmatrix}}
+\newcommand{\matcolt}[9]{\begin{pmatrix}#1 &amp; #4 &amp; #7 \\ #2 &amp; #5 &amp; #8 \\ #3 &amp; #6 &amp; #9\end{pmatrix}}
+\newcommand{\matsimile}[2]{\overset{\scriptsize L_{#1}\leftrightarrow L_{#2}}{\sim}}
+\newcommand{\matsimils}[2]{\overset{\scriptsize #2L_{#1}\rightarrow L_{#1}}{\sim}}
+\newcommand{\matsimilc}[3]{\overset{\scriptsize #2L_{#1}+L_{#3}\rightarrow L_{#3}}{\sim}}
+\newcommand{\matII}{\begin{pmatrix} 1&amp; 0 \\  0 &amp; 1\end{pmatrix}}
+\newcommand{\matIII}{\begin{pmatrix} 1&amp; 0 &amp; 0\\  0 &amp; 1 &amp; 0 \\ 0&amp; 0&amp; 1\end{pmatrix}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\vspan}{span}
+\DeclareMathOperator{\Det}{det}
+\DeclareMathOperator{\pgcd}{pgcd}
+\DeclareMathOperator{\ppcm}{ppcm}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\CQFD}{\begin{flushright}   
+$\blacksquare$
+\end{flushright}}
+\newcommand{\cqfd}{\begin{flushright}
+$\Box$
+\end{flushright}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes:</span> <span class="subtitle">Version préliminaire</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap-preuveMath.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><span id="nextbutton" class="next-button button toolbar-item disabled">Suivant</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="chap-preuveMath.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><span class="next-button button toolbar-item disabled">Suivant</span>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chap-ensfct.html" data-scroll="chap-ensfct" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a><ul>
+<li><a href="sec-ens.html" data-scroll="sec-ens" class="internal">Les ensembles</a></li>
+<li><a href="sec-opens.html" data-scroll="sec-opens" class="internal">Opérations sur les ensembles</a></li>
+<li><a href="sec-fonctions.html" data-scroll="sec-fonctions" class="internal">Les fonctions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-logique.html" data-scroll="chap-logique" class="internal"><span class="codenumber">2</span> <span class="title">Logique mathématique</span></a><ul>
+<li><a href="sec-logprop.html" data-scroll="sec-logprop" class="internal">La logique propositionnelle</a></li>
+<li><a href="sec-eqlogfnc.html" data-scroll="sec-eqlogfnc" class="internal">Équivalence logique et formes normales</a></li>
+<li><a href="sec-propquant.html" data-scroll="sec-propquant" class="internal">Les propositions quantifiées</a></li>
+<li><a href="sec-circuits.html" data-scroll="sec-circuits" class="internal">Circuits logiques</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-reptheonombres.html" data-scroll="chap-reptheonombres" class="internal"><span class="codenumber">3</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a><ul>
+<li><a href="sec-representation.html" data-scroll="sec-representation" class="internal">Représentation des nombres</a></li>
+<li><a href="sec-divisibilite.html" data-scroll="sec-divisibilite" class="internal">La divisibilité dans les entiers</a></li>
+<li><a href="sec-modulo.html" data-scroll="sec-modulo" class="internal">Arithmétique modulaire</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-denombrement.html" data-scroll="chap-denombrement" class="internal"><span class="codenumber">4</span> <span class="title">Dénombrement</span></a><ul>
+<li><a href="sec_prodSomme.html" data-scroll="sec_prodSomme" class="internal">Méthodes de dénombrement: Principes de base</a></li>
+<li><a href="sec_arrCombinaison.html" data-scroll="sec_arrCombinaison" class="internal">Permutations et combinaisons</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-preuveMath.html" data-scroll="chap-preuveMath" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a><ul><li><a href="sec_methodePreuve.html" data-scroll="sec_methodePreuve" class="active">Méthodes de preuves</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Rédigé avec PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_methodePreuve"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Méthodes de preuves</span>
+</h2>
+<section class="introduction" id="introduction-193"><p id="p-2000">Depuis le début du cours, (et dans vos autres cours de mathématiques) nous avons présenté plusieurs propriétés pour lesquelles nous avons également fournis une démonstration.</p>
+<p id="p-2001">Dans ce chapitre, nous allons explorer plus en détails les différentes méthodes de preuves utilisées en mathématiques.</p>
+<p id="p-2002">Dans la présente section, nous présenterons les méthodes de preuves de base, soit les preuves directes, les preuves indirectes et les preuves par contradiction.</p>
+<p id="p-2003">Dans les prochaines sections, nous présenterons des méthodes de preuves plus avancées, telles que les preuves pas récurence et les preuves utilisant le principe des tiroirs de Dirichlet.</p></section><section class="subsection" id="subs-terminomolgie"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">5.1.1</span> <span class="title">Un peu de terminologie</span>
+</h3>
+<section class="introduction" id="introduction-194"><p id="p-2004">Un théorème ou une proposition est un énoncé que l'on peut montrer être vrai. L'argument permettant de vérifier qu'un théorème est vrai est appellé une preuve.</p>
+<p id="p-2005">Beaucoup de théorèmes peuvent être énoncés sous la forme d'une implication logique (avec ou sans quantificateurs). Dans ce cas, pour démontrer le théorème, on peut supposer que l'hypothèse est vraie, et à l'aide de <em class="emphasis">propriétés connues</em> et de raisonements d'inférence, montrer que la conclusion est alors vraie.</p>
+<p id="p-2006">Dans n'importe quelle théorie mathématique, il y aura des énoncés qui seront considérés comme étant vrais, sans que l'on puisse les démontrer. On appelle ces énoncés des <em class="emphasis">axiomes</em>. Certains théorèmes sont “moins importants” que d'autres, et on leur donne des noms particuliers. Un <em class="emphasis">lemme</em> est un théorème qu'on utilise principalement pour en démontrer un autre, alors qu'un <em class="emphasis">corollaire</em> est un théormème qui découle directement d'un autre.</p></section></section><section class="subsection" id="subs-methodePreuve"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">5.1.2</span> <span class="title">Différentes méthodes de preuve</span>
+</h3>
+<section class="subsubsection" id="subsub-preuveDirecte"><h4 class="heading hide-type">
+<span class="type">Sous-sous-section</span> <span class="codenumber">5.1.2.1</span> <span class="title">Preuve directe</span>
+</h4>
+<section class="introduction" id="introduction-195"><p id="p-2007">Une preuve directe sert à démontrer qu'un énoncé de la forme <span class="process-math">\(p\rightarrow q\)</span> est vrai, en montrant que si <span class="process-math">\(p\)</span> est vraie, alors <span class="process-math">\(q\)</span> est  nécessairement vraie. D'un point de vue logique, cette technique est simple, mais elle peut être difficile à utiliser et peut demander de l'intuition.</p></section><article class="example example-like" id="exe-nPairnCarrePair"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-nPairnCarrePair"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">La parité et les carrés.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-nPairnCarrePair"><article class="example example-like">Pour <span class="process-math">\(n\in\,\N,\)</span> si <span class="process-math">\(n\)</span> est pair, alors <span class="process-math">\(n^2\)</span> est pair.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-184" id="solution-184"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-184"><div class="solution solution-like">
+<p id="p-2008">Si <span class="process-math">\(n\)</span> est pair, alors <span class="process-math">\(n\equiv  0 \mod 2\text{.}\)</span> Ainsi,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-74">
+\begin{align*}
+n^2=n\cdot n\amp\equiv 0\cdot 0 \mod 2 \\
+\amp\equiv 0\ \mod 2 \text{.}
+\end{align*}
+</div>
+<p class="continuation">On a alors que <span class="process-math">\(n^2\)</span> est pair.</p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exe-carreParfait"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-carreParfait"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Les carrés parfaits.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-carreParfait"><article class="example example-like">Donner une preuve directe que si <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont des carrés parfaits, alors <span class="process-math">\(mn\)</span> est aussi un carré parfait. Un carré parfait est un entier <span class="process-math">\(a\)</span> tel que <span class="process-math">\(a=b^2\text{,}\)</span> pour <span class="process-math">\(b\)</span> un entier.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-185" id="solution-185"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-185"><div class="solution solution-like">
+<p id="p-2009">Si <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont des entier parfait, alors par définition, il existe des entiers <span class="process-math">\(s\)</span> et <span class="process-math">\(t\)</span> tels que <span class="process-math">\(m=s^2\)</span> et <span class="process-math">\(n=t^2\text{.}\)</span></p>
+<p id="p-2010">Ainsi on a que <span class="process-math">\(mn=s^2t^2=(ss)(tt)=(st)(st)=(st)^2\text{,}\)</span> où on a utilisé la commutativité et l'associativité du produit dans les entiers. Par définition d'un carré parfait, on peut conclure que <span class="process-math">\(mn\)</span> est un carré parfait.</p>
+</div></div>
+</div></article></div>
+<article class="remark remark-like" id="remark-8"><h5 class="heading">
+<span class="type">Remarque</span><span class="space"> </span><span class="codenumber">5.1.3</span><span class="period">.</span>
+</h5>
+<p id="p-2011">Formelement, la plupart des théorèmes sont des énoncés avec quantificateurs. L'énoncé de l'exercice précédent aurait pû être écrit sous la forme suivante.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\forall m\in\,\Z\forall n\in\,\Z\left(P(n)\wedge P(m)\rightarrow P(m\cdot n)\right)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">où <span class="process-math">\(P(m)\)</span> est la proposition “<span class="process-math">\(m\)</span> est un carré parfait”.</p>
+<p id="p-2012">Pour montrer que l'énoncé est vrai pour tout entier <span class="process-math">\(m\)</span> et pour tout entier <span class="process-math">\(n\text{,}\)</span> il suffit de choisir <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> des entiers <em class="emphasis">quelconque</em>, c'est-à-dire qu'on utilise uniquement le fait qu'ils sont des entiers, et rien d'autre!</p></article><p id="p-2013">Pour plusieurs des exemples et exercices de la sections, on démontrera des propriétés des nombres rationnels et des nombres irrationnels. On rappelle ici les définitions.</p>
+<article class="definition definition-like" id="def-nbrQ"><h5 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span>
+</h5>L'ensemble des nombres rationnels est l'ensemble <span class="process-math">\(\Q=\{\frac{a}{b}\mid a\in\,\Z,\,b\in\,\Z,\,b\neq 0\}\)</span></article><article class="definition definition-like" id="def-nbrQc"><h5 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">5.1.5</span><span class="period">.</span>
+</h5>L'ensemble des nombres irrationnels est l'ensemble <span class="process-math">\(\Q^c=\{x\in\, \R\mid x\notin\,\Q\}\)</span></article><article class="example example-like" id="exe-prodQisQ"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-prodQisQ"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Le produit de rationnels.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-prodQisQ"><article class="example example-like">Montrer que si <span class="process-math">\(p,q\in\,\Q\)</span> alors <span class="process-math">\(p\cdot q\in\,\Q\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-186" id="solution-186"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-186"><div class="solution solution-like">
+<p id="p-2014">Si <span class="process-math">\(p,q\in\,\Q\text{,}\)</span> alors il existe <span class="process-math">\(r,s,t,u\in\,\Z \)</span> tels que <span class="process-math">\(p=\frac{r}{s}\text{,}\)</span> <span class="process-math">\(q=\frac{t}{u}\text{,}\)</span> <span class="process-math">\(s\neq 0\)</span> et<span class="process-math">\(u\neq 0\text{.}\)</span></p>
+<p id="p-2015">Ainsi, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p\cdot q=\frac{r}{s}\cdot \frac{t}{u}=\frac{rt}{su}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">par définition du produit dans <span class="process-math">\(\Q\text{.}\)</span> De plus, puisque <span class="process-math">\(\Z\)</span> est fermé sous le produit, <span class="process-math">\(rt\in\,\Z\)</span> et <span class="process-math">\(su\in\,\Z\text{.}\)</span> Finalement, puisque <span class="process-math">\(s\neq 0\)</span> et <span class="process-math">\(u\neq 0\text{,}\)</span> alors <span class="process-math">\(su\neq 0\text{.}\)</span> Ainsi, <span class="process-math">\(p\cdot q\in\,\Q\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exe-prodQcisWhat"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-prodQcisWhat"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Le produit d'irrationnels.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-prodQcisWhat"><article class="example example-like">Soit <span class="process-math">\(p,q\in\,\Q^c\text{,}\)</span> peut-on conclure que <span class="process-math">\(p\cdot q\in\,\Q^c\)</span> ou bien que <span class="process-math">\(p\cdot q\in\,\Q\text{?}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-187" id="solution-187"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-187"><div class="solution solution-like"><p id="p-2016">On ne peut pas conclure! En effet, on peut montrer que <span class="process-math">\(p=\sqrt[3]{2}\in\,\Q^c\text{.}\)</span> Dans ce cas, si on pose <span class="process-math">\(q_1=\sqrt[3]{2}\text{,}\)</span> alors <span class="process-math">\(p\cdot q_1=\sqrt[3]{4}\in\, \Q^c\text{.}\)</span> Cependant, si <span class="process-math">\(q_2=\frac{1}{\sqrt[3]{2}}\)</span> (on montrera également en exercice que <span class="process-math">\(\frac{1}{\sqrt[3]{2}}\in\,\Q^c\)</span>), alors <span class="process-math">\(p\cdot q_2= 1\in\,\Q\text{.}\)</span></p></div></div>
+</div></article></div>
+<article class="example example-like" id="exe-sommeQisQ"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-sommeQisQ"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">La somme de rationnels.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-sommeQisQ"><article class="example example-like">Montrer que si <span class="process-math">\(p,q\in\,\Q\)</span> alors <span class="process-math">\(p+q\in\,\Q\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-188" id="solution-188"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-188"><div class="solution solution-like">
+<p id="p-2017">Si <span class="process-math">\(p,q\in\,\Q\text{,}\)</span> alors il existe <span class="process-math">\(r,s,t,u\in\,\Z \)</span> tels que <span class="process-math">\(p=\frac{r}{s}\text{,}\)</span> <span class="process-math">\(q=\frac{t}{u}\text{,}\)</span> <span class="process-math">\(s\neq 0\)</span> et<span class="process-math">\(u\neq 0\text{.}\)</span></p>
+<p id="p-2018">Ainsi, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p+q=\frac{r}{s}+\frac{t}{u}=\frac{ru+st}{su}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">par définition de la somme dans <span class="process-math">\(\Q\text{.}\)</span> De plus, puisque <span class="process-math">\(\Z\)</span> est fermé sous l'adition et le produit, <span class="process-math">\(ru+st\in\,\Z\)</span> et <span class="process-math">\(su\in\,\Z\text{.}\)</span> De plus, puisque <span class="process-math">\(s\neq 0\)</span> et <span class="process-math">\(u\neq 0\text{,}\)</span> alors <span class="process-math">\(su\neq 0\text{.}\)</span> Ainsi, <span class="process-math">\(p+q\in\,\Q\text{.}\)</span></p>
+</div></div>
+</div></article></div></section><section class="subsubsection" id="subsub-preuvInd"><h4 class="heading hide-type">
+<span class="type">Sous-sous-section</span> <span class="codenumber">5.1.2.2</span> <span class="title">Preuve indirecte</span>
+</h4>
+<section class="introduction" id="introduction-196"><p id="p-2019">Il est parfois difficile de trouver un chemin directe pour montrer que <span class="process-math">\(p\rightarrow q\text{.}\)</span> Dans certains cas, il sera plus facile de passer par la contraposée! On rappelle que la contraposée de <span class="process-math">\(p\rightarrow q\)</span> est l'implication <span class="process-math">\(\neg q \rightarrow \neg p,\)</span> et que <span class="process-math">\(p\rightarrow q\equiv \neg q\rightarrow \neg p\text{.}\)</span></p>
+<p id="p-2020">Ainsi, au lieu de montrer que si <span class="process-math">\(p\)</span> est vrai alors <span class="process-math">\(q\text{,}\)</span> on montre que si <span class="process-math">\(q\)</span> est fausse, alors <span class="process-math">\(p\)</span> est fausse.</p></section><article class="example example-like" id="exe-preuveInd1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-preuveInd1"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Une preuve indirecte.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-preuveInd1"><article class="example example-like">Montrer que, si <span class="process-math">\(n=ab\)</span> pour <span class="process-math">\(a,b\in\,\N\)</span> alors <span class="process-math">\(a\leq \sqrt{n}\)</span> ou <span class="process-math">\(b\leq \sqrt{n}\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-189" id="solution-189"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-189"><div class="solution solution-like">
+<p id="p-2021">On suppose que la conclusion est fausse, c'est à dire que <span class="process-math">\(\neg(a\leq \sqrt{n}\vee b\leq \sqrt{n})\text{.}\)</span> Par les lois de De Morgan, on suppose que la proposition <span class="process-math">\(a\gt \sqrt{n} \wedge b\gt \sqrt{n}\)</span> est vraie, et on veut montrer que la proposition <span class="process-math">\(n\neq ab\)</span> est vraie.</p>
+<p id="p-2022">On rappel que si <span class="process-math">\(0\lt s\lt t\)</span> et <span class="process-math">\(0\lt u\lt v\text{,}\)</span> alors <span class="process-math">\(su\lt tv\text{.}\)</span></p>
+<p id="p-2023">Ainsi, si <span class="process-math">\(a\gt \sqrt{n}\)</span> et <span class="process-math">\(b\gt \sqrt{n}\text{,}\)</span> on aura <span class="process-math">\(n=\sqrt{n}\cdot \sqrt{n} \lt ab\text{.}\)</span> En particulier, si <span class="process-math">\(n\lt ab\text{,}\)</span> alors <span class="process-math">\(n\neq ab\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exe-nCarrePairnPair"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-nCarrePairnPair"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">La parité et les carrés, prise 2.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-nCarrePairnPair"><article class="example example-like">Pour <span class="process-math">\(n\in\,\N,\)</span> si <span class="process-math">\(n^2\)</span> est pair, alors <span class="process-math">\(n\)</span> est pair.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-190" id="solution-190"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-190"><div class="solution solution-like">
+<p id="p-2024">On montre que si <span class="process-math">\(n\)</span> est impair, alors <span class="process-math">\(n^2\)</span> est impair.</p>
+<p id="p-2025">Si <span class="process-math">\(n\)</span> est impair, alors <span class="process-math">\(n\equiv 1 \mod 2\text{.}\)</span> Ainsi,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-75">
+\begin{align*}
+n^2=n\cdot n\amp\equiv 1\cdot 1 \mod 2 \\
+\amp\equiv 1\ \mod 2 \text{.}
+\end{align*}
+</div>
+<p class="continuation">On a alors que <span class="process-math">\(n^2\)</span> est impair.</p>
+</div></div>
+</div></article></div></section><section class="subsubsection" id="subsub-preuveContradiction"><h4 class="heading hide-type">
+<span class="type">Sous-sous-section</span> <span class="codenumber">5.1.2.3</span> <span class="title">Preuve par contradiction</span>
+</h4>
+<section class="introduction" id="introduction-197"><p id="p-2026">Supposons qu'on veuille montrer qu'une proposition <span class="process-math">\(p\)</span> est vraie. Suppons également que l'on arrive a montrer que <span class="process-math">\(\neg p \rightarrow q\)</span> est vraie, où <span class="process-math">\(q\)</span> une contradiction (une proposition qui est toujours fausse).</p>
+<p id="p-2027">Si <span class="process-math">\(\neg p \rightarrow q\)</span> est vraie et que <span class="process-math">\(q\)</span> est fausse, alors nécessairement <span class="process-math">\(\neg p\)</span> est fausse, c'est-à-dire que <span class="process-math">\(p\)</span> est vraie. La contradiction <span class="process-math">\(q\)</span> sera souvent former par <span class="process-math">\(q\equiv (r \wedge \neg r)\text{.}\)</span></p></section><article class="example example-like" id="exe-sqrt2Qc"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-sqrt2Qc"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Un premier nombre irrationel.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-sqrt2Qc"><article class="example example-like">Montrer que <span class="process-math">\(\sqrt{2}\in\,\Q^c\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-191" id="solution-191"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-191"><div class="solution solution-like">
+<p id="p-2028">On suppose que <span class="process-math">\(\sqrt{2}\in\,\Q\text{,}\)</span> et on cerche à montrer que celà implique une contradiction.</p>
+<p id="p-2029">Si <span class="process-math">\(\sqrt{2}\in\,\Q\text{,}\)</span> alors <span class="process-math">\(\sqrt{2}=\frac{a}{b}\text{,}\)</span> où <span class="process-math">\(a,b\in\,\Z\)</span> et <span class="process-math">\(b\neq 0\text{.}\)</span> De plus, on peut supposer que cette faction est réduite, c'est-a-dire que <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span></p>
+<p id="p-2030">On a alors</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exe-nCarrePairnPair.html">
+\begin{equation*}
+2=(\sqrt{2})^2=\left(\frac{a}{b}\right)=\frac{a^2}{b^2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">En isolant, on obtient <span class="process-math">\(a^2=2b^2\text{.}\)</span> Ainsi, par  <a href="" class="xref" data-knowl="./knowl/exe-nCarrePairnPair.html" title="Exemple 5.1.10: La parité et les carrés, prise 2">un des exemples précédent</a> on a que <span class="process-math">\(a^2\)</span> est un nombre pair, et donc <span class="process-math">\(a\)</span> l'est également. On peut donc écrire <span class="process-math">\(a=2k\text{,}\)</span> pour <span class="process-math">\(k\in\,\Z\text{,}\)</span> d'où</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exe-nCarrePairnPair.html">
+\begin{equation*}
+a^2=(2k)^2=4k^2=2b^2\text{.}
+\end{equation*}
+</div>
+<p id="p-2031">En divisant par <span class="process-math">\(2\)</span> des deux côtés, on a <span class="process-math">\(2k^2=b^2\text{.}\)</span> Par le même argument que précédemment, on a que <span class="process-math">\(b\)</span> est pair. Or, si <span class="process-math">\(a\)</span> et  <span class="process-math">\(b\)</span> sont pair, on a que <span class="process-math">\(2\lt\pgcd(a,b)=1\text{.}\)</span> Ceci est une contradiction, car <span class="process-math">\(2\lt 1\)</span> est faux.</p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exe-sommeQQc"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-sommeQQc"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">La somme d'un rationnel et d'un irrationel.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-sommeQQc"><article class="example example-like">Montrer par contradiction que la somme d'un nombre rationnel et d'un nombre irrationel est un nombre irrationel.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-192" id="solution-192"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-192"><div class="solution solution-like">
+<p id="p-2032">Soit <span class="process-math">\(r\in\,\Q\)</span> et <span class="process-math">\(x\in\,\Q^c\text{,}\)</span> on suppose que <span class="process-math">\(r+x=s\in\,\Q\)</span> On cherche une contradiction.</p>
+<p id="p-2033">En isolant <span class="process-math">\(x,\)</span> on a <span class="process-math">\(x=r-s=r+(-s).\)</span> On sait que <span class="process-math">\(-s\in\,\Q\)</span> par <a href="" class="xref" data-knowl="./knowl/exe-prodQisQ.html" title="Exemple 5.1.6: Le produit de rationnels">5.1.6</a>, et donc <span class="process-math">\(r+(-s)\in\,\Q\)</span> par <a href="" class="xref" data-knowl="./knowl/exe-sommeQisQ.html" title="Exemple 5.1.8: La somme de rationnels">5.1.8</a>.  Ceci est une contradiction, car <span class="process-math">\(x\in\,\Q^c\text{.}\)</span></p>
+<p id="p-2034">Ainsi, <span class="process-math">\(r+x\in\,\Q\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-79"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-79"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Une implication par contradiction.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-79"><article class="example example-like">Soit <span class="process-math">\(m,n,p\in\,\Z.\)</span> Montrer par contradiction que si <span class="process-math">\(m+n\)</span> et <span class="process-math">\(n+p\)</span> sont pairs, alors <span class="process-math">\(m+p\)</span> est pair.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-193" id="solution-193"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-193"><div class="solution solution-like">
+<p id="p-2035">On a une implication <span class="process-math">\(P\rightarrow Q\text{,}\)</span> où <span class="process-math">\(P:\ m+n \text{ et } n+p \text{ sont pairs }\)</span> et <span class="process-math">\(Q:\ m+p\text{ est pair}.\)</span></p>
+<p id="p-2036">On  fait une preuve par contradiction. Puisque <span class="process-math">\(P\rightarrow Q\equiv \neg P \vee  Q \text{,}\)</span> la négation de <span class="process-math">\(P\rightarrow Q\)</span> est <span class="process-math">\(P\wedge \neq Q.\)</span></p>
+<p id="p-2037">Ainsi, on suppose que <span class="process-math">\(m+n\)</span> et <span class="process-math">\(n+p\)</span> sont pairs, mais que <span class="process-math">\(m+p\)</span> est impair. On cherche ensuite une contradiction.</p>
+<p id="p-2038">On sait que la somme de deux nombres pairs est paire et la somme d'un nombre pair et d'un nombre impaire est impaire. Ainsi, <span class="process-math">\((m+n)+(n+p)+(m+p)\)</span> est impair, mais</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(m+n)+(n+p)+(m+p)=2(m+n+p)
+\end{equation*}
+</div>
+<p class="continuation">est donc pair. On a ainsi une contradiction.</p>
+<p id="p-2039">On a montrer qu'il est impossible que les nombres <span class="process-math">\(m+n\)</span> et <span class="process-math">\(n+p\)</span> soient pairs  et que <span class="process-math">\(m+p\)</span> soit impair. Ainsi, si <span class="process-math">\(m+n\)</span> et <span class="process-math">\(n+p\)</span> sont pairs, alors <span class="process-math">\(m+p\)</span> est pair.</p>
+</div></div>
+</div></article></div></section><section class="subsubsection" id="subsub-bidirectionnel"><h4 class="heading hide-type">
+<span class="type">Sous-sous-section</span> <span class="codenumber">5.1.2.4</span> <span class="title"></span>
+</h4>
+<section class="introduction" id="introduction-198"><p id="p-2040">On rappelle que la proposition <span class="process-math">\(P\leftrightarrow Q\)</span> est équivalente à <span class="process-math">\((P\rightarrow Q) \wedge (Q\rightarrow P)\text{.}\)</span> Ainsi, pour montrer que <span class="process-math">\(P\leftrightarrow Q\)</span> est vraie, il faut montrer que <span class="process-math">\(P\rightarrow Q\)</span> et <span class="process-math">\(Q\rightarrow P\)</span> sont vraies.</p>
+<p id="p-2041">Si l'on veut montrer plusieurs doubles implications, on peut souvent négliger certaines implications si on arrive à faire le tour des propositions impliquées. Par exemple, pour montrer que les doubles implications <span class="process-math">\(P_1\leftrightarrow P_2\text{,}\)</span> <span class="process-math">\(P_2\leftrightarrow P_3\)</span> et <span class="process-math">\(P_3\leftrightarrow P_1\)</span> sont vraies, il est suffisant de montrer que les implications <span class="process-math">\(P_1\rightarrow P_2\text{,}\)</span> <span class="process-math">\(P_2\rightarrow P_3\)</span> et <span class="process-math">\(P_3\rightarrow P_1\)</span> sont vraies.</p></section><article class="example example-like" id="exe-Equiv"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-Equiv"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Si et seulement si.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-Equiv"><article class="example example-like">Soit <span class="process-math">\(m,\,n\in\,\Z,\)</span> montrer que <span class="process-math">\(m^2=n^2\)</span> si et seulement si <span class="process-math">\(m=n\)</span> ou <span class="process-math">\(m=-n\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-194" id="solution-194"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-194"><div class="solution solution-like">
+<p id="p-2042">On suppose d'abord que <span class="process-math">\(m^2=n^2.\)</span> On veut montrer que <span class="process-math">\(m=\pm n.\)</span> Puisque <span class="process-math">\(m^2=n^2,\)</span> on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-76">
+\begin{align*}
+0  \amp = m^2-n^2   \\
+\amp = (m-n)(m+n).   
+\end{align*}
+</div>
+<p class="continuation">Aisni, soit <span class="process-math">\(m-n=0,\)</span> ou bien <span class="process-math">\(m+n=0\text{,}\)</span> c'est-à-dire que <span class="process-math">\(m=n\)</span> ou <span class="process-math">\(m=-n\text{.}\)</span></p>
+<p id="p-2043">On supposonse maintenant que <span class="process-math">\(m=n\)</span> ou <span class="process-math">\(m=-n.\text{.}\)</span> Dans ce cas, <span class="process-math">\(m-n=0,\)</span> ou bien <span class="process-math">\(m+n=0\text{,}\)</span> et donc</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-77">
+\begin{align*}
+0 \amp = (m-n)(m+n)    \\
+\amp = m^2-n^2,   
+\end{align*}
+</div>
+<p class="continuation">d'où <span class="process-math">\(m^2=n^2\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exe-plusieursEquiv"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-plusieursEquiv"><h5 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Un petit racourci.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-plusieursEquiv"><article class="example example-like">Montrer que si <span class="process-math">\(n\)</span> est un entier, alors les trois énoncés suivants sont équivalents. <ol class="decimal">
+<li id="li-410"><p id="p-derived-li-410"><span class="process-math">\(P_1:\ 3n+2\)</span> est pair,</p></li>
+<li id="li-411"><p id="p-derived-li-411"><span class="process-math">\(P_2:\ n+5\)</span> est impair,</p></li>
+<li id="li-412"><p id="p-derived-li-412"><span class="process-math">\(P_3:\ n^2\)</span> est pair.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-195" id="solution-195"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-195"><div class="solution solution-like"><ol class="decimal">
+<li id="li-413">
+<p id="p-2044">On montre que <span class="process-math">\(P_1\rightarrow P_2\)</span> est vraie.</p>
+<p id="p-2045">Puisque <span class="process-math">\(3n +2 \)</span> est pair, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-78">
+\begin{align*}
+0\amp\equiv 3n+2 \mod 2
+\amp\equiv n \mod 2.
+\end{align*}
+</div>
+<p class="continuation">Ainsi,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-79">
+\begin{align*}
+n+5\amp\equiv 0+1\mod 2
+\amp\equiv 1 \mod 2,
+\end{align*}
+</div>
+<p class="continuation">d'où <span class="process-math">\(n+5\)</span> est impair.</p>
+</li>
+<li id="li-414">
+<p id="p-2046">On montre que <span class="process-math">\(P_2\rightarrow P_3\)</span> est vraie.</p>
+<p id="p-2047">Puisque <span class="process-math">\(n+5\)</span> est pair, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-80">
+\begin{align*}
+1\amp\equiv n+5 \mod 2
+\amp\equiv n + 1 \mod 2.
+\end{align*}
+</div>
+<p class="continuation">Ainsi, <span class="process-math">\(n\equiv 0 \mod 2,\)</span> et donc <span class="process-math">\(n^2\equiv 0 \mod 2,\)</span> c'est à dire que <span class="process-math">\(n^2\)</span> est pair.</p>
+</li>
+<li id="li-415">
+<p id="p-2048">Finalement, on montre que <span class="process-math">\(P_3\rightarrow P_1\)</span> est vraie.</p>
+<p id="p-2049">Puisque <span class="process-math">\(n^2\)</span> est pair, on sait que <span class="process-math">\(n\)</span> est pair, et donc <span class="process-math">\(n\equiv 0 \mod 2.\)</span> En remplaçant, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-81">
+\begin{align*}
+3n+2\amp\equiv 3(0)+0 \mod 2
+\amp\equiv 0 \mod 2.
+\end{align*}
+</div>
+<p class="continuation">Ainsi, <span class="process-math">\(3n+2\)</span> est pair.</p>
+</li>
+</ol></div></div>
+</div></article></div></section></section><section class="reading-questions" id="rq-methodePreuve"><h3 class="heading hide-type">
+<span class="type">Questions de compréhension de la lecture</span> <span class="codenumber">5.1.3</span> <span class="title">Questions de compréhension de la lecture</span>
+</h3>
+<section class="introduction" id="introduction-199"><p id="p-2050">Ces questions sont à faire en classe et à terminer à la maison si nécessaire.</p></section><article class="exercise exercise-like" id="exercise-226"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>Utiliser une preuve directe pour démontrer que la somme de deux entiers impairs est paire.</article><article class="exercise exercise-like" id="exercise-227"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>Utiliser une preuve directe pour démontrer que la somme de deux entiers pairs est paire.</article><article class="exercise exercise-like" id="exercise-228"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>Utiliser une preuve directe pour démontrer que tout nombre entier impair est la différence de deux carrés parfaits.</article><article class="exercise exercise-like" id="exercise-229"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>Utiliser une preuve indirecte pour démontrer que pour tout <span class="process-math">\(n\in\,\N,\)</span> si <span class="process-math">\(n^3+5\)</span> est impair, alors <span class="process-math">\(n\)</span> est pair.</article></section><section class="exercises" id="exo-methodePreuve"><h3 class="heading hide-type">
+<span class="type">Exercices</span> <span class="codenumber">5.1.4</span> <span class="title">Exercices</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-13">
+<h4 class="heading"><span class="title">Exercices à la maison.</span></h4>
+<div class="introduction" id="introduction-200"><p id="p-2051">Ces exercices servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés. Ils sont à faire d'ici le prochain cours.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-230"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(x\in\,\Q\)</span> et <span class="process-math">\(x\neq 0\text{,}\)</span> alors <span class="process-math">\(\frac{1}{x}\in\,\Q\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-48" id="hint-48"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-48"><div class="hint solution-like">Par preuve directe.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-231"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(x,y\in\,\R\)</span> alors <span class="process-math">\(\text{min}(x,y)+\text{max}(x,y)=x+y,\)</span> où <span class="process-math">\(\text{min}(x,y)\)</span> est la plus petite valeur entre <span class="process-math">\(x\)</span> et <span class="process-math">\(y,\)</span> alors que <span class="process-math">\(\text{max}(x,y)\)</span> est la plus grande valeur entre <span class="process-math">\(x\)</span> et <span class="process-math">\(y\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-49" id="hint-49"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-49"><div class="hint solution-like">Séparer la preuve en deux cas. Le premier cas lorsque <span class="process-math">\(x\geq y\text{,}\)</span> et le deuxième cas lorsque <span class="process-math">\(x\lt y\text{.}\)</span> Faites une preuve directe dans les deux cas.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-232"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont des entiers de parité différente, alors <span class="process-math">\(5x+5y\)</span> est un entier impair.<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-50" id="hint-50"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-50"><div class="hint solution-like">Sans perdre de généralité, on peut supposer que <span class="process-math">\(m\)</span> est pair alors que <span class="process-math">\(n\)</span> est impair.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-233"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>Montrer que pour <span class="process-math">\(n\)</span> un entier, si <span class="process-math">\(n^3\)</span> est pair, alors <span class="process-math">\(n\)</span> est pair.<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-51" id="hint-51"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-51"><div class="hint solution-like">Par preuve indirecte.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-234"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(x\in\,\Q^c\text{,}\)</span> alors <span class="process-math">\(\frac{1}{x}\in\,\Q^c\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-52" id="hint-52"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-52"><div class="hint solution-like">Par preuve indirecte.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-235"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>Soit <span class="process-math">\(x,\, y\in\,\R\text{,}\)</span> montrer que si <span class="process-math">\(x+y\geq 2\text{,}\)</span> alors <span class="process-math">\(x\geq 1\)</span> ou <span class="process-math">\(y\geq 1\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-53" id="hint-53"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-53"><div class="hint solution-like">Par preuve indirecte.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-236"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>Soit <span class="process-math">\(m,\, n\in\,\Z,\)</span> montrer que si <span class="process-math">\(mn\)</span> est pair, alors <span class="process-math">\(m\)</span> est pair ou <span class="process-math">\(n\)</span> est pair.<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-54" id="hint-54"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-54"><div class="hint solution-like">Par preuve indirecte.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-237"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>Montrer qu'au moins un des nombres réels <span class="process-math">\(a_1,a_2,\dots,a_n\)</span> est plus grand ou égal à la moyenne de ces nombres.<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-55" id="hint-55"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-55"><div class="hint solution-like">Par contradiction.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-238"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>Montrer que <span class="process-math">\(\sqrt[3]{2}\in\,\Q^c\)</span> et <span class="process-math">\(\sqrt[3]{4}\in\,\Q^c\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-56" id="hint-56"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-56"><div class="hint solution-like">Par contradiction.</div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-57" id="hint-57"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-57"><div class="hint solution-like">Revoir la preuve  que <span class="process-math">\(\sqrt{2}\in\,\Q^c\)</span>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-239"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>Montrer par contradiction qu'il n'y a pas de nombre <span class="process-math">\(r\in\,\Q\)</span> tel que <span class="process-math">\(r^3+r+1=0\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-58" id="hint-58"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-58"><div class="hint solution-like">Supposer que <span class="process-math">\(r=\frac{a}{b}\)</span> où  <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span> En remplaçant dans l'équation et en multipliant par <span class="process-math">\(b^3\text{,}\)</span> que peut-on dire sur la parité de <span class="process-math">\(a\)</span> et <span class="process-math">\(b\text{?}\)</span>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-240"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>Montrer ou réfuter que le produit d'un nombre rationnel différent de <span class="process-math">\(0\)</span> par un irrationnel est un irrationel.</article><article class="exercise exercise-like" id="exercise-241"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<p id="p-2052">Montrer qu'il existe un entier <span class="process-math">\(n\gt 0\)</span> tel que <span class="process-math">\(n=1+\cdots+(n-1)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-242"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(n\)</span> est un entier, alors les quatres énoncés suivants sont équivalents. <ol class="lower-alpha">
+<li id="li-416"><p id="p-derived-li-416"><span class="process-math">\(n\)</span> est pair,</p></li>
+<li id="li-417"><p id="p-derived-li-417"><span class="process-math">\(n+1\)</span> est impair,</p></li>
+<li id="li-418"><p id="p-derived-li-418"><span class="process-math">\(3n+1\)</span> est impair,</p></li>
+<li id="li-419"><p id="p-derived-li-419"><span class="process-math">\(3n\)</span> est pair.</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-243"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>Montrer ou réfuter qu'il existe un <span class="process-math">\(x\in\,\Q\)</span> et un <span class="process-math">\(y\in\,\Q^c\)</span> tels que <span class="process-math">\(x^y\in\,\Q\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-59" id="hint-59"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-59"><div class="hint solution-like">Considérer <span class="process-math">\(2^\sqrt{2}\text{.}\)</span> Si <span class="process-math">\(2^\sqrt{2}\in\, \Q\text{,}\)</span> on a montrer que c'est vrai. Sinon, que peut-on dire sur <span class="process-math">\({\left(2^\sqrt{2}\right)}^{\sqrt{2}}\text{?}\)</span>
+</div></div>
+</div></article>
+</div>
+</div></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
