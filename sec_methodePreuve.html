@@ -143,10 +143,10 @@ $\Box$
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap-preuveMath.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><span id="nextbutton" class="next-button button toolbar-item disabled">Suivant</span></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap-preuveMath.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_pidgeonHoles.html" title="Suivant">Suivant</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="chap-preuveMath.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><span class="next-button button toolbar-item disabled">Suivant</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="chap-preuveMath.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><a class="next-button button toolbar-item" href="sec_pidgeonHoles.html" title="Suivant">Suivant</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -180,7 +180,11 @@ $\Box$
 </ul>
 </li>
 <li class="link">
-<a href="chap-preuveMath.html" data-scroll="chap-preuveMath" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a><ul><li><a href="sec_methodePreuve.html" data-scroll="sec_methodePreuve" class="active">Méthodes de preuves</a></li></ul>
+<a href="chap-preuveMath.html" data-scroll="chap-preuveMath" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a><ul>
+<li><a href="sec_methodePreuve.html" data-scroll="sec_methodePreuve" class="active">Méthodes de preuves</a></li>
+<li><a href="sec_pidgeonHoles.html" data-scroll="sec_pidgeonHoles" class="internal">Principe des tiroirs de Dirichlet</a></li>
+<li><a href="sec_induction.html" data-scroll="sec_induction" class="internal">Les preuves par récurrence (par induction)</a></li>
+</ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Rédigé avec PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
@@ -433,18 +437,60 @@ n+5\amp\equiv 0+1\mod 2
 <h4 class="heading"><span class="title">Exercices à la maison.</span></h4>
 <div class="introduction" id="introduction-200"><p id="p-2051">Ces exercices servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés. Ils sont à faire d'ici le prochain cours.</p></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-230"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(x\in\,\Q\)</span> et <span class="process-math">\(x\neq 0\text{,}\)</span> alors <span class="process-math">\(\frac{1}{x}\in\,\Q\text{.}\)</span><div class="solutions">
+<article class="exercise exercise-like" id="exo-invQisQ"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(x\in\,\Q\)</span> et <span class="process-math">\(x\neq 0\text{,}\)</span> alors <span class="process-math">\(\frac{1}{x}\in\,\Q\text{.}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-48" id="hint-48"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-48"><div class="hint solution-like">Par preuve directe.</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-199" id="solution-199"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-199"><div class="solution solution-like">
+<p id="p-2052">On suppose que <span class="process-math">\(x\in\,\Q^\ast,\)</span> et on veut montrer que <span class="process-math">\(\frac{1}{x}\in\,\Q\text{.}\)</span></p>
+<p id="p-2053">Puisque <span class="process-math">\(x\in\,\Q-\{0\},\)</span> on sait qu'il existe <span class="process-math">\(p,\,q\in\,\Z-\{0\}\)</span> tels que <span class="process-math">\(x=\frac{p}{q}.\)</span></p>
+<p id="p-2054">Ainsi, <span class="process-math">\(\frac{1}{x}=\frac{q}{p}\in\,\Q,\)</span> car <span class="process-math">\(p\neq 0\text{.}\)</span></p>
+</div></div>
 </div></article><article class="exercise exercise-like" id="exercise-231"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(x,y\in\,\R\)</span> alors <span class="process-math">\(\text{min}(x,y)+\text{max}(x,y)=x+y,\)</span> où <span class="process-math">\(\text{min}(x,y)\)</span> est la plus petite valeur entre <span class="process-math">\(x\)</span> et <span class="process-math">\(y,\)</span> alors que <span class="process-math">\(\text{max}(x,y)\)</span> est la plus grande valeur entre <span class="process-math">\(x\)</span> et <span class="process-math">\(y\text{.}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-49" id="hint-49"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-49"><div class="hint solution-like">Séparer la preuve en deux cas. Le premier cas lorsque <span class="process-math">\(x\geq y\text{,}\)</span> et le deuxième cas lorsque <span class="process-math">\(x\lt y\text{.}\)</span> Faites une preuve directe dans les deux cas.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-232"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont des entiers de parité différente, alors <span class="process-math">\(5x+5y\)</span> est un entier impair.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-200" id="solution-200"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-200"><div class="solution solution-like">
+<p id="p-2055">On suppose d'abord que <span class="process-math">\(x\geq y.\)</span> Dans ce cas, on a que <span class="process-math">\(\text{min}(x,y)=y\)</span> et <span class="process-math">\(\text{max}(x,y)=x.\)</span> Ainsi, <span class="process-math">\(\text{min}(x,y)+\text{max}(x,y)=y+x=x+y,\)</span> par commutativité de l'addition dans <span class="process-math">\(\Z\text{.}\)</span></p>
+<p id="p-2056">On ensuite que <span class="process-math">\(y \gt  x.\)</span> Dans ce cas, on a que <span class="process-math">\(\text{min}(x,y)=x\)</span> et <span class="process-math">\(\text{max}(x,y)=y.\)</span> Ainsi, <span class="process-math">\(\text{min}(x,y)+\text{max}(x,y)=y+x\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-232"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont des entiers de parité différente, alors <span class="process-math">\(5m+5n\)</span> est un entier impair.<div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-50" id="hint-50"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-50"><div class="hint solution-like">Sans perdre de généralité, on peut supposer que <span class="process-math">\(m\)</span> est pair alors que <span class="process-math">\(n\)</span> est impair.</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-201" id="solution-201"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-201"><div class="solution solution-like">
+<p id="p-2057">On suppose que <span class="process-math">\(m\)</span> est pair et que <span class="process-math">\(n\)</span> est impair. Ainsi, <span class="process-math">\(m\equiv 0 \mod 2,\)</span> alors que <span class="process-math">\(n\equiv 1 \mod 2\text{.}\)</span></p>
+<p id="p-2058">Ainsi, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-82">
+\begin{align*}
+5m+5n \amp\equiv 5(0)+5(1) \mod 2 (\text{ par les propriété de }\equiv\mod 2)\\
+\amp\equiv 1 \mod 2
+\end{align*}
+</div>
+<p class="continuation">d'où <span class="process-math">\(5m+5n\)</span> est un entier impair.</p>
+</div></div>
 </div></article><article class="exercise exercise-like" id="exercise-233"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>Montrer que pour <span class="process-math">\(n\)</span> un entier, si <span class="process-math">\(n^3\)</span> est pair, alors <span class="process-math">\(n\)</span> est pair.<div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-51" id="hint-51"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-51"><div class="hint solution-like">Par preuve indirecte.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-234"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(x\in\,\Q^c\text{,}\)</span> alors <span class="process-math">\(\frac{1}{x}\in\,\Q^c\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-202" id="solution-202"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-202"><div class="solution solution-like">
+<p id="p-2059">On suppose que <span class="process-math">\(n\)</span> est un entier impair. On veut montrer qu'alors <span class="process-math">\(n^3\)</span> est impair.</p>
+<p id="p-2060">Puisque <span class="process-math">\(n\)</span> est impair, on sait que <span class="process-math">\(n\equiv 1\mod 2\text{.}\)</span></p>
+<p id="p-2061">Ainsi,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-83">
+\begin{align*}
+n^3 \amp\equiv (1)^3 \mod 2 (\text{ par les propriété de }\equiv\mod 2)\\
+\amp\equiv 1 \mod 2
+\end{align*}
+</div>
+<p class="continuation">d'où <span class="process-math">\(n^3\)</span> est un nombre impair.</p>
+<p id="p-2062">On a montré que si <span class="process-math">\(n\)</span> est un entier impair, alors <span class="process-math">\(n^3\)</span> est impair. Ainsi, si <span class="process-math">\(n^3\)</span> est pair, on doit nécessairement avoir que <span class="process-math">\(n\)</span> est pair.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-234"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(x\in\,\Q^c,\)</span> alors <span class="process-math">\(\frac{1}{x}\in\,\Q^c\text{.}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-52" id="hint-52"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-52"><div class="hint solution-like">Par preuve indirecte.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-235"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>Soit <span class="process-math">\(x,\, y\in\,\R\text{,}\)</span> montrer que si <span class="process-math">\(x+y\geq 2\text{,}\)</span> alors <span class="process-math">\(x\geq 1\)</span> ou <span class="process-math">\(y\geq 1\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-203" id="solution-203"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-203"><div class="solution solution-like">
+<p id="p-2063">On suppose que <span class="process-math">\(\frac{1}{x}\in\,\Q.\)</span> On veut montrer que <span class="process-math">\(x\in\,\Q.\)</span> Puisque <span class="process-math">\(x\in\,\Q^c,\)</span> on sait que <span class="process-math">\(x\neq 0.\)</span> En particulier, <span class="process-math">\(\frac{1}{x}\neq 0\text{.}\)</span></p>
+<p id="p-2064">Par le numéro <a href="" class="xref" data-knowl="./knowl/exo-invQisQ.html" title="Exercice 5.1.4.1">5.1.4.1</a>, on a que <span class="process-math">\(\frac{1}{\frac{1}{x}}\in\,\Q.\)</span> Or, on sait que <span class="process-math">\(\frac{1}{\frac{1}{x}}=x.\)</span> On a donc montrer que <span class="process-math">\(x\in\,\Q\text{.}\)</span></p>
+<p id="p-2065">On a montré que si <span class="process-math">\(\frac{1}{x}\in\,\Q,\)</span> alors <span class="process-math">\(x\in\,\Q.\)</span> Ainsi, si <span class="process-math">\(x\in\,\Q^c,\)</span> on doit nécessairement avoir que <span class="process-math">\(\frac{1}{x}\in\,\Q^c\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-235"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>Soit <span class="process-math">\(x,\, y\in\,\R\text{,}\)</span> montrer que si <span class="process-math">\(x+y\geq 2,\)</span> alors <span class="process-math">\(x\geq 1\)</span> ou <span class="process-math">\(y\geq 1\text{.}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-53" id="hint-53"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-53"><div class="hint solution-like">Par preuve indirecte.</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-204" id="solution-204"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-204"><div class="solution solution-like">
+<p id="p-2066">On suppose que <span class="process-math">\(x\lt 1\)</span> et <span class="process-math">\(y \lt 1.\)</span> On veut montrer que  <span class="process-math">\(x+y\lt 2.\)</span> Puisque <span class="process-math">\(x\lt 1\)</span> et <span class="process-math">\(y \lt 1,\)</span> on a que <span class="process-math">\(x+y \lt 1 + 1 =2\text{.}\)</span></p>
+<p id="p-2067">On a montré que si <span class="process-math">\(x\lt 1\)</span> et <span class="process-math">\(y \lt 1,\)</span> alors <span class="process-math">\(x+y\lt 2.\)</span> Ainsi, si <span class="process-math">\(x+y\geq 2,\)</span> on doit nécessairement avoir que <span class="process-math">\(x\geq 1\)</span> ou <span class="process-math">\(y\geq 1\text{.}\)</span></p>
+</div></div>
 </div></article><article class="exercise exercise-like" id="exercise-236"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>Soit <span class="process-math">\(m,\, n\in\,\Z,\)</span> montrer que si <span class="process-math">\(mn\)</span> est pair, alors <span class="process-math">\(m\)</span> est pair ou <span class="process-math">\(n\)</span> est pair.<div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-54" id="hint-54"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-54"><div class="hint solution-like">Par preuve indirecte.</div></div>
 </div></article><article class="exercise exercise-like" id="exercise-237"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>Montrer qu'au moins un des nombres réels <span class="process-math">\(a_1,a_2,\dots,a_n\)</span> est plus grand ou égal à la moyenne de ces nombres.<div class="solutions">
@@ -457,7 +503,7 @@ n+5\amp\equiv 0+1\mod 2
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-58" id="hint-58"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-58"><div class="hint solution-like">Supposer que <span class="process-math">\(r=\frac{a}{b}\)</span> où  <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span> En remplaçant dans l'équation et en multipliant par <span class="process-math">\(b^3\text{,}\)</span> que peut-on dire sur la parité de <span class="process-math">\(a\)</span> et <span class="process-math">\(b\text{?}\)</span>
 </div></div>
 </div></article><article class="exercise exercise-like" id="exercise-240"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>Montrer ou réfuter que le produit d'un nombre rationnel différent de <span class="process-math">\(0\)</span> par un irrationnel est un irrationel.</article><article class="exercise exercise-like" id="exercise-241"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
-<p id="p-2052">Montrer qu'il existe un entier <span class="process-math">\(n\gt 0\)</span> tel que <span class="process-math">\(n=1+\cdots+(n-1)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-242"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(n\)</span> est un entier, alors les quatres énoncés suivants sont équivalents. <ol class="lower-alpha">
+<p id="p-2068">Montrer qu'il existe un entier <span class="process-math">\(n\gt 0\)</span> tel que <span class="process-math">\(n=1+\cdots+(n-1)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-242"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(n\)</span> est un entier, alors les quatres énoncés suivants sont équivalents. <ol class="lower-alpha">
 <li id="li-416"><p id="p-derived-li-416"><span class="process-math">\(n\)</span> est pair,</p></li>
 <li id="li-417"><p id="p-derived-li-417"><span class="process-math">\(n+1\)</span> est impair,</p></li>
 <li id="li-418"><p id="p-derived-li-418"><span class="process-math">\(3n+1\)</span> est impair,</p></li>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h3 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.1.8.1</span><span class="period">.</span>
+</h3>
+<p>Tout d'abord  on remarique que pour <span class="process-math">\(n=1\text{,}\)</span> les deux seules chaînes binaires de longueur <span class="process-math">\(1\)</span> ne peuvent pas contenir deux <span class="process-math">\(0\)</span> consécutifs. Ainsi, <span class="process-math">\(S_1=2\text{.}\)</span></p>
+<p>Ensuite, si <span class="process-math">\(n=2,\)</span> alors il y a une unique chaîne binaire contenant deux <span class="process-math">\(0\)</span> consécutifs. Ainsi, <span class="process-math">\(S_2=4-1=3\text{.}\)</span></p>
+<p>Supposons maintenant que <span class="process-math">\(n\geq 3\text{.}\)</span> On note <span class="process-math">\(S_{n,1}\)</span> le nombre de chaînes binaires de longueur <span class="process-math">\(n\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs et se terminant par un <span class="process-math">\(1.\)</span> De même, on note <span class="process-math">\(S_{n,0}\)</span> le nombre de chaînes binaires de longueur <span class="process-math">\(n\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs et se terminant par un <span class="process-math">\(0.\)</span> Par le principe de la somme, on a <span class="process-math">\(S_n=S_{n,1}+S_{n,0}\)</span></p>
+<p>On remarque que toute chaîne de longueur <span class="process-math">\(n\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs et se terminant par un <span class="process-math">\(1\)</span> est formé d'une chaîne de longueur <span class="process-math">\(n-1\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs. Ainsi, <span class="process-math">\(S_{n,1}=S_{n-1}\text{.}\)</span></p>
+<p>D'un autre côté, une si on considère une chaîne binaire de longueur <span class="process-math">\(n\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs et se terminant par un <span class="process-math">\(0,\)</span> alors cette chaîne doit en fait se terminer par <span class="process-math">\(10,\)</span> car sinon elle aurait deux <span class="process-math">\(0\)</span> consécutifs. Ainsi, toute chaîne de longueur <span class="process-math">\(n\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs et se terminant par un <span class="process-math">\(10\)</span> est formé d'une chaîne de longueur <span class="process-math">\(n-2\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs. On a donc <span class="process-math">\(S_{n,0}=S_{n-2}\text{.}\)</span></p>
+<p>Par ce qui précède, on a <span class="process-math">\(S_n=S_{n-1}+S_{n-2},\)</span> avec <span class="process-math">\(S_1=2\)</span> et <span class="process-math">\(S_2=3\text{.}\)</span></p>
+</div>
+<span class="incontext"><a href="sec-.html#solution-216" class="internal">Contexte</a></span>
+</body>
+</html>
