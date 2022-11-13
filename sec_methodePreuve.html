@@ -463,7 +463,7 @@ n+5\amp\equiv 0+1\mod 2
 </div>
 <p class="continuation">d'où <span class="process-math">\(5m+5n\)</span> est un entier impair.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-233"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>Montrer que pour <span class="process-math">\(n\)</span> un entier, si <span class="process-math">\(n^3\)</span> est pair, alors <span class="process-math">\(n\)</span> est pair.<div class="solutions">
+</div></article><article class="exercise exercise-like" id="exo-cubeEvenBaseEven"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>Montrer que pour <span class="process-math">\(n\)</span> un entier, si <span class="process-math">\(n^3\)</span> est pair, alors <span class="process-math">\(n\)</span> est pair.<div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-51" id="hint-51"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-51"><div class="hint solution-like">Par preuve indirecte.</div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-202" id="solution-202"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-202"><div class="solution solution-like">
 <p id="p-2059">On suppose que <span class="process-math">\(n\)</span> est un entier impair. On veut montrer qu'alors <span class="process-math">\(n^3\)</span> est impair.</p>
@@ -478,38 +478,221 @@ n^3 \amp\equiv (1)^3 \mod 2 (\text{ par les propriété de }\equiv\mod 2)\\
 <p class="continuation">d'où <span class="process-math">\(n^3\)</span> est un nombre impair.</p>
 <p id="p-2062">On a montré que si <span class="process-math">\(n\)</span> est un entier impair, alors <span class="process-math">\(n^3\)</span> est impair. Ainsi, si <span class="process-math">\(n^3\)</span> est pair, on doit nécessairement avoir que <span class="process-math">\(n\)</span> est pair.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-234"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(x\in\,\Q^c,\)</span> alors <span class="process-math">\(\frac{1}{x}\in\,\Q^c\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-52" id="hint-52"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-52"><div class="hint solution-like">Par preuve indirecte.</div></div>
+</div></article><article class="exercise exercise-like" id="exo-sommePuissancePair"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>Soit <span class="process-math">\(a\in\,\Z,\)</span> et soit <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> des entiers positifs quelconque. Montrer que <span class="process-math">\(a^m+a^n\equiv 0 \mod 2\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-52" id="hint-52"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-52"><div class="hint solution-like">Ici il est utile de séparer la question en deux cas. On fait une première preuve en supposant que <span class="process-math">\(a\)</span> est pair (c'est-à-dire que <span class="process-math">\(a \equiv 0 \mod 2\)</span>). Par la suite , on monbtre que la proposition est vraie lorsque <span class="process-math">\(a\)</span> est impair (c'est-à-dire que <span class="process-math">\(a \equiv 1 \mod 2\)</span>).</div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-203" id="solution-203"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-203"><div class="solution solution-like">
-<p id="p-2063">On suppose que <span class="process-math">\(\frac{1}{x}\in\,\Q.\)</span> On veut montrer que <span class="process-math">\(x\in\,\Q.\)</span> Puisque <span class="process-math">\(x\in\,\Q^c,\)</span> on sait que <span class="process-math">\(x\neq 0.\)</span> En particulier, <span class="process-math">\(\frac{1}{x}\neq 0\text{.}\)</span></p>
-<p id="p-2064">Par le numéro <a href="" class="xref" data-knowl="./knowl/exo-invQisQ.html" title="Exercice 5.1.4.1">5.1.4.1</a>, on a que <span class="process-math">\(\frac{1}{\frac{1}{x}}\in\,\Q.\)</span> Or, on sait que <span class="process-math">\(\frac{1}{\frac{1}{x}}=x.\)</span> On a donc montrer que <span class="process-math">\(x\in\,\Q\text{.}\)</span></p>
-<p id="p-2065">On a montré que si <span class="process-math">\(\frac{1}{x}\in\,\Q,\)</span> alors <span class="process-math">\(x\in\,\Q.\)</span> Ainsi, si <span class="process-math">\(x\in\,\Q^c,\)</span> on doit nécessairement avoir que <span class="process-math">\(\frac{1}{x}\in\,\Q^c\text{.}\)</span></p>
+<p id="p-2063">Supposons que <span class="process-math">\(a\equiv 0 \mod  2.\)</span> Par les proporiétés de l'équivalence modulo <span class="process-math">\(2,\)</span> on a que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-84">
+\begin{align*}
+a^m+a^n \amp\equiv 0^m + 0^n \mod 2\\
+\amp\equiv 0 + 0 \mod 2\\
+\amp\equiv 0  \mod 2
+\end{align*}
+</div>
+<p class="continuation">d'où <span class="process-math">\(a^m+a^n\)</span> est pair. On remarque ici qu'on a utilisé le fait que <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont non null, car <span class="process-math">\(0^0\)</span> n'est pas défini.</p>
+<p id="p-2064">Supposons maintenant que <span class="process-math">\(a\equiv 1 \mod  2.\)</span> Par les proporiétés de l'équivalence modulo <span class="process-math">\(2,\)</span> on a que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-85">
+\begin{align*}
+a^m+a^n \amp\equiv 1^m + 1^n \mod 2\\
+\amp\equiv 1 + 1 \mod 2\\
+\amp\equiv 0  \mod 2
+\end{align*}
+</div>
+<p class="continuation">d'où <span class="process-math">\(a^m+a^n\)</span> est pair.</p>
+<p id="p-2065">Puisque <span class="process-math">\(a\)</span> est nécessairement pair ou impair, on a montrer dans tous les cas que <span class="process-math">\(a^m+a^n\)</span> est pair.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-235"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>Soit <span class="process-math">\(x,\, y\in\,\R\text{,}\)</span> montrer que si <span class="process-math">\(x+y\geq 2,\)</span> alors <span class="process-math">\(x\geq 1\)</span> ou <span class="process-math">\(y\geq 1\text{.}\)</span><div class="solutions">
+</div></article><article class="exercise exercise-like" id="exercise-235"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(x\in\,\Q^c,\)</span> alors <span class="process-math">\(\frac{1}{x}\in\,\Q^c\text{.}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-53" id="hint-53"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-53"><div class="hint solution-like">Par preuve indirecte.</div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-204" id="solution-204"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-204"><div class="solution solution-like">
-<p id="p-2066">On suppose que <span class="process-math">\(x\lt 1\)</span> et <span class="process-math">\(y \lt 1.\)</span> On veut montrer que  <span class="process-math">\(x+y\lt 2.\)</span> Puisque <span class="process-math">\(x\lt 1\)</span> et <span class="process-math">\(y \lt 1,\)</span> on a que <span class="process-math">\(x+y \lt 1 + 1 =2\text{.}\)</span></p>
-<p id="p-2067">On a montré que si <span class="process-math">\(x\lt 1\)</span> et <span class="process-math">\(y \lt 1,\)</span> alors <span class="process-math">\(x+y\lt 2.\)</span> Ainsi, si <span class="process-math">\(x+y\geq 2,\)</span> on doit nécessairement avoir que <span class="process-math">\(x\geq 1\)</span> ou <span class="process-math">\(y\geq 1\text{.}\)</span></p>
+<p id="p-2066">On suppose que <span class="process-math">\(\frac{1}{x}\in\,\Q.\)</span> On veut montrer que <span class="process-math">\(x\in\,\Q.\)</span> Puisque <span class="process-math">\(x\in\,\Q^c,\)</span> on sait que <span class="process-math">\(x\neq 0.\)</span> En particulier, <span class="process-math">\(\frac{1}{x}\neq 0\text{.}\)</span></p>
+<p id="p-2067">Par le numéro <a href="" class="xref" data-knowl="./knowl/exo-invQisQ.html" title="Exercice 5.1.4.1">5.1.4.1</a>, on a que <span class="process-math">\(\frac{1}{\frac{1}{x}}\in\,\Q.\)</span> Or, on sait que <span class="process-math">\(\frac{1}{\frac{1}{x}}=x.\)</span> On a donc montrer que <span class="process-math">\(x\in\,\Q\text{.}\)</span></p>
+<p id="p-2068">On a montré que si <span class="process-math">\(\frac{1}{x}\in\,\Q,\)</span> alors <span class="process-math">\(x\in\,\Q.\)</span> Ainsi, si <span class="process-math">\(x\in\,\Q^c,\)</span> on doit nécessairement avoir que <span class="process-math">\(\frac{1}{x}\in\,\Q^c\text{.}\)</span></p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-236"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>Soit <span class="process-math">\(m,\, n\in\,\Z,\)</span> montrer que si <span class="process-math">\(mn\)</span> est pair, alors <span class="process-math">\(m\)</span> est pair ou <span class="process-math">\(n\)</span> est pair.<div class="solutions">
+</div></article><article class="exercise exercise-like" id="exercise-236"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>Soit <span class="process-math">\(x,\, y\in\,\R\text{,}\)</span> montrer que si <span class="process-math">\(x+y\geq 2,\)</span> alors <span class="process-math">\(x\geq 1\)</span> ou <span class="process-math">\(y\geq 1\text{.}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-54" id="hint-54"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-54"><div class="hint solution-like">Par preuve indirecte.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-237"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>Montrer qu'au moins un des nombres réels <span class="process-math">\(a_1,a_2,\dots,a_n\)</span> est plus grand ou égal à la moyenne de ces nombres.<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-55" id="hint-55"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-55"><div class="hint solution-like">Par contradiction.</div></div>
-</div></article><article class="exercise exercise-like" id="exercise-238"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>Montrer que <span class="process-math">\(\sqrt[3]{2}\in\,\Q^c\)</span> et <span class="process-math">\(\sqrt[3]{4}\in\,\Q^c\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-56" id="hint-56"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-56"><div class="hint solution-like">Par contradiction.</div></div>
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-57" id="hint-57"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-57"><div class="hint solution-like">Revoir la preuve  que <span class="process-math">\(\sqrt{2}\in\,\Q^c\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-205" id="solution-205"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-205"><div class="solution solution-like">
+<p id="p-2069">On suppose que <span class="process-math">\(x\lt 1\)</span> et <span class="process-math">\(y \lt 1.\)</span> On veut montrer que  <span class="process-math">\(x+y\lt 2.\)</span> Puisque <span class="process-math">\(x\lt 1\)</span> et <span class="process-math">\(y \lt 1,\)</span> on a que <span class="process-math">\(x+y \lt 1 + 1 =2\text{.}\)</span></p>
+<p id="p-2070">On a montré que si <span class="process-math">\(x\lt 1\)</span> et <span class="process-math">\(y \lt 1,\)</span> alors <span class="process-math">\(x+y\lt 2.\)</span> Ainsi, si <span class="process-math">\(x+y\geq 2,\)</span> on doit nécessairement avoir que <span class="process-math">\(x\geq 1\)</span> ou <span class="process-math">\(y\geq 1\text{.}\)</span></p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-239"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>Montrer par contradiction qu'il n'y a pas de nombre <span class="process-math">\(r\in\,\Q\)</span> tel que <span class="process-math">\(r^3+r+1=0\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-58" id="hint-58"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-58"><div class="hint solution-like">Supposer que <span class="process-math">\(r=\frac{a}{b}\)</span> où  <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span> En remplaçant dans l'équation et en multipliant par <span class="process-math">\(b^3\text{,}\)</span> que peut-on dire sur la parité de <span class="process-math">\(a\)</span> et <span class="process-math">\(b\text{?}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-237"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>Soit <span class="process-math">\(m,\, n\in\,\Z,\)</span> montrer que si <span class="process-math">\(mn\)</span> est pair, alors <span class="process-math">\(m\)</span> est pair ou <span class="process-math">\(n\)</span> est pair.<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-55" id="hint-55"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-55"><div class="hint solution-like">Par preuve indirecte.</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-206" id="solution-206"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-206"><div class="solution solution-like">
+<p id="p-2071">On suppose que <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont tous les deux impairs. On veut alors montrer que le produit <span class="process-math">\(mn\)</span> est également impair.</p>
+<p id="p-2072">Puisque <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont impairs, on a que <span class="process-math">\(m\equiv 1 \mod 2\)</span> et <span class="process-math">\(n\equiv 1 \mod 2.\)</span> Ainsi,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-86">
+\begin{align*}
+mn\amp\equiv  1\cdot 1 \mod 2\\
+\amp\equiv 1 \mod 2
+\end{align*}
+</div>
+<p class="continuation">c'est-à-dire que <span class="process-math">\(mn\)</span> est impair.</p>
+<p id="p-2073">On a montrer que si <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont tous deux impairs, alors <span class="process-math">\(mn\)</span> est également impair. Ainsi, si <span class="process-math">\(mn\)</span> est pair, on doit nécessairement avoir que <span class="process-math">\(m\)</span> ou <span class="process-math">\(n\)</span> est pair.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-240"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>Montrer ou réfuter que le produit d'un nombre rationnel différent de <span class="process-math">\(0\)</span> par un irrationnel est un irrationel.</article><article class="exercise exercise-like" id="exercise-241"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
-<p id="p-2068">Montrer qu'il existe un entier <span class="process-math">\(n\gt 0\)</span> tel que <span class="process-math">\(n=1+\cdots+(n-1)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-242"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(n\)</span> est un entier, alors les quatres énoncés suivants sont équivalents. <ol class="lower-alpha">
+</div></article><article class="exercise exercise-like" id="exercise-238"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>Montrer qu'au moins un des nombres réels <span class="process-math">\(a_1,a_2,\dots,a_n\)</span> est plus grand ou égal à la moyenne de ces nombres.<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-56" id="hint-56"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-56"><div class="hint solution-like">Par contradiction.</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-207" id="solution-207"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-207"><div class="solution solution-like">
+<p id="p-2074">On note <span class="process-math">\(M\)</span> la moyenne des <span class="process-math">\(a_i,\)</span> et on suppose que <span class="process-math">\(a_i\lt M\)</span> pour <span class="process-math">\(i\)</span> allant de <span class="process-math">\(1\)</span> à <span class="process-math">\(n.\)</span></p>
+<p id="p-2075">Par les propriétés de la somme dans <span class="process-math">\(\R,\)</span> on a que <span class="process-math">\(a_1+a_2+\cdots + a_n \lt \underbrace{M+M+\cdots + M}_{n \text{ fois }} =n\cdot M.\)</span></p>
+<p id="p-2076">Ainsi,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+M=\frac{a_1+a_2+\cdots + a_n}{n}\lt\frac{nM}{n}=M\text{.}
+\end{equation*}
+</div>
+<p id="p-2077">On vient donc de montrer que <span class="process-math">\(M\lt M,\)</span> ce qui est une contradiction. Il doit donc nécessairement y avoir un des <span class="process-math">\(a_i\)</span> qui est plus grand ou égal à <span class="process-math">\(M\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exo-prime"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>Soit <span class="process-math">\(p\in\,\N\)</span> un nombre premier et <span class="process-math">\(m,\,n\in\,\N,\text{.}\)</span> Montrer que si <span class="process-math">\(p\)</span> divise <span class="process-math">\(m\cdot n,\)</span> alors <span class="process-math">\(p\)</span> divise <span class="process-math">\(m\)</span> ou <span class="process-math">\(n\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-57" id="hint-57"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-57"><div class="hint solution-like">Par preuve directe, en utilisant passant par <span class="process-math">\(\mod p\text{.}\)</span>
+</div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-58" id="hint-58"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-58"><div class="hint solution-like">Faire la preuve en deux étapes. Soit <span class="process-math">\(p\mid n\)</span> ou bien <span class="process-math">\(p\not\mid n\text{.}\)</span>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-208" id="solution-208"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-208"><div class="solution solution-like">
+<p id="p-2078">On suppose que <span class="process-math">\(p\)</span> divise <span class="process-math">\(m\cdot n,\)</span> et on veut montrer que <span class="process-math">\(p\)</span> divise <span class="process-math">\(m\)</span> ou <span class="process-math">\(n\text{.}\)</span> Si <span class="process-math">\(p\mid n\text{,}\)</span> on a terminer. Si <span class="process-math">\(p\)</span> ne divise pas <span class="process-math">\(n,\)</span> on doit montrer que <span class="process-math">\(p\)</span> divise <span class="process-math">\(m\)</span></p>
+<p id="p-2079">Puisque <span class="process-math">\(p\)</span> ne divise pas <span class="process-math">\(n\)</span> et puisque <span class="process-math">\(p\)</span> est un nombre premier, on a que <span class="process-math">\(\pgcd(n,p)=1.\)</span> Ainsi, on sait que <span class="process-math">\(n\)</span> possède un inverse modulo <span class="process-math">\(p,\)</span> c'est-à-dire qu'il existe un entier <span class="process-math">\(a\)</span> tel que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a\cdot n \equiv 1 \mod p\text{.}
+\end{equation*}
+</div>
+<p id="p-2080">D'un autre côté, puisque <span class="process-math">\(p\)</span> divise <span class="process-math">\(m\cdot n\text{,}\)</span> on a que <span class="process-math">\(n\cdot m \equiv 0 \mod p\text{.}\)</span></p>
+<p id="p-2081">On a alors</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-87">
+\begin{align*}
+n\cdot m \amp\equiv 0 \mod p\\
+\text{d'où } (a n)\cdot m \amp\equiv a \cdot 0 \mod p\\
+(1)m\amp\equiv 0 \mod p\\
+m\amp\equiv 0 \mod p
+\end{align*}
+</div>
+<p class="continuation">c'est-à-dire que <span class="process-math">\(p\mid m\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-240"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>Montrer que <span class="process-math">\(\sqrt[3]{2}\in\,\Q^c\)</span> et <span class="process-math">\(\sqrt[3]{4}\in\,\Q^c\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-59" id="hint-59"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-59"><div class="hint solution-like">Par contradiction.</div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-60" id="hint-60"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-60"><div class="hint solution-like">Revoir la preuve  que <span class="process-math">\(\sqrt{2}\in\,\Q^c\)</span>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-209" id="solution-209"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-209"><div class="solution solution-like">
+<p id="p-2082">Posons <span class="process-math">\(x=\sqrt[3]{2}\text{.}\)</span> On suppose que <span class="process-math">\(x\in\,\Q.\)</span> On peut allors écrire <span class="process-math">\(x=\frac{a}{b},\)</span> avec <span class="process-math">\(a,\,b\in\,\Z,\)</span> et <span class="process-math">\(b\neq 0.\)</span> Sans perdre de généralité, on peut également supposer que cette fraction est réduite, c'est-à-dire que <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span></p>
+<p id="p-2083">On a donc</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html ./knowl/exo-cubeEvenBaseEven.html">
+\begin{equation*}
+2=x^3=\frac{a^3}{b^3}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">\text{ d'où }</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html ./knowl/exo-cubeEvenBaseEven.html">
+\begin{equation*}
+2b^3=a^3\text{.}
+\end{equation*}
+</div>
+<p class="continuation">En particulier, on a que <span class="process-math">\(2\mid a^3\text{.}\)</span> Par l'exercice <a href="" class="xref" data-knowl="./knowl/exo-cubeEvenBaseEven.html" title="Exercice 5.1.4.4">5.1.4.4</a>, on a que <span class="process-math">\(2\mid a\text{.}\)</span> On peut donc écrire <span class="process-math">\(a=2k,\)</span> où <span class="process-math">\(k\)</span> est un entier quelconque. En remplaçant dans la dernière égalité, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html ./knowl/exo-cubeEvenBaseEven.html" id="md-88">
+\begin{align*}
+2 b^3 \amp= (2k)^3=2^3k^3 \\
+b^3 \amp= 2^2k^3
+\end{align*}
+</div>
+<p class="continuation">Ainsi, <span class="process-math">\(b^3\)</span> est pair, et donc <span class="process-math">\(b\)</span> est pair, par <a href="" class="xref" data-knowl="./knowl/exo-cubeEvenBaseEven.html" title="Exercice 5.1.4.4">5.1.4.4</a>.</p>
+<p id="p-2084">On a donc montrer que <span class="process-math">\(2\mid a\)</span> et <span class="process-math">\(2\mid b,\)</span> d'où <span class="process-math">\(2\leq \pgcd(a,b) = 1,\)</span> ce qui est une contradiction. Ainsi, on doit nécessairement avoir <span class="process-math">\(x\in\,\Q^c\text{.}\)</span></p>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-210" id="solution-210"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-210"><div class="solution solution-like">
+<p id="p-2085">Posons <span class="process-math">\(x=\sqrt[3]{4}\text{.}\)</span> On suppose que <span class="process-math">\(x\in\,\Q.\)</span> On peut allors écrire <span class="process-math">\(x=\frac{a}{b},\)</span> avec <span class="process-math">\(a,\,b\in\,\Z,\)</span> et <span class="process-math">\(b\neq 0.\)</span> Sans perdre de généralité, on peut également supposer que cette fraction est réduite, c'est-à-dire que <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span></p>
+<p id="p-2086">On a donc</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html ./knowl/exo-cubeEvenBaseEven.html">
+\begin{equation*}
+4=x^3=\frac{a^3}{b^3}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">\text{ d'où }</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html ./knowl/exo-cubeEvenBaseEven.html">
+\begin{equation*}
+2^2b^3=a^3\text{.}
+\end{equation*}
+</div>
+<p class="continuation">En particulier, on a que <span class="process-math">\(2\mid a^3\text{.}\)</span> Encore une fois, par <a href="" class="xref" data-knowl="./knowl/exo-cubeEvenBaseEven.html" title="Exercice 5.1.4.4">5.1.4.4</a>, on a que <span class="process-math">\(2\mid a\text{.}\)</span> On peut donc écrire <span class="process-math">\(a=2k,\)</span> où <span class="process-math">\(k\)</span> est un entier quelconque. En remplaçant dans la dernière égalité, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html ./knowl/exo-cubeEvenBaseEven.html" id="md-89">
+\begin{align*}
+2^2b^3 \amp= (2k)^3=2^3k^3 \\
+b^3 \amp= 2k^3
+\end{align*}
+</div>
+<p class="continuation">Ainsi, <span class="process-math">\(b^3\)</span> est pair, et donc <span class="process-math">\(b\)</span> est pair, par <a href="" class="xref" data-knowl="./knowl/exo-cubeEvenBaseEven.html" title="Exercice 5.1.4.4">5.1.4.4</a>.</p>
+<p id="p-2087">On a donc montrer que <span class="process-math">\(2\mid a\)</span> et <span class="process-math">\(2\mid b,\)</span> d'où <span class="process-math">\(2\leq \pgcd(a,b) = 1,\)</span> ce qui est une contradiction. Ainsi, on doit nécessairement avoir <span class="process-math">\(x\in\,\Q^c\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-241"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>Montrer par contradiction qu'il n'y a pas de nombre <span class="process-math">\(r\in\,\Q\)</span> tel que <span class="process-math">\(r^3+r+1=0\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-61" id="hint-61"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-61"><div class="hint solution-like">Supposer que <span class="process-math">\(r=\frac{a}{b}\)</span> où  <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span> En remplaçant dans l'équation et en multipliant par <span class="process-math">\(b^3\text{,}\)</span> que peut-on dire sur la parité de <span class="process-math">\(a\)</span> et <span class="process-math">\(b\text{?}\)</span>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-211" id="solution-211"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-211"><div class="solution solution-like">
+<p id="p-2088">On suppose que <span class="process-math">\(r=\frac{a}{b}\)</span> où  <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span> Ainsi, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-90">
+\begin{align*}
+0 \amp= r^3+r+1 \\
+0 \amp= \left(\frac{a}{b}\right)^3+\frac{a}{b}+1 \\
+0 \amp= \frac{a^3}{b^3}+\frac{a}{b} + 1 \\
+0 \amp= a^3+ab^2 +b^3
+\end{align*}
+</div>
+<p id="p-2089">On veut montrer que <span class="process-math">\(a\)</span> et <span class="process-math">\(b\)</span></p>
+<p id="p-2090">Supposons que <span class="process-math">\(b\)</span> soit impair. On a alors</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-sommePuissancePair.html" id="md-91">
+\begin{align*}
+0 = a^3 + ab^2+b^3 \amp\equiv a^3+ a^2 +1  \mod 2\\
+0 \amp\equiv 0+ 1 \mod 2 \text{ par l'exercice }\knowl{./knowl/exo-sommePuissancePair.html}{\text{5.1.4.5}}\\
+0 \amp\equiv 1 \mod 2 
+\end{align*}
+</div>
+<p class="continuation">ce qui est une contradiction. Ainsi, on doit avoir que <span class="process-math">\(b\)</span> est pair.</p>
+<p id="p-2091">Sachant que <span class="process-math">\(b\)</span> est pair, on veut également montrer que <span class="process-math">\(a\)</span> est pair. Puisque <span class="process-math">\(b\)</span> est pair, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html" id="md-92">
+\begin{align*}
+0 = a^3 + ab^2+b^3 \amp\equiv a^3+ a^2\cdot 0+0   \mod 2\\
+0 \amp\equiv a^3   \mod 2
+\end{align*}
+</div>
+<p class="continuation">Ainsi, <span class="process-math">\(a^3\)</span> est pair, d'où <span class="process-math">\(a\)</span> est également pair par <a href="" class="xref" data-knowl="./knowl/exo-cubeEvenBaseEven.html" title="Exercice 5.1.4.4">5.1.4.4</a>.</p>
+<p id="p-2092">Avec tout ce travail, on a montrer que <span class="process-math">\(2\mid a\)</span> et <span class="process-math">\(2\mid b\text{,}\)</span> mais alors <span class="process-math">\(2\leq \pgcd(a,b)=1,\)</span> ce qui est une contradiction. Il n'y a donc pas de solution rationnelle à l'équation <span class="process-math">\(x^3+x+1=0\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exo-pordQQcisQc"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>Montrer ou réfuter que le produit d'un nombre rationnel différent de <span class="process-math">\(0\)</span> par un irrationnel est un irrationel.<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-62" id="hint-62"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-62"><div class="hint solution-like">C'est vrai!</div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-63" id="hint-63"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-63"><div class="hint solution-like">Par contradiction.</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-212" id="solution-212"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-212"><div class="solution solution-like">
+<p id="p-2093">Soit <span class="process-math">\(r\in\,\Q^\ast\)</span> et <span class="process-math">\(x\in\,\Q^c,\)</span> supposons que <span class="process-math">\(rx=y\in\,\Q.\)</span> Puisque <span class="process-math">\(r\neq 0,\)</span> par l'exercice <a href="" class="xref" data-knowl="./knowl/exo-invQisQ.html" title="Exercice 5.1.4.1">5.1.4.1</a>, on sait que <span class="process-math">\(\frac{1}{r}\in\,\Q.\)</span> Ainsi, <span class="process-math">\(x= y \frac{1}{r}\in\,\Q,\)</span> par l'exemple <a href="" class="xref" data-knowl="./knowl/exe-prodQisQ.html" title="Exemple 5.1.6: Le produit de rationnels">5.1.6</a>.</p>
+<p id="p-2094">Ceci est une contradiction, car on avait supposer <span class="process-math">\(x\in\,\Q^c.\)</span> On doit donc avoir <span class="process-math">\(y\in\,\Q^c\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-243"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<p id="p-2095">Montrer qu'il existe un entier <span class="process-math">\(n\gt 0\)</span> tel que <span class="process-math">\(n=1+\cdots+(n-1)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-213" id="solution-213"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-213"><div class="solution solution-like"><p id="p-2096">En posant <span class="process-math">\(n=3,\)</span> on a bien que <span class="process-math">\(n=3=1+2=1+(n-1)\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-244"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>Montrer que si <span class="process-math">\(n\)</span> est un entier, alors les quatres énoncés suivants sont équivalents. <ol class="lower-alpha">
 <li id="li-416"><p id="p-derived-li-416"><span class="process-math">\(n\)</span> est pair,</p></li>
 <li id="li-417"><p id="p-derived-li-417"><span class="process-math">\(n+1\)</span> est impair,</p></li>
 <li id="li-418"><p id="p-derived-li-418"><span class="process-math">\(3n+1\)</span> est impair,</p></li>
 <li id="li-419"><p id="p-derived-li-419"><span class="process-math">\(3n\)</span> est pair.</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-243"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>Montrer ou réfuter qu'il existe un <span class="process-math">\(x\in\,\Q\)</span> et un <span class="process-math">\(y\in\,\Q^c\)</span> tels que <span class="process-math">\(x^y\in\,\Q\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-59" id="hint-59"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-59"><div class="hint solution-like">Considérer <span class="process-math">\(2^\sqrt{2}\text{.}\)</span> Si <span class="process-math">\(2^\sqrt{2}\in\, \Q\text{,}\)</span> on a montrer que c'est vrai. Sinon, que peut-on dire sur <span class="process-math">\({\left(2^\sqrt{2}\right)}^{\sqrt{2}}\text{?}\)</span>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-64" id="hint-64"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-64"><div class="hint solution-like">Montrer que les implications <span class="process-math">\(n+1\equiv 1 \mod 2\rightarrow n \equiv 0 \mod 2\rightarrow 3n \equiv 0 \mod 2\rightarrow 3n+1\equiv 1 \mod 2\rightarrow n+1\equiv 1 \mod 2\)</span> sont vraies.</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-214" id="solution-214"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-214"><div class="solution solution-like">
+<p id="p-2097">Supposons que <span class="process-math">\(n+1\equiv 1 \mod 2,\)</span> par les propriétés des équivalences modulo <span class="process-math">\(2,\)</span> on a que <span class="process-math">\(n \equiv 0 \mod 2\text{.}\)</span></p>
+<p id="p-2098">Supposons que <span class="process-math">\(n \equiv 0 \mod 2,\)</span> par les propriétés des équivalences modulo <span class="process-math">\(2,\)</span> on a que <span class="process-math">\(3n \equiv 0 \mod 2\text{.}\)</span></p>
+<p id="p-2099">Supposons que <span class="process-math">\(3n \equiv 0 \mod 2,\)</span> par les propriétés des équivalences modulo <span class="process-math">\(2,\)</span> on a que <span class="process-math">\(3n+1 \equiv 1 \mod 2\text{.}\)</span></p>
+<p id="p-2100">Supposons que <span class="process-math">\(3n +1  \equiv 1 \mod 2,\)</span> par les propriétés des équivalences modulo <span class="process-math">\(2,\)</span> on a que <span class="process-math">\(3n \equiv 0 \mod 2.\)</span> Ainsi, on a que <span class="process-math">\(3n\)</span> est pair. Par l'exercice <a href="" class="xref" data-knowl="./knowl/exo-prime.html" title="Exercice 5.1.4.10">5.1.4.10</a>, on a que <span class="process-math">\(2\mid n,\)</span> car on sait que <span class="process-math">\(3\)</span> est impair.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-245"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>Montrer ou réfuter que si <span class="process-math">\(x\in\,\Q\)</span> et <span class="process-math">\(y\in\,\Q\text{,}\)</span> alors <span class="process-math">\(x^y\in\,\Q\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-65" id="hint-65"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-65"><div class="hint solution-like">C'est faux!</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-215" id="solution-215"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-215"><div class="solution solution-like"><p id="p-2101">En prenant <span class="process-math">\(x=2\)</span> et <span class="process-math">\(y=\frac{1}{2}\text{,}\)</span> on a que <span class="process-math">\(x^y=\sqrt{2}\in\,\Q^c\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-246"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>Montrer ou réfuter qu'il existe <span class="process-math">\(x\in\,\Q^c\)</span> et <span class="process-math">\(y\in\,\Q^c\)</span> tel que <span class="process-math">\(x^y\in\,\Q\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-66" id="hint-66"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-66"><div class="hint solution-like">C'est vrai!</div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-67" id="hint-67"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-67"><div class="hint solution-like">Considérer <span class="process-math">\(\sqrt{2}^\sqrt{2}\text{.}\)</span> Si <span class="process-math">\(\sqrt{2}^\sqrt{2}\in\,\Q,\)</span> on a terminer, on a montrer que l'énoncé est vrai. Sinon, que peut-on dire de <span class="process-math">\(\left(\sqrt{2}^\sqrt{2}\right)^\sqrt{2}\text{?}\)</span>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-247"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>Montrer ou réfuter qu'il existe un <span class="process-math">\(x\in\,\Q\)</span> et un <span class="process-math">\(y\in\,\Q^c\)</span> tels que <span class="process-math">\(x^y\in\,\Q^c\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-68" id="hint-68"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-68"><div class="hint solution-like">C'est vrai!</div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-69" id="hint-69"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-69"><div class="hint solution-like">Considérer <span class="process-math">\(2^\sqrt{2}\text{.}\)</span> Si <span class="process-math">\(2^\sqrt{2}\in\, \Q^c\text{,}\)</span> on a montrer que c'est vrai. Sinon, que peut-on dire sur <span class="process-math">\({\left(2^\sqrt{2}\right)}^{\frac{\sqrt{2}}{4}}\text{?}\)</span>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-216" id="solution-216"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-216"><div class="solution solution-like">
+<p id="p-2107">On va montrer qu'un tel <span class="process-math">\(x\)</span>  et un tel <span class="process-math">\(y\)</span> existe.</p>
+<p id="p-2108">Tout d'abord, on remarque que <span class="process-math">\(2\in\,\Q\)</span> et <span class="process-math">\(\sqrt{2}\in\,\Q^c.\)</span> Il y a alors deux cas possible. Soit <span class="process-math">\(2^\sqrt{2}\in\,\Q^c,\)</span> ou bien <span class="process-math">\(2^\sqrt{2}\in\,\Q\text{.}\)</span></p>
+<p id="p-2109">Supposons que <span class="process-math">\(2^{\sqrt{2}}\in\,\Q^c,\)</span> alors on peut poser <span class="process-math">\(x=2\)</span> et <span class="process-math">\(y=\sqrt{2}\text{,}\)</span>  et on a terminé.</p>
+<p id="p-2110">Si <span class="process-math">\(2^{\sqrt{2}}\in\,\Q,\)</span> on peut alors poser <span class="process-math">\(x=2^\sqrt{2}\in\,\Q\)</span> et <span class="process-math">\(y= \frac{\sqrt{2}}{4}\in\,\Q^c\)</span> par l'exercise <a href="" class="xref" data-knowl="./knowl/exo-pordQQcisQc.html" title="Exercice 5.1.4.13">5.1.4.13</a>. On a alors <span class="process-math">\(x^y=\left(2^\sqrt{2}\right)^\frac{\sqrt{2}}{4}=2^{\frac{\sqrt{2}\sqrt{2}}{4}}=2^{\frac{1}{2}}=\sqrt{2}\in\,\Q^c\text{.}\)</span></p>
+<p id="p-2111">Ainsi, on n'a pas explicitement trouver un <span class="process-math">\(x\in\,\Q\)</span> et un <span class="process-math">\(y\in\,\Q^c\)</span> tel que <span class="process-math">\(x^y\in\,\Q^c,\)</span> mais on a montrer qu'une telle paire existe.</p>
 </div></div>
 </div></article>
 </div>

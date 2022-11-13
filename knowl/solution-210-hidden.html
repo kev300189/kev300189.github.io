@@ -10,5 +10,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">À l'étape d'induction, l'argument démontrant que <span class="process-math">\(p_1=p_2\)</span> ne fonctionne pas en <span class="process-math">\(k=2.\)</span> En effet, si <span class="process-math">\(k=2,\)</span> alors <span class="process-math">\(k+1=3,\)</span> et <span class="process-math">\(p_1\)</span> est un point de la première et de la deuxième droite, alors que <span class="process-math">\(p_2\)</span> est un point de la deuxième et la troisième droite. Ainsi, seule la deuxième droite contient les points <span class="process-math">\(p_1\)</span> et <span class="process-math">\(p_2,\)</span> ce qui n'est pas une contradiction!</div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<p>Posons <span class="process-math">\(x=\sqrt[3]{4}\text{.}\)</span> On suppose que <span class="process-math">\(x\in\,\Q.\)</span> On peut allors écrire <span class="process-math">\(x=\frac{a}{b},\)</span> avec <span class="process-math">\(a,\,b\in\,\Z,\)</span> et <span class="process-math">\(b\neq 0.\)</span> Sans perdre de généralité, on peut également supposer que cette fraction est réduite, c'est-à-dire que <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span></p>
+<p>On a donc</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html ./knowl/exo-cubeEvenBaseEven.html">
+\begin{equation*}
+4=x^3=\frac{a^3}{b^3}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">\text{ d'où }</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html ./knowl/exo-cubeEvenBaseEven.html">
+\begin{equation*}
+2^2b^3=a^3\text{.}
+\end{equation*}
+</div>
+<p class="continuation">En particulier, on a que <span class="process-math">\(2\mid a^3\text{.}\)</span> Encore une fois, par <a href="" class="xref" data-knowl="./knowl/exo-cubeEvenBaseEven.html" title="Exercice 5.1.4.4">5.1.4.4</a>, on a que <span class="process-math">\(2\mid a\text{.}\)</span> On peut donc écrire <span class="process-math">\(a=2k,\)</span> où <span class="process-math">\(k\)</span> est un entier quelconque. En remplaçant dans la dernière égalité, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html ./knowl/exo-cubeEvenBaseEven.html">
+\begin{align*}
+2^2b^3 \amp= (2k)^3=2^3k^3 \\
+b^3 \amp= 2k^3
+\end{align*}
+</div>
+<p class="continuation">Ainsi, <span class="process-math">\(b^3\)</span> est pair, et donc <span class="process-math">\(b\)</span> est pair, par <a href="" class="xref" data-knowl="./knowl/exo-cubeEvenBaseEven.html" title="Exercice 5.1.4.4">5.1.4.4</a>.</p>
+<p>On a donc montrer que <span class="process-math">\(2\mid a\)</span> et <span class="process-math">\(2\mid b,\)</span> d'où <span class="process-math">\(2\leq \pgcd(a,b) = 1,\)</span> ce qui est une contradiction. Ainsi, on doit nécessairement avoir <span class="process-math">\(x\in\,\Q^c\text{.}\)</span></p>
+</div></body>
 </html>

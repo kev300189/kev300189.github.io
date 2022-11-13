@@ -12,22 +12,19 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.3.3.1</span><span class="period">.</span>
-</h4>
-<p>On pose <span class="process-math">\(P(n):\, 1+ 2 + \cdots + n = \frac{n(n+1)}{2}.\)</span></p>
-<p><em class="alert">Étape de base:</em> On veut montrer que <span class="process-math">\(P(1)\)</span> est vraie. Tout d'abord on remaque que <span class="process-math">\(P(1)\)</span> est la proposition <span class="process-math">\(1=\frac{1(1+1)}{2}\text{.}\)</span> Ceci est clairement vraie, car <span class="process-math">\(\frac{2}{2}=1.\)</span></p>
-<p><em class="alert">Étape d'induction:</em> On suppose maintenant que <span class="process-math">\(P(k)\)</span> est vraie, c'est-à-dire que <span class="process-math">\(1+2+\cdots + k = \frac{k(k+1)}{2},\)</span> où <span class="process-math">\(k\)</span> est un entier positif quelconque. On veut montrer que <span class="process-math">\(P(k+1)\)</span> est vraie.</p>
-<p>On remarque que <span class="process-math">\(P(k+1)\)</span> est la proposition <span class="process-math">\(1+2+\cdots + k + (k+1) = \frac{(k+1)(k+2)}{2}\text{.}\)</span> En partant de l'égalité à gauche, on a</p>
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.1.4.9.1</span><span class="period">.</span>
+</h5>
+<p>On note <span class="process-math">\(M\)</span> la moyenne des <span class="process-math">\(a_i,\)</span> et on suppose que <span class="process-math">\(a_i\lt M\)</span> pour <span class="process-math">\(i\)</span> allant de <span class="process-math">\(1\)</span> à <span class="process-math">\(n.\)</span></p>
+<p>Par les propriétés de la somme dans <span class="process-math">\(\R,\)</span> on a que <span class="process-math">\(a_1+a_2+\cdots + a_n \lt \underbrace{M+M+\cdots + M}_{n \text{ fois }} =n\cdot M.\)</span></p>
+<p>Ainsi,</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-1+2+\dots + k+(k+1) \amp = \frac{k(k+1)}{2} +(k+1) \text{, par H.I.}\\
-\amp= \frac{k(k+1)}{2}+\frac{2(k+1)}{2} = \frac{k(k+1)+2(k+1)}{2}\\
-\amp= \frac{(k+1)(k+2)}{2}
-\end{align*}
+\begin{equation*}
+M=\frac{a_1+a_2+\cdots + a_n}{n}\lt\frac{nM}{n}=M\text{.}
+\end{equation*}
 </div>
-<p>Ainsi, puisqu'on a montrer que la proposition est vraie pour <span class="process-math">\(n=1\text{,}\)</span> et qu'on a montrer que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est également vraie pour <span class="process-math">\(n=k+1\text{,}\)</span> on a montrer que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span></p>
+<p>On vient donc de montrer que <span class="process-math">\(M\lt M,\)</span> ce qui est une contradiction. Il doit donc nécessairement y avoir un des <span class="process-math">\(a_i\)</span> qui est plus grand ou égal à <span class="process-math">\(M\text{.}\)</span></p>
 </div>
-<span class="incontext"><a href="sec_induction.html#solution-207" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec_methodePreuve.html#solution-207" class="internal">Contexte</a></span>
 </body>
 </html>

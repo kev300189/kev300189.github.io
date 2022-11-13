@@ -12,24 +12,20 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.2.3.1</span><span class="period">.</span>
-</h4>
-<p>On considère les <span class="process-math">\(n+1\)</span> nombres suivants: <span class="process-math">\(1,\ 11,\ 111\,\dots,\ 11\dots 1\text{,}\)</span> où le dernier nombre est l'entier formé de <span class="process-math">\(n+1\)</span> chiffres <span class="process-math">\(1\)</span> dans sa représentation en base dix. On numérote <span class="process-math">\(n\)</span> boites de <span class="process-math">\(0\)</span> à <span class="process-math">\(n-1\text{.}\)</span> Ensuite on place chacun des <span class="process-math">\(n+1\)</span> nombres précédents dans la boite étiquettée par sont reste lors de la division par <span class="process-math">\(n\text{.}\)</span></p>
-<p>Puisqu'il y a <span class="process-math">\(n+1\)</span> nombres et <span class="process-math">\(n\)</span> boites (restes), par le principe des tiroirs de Dirichlet, il existe deux de ces entiers, disons <span class="process-math">\(k_1\gt k_2\text{,}\)</span> tels que</p>
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.1.4.8.1</span><span class="period">.</span>
+</h5>
+<p>On suppose que <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont tous les deux impairs. On veut alors montrer que le produit <span class="process-math">\(mn\)</span> est également impair.</p>
+<p>Puisque <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont impairs, on a que <span class="process-math">\(m\equiv 1 \mod 2\)</span> et <span class="process-math">\(n\equiv 1 \mod 2.\)</span> Ainsi,</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-k_1\equiv k_2 \mod n\text{.}
-\end{equation*}
+\begin{align*}
+mn\amp\equiv  1\cdot 1 \mod 2\\
+\amp\equiv 1 \mod 2
+\end{align*}
 </div>
-<p class="continuation">Par la définition équivalente decongruence, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-n\mid (k_1-k_2)\text{.}
-\end{equation*}
+<p class="continuation">c'est-à-dire que <span class="process-math">\(mn\)</span> est impair.</p>
+<p>On a montrer que si <span class="process-math">\(m\)</span> et <span class="process-math">\(n\)</span> sont tous deux impairs, alors <span class="process-math">\(mn\)</span> est également impair. Ainsi, si <span class="process-math">\(mn\)</span> est pair, on doit nécessairement avoir que <span class="process-math">\(m\)</span> ou <span class="process-math">\(n\)</span> est pair.</p>
 </div>
-<p>Ainsi, <span class="process-math">\(k_1-k_2\)</span> est un multiple de <span class="process-math">\(n\)</span> et il s'écrit avec uniquement des <span class="process-math">\(1\)</span>s et des <span class="process-math">\(0\)</span>s.</p>
-</div>
-<span class="incontext"><a href="sec_pidgeonHoles.html#solution-206" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec_methodePreuve.html#solution-206" class="internal">Contexte</a></span>
 </body>
 </html>
