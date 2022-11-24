@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fr-CA">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MaDIR Suites et relations de récurrence</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathématiques discrètes">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_green_plum.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Sauter au contenu</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
+\newcommand{\Z}{\mathbb{Z}}                
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Prob}[1]{\mathbb{P}\left(#1\right)}
+
+\newcommand{\Permutation}[2]{P_{#2}^{#1}}
+\newcommand{\Binomial}[2]{C_{#2}^{#1}}
+
+\newcommand{\Probc}[2]{\mathbb{P}\left(#1~\left|\right .~#2\right)}
+\newcommand{\E}[1]{\mathbb{E}\left(#1\right)}
+\newcommand{\Ec}[2]{\mathbb{E}\left(#1~\left|\right .~#2\right)}
+\newcommand{\indicator}[1]{1{\hskip -2.5 pt}\hbox{I}_{\left\{ {#1} \right\} }}
+\newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\RH}{\overset{\text{\scalebox{0.8}{ R.H.}}}{=}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\vecl}[1]{\overrightarrow{#1}}
+\newcommand{\vecd}[2]{\begin{pmatrix}#1 \\ #2\end{pmatrix}}
+\newcommand{\vecddd}[3]{\begin{pmatrix}#1 \\ #2 \\ #3\end{pmatrix}}
+\newcommand{\pscal}[2]{\vecl{#1}\cdot \vecl{#2}}
+\newcommand{\matcold}[4]{\begin{pmatrix}#1 &amp; #3 \\ #2 &amp; #4\end{pmatrix}}
+\newcommand{\matcolt}[9]{\begin{pmatrix}#1 &amp; #4 &amp; #7 \\ #2 &amp; #5 &amp; #8 \\ #3 &amp; #6 &amp; #9\end{pmatrix}}
+\newcommand{\matsimile}[2]{\overset{\scriptsize L_{#1}\leftrightarrow L_{#2}}{\sim}}
+\newcommand{\matsimils}[2]{\overset{\scriptsize #2L_{#1}\rightarrow L_{#1}}{\sim}}
+\newcommand{\matsimilc}[3]{\overset{\scriptsize #2L_{#1}+L_{#3}\rightarrow L_{#3}}{\sim}}
+\newcommand{\matII}{\begin{pmatrix} 1&amp; 0 \\  0 &amp; 1\end{pmatrix}}
+\newcommand{\matIII}{\begin{pmatrix} 1&amp; 0 &amp; 0\\  0 &amp; 1 &amp; 0 \\ 0&amp; 0&amp; 1\end{pmatrix}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\vspan}{span}
+\DeclareMathOperator{\Det}{det}
+\DeclareMathOperator{\pgcd}{pgcd}
+\DeclareMathOperator{\ppcm}{ppcm}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\CQFD}{\begin{flushright}   
+$\blacksquare$
+\end{flushright}}
+\newcommand{\cqfd}{\begin{flushright}
+$\Box$
+\end{flushright}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes:</span> <span class="subtitle">Version préliminaire</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap-.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-.html" title="Haut">Haut</a><span id="nextbutton" class="next-button button toolbar-item disabled">Suivant</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="chap-.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-.html" title="Haut">Haut</a><span class="next-button button toolbar-item disabled">Suivant</span>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="chap-ensfct.html" data-scroll="chap-ensfct" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a><ul>
+<li><a href="sec-ens.html" data-scroll="sec-ens" class="internal">Les ensembles</a></li>
+<li><a href="sec-opens.html" data-scroll="sec-opens" class="internal">Opérations sur les ensembles</a></li>
+<li><a href="sec-fonctions.html" data-scroll="sec-fonctions" class="internal">Les fonctions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-logique.html" data-scroll="chap-logique" class="internal"><span class="codenumber">2</span> <span class="title">Logique mathématique</span></a><ul>
+<li><a href="sec-logprop.html" data-scroll="sec-logprop" class="internal">La logique propositionnelle</a></li>
+<li><a href="sec-eqlogfnc.html" data-scroll="sec-eqlogfnc" class="internal">Équivalence logique et formes normales</a></li>
+<li><a href="sec-propquant.html" data-scroll="sec-propquant" class="internal">Les propositions quantifiées</a></li>
+<li><a href="sec-circuits.html" data-scroll="sec-circuits" class="internal">Circuits logiques</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-reptheonombres.html" data-scroll="chap-reptheonombres" class="internal"><span class="codenumber">3</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a><ul>
+<li><a href="sec-representation.html" data-scroll="sec-representation" class="internal">Représentation des nombres</a></li>
+<li><a href="sec-divisibilite.html" data-scroll="sec-divisibilite" class="internal">La divisibilité dans les entiers</a></li>
+<li><a href="sec-modulo.html" data-scroll="sec-modulo" class="internal">Arithmétique modulaire</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-denombrement.html" data-scroll="chap-denombrement" class="internal"><span class="codenumber">4</span> <span class="title">Dénombrement</span></a><ul>
+<li><a href="sec_prodSomme.html" data-scroll="sec_prodSomme" class="internal">Méthodes de dénombrement: Principes de base</a></li>
+<li><a href="sec_arrCombinaison.html" data-scroll="sec_arrCombinaison" class="internal">Permutations et combinaisons</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-preuveMath.html" data-scroll="chap-preuveMath" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a><ul>
+<li><a href="sec_methodePreuve.html" data-scroll="sec_methodePreuve" class="internal">Méthodes de preuves</a></li>
+<li><a href="sec_pidgeonHoles.html" data-scroll="sec_pidgeonHoles" class="internal">Principe des tiroirs de Dirichlet</a></li>
+<li><a href="sec_induction.html" data-scroll="sec_induction" class="internal">Les preuves par récurrence (par induction)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-.html" data-scroll="chap-" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a><ul><li><a href="sec-relRecLinHom.html" data-scroll="sec-relRecLinHom" class="active">Suites et relations de récurrence</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Rédigé avec PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-relRecLinHom"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Suites et relations de récurrence</span>
+</h2>
+<section class="introduction" id="intro-appRelRecurrence"><p id="p-2182">Dans plusieurs branches des mathématiques, on étudies des objets placés un à la suite de l'autre selon une règle particulière. On peut penser à la suite des entiers positifs pairs <span class="process-math">\(2,4,6,8,\dots,\)</span> la suite des nombres premiers <span class="process-math">\(2,3,5,7,11,\dots\)</span> et la suite de Fibbonacci <span class="process-math">\(1,1,2,3,4,8,13,\dots.\)</span> Dans le cours, nous allons principalement considérer des suites qui seront définies par récurrence.</p>
+<p id="p-2183">Tout d'abord, on donne la définition formelle d'une suite. Par la suite, on considère les suites définies par récurrence.</p>
+<article class="definition definition-like" id="def-suite"><h3 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">6.1.1</span><span class="period">.</span>
+</h3>
+<p id="p-2184">Une suite est une fonction partant d'un sous ensemble des entiers (souvent <span class="process-math">\(\{0,1,2,\dots\}\)</span> ou <span class="process-math">\(\{1,2,\dots\}\)</span>) vers un ensemble <span class="process-math">\(S\)</span> quelconque. On utilise la notation <span class="process-math">\(a_n\)</span> pour représenter l'image de <span class="process-math">\(n\)</span> par la fonction. On appelle <span class="process-math">\(a_n\)</span> un terme de la suite. On utilisera la notation <span class="process-math">\(\{a_n\}\)</span> pour représenter la suite elle même.</p></article><article class="example example-like" id="exe-suite"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-suite"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-suite"><article class="example example-like"><p id="p-2185">On considère la suite <span class="process-math">\(\{a_n\}\)</span> où <span class="process-math">\(a_n=\frac{1}{n}\text{.}\)</span></p>
+<p id="p-2186">Ainsi, si on écrit les premiers termes de la suite, c'est-à-dire <span class="process-math">\(a_1,a_2,a_3,a_4,\dots\)</span> on a <span class="process-math">\(1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\dots\text{.}\)</span></p></article></div>
+<p id="p-2187">Nous allons maintenant considérer des suites qui seront définies par récurrence. On commence par considérer quelques exemples avant de donner la définition formelle.</p>
+<article class="example example-like" id="exe-relReccurence"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-relReccurence"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-relReccurence"><article class="example example-like"><p id="p-2188">Soit <span class="process-math">\(\{a_n\}\)</span> la suite satisfaisant la relation de récurrence <span class="process-math">\(a_n=a_{n-1}+3\)</span> pour <span class="process-math">\(n=1,2,3,\dots,\)</span> telle que <span class="process-math">\(a_0=4.\)</span> Quels sonts les termes <span class="process-math">\(a_1,a_2\)</span> et <span class="process-math">\(a_3\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-236" id="solution-236"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-236"><div class="solution solution-like"><p id="p-2189">On a que <span class="process-math">\(a_1=a_0+3=4+3=7.\)</span> Ainsi, on a également <span class="process-math">\(a_2=a_1+4=7+4=12.\)</span> Finalement, on a <span class="process-math">\(a_3=a_2+4=12+4=16\text{.}\)</span></p></div></div>
+</div></article></div>
+<article class="example example-like" id="exe-relReccurence2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-relReccurence2"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-relReccurence2"><article class="example example-like"><p id="p-2190">Soit <span class="process-math">\(\{a_n\}\)</span> la suite satisfaisant la relation de récurrence <span class="process-math">\(a_n=a_{n-1}-a_{n-2}\)</span> pour <span class="process-math">\(n=2,3,4,\dots,\)</span> telle que <span class="process-math">\(a_0=2\)</span> et <span class="process-math">\(a_1=6.\)</span> Quels sonts les termes <span class="process-math">\(a_2,a_3\)</span> et <span class="process-math">\(a_4\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-237" id="solution-237"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-237"><div class="solution solution-like"><p id="p-2191">On a que <span class="process-math">\(a_2=a_1 - a_0=6-2=4.\)</span> Ainsi, on a également <span class="process-math">\(a_3=a_2-a_1=4-6=-2.\)</span> Finalement, on a <span class="process-math">\(a_4=a_3-a_2=-2-4=-6\text{.}\)</span></p></div></div>
+</div></article></div>
+<article class="definition definition-like" id="def-relReccurence"><h3 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">6.1.5</span><span class="period">.</span>
+</h3>
+<p id="p-2192">Une relation de recurrence pour une suite <span class="process-math">\(\{a_n\}\)</span> est une expression du terme <span class="process-math">\(a_n\)</span> en fonctions d'un ou plusieurs des termes précédents de la suite, et ce, pour <span class="process-math">\(n\geq n_0 \in\, \N.\)</span> On dira aussi que la suite <span class="process-math">\(\{a_n\}\)</span> est une solution à la relation de récurrence.</p></article><article class="example example-like" id="exe-Fibonacci"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-Fibonacci"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">La suite de Fibonacci.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-Fibonacci"><article class="example example-like"><p id="p-2193">Soit <span class="process-math">\(\{a_n\}\)</span> la suite satisfaisant la relation de récurrence <span class="process-math">\(a_n=a_{n-1}+a_{n-2}\)</span> pour <span class="process-math">\(n=2,3,4,\dots,\)</span> telle que <span class="process-math">\(a_0=1\)</span> et <span class="process-math">\(a_1=1.\)</span> On appelle cette suite la suite de Fibonacci. Quels sont les terme <span class="process-math">\(a_2,a_3,a_4,a_5\)</span> et <span class="process-math">\(a_6\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-238" id="solution-238"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-238"><div class="solution solution-like">En utilisant la relation de récurrence, on trouve que <span class="process-math">\(a_2=2,a_3=3,a_4=5,a_5=8\)</span> et <span class="process-math">\(a_6=13\text{.}\)</span>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exe-factorielle"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-factorielle"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">La factorielle.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-factorielle"><article class="example example-like"><p id="p-2194">On considère la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=n\cdot a_{n-1}\)</span> pour <span class="process-math">\(n=1,2,3,\dots\)</span> et <span class="process-math">\(a_0=1\text{.}\)</span> Quelle est la valeur de <span class="process-math">\(a_n\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-272" id="answer-272"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-272"><div class="answer solution-like"><span class="process-math">\(a_n=n!\)</span></div></div>
+</div></article></div>
+<p id="p-2195">Les relations de récurrence sont utilisées afin de nous aider à dénombrer des situation qui ne peuvent être dénombré facilement à l'aide des techinques vues précédemment.</p>
+<article class="example example-like" id="exe-denombrement"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-denombrement"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.8</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-denombrement"><article class="example example-like"><p id="p-2196">On note <span class="process-math">\(S_n\)</span> le nombre de chaînes binaires de longueur <span class="process-math">\(n\)</span> qui n'ont pas deux <span class="process-math">\(0\)</span> consécutif. Il est difficile de déterminer <span class="process-math">\(S_n,\)</span> mais on peut tout de même trouver une relation de récurrence et des conditions initiales pour <span class="process-math">\(S_n\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-239" id="solution-239"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-239"><div class="solution solution-like">
+<p id="p-2197">Tout d'abord  on remarique que pour <span class="process-math">\(n=1\text{,}\)</span> les deux seules chaînes binaires de longueur <span class="process-math">\(1\)</span> ne peuvent pas contenir deux <span class="process-math">\(0\)</span> consécutifs. Ainsi, <span class="process-math">\(S_1=2\text{.}\)</span></p>
+<p id="p-2198">Ensuite, si <span class="process-math">\(n=2,\)</span> alors il y a une unique chaîne binaire contenant deux <span class="process-math">\(0\)</span> consécutifs. Ainsi, <span class="process-math">\(S_2=4-1=3\text{.}\)</span></p>
+<p id="p-2199">Supposons maintenant que <span class="process-math">\(n\geq 3\text{.}\)</span> On note <span class="process-math">\(S_{n,1}\)</span> le nombre de chaînes binaires de longueur <span class="process-math">\(n\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs et se terminant par un <span class="process-math">\(1.\)</span> De même, on note <span class="process-math">\(S_{n,0}\)</span> le nombre de chaînes binaires de longueur <span class="process-math">\(n\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs et se terminant par un <span class="process-math">\(0.\)</span> Par le principe de la somme, on a <span class="process-math">\(S_n=S_{n,1}+S_{n,0}\)</span></p>
+<p id="p-2200">On remarque que toute chaîne de longueur <span class="process-math">\(n\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs et se terminant par un <span class="process-math">\(1\)</span> est formé d'une chaîne de longueur <span class="process-math">\(n-1\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs. Ainsi, <span class="process-math">\(S_{n,1}=S_{n-1}\text{.}\)</span></p>
+<p id="p-2201">D'un autre côté, une si on considère une chaîne binaire de longueur <span class="process-math">\(n\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs et se terminant par un <span class="process-math">\(0,\)</span> alors cette chaîne doit en fait se terminer par <span class="process-math">\(10,\)</span> car sinon elle aurait deux <span class="process-math">\(0\)</span> consécutifs. Ainsi, toute chaîne de longueur <span class="process-math">\(n\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs et se terminant par un <span class="process-math">\(10\)</span> est formé d'une chaîne de longueur <span class="process-math">\(n-2\)</span> n'ayant pas deux <span class="process-math">\(0\)</span> consécutifs. On a donc <span class="process-math">\(S_{n,0}=S_{n-2}\text{.}\)</span></p>
+<p id="p-2202">Par ce qui précède, on a <span class="process-math">\(S_n=S_{n-1}+S_{n-2},\)</span> avec <span class="process-math">\(S_1=2\)</span> et <span class="process-math">\(S_2=3\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exe-fctSurj"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-fctSurj"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.9</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-fctSurj"><article class="example example-like">Soit <span class="process-math">\(A\)</span> un ensemble de cardinalité <span class="process-math">\(n\)</span> et <span class="process-math">\(B=\{1,2,\dots,k\}\)</span> avec <span class="process-math">\(n\geq k\text{.}\)</span> On note <span class="process-math">\(C(n,k)\)</span> le nombre de fonction surjective <span class="process-math">\(f:A\to B\text{.}\)</span> Trouvons une relation de récurrence pour <span class="process-math">\(C(n,k)\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-273" id="answer-273"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-273"><div class="answer solution-like"><p id="p-2203"><span class="process-math">\(C(n,k)=k\left(C(n-1,k)+C(n-1,k-1)\right)\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-240" id="solution-240"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-240"><div class="solution solution-like">
+<p id="p-2204">On commence par considérer un élément particulier <span class="process-math">\(a\in\,A\)</span> et on choisit la valeur de <span class="process-math">\(f(a)\text{.}\)</span> Il y a <span class="process-math">\(k\)</span> choix possible. Notons <span class="process-math">\(f(a)=b\in\,B.\)</span> Il reste alors uniquement à déterminer les valeurs de <span class="process-math">\(f\)</span> sur <span class="process-math">\(A-\{a\}\text{.}\)</span></p>
+<p id="p-2205">Par la suite, on sépaere en deux cas. Soit <span class="process-math">\(a\)</span> est la seule préimage de <span class="process-math">\(b\text{,}\)</span> soit il y a au moins une autre préimage pour <span class="process-math">\(b\text{.}\)</span></p>
+<p id="p-2206">Dans le premier cas, la restriction de <span class="process-math">\(f\)</span> sur <span class="process-math">\(A-\{a\}\)</span> est une fonction surjective vers l'ensemble <span class="process-math">\(B-\{b\}\text{.}\)</span> Il y aura donc <span class="process-math">\(C(n-1,k-1)\)</span> choix possibles.</p>
+<p id="p-2207">Dans le deuxième cas, la restriction de <span class="process-math">\(f\)</span> sur <span class="process-math">\(A-\{a\}\)</span> est une fonction surjective vers l'ensemble <span class="process-math">\(B\text{.}\)</span> Il y aura donc <span class="process-math">\(C(n-1,k)\)</span> choix possibles.</p>
+<p id="p-2208">Ainsi, par le principe du produit et de la somme, on a <span class="process-math">\(C(n,k)=k\left(C(n-1,k)+C(n-1,k-1)\right)\text{.}\)</span></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subs-relRecLinHom"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">6.1.1</span> <span class="title">Relations de récurrence  et forme générale</span>
+</h3>
+<section class="introduction" id="intro-relRecLinHom"><p id="p-2209">Dans les exemples précédents, nous avons montrer qu'il est souvent plus facile de trouver une relation de récurrence pour une suite <span class="process-math">\(\{a_n\}\)</span> que de trouver sa forme générale. On peut extraire certaines informations sur ces suites à l'aide de la relation de récurrence (limite de la suite, croissance/décroissance, bornes, etc.).</p>
+<p id="p-2210">Cependant, il est souvent très long (même pour un ordinateur) de déterminer le <span class="process-math">\(n^{\text{ième}}\)</span> terme d'une suite <span class="process-math">\(\{a_n\}\)</span> lorsque <span class="process-math">\(n\)</span> est assez grand.  Heureusement, on peut utiliser la relation de récurrence afin de nous aider à trouver la forme générale.</p>
+<p id="p-2211">Nous allons montrer quelques exemples pour lesquels on peut facilement trouver le terme général d'une suite à partir de la relation de récurrence. Par la suite, on étudiera une classe particulière de relations de récurrence pour lesquelles on connait la forme générale. Il s'agit des relations de récurrence linéaires homogènes (à coefficients constants). On étudiera en particulier celles d'ordre <span class="process-math">\(2\text{.}\)</span></p></section><article class="example example-like" id="exe-formGen1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-formGen1"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Forme générale d'une relation de récurrence.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-formGen1"><article class="example example-like"><p id="p-2212">On considère la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=a_{n-1} +3\)</span> pour <span class="process-math">\(n\geq 1\)</span> et <span class="process-math">\(a_0=4\text{.}\)</span> Qelle est la forme générale de <span class="process-math">\(a_n\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-274" id="answer-274"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-274"><div class="answer solution-like"><span class="process-math">\(a_n=4+3n\text{.}\)</span></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-241" id="solution-241"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-241"><div class="solution solution-like">
+<p id="p-2213">On calcul <span class="process-math">\(a_n\)</span> pour les premières valeurs de <span class="process-math">\(n,\)</span> mais en essayant de ne pas trop simplifier l'expression. On a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-97">
+\begin{align*}
+a_1\amp=a_0+3=4+3\\
+a_2\amp=a_1+3=(4+3)+3=4+3(2)\\
+a_3\amp=a_2+3=(4+3(2))+3=4+3(3)\\
+a_4\amp=a_3+3=(4+3(3))+3=4+3(4)\\
+\amp\vdots\\
+a_n\amp=a_{n-1}+3=(4+3(n-1))+3=4+3(n).
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exe-formGen2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-formGen2"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Forme générale d'une relation de récurrence: une deuxième stratégie.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-formGen2"><article class="example example-like"><p id="p-2214">On considère la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=(1,11)a_{n-1} \)</span> pour <span class="process-math">\(n\geq 1\)</span> et <span class="process-math">\(a_0=100\text{.}\)</span> Qelle est la forme générale de <span class="process-math">\(a_n\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-275" id="answer-275"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-275"><div class="answer solution-like"><span class="process-math">\(a_n=100(1,11)^n\text{.}\)</span></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-242" id="solution-242"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-242"><div class="solution solution-like">
+<p id="p-2215">On écrit <span class="process-math">\(a_n\)</span> <span class="process-math">\(a_{n-1}.\)</span> Par la suite, on développe <span class="process-math">\(a_{n-1}\)</span> en fonction de <span class="process-math">\(a_{n-2}.\)</span> Ici, en remplaçant <span class="process-math">\(n\)</span> par <span class="process-math">\(n-1\)</span> dans la relation de récurrence, on a <span class="process-math">\(a_{n-1}=(1,11)a_{n-2}\text{.}\)</span> On poursuit de cette manière jusqu'à obtenir une expression de <span class="process-math">\(a_n\)</span> qui dépend uniquement de <span class="process-math">\(a_0\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-98">
+\begin{align*}
+a_n\amp=(1,11)a_{n-1}\\
+\amp=(1,11)(1,11)a_{n-2}=(1,11)^2 a_{n-2}\\
+\amp=(1,11)^2(1,11)a_{n-3}=(1,11)^3 a_{n-3}\\
+\amp=(1,11)^3(1,11)a_{n-4}=(1,11)^4 a_{n-4}\\
+\amp\vdots\\
+\amp=(1,11)^{n-1}(1,11)a_{0}=(1,11)^n a_{0}=100(1,11)^n
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<p id="p-2216">Les deux exemples précédant sont des exemples de relations de récurrence linéaire ( non-homogène pour <a href="" class="xref" data-knowl="./knowl/exe-formGen1.html" title="Exemple 6.1.10: Forme générale d'une relation de récurrence">6.1.10</a>, et homogène pour <a href="" class="xref" data-knowl="./knowl/exe-formGen2.html" title="Exemple 6.1.11: Forme générale d'une relation de récurrence: une deuxième stratégie">6.1.11</a>). On regarde un dernier exemple, qui sera un peu plus complexe que les précédent.</p>
+<p id="p-2217">Le reste de la section sera dédiée à l'étude des relations de récurence linéaire homogène, et on gardera en tête la forme de la solution de l'exemple <a href="" class="xref" data-knowl="./knowl/exe-formGen2.html" title="Exemple 6.1.11: Forme générale d'une relation de récurrence: une deuxième stratégie">6.1.11</a> afin de trouver la forme générale pour ce genre de relations. On étudiera les relation non-homogène dans la prochaine section</p>
+<article class="example example-like" id="exe-formGenNonLin"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-formGenNonLin"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-formGenNonLin"><article class="example example-like">On considère la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=-a_{n-1}a_{n-2} \)</span> pour <span class="process-math">\(n\geq 2,\)</span><span class="process-math">\(a_0=1\)</span> et <span class="process-math">\(a_1=-1\text{.}\)</span> Qelle est la forme générale de <span class="process-math">\(a_n\text{?}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-276" id="answer-276"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-276"><div class="answer solution-like"><p id="p-2218"><span class="process-math">\(a_n=(-1)^{r_n},\)</span> où <span class="process-math">\(r_n= n \mod 3\)</span> est le reste de la division de <span class="process-math">\(n\)</span> par <span class="process-math">\(3\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-243" id="solution-243"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-243"><div class="solution solution-like">
+<p id="p-2219">On calcul <span class="process-math">\(a_n\)</span> pour quelques valeurs de <span class="process-math">\(n\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-99">
+\begin{align*}
+a_2\amp=-a_1a_{0}=-(1)(-1)=1\\
+a_3\amp=-a_2a_{1}=-(-1)(1)=1\\
+a_4\amp=-a_3a_{2}=-(1)(1)=-1\\
+a_5\amp=-a_4a_{3}=-(-1)(1)=1\\
+a_6\amp=-a_5a_{4}=-(1)(-1)=1\\
+a_7\amp=-a_6a_{5}=-(1)(1)=-1\\
+a_8\amp=-a_7a_{6}=-(-1)(1)=1\\
+a_9\amp=-a_8a_{7}=-(1)(-1)=1\\
+\amp\vdots.
+\end{align*}
+</div>
+<p class="continuation">Ici, il faut réfléchir un peu plus pour trouver la forme générale en raison du comportement du signe de <span class="process-math">\(a_n,\)</span> mais on peut se convaincre que <span class="process-math">\(a_n=(-1)^{r_n},\)</span> où <span class="process-math">\(r_n= n \mod 3\)</span> est le reste de la division de <span class="process-math">\(n\)</span> par <span class="process-math">\(3\text{.}\)</span></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subs-recLinHom"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">6.1.2</span> <span class="title">Relations de récurrence linéaires homogènes</span>
+</h3>
+<section class="introduction" id="intro-recLinHom"><p id="p-2220">Tel que mentionnée, la plupart des relation de récurrence sont difficile à résoudre. Nous donnons ici les définitions pour certaines de ces relations pour lesquelles on connait la solution.</p></section><article class="definition definition-like" id="def-recLinHom"><h4 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">6.1.13</span><span class="period">.</span>
+</h4>Une relation de récurrence linéaire homogène (à coefficient constant) est une relation de la forme:<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n = c_1a_{n-1}+c_{2}a_{n-2}+\cdots + c_ka_{n-k}
+\end{equation*}
+</div>où les <span class="process-math">\(c_i\)</span> sont des constantes réeles, et <span class="process-math">\(c_{n-k}\neq 0.\)</span> On dira que cette relation est d'ordre <span class="process-math">\(k\text{.}\)</span></article><article class="example example-like" id="exe-RecLinHom1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-RecLinHom1"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.14</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-RecLinHom1"><article class="example example-like">Les relations de récurrence suivantes sont linéaires homogènes<div class="displaymath process-math" data-contains-math-knowls="" id="md-100">
+\begin{align*}
+a_n\amp= a_{n-1}+a_{n-2} \text{ (d'ordre 2)}\\
+a_n\amp= (1,11)a_{n-1} \text{ (d'ordre 1)}\\
+a_{n+1}\amp= 2a_{n} + 4a_{n-1}+a_{n-3}+a_{n-5}+3a_{n-6} \text{ (d'ordre 7)}
+\end{align*}
+</div></article></div>
+<p id="p-2221">Voici quelques exemples de relations qui ne sont pas linéaire homogène (ou n'ont pas des coefficients constants).</p>
+<article class="example example-like" id="exe-noRecLinHom"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-noRecLinHom"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.15</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-noRecLinHom"><article class="example example-like"><p id="p-2222">Les relations suivantes ne sont pas linéaires homogènes.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-101">
+\begin{align*}
+a_n \amp= a_{n-1}a_{n-2} \text{, elle n'est pas linéaire;} \\
+a_n \amp= a_{n-1}+a_{n-2}+5 \text{, elle n'est pas homogène.} 
+\end{align*}
+</div>
+<p id="p-2223">La relation suivante est linéaire homogène, mais n'est pas à coefficients constants.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_{n}=na_{n-1}+\cos\left(\frac{n\pi}{2}\right)a_{n-2}\text{.}
+\end{equation*}
+</div></article></div></section><section class="subsection" id="subs-solLinHom"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">6.1.3</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d'odre 2: Cas 1</span>
+</h3>
+<section class="introduction" id="introduction-212"><p id="p-2224">On a déjà remarqué que, pour une relation de récurrence donnée, il peut y avoir plusieurs suites qui la satisfont. Si on connait également quelques termes (disons <span class="process-math">\(a_0,a_1,\dots ,a_k\)</span>) alors la solution devient alors unique.</p>
+<p id="p-2225">On veut trouver la forme générale des solutions pour une relation de récurence linéaire homogène d'ordre <span class="process-math">\(2,\)</span> c'est-à-dire une relation de la forme <span class="process-math">\(a_n=c_1a_{n-1}+c_2a_{n-2}\text{.}\)</span> On s'inspire de l'exemple <a href="" class="xref" data-knowl="./knowl/exe-formGen2.html" title="Exemple 6.1.11: Forme générale d'une relation de récurrence: une deuxième stratégie">6.1.11</a>.</p></section><article class="example example-like" id="exe-solLinHomDeux"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-solLinHomDeux"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Une première solution à une relation de récurrence linéaire homogène d'ordre 2.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-solLinHomDeux"><article class="example example-like">Soit la relation <span class="process-math">\(a_n=c_1a_{n-1}+c_2a_{n-2}\text{,}\)</span> est-ce possible que la suite  au terme général <span class="process-math">\(a_n=r^n\)</span> soit une solution à cette relation? Si oui, sous quelle(s) condition(s)?<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-244" id="solution-244"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-244"><div class="solution solution-like">
+<p id="p-2226">On suppose que <span class="process-math">\(a_n=r_1^n\)</span> est une solution à la relation de récurrence, où <span class="process-math">\(r_1\neq 0.\)</span> Ici, on rejette le cas <span class="process-math">\(r_1=0,\)</span> car il s'agit de la solution triviale. En particuler, on a <span class="process-math">\(a_{n-1}=r_1^{n-1}\)</span> et <span class="process-math">\(a_{n-2}=r_1^{n-2}\text{.}\)</span> Ainsi, en remplaçant dans l'équation, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-102">
+\begin{align*}
+r_1^n\amp=c_1r_1^{n-1}+ c_2r_1^{n-2} \\
+0\amp=r_1^n-c_1r_1^{n-1} -c_2r_1^{n-2} = r_1^{n-2}\left(r_1^2-c_1r_1-c_2 \right)\\
+0\amp=r_1^2-c_1r_1-c_2 \text{ car } r_1\neq 0.
+\end{align*}
+</div>
+<p class="continuation">Ainsi, on a que si <span class="process-math">\(r_1\)</span> est une racine du polynôme <span class="process-math">\(r^2-c_1r-c_2\text{,}\)</span> alors <span class="process-math">\(a_n= r_1^n\)</span> est effectivement une solution à la relation de récurrence.</p>
+</div></div>
+</div></article></div>
+<article class="definition definition-like" id="def-equCar"><h4 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">6.1.17</span><span class="period">.</span><span class="space"> </span><span class="title">Équation caractéristique.</span>
+</h4>
+<p id="p-2227">Soit <span class="process-math">\(a_n=c_1a_{n-1}+c_2a_{n-2}\)</span> une relation de récurrence, l'équation caractéristique associée à cette relation est l'équation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+0=r^2-c_1r-c_2 
+\end{equation*}
+</div></article><p id="p-2228">Puisque l'équation caractéristique d'une relation de récurrence linéaire d'Ordre 2 est un polynôme d'ordre 2, on risque donc d'obtenir deux solutions différentes à l'aide de l'équation caractéristiques. Peut-on en obtenir d'avantage?</p>
+<article class="example example-like" id="exe-equCarPlusieursSol"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-equCarPlusieursSol"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.18</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-equCarPlusieursSol"><article class="example example-like"><p id="p-2229">On considère la relation de récurrence <span class="process-math">\(a_n=a_{n-1}+2a_{n-2}.\)</span> Trouvons (si elles existes) les deux solutions <span class="process-math">\(r_1\)</span> et <span class="process-math">\(r_2\)</span> à son équation caractéristique. Vérifions également que la suite <span class="process-math">\(a_n=3r_1^n+4r_2^n\)</span> satisfait la relation de récurrence.</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-245" id="solution-245"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-245"><div class="solution solution-like">
+<p id="p-2230">L'équation caractéristique est obtenue en remplaçant <span class="process-math">\(a_n\)</span> par <span class="process-math">\(r^n\text{.}\)</span> On a alors <span class="process-math">\(0=r^2-r-2=(r-2)(r+1)\text{.}\)</span></p>
+<p id="p-2231">Ainsi, les deux solutions à cette équation sont <span class="process-math">\(r_1=2\)</span> et <span class="process-math">\(r_2=-1.\)</span> En particulier, on a que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-103">
+\begin{align*}
+r_1^{n}\amp=r_1^{n-1} +2r_1^{n-2}\\
+r_2^{n}\amp=r_2^{n-1} +2r_2^{n-2}
+\end{align*}
+</div>
+<p id="p-2232">Pour vérifier que <span class="process-math">\(a_n=3r_1^n+4r_2^n\)</span> satisfait la relation de récurrence, on doit vérivier que <span class="process-math">\(a_n=a_{n-1}+2a_{n-2}\text{.}\)</span></p>
+<p id="p-2233">D'une côté, on a que <span class="process-math">\(a_n=3r_1^n+4r_2^n\)</span> (c'est ce qu'on a supposé)</p>
+<p id="p-2234">De l'autre côté, on a que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-104">
+\begin{align*}
+a_{n-1}+2a_{n-2}\amp= (3r_1^{n-1}+4r_2^{n-1})+2(3r_1^{n-2}+4r_2^{n-2})\\
+\amp= (3r_1^{n-1}+3\cdot 2r_1^{n-2})+(4r_2^{n-2}+4\cdot 2r_2^{n-2})\\
+\amp= 3(r_1^{n-1}+ 2r_1^{n-2})+4(r_2^{n-2}+ 2r_2^{n-2})\\
+\amp= 3r_1^n+4r_2^{n}=a_n
+\end{align*}
+</div>
+<p class="continuation">Ainsi, on a bien que <span class="process-math">\(a_n=3r_1^n+4r_2^n\)</span> satisfait à la relation de récurrence.</p>
+</div></div></article></div>
+<p id="p-2235">En relisant la solution à l'exemple précédent, on constate que les valeurs des constantes devant les <span class="process-math">\(r_i\)</span> n'ont pas affecté nos démarches. La seule chose qu'on a utilisée, c'est le fait que les <span class="process-math">\(r_i\)</span> sont des solutions à l'équations caractéristiques.</p>
+<p id="p-2236">En fait, on peut même montrer que toutes les solutions seront de cette forme.</p>
+<article class="proposition theorem-like" id="prop-solRecLinHomDeux"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.1.19</span><span class="period">.</span><span class="space"> </span><span class="title">Solution aux relations de récurrence linéaires homogènes d'ordre <span class="process-math">\(2\text{:}\)</span> cas 1.</span>
+</h4>
+<p id="p-2237">Soit <span class="process-math">\(a_n=c_1a_{n-1}+c_2a_{n-2}\)</span> une relation de récurrence. Supposons que <span class="process-math">\(r_1\)</span> et <span class="process-math">\(r_2\)</span> sont deux solutions distinctes à l'équation caractéristique <span class="process-math">\(0=r^2-c_1r-c_2\text{.}\)</span></p>
+<p id="p-2238">Dans ce cas, la suite <span class="process-math">\(\{a_n\}\)</span> satisfait la relation de récurrence si et seulement si</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n=\alpha_1r_1^n+\alpha_2r_2^n,
+\end{equation*}
+</div>
+<p class="continuation">où les <span class="process-math">\(\alpha_i\)</span> sont des constantes réelles.</p>
+<p id="p-2239">Pour déterminer la valeur de <span class="process-math">\(\alpha_1\)</span> et <span class="process-math">\(\alpha_2,\)</span> on doit connaître la valeur de deux termes consécutifs de la suite <span class="process-math">\(\{a_n\}\text{.}\)</span></p></article><article class="example example-like" id="exe-solLinHom1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-solLinHom1"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Une première solution.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-solLinHom1"><article class="example example-like"><p id="p-2240">Trouver la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=a_{n-1}+2a_{n-2},\)</span> sachant que <span class="process-math">\(a_0=5\)</span> et <span class="process-math">\(a_1=11\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-277" id="answer-277"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-277"><div class="answer solution-like"><span class="process-math">\(a_n=\frac{16}{3}(2)^n+\frac{-1}{3}(-1)^n\)</span></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-246" id="solution-246"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-246"><div class="solution solution-like">
+<p id="p-2241">À l'exemple <a href="" class="xref" data-knowl="./knowl/exe-equCarPlusieursSol.html" title="Exemple 6.1.18">6.1.18</a>, on a déjà montrer que l'équation caractéristique de cette relation possède <span class="process-math">\(r_1=2\)</span> et <span class="process-math">\(r_2=(-1)\)</span> comme solution.</p>
+<p id="p-2242">Par la proposition <a href="" class="xref" data-knowl="./knowl/prop-solRecLinHomDeux.html" title="Proposition 6.1.19: Solution aux relations de récurrence linéaires homogènes d'ordre 2 cas 1">6.1.19</a>, on sait que la solution devra avoir la forme</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-solRecLinHomDeux.html" id="eq-formGen">
+\begin{equation}
+a_n=\alpha_1r_1^n+\alpha_2r_2^n=\alpha_1(2)^n+\alpha_2(-1)^n\text{.}\tag{6.1}
+\end{equation}
+</div>
+<p id="p-2243">Ainsi, puisque <span class="process-math">\(a_0=5\)</span> et <span class="process-math">\(a_1=11,\)</span> en remplaçant <span class="process-math">\(n\)</span> par <span class="process-math">\(0\)</span> et <span class="process-math">\(1\)</span> dans <a href="" class="xref" data-knowl="./knowl/eq-formGen.html" title="Équation 6.1">(6.1)</a>, on obtient un système d'équations suivants.</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-formGen.html" id="md-105">
+\begin{align*}
+5\amp= \alpha_1 (2)^0+\alpha_2(-1)^0=\alpha_1+\alpha_2;\\
+11\amp= \alpha_1 (2)^1+\alpha_2(-1)^1=2\alpha_1-\alpha_2.
+\end{align*}
+</div>
+<p class="continuation">En résolvant ce sytème d'équations, on a que <span class="process-math">\(\alpha_1=\frac{16}{3}\)</span> et <span class="process-math">\(\alpha_2=\frac{-1}{3}\text{.}\)</span></p>
+<p id="p-2244">Ainsi, on a que la suite <span class="process-math">\(\{a_n\}\)</span> est la suite dont le terme général est <span class="process-math">\(a_n=\frac{16}{3}(2)^n+\frac{-1}{3}(-1)^n\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exe-solLinHom2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-solLinHom2"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Une deuxième solution.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-solLinHom2"><article class="example example-like"><p id="p-2245">Trouver la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=5a_{n-1}-6a_{n-2},\)</span> sachant que <span class="process-math">\(a_0=1\)</span> et <span class="process-math">\(a_1=0\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-278" id="answer-278"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-278"><div class="answer solution-like"><span class="process-math">\(a_n=3(2)^n-2(3)^n\)</span></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-247" id="solution-247"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-247"><div class="solution solution-like">
+<p id="p-2246">L'équation caractéristique de cette relation est <span class="process-math">\(0=r^2-5r+6=(r-2)(r-3).\)</span> Ainsi, on pose <span class="process-math">\(r_1=2\)</span> et <span class="process-math">\(r_2=3\)</span> les deux solutions à cette équation.</p>
+<p id="p-2247">Par la proposition <a href="" class="xref" data-knowl="./knowl/prop-solRecLinHomDeux.html" title="Proposition 6.1.19: Solution aux relations de récurrence linéaires homogènes d'ordre 2 cas 1">6.1.19</a>, on sait que la solution devra avoir la forme</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-solRecLinHomDeux.html" id="eq-formGenn">
+\begin{equation}
+a_n=\alpha_1r_1^n+\alpha_2r_2^n=\alpha_1(2)^n+\alpha_2(3)^n\text{.}\tag{6.2}
+\end{equation}
+</div>
+<p id="p-2248">Ainsi, puisque <span class="process-math">\(a_0=1\)</span> et <span class="process-math">\(a_1=0,\)</span> en remplaçant <span class="process-math">\(n\)</span> par <span class="process-math">\(0\)</span> et <span class="process-math">\(1\)</span> dans <a href="" class="xref" data-knowl="./knowl/eq-formGenn.html" title="Équation 6.2">(6.2)</a>, on obtient le système d'équations suivants.</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-formGenn.html" id="md-106">
+\begin{align*}
+1\amp=\alpha_1+\alpha_2;\\
+0\amp= 2\alpha_1 +3\alpha_2.
+\end{align*}
+</div>
+<p class="continuation">En résolvant ce sytème d'équations, on a que <span class="process-math">\(\alpha_1=3\)</span> et <span class="process-math">\(\alpha_2=-2\text{.}\)</span></p>
+<p id="p-2249">Ainsi, on a que la suite <span class="process-math">\(\{a_n\}\)</span> est la suite dont le terme général est <span class="process-math">\(a_n=3(2)^n-2(3)^n\text{.}\)</span></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subs-solLinHom2"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">6.1.4</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d'odre 2: Cas 2</span>
+</h3>
+<section class="introduction" id="introduction-213"><p id="p-2250">Jusqu'à maintenant, les équations caractéristiques que l'on a rencontrées avaient des solutions distinctes. Nous allons maintenant regarder le cas où il y a une seule solution.</p></section><article class="example example-like" id="exe-LinHomMult"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-LinHomMult"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Équations caractéristiques à une seule racine.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-LinHomMult"><article class="example example-like"><p id="p-2251">Trouver l'unique racine <span class="process-math">\(r_1\)</span> à l'Équation caractéristique de la relation de récurrence <span class="process-math">\(a_n=6a_{n-1}-9a_{n-2}\)</span></p>
+<p id="p-2252">Vérifier que si <span class="process-math">\(a_n=nr_1^n,\)</span> alors la suite <span class="process-math">\(\{a_n\}\)</span> satisfait à la relation de récurrence.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-248" id="solution-248"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-248"><div class="solution solution-like">
+<p id="p-2253">L'équation caractéristique est donnée par <span class="process-math">\(0=r^2-6r+9=(r-3)^2.\)</span> Ainsi, l'unique solution à cette équation est <span class="process-math">\(r_1=3.\)</span> Par définition, on a alors que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="men-4">
+\begin{equation}
+r_1^{n}=6r_1^{n-1} -9 r_1^{n-2}.\tag{6.3}
+\end{equation}
+</div>
+<p class="continuation">On peut le vérifier en remplaçant <span class="process-math">\(r_1\)</span> par <span class="process-math">\(3,\)</span> c'est-à-dire en vérifiant que</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq-caract">
+\begin{equation}
+3^{n}=6(3)^{n-1} -9 (3)^{n-2}.\tag{6.4}
+\end{equation}
+</div>
+<p id="p-2254">Pour vérifier que <span class="process-math">\(a_n=n(3)^n\)</span> satisfait à la relation de récurrence, on doit vérifier que <span class="process-math">\(n3^n=6(n-1)3^{n-1}-9(n-2)3^{n-2}\text{.}\)</span></p>
+<p id="p-2255">Or, on a que</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-caract.html" id="md-107">
+\begin{align*}
+6(n-1)3^{n-1}-9(n-2)3^{n-2}\amp= 6n(3)^{n-1}-6(3)^{n-1}-9n(3)^{n-2} +2\cdot 9(3)^{n-2} \\
+\amp= \left(6n(3)^{n-1}-9n(3)^{n-2}\right)+ \left( -6(3)^{n-1} +2\cdot 9(3)^{n-2} \right)\\
+\amp= n\left(6(3)^{n-1}-9(3)^{n-2}\right)+ \left( -6\cdot 3(3)^{n-2} +2\cdot 9(3)^{n-2} \right)\\
+\amp= n\left(3^n\right)+ \left( 0 \right) \text{ par } \knowl{./knowl/eq-caract.html}{\text{(6.4)}} \\
+\amp= n3^n=a_n.
+\end{align*}
+</div>
+</div></div>
+</div></article></div>
+<p id="p-2256">On a une nouvelle version de la proposition <a href="" class="xref" data-knowl="./knowl/prop-solRecLinHomDeux.html" title="Proposition 6.1.19: Solution aux relations de récurrence linéaires homogènes d'ordre 2 cas 1">6.1.19</a> dans le cas où l'équation caractéristique ne possède q'une seule racine.</p>
+<article class="proposition theorem-like" id="prop-solRecLinHomDeuxMult"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Solution aux relations de récurrence linéaires homogènes d'ordre <span class="process-math">\(2\text{:}\)</span> cas 2.</span>
+</h4>
+<p id="p-2257">Soit <span class="process-math">\(a_n=c_1a_{n-1}+c_2a_{n-2}\)</span> une relation de récurrence. Supposons que <span class="process-math">\(r_1\)</span> est l'unique solution à l'équation caractéristique <span class="process-math">\(0=r^2-c_1r-c_2\text{.}\)</span></p>
+<p id="p-2258">Dans ce cas, la suite <span class="process-math">\(\{a_n\}\)</span> satisfait la relation de récurrence si et seulement si</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n=\alpha_1r_1^n+\alpha_2(nr_1^n),
+\end{equation*}
+</div>
+<p class="continuation">où les <span class="process-math">\(\alpha_i\)</span> sont des constantes réelles.</p>
+<p id="p-2259">Pour déterminer la valeur de <span class="process-math">\(\alpha_1\)</span> et <span class="process-math">\(\alpha_2,\)</span> on doit connaître la valeur de deux termes de la suite <span class="process-math">\(\{a_n\}\text{.}\)</span></p></article><article class="example example-like" id="exe-solRecLinHomDeuxMult"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-solRecLinHomDeuxMult"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.24</span><span class="period">.</span><span class="space"> </span><span class="title">Une première solution.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-solRecLinHomDeuxMult"><article class="example example-like">Trouver la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=6a_{n-1}-9a_{n-2},\)</span> sachant que <span class="process-math">\(a_0=2\)</span> et <span class="process-math">\(a_1=15\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-279" id="answer-279"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-279"><div class="answer solution-like"><span class="process-math">\(a_n=2(3)^n+3n(3)^n\text{.}\)</span></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-249" id="solution-249"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-249"><div class="solution solution-like">
+<p id="p-2260">À l'exemple <a href="" class="xref" data-knowl="./knowl/exe-LinHomMult.html" title="Exemple 6.1.22: Équations caractéristiques à une seule racine">6.1.22</a>, on a déjà montrer que l'équation caractéristique de cette relation possède l'unique solution <span class="process-math">\(r_1=3\text{.}\)</span></p>
+<p id="p-2261">Par la proposition <a href="" class="xref" data-knowl="./knowl/prop-solRecLinHomDeuxMult.html" title="Proposition 6.1.23: Solution aux relations de récurrence linéaires homogènes d'ordre 2 cas 2">6.1.23</a>, on sait que la solution devra avoir la forme</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-solRecLinHomDeuxMult.html" id="eq-formGenMult">
+\begin{equation}
+a_n=\alpha_1r_1^n+\alpha_2nr_1^n=\alpha_1(3)^n+\alpha_2 n(3)^n\text{.}\tag{6.5}
+\end{equation}
+</div>
+<p id="p-2262">Ainsi, puisque <span class="process-math">\(a_0=2\)</span> et <span class="process-math">\(a_1=15,\)</span> en remplaçant <span class="process-math">\(n\)</span> par <span class="process-math">\(0\)</span> et <span class="process-math">\(1\)</span> dans <a href="" class="xref" data-knowl="./knowl/eq-formGenMult.html" title="Équation 6.5">(6.5)</a>, on obtient un système d'équations suivants.</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-formGenMult.html" id="md-108">
+\begin{align*}
+2\amp= \alpha_1(3)^0 +\alpha_2(0)(3)^0=\alpha_1;\\
+15\amp= \alpha_1 (3)^1+\alpha_2(1)(3)^1=3\alpha_1+3\alpha_2.
+\end{align*}
+</div>
+<p class="continuation">En résolvant ce sytème d'équations, on a que <span class="process-math">\(\alpha_1=2\)</span> et <span class="process-math">\(\alpha_2=3\text{.}\)</span></p>
+<p id="p-2263">Ainsi, on a que la suite <span class="process-math">\(\{a_n\}\)</span> est la suite dont le terme général est <span class="process-math">\(a_n=2(3)^n+3n(3)^n\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exe-solRecLinHomDeuxMult2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-solRecLinHomDeuxMult2"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.25</span><span class="period">.</span><span class="space"> </span><span class="title">Une deuxième solution.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-solRecLinHomDeuxMult2"><article class="example example-like">Trouver la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=4a_{n-1}-4a_{n-2},\)</span> sachant que <span class="process-math">\(a_0=0\)</span> et <span class="process-math">\(a_1=-12\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-280" id="answer-280"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-280"><div class="answer solution-like"></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-250" id="solution-250"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-250"><div class="solution solution-like">
+<p id="p-2264">L'équation caractéristique de cette relation de récurrence est <span class="process-math">\(0=r^2-4r+4=(r-2)^2.\)</span> L'unique solution à cette équation est <span class="process-math">\(r_1=2\text{.}\)</span></p>
+<p id="p-2265">Par la proposition <a href="" class="xref" data-knowl="./knowl/prop-solRecLinHomDeuxMult.html" title="Proposition 6.1.23: Solution aux relations de récurrence linéaires homogènes d'ordre 2 cas 2">6.1.23</a>, on sait que la solution devra avoir la forme</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-solRecLinHomDeuxMult.html" id="eq-formGenMult2">
+\begin{equation}
+a_n=\alpha_1r_1^n+\alpha_2nr_1^n=\alpha_1(2)^n+\alpha_2 n(2)^n\text{.}\tag{6.6}
+\end{equation}
+</div>
+<p id="p-2266">Ainsi, puisque <span class="process-math">\(a_0=0\)</span> et <span class="process-math">\(a_1=-12,\)</span> en remplaçant <span class="process-math">\(n\)</span> par <span class="process-math">\(0\)</span> et <span class="process-math">\(1\)</span> dans <a href="" class="xref" data-knowl="./knowl/eq-formGenMult2.html" title="Équation 6.6">(6.6)</a>, on obtient un système d'équations suivants.</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-formGenMult2.html" id="md-109">
+\begin{align*}
+0\amp =\alpha_1;\\
+-12\amp=2\alpha_1+2\alpha_2.
+\end{align*}
+</div>
+<p class="continuation">En résolvant ce sytème d'équations, on a que <span class="process-math">\(\alpha_1=0\)</span> et <span class="process-math">\(\alpha_2=-6\text{.}\)</span></p>
+<p id="p-2267">Ainsi, on a que la suite <span class="process-math">\(\{a_n\}\)</span> est la suite dont le terme général est <span class="process-math">\(a_n=-6n(2)^n\text{.}\)</span></p>
+</div></div>
+</div></article></div></section><section class="subsection" id="subs-ordrePGDeux"><h3 class="heading hide-type">
+<span class="type">Sous-section</span> <span class="codenumber">6.1.5</span> <span class="title">Relations de récurrence linéaires homogènes d'ordre <span class="process-math">\(k\)</span></span>
+</h3>
+<section class="introduction" id="introduction-214"><p id="p-2268">Pour le moment, nous avons étudié les relations linéaires d'ordre <span class="process-math">\(2,\)</span> mais le traitement effectué peut se faire pour des relations d'ordre <span class="process-math">\(k\)</span> quelconque. Par exemple, on peut facilement trouver les solutions générales pour des relations d'ordre <span class="process-math">\(1\)</span> (voir exemple <a href="" class="xref" data-knowl="./knowl/exe-formGen2.html" title="Exemple 6.1.11: Forme générale d'une relation de récurrence: une deuxième stratégie">6.1.11</a>).</p>
+<p id="p-2269">En théorie, la situation n'est pas bien plus compliqué si <span class="process-math">\(k\geq 3.\)</span> Cependant, il faudra résoudre une équation polynômiale de degré <span class="process-math">\(k,\)</span> ce qui peut-être très difficile! De plus, pour trouver la solution respectant les conditions initiales, il faut résoudre un système de <span class="process-math">\(k\)</span> équations à <span class="process-math">\(k\)</span> inconnues. Ceci n'est pas trop difficile, mais requiert des méthodes que vous verrez dans le cours d'algèbre linéaire.</p>
+<p id="p-2270">On donne ici la généralisation des méthodes pour des relations d'ordre <span class="process-math">\(k\text{.}\)</span></p></section><article class="definition definition-like" id="def-equCarOrdrek"><h4 class="heading">
+<span class="type">Définition</span><span class="space"> </span><span class="codenumber">6.1.26</span><span class="period">.</span><span class="space"> </span><span class="title">Équation caractéristique.</span>
+</h4>
+<p id="p-2271">Soit</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="equ-relRecK">
+\begin{equation}
+a_n=c_1a_{n-1}+c_2a_{n-2}+ \cdots +c_ka_{n-k}\tag{6.7}
+\end{equation}
+</div>
+<p class="continuation">une relation de récurrence d'odre <span class="process-math">\(k\)</span> (c'est-à-dire que <span class="process-math">\(c_k\neq 0\)</span>),  l'équation caractéristique associée à cette relation est l'équation</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq-eqCarK">
+\begin{equation}
+0=r^k-c_1r^{k-1}-c_2r^{k-2}-\cdots - c_{k-1}r-c_k \tag{6.8}
+\end{equation}
+</div></article><p id="p-2272">On obtien cette équation en remplaçant <span class="process-math">\(a_n\)</span> par <span class="process-math">\(r^n\)</span> dans la relation de récurrence. On voir alors que la suite <span class="process-math">\(\{a_n\}\)</span> de terme général <span class="process-math">\(a_n=r_1^n\)</span> satisfait la relation de récurrence <a href="" class="xref" data-knowl="./knowl/equ-relRecK.html" title="Équation 6.7">(6.7)</a> si et seulement si <span class="process-math">\(r_1\)</span> est une solution à l'équation caractéristique <a href="" class="xref" data-knowl="./knowl/eq-eqCarK.html" title="Équation 6.8">(6.8)</a>. Si l'équation caractéristique possède <span class="process-math">\(k\)</span> racines distinctes, on à la proposition suivante.</p>
+<article class="proposition theorem-like" id="prop-solRecLinHomDeuxK"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.1.27</span><span class="period">.</span><span class="space"> </span><span class="title">Solution aux relations de récurrence linéaires homogènes d'ordre <span class="process-math">\(k\text{:}\)</span> Racines distinctes.</span>
+</h4>
+<p id="p-2273">Soit <span class="process-math">\(a_n=c_1a_{n-1}+c_2a_{n-2}+ \cdots +c_ka_{n-k}\)</span> une relation de récurrence. Supposons que <span class="process-math">\(r_1,\,r_2,\,\dots,\,r_k\)</span> soient les <span class="process-math">\(k\)</span> solutions distinctes à l'équation caractéristique <span class="process-math">\(0=r^k-c_1r^{k-1}-c_2r^{k-2}-\cdots - c_{k-1}r-c_k \text{.}\)</span></p>
+<p id="p-2274">Dans ce cas, la suite <span class="process-math">\(\{a_n\}\)</span> satisfait la relation de récurrence si et seulement si</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n=\alpha_1r_1^n+\alpha_2r_2^n+\cdots + \alpha_kr_k^n,
+\end{equation*}
+</div>
+<p class="continuation">où les <span class="process-math">\(\alpha_i\)</span> sont des constantes réelles.</p>
+<p id="p-2275">Pour déterminer la valeur des <span class="process-math">\(\alpha_i\)</span> on doit connaître la valeur de <span class="process-math">\(k\)</span> termes consécutifs de la suite <span class="process-math">\(\{a_n\}\text{.}\)</span></p></article></section><section class="exercises" id="exo-relRecLinHom"><h3 class="heading hide-type">
+<span class="type">Exercices</span> <span class="codenumber">6.1.6</span> <span class="title">Exercices</span>
+</h3>
+<article class="subexercises" id="subexercises-18"><article class="exercise exercise-like" id="exercise-265"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-215"><p id="p-2276">Déterminer <span class="process-math">\(a_2,\,a_3\)</span> et <span class="process-math">\(a_4\)</span> si:</p></div>
+<article class="task exercise-like" id="task-559"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2277"><span class="process-math">\(a_n=a_{n-1}a_{n-2}\)</span> pour <span class="process-math">\(n=2,\,3,\,4,\dots,\)</span> sachant que <span class="process-math">\(a_0=4\)</span> et <span class="process-math">\(a_1=3\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-281" id="answer-281"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-281"><div class="answer solution-like"></div></div>
+</div></article><article class="task exercise-like" id="task-560"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2278"><span class="process-math">\(a_n=a_{n-1}+3a_{n-2}\)</span> pour <span class="process-math">\(n=2,\,3,\,4,\dots,\)</span> sachant que <span class="process-math">\(a_0=1\)</span> et <span class="process-math">\(a_1=2\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-282" id="answer-282"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-282"><div class="answer solution-like"></div></div>
+</div></article><article class="task exercise-like" id="task-561"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2279"><span class="process-math">\(a_n=na_{n-1}a_{n-2}\)</span> pour <span class="process-math">\(n=2,\,3,\,4,\dots,\)</span> sachant que <span class="process-math">\(a_0=3\)</span> et <span class="process-math">\(a_1=-5\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-283" id="answer-283"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-283"><div class="answer solution-like"></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-266"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-2280">On considère <span class="process-math">\(C(n)\)</span> le nombre de chaînes binaires de longueur <span class="process-math">\(n\)</span> possédant un nombre pair de <span class="process-math">\(0.\)</span> Trouver une relation de récurrence pour <span class="process-math">\(C(n)\)</span> ainsi que la condition initiale (<span class="process-math">\(C(1)\)</span>).</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-284" id="answer-284"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-284"><div class="answer solution-like">
+<span class="process-math">\(C(n)= 2C(n-1)\)</span> avec <span class="process-math">\(C(1)=1\)</span>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-267"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-2281">On considère <span class="process-math">\(D(n)\)</span> le nombre de chaînes de chiffres (en base dix) de longueur <span class="process-math">\(n\)</span> possédant un nombre pair de <span class="process-math">\(0.\)</span> Trouver une relation de récurrence pour <span class="process-math">\(D(n)\)</span> ainsi que la condition initiale (<span class="process-math">\(D(1)\)</span>).</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-285" id="answer-285"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-285"><div class="answer solution-like">
+<span class="process-math">\(D(n)= 9D(n-1)+(10^{n-1}-D(n-1))=8D(n-1)+10^{n-1}\)</span> avec <span class="process-math">\(D(1)=9\)</span>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-268"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-2282">Trouver la forme générale de la suite <span class="process-math">\(\{a_n\}\)</span> si <span class="process-math">\(a_n=a_{n-1}a_{n-2}\)</span> pour <span class="process-math">\(n=2,\,3,\,4,\dots,\)</span> sachant que <span class="process-math">\(a_0=2\)</span> et <span class="process-math">\(a_1=3\text{.}\)</span></p>
+<p id="p-2283"><article class="insight remark-like" id="insight-1"><h6 class="heading">
+<span class="type">Conseil</span><span class="space"> </span><span class="codenumber">6.1.28</span><span class="period">.</span>
+</h6>
+<p id="p-2284">Écrire les premiers termes comme un produit d'une puissance de  <span class="process-math">\(2\)</span> par une puissance de <span class="process-math">\(3\text{.}\)</span> Chercher le terme général des exposants de <span class="process-math">\(2\)</span> et <span class="process-math">\(3\text{.}\)</span></p></article></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-74" id="hint-74"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-74"><div class="hint solution-like">Les exposants font partie de la suite de Fibonacci. Voir l'exercice <a href="" class="xref" data-knowl="./knowl/exo-fibo.html" title="Exercice 6.1.6.5">6.1.6.5</a>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exo-fibo"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-2285">Trouver la forme générale de la suite de Fibonacci <span class="process-math">\(\{F_n\},\)</span> où <span class="process-math">\(F_{n}=F_{n-1}+F_{n-2}\)</span> pour <span class="process-math">\(n\geq 2,\)</span> et <span class="process-math">\(F_0=F_1=1\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-286" id="answer-286"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-286"><div class="answer solution-like"><span class="process-math">\(F_n=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n\)</span></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-270"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-2286">À l'aide de l'exercice <a href="" class="xref" data-knowl="./knowl/exo-fibo.html" title="Exercice 6.1.6.5">6.1.6.5</a>, montrer que <span class="process-math">\(\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n \in\,\N\)</span> si <span class="process-math">\(n\in\,\N\text{.}\)</span></p></article></article></section></section></div></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
