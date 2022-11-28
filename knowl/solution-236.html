@@ -15,28 +15,29 @@
 <h5 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.3.3.1.1</span><span class="period">.</span>
 </h5>
-<p>On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(1^2+2^2+\cdot + n^2=\frac{n(n+1)(2n+1)}{6}\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span></p>
+<p>On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(1^2+2^2+\cdots + n^2=\frac{n(n+1)(2n+1)}{6}\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span></p>
 <p><em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): 1^2 = \frac{(1)(1+1)(2(1)+1)}{6},\)</span> ce qui est vrai, puisque <span class="process-math">\(1^2=1\)</span> et</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \frac{(1)(1+1)(2(1)+1)}{6}=\frac{(1)(2)(3)}{6}=1\text{.}
 \end{equation*}
 </div>
-<p><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on veut montrer que <span class="process-math">\(P(k)\rightarrow P(k+1)\)</span> est vraie. On suppose donc que <span class="process-math">\(P(k)\)</span> est vraie (c'est à dire que <span class="process-math">\(1^2+2^2+\cdot + k^2=\frac{k(k+1)(2k+1)}{6}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</p>
+<p><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on veut montrer que <span class="process-math">\(P(k)\rightarrow P(k+1)\)</span> est vraie. On suppose donc que <span class="process-math">\(P(k)\)</span> est vraie (c'est à dire que <span class="process-math">\(1^2+2^2+\cdots + k^2=\frac{k(k+1)(2k+1)}{6}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</p>
 <p>Ainsi, on veut montrer que</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-1^2+2^2+\cdot + k^2+ (k+1)^2=\frac{(k+1)(k+2)(2k+3)}{6}
+1^2+2^2+\cdots + k^2+ (k+1)^2=\frac{(k+1)(k+2)(2k+3)}{6}
 \end{equation*}
 </div>
 <p class="continuation">à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
 \amp1^2+2^2+\cdot + k^2+ (k+1)^2\\
-\amp= \left(1^2+2^2+\cdot + k^2\right) + \left(k+1\right)^2 \\
+\amp= \left(1^2+2^2+\cdots + k^2\right) + \left(k+1\right)^2 \\
 \amp= \left( \frac{k(k+1)(2k+1)}{6} \right) + \left(k+1\right)^2 \text{ par H.I.}\\
-\amp= \left( \frac{k(k+1)(2k+1)}{6} \right) + \frac{6(k+1)(k+1)}{6} \text{ en mettant sur le même dénominateur.}\\
-\amp= \frac{k(k+1)(2k+1)+6(k+1)(k+1)}{6}=\frac{(k+1)(2k^2+k)+(k+1)(6k+6)}{6} \text{ en distribuant le }k \text{ et le }6.\\
+\amp= \left( \frac{k(k+1)(2k+1)}{6} \right) + \frac{6(k+1)(k+1)}{6} \text{ même dénominateur.}\\
+\amp= \frac{k(k+1)(2k+1)+6(k+1)(k+1)}{6}\\
+\amp=\frac{(k+1)(2k^2+k)+(k+1)(6k+6)}{6} \text{ en distribuant le }k \text{ et le }6.\\
 \amp= \frac{(k+1)(2k^2+k+6k+6)}{6}=\frac{(k+1)(2k^2+7k+6)}{6} \\
 \amp=\frac{(k+1)(k+2)(2k+3)}{6}\text{ en factorisant.}
 \end{align*}
