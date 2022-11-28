@@ -11,8 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraphe</span></h3>
-<p>Les relations de récurrence sont utilisées afin de nous aider à dénombrer des situation qui ne peuvent être dénombré facilement à l'aide des techinques vues précédemment.</p>
-<span class="incontext"><a href="sec-relRecLinHom.html#p-2195" class="internal">Contexte</a></span>
+<h6 class="heading"><span class="type">Paragraphe</span></h6>
+<p>Ainsi, on veut montrer que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}+\frac{1}{2^{k+1}}=1-\frac{1}{2^{k+1}}
+\end{equation*}
+</div>
+<p class="continuation">à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\amp\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}+\frac{1}{2^{k+1}}\\
+\amp= \left(\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}\right)  +\frac{1}{2^{k+1}}\\
+\amp= 1-\frac{1}{2^k}+ \frac{1}{2^{k+1}} \text{ par H.I.}\\
+\amp=1-\frac{2}{2^{k+1}}+ \frac{1}{2^{k+1}}\text{ (même dénominateur)}\\
+\amp=1+\frac{1-2}{2^{k+1}}=1-\frac{1}{2^{k+1}}
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_induction.html#p-2195" class="internal">Contexte</a></span>
 </body>
 </html>

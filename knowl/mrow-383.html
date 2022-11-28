@@ -11,12 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-formGenMult.html">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-2\amp= \alpha_1(3)^0 +\alpha_2(0)(3)^0=\alpha_1;\\
-15\amp= \alpha_1 (3)^1+\alpha_2(1)(3)^1=3\alpha_1+3\alpha_2.
+\amp H(k+1) =1+\frac{1}{2}+\frac{1}{3}+\cdots + \frac{1}{2^k}+\frac{1}{2^k+1}+\frac{1}{2^k+2}+\cdots+\frac{1}{2^{k+1}}\\
+\amp= \left(1+\frac{1}{2}+\frac{1}{3}+\cdots + \frac{1}{2^k}\right)+\frac{1}{2^{k+1}}\\
+\amp\geq \left(1+\frac{k}{2}\right)+ \frac{1}{2^k+1}+\frac{1}{2^k+2}+\cdots+\frac{1}{2^{k+1}}\text{ par H.I.}\\
+\amp\geq \left(1+\frac{k}{2}\right)+ \frac{1}{2^{k+1}}+\frac{1}{2^{k+1}}+\cdots+\frac{1}{2^{k+1}} \\
+\amp= 1+\frac{k2^{k}}{2^{k+1}}+ \frac{2^k}{2^{k+1}} \text{ en mettant sur le même dénominateur, et car il y a } 2^k \text{ dans la somme à droite.}\\
+\amp= 1+\frac{k2^{k}+2^k}{2^{k+1}}\\
+\amp= 1+\frac{(k+1)2^{k}}{2^{k+1}} \\
+\amp= 1+\frac{k+1}{2} 
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-relRecLinHom.html#md-108" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec_induction.html#md-104" class="internal">Contexte</a></span>
 </body>
 </html>

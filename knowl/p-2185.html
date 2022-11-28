@@ -11,8 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraphe</span></h4>
-<p>On considère la suite <span class="process-math">\(\{a_n\}\)</span> où <span class="process-math">\(a_n=\frac{1}{n}\text{.}\)</span></p>
-<span class="incontext"><a href="sec-relRecLinHom.html#p-2185" class="internal">Contexte</a></span>
+<h6 class="heading"><span class="type">Paragraphe</span></h6>
+<p>Ainsi, on veut montrer que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1^2+3^2+5^2+\cdots +(2k+1)^2+(2k+3)^2=\frac{(k+2)(2k+3)(2k+5)}{3}
+\end{equation*}
+</div>
+<p class="continuation">à l'aide de l'H.I. Tout d'abord, remarquons que <span class="process-math">\(\frac{(k+2)(2k+3)(2k+5)}{3}=\frac{(2k+3)(2k^2+9k+10)}{3}\text{.}\)</span> Ensuite, en partant du membre de gauche de l'égalité, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\amp1^2+3^2+5^2+\cdots +(2k+1)^2+(2k+3)^2\\
+\amp= \left(1^2+3^2+5^2+\cdots +(2k+1)^2\right) + \left(2k+3\right)^2 \\
+\amp= \left( \frac{(k+1)(2k+1)(2k+3)}{3}\right) + \left(2k+3\right)^2 \text{ par H.I.}\\
+\amp= \left( \frac{(k+1)(2k+1)(2k+3)}{3}\right) + \frac{3(2k+3)(2k+3)}{3} \text{ en mettant sur le même dénominateur.}\\
+\amp= \frac{(k+1)(2k+1)(2k+3)+3(2k+3)(2k+3)}{3}=\frac{(2k^2+3k+1)(2k+3)+(6k+9)(2k+3)}{3} \text{ en développant le }(k+1)(2k+1) \text{ et en distribuant le }3.\\
+\amp= \frac{(2k^2+3k+1+6k+9)(2k+3)}{3}=\frac{(2k^2+9k+10)(2k+3)}{3} \\
+\amp=\frac{(k+2)(2k+3)(2k+5)}{3}\text{ par la remarque.}
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_induction.html#p-2185" class="internal">Contexte</a></span>
 </body>
 </html>

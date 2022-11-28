@@ -11,8 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraphe</span></h4>
-<p>Soit <span class="process-math">\(\{a_n\}\)</span> la suite satisfaisant la relation de récurrence <span class="process-math">\(a_n=a_{n-1}-a_{n-2}\)</span> pour <span class="process-math">\(n=2,3,4,\dots,\)</span> telle que <span class="process-math">\(a_0=2\)</span> et <span class="process-math">\(a_1=6.\)</span> Quels sonts les termes <span class="process-math">\(a_2,a_3\)</span> et <span class="process-math">\(a_4\text{?}\)</span></p>
-<span class="incontext"><a href="sec-relRecLinHom.html#p-2190" class="internal">Contexte</a></span>
+<h6 class="heading"><span class="type">Paragraphe</span></h6>
+<p>Ainsi, on veut montrer que</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!+(k+1)(k+1)!=(k+2)!-1
+\end{equation*}
+</div>
+<p class="continuation">à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\amp1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!+(k+1)(k+1)!\\
+\amp= \left(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!\right)  +(k+1)(k+1)! \\
+\amp= \left( (k+1)!-1\right) + (k+1)(k+1)! \text{ par H.I.}\\
+\amp=(k+1)! + (k+1)(k+1)! -1\\
+\amp=(1+k+1)(k+1)! -1\text{ (mise en évidence)}\\
+\amp=(k+2)(k+1)! -1\\
+\amp=(k+2)! -1\text{ (par la définition de la factorielle.)}
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_induction.html#p-2190" class="internal">Contexte</a></span>
 </body>
 </html>

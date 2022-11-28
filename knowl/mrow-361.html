@@ -13,11 +13,13 @@
 <body class="ignore-math">
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-a_n\amp= a_{n-1}+a_{n-2} \text{ (d'ordre 2)}\\
-a_n\amp= (1,11)a_{n-1} \text{ (d'ordre 1)}\\
-a_{n+1}\amp= 2a_{n} + 4a_{n-1}+a_{n-3}+a_{n-5}+3a_{n-6} \text{ (d'ordre 7)}
+\amp\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}+\frac{1}{2^{k+1}}\\
+\amp= \left(\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}\right)  +\frac{1}{2^{k+1}}\\
+\amp= 1-\frac{1}{2^k}+ \frac{1}{2^{k+1}} \text{ par H.I.}\\
+\amp=1-\frac{2}{2^{k+1}}+ \frac{1}{2^{k+1}}\text{ (même dénominateur)}\\
+\amp=1+\frac{1-2}{2^{k+1}}=1-\frac{1}{2^{k+1}}
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-relRecLinHom.html#md-100" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec_induction.html#md-100" class="internal">Contexte</a></span>
 </body>
 </html>
