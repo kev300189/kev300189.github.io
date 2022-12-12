@@ -8,7 +8,7 @@
 <html lang="fr-CA">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>MaDIR Suites et relations de récurrence</title>
+<title>MaDIR Relations de récurrence linéaires homogènes</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -122,6 +122,7 @@ window.MathJax = {
 \DeclareMathOperator{\Det}{det}
 \DeclareMathOperator{\pgcd}{pgcd}
 \DeclareMathOperator{\ppcm}{ppcm}
+\DeclareMathOperator{\deg}{deg}
 \renewcommand{\Re}{\operatorname{Re}}
 \newcommand{\CQFD}{\begin{flushright}   
 $\blacksquare$
@@ -143,10 +144,10 @@ $\Box$
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap-.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-.html" title="Haut">Haut</a><span id="nextbutton" class="next-button button toolbar-item disabled">Suivant</span></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap-relationRecurrence.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-relationRecurrence.html" title="Haut">Haut</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-relRecLinNonHom.html" title="Suivant">Suivant</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="chap-.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-.html" title="Haut">Haut</a><span class="next-button button toolbar-item disabled">Suivant</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="chap-relationRecurrence.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-relationRecurrence.html" title="Haut">Haut</a><a class="next-button button toolbar-item" href="sec-relRecLinNonHom.html" title="Suivant">Suivant</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -187,12 +188,21 @@ $\Box$
 </ul>
 </li>
 <li class="link">
-<a href="chap-.html" data-scroll="chap-" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a><ul><li><a href="sec-relRecLinHom.html" data-scroll="sec-relRecLinHom" class="active">Suites et relations de récurrence</a></li></ul>
+<a href="chap-relationRecurrence.html" data-scroll="chap-relationRecurrence" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a><ul>
+<li><a href="sec-relRecLinHom.html" data-scroll="sec-relRecLinHom" class="active">Relations de récurrence linéaires homogènes</a></li>
+<li><a href="sec-relRecLinNonHom.html" data-scroll="sec-relRecLinNonHom" class="internal">Relations de récurrence linéaires non-homogènes</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-theorieGraphes.html" data-scroll="chap-theorieGraphes" class="internal"><span class="codenumber">7</span> <span class="title">Théorie des graphes</span></a><ul>
+<li><a href="sec-introGraphes.html" data-scroll="sec-introGraphes" class="internal">Introduction à la théorie des graphes</a></li>
+<li><a href="sec-propGraphes.html" data-scroll="sec-propGraphes" class="internal">Propriétés des graphes</a></li>
+</ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Rédigé avec PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-relRecLinHom"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Suites et relations de récurrence</span>
+<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Relations de récurrence linéaires homogènes</span>
 </h2>
 <section class="introduction" id="intro-appRelRecurrence"><p id="p-2222">Dans plusieurs branches des mathématiques, on étudies des objets placés un à la suite de l'autre selon une règle particulière. On peut penser à la suite des entiers positifs pairs <span class="process-math">\(2,4,6,8,\dots,\)</span> la suite des nombres premiers <span class="process-math">\(2,3,5,7,11,\dots\)</span> et la suite de Fibbonacci <span class="process-math">\(1,1,2,3,4,8,13,\dots.\)</span> Dans le cours, nous allons principalement considérer des suites qui seront définies par récurrence.</p>
 <p id="p-2223">Tout d'abord, on donne la définition formelle d'une suite. Par la suite, on considère les suites définies par récurrence.</p>
@@ -206,9 +216,9 @@ $\Box$
 <p id="p-2227">Nous allons maintenant considérer des suites qui seront définies par récurrence. On commence par considérer quelques exemples avant de donner la définition formelle.</p>
 <article class="example example-like" id="exe-relReccurence"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-relReccurence"><h3 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.3</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-relReccurence"><article class="example example-like"><p id="p-2228">Soit <span class="process-math">\(\{a_n\}\)</span> la suite satisfaisant la relation de récurrence <span class="process-math">\(a_n=a_{n-1}+3\)</span> pour <span class="process-math">\(n=1,2,3,\dots,\)</span> telle que <span class="process-math">\(a_0=4.\)</span> Quels sonts les termes <span class="process-math">\(a_1,a_2\)</span> et <span class="process-math">\(a_3\text{?}\)</span></p>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-relReccurence"><article class="example example-like"><p id="p-2228">Soit <span class="process-math">\(\{a_n\}\)</span> la suite satisfaisant la relation de récurrence <span class="process-math">\(a_n=a_{n-1}+4\)</span> pour <span class="process-math">\(n=1,2,3,\dots,\)</span> telle que <span class="process-math">\(a_0=3.\)</span> Quels sonts les termes <span class="process-math">\(a_1,a_2\)</span> et <span class="process-math">\(a_3\text{?}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-244" id="solution-244"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-244"><div class="solution solution-like"><p id="p-2229">On a que <span class="process-math">\(a_1=a_0+3=4+3=7.\)</span> Ainsi, on a également <span class="process-math">\(a_2=a_1+4=7+4=12.\)</span> Finalement, on a <span class="process-math">\(a_3=a_2+4=12+4=16\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-244" id="solution-244"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-244"><div class="solution solution-like"><p id="p-2229">On a que <span class="process-math">\(a_1=a_0+3=3+4=7.\)</span> Ainsi, on a également <span class="process-math">\(a_2=a_1+4=7+4=12.\)</span> Finalement, on a <span class="process-math">\(a_3=a_2+4=12+4=16\text{.}\)</span></p></div></div>
 </div></article></div>
 <article class="example example-like" id="exe-relReccurence2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-relReccurence2"><h3 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.1.4</span><span class="period">.</span>

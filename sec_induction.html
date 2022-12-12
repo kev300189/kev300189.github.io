@@ -122,6 +122,7 @@ window.MathJax = {
 \DeclareMathOperator{\Det}{det}
 \DeclareMathOperator{\pgcd}{pgcd}
 \DeclareMathOperator{\ppcm}{ppcm}
+\DeclareMathOperator{\deg}{deg}
 \renewcommand{\Re}{\operatorname{Re}}
 \newcommand{\CQFD}{\begin{flushright}   
 $\blacksquare$
@@ -143,10 +144,10 @@ $\Box$
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_pidgeonHoles.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><a id="nextbutton" class="next-button button toolbar-item" href="chap-.html" title="Suivant">Suivant</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_pidgeonHoles.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><a id="nextbutton" class="next-button button toolbar-item" href="chap-relationRecurrence.html" title="Suivant">Suivant</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="sec_pidgeonHoles.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><a class="next-button button toolbar-item" href="chap-.html" title="Suivant">Suivant</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="sec_pidgeonHoles.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><a class="next-button button toolbar-item" href="chap-relationRecurrence.html" title="Suivant">Suivant</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -187,7 +188,16 @@ $\Box$
 </ul>
 </li>
 <li class="link">
-<a href="chap-.html" data-scroll="chap-" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a><ul><li><a href="sec-relRecLinHom.html" data-scroll="sec-relRecLinHom" class="internal">Suites et relations de récurrence</a></li></ul>
+<a href="chap-relationRecurrence.html" data-scroll="chap-relationRecurrence" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a><ul>
+<li><a href="sec-relRecLinHom.html" data-scroll="sec-relRecLinHom" class="internal">Relations de récurrence linéaires homogènes</a></li>
+<li><a href="sec-relRecLinNonHom.html" data-scroll="sec-relRecLinNonHom" class="internal">Relations de récurrence linéaires non-homogènes</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chap-theorieGraphes.html" data-scroll="chap-theorieGraphes" class="internal"><span class="codenumber">7</span> <span class="title">Théorie des graphes</span></a><ul>
+<li><a href="sec-introGraphes.html" data-scroll="sec-introGraphes" class="internal">Introduction à la théorie des graphes</a></li>
+<li><a href="sec-propGraphes.html" data-scroll="sec-propGraphes" class="internal">Propriétés des graphes</a></li>
+</ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Rédigé avec PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
@@ -289,7 +299,7 @@ k+1 \amp \lt 2^k +1 \text{, par H.I.}\\
 <p id="p-2168"><em class="alert">Étape d'induction :</em> On suppose que la proposition est vraie pour <span class="process-math">\(n=k,\)</span> où <span class="process-math">\(k\)</span> est un entier positif. On veut montrer qu'elle sera alors vraie pour <span class="process-math">\(n=k+1\text{.}\)</span></p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="md-96">
 \begin{align*}
-1+2+\cdots +(2k-1) + (2k+1)\amp=k^2 + (2k+1)\text{, par H.I.}\\
+1+3+\cdots +(2k-1) + (2k+1)\amp=k^2 + (2k+1)\text{, par H.I.}\\
 \amp = (k+1)^2
 \end{align*}
 </div>
