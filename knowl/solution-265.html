@@ -13,25 +13,31 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">7.1.5.2</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.2.8.1</span><span class="period">.</span>
 </h4>
-<p><em class="alert">Pour <span class="process-math">\(H \)</span></em></p>
+<p>On sait que la soultion aura la forme <span class="process-math">\(a_n=a_n^{(h)}+a_n^{(p)},\)</span> où <span class="process-math">\(a_n^{(h)}=\alpha_1\cdot 3^n+\alpha_2n\cdot 3^n,\)</span> par l'exemple <a href="" class="xref" data-knowl="./knowl/exe-solRecLinHomDeuxMult.html" title="Exemple 6.1.24: Une première solution">6.1.24</a>, et on propose <span class="process-math">\(a^{(p)}_n=c\cdot n^23^n\)</span></p>
+<p>Pour trouver la valeur de <span class="process-math">\(c\)</span> telle que <span class="process-math">\(c\cdot n^2 3^n\)</span> est une solution particulière, on remplace <span class="process-math">\(a_n\)</span> par <span class="process-math">\(c\cdot n^2 3^n\)</span> dans la relation de récurrence, et on trouve la valeur de <span class="process-math">\(c\)</span> satisfaisant l'équation résultante.</p>
+<p>On a</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-V(a)\amp=\{b,d,e\} \amp \deg(a)\amp=3\\
-V(b)\amp=\{a,c,d\} \amp \deg(b)\amp=3\\
-V(c)\amp=\{b\} \amp \deg(c)\amp=1\\
-V(d)\amp=\{a,b,e\} \amp \deg(d)\amp=3\\
-V(e)\amp=\{a,d\} \amp \deg(e)\amp=2
+c\cdot n^2 3^n\amp= 6c\cdot (n-1)^2^{n-1}3^{n-1}-9c\cdot (n-2)^2 3^{n-2}+3^n\\
+c\cdot n^2 3^2\amp= 6c\cdot (n^2-2n+1)3-9c(n^2-4n+4)+3^2\\
+(9c)n^2 \amp= (18cn^2-36cn+18c)+(-9cn^2+36cn-36c)+9\\
+(9c)n^2 \amp= (9c)n^2+(-18c+9)
 \end{align*}
 </div>
-<p>De plus, on a</p>
+<p class="continuation">Pour que cette égalité soit vraie, on doit avoir <span class="process-math">\(9c=9c\)</span> et <span class="process-math">\(0=-18c+9\text{.}\)</span> On trouve alors <span class="process-math">\(c=\frac{1}{2}\)</span></p>
+<p>Ainsi, <span class="process-math">\(a^{(p)}_n=\frac{1}{2}\cdot n^2 3^n\)</span> est une solution particulière à la relation de récurrence.</p>
+<p>On a donc <span class="process-math">\(a_m=n=\alpha_1(3^n)+\alpha_2(n3^n)+\frac{1}{2}\cdot n^2 3^n\text{.}\)</span></p>
+<p>Pour trouver <span class="process-math">\(\alpha_1\)</span> et <span class="process-math">\(alpha_2\text{,}\)</span> on doit résoudre le système d'équations</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\deg(a)+\deg(b)+\deg(c)+\deg(d)+\deg(e)=3+3+1+3+2=12
-\end{equation*}
+\begin{align*}
+1\amp= \alpha_1;\\
+4\amp= 3\alpha_1+3\alpha_2+\frac{1}{2}\cdot 3;
+\end{align*}
 </div>
+<p class="continuation">En résolvant ces équations, on trouve <span class="process-math">\(\alpha_1=1\)</span> et <span class="process-math">\(\alpha_2=\frac{-1}{6}\text{.}\)</span></p>
 </div>
-<span class="incontext"><a href="sec-introGraphes.html#solution-265" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-relRecLinNonHom.html#solution-265" class="internal">Contexte</a></span>
 </body>
 </html>

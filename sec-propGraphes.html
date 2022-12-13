@@ -204,18 +204,18 @@ $\Box$
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-propGraphes"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Propriétés des graphes</span>
 </h2>
-<section class="introduction" id="intro-propGraphes"><p id="p-2431">À l'exemple <a href="" class="xref" data-knowl="./knowl/exe-grapheNCube.html" title="Exemple 7.1.20: Les premiers n-cubes Q_n">7.1.20</a> de la section précédente, on a remarqué  qu'on pouvait décrire le même graphe de plusieurs façons. On aimerait donc pouvoir se demander si, lorsqu'on considère deux graphes, est-ce que ceux-ci sont équivalents.</p>
-<p id="p-2432">Pour cela, on doit développer le concepte d'isomorphisme. Ce concepte est présent dans toutes les branches des mathématiques. En fait, ce concepte est tellement fondamental en mathématique, que les mathématiciens on même généraliser cette idée au point de définir toutes les branches des mathématiques à l'aide de mprphisme! (voir la théorie des catégorie).</p>
-<p id="p-2433">Avant de parler d'isomorphisme, on va définir certaines caractéristiques des graphes, qui nous permetrons, entre-autre, de différencier certains graphes les uns des autres.</p></section><section class="subsection" id="subs-graphesBiColoration"><h3 class="heading hide-type">
+<section class="introduction" id="intro-propGraphes"><p id="p-2442">À l'exemple <a href="" class="xref" data-knowl="./knowl/exe-grapheNCube.html" title="Exemple 7.1.20: Les premiers n-cubes Q_n">7.1.20</a> de la section précédente, on a remarqué  qu'on pouvait décrire le même graphe de plusieurs façons. On aimerait donc pouvoir se demander si, lorsqu'on considère deux graphes, est-ce que ceux-ci sont équivalents.</p>
+<p id="p-2443">Pour cela, on doit développer le concepte d'isomorphisme. Ce concepte est présent dans toutes les branches des mathématiques. En fait, ce concepte est tellement fondamental en mathématique, que les mathématiciens on même généraliser cette idée au point de définir toutes les branches des mathématiques à l'aide de mprphisme! (voir la théorie des catégorie).</p>
+<p id="p-2444">Avant de parler d'isomorphisme, on va définir certaines caractéristiques des graphes, qui nous permetrons, entre-autre, de différencier certains graphes les uns des autres.</p></section><section class="subsection" id="subs-graphesBiColoration"><h3 class="heading hide-type">
 <span class="type">Sous-section</span> <span class="codenumber">7.2.1</span> <span class="title">Graphes bipartis et coloration des graphes</span>
 </h3>
 <article class="definition definition-like" id="def-grapheBi"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Graphe biparti.</span>
 </h4>
-<p id="p-2434">Une graphe <span class="process-math">\(G=(S,A)\)</span> est appelé un graphe biparti si on peut écrire l'ensemble des sommet <span class="process-math">\(S\)</span> comme l'union disjointe de deux sous-ensemble <span class="process-math">\(S_1\)</span> et <span class="process-math">\(S_2\)</span> tels que chaque arête de <span class="process-math">\(G\)</span> a une extrémité dans <span class="process-math">\(S_1\)</span> et une extrémité dans <span class="process-math">\(S_2\text{.}\)</span></p>
-<p id="p-2435">Ainsi, <span class="process-math">\(G\)</span> est biparti si <span class="process-math">\(S=S_1\cup S_2,\)</span> avec <span class="process-math">\(S_1\cap S_2=\emptyset,\)</span> et si <span class="process-math">\(a=\{s,t\}\in\,A,\)</span> alors <span class="process-math">\(s\in\, S_1\)</span> si et seulement si <span class="process-math">\(t\in\,S_2\text{.}\)</span></p></article><article class="example example-like" id="exe-grapheBi"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-grapheBi"><h4 class="heading">
+<p id="p-2445">Une graphe <span class="process-math">\(G=(S,A)\)</span> est appelé un graphe biparti si on peut écrire l'ensemble des sommet <span class="process-math">\(S\)</span> comme l'union disjointe de deux sous-ensemble <span class="process-math">\(S_1\)</span> et <span class="process-math">\(S_2\)</span> tels que chaque arête de <span class="process-math">\(G\)</span> a une extrémité dans <span class="process-math">\(S_1\)</span> et une extrémité dans <span class="process-math">\(S_2\text{.}\)</span></p>
+<p id="p-2446">Ainsi, <span class="process-math">\(G\)</span> est biparti si <span class="process-math">\(S=S_1\cup S_2,\)</span> avec <span class="process-math">\(S_1\cap S_2=\emptyset,\)</span> et si <span class="process-math">\(a=\{s,t\}\in\,A,\)</span> alors <span class="process-math">\(s\in\, S_1\)</span> si et seulement si <span class="process-math">\(t\in\,S_2\text{.}\)</span></p></article><article class="example example-like" id="exe-grapheBi"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-grapheBi"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Un graphe biparti.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-grapheBi"><article class="example example-like"><p id="p-2436">Le graphe cyclique <span class="process-math">\(C_6\)</span> est un graphe bipartie. On peut le voir à l'aide de la représention de <span class="process-math">\(C_6\)</span> ci dessous, en posant</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-grapheBi"><article class="example example-like"><p id="p-2447">Le graphe cyclique <span class="process-math">\(C_6\)</span> est un graphe bipartie. On peut le voir à l'aide de la représention de <span class="process-math">\(C_6\)</span> ci dessous, en posant</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 S_1=\{a,b,e\}
@@ -231,61 +231,61 @@ S_2=\{c,d,f\}\text{.}
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.3<span class="period">.</span></span><span class="space"> </span>Le graphe <span class="process-math">\(C_6\)</span></figcaption></figure></article></div>
 <article class="example example-like" id="exe-grapheYesNoBi"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-grapheYesNoBi"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Reconnaître un graphe bipartie.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-grapheYesNoBi"><article class="example example-like"><p id="p-2437">Pour déterminer si un graphe est bipartie, on choisir aléatoirement un premier sommet <span class="process-math">\(s\)</span> et décider de mettre <span class="process-math">\(s\)</span> dans <span class="process-math">\(S_1\text{.}\)</span></p>
-<p id="p-2438">Ensuite, on place tout le voisinage de <span class="process-math">\(s\)</span> dans <span class="process-math">\(S_2\text{.}\)</span> Pour chacun des sommets ajoutés dans <span class="process-math">\(S_2\text{,}\)</span> on place leur voisinage dans <span class="process-math">\(S_1\text{.}\)</span></p>
-<p id="p-2439">On poursuit cette procédure jusqu'à ce que chaque sommet soit dans un seul des <span class="process-math">\(S_i\)</span> (et donc que le graphe est biparti), ou jusqu'à ce qu'un sommet soit dans <span class="process-math">\(S_1\)</span> et <span class="process-math">\(S_2\)</span> (et donc le graphe n'est pas biparti).</p>
-<p id="p-2440">En procédant ainsi, on peut voir que le graphe <span class="process-math">\(G\)</span> ci-dessous est biparti, mais pas le graphe <span class="process-math">\(H\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-grapheYesNoBi"><article class="example example-like"><p id="p-2448">Pour déterminer si un graphe est bipartie, on choisir aléatoirement un premier sommet <span class="process-math">\(s\)</span> et décider de mettre <span class="process-math">\(s\)</span> dans <span class="process-math">\(S_1\text{.}\)</span></p>
+<p id="p-2449">Ensuite, on place tout le voisinage de <span class="process-math">\(s\)</span> dans <span class="process-math">\(S_2\text{.}\)</span> Pour chacun des sommets ajoutés dans <span class="process-math">\(S_2\text{,}\)</span> on place leur voisinage dans <span class="process-math">\(S_1\text{.}\)</span></p>
+<p id="p-2450">On poursuit cette procédure jusqu'à ce que chaque sommet soit dans un seul des <span class="process-math">\(S_i\)</span> (et donc que le graphe est biparti), ou jusqu'à ce qu'un sommet soit dans <span class="process-math">\(S_1\)</span> et <span class="process-math">\(S_2\)</span> (et donc le graphe n'est pas biparti).</p>
+<p id="p-2451">En procédant ainsi, on peut voir que le graphe <span class="process-math">\(G\)</span> ci-dessous est biparti, mais pas le graphe <span class="process-math">\(H\text{.}\)</span></p>
 <figure class="figure figure-like" id="figure-83"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-84"><img src="external/tikzit_GraphBipartiOui.jpg" class="contained"><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Le graphe <span class="process-math">\(G\)</span> est bipartie</figcaption></figure></div>
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-85"><img src="external/tikzit_GraphBipartiNon.jpg" class="contained"><figcaption><span class="codenumber">(b)</span><span class="space"> </span>Le graphe <span class="process-math">\(H\)</span> n'est pas biparti</figcaption></figure></div>
 </div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.5<span class="period">.</span></span><span class="space"> </span>Deux graphes bipartis?</figcaption></figure></article></div>
-<p id="p-2441">Pour illustrer la procédure utilisée dans l'exemple précédent, on peut colorié les sommets d'un graphe, en s'assurant que chaque sommets qui sont voisins soient d'une couleur différente.</p>
-<p id="p-2442">Un graphe sera alors biparti si et seulement si on peut faire une telle coloration avec deux couleurs. De façon général, on peut résoudre certains procblèmes ou bien différentier certains graphes en sachant le nombre de couleurs minimal qu'on doit utiliser pour colorier un graphe.</p>
+<p id="p-2452">Pour illustrer la procédure utilisée dans l'exemple précédent, on peut colorié les sommets d'un graphe, en s'assurant que chaque sommets qui sont voisins soient d'une couleur différente.</p>
+<p id="p-2453">Un graphe sera alors biparti si et seulement si on peut faire une telle coloration avec deux couleurs. De façon général, on peut résoudre certains procblèmes ou bien différentier certains graphes en sachant le nombre de couleurs minimal qu'on doit utiliser pour colorier un graphe.</p>
 <article class="definition definition-like" id="def-colorationGraphe"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Coloration d'un graphe.</span>
 </h4>
-<p id="p-2443">La coloration d'un graphe consiste à attribuer une couleur à chacun de ses sommets de manière à ce que deux somments adjacents soient d'une couleur différente.</p>
-<p id="p-2444">Plus formellement, on peut définir une coloration d'un graphe <span class="process-math">\(G=(S,A)\)</span> comme une fonction <span class="process-math">\(f:S\rightarrow C,\)</span> ou <span class="process-math">\(C\)</span> est un ensemble de couleurs, tels que si <span class="process-math">\(\{s,t\}\)</span> est une arête de <span class="process-math">\(G,\)</span> alors <span class="process-math">\(f(s)\neq f(t)\text{.}\)</span></p></article><article class="example example-like" id="exe-colCycle6"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-colCycle6"><h4 class="heading">
+<p id="p-2454">La coloration d'un graphe consiste à attribuer une couleur à chacun de ses sommets de manière à ce que deux somments adjacents soient d'une couleur différente.</p>
+<p id="p-2455">Plus formellement, on peut définir une coloration d'un graphe <span class="process-math">\(G=(S,A)\)</span> comme une fonction <span class="process-math">\(f:S\rightarrow C,\)</span> ou <span class="process-math">\(C\)</span> est un ensemble de couleurs, tels que si <span class="process-math">\(\{s,t\}\)</span> est une arête de <span class="process-math">\(G,\)</span> alors <span class="process-math">\(f(s)\neq f(t)\text{.}\)</span></p></article><article class="example example-like" id="exe-colCycle6"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-colCycle6"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Une coloration de <span class="process-math">\(C_6\)</span>.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-colCycle6"><article class="example example-like">Voici une coloration à deux couleurs de <span class="process-math">\(C_6\text{.}\)</span> <figure class="figure figure-like" id="figure-86"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/tikzit_Cycle6Coul.jpg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.8<span class="period">.</span></span><span class="space"> </span>Coloration à deux couleurs de <span class="process-math">\(C_6\)</span></figcaption></figure></article></div>
 <article class="proposition theorem-like" id="prop-colorBiparti"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Coloration et graphe biparti.</span>
 </h4>
-<p id="p-2445">Un graphe <span class="process-math">\(G\)</span> est un graphe biparti si et seulement si il exsite une coloration à deux couleurs de <span class="process-math">\(G\text{.}\)</span></p></article><article class="example example-like" id="exe-colorBiparti"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-colorBiparti"><h4 class="heading">
+<p id="p-2456">Un graphe <span class="process-math">\(G\)</span> est un graphe biparti si et seulement si il exsite une coloration à deux couleurs de <span class="process-math">\(G\text{.}\)</span></p></article><article class="example example-like" id="exe-colorBiparti"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-colorBiparti"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Coloration à deux couleurs et graphes bipartis.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-colorBiparti"><article class="example example-like"><p id="p-2446">En essayant de colorier les graphes de l'exemple <a href="" class="xref" data-knowl="./knowl/exe-grapheYesNoBi.html" title="Exemple 7.2.4: Reconnaître un graphe bipartie">7.2.4</a> avec un minimum de couleur, on onbtient les colorations suivantes.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-colorBiparti"><article class="example example-like"><p id="p-2457">En essayant de colorier les graphes de l'exemple <a href="" class="xref" data-knowl="./knowl/exe-grapheYesNoBi.html" title="Exemple 7.2.4: Reconnaître un graphe bipartie">7.2.4</a> avec un minimum de couleur, on onbtient les colorations suivantes.</p>
 <figure class="figure figure-like" id="figure-87"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-88"><img src="external/tikzit_GraphBipartiOuiCol.jpg" class="contained"><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Le graphe <span class="process-math">\(G\)</span> est bipartie</figcaption></figure></div>
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-89"><img src="external/tikzit_GraphBipartiNonCol.jpg" class="contained"><figcaption><span class="codenumber">(b)</span><span class="space"> </span>Le graphe <span class="process-math">\(H\)</span> n'est pas biparti</figcaption></figure></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.11<span class="period">.</span></span><span class="space"> </span>Deux graphes bipartis? Prise deux.</figcaption></figure><p id="p-2447">On voit donc que <span class="process-math">\(G\)</span> est biparti, mais pas <span class="process-math">\(H\text{.}\)</span></p></article></div></section><section class="subsection" id="subs-cheminCircuit"><h3 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.11<span class="period">.</span></span><span class="space"> </span>Deux graphes bipartis? Prise deux.</figcaption></figure><p id="p-2458">On voit donc que <span class="process-math">\(G\)</span> est biparti, mais pas <span class="process-math">\(H\text{.}\)</span></p></article></div></section><section class="subsection" id="subs-cheminCircuit"><h3 class="heading hide-type">
 <span class="type">Sous-section</span> <span class="codenumber">7.2.2</span> <span class="title">Chemins et circuits</span>
 </h3>
 <article class="definition definition-like" id="def-chemin"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.2.12</span><span class="period">.</span>
 </h4>
-<p id="p-2448">Soit <span class="process-math">\(n\)</span> un entier naturel et <span class="process-math">\(G\)</span> un graphe. Un chemin de longueur <span class="process-math">\(n\)</span>  allant du sommet <span class="process-math">\(s\)</span> au sommet <span class="process-math">\(t\)</span> est une suite de sommets de <span class="process-math">\(G\)</span> <span class="process-math">\(s_0,\,s_1,\,s_1,\,\dots,\,s_n\)</span> tels que:</p>
-<ul id="p-2449" class="disc">
+<p id="p-2459">Soit <span class="process-math">\(n\)</span> un entier naturel et <span class="process-math">\(G\)</span> un graphe. Un chemin de longueur <span class="process-math">\(n\)</span>  allant du sommet <span class="process-math">\(s\)</span> au sommet <span class="process-math">\(t\)</span> est une suite de sommets de <span class="process-math">\(G\)</span> <span class="process-math">\(s_0,\,s_1,\,s_1,\,\dots,\,s_n\)</span> tels que:</p>
+<ul id="p-2460" class="disc">
 <li id="li-446"><p id="p-derived-li-446"><span class="process-math">\(s_0=s,\)</span> <span class="process-math">\(s_n=t\text{;}\)</span></p></li>
 <li id="li-447"><p id="p-derived-li-447"><span class="process-math">\(\{s_0,s_1\},\,\{s_1,s_2\},\,\dots,\,\{s_{n-1},s_n\}\)</span> sont des arêtes de <span class="process-math">\(G\text{.}\)</span></p></li>
 </ul>
-<p id="p-2450">Un chemin sera dit simple s'il traverse une arête au plus une fois.</p></article><article class="definition definition-like" id="def-circuit"><h4 class="heading">
+<p id="p-2461">Un chemin sera dit simple s'il traverse une arête au plus une fois.</p></article><article class="definition definition-like" id="def-circuit"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.2.13</span><span class="period">.</span>
 </h4>
-<p id="p-2451">Soit <span class="process-math">\(n\)</span> un entier naturel et <span class="process-math">\(G\)</span> un graphe. Un circuit de longueur <span class="process-math">\(n\)</span> est un chemin allant de <span class="process-math">\(s\)</span> à <span class="process-math">\(t\)</span> tel que <span class="process-math">\(s=t\text{.}\)</span></p></article></section><section class="subsection" id="subs-eulerien"><h3 class="heading hide-type">
+<p id="p-2462">Soit <span class="process-math">\(n\)</span> un entier naturel et <span class="process-math">\(G\)</span> un graphe. Un circuit de longueur <span class="process-math">\(n\)</span> est un chemin allant de <span class="process-math">\(s\)</span> à <span class="process-math">\(t\)</span> tel que <span class="process-math">\(s=t\text{.}\)</span></p></article></section><section class="subsection" id="subs-eulerien"><h3 class="heading hide-type">
 <span class="type">Sous-section</span> <span class="codenumber">7.2.3</span> <span class="title">Chemins et circuits eulériens</span>
 </h3>
 <article class="definition definition-like" id="def-eulerien"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.2.14</span><span class="period">.</span>
 </h4>
-<ul id="p-2452" class="disc">
+<ul id="p-2463" class="disc">
 <li id="li-448"><p id="p-derived-li-448">Un chemin eulérien d'un graphe <span class="process-math">\(G\)</span> est un chemin simple allant de <span class="process-math">\(s\)</span> à <span class="process-math">\(t\neq s \)</span>  passant par toutes les arêtes de <span class="process-math">\(G\text{.}\)</span></p></li>
 <li id="li-449"><p id="p-derived-li-449">Un circuit eulérien d'un graphe <span class="process-math">\(G\)</span> est un circuit simple passant par toutes les arêtes de <span class="process-math">\(G\text{.}\)</span></p></li>
 </ul></article><article class="example example-like" id="exe-eulerien"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-eulerien"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.15</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-eulerien"><article class="example example-like"><ul id="p-2453" class="disc">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-eulerien"><article class="example example-like"><ul id="p-2464" class="disc">
 <li id="li-450"><p id="p-derived-li-450">Le chemin <span class="process-math">\(a,c,e,d,c,b,a,d,b\)</span> est un chemin eulérien du graphe <span class="process-math">\(G_1\text{.}\)</span></p></li>
 <li id="li-451"><p id="p-derived-li-451">Le chemin <span class="process-math">\(a,b,c,d,b\)</span> est un chemin eulérien du graphe <span class="process-math">\(G_2\text{.}\)</span></p></li>
 <li id="li-452"><p id="p-derived-li-452">Le circuit <span class="process-math">\(a,b,e,d,c,e,a\)</span> est un circuit eulérien du graphe <span class="process-math">\(G_3\text{.}\)</span></p></li>
@@ -300,12 +300,12 @@ S_2=\{c,d,f\}\text{.}
 <div class="sbspanel top" style="width:20%;"><figure class="figure figure-like" id="figure-95"><img src="external/tikzit_GrapheNoEuler2.jpg" class="contained"><figcaption><span class="codenumber">(e)</span><span class="space"> </span><span class="process-math">\(G_5\)</span></figcaption></figure></div>
 </div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.16<span class="period">.</span></span><span class="space"> </span>Chemins et circuits eulériens</figcaption></figure></article></div>
-<p id="p-2454">Pour montrer l'existance d'un chemin ou d'un circuit eulérien, on peut essayer d'en trouver un. Pour montrer qu'il n'en existe pas, il faut argumenter un peu plus.</p>
-<p id="p-2455">Le critère donne une condition suffisante et nécessaire pour l'existance d'une chemin ou d'un circuit eulérien</p>
+<p id="p-2465">Pour montrer l'existance d'un chemin ou d'un circuit eulérien, on peut essayer d'en trouver un. Pour montrer qu'il n'en existe pas, il faut argumenter un peu plus.</p>
+<p id="p-2466">Le critère donne une condition suffisante et nécessaire pour l'existance d'une chemin ou d'un circuit eulérien</p>
 <article class="proposition theorem-like" id="prop-eulerien"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2.17</span><span class="period">.</span>
 </h4>
-<ul id="p-2456" class="disc">
+<ul id="p-2467" class="disc">
 <li id="li-455"><p id="p-derived-li-455">Un graphe <span class="process-math">\(G\)</span> de trois sommets ou plus possède un circuit eulérien si et seulement si <span class="process-math">\(\deg(s)\)</span> est pair pour tout sommet <span class="process-math">\(s\)</span> de <span class="process-math">\(G\text{.}\)</span></p></li>
 <li id="li-456"><p id="p-derived-li-456">Un graphe <span class="process-math">\(G\)</span> possède un chemin eulérien si et seulement si il existe exactement deux sommets de <span class="process-math">\(G\)</span> ayant un degré impair.</p></li>
 </ul></article></section><section class="subsection" id="subs-hamiltonien"><h3 class="heading hide-type">
@@ -314,12 +314,12 @@ S_2=\{c,d,f\}\text{.}
 <article class="definition definition-like" id="def-hamiltonien"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.2.18</span><span class="period">.</span>
 </h4>
-<ul id="p-2457" class="disc">
+<ul id="p-2468" class="disc">
 <li id="li-457"><p id="p-derived-li-457">Un chemin hamiltonien d'un graphe <span class="process-math">\(G\)</span> est un chemin simple allant de <span class="process-math">\(s\)</span> à <span class="process-math">\(t\neq s \)</span>  passant par tous les sommets de <span class="process-math">\(G\)</span> exactement une fois.</p></li>
 <li id="li-458"><p id="p-derived-li-458">Un circuit hamiltonien d'un graphe <span class="process-math">\(G\)</span> est un circuit simple passant par tous les sommets de <span class="process-math">\(G\)</span> exactement une fois.</p></li>
 </ul></article><article class="example example-like" id="exe-hamiltonien"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-hamiltonien"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.19</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-hamiltonien"><article class="example example-like"><ul id="p-2458" class="disc">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-hamiltonien"><article class="example example-like"><ul id="p-2469" class="disc">
 <li id="li-459"><p id="p-derived-li-459">Le chemin <span class="process-math">\(a,e,d,b,c\)</span> est un chemin hamiltonien du graphe <span class="process-math">\(G_1\text{.}\)</span></p></li>
 <li id="li-460"><p id="p-derived-li-460">Le chemin <span class="process-math">\(a,b,c,d\)</span> est un chemin hamiltonien du graphe <span class="process-math">\(G_2\text{.}\)</span></p></li>
 <li id="li-461"><p id="p-derived-li-461">Le circuit <span class="process-math">\(a,c,b,e,f,d,a\)</span> est un circuit hamiltonien du graphe <span class="process-math">\(G_3\text{.}\)</span></p></li>
@@ -332,17 +332,17 @@ S_2=\{c,d,f\}\text{.}
 <div class="sbspanel top" style="width:25%;"><figure class="figure figure-like" id="figure-100"><img src="external/tikzit_GrapheNoHamilton.jpg" class="contained"><figcaption><span class="codenumber">(d)</span><span class="space"> </span><span class="process-math">\(G_4\)</span></figcaption></figure></div>
 </div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.20<span class="period">.</span></span><span class="space"> </span>Chemins et circuits hamiltoniens</figcaption></figure></article></div>
-<p id="p-2459">Il n'existe pas de condition suffisante et nécessaire à l'exsitance d'une circuit ou d'un chemin hamiltonien. Il existe cependant des conditions suffisantes. En voilà une.</p>
+<p id="p-2470">Il n'existe pas de condition suffisante et nécessaire à l'exsitance d'une circuit ou d'un chemin hamiltonien. Il existe cependant des conditions suffisantes. En voilà une.</p>
 <article class="proposition theorem-like" id="prop-hamiltonien"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2.21</span><span class="period">.</span>
 </h4>
-<p id="p-2460">Si <span class="process-math">\(G\)</span> est un graphe à <span class="process-math">\(n\)</span> sommets avec <span class="process-math">\(n\geq 3\)</span> tel que <span class="process-math">\(\deg(s)+\deg(t)\geq n\)</span> pour toute paire de sommets non-adjacent <span class="process-math">\(u\)</span> et <span class="process-math">\(v\)</span> de <span class="process-math">\(G,\)</span> alors <span class="process-math">\(G\)</span> possède un circuit hamiltonien.</p></article></section><section class="subsection" id="subs-isoGraphe"><h3 class="heading hide-type">
+<p id="p-2471">Si <span class="process-math">\(G\)</span> est un graphe à <span class="process-math">\(n\)</span> sommets avec <span class="process-math">\(n\geq 3\)</span> tel que <span class="process-math">\(\deg(s)+\deg(t)\geq n\)</span> pour toute paire de sommets non-adjacent <span class="process-math">\(u\)</span> et <span class="process-math">\(v\)</span> de <span class="process-math">\(G,\)</span> alors <span class="process-math">\(G\)</span> possède un circuit hamiltonien.</p></article></section><section class="subsection" id="subs-isoGraphe"><h3 class="heading hide-type">
 <span class="type">Sous-section</span> <span class="codenumber">7.2.5</span> <span class="title">Isomorphismes de graphes</span>
 </h3>
 <article class="definition definition-like" id="def-isoGraphe"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">7.2.22</span><span class="period">.</span>
 </h4>
-<p id="p-2461">Soit <span class="process-math">\(G_1=(S_1,A_1)\)</span> et <span class="process-math">\(G_2=(S_2,A_2)\)</span> deux graphes. On dit que <span class="process-math">\(G_1\)</span> et <span class="process-math">\(G_2\)</span> sont isomorphe si il existe une fonction <span class="process-math">\(f:S_1\rightarrow S_2\)</span> telle que:</p>
+<p id="p-2472">Soit <span class="process-math">\(G_1=(S_1,A_1)\)</span> et <span class="process-math">\(G_2=(S_2,A_2)\)</span> deux graphes. On dit que <span class="process-math">\(G_1\)</span> et <span class="process-math">\(G_2\)</span> sont isomorphe si il existe une fonction <span class="process-math">\(f:S_1\rightarrow S_2\)</span> telle que:</p>
 <ul class="disc">
 <li id="li-463"><p id="p-derived-li-463"><span class="process-math">\(f\)</span> est une bijection;</p></li>
 <li id="li-464"><p id="p-derived-li-464">les sommets <span class="process-math">\(s\)</span> et <span class="process-math">\(t\)</span> sont adjacents dans <span class="process-math">\(G_1\)</span> si et seulement si <span class="process-math">\(f(s)\)</span> et <span class="process-math">\(f(t)\)</span> sont adjacents.</p></li>
@@ -350,7 +350,7 @@ S_2=\{c,d,f\}\text{.}
 <p class="continuation">On dira alors que <span class="process-math">\(f \)</span> est un isomorphisme.</p></article><article class="proposition theorem-like" id="prop-isoGraphe"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2.23</span><span class="period">.</span>
 </h4>
-<p id="p-2462">Soit <span class="process-math">\(f\)</span> un isomorphisme entre les graphes <span class="process-math">\(G_1=(S_1,A_1)\)</span> et <span class="process-math">\(G_2=(S_2,A_2)\text{.}\)</span></p>
+<p id="p-2473">Soit <span class="process-math">\(f\)</span> un isomorphisme entre les graphes <span class="process-math">\(G_1=(S_1,A_1)\)</span> et <span class="process-math">\(G_2=(S_2,A_2)\text{.}\)</span></p>
 <ul class="disc">
 <li id="li-465"><p id="p-derived-li-465">Pour tout sommet <span class="process-math">\(s\)</span> de <span class="process-math">\(G_1,\)</span> alors <span class="process-math">\(\deg(s)=\deg\left(f(s)\right)\text{.}\)</span></p></li>
 <li id="li-466"><p id="p-derived-li-466"><span class="process-math">\(\displaystyle |S_1|=|S_2|\)</span></p></li>
@@ -358,22 +358,22 @@ S_2=\{c,d,f\}\text{.}
 <li id="li-468"><p id="p-derived-li-468">Il existe une coloration à <span class="process-math">\(n\)</span> couleurs de <span class="process-math">\(G_1\)</span> si et seulement si il existe une coloration de <span class="process-math">\(G_2\text{.}\)</span></p></li>
 </ul></article><article class="example example-like" id="exe-nonIso"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-nonIso"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.24</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-nonIso"><article class="example example-like"><p id="p-2463">On peut montrer que les deux graphes ci-dessous ne sont pas isomorphe, car il existe une coloration à deux couleurs pour le graphe <span class="process-math">\(G,\)</span> mais il faut trois couleurs pour une coloration de <span class="process-math">\(H\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-nonIso"><article class="example example-like"><p id="p-2474">On peut montrer que les deux graphes ci-dessous ne sont pas isomorphe, car il existe une coloration à deux couleurs pour le graphe <span class="process-math">\(G,\)</span> mais il faut trois couleurs pour une coloration de <span class="process-math">\(H\text{.}\)</span></p>
 <figure class="figure figure-like" id="figure-101"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-102"><img src="external/tikzit_Graphesdiff2.jpg" class="contained"><figcaption><span class="codenumber">(a)</span><span class="space"> </span><span class="process-math">\(G\)</span></figcaption></figure></div>
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-103"><img src="external/tikzit_Graphesdiff1.jpg" class="contained"><figcaption><span class="codenumber">(b)</span><span class="space"> </span><span class="process-math">\(h\)</span></figcaption></figure></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.25<span class="period">.</span></span><span class="space"> </span>Deux graphes non isomorphes</figcaption></figure><p id="p-2464">Voici des colorations de ces graphes</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.25<span class="period">.</span></span><span class="space"> </span>Deux graphes non isomorphes</figcaption></figure><p id="p-2475">Voici des colorations de ces graphes</p>
 <figure class="figure figure-like" id="figure-104"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-105"><img src="external/tikzit_Graphesdiff2Coul.jpg" class="contained"><figcaption><span class="codenumber">(a)</span><span class="space"> </span><span class="process-math">\(G\)</span></figcaption></figure></div>
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-106"><img src="external/tikzit_GraphesdiffCoul.jpg" class="contained"><figcaption><span class="codenumber">(b)</span><span class="space"> </span><span class="process-math">\(h\)</span></figcaption></figure></div>
 </div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.26<span class="period">.</span></span><span class="space"> </span>Coloration pour différencier des graphes</figcaption></figure></article></div>
-<p id="p-2465">Voici un exemple de deux graphes qui sont isomorphes</p>
+<p id="p-2476">Voici un exemple de deux graphes qui sont isomorphes</p>
 <article class="example example-like" id="exe-ouiIso"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-ouiIso"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.27</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-ouiIso"><article class="example example-like"><p id="p-2466">Les deux graphes ci-dessous sont isomorphe. On peut donner une isomorphisme <span class="process-math">\(f\)</span> allant des sommets de <span class="process-math">\(G\)</span> vers les sommets de <span class="process-math">\(H\)</span> comme ceci:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-132">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-ouiIso"><article class="example example-like"><p id="p-2477">Les deux graphes ci-dessous sont isomorphe. On peut donner une isomorphisme <span class="process-math">\(f\)</span> allant des sommets de <span class="process-math">\(G\)</span> vers les sommets de <span class="process-math">\(H\)</span> comme ceci:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-136">
 \begin{align*}
 f(s_1)\amp=t_4\\
 f(s_2)\amp=t_5\\
@@ -387,11 +387,11 @@ f(s_5)\amp=t_2
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-109"><img src="external/tikzit_GrapheSame2.jpg" class="contained"><figcaption><span class="codenumber">(b)</span><span class="space"> </span><span class="process-math">\(h\)</span></figcaption></figure></div>
 </div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2.28<span class="period">.</span></span><span class="space"> </span>Graphes isomorphes</figcaption></figure></article></div>
-<p id="p-2467">Une autre paire de graphe qui sont isomorphes</p>
+<p id="p-2478">Une autre paire de graphe qui sont isomorphes</p>
 <article class="example example-like" id="exe-ouiIso2"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-exe-ouiIso2"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">7.2.29</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-ouiIso2"><article class="example example-like"><p id="p-2468">Les deux graphes ci-dessous sont isomorphe. On peut donner une isomorphisme <span class="process-math">\(g\)</span> allant des sommets de <span class="process-math">\(G\)</span> vers les sommets de <span class="process-math">\(H\)</span> comme ceci:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-133">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-ouiIso2"><article class="example example-like"><p id="p-2479">Les deux graphes ci-dessous sont isomorphe. On peut donner une isomorphisme <span class="process-math">\(g\)</span> allant des sommets de <span class="process-math">\(G\)</span> vers les sommets de <span class="process-math">\(H\)</span> comme ceci:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-137">
 \begin{align*}
 g(a)\amp=s_2\\
 g(b)\amp=s_6\\

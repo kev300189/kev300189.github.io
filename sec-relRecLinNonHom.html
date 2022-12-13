@@ -383,30 +383,84 @@ a_1=1\amp= \frac{1(1+1)}{2} +\alpha \\
 <article class="example example-like" id="exe-solPart1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-solPart1"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.2.7</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-solPart1"><article class="example example-like"><p id="p-2369">On considère la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=6a_{n-1}-9a_{n-2}+2^n,\)</span>  <span class="process-math">\(a_0=1\)</span> et <span class="process-math">\(a_1=4\text{.}\)</span></p>
-<p id="p-2370">Trouver la forme générale de la suite à l'aide d'une solution particulière de la forme <span class="process-math">\(a_n^{(p)}=c2^n\text{.}\)</span></p></article></div>
+<p id="p-2370">Trouver la forme générale de la suite à l'aide d'une solution particulière de la forme <span class="process-math">\(a_n^{(p)}=c2^n\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-298" id="answer-298"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-298"><div class="answer solution-like"><span class="process-math">\(a_n=-3(3)^n+\left(\frac{5n}{3}\right)3^n+4\cdot 2^n\)</span></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-264" id="solution-264"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-264"><div class="solution solution-like">
+<p id="p-2371">On sait que la soultion aura la forme <span class="process-math">\(a_n=a_n^{(h)}+a_n^{(p)},\)</span> où <span class="process-math">\(a_n^{(h)}=\alpha_1\cdot 3^n+\alpha_2n\cdot 3^n,\)</span> par l'exemple <a href="" class="xref" data-knowl="./knowl/exe-solRecLinHomDeuxMult.html" title="Exemple 6.1.24: Une première solution">6.1.24</a>, et on propose <span class="process-math">\(a^{(p)}_n=c\cdot 2^n\)</span></p>
+<p id="p-2372">Pour trouver la valeur de <span class="process-math">\(c\)</span> telle que <span class="process-math">\(c\cdot 2^n\)</span> est une solution particulière, on remplace <span class="process-math">\(a_n\)</span> par <span class="process-math">\(c\cdot 2^n\)</span> dans la relation de récurrence, et on trouve la valeur de <span class="process-math">\(c\)</span> satisfaisant l'équation résultante.</p>
+<p id="p-2373">On a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-127">
+\begin{align*}
+c\cdot 2^n\amp= 6c\cdot 2^{n-1}-9c\cdot 2^{n-2}+2^n\\
+2^{n-2}(c\cdot 2^2)\amp= 2^{n-2}(6c\cdot 2-9c+2^2)\\
+c\cdot 4\amp= 12c-9c+4\\
+(4-12+9)c\amp= 4\\
+c\amp= 4
+\end{align*}
+</div>
+<p class="continuation">Ainsi, <span class="process-math">\(a^{(p)}_n=4\cdot 2^n\)</span> est une solution particulière à la relation de récurrence.</p>
+<p id="p-2374">On a donc <span class="process-math">\(a_m=n=\alpha_1(3^n)+\alpha_2(n3^n)+4\cdot 2^n\text{.}\)</span></p>
+<p id="p-2375">Pour trouver <span class="process-math">\(\alpha_1\)</span> et <span class="process-math">\(alpha_2\text{,}\)</span> on doit résoudre le système d'équations</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-128">
+\begin{align*}
+1\amp= \alpha_1 +4;\\
+4\amp= 3\alpha_1+3\alpha_2+8;
+\end{align*}
+</div>
+<p class="continuation">En résolvant ces équations, on trouve <span class="process-math">\(\alpha_1=-3\)</span> et <span class="process-math">\(\alpha_2=\frac{5}{3}\text{.}\)</span></p>
+</div></div>
+</div></article></div>
 <article class="example example-like" id="exe-solPart2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-solPart2"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">6.2.8</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-solPart2"><article class="example example-like"><p id="p-2371">On considère la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=6a_{n-1}-9a_{n-2}+3^n,\)</span>  <span class="process-math">\(a_0=1\)</span> et <span class="process-math">\(a_1=4\text{.}\)</span></p>
-<p id="p-2372">Trouver la forme générale de la suite à l'aide d'une solution particulière de la forme <span class="process-math">\(a_n^{(p)}=cn^2(3^n)\text{.}\)</span></p></article></div></section><section class="exercises" id="exo-relRecLinNonHom"><h3 class="heading hide-type">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-solPart2"><article class="example example-like"><p id="p-2376">On considère la suite <span class="process-math">\(\{a_n\}\)</span> telle que <span class="process-math">\(a_n=6a_{n-1}-9a_{n-2}+3^n,\)</span>  <span class="process-math">\(a_0=1\)</span> et <span class="process-math">\(a_1=4\text{.}\)</span></p>
+<p id="p-2377">Trouver la forme générale de la suite à l'aide d'une solution particulière de la forme <span class="process-math">\(a_n^{(p)}=cn^2(3^n)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-299" id="answer-299"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-299"><div class="answer solution-like"><span class="process-math">\(a_n=(3)^n+\left(\frac{-n}{6}\right)3^n+\frac{1}{2}\cdot n^23^n\)</span></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-265" id="solution-265"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-265"><div class="solution solution-like">
+<p id="p-2378">On sait que la soultion aura la forme <span class="process-math">\(a_n=a_n^{(h)}+a_n^{(p)},\)</span> où <span class="process-math">\(a_n^{(h)}=\alpha_1\cdot 3^n+\alpha_2n\cdot 3^n,\)</span> par l'exemple <a href="" class="xref" data-knowl="./knowl/exe-solRecLinHomDeuxMult.html" title="Exemple 6.1.24: Une première solution">6.1.24</a>, et on propose <span class="process-math">\(a^{(p)}_n=c\cdot n^23^n\)</span></p>
+<p id="p-2379">Pour trouver la valeur de <span class="process-math">\(c\)</span> telle que <span class="process-math">\(c\cdot n^2 3^n\)</span> est une solution particulière, on remplace <span class="process-math">\(a_n\)</span> par <span class="process-math">\(c\cdot n^2 3^n\)</span> dans la relation de récurrence, et on trouve la valeur de <span class="process-math">\(c\)</span> satisfaisant l'équation résultante.</p>
+<p id="p-2380">On a</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-129">
+\begin{align*}
+c\cdot n^2 3^n\amp= 6c\cdot (n-1)^2^{n-1}3^{n-1}-9c\cdot (n-2)^2 3^{n-2}+3^n\\
+c\cdot n^2 3^2\amp= 6c\cdot (n^2-2n+1)3-9c(n^2-4n+4)+3^2\\
+(9c)n^2 \amp= (18cn^2-36cn+18c)+(-9cn^2+36cn-36c)+9\\
+(9c)n^2 \amp= (9c)n^2+(-18c+9)
+\end{align*}
+</div>
+<p class="continuation">Pour que cette égalité soit vraie, on doit avoir <span class="process-math">\(9c=9c\)</span> et <span class="process-math">\(0=-18c+9\text{.}\)</span> On trouve alors <span class="process-math">\(c=\frac{1}{2}\)</span></p>
+<p id="p-2381">Ainsi, <span class="process-math">\(a^{(p)}_n=\frac{1}{2}\cdot n^2 3^n\)</span> est une solution particulière à la relation de récurrence.</p>
+<p id="p-2382">On a donc <span class="process-math">\(a_m=n=\alpha_1(3^n)+\alpha_2(n3^n)+\frac{1}{2}\cdot n^2 3^n\text{.}\)</span></p>
+<p id="p-2383">Pour trouver <span class="process-math">\(\alpha_1\)</span> et <span class="process-math">\(alpha_2\text{,}\)</span> on doit résoudre le système d'équations</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-130">
+\begin{align*}
+1\amp= \alpha_1;\\
+4\amp= 3\alpha_1+3\alpha_2+\frac{1}{2}\cdot 3;
+\end{align*}
+</div>
+<p class="continuation">En résolvant ces équations, on trouve <span class="process-math">\(\alpha_1=1\)</span> et <span class="process-math">\(\alpha_2=\frac{-1}{6}\text{.}\)</span></p>
+</div></div>
+</div></article></div></section><section class="exercises" id="exo-relRecLinNonHom"><h3 class="heading hide-type">
 <span class="type">Exercices</span> <span class="codenumber">6.2.2</span> <span class="title">Exercices</span>
 </h3>
 <article class="subexercises" id="subexercises-19"><article class="exercise exercise-like" id="exercise-275"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
 <div class="introduction" id="introduction-222">On considère la relation de récurrence <span class="process-math">\(a_n=2a_{n-1}+2n^2\text{.}\)</span>
 </div>
 <article class="task exercise-like" id="exo-particuliere1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-2373">Déterminer la forme générale de la solution à cette relation à l'aide d'une solution particulière <span class="process-math">\(a^{(p)}_n=(2c)n^3\text{.}\)</span></p></article><article class="task exercise-like" id="task-575"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-2374">Trouver la solution générale de la partie <a href="" class="xref" data-knowl="./knowl/exo-particuliere1.html" title="Tâche 6.2.2.1.a">6.2.2.1.a</a> sachant que <span class="process-math">\(a_1=4\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-276"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-2384">Déterminer la forme générale de la solution à cette relation à l'aide d'une solution particulière <span class="process-math">\(a^{(p)}_n=(2c)n^3\text{.}\)</span></p></article><article class="task exercise-like" id="task-575"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2385">Trouver la solution générale de la partie <a href="" class="xref" data-knowl="./knowl/exo-particuliere1.html" title="Tâche 6.2.2.1.a">6.2.2.1.a</a> sachant que <span class="process-math">\(a_1=4\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-276"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="introduction" id="introduction-223">On considère la relation de récurrence <span class="process-math">\(a_n=2a_{n-1}+3^n\text{.}\)</span>
 </div>
 <article class="task exercise-like" id="exo-particuliere2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-2375">Déterminer la forme générale de la solution à cette relation à l'aide d'une solution particulière <span class="process-math">\(a^{(p)}_n=c3^n\text{.}\)</span></p></article><article class="task exercise-like" id="task-577"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-2376">Trouver la solution générale de la partie <a href="" class="xref" data-knowl="./knowl/exo-particuliere2.html" title="Tâche 6.2.2.2.a">6.2.2.2.a</a> sachant que <span class="process-math">\(a_1=5\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-277"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-2386">Déterminer la forme générale de la solution à cette relation à l'aide d'une solution particulière <span class="process-math">\(a^{(p)}_n=c3^n\text{.}\)</span></p></article><article class="task exercise-like" id="task-577"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2387">Trouver la solution générale de la partie <a href="" class="xref" data-knowl="./knowl/exo-particuliere2.html" title="Tâche 6.2.2.2.a">6.2.2.2.a</a> sachant que <span class="process-math">\(a_1=5\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-277"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="introduction" id="introduction-224">On considère la relation de récurrence <span class="process-math">\(a_n=-5a_{n-1}-6a_{n-2}+42\cdot 4^n\text{.}\)</span>
 </div>
 <article class="task exercise-like" id="exo-particuliere3"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-2377">Déterminer la forme générale de la solution à cette relation à l'aide d'une solution particulière <span class="process-math">\(a^{(p)}_n=c4^n\text{.}\)</span></p></article><article class="task exercise-like" id="task-579"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-2378">Trouver la solution générale de la partie <a href="" class="xref" data-knowl="./knowl/exo-particuliere3.html" title="Tâche 6.2.2.3.a">6.2.2.3.a</a> sachant que <span class="process-math">\(a_1=56\)</span> et <span class="process-math">\(a_2=278\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-278"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<p id="p-2379">On considère la relation de récurrence <span class="process-math">\(a_n=-5a_{n-1}-6a_{n-2}+2^n+3n\text{.}\)</span> Déterminer la forme générale de la solution à cette relation à l'aide d'une solution particulière <span class="process-math">\(a^{(p)}_n=a (n2^n)+cn+d\text{.}\)</span></p></article></article></section></section></div></main>
+<p id="p-2388">Déterminer la forme générale de la solution à cette relation à l'aide d'une solution particulière <span class="process-math">\(a^{(p)}_n=c4^n\text{.}\)</span></p></article><article class="task exercise-like" id="task-579"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2389">Trouver la solution générale de la partie <a href="" class="xref" data-knowl="./knowl/exo-particuliere3.html" title="Tâche 6.2.2.3.a">6.2.2.3.a</a> sachant que <span class="process-math">\(a_1=56\)</span> et <span class="process-math">\(a_2=278\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-278"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-2390">On considère la relation de récurrence <span class="process-math">\(a_n=-5a_{n-1}-6a_{n-2}+2^n+3n\text{.}\)</span> Déterminer la forme générale de la solution à cette relation à l'aide d'une solution particulière <span class="process-math">\(a^{(p)}_n=a (n2^n)+cn+d\text{.}\)</span></p></article></article></section></section></div></main>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
