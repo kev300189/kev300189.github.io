@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,12 +12,64 @@
 </head>
 <body class="ignore-math">
 <article class="exercise exercise-like"><h5 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">15<span class="period">.</span></span>
+<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">6<span class="period">.</span></span>
 </h5>
-<div class="introduction"><p>Décoder les messages suivants, qui ont été chiffrés par RSA avec paramètres précisés avec le message.</p></div>
+<div class="introduction">
+<div class="para">Un tableau contenant une infinité de lignes et <span class="process-math">\(5\)</span> colonnes contenant les nombres naturels est construit. Les premières lignes sont données à la table ci-dessous. On considère l’élément à la première ligne et la première colonne comme la position <span class="process-math">\((0,0)\text{.}\)</span> De manière générale, un élément en position <span class="process-math">\((i,j)\)</span> est à la ligne <span class="process-math">\(i\)</span> et colonne <span class="process-math">\(j\text{.}\)</span> Par exemple, <span class="process-math">\(15\)</span> est à la position <span class="process-math">\((2,3)\text{.}\)</span>
+</div> <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.3.19<span class="period">.</span></span><span class="space"> </span>Un tableau de nombres</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(7\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(11\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(12\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(13\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(14\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(15\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(16\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(17\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(18\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(19\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(20\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(21\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(22\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(23\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(24\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(25\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(26\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(27\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(28\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(29\)</span></td>
+</tr>
+</table></div></figure>
+</div>
 <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p><code class="code-inline tex2jax_ignore">[8, 349, 1231, 64, 1000, 1, 684, 125, 807, 8, 349, 1231, 64]</code> avec <span class="process-math">\(p=89,q=17,e=531\)</span></p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p><code class="code-inline tex2jax_ignore">[6041, 80552, 64471, 1, 40280, 76462, 6041, 75310, 6041, 40280, 2122, 78295, 80552, 16446, 1, 32487, 2122, 80552, 6041, 73799, 1, 20790, 3336, 6041, 40280, 20790, 16446, 1, 79033, 2122, 46951, 6415, 70263, 2122, 46951, 40280]</code> avec <span class="process-math">\(p=389,q=233,e=111\)</span></p></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p><code class="code-inline tex2jax_ignore">[10, 1, 7357, 15878, 6017, 16044, 6017, 1172, 6017, 341, 6017, 10370, 341, 6017, 13378, 1, 16044, 11527, 341, 1518, 11527, 7357, 3855]</code> avec <span class="process-math">\(p=101,q=167,e=333\)</span></p></article></article><span class="incontext"><a href="sec-modulo.html#exercise-194" class="internal">Contexte</a></span>
+<div class="para">À quelle ligne et quelle colonne retrouve-t-on le nombre <span class="process-math">\(33\text{?}\)</span>
+</div>
+<div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-180-hidden.html" title="Réponse 3.3.6.6.a.1"><span class="type">Réponse</span><span class="period">.</span></a></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para">À quelle ligne et quelle colonne retrouve-t-on le nombre <span class="process-math">\(66\text{?}\)</span>
+</div>
+<div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-181-hidden.html" title="Réponse 3.3.6.6.b.1"><span class="type">Réponse</span><span class="period">.</span></a></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para">À quelle ligne et quelle colonne retrouve-t-on le nombre <span class="process-math">\(87\text{?}\)</span>
+</div>
+<div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-182-hidden.html" title="Réponse 3.3.6.6.c.1"><span class="type">Réponse</span><span class="period">.</span></a></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para">À quelle ligne et quelle colonne retrouve-t-on votre numéro de  DA?</div>
+<div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-183-hidden.html" title="Réponse 3.3.6.6.d.1"><span class="type">Réponse</span><span class="period">.</span></a></div></article></article><span class="incontext"><a href="sec-modulo.html#exercise-194" class="internal">Contexte</a></span>
 </body>
 </html>

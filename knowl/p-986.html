@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,8 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraphe</span></h6>
-<p>Si <span class="process-math">\(P(x,y)\)</span> représente la proposition “Il existe un nombre <span class="process-math">\(n\in \N\)</span> tel que <span class="process-math">\(x\leq n &lt; y\text{.}\)</span>”, déterminer la valeur de vérité de</p>
+<h4 class="heading"><span class="type">Paragraphe</span></h4>
+<div class="para logical">
+<div class="para">Dans un premier temps, on considère la proposition</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\exists x  \, \forall y \, P(x,y)\text{.}
+\end{equation*}
+</div>
+<div class="para">On pose <span class="process-math">\(Q(x,y)\)</span> la proposition <span class="process-math">\(\forall y P(x,y)\text{.}\)</span> La proposition originale s’écrit donc comme <span class="process-math">\(\exists x \, Q(x,y)\text{.}\)</span> Selon la négation d’une proposition quantifiée par un quantificateur existentiel, on a <span class="process-math">\(\neg(\exists x \, Q(x,y))\equiv \forall x \,\neg Q(x,y)\text{.}\)</span> On peut ensuite calculer la négation de <span class="process-math">\(Q(x,y)\)</span> en utilisant la règle pour la négation d’une proposition quantifiée par un quantificateur universel. On obtient <span class="process-math">\(\neg Q(x,y)=\neg(\forall y P(x,y))=\exists y \neg P(x,y)\text{.}\)</span> Ainsi,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\neg (\exists x  \, \forall y \, P(x,y))\equiv \forall x\, \exists y\, \neg P(x,y)\text{.}
+\end{equation*}
+</div>
+</div>
 <span class="incontext"><a href="sec-propquant.html#p-986" class="internal">Contexte</a></span>
 </body>
 </html>

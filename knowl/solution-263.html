@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,53 +13,35 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.2.6.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.1.22.1</span><span class="period">.</span>
 </h4>
-<p>On sait que <span class="process-math">\(a_n=a^{(h)}+a^{(p)}_n\)</span> et on peut facilement montrer que <span class="process-math">\(a_n^{(h)}=\alpha(1^n)=\alpha\)</span> en résolvant la relation de récurrence homogène <span class="process-math">\(a_{n}=a_{n-1}\text{.}\)</span></p>
-<p>Par la suite, on veut déterminer sous quelles conditions est-ce que <span class="process-math">\(a^{(p)}_n=cn^2+dn.\)</span> est une solution à la relation initiale. Pour cela, on doit avoir</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical">
+<div class="para">L’équation caractéristique est donnée par <span class="process-math">\(0=r^2-6r+9=(r-3)^2.\)</span> Ainsi, l’unique solution à cette équation est <span class="process-math">\(r_1=3.\)</span> Par définition, on a alors que</div>
+<div class="displaymath process-math">
+\begin{equation}
+r_1^{n}=6r_1^{n-1} -9 r_1^{n-2}.\tag{6.3}
+\end{equation}
+</div>
+<div class="para">On peut le vérifier en remplaçant <span class="process-math">\(r_1\)</span> par <span class="process-math">\(3,\)</span> c’est-à-dire en vérifiant que</div>
+<div class="displaymath process-math">
+\begin{equation}
+3^{n}=6(3)^{n-1} -9 (3)^{n-2}.\tag{6.4}
+\end{equation}
+</div>
+</div> <div class="para">Pour vérifier que <span class="process-math">\(a_n=n(3)^n\)</span> satisfait à la relation de récurrence, on doit vérifier que <span class="process-math">\(n3^n=6(n-1)3^{n-1}-9(n-2)3^{n-2}\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Or, on a que</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-caract.html">
 \begin{align*}
-cn^2+dn \amp= c(n-1)^2+d(n-1) +n \\
-cn^2+dn \amp= c(n^2-2n+1) +dn-d+n \\
-cn^2+dn \amp= (c)n^2+(d-2c+1)n+(c-d) 
+6(n-1)3^{n-1}-9(n-2)3^{n-2}\amp= 6n(3)^{n-1}-6(3)^{n-1}-9n(3)^{n-2} +2\cdot 9(3)^{n-2} \\
+\amp= \left(6n(3)^{n-1}-9n(3)^{n-2}\right)+ \left( -6(3)^{n-1} +2\cdot 9(3)^{n-2} \right)\\
+\amp= n\left(6(3)^{n-1}-9(3)^{n-2}\right)+ \left( -6\cdot 3(3)^{n-2} +2\cdot 9(3)^{n-2} \right)\\
+\amp= n\left(3^n\right)+ \left( 0 \right) \text{ par } \knowl{./knowl/eq-caract.html}{\text{(6.4)}} \\
+\amp= n3^n=a_n.
 \end{align*}
 </div>
-<p class="continuation">Pour que cette égalité soit vraie, il faut que les termes devant chaque puissance de <span class="process-math">\(n\)</span> doivents être les mêmes à gauche et à droite de l'égalité. Ainsi,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\begin{cases}
-c &amp;= c \\
-d &amp;= (d-2c+1) \\
-0 &amp;= c-d
-\end{cases} 
-\end{equation*}
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\iff
-\begin{cases}
-c &amp;= c \\
-d &amp;= (d-2c+1) \\
-d &amp;= c
-\end{cases} 
-\end{equation*}
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\iff d = (d-2d+1) = -d+1 \iff d=\frac{1}{2}
-\end{equation*}
-</div>
-<p>Ainsi, toute les solutions à la relation de récurrence seront <span class="process-math">\(a_n=\left(\frac{1}{2}\right)n^2+\left(\frac{1}{2}\right)n+\alpha=\frac{n(n+1)}{2} +\alpha \text{.}\)</span></p>
-<p>Pour trouver la solution telle que <span class="process-math">\(a_1=1,\)</span> on considère l'équation</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-a_1=1\amp= \frac{1(1+1)}{2} +\alpha \\
-1\amp= 1+\alpha \\
-0\amp=\alpha
-\end{align*}
-</div>
-<p class="continuation">Ainsi, <span class="process-math">\(a_n=\frac{n(n+1)}{2}\text{.}\)</span></p>
-</div>
-<span class="incontext"><a href="sec-relRecLinNonHom.html#solution-263" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-relRecLinHom.html#solution-263" class="internal">Contexte</a></span>
 </body>
 </html>

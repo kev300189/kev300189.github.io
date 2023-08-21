@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,10 +11,38 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>On commence par considérer un élément particulier <span class="process-math">\(a\in\,A\)</span> et on choisit la valeur de <span class="process-math">\(f(a)\text{.}\)</span> Il y a <span class="process-math">\(k\)</span> choix possible. Notons <span class="process-math">\(f(a)=b\in\,B.\)</span> Il reste alors uniquement à déterminer les valeurs de <span class="process-math">\(f\)</span> sur <span class="process-math">\(A-\{a\}\text{.}\)</span></p>
-<p>Par la suite, on sépaere en deux cas. Soit <span class="process-math">\(a\)</span> est la seule préimage de <span class="process-math">\(b\text{,}\)</span> soit il y a au moins une autre préimage pour <span class="process-math">\(b\text{.}\)</span></p>
-<p>Dans le premier cas, la restriction de <span class="process-math">\(f\)</span> sur <span class="process-math">\(A-\{a\}\)</span> est une fonction surjective vers l'ensemble <span class="process-math">\(B-\{b\}\text{.}\)</span> Il y aura donc <span class="process-math">\(C(n-1,k-1)\)</span> choix possibles.</p>
-<p>Dans le deuxième cas, la restriction de <span class="process-math">\(f\)</span> sur <span class="process-math">\(A-\{a\}\)</span> est une fonction surjective vers l'ensemble <span class="process-math">\(B\text{.}\)</span> Il y aura donc <span class="process-math">\(C(n-1,k)\)</span> choix possibles.</p>
-<p>Ainsi, par le principe du produit et de la somme, on a <span class="process-math">\(C(n,k)=k\left(C(n-1,k)+C(n-1,k-1)\right)\text{.}\)</span></p>
+<div class="para">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(2^n\gt n^2\)</span> pour <span class="process-math">\(n\in\,\N\)</span> et <span class="process-math">\(n\geq 5\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(5)\)</span> est vraie. Or, on a que <span class="process-math">\(P(7): 2^5\gt 5^2,\)</span> ce qui est vrai, puisque</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2^5=32\gt 25=5^2\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 5,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(2^k \gt k^2,\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2^{k+1}\gt (k+1)^2
+\end{equation*}
+</div>
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’inégalité, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp2^{k+1}= 2\left(2^k\right)\\
+\amp\gt 2\left(k^2\right) \text{ par H.I.}\\
+\amp= k^2+k^2=k^2+k\cdot k\\
+\amp\gt k^2 + 3k \text{ car } k\geq 5\gt 3\\
+\amp= k^2 + 2k +k \\
+\amp\gt k^2 + 2k +1  \text{ car } k\geq 5\gt 1 \\
+\amp= (k+1)^2 \text{(factorisation)}
+\end{align*}
+</div>
+<div class="para">c’est-à-dire que <span class="process-math">\(2^{k+1}\gt (k+1)^2 \text{.}\)</span>
+</div>
+</div> <div class="para">On a montré que <span class="process-math">\(P(5)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 5\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 5\text{.}\)</span>
+</div>
 </div></body>
 </html>

@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MaDIR Les preuves par récurrence (par induction)</title>
@@ -13,20 +13,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Mathématiques discrètes">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-    renderActions: {
-        findScript: [10, function (doc) {
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
                 var display = !!node.type.match(/; *mode=display/);
                 var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
@@ -36,41 +54,174 @@ window.MathJax = {
                 math.end = {node: text, delim: '', n: 0};
                 doc.math.push(math);
             });
-        }, '']
-    },
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-},
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
-<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_green_plum.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_green_plum.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Sauter au contenu</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes:</span> <span class="subtitle">Version préliminaire</span></a></h1>
+<p class="byline"></p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Résultats de la recherche: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>Aucun résultat.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Table des matières</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec_pidgeonHoles.html" title="Précédent"><span class="icon">&lt;</span><span class="name">Précédent</span></a><a class="up-button button" href="chap-preuveMath.html" title="Haut"><span class="icon">^</span><span class="name">Haut</span></a><a class="next-button button" href="chap-relationRecurrence.html" title="Suivant"><span class="name">Suivant</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
 \newcommand{\Z}{\mathbb{Z}}                
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -136,212 +287,414 @@ $\Box$
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes:</span> <span class="subtitle">Version préliminaire</span></a></h1>
-<p class="byline"></p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_pidgeonHoles.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><a id="nextbutton" class="next-button button toolbar-item" href="chap-relationRecurrence.html" title="Suivant">Suivant</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="sec_pidgeonHoles.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-preuveMath.html" title="Haut">Haut</a><a class="next-button button toolbar-item" href="chap-relationRecurrence.html" title="Suivant">Suivant</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link">
-<a href="chap-ensfct.html" data-scroll="chap-ensfct" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a><ul>
-<li><a href="sec-ens.html" data-scroll="sec-ens" class="internal">Les ensembles</a></li>
-<li><a href="sec-opens.html" data-scroll="sec-opens" class="internal">Opérations sur les ensembles</a></li>
-<li><a href="sec-fonctions.html" data-scroll="sec-fonctions" class="internal">Les fonctions</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="chap-ensfct.html" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-ens.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Les ensembles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-ens.html#subsection-1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Définitions et exemples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Relation entre deux ensembles</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Représentation graphique d’ensembles</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#subsection-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Ensembles particuliers</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#exo-ens" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-logique.html" data-scroll="chap-logique" class="internal"><span class="codenumber">2</span> <span class="title">Logique mathématique</span></a><ul>
-<li><a href="sec-logprop.html" data-scroll="sec-logprop" class="internal">La logique propositionnelle</a></li>
-<li><a href="sec-eqlogfnc.html" data-scroll="sec-eqlogfnc" class="internal">Équivalence logique et formes normales</a></li>
-<li><a href="sec-propquant.html" data-scroll="sec-propquant" class="internal">Les propositions quantifiées</a></li>
-<li><a href="sec-circuits.html" data-scroll="sec-circuits" class="internal">Circuits logiques</a></li>
+<li>
+<div class="toc-item"><a href="sec-opens.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Opérations sur les ensembles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-opens.html#sssec-opens" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Opérations élémentaires sur les ensembles</span></a></div></li>
+<li><div class="toc-item"><a href="sec-opens.html#sssec-propoper" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Propriétés des opérations élémentaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec-opens.html#rq-opens" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-opens.html#exo-opens" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-reptheonombres.html" data-scroll="chap-reptheonombres" class="internal"><span class="codenumber">3</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a><ul>
-<li><a href="sec-representation.html" data-scroll="sec-representation" class="internal">Représentation des nombres</a></li>
-<li><a href="sec-divisibilite.html" data-scroll="sec-divisibilite" class="internal">La divisibilité dans les entiers</a></li>
-<li><a href="sec-modulo.html" data-scroll="sec-modulo" class="internal">Arithmétique modulaire</a></li>
+<li>
+<div class="toc-item"><a href="sec-fonctions.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Les fonctions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-fonctions.html#subsection-7" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Définitions et exemples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#subsection-8" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Représentation d’une fonction</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#subsection-9" class="internal"><span class="codenumber">1.3.3</span> <span class="title">La composition de fonctions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#sssec-injsurj" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Fonctions injectives et surjectives</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#reading-questions-2" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#exo-" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-denombrement.html" data-scroll="chap-denombrement" class="internal"><span class="codenumber">4</span> <span class="title">Dénombrement</span></a><ul>
-<li><a href="sec_prodSomme.html" data-scroll="sec_prodSomme" class="internal">Méthodes de dénombrement: Principes de base</a></li>
-<li><a href="sec_arrCombinaison.html" data-scroll="sec_arrCombinaison" class="internal">Permutations et combinaisons</a></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-preuveMath.html" data-scroll="chap-preuveMath" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a><ul>
-<li><a href="sec_methodePreuve.html" data-scroll="sec_methodePreuve" class="internal">Méthodes de preuves</a></li>
-<li><a href="sec_pidgeonHoles.html" data-scroll="sec_pidgeonHoles" class="internal">Principe des tiroirs de Dirichlet</a></li>
-<li><a href="sec_induction.html" data-scroll="sec_induction" class="active">Les preuves par récurrence (par induction)</a></li>
+<li>
+<div class="toc-item"><a href="chap-logique.html" class="internal"><span class="codenumber">2</span> <span class="title">Logique mathématique</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-logprop.html" class="internal"><span class="codenumber">2.1</span> <span class="title">La logique propositionnelle</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-logprop.html#subsection-11" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Propositions mathématiques et connecteurs logiques</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#subsection-12" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Table de vérité</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#subsection-13" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Implication, réciproque et contraposée</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#reading-questions-3" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#exo-logprop" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-relationRecurrence.html" data-scroll="chap-relationRecurrence" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a><ul>
-<li><a href="sec-relRecLinHom.html" data-scroll="sec-relRecLinHom" class="internal">Relations de récurrence linéaires homogènes</a></li>
-<li><a href="sec-relRecLinNonHom.html" data-scroll="sec-relRecLinNonHom" class="internal">Relations de récurrence linéaires non-homogènes</a></li>
+<li>
+<div class="toc-item"><a href="sec-eqlogfnc.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Équivalence logique et formes normales</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#subsection-14" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Équivalence logique</span></a></div></li>
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#subsection-15" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Formes normales</span></a></div></li>
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#rq-eqlogfnc" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#exo-eqlogfnc" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-theorieGraphes.html" data-scroll="chap-theorieGraphes" class="internal"><span class="codenumber">7</span> <span class="title">Théorie des graphes</span></a><ul>
-<li><a href="sec-introGraphes.html" data-scroll="sec-introGraphes" class="internal">Introduction à la théorie des graphes</a></li>
-<li><a href="sec-propGraphes.html" data-scroll="sec-propGraphes" class="internal">Propriétés des graphes</a></li>
+<li>
+<div class="toc-item"><a href="sec-propquant.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Les propositions quantifiées</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-propquant.html#sssec-predicats" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Prédicats</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#sssec-quantificateurs" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Quantificateurs existentiel et universel</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#subsection-18" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Négation et combinaisons de quantificateurs</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#rq-propquant" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#exo-propquant" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Rédigé avec PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_induction"><h2 class="heading hide-type">
+<li>
+<div class="toc-item"><a href="sec-circuits.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Circuits logiques</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-circuits.html#subsection-19" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Portes logiques</span></a></div></li>
+<li><div class="toc-item"><a href="sec-circuits.html#subsection-20" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Parallèle avec la logique propositionnelle</span></a></div></li>
+<li><div class="toc-item"><a href="sec-circuits.html#rq-circuits" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-circuits.html#exo-circuits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-reptheonombres.html" class="internal"><span class="codenumber">3</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-representation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Représentation des nombres</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-representation.html#subsection-21" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Systèmes positionnels</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-22" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Représentation en base deux</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-23" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Représentation en base hexadécimale</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-24" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Opérations élémentaires en base deux</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-25" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Représentation en circuits d’opérations binaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#rq-representation" class="internal"><span class="codenumber">3.1.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#exo-representation" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-divisibilite.html" class="internal"><span class="codenumber">3.2</span> <span class="title">La divisibilité dans les entiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-divisibilite.html#subsection-26" class="internal"><span class="codenumber">3.2.1</span> <span class="title">L’opération de division</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#subsection-27" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Retour sur la conversion à partir de la base dix</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#subsection-28" class="internal"><span class="codenumber">3.2.3</span> <span class="title">L’algorithme d’Euclide</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#rq-divisibilite" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#exo-divisibilite" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-modulo.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Arithmétique modulaire</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-29" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-30" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Arithmétique modulaire</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-31" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Résolution d’équations en congruence modulo</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-32" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Introduction à la cryptographie</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#rq-modulo" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#exo-modulo" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-denombrement.html" class="internal"><span class="codenumber">4</span> <span class="title">Dénombrement</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec_prodSomme.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Méthodes de dénombrement: Principes de base</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-regleProd" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Principe du produit</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-regleSomme" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Principe de la somme</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-combProdSomme1" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Combinaison du principe du produit et du principe de la somme</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-incExclu" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Le principe de la soustraction (ou le principe d’inclusion-exclusion)</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-div" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Le principe de la division</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#rq-prodSomme" class="internal"><span class="codenumber">4.1.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#exo-prodSomme" class="internal"><span class="codenumber">4.1.7</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_arrCombinaison.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Permutations et combinaisons</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subs_permArr" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Les permutations</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subs_combBinomial" class="internal"><span class="codenumber">4.2.2</span> <span class="title"></span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec_arrCombinaison.html#subs-permCombGen" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Les permutations et combinaisons généralisées</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsub-permInd" class="internal"><span class="codenumber">4.2.3.1</span> <span class="title">Permutations avec des objets indiscernables</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsub-permRep" class="internal"><span class="codenumber">4.2.3.2</span> <span class="title">Permutations avec répétitions</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsub-combRep" class="internal"><span class="codenumber">4.2.3.3</span> <span class="title">Combinaisons avec répétitions</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#rq-arrCombinaison" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#exo-combinatoire" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-preuveMath.html" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec_methodePreuve.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Méthodes de preuves</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subs-terminomolgie" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Un peu de terminologie</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec_methodePreuve.html#subs-methodePreuve" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Différentes méthodes de preuve</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-preuveDirecte" class="internal"><span class="codenumber">5.1.2.1</span> <span class="title">Preuve directe</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-preuvInd" class="internal"><span class="codenumber">5.1.2.2</span> <span class="title">Preuve indirecte</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-preuveContradiction" class="internal"><span class="codenumber">5.1.2.3</span> <span class="title">Preuve par contradiction</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-bidirectionnel" class="internal"><span class="codenumber">5.1.2.4</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#rq-methodePreuve" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#exo-methodePreuve" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_pidgeonHoles.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Principe des tiroirs de Dirichlet</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_pidgeonHoles.html#subs_statement" class="internal"><span class="codenumber">5.2.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_pidgeonHoles.html#rq-pigeonHoles" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_pidgeonHoles.html#exo-pigeonHoles" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="sec_induction.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Les preuves par récurrence (par induction)</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_induction.html#subs_introInduction" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Les différentes étapes</span></a></div></li>
+<li><div class="toc-item"><a href="sec_induction.html#subs-exemples" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Exemples de preuves par récurrence</span></a></div></li>
+<li><div class="toc-item"><a href="sec_induction.html#rq-induction" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_induction.html#exo-induction" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-relationRecurrence.html" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-relRecLinHom.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-relRecLinHom" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Relations de récurrence  et forme générale</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-recLinHom" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-solLinHom" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d’odre 2: Cas 1</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-solLinHom2" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d’odre 2: Cas 2</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-ordrePGDeux" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Relations de récurrence linéaires homogènes d’ordre <span class="process-math">\(k\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#rq-relRecLinHom" class="internal"><span class="codenumber">6.1.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#exo-relRecLinHom" class="internal"><span class="codenumber">6.1.7</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-relRecLinNonHom.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Relations de récurrence linéaires non-homogènes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-relRecLinNonHom.html#subs-" class="internal"><span class="codenumber">6.2.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinNonHom.html#rq-relRexLinNonHom" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinNonHom.html#exo-relRecLinNonHom" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-theorieGraphes.html" class="internal"><span class="codenumber">7</span> <span class="title">Théorie des graphes</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-introGraphes.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction à la théorie des graphes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-introGraphes.html#subs-defGraphe" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Qu’est-ce qu’un graphe?</span></a></div></li>
+<li><div class="toc-item"><a href="sec-introGraphes.html#subs-degre" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Le degré d’un sommet</span></a></div></li>
+<li><div class="toc-item"><a href="sec-introGraphes.html#subs-grapheParticulier" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Quelques graphes particuliers</span></a></div></li>
+<li><div class="toc-item"><a href="sec-introGraphes.html#rq-introGraphes" class="internal"><span class="codenumber">7.1.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-propGraphes.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Propriétés des graphes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-propGraphes.html#subs-graphesBiColoration" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Graphes bipartis et coloration des graphes</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propGraphes.html#subs-cheminCircuit" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Chemins et circuits</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propGraphes.html#subs-eulerien" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Chemins et circuits eulériens</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propGraphes.html#subs-hamiltonien" class="internal"><span class="codenumber">7.2.4</span> <span class="title">Chemins et circuits hamiltoniens</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propGraphes.html#subs-isoGraphe" class="internal"><span class="codenumber">7.2.5</span> <span class="title">Isomorphismes de graphes</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propGraphes.html#rq-propGraphes" class="internal"><span class="codenumber">7.2.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_induction"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Les preuves par récurrence (par induction)</span>
 </h2>
-<section class="introduction" id="introduction-204"><p id="p-2137">Son considère la proposition <span class="process-math">\(P(n):\, 1+2+\cdots + n =\frac{n(n+1)}{2} .\)</span>  Comment peut-on montrer que la proposition <span class="process-math">\(P(n)\)</span> est vraie pour  tout <span class="process-math">\(n\in\, \N^\ast?\)</span> En remplaçant <span class="process-math">\(n\)</span> par différentes valeurs, on peut remarquer que la proposition est vraie, mais il est difficile (mais pas impossible) de le montrer en utilisant les méthodes utilisés jusqu'à maintenant.</p>
-<p id="p-2138">Une méthode efficace de démontrer ce genre de théorème est ce qu'on appelle une preuve par récurrence. Pour ilustré l'idée, considérons l'exemple suivant.</p>
-<p id="p-2139">On s'imagine une échelle infinie (avec une infinité de barreaux). On se demande à jusqu'à quel barreau est-ce qu'on peut se rendre si on sait les informations suivantes. Premièrement, on suppose qu'on est en mesure d'atteindre le premier barreau. Ensuite, on suppose que si on est en mesure d'atteindre le <span class="process-math">\(k\)</span>-ième barreau, alors on est également capable d'atteindre le <span class="process-math">\((k+1)\)</span>-ième barreau. Jusqu'où peut-on se rendre?</p>
-<p id="p-2140">Par ce qui précède, on peut conclure qu'on peut se rendre à tous les barreaux de l'échelle! En effet, puisqu'on peut se rendre au premier, on peut se rendre au deuxième. Puisqu'on peut se rendre au deuxième, on peut se rendre au troisième. Puisqu'on peut se rendre au troisième, on peut se rendre au quatrième. Puisqu'on peut... et ainsi de suite.</p></section><section class="subsection" id="subs_introInduction"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-207"><div class="para" id="p-2186">Son considère la proposition <span class="process-math">\(P(n):\, 1+2+\cdots + n =\frac{n(n+1)}{2} .\)</span>  Comment peut-on montrer que la proposition <span class="process-math">\(P(n)\)</span> est vraie pour  tout <span class="process-math">\(n\in\, \N^\ast?\)</span> En remplaçant <span class="process-math">\(n\)</span> par différentes valeurs, on peut remarquer que la proposition est vraie, mais il est difficile (mais pas impossible) de le montrer en utilisant les méthodes utilisés jusqu’à maintenant.</div> <div class="para" id="p-2187">Une méthode efficace de démontrer ce genre de théorème est ce qu’on appelle une preuve par récurrence. Pour ilustré l’idée, considérons l’exemple suivant.</div> <div class="para" id="p-2188">On s’imagine une échelle infinie (avec une infinité de barreaux). On se demande à jusqu’à quel barreau est-ce qu’on peut se rendre si on sait les informations suivantes. Premièrement, on suppose qu’on est en mesure d’atteindre le premier barreau. Ensuite, on suppose que si on est en mesure d’atteindre le <span class="process-math">\(k\)</span>-ième barreau, alors on est également capable d’atteindre le <span class="process-math">\((k+1)\)</span>-ième barreau. Jusqu’où peut-on se rendre?</div> <div class="para" id="p-2189">Par ce qui précède, on peut conclure qu’on peut se rendre à tous les barreaux de l’échelle! En effet, puisqu’on peut se rendre au premier, on peut se rendre au deuxième. Puisqu’on peut se rendre au deuxième, on peut se rendre au troisième. Puisqu’on peut se rendre au troisième, on peut se rendre au quatrième. Puisqu’on peut... et ainsi de suite.</div></section><section class="subsection" id="subs_introInduction"><h3 class="heading hide-type">
 <span class="type">Sous-section</span> <span class="codenumber">5.3.1</span> <span class="title">Les différentes étapes</span>
 </h3>
-<section class="introduction" id="introduction-205"><p id="p-2141">Si on garde l'exemple de l'échelle infinie en tête, on remarque qu'il y avait deux parties à notre “argument”. Tout d'abord, on a supposé qu'on pouvait se rendre au premier barreau. C'est l'étape de base.</p>
-<p id="p-2142">Par la suite, on a dit que <em class="emphasis">si</em> on pouvait se rendre au <span class="process-math">\(k\)</span>-ième barreau, alors on pouvait se rendre au <span class="process-math">\((k+1)\)</span>-ième barreau. C'est l'étape d'induction.</p></section><article class="definition definition-like" id="def-induction"><h4 class="heading">
+<section class="introduction" id="introduction-208"><div class="para" id="p-2190">Si on garde l’exemple de l’échelle infinie en tête, on remarque qu’il y avait deux parties à notre “argument”. Tout d’abord, on a supposé qu’on pouvait se rendre au premier barreau. C’est l’étape de base.</div> <div class="para" id="p-2191">Par la suite, on a dit que <em class="emphasis">si</em> on pouvait se rendre au <span class="process-math">\(k\)</span>-ième barreau, alors on pouvait se rendre au <span class="process-math">\((k+1)\)</span>-ième barreau. C’est l’étape d’induction.</div></section><article class="definition definition-like" id="def-induction"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Preuve par récurence.</span>
-</h4>
-<p id="p-2143">Pour démontrer qu'une proposition <span class="process-math">\(P(n)\)</span> est vraie pour tout <span class="process-math">\(n \in\, \N^\ast,\)</span> on peut procéder de la façon suivante.</p>
+</h4> <div class="para logical" id="p-2192">
+<div class="para">Pour démontrer qu’une proposition <span class="process-math">\(P(n)\)</span> est vraie pour tout <span class="process-math">\(n \in\, \N^\ast,\)</span> on peut procéder de la façon suivante.</div>
 <ol class="decimal">
-<li id="li-429"><p id="p-derived-li-429"><em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie.</p></li>
-<li id="li-430"><p id="p-derived-li-430"><em class="alert">Étape d'induction:</em> On montre que l'implication <span class="process-math">\(P(k)\rightarrow P(k+1)\)</span> est vraie pour <span class="process-math">\(k\)</span> un entier positif quelconque, c'est-à-dire que si on suppose <span class="process-math">\(P(k)\)</span> vraie, alors on montre que <span class="process-math">\(P(k+1)\)</span> sera vraie également.</p></li>
+<li id="li-429"><div class="para" id="p-derived-li-429">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie.</div></li>
+<li id="li-430"><div class="para" id="p-derived-li-430">
+<em class="alert">Étape d’induction:</em> On montre que l’implication <span class="process-math">\(P(k)\rightarrow P(k+1)\)</span> est vraie pour <span class="process-math">\(k\)</span> un entier positif quelconque, c’est-à-dire que si on suppose <span class="process-math">\(P(k)\)</span> vraie, alors on montre que <span class="process-math">\(P(k+1)\)</span> sera vraie également.</div></li>
 </ol>
-<p id="p-2144">À l'étape d'induction, lorsqu'on suppose que <span class="process-math">\(P(k)\)</span> est vraie, on dit qu'on fait une hypothèse d'induction. On notera souvent H.I. pour indiquer qu'on utilise cette hypothèse.</p></article><article class="remark remark-like" id="remark-9"><h4 class="heading">
+</div> <div class="para" id="p-2193">À l’étape d’induction, lorsqu’on suppose que <span class="process-math">\(P(k)\)</span> est vraie, on dit qu’on fait une hypothèse d’induction. On notera souvent H.I. pour indiquer qu’on utilise cette hypothèse.</div></article><article class="remark remark-like" id="remark-9"><h4 class="heading">
 <span class="type">Remarque</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Une petite généralisation.</span>
-</h4>En modifiant l'étape de base de la preuve par induction, on peut montrer qu'un proposition est vraie pour tout entier <span class="process-math">\(n \geq n_0\text{,}\)</span> où <span class="process-math">\(n_0\)</span> est un entier quelconque. L'étape de base sera alors de montrer que <span class="process-math">\(P(n_0)\)</span> est vraie. L'étape d'induction sera alors de montrer que <span class="process-math">\(P(k)\rightarrow P(k+1)\)</span> est vraie pour tout <span class="process-math">\(k\geq n_0\text{.}\)</span></article></section><section class="subsection" id="subs-exemples"><h3 class="heading hide-type">
+</h4> En modifiant l’étape de base de la preuve par induction, on peut montrer qu’un proposition est vraie pour tout entier <span class="process-math">\(n \geq n_0\text{,}\)</span> où <span class="process-math">\(n_0\)</span> est un entier quelconque. L’étape de base sera alors de montrer que <span class="process-math">\(P(n_0)\)</span> est vraie. L’étape d’induction sera alors de montrer que <span class="process-math">\(P(k)\rightarrow P(k+1)\)</span> est vraie pour tout <span class="process-math">\(k\geq n_0\text{.}\)</span></article></section><section class="subsection" id="subs-exemples"><h3 class="heading hide-type">
 <span class="type">Sous-section</span> <span class="codenumber">5.3.2</span> <span class="title">Exemples de preuves par récurrence</span>
 </h3>
-<p id="p-2145">Regardons maintenant quelques exemples de base pour illustrer la méthode, en commençant par la formule de la somme des entiers positifs.</p>
+<div class="para" id="p-2194">Regardons maintenant quelques exemples de base pour illustrer la méthode, en commençant par la formule de la somme des entiers positifs.</div>
 <article class="example example-like" id="exe-sommeEntiers"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-sommeEntiers"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">La somme des <span class="process-math">\(n\)</span> premiers entiers positifs.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-sommeEntiers"><article class="example example-like">Montrer par récurrence que, pour <span class="process-math">\(n\in\,\N,\)</span> on a <span class="process-math">\(1+2+\cdots + n = \frac{n(n+1)}{2}.\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-230" id="solution-230"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-230"><div class="solution solution-like">
-<p id="p-2146">On pose <span class="process-math">\(P(n):\, 1+ 2 + \cdots + n = \frac{n(n+1)}{2}.\)</span></p>
-<p id="p-2147"><em class="alert">Étape de base:</em> On veut montrer que <span class="process-math">\(P(1)\)</span> est vraie. Tout d'abord on remaque que <span class="process-math">\(P(1)\)</span> est la proposition <span class="process-math">\(1=\frac{1(1+1)}{2}\text{.}\)</span> Ceci est clairement vraie, car <span class="process-math">\(\frac{2}{2}=1.\)</span></p>
-<p id="p-2148"><em class="alert">Étape d'induction:</em> On suppose maintenant que <span class="process-math">\(P(k)\)</span> est vraie, c'est-à-dire que <span class="process-math">\(1+2+\cdots + k = \frac{k(k+1)}{2},\)</span> où <span class="process-math">\(k\)</span> est un entier positif quelconque. On veut montrer que <span class="process-math">\(P(k+1)\)</span> est vraie.</p>
-<p id="p-2149">On remarque que <span class="process-math">\(P(k+1)\)</span> est la proposition <span class="process-math">\(1+2+\cdots + k + (k+1) = \frac{(k+1)(k+2)}{2}\text{.}\)</span> En partant de l'égalité à gauche, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-93">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-237" id="solution-237"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-237"><div class="solution solution-like">
+<div class="para" id="p-2195">On pose <span class="process-math">\(P(n):\, 1+ 2 + \cdots + n = \frac{n(n+1)}{2}.\)</span>
+</div> <div class="para" id="p-2196">
+<em class="alert">Étape de base:</em> On veut montrer que <span class="process-math">\(P(1)\)</span> est vraie. Tout d’abord on remaque que <span class="process-math">\(P(1)\)</span> est la proposition <span class="process-math">\(1=\frac{1(1+1)}{2}\text{.}\)</span> Ceci est clairement vraie, car <span class="process-math">\(\frac{2}{2}=1.\)</span>
+</div> <div class="para" id="p-2197">
+<em class="alert">Étape d’induction:</em> On suppose maintenant que <span class="process-math">\(P(k)\)</span> est vraie, c’est-à-dire que <span class="process-math">\(1+2+\cdots + k = \frac{k(k+1)}{2},\)</span> où <span class="process-math">\(k\)</span> est un entier positif quelconque. On veut montrer que <span class="process-math">\(P(k+1)\)</span> est vraie.</div> <div class="para logical" id="p-2198">
+<div class="para">On remarque que <span class="process-math">\(P(k+1)\)</span> est la proposition <span class="process-math">\(1+2+\cdots + k + (k+1) = \frac{(k+1)(k+2)}{2}\text{.}\)</span> En partant de l’égalité à gauche, on a</div>
+<div class="displaymath process-math" id="md-97">
 \begin{align*}
 1+2+\dots + k+(k+1) \amp = \frac{k(k+1)}{2} +(k+1) \text{, par H.I.}\\
 \amp= \frac{k(k+1)}{2}+\frac{2(k+1)}{2} = \frac{k(k+1)+2(k+1)}{2}\\
 \amp= \frac{(k+1)(k+2)}{2}
 \end{align*}
 </div>
-<p id="p-2150">Ainsi, puisqu'on a montrer que la proposition est vraie pour <span class="process-math">\(n=1\text{,}\)</span> et qu'on a montrer que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est également vraie pour <span class="process-math">\(n=k+1\text{,}\)</span> on a montrer que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span></p>
+</div> <div class="para" id="p-2199">Ainsi, puisqu’on a montrer que la proposition est vraie pour <span class="process-math">\(n=1\text{,}\)</span> et qu’on a montrer que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est également vraie pour <span class="process-math">\(n=k+1\text{,}\)</span> on a montrer que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span>
+</div>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="exe-divisibilite"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-divisibilite"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Une preuve de divisibilité.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-divisibilite"><article class="example example-like">Montrer par récurrence que <span class="process-math">\(n^3-n\)</span> est divisible par <span class="process-math">\(3\)</span> pour tout entier naturel <span class="process-math">\(n\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-231" id="solution-231"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-231"><div class="solution solution-like">
-<p id="p-2151"><em class="alert">Étape de base:</em> On montre que la proposition est vraie pour <span class="process-math">\(n=0\text{.}\)</span> Pour <span class="process-math">\(n=0\text{,}\)</span> on a <span class="process-math">\(n^3-n=0^3-n=0.\)</span> Puisque <span class="process-math">\(3\mid 0\text{,}\)</span> la proposition est bien vraie en <span class="process-math">\(n=0\text{.}\)</span></p>
-<p id="p-2152"><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k^3 -k\)</span> est divisible par <span class="process-math">\(3\)</span> pour <span class="process-math">\(k\)</span> un entier naturel quelconque. Ainsi, on peut écrire <span class="process-math">\(k^3-k=3q,\)</span> pour <span class="process-math">\(q\in\,\Z.\)</span> On veut montrer que <span class="process-math">\((k+1)^3-(k+1)\)</span> est divisible par <span class="process-math">\(3\text{.}\)</span> Or, on a que</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-94">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-238" id="solution-238"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-238"><div class="solution solution-like">
+<div class="para" id="p-2200">
+<em class="alert">Étape de base:</em> On montre que la proposition est vraie pour <span class="process-math">\(n=0\text{.}\)</span> Pour <span class="process-math">\(n=0\text{,}\)</span> on a <span class="process-math">\(n^3-n=0^3-n=0.\)</span> Puisque <span class="process-math">\(3\mid 0\text{,}\)</span> la proposition est bien vraie en <span class="process-math">\(n=0\text{.}\)</span>
+</div> <div class="para" id="p-2201">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k^3 -k\)</span> est divisible par <span class="process-math">\(3\)</span> pour <span class="process-math">\(k\)</span> un entier naturel quelconque. Ainsi, on peut écrire <span class="process-math">\(k^3-k=3q,\)</span> pour <span class="process-math">\(q\in\,\Z.\)</span> On veut montrer que <span class="process-math">\((k+1)^3-(k+1)\)</span> est divisible par <span class="process-math">\(3\text{.}\)</span> Or, on a que</div> <div class="para logical" id="p-2202">
+<div class="displaymath process-math" id="md-98">
 \begin{align*}
 (k+1)^3 - (k+1) \amp = k^3+ 3k^2 + 3k + 1  - (k+1)\\
 \amp= k^3 - k +3(k^2 + k) + 1-1 = (k^3 - k) +3(k^2 + k)\\
 \amp = 3q +3(k^2+k) = 3(q+k^2+k) \text{, par H.I.}
 \end{align*}
 </div>
-<p class="continuation">Par la fermeture de la somme dans <span class="process-math">\(\Z,\)</span> on a que <span class="process-math">\((q+k^2+k)\in\,\Z\text{,}\)</span> et donc <span class="process-math">\((k+1)^3-(k+1)\)</span> est divisible par <span class="process-math">\(3\text{.}\)</span></p>
-<p id="p-2154">Puisque la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(m=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N\text{.}\)</span></p>
+<div class="para">Par la fermeture de la somme dans <span class="process-math">\(\Z,\)</span> on a que <span class="process-math">\((q+k^2+k)\in\,\Z\text{,}\)</span> et donc <span class="process-math">\((k+1)^3-(k+1)\)</span> est divisible par <span class="process-math">\(3\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-2203">Puisque la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(m=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N\text{.}\)</span>
+</div>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="exe-inegalite1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-inegalite1"><h4 class="heading">
-<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Démonstration d'une inégalité.</span>
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Démonstration d’une inégalité.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-inegalite1"><article class="example example-like">Montrer par récurrence que pour tout entier naturel <span class="process-math">\(n,\)</span> on a que <span class="process-math">\(n\lt 2^n\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-232" id="solution-232"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-232"><div class="solution solution-like">
-<p id="p-2155"><em class="alert">Étape de base:</em>On veut montrer que la proposition est vraie pour <span class="process-math">\(n=0.\)</span> En <span class="process-math">\(n=0,\)</span> la proposition devient <span class="process-math">\(0\lt 2^0=1,\)</span> ce qui est vrai.</p>
-<p id="p-2156"><em class="alert">Étape d'induction:</em> On suppose que la propoistion est vraie pour <span class="process-math">\(n=k\)</span> un entier naturel quelconque. Ainsi, on suppose que <span class="process-math">\(k\lt 2^k.\)</span> On veut montrer qu'elle est vraie pour <span class="process-math">\(n=k+1,\text{,}\)</span> c'est-à-dire que <span class="process-math">\((k+1)\lt 2^{k+1}\text{.}\)</span></p>
-<p id="p-2157">On a que</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-95">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-239" id="solution-239"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-239"><div class="solution solution-like">
+<div class="para" id="p-2204">
+<em class="alert">Étape de base:</em>On veut montrer que la proposition est vraie pour <span class="process-math">\(n=0.\)</span> En <span class="process-math">\(n=0,\)</span> la proposition devient <span class="process-math">\(0\lt 2^0=1,\)</span> ce qui est vrai.</div> <div class="para" id="p-2205">
+<em class="alert">Étape d’induction:</em> On suppose que la propoistion est vraie pour <span class="process-math">\(n=k\)</span> un entier naturel quelconque. Ainsi, on suppose que <span class="process-math">\(k\lt 2^k.\)</span> On veut montrer qu’elle est vraie pour <span class="process-math">\(n=k+1,\text{,}\)</span> c’est-à-dire que <span class="process-math">\((k+1)\lt 2^{k+1}\text{.}\)</span>
+</div> <div class="para logical" id="p-2206">
+<div class="para">On a que</div>
+<div class="displaymath process-math" id="md-99">
 \begin{align*}
 k+1 \amp \lt 2^k +1 \text{, par H.I.}\\
 \amp \leq 2^k+2^k \text{, car } 1\leq 2^k,\\
 \amp= 2\cdot 2^k =2^{k+1}\text{, par les propriétés des exposants} 
 \end{align*}
 </div>
-<p class="continuation">Ainsi, sous l'H.I., la proposition est également vraie pour <span class="process-math">\(n=k+1\text{.}\)</span></p>
-<p id="p-2158">Puisque la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(m=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N\text{.}\)</span></p>
+<div class="para">Ainsi, sous l’H.I., la proposition est également vraie pour <span class="process-math">\(n=k+1\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-2207">Puisque la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(m=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N\text{.}\)</span>
+</div>
 </div></div>
 </div></article></div>
-<p id="p-2159">Lorsqu'on utilise une preuve par récurrence, il faut s'assurer que l'argument utilisé pour l'étape d'induction fonctionne pour toutes les valeurs de <span class="process-math">\(k.\)</span> Voici un exemple d'une mauvaise utilisation d'une preuve par récurrence pour “montrer” une proposition qui est fausse.</p>
+<div class="para" id="p-2208">Lorsqu’on utilise une preuve par récurrence, il faut s’assurer que l’argument utilisé pour l’étape d’induction fonctionne pour toutes les valeurs de <span class="process-math">\(k.\)</span> Voici un exemple d’une mauvaise utilisation d’une preuve par récurrence pour “montrer” une proposition qui est fausse.</div>
 <article class="example example-like" id="exe-faussePreuve"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-faussePreuve"><h4 class="heading">
-<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Erreur commune d'une “preuve” par récurrence.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-faussePreuve"><article class="example example-like"><p id="p-2160">Trouver l'erreur dans le raisonement suivant permettant de “montrer” que pour tout ensemble de plus de <span class="process-math">\(n\geq 2\)</span> droites dans le plan,  si aucune n'est parallèle à une autre, alors il existe un point commun à toutes ces droites:</p>
-<p id="p-2161"><em class="alert">Étape de base :</em> On doit montrer que la proposition est vraie pour <span class="process-math">\(n=2.\)</span> Or, si on a deux droites qui ne sont pas parallèles dans le plan, elles ont nécessairement un point en commun.</p>
-<p id="p-2162"><em class="alert">Étape d'induction :</em> On suppose que la proposition est vraie pour <span class="process-math">\(n=k\text{,}\)</span> et on veut montrer qu'elle est vraie pour <span class="process-math">\(n=k+1,\)</span> pour <span class="process-math">\(k\)</span> un entier tel que <span class="process-math">\(k\geq 2\text{.}\)</span></p>
-<p id="p-2163">On considère un ensemble de <span class="process-math">\(k+1\)</span> droites dans le plan qui ne sont deux à deux non-parallèles. Si on regarde les <span class="process-math">\(k\)</span> premières droites, alors par l'H.I., il existe un point <span class="process-math">\(p_1\)</span> qui est en commun aux <span class="process-math">\(k\)</span> premières droites.</p>
-<p id="p-2164">Par le même argument, il existe un point <span class="process-math">\(p_2\)</span> qui est en commun au <span class="process-math">\(k\)</span> dernières droites. On veut montrer que <span class="process-math">\(p_1=p_2\text{.}\)</span></p>
-<p id="p-2165">Supposons que ces points soient distincts. Alors toutes les <span class="process-math">\(k-1\)</span> droites contenant ces deux points seront les mêmes droites (car il y a une seule droite passant par deux points dans le plan). Ceci est une contradiction, car ces droites son distinctes. On doit donc avoir <span class="process-math">\(p_1=p_2\text{,}\)</span> et donc toutes les <span class="process-math">\(k+1\)</span> droites possèdent un point en commun.</p>
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Erreur commune d’une “preuve” par récurrence.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-faussePreuve"><article class="example example-like"><div class="para" id="p-2209">Trouver l’erreur dans le raisonement suivant permettant de “montrer” que pour tout ensemble de plus de <span class="process-math">\(n\geq 2\)</span> droites dans le plan,  si aucune n’est parallèle à une autre, alors il existe un point commun à toutes ces droites:</div> <div class="para" id="p-2210">
+<em class="alert">Étape de base :</em> On doit montrer que la proposition est vraie pour <span class="process-math">\(n=2.\)</span> Or, si on a deux droites qui ne sont pas parallèles dans le plan, elles ont nécessairement un point en commun.</div> <div class="para" id="p-2211">
+<em class="alert">Étape d’induction :</em> On suppose que la proposition est vraie pour <span class="process-math">\(n=k\text{,}\)</span> et on veut montrer qu’elle est vraie pour <span class="process-math">\(n=k+1,\)</span> pour <span class="process-math">\(k\)</span> un entier tel que <span class="process-math">\(k\geq 2\text{.}\)</span>
+</div> <div class="para" id="p-2212">On considère un ensemble de <span class="process-math">\(k+1\)</span> droites dans le plan qui ne sont deux à deux non-parallèles. Si on regarde les <span class="process-math">\(k\)</span> premières droites, alors par l’H.I., il existe un point <span class="process-math">\(p_1\)</span> qui est en commun aux <span class="process-math">\(k\)</span> premières droites.</div> <div class="para" id="p-2213">Par le même argument, il existe un point <span class="process-math">\(p_2\)</span> qui est en commun au <span class="process-math">\(k\)</span> dernières droites. On veut montrer que <span class="process-math">\(p_1=p_2\text{.}\)</span>
+</div> <div class="para" id="p-2214">Supposons que ces points soient distincts. Alors toutes les <span class="process-math">\(k-1\)</span> droites contenant ces deux points seront les mêmes droites (car il y a une seule droite passant par deux points dans le plan). Ceci est une contradiction, car ces droites son distinctes. On doit donc avoir <span class="process-math">\(p_1=p_2\text{,}\)</span> et donc toutes les <span class="process-math">\(k+1\)</span> droites possèdent un point en commun.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-233" id="solution-233"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-233"><div class="solution solution-like">À l'étape d'induction, l'argument démontrant que <span class="process-math">\(p_1=p_2\)</span> ne fonctionne pas en <span class="process-math">\(k=2.\)</span> En effet, si <span class="process-math">\(k=2,\)</span> alors <span class="process-math">\(k+1=3,\)</span> et <span class="process-math">\(p_1\)</span> est un point de la première et de la deuxième droite, alors que <span class="process-math">\(p_2\)</span> est un point de la deuxième et la troisième droite. Ainsi, seule la deuxième droite contient les points <span class="process-math">\(p_1\)</span> et <span class="process-math">\(p_2,\)</span> ce qui n'est pas une contradiction!</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-240" id="solution-240"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-240"><div class="solution solution-like">À l’étape d’induction, l’argument démontrant que <span class="process-math">\(p_1=p_2\)</span> ne fonctionne pas en <span class="process-math">\(k=2.\)</span> En effet, si <span class="process-math">\(k=2,\)</span> alors <span class="process-math">\(k+1=3,\)</span> et <span class="process-math">\(p_1\)</span> est un point de la première et de la deuxième droite, alors que <span class="process-math">\(p_2\)</span> est un point de la deuxième et la troisième droite. Ainsi, seule la deuxième droite contient les points <span class="process-math">\(p_1\)</span> et <span class="process-math">\(p_2,\)</span> ce qui n’est pas une contradiction!</div></div>
 </div></article></div>
 <article class="example example-like" id="exe-sommeEntierImp"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exe-sommeEntierImp"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">La somme des entiers positifs impairs.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exe-sommeEntierImp"><article class="example example-like">Montrer par récurrence que, pour <span class="process-math">\(n\in\,\N,\)</span> la somme des <span class="process-math">\(n\)</span> premiers entiers positifs impairs est <span class="process-math">\(n^2\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-234" id="solution-234"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-234"><div class="solution solution-like">
-<p id="p-2166">Tout d'abord, on remarque qu'on peut écrire le <span class="process-math">\(n\)</span>-ième entier positif impair comme <span class="process-math">\(2n-1\text{.}\)</span> Ainsi, on peut écrire la proposition comme <span class="process-math">\(P(n):\ 1+3+\cdots + (2n-1) = n^2\text{.}\)</span></p>
-<p id="p-2167"><em class="alert">Étape de base :</em> On veut montrer que la proposition est vraie pour <span class="process-math">\(n=1\text{.}\)</span> Or, en <span class="process-math">\(n=1,\)</span> la proposition est <span class="process-math">\(1=1^2,\)</span> ce qui est vrai.</p>
-<p id="p-2168"><em class="alert">Étape d'induction :</em> On suppose que la proposition est vraie pour <span class="process-math">\(n=k,\)</span> où <span class="process-math">\(k\)</span> est un entier positif. On veut montrer qu'elle sera alors vraie pour <span class="process-math">\(n=k+1\text{.}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-96">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-241" id="solution-241"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-241"><div class="solution solution-like">
+<div class="para" id="p-2215">Tout d’abord, on remarque qu’on peut écrire le <span class="process-math">\(n\)</span>-ième entier positif impair comme <span class="process-math">\(2n-1\text{.}\)</span> Ainsi, on peut écrire la proposition comme <span class="process-math">\(P(n):\ 1+3+\cdots + (2n-1) = n^2\text{.}\)</span>
+</div> <div class="para" id="p-2216">
+<em class="alert">Étape de base :</em> On veut montrer que la proposition est vraie pour <span class="process-math">\(n=1\text{.}\)</span> Or, en <span class="process-math">\(n=1,\)</span> la proposition est <span class="process-math">\(1=1^2,\)</span> ce qui est vrai.</div> <div class="para" id="p-2217">
+<em class="alert">Étape d’induction :</em> On suppose que la proposition est vraie pour <span class="process-math">\(n=k,\)</span> où <span class="process-math">\(k\)</span> est un entier positif. On veut montrer qu’elle sera alors vraie pour <span class="process-math">\(n=k+1\text{.}\)</span>
+</div> <div class="para logical" id="p-2218">
+<div class="displaymath process-math" id="md-100">
 \begin{align*}
 1+3+\cdots +(2k-1) + (2k+1)\amp=k^2 + (2k+1)\text{, par H.I.}\\
 \amp = (k+1)^2
 \end{align*}
 </div>
-<p class="continuation">Ainsi, la proposition est vraie pour <span class="process-math">\(n=k+1\)</span></p>
-<p id="p-2170">Puisque la proposition est vraie pour <span class="process-math">\(n=1\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(m=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N^\ast\text{.}\)</span></p>
+<div class="para">Ainsi, la proposition est vraie pour <span class="process-math">\(n=k+1\)</span>
+</div>
+</div> <div class="para" id="p-2219">Puisque la proposition est vraie pour <span class="process-math">\(n=1\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(m=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N^\ast\text{.}\)</span>
+</div>
 </div></div>
 </div></article></div>
 <article class="example example-like" id="example-92"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-92"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">5.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Une autre preuve de divisibilité.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-92"><article class="example example-like"><p id="p-2171">Montrer par récurrence que pour <span class="process-math">\(n\)</span> un entier naturel, alors <span class="process-math">\(7^{n+2}+8^{2n+1}\)</span> est divisible par <span class="process-math">\(57\text{.}\)</span></p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-92"><article class="example example-like"><div class="para" id="p-2220">Montrer par récurrence que pour <span class="process-math">\(n\)</span> un entier naturel, alors <span class="process-math">\(7^{n+2}+8^{2n+1}\)</span> est divisible par <span class="process-math">\(57\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-235" id="solution-235"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-235"><div class="solution solution-like"></div></div>
-</div></article></div></section><section class="conclusion" id="concl-induction"><p id="p-2172">Les points importants de cette section sont:</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-242" id="solution-242"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-242"><div class="solution solution-like"></div></div>
+</div></article></div></section><section class="conclusion" id="concl-induction"> <div class="para logical" id="p-2221">
+<div class="para">Les points importants de cette section sont:</div>
 <ul class="disc">
-<li id="li-431"><p id="p-2173"><a href="sec_induction.html#subs_introInduction" class="internal" title="Sous-section 5.3.1: Les différentes étapes">L'idée de base</a> d'une preuve par récurrence;</p></li>
-<li id="li-432"><p id="p-2174"><a href="" class="xref" data-knowl="./knowl/def-induction.html" title="Définition 5.3.1: Preuve par récurence">Les étapes</a> d'une preuve par récurrence;</p></li>
-<li id="li-433"><p id="p-2175"><a href="" class="xref" data-knowl="./knowl/exe-faussePreuve.html" title="Exemple 5.3.6: Erreur commune d'une &quot;preuve&quot; par récurrence">L'erreur</a> à ne pas faire!</p></li>
-</ul></section><section class="exercises" id="exo-induction"><h3 class="heading hide-type">
-<span class="type">Exercices</span> <span class="codenumber">5.3.3</span> <span class="title">Exercices</span>
+<li id="li-431"><div class="para" id="p-2222">
+<a href="sec_induction.html#subs_introInduction" class="internal" title="Sous-section 5.3.1: Les différentes étapes">L’idée de base</a> d’une preuve par récurrence;</div></li>
+<li id="li-432"><div class="para" id="p-2223">
+<a href="" class="xref" data-knowl="./knowl/def-induction.html" title="Définition 5.3.1: Preuve par récurence">Les étapes</a> d’une preuve par récurrence;</div></li>
+<li id="li-433"><div class="para" id="p-2224">
+<a href="" class="xref" data-knowl="./knowl/exe-faussePreuve.html" title='Exemple 5.3.6: Erreur commune d’une "preuve" par récurrence'>L’erreur</a> à ne pas faire!</div></li>
+</ul>
+</div></section><section class="reading-questions" id="rq-induction"><h3 class="heading hide-type">
+<span class="type">Questions de compréhension de la lecture</span> <span class="codenumber">5.3.3</span> <span class="title">Questions de compréhension de la lecture</span>
 </h3>
-<div class="exercisegroup" id="exercisegroup-14">
-<h4 class="heading"><span class="title">Exercices à la maison.</span></h4>
-<div class="introduction" id="introduction-206"><p id="p-2176">Ces exercices servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés. Ils sont à faire d'ici le prochain cours.</p></div>
+<section class="introduction" id="introduction-209"><div class="para" id="p-2225">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</div></section><article class="exercise exercise-like" id="exercise-270"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-2226">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</div></article></section><section class="exercises" id="exo-induction"><h3 class="heading hide-type">
+<span class="type">Exercices</span> <span class="codenumber">5.3.4</span> <span class="title">Exercices</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-13">
+<h4 class="heading"><span class="title">À faire en classe.</span></h4>
+<div class="introduction" id="introduction-210"><div class="para" id="p-2227">Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d’apprentissage plus avancés.</div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-257"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>Montrer par réccurence que pour <span class="process-math">\(n\)</span> un entier positif, alors <span class="process-math">\(1^2+2^2+\cdot + n^2=\frac{n(n+1)(2n+1)}{6}\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-236" id="solution-236"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-236"><div class="solution solution-like">
-<p id="p-2177">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(1^2+2^2+\cdots + n^2=\frac{n(n+1)(2n+1)}{6}\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span></p>
-<p id="p-2178"><em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): 1^2 = \frac{(1)(1+1)(2(1)+1)}{6},\)</span> ce qui est vrai, puisque <span class="process-math">\(1^2=1\)</span> et</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<article class="exercise exercise-like" id="exercise-271"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>Montrer par réccurence que pour <span class="process-math">\(n\)</span> un entier positif, alors <span class="process-math">\(1^2+2^2+\cdot + n^2=\frac{n(n+1)(2n+1)}{6}\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-243" id="solution-243"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-243"><div class="solution solution-like">
+<div class="para" id="p-2228">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(1^2+2^2+\cdots + n^2=\frac{n(n+1)(2n+1)}{6}\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span>
+</div> <div class="para logical" id="p-2229">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): 1^2 = \frac{(1)(1+1)(2(1)+1)}{6},\)</span> ce qui est vrai, puisque <span class="process-math">\(1^2=1\)</span> et</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \frac{(1)(1+1)(2(1)+1)}{6}=\frac{(1)(2)(3)}{6}=1\text{.}
 \end{equation*}
 </div>
-<p id="p-2179"><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on veut montrer que <span class="process-math">\(P(k)\rightarrow P(k+1)\)</span> est vraie. On suppose donc que <span class="process-math">\(P(k)\)</span> est vraie (c'est à dire que <span class="process-math">\(1^2+2^2+\cdots + k^2=\frac{k(k+1)(2k+1)}{6}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</p>
-<p id="p-2180">Ainsi, on veut montrer que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div> <div class="para" id="p-2230">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on veut montrer que <span class="process-math">\(P(k)\rightarrow P(k+1)\)</span> est vraie. On suppose donc que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(1^2+2^2+\cdots + k^2=\frac{k(k+1)(2k+1)}{6}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical" id="p-2231">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 1^2+2^2+\cdots + k^2+ (k+1)^2=\frac{(k+1)(k+2)(2k+3)}{6}
 \end{equation*}
 </div>
-<p class="continuation">à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-97">
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’égalité, on a</div>
+<div class="displaymath process-math" id="md-101">
 \begin{align*}
 \amp1^2+2^2+\cdot + k^2+ (k+1)^2\\
 \amp= \left(1^2+2^2+\cdots + k^2\right) + \left(k+1\right)^2 \\
@@ -353,26 +706,30 @@ k+1 \amp \lt 2^k +1 \text{, par H.I.}\\
 \amp=\frac{(k+1)(k+2)(2k+3)}{6}\text{ en factorisant.}
 \end{align*}
 </div>
-<p id="p-2181">On a montré que <span class="process-math">\(P(1)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 1\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span></p>
+</div> <div class="para" id="p-2232">On a montré que <span class="process-math">\(P(1)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 1\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span>
+</div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-258"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>Montrer par récurrence que si <span class="process-math">\(n\)</span> est un entier naturel, alors <span class="process-math">\(1^2+3^2+5^2+\cdots +(2n+1)^2=\frac{(n+1)(2n+1)(2n+3)}{3}\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-237" id="solution-237"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-237"><div class="solution solution-like">
-<p id="p-2182">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(1^2+3^2+5^2+\cdots +(2n+1)^2=\frac{(n+1)(2n+1)(2n+3)}{3}\)</span> pour <span class="process-math">\(n\in\,\N\text{.}\)</span></p>
-<p id="p-2183"><em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(0)\)</span> est vraie. Or, on a que <span class="process-math">\(P(0): 1^2 = \frac{(0+1)(2 (0)+1)(2(1)+3)}{3},\)</span> ce qui est vrai, puisque <span class="process-math">\(1^2=1\)</span> et</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div></article><article class="exercise exercise-like" id="exercise-272"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>Montrer par récurrence que si <span class="process-math">\(n\)</span> est un entier naturel, alors <span class="process-math">\(1^2+3^2+5^2+\cdots +(2n+1)^2=\frac{(n+1)(2n+1)(2n+3)}{3}\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-244" id="solution-244"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-244"><div class="solution solution-like">
+<div class="para" id="p-2233">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(1^2+3^2+5^2+\cdots +(2n+1)^2=\frac{(n+1)(2n+1)(2n+3)}{3}\)</span> pour <span class="process-math">\(n\in\,\N\text{.}\)</span>
+</div> <div class="para logical" id="p-2234">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(0)\)</span> est vraie. Or, on a que <span class="process-math">\(P(0): 1^2 = \frac{(0+1)(2 (0)+1)(2(1)+3)}{3},\)</span> ce qui est vrai, puisque <span class="process-math">\(1^2=1\)</span> et</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \frac{(0+1)(2(0)+1)(2(0)+3)}{3}=\frac{(1)(1)(3)}{3}=1\text{.}
 \end{equation*}
 </div>
-<p id="p-2184"><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 0,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c'est à dire que <span class="process-math">\(1^2+3^2+\cdots + (2k+1)^2=\frac{(k+1)(2k+1)(2k+3)}{3}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</p>
-<p id="p-2185">Ainsi, on veut montrer que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div> <div class="para" id="p-2235">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 0,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(1^2+3^2+\cdots + (2k+1)^2=\frac{(k+1)(2k+1)(2k+3)}{3}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical" id="p-2236">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 1^2+3^2+5^2+\cdots +(2k+1)^2+(2k+3)^2=\frac{(k+2)(2k+3)(2k+5)}{3}
 \end{equation*}
 </div>
-<p class="continuation">à l'aide de l'H.I. Tout d'abord, remarquons que <span class="process-math">\(\frac{(k+2)(2k+3)(2k+5)}{3}=\frac{(2k+3)(2k^2+9k+10)}{3}\text{.}\)</span> Ensuite, en partant du membre de gauche de l'égalité, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-98">
+<div class="para">à l’aide de l’H.I. Tout d’abord, remarquons que <span class="process-math">\(\frac{(k+2)(2k+3)(2k+5)}{3}=\frac{(2k+3)(2k^2+9k+10)}{3}\text{.}\)</span> Ensuite, en partant du membre de gauche de l’égalité, on a</div>
+<div class="displaymath process-math" id="md-102">
 \begin{align*}
 \amp1^2+3^2+5^2+\cdots +(2k+1)^2+(2k+3)^2\\
 \amp= \left(1^2+3^2+5^2+\cdots +(2k+1)^2\right) + \left(2k+3\right)^2 \\
@@ -384,26 +741,30 @@ k+1 \amp \lt 2^k +1 \text{, par H.I.}\\
 \amp=\frac{(k+2)(2k+3)(2k+5)}{3}\text{ par la remarque.}
 \end{align*}
 </div>
-<p id="p-2186">On a montré que <span class="process-math">\(P(0)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 0\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 0\text{.}\)</span></p>
+</div> <div class="para" id="p-2237">On a montré que <span class="process-math">\(P(0)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 0\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 0\text{.}\)</span>
+</div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-259"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>Montrer par récurrence que si <span class="process-math">\(n\)</span> est un entier positif, alors <span class="process-math">\(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +n\cdot n!=(n+1)!-1\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-238" id="solution-238"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-238"><div class="solution solution-like">
-<p id="p-2187">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +n\cdot n!=(n+1)!-1\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span></p>
-<p id="p-2188"><em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): 1\cdot 1! = (1+1)!-1,\)</span> ce qui est vrai, puisque <span class="process-math">\(1\cdot 1!=1\)</span> et</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div></article><article class="exercise exercise-like" id="exercise-273"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>Montrer par récurrence que si <span class="process-math">\(n\)</span> est un entier positif, alors <span class="process-math">\(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +n\cdot n!=(n+1)!-1\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-245" id="solution-245"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-245"><div class="solution solution-like">
+<div class="para" id="p-2238">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +n\cdot n!=(n+1)!-1\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span>
+</div> <div class="para logical" id="p-2239">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): 1\cdot 1! = (1+1)!-1,\)</span> ce qui est vrai, puisque <span class="process-math">\(1\cdot 1!=1\)</span> et</div>
+<div class="displaymath process-math">
 \begin{equation*}
 (1+1)!-1=2!-1=1\text{.}
 \end{equation*}
 </div>
-<p id="p-2189"><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c'est à dire que <span class="process-math">\(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +n\cdot k!=(k+1)!-1\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</p>
-<p id="p-2190">Ainsi, on veut montrer que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div> <div class="para" id="p-2240">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +n\cdot k!=(k+1)!-1\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical" id="p-2241">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!+(k+1)(k+1)!=(k+2)!-1
 \end{equation*}
 </div>
-<p class="continuation">à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-99">
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’égalité, on a</div>
+<div class="displaymath process-math" id="md-103">
 \begin{align*}
 \amp 1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!+(k+1)(k+1)!\\
 \amp= \left(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!\right)  +(k+1)(k+1)! \\
@@ -414,26 +775,30 @@ k+1 \amp \lt 2^k +1 \text{, par H.I.}\\
 \amp=(k+2)! -1\text{ (par la définition de la factorielle.)}
 \end{align*}
 </div>
-<p id="p-2191">On a montré que <span class="process-math">\(P(1)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 1\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span></p>
+</div> <div class="para" id="p-2242">On a montré que <span class="process-math">\(P(1)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 1\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span>
+</div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-260"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>Montrer par récurrence que si <span class="process-math">\(n\)</span> est un entier positif, alors <span class="process-math">\(\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^n}=1-\frac{1}{2^n}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-239" id="solution-239"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-239"><div class="solution solution-like">
-<p id="p-2192">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^n}=1-\frac{1}{2^n}\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span></p>
-<p id="p-2193"><em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): \frac{1}{2} = 1-\frac{1}{2},\)</span> ce qui est vrai, puisque</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div></article><article class="exercise exercise-like" id="exercise-274"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>Montrer par récurrence que si <span class="process-math">\(n\)</span> est un entier positif, alors <span class="process-math">\(\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^n}=1-\frac{1}{2^n}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-246" id="solution-246"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-246"><div class="solution solution-like">
+<div class="para" id="p-2243">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^n}=1-\frac{1}{2^n}\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span>
+</div> <div class="para logical" id="p-2244">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): \frac{1}{2} = 1-\frac{1}{2},\)</span> ce qui est vrai, puisque</div>
+<div class="displaymath process-math">
 \begin{equation*}
 1-\frac{1}{2}=\frac{1}{2}\text{.}
 \end{equation*}
 </div>
-<p id="p-2194"><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c'est à dire que <span class="process-math">\(\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}=1-\frac{1}{2^k}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</p>
-<p id="p-2195">Ainsi, on veut montrer que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div> <div class="para" id="p-2245">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}=1-\frac{1}{2^k}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical" id="p-2246">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}+\frac{1}{2^{k+1}}=1-\frac{1}{2^{k+1}}
 \end{equation*}
 </div>
-<p class="continuation">à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-100">
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’égalité, on a</div>
+<div class="displaymath process-math" id="md-104">
 \begin{align*}
 \amp\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}+\frac{1}{2^{k+1}}\\
 \amp= \left(\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}\right)  +\frac{1}{2^{k+1}}\\
@@ -442,26 +807,30 @@ k+1 \amp \lt 2^k +1 \text{, par H.I.}\\
 \amp=1-\frac{1}{2^{k+1}}
 \end{align*}
 </div>
-<p id="p-2196">On a montré que <span class="process-math">\(P(1)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 1\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span></p>
+</div> <div class="para" id="p-2247">On a montré que <span class="process-math">\(P(1)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 1\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span>
+</div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-261"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>Montrer par récurrence que <span class="process-math">\(3^n\lt n!\)</span> si <span class="process-math">\(n\)</span> est un entier plus grand que <span class="process-math">\(6\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-240" id="solution-240"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-240"><div class="solution solution-like">
-<p id="p-2197">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(3^n\lt n!\)</span> pour <span class="process-math">\(n\in\,\N\)</span> et <span class="process-math">\(n\geq 7\text{.}\)</span></p>
-<p id="p-2198"><em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(7)\)</span> est vraie. Or, on a que <span class="process-math">\(P(7): 3^7 \lt 7!,\)</span> ce qui est vrai, puisque</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div></article><article class="exercise exercise-like" id="exercise-275"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>Montrer par récurrence que <span class="process-math">\(3^n\lt n!\)</span> si <span class="process-math">\(n\)</span> est un entier plus grand que <span class="process-math">\(6\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-247" id="solution-247"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-247"><div class="solution solution-like">
+<div class="para" id="p-2248">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(3^n\lt n!\)</span> pour <span class="process-math">\(n\in\,\N\)</span> et <span class="process-math">\(n\geq 7\text{.}\)</span>
+</div> <div class="para logical" id="p-2249">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(7)\)</span> est vraie. Or, on a que <span class="process-math">\(P(7): 3^7 \lt 7!,\)</span> ce qui est vrai, puisque</div>
+<div class="displaymath process-math">
 \begin{equation*}
 3^7=2187\lt 5040=7!\text{.}
 \end{equation*}
 </div>
-<p id="p-2199"><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 7,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c'est à dire que <span class="process-math">\(3^k \lt k!,\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</p>
-<p id="p-2200">Ainsi, on veut montrer que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div> <div class="para" id="p-2250">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 7,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(3^k \lt k!,\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical" id="p-2251">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 3^{k+1}\lt (k+1)!
 \end{equation*}
 </div>
-<p class="continuation">à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-101">
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’inégalité, on a</div>
+<div class="displaymath process-math" id="md-105">
 \begin{align*}
 \amp3^{k+1}= 3\left(3^k\right)\\
 \amp\lt 3\left(k!\right) \text{ par H.I.}\\
@@ -469,27 +838,32 @@ k+1 \amp \lt 2^k +1 \text{, par H.I.}\\
 \amp=(k+1)!
 \end{align*}
 </div>
-<p class="continuation">c'est-à-dire que <span class="process-math">\(3^{k+1}\lt (k+1)! \text{.}\)</span></p>
-<p id="p-2201">On a montré que <span class="process-math">\(P(7)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 7\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 7\text{.}\)</span></p>
+<div class="para">c’est-à-dire que <span class="process-math">\(3^{k+1}\lt (k+1)! \text{.}\)</span>
+</div>
+</div> <div class="para" id="p-2252">On a montré que <span class="process-math">\(P(7)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 7\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 7\text{.}\)</span>
+</div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-262"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>Montrer par récurrence que <span class="process-math">\(2^n\gt n^2\)</span> si <span class="process-math">\(n\)</span> est un entier plus grand que <span class="process-math">\(4\text{.}\)</span><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-241" id="solution-241"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-241"><div class="solution solution-like">
-<p id="p-2202">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(2^n\gt n^2\)</span> pour <span class="process-math">\(n\in\,\N\)</span> et <span class="process-math">\(n\geq 5\text{.}\)</span></p>
-<p id="p-2203"><em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(5)\)</span> est vraie. Or, on a que <span class="process-math">\(P(7): 2^5\gt 5^2,\)</span> ce qui est vrai, puisque</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div></article><article class="exercise exercise-like" id="exercise-276"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>Montrer par récurrence que <span class="process-math">\(2^n\gt n^2\)</span> si <span class="process-math">\(n\)</span> est un entier plus grand que <span class="process-math">\(4\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-248" id="solution-248"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-248"><div class="solution solution-like">
+<div class="para" id="p-2253">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(2^n\gt n^2\)</span> pour <span class="process-math">\(n\in\,\N\)</span> et <span class="process-math">\(n\geq 5\text{.}\)</span>
+</div> <div class="para logical" id="p-2254">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(5)\)</span> est vraie. Or, on a que <span class="process-math">\(P(7): 2^5\gt 5^2,\)</span> ce qui est vrai, puisque</div>
+<div class="displaymath process-math">
 \begin{equation*}
 2^5=32\gt 25=5^2\text{.}
 \end{equation*}
 </div>
-<p id="p-2204"><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 5,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c'est à dire que <span class="process-math">\(2^k \gt k^2,\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</p>
-<p id="p-2205">Ainsi, on veut montrer que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div> <div class="para" id="p-2255">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 5,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(2^k \gt k^2,\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical" id="p-2256">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 2^{k+1}\gt (k+1)^2
 \end{equation*}
 </div>
-<p class="continuation">à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-102">
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’inégalité, on a</div>
+<div class="displaymath process-math" id="md-106">
 \begin{align*}
 \amp2^{k+1}= 2\left(2^k\right)\\
 \amp\gt 2\left(k^2\right) \text{ par H.I.}\\
@@ -500,41 +874,48 @@ k+1 \amp \lt 2^k +1 \text{, par H.I.}\\
 \amp= (k+1)^2 \text{(factorisation)}
 \end{align*}
 </div>
-<p class="continuation">c'est-à-dire que <span class="process-math">\(2^{k+1}\gt (k+1)^2 \text{.}\)</span></p>
-<p id="p-2206">On a montré que <span class="process-math">\(P(5)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 5\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 5\text{.}\)</span></p>
+<div class="para">c’est-à-dire que <span class="process-math">\(2^{k+1}\gt (k+1)^2 \text{.}\)</span>
+</div>
+</div> <div class="para" id="p-2257">On a montré que <span class="process-math">\(P(5)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 5\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 5\text{.}\)</span>
+</div>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-263"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-207">On considère l'expression<div class="displaymath process-math" data-contains-math-knowls="">
+</div></article><article class="exercise exercise-like" id="exercise-277"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-211">On considère l’expression<div class="displaymath process-math">
 \begin{equation*}
 S(n)=\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{n\cdot (n+1)}\text{.}
 \end{equation*}
 </div>
 </div>
-<article class="task exercise-like" id="task-557"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-2207">En remplaçant <span class="process-math">\(n\)</span> par certaine valeurs, trouver une formule pour l'expression de <span class="process-math">\(S(n)\text{.}\)</span></p>
+<article class="task exercise-like" id="task-558"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="p-2258">En remplaçant <span class="process-math">\(n\)</span> par certaine valeurs, trouver une formule pour l’expression de <span class="process-math">\(S(n)\text{.}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-73" id="hint-73"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-73"><div class="hint solution-like"><p id="p-2208">Remarquer que  <span class="process-math">\(S(1)=\frac{1}{2},\)</span> <span class="process-math">\(S(2)=\frac{2}{3},\)</span> <span class="process-math">\(S(3)=\frac{3}{4}\)</span> et <span class="process-math">\(S(4)=\frac{4}{5}.\)</span></p></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-271" id="answer-271"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-271"><div class="answer solution-like"><span class="process-math">\(S(n)=\frac{n}{n+1}\)</span></div></div>
-</div></article><article class="task exercise-like" id="task-558"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-2209">Montrer par récurrence que votre formule est bonne.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-79" id="hint-79"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-79"><div class="hint solution-like"><div class="para" id="p-2259">Remarquer que  <span class="process-math">\(S(1)=\frac{1}{2},\)</span> <span class="process-math">\(S(2)=\frac{2}{3},\)</span> <span class="process-math">\(S(3)=\frac{3}{4}\)</span> et <span class="process-math">\(S(4)=\frac{4}{5}.\)</span>
+</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-275" id="answer-275"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-275"><div class="answer solution-like"><span class="process-math">\(S(n)=\frac{n}{n+1}\)</span></div></div>
+</div></article><article class="task exercise-like" id="task-559"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-2260">Montrer par récurrence que votre formule est bonne.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-242" id="solution-242"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-242"><div class="solution solution-like">
-<p id="p-2210">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(S(n)=\frac{n}{n+1}\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span></p>
-<p id="p-2211"><em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): S(1)= \frac{1}{1+1},\)</span> ce qui est vrai, puisque</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-249" id="solution-249"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-249"><div class="solution solution-like">
+<div class="para" id="p-2261">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(S(n)=\frac{n}{n+1}\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span>
+</div> <div class="para logical" id="p-2262">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): S(1)= \frac{1}{1+1},\)</span> ce qui est vrai, puisque</div>
+<div class="displaymath process-math">
 \begin{equation*}
 S(1)= \frac{1}{1\cdot 2}=\frac{1}{2}=\frac{1}{1+1}\text{.}
 \end{equation*}
 </div>
-<p id="p-2212"><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c'est à dire que <span class="process-math">\(S(k)=\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{k\cdot (k+1)}=\frac{k}{k+1}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</p>
-<p id="p-2213">Ainsi, on veut montrer que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div> <div class="para" id="p-2263">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(S(k)=\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{k\cdot (k+1)}=\frac{k}{k+1}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical" id="p-2264">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 S(k+1)=\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{k\cdot (k+1)} +\frac{1}{(k+1)\cdot (k+2)}=\frac{k+1}{k+2}
 \end{equation*}
 </div>
-<p class="continuation">à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-103">
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’égalité, on a</div>
+<div class="displaymath process-math" id="md-107">
 \begin{align*}
 \amp S(k+1)=\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{k\cdot (k+1)} +\frac{1}{(k+1)(k+2)}\\
 \amp= \left(\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{k\cdot (k+1)} \right)  +\frac{1}{(k+1)\cdot (k+2)}\\
@@ -544,35 +925,41 @@ S(k+1)=\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{k\cdot (k+1)} +\f
 \amp=\frac{(k+1)^2}{(k+1)(k+2)}=\frac{k+1}{k+2}
 \end{align*}
 </div>
-<p id="p-2214">On a montré que <span class="process-math">\(P(1)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 1\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span></p>
+</div> <div class="para" id="p-2265">On a montré que <span class="process-math">\(P(1)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 1\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span>
+</div>
 </div></div>
-</div></article></article><article class="exercise exercise-like" id="exercise-264"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<p id="p-2215">On considère l'expression</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div></article></article><article class="exercise exercise-like" id="exercise-278"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<div class="para logical" id="p-2266">
+<div class="para">On considère l’expression</div>
+<div class="displaymath process-math">
 \begin{equation*}
 H(n)=1+\frac{1}{2}+\frac{1}{3}+\cdots + \frac{1}{2^n}.
 \end{equation*}
 </div>
-<p class="continuation">pour <span class="process-math">\(n\)</span> un entier naturel.</p>
-<p id="p-2216">Montrer par récurrence que <span class="process-math">\(H(n)\geq 1+\frac{n}{2}\)</span></p>
+<div class="para">pour <span class="process-math">\(n\)</span> un entier naturel.</div>
+</div> <div class="para" id="p-2267">Montrer par récurrence que <span class="process-math">\(H(n)\geq 1+\frac{n}{2}\)</span>
+</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-243" id="solution-243"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-243"><div class="solution solution-like">
-<p id="p-2217">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(H(n) \geq 1+\frac{n}{2}\)</span> pour <span class="process-math">\(n\in\,\N\text{.}\)</span></p>
-<p id="p-2218"><em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(0)\)</span> est vraie. Or, on a que <span class="process-math">\(P(0): 1\geq 1+\frac{0}{2},\)</span> ce qui est vrai, puisque</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-250" id="solution-250"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-250"><div class="solution solution-like">
+<div class="para" id="p-2268">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(H(n) \geq 1+\frac{n}{2}\)</span> pour <span class="process-math">\(n\in\,\N\text{.}\)</span>
+</div> <div class="para logical" id="p-2269">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(0)\)</span> est vraie. Or, on a que <span class="process-math">\(P(0): 1\geq 1+\frac{0}{2},\)</span> ce qui est vrai, puisque</div>
+<div class="displaymath process-math">
 \begin{equation*}
 1\geq 1 =1+\frac{0}{2}\text{.}
 \end{equation*}
 </div>
-<p id="p-2219"><em class="alert">Étape d'induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 0,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c'est à dire que <span class="process-math">\(H(k) \geq 1+\frac{k}{2},\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</p>
-<p id="p-2220">Ainsi, on veut montrer que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div> <div class="para" id="p-2270">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 0,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(H(k) \geq 1+\frac{k}{2},\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical" id="p-2271">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
 \begin{equation*}
 H(k+1) =1+\frac{1}{2}+\frac{1}{3}+\cdots + \frac{1}{2^k}+\frac{1}{2^k+1}+\frac{1}{2^k+2}+\cdots +\frac{1}{2^{k+1}}\geq 1+\frac{k+1}{2}
 \end{equation*}
 </div>
-<p class="continuation">à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-104">
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’inégalité, on a</div>
+<div class="displaymath process-math" id="md-108">
 \begin{align*}
 \amp H(k+1) =1+\frac{1}{2}+\frac{1}{3}+\cdots + \frac{1}{2^k}+\frac{1}{2^k+1}+\frac{1}{2^k+2}+\cdots+\frac{1}{2^{k+1}}\\
 \amp= \left(1+\frac{1}{2}+\frac{1}{3}+\cdots + \frac{1}{2^k}\right)+\frac{1}{2^{k+1}}\\
@@ -584,13 +971,20 @@ H(k+1) =1+\frac{1}{2}+\frac{1}{3}+\cdots + \frac{1}{2^k}+\frac{1}{2^k+1}+\frac{1
 \amp= 1+\frac{k+1}{2} 
 \end{align*}
 </div>
-<p class="continuation">c'est-à-dire que <span class="process-math">\(H({k+1})\geq 1+\frac{k+1}{2}\text{.}\)</span></p>
-<p id="p-2221">On a montré que <span class="process-math">\(P(0)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 0\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 0\text{.}\)</span></p>
+<div class="para">c’est-à-dire que <span class="process-math">\(H({k+1})\geq 1+\frac{k+1}{2}\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-2272">On a montré que <span class="process-math">\(P(0)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 0\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 0\text{.}\)</span>
+</div>
 </div></div>
 </div></article>
 </div>
-</div></section></section></div></main>
+</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec_pidgeonHoles.html" title="Précédent"><span class="icon">&lt;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="chap-relationRecurrence.html" title="Suivant"><span class="name">Suivant</span><span class="icon">&gt;</span></a>
+</div></main>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
 </body>
 </html>

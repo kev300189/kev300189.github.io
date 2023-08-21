@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,17 +12,20 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<p>Par la suite, on veut déterminer sous quelles conditions est-ce que <span class="process-math">\(a^{(p)}_n=c7^n.\)</span> est une solution à la relation initiale. Pour cela, on doit avoir</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-c7^n \amp= 5(c7^{n-1})-6(c7^{n-2})+7^n \\
-c7^n \amp=  (5\cdot 7^{1}c-6c+7^{2}) 7^{n-2}\\
-c7^2 \amp=  35c-6c+7^{2}  \\
-c(49-35+6) \amp=  49  \\
-c \amp=  \frac{49}{20}  
-\end{align*}
+<div class="para logical">
+<div class="para">Soit</div>
+<div class="displaymath process-math">
+\begin{equation}
+a_n=c_1a_{n-1}+c_2a_{n-2}+ \cdots +c_ka_{n-k}\tag{6.7}
+\end{equation}
 </div>
-<p class="continuation">Ainsi, toute les solutions à la relation de récurrence seront <span class="process-math">\(a_n=\left( \frac{49}{20}\right)7^n+\alpha_1\cdot 3^n+\alpha_2\cdot 2^n \text{.}\)</span></p>
-<span class="incontext"><a href="sec-relRecLinNonHom.html#p-2362" class="internal">Contexte</a></span>
+<div class="para">une relation de récurrence d’odre <span class="process-math">\(k\)</span> (c’est-à-dire que <span class="process-math">\(c_k\neq 0\)</span>),  l’équation caractéristique associée à cette relation est l’équation</div>
+<div class="displaymath process-math">
+\begin{equation}
+0=r^k-c_1r^{k-1}-c_2r^{k-2}-\cdots - c_{k-1}r-c_k \tag{6.8}
+\end{equation}
+</div>
+</div>
+<span class="incontext"><a href="sec-relRecLinHom.html#p-2362" class="internal">Contexte</a></span>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -10,14 +10,60 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">On montre que cette proposition est une contradiction. En effet, on a montrer en classe que <span class="process-math">\(p\rightarrow q \equiv \neg p \vee q \text{.}\)</span> Ainsi,<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
-&amp;\equiv p \wedge (\neg\neg q \wedge \neg p) \text{   par De Morgan.}\\
-&amp;\equiv p \wedge q\wedge \neg p \text{   par propriétés de la négations et associativité.}\\
-&amp;\equiv p \wedge \neg p \wedge q \text{   par commutativité.}\\
-&amp;\equiv F \wedge q \equiv F \text{   par propriétés de la négation et domination.}
-\end{align*}
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">Voici la table de vérité de <span class="process-math">\(neg(p\vee q)\leftrightarrow (\neg p \wedge \neg q) \text{.}\)</span> <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.4<span class="period">.</span></span><span class="space"> </span>Équivalence entre négation de la disjonction et conjonction des négations</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\)</span></td>
+<td class="l m b0 r1 l0 t3 lines"><span class="process-math">\(q\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(\neg p\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(\neg q\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\vee q\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(\neg (p\vee q)\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(\neg p \wedge \neg q\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(\neg (p\vee q) \leftrightarrow (\neg p\wedge \neg q)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r1 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r1 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r1 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">F</td>
+<td class="l m b3 r1 l0 t0 lines">F</td>
+<td class="l m b3 r0 l0 t0 lines">V</td>
+<td class="l m b3 r0 l0 t0 lines">V</td>
+<td class="l m b3 r0 l0 t0 lines">F</td>
+<td class="l m b3 r0 l0 t0 lines">V</td>
+<td class="l m b3 r2 l0 t0 lines">V</td>
+<td class="l m b3 r0 l0 t0 lines">V</td>
+</tr>
+</table></div></figure>
+</div> <div class="para">On peut donc dire que <span class="process-math">\(\neg(p\vee q)\equiv\neg p \wedge \neg q\text{.}\)</span>
 </div>
 </div></body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -9,18 +9,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Évaluer (Sage)"
+});
+</script>
 </head>
 <body class="ignore-math">
-<article class="exercise exercise-like"><h5 class="heading">
-<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
-</h5>
-<div class="introduction"><p>L'algorithme d'Euclide permet de trouver le <span class="process-math">\(\pgcd\)</span> d'entiers strictement positifs. On peut toutefois facilement étendre la notion aux entiers quelconques.</p></div>
-<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p>Montrer que si <span class="process-math">\(a&gt;0\text{,}\)</span> alors <span class="process-math">\(\pgcd(a,0)=a\text{.}\)</span></p>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-105-hidden.html" title="Solution 3.2.5.5.a.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p>Montrer que si <span class="process-math">\(a&lt;0\)</span> et <span class="process-math">\(b\geq 0\text{,}\)</span> alors <span class="process-math">\(\pgcd{(a,b)}=\pgcd{(|a|,b)}\text{.}\)</span></p>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-106-hidden.html" title="Solution 3.2.5.5.b.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p>Montrer que pour <span class="process-math">\(a,b\in \Z\text{,}\)</span> on a <span class="process-math">\(\pgcd{(a,b)}=\pgcd{(|a|,|b|)}\text{.}\)</span></p>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-107-hidden.html" title="Solution 3.2.5.5.c.1"><span class="type">Solution</span><span class="period">.</span></a></div></article></article><span class="incontext"><a href="sec-divisibilite.html#exercise-169" class="internal">Contexte</a></span>
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Question de compréhension</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
+</h4>
+<div class="para">Que fait l’algorithme suivant?</div> <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-py">def algo(n):
+    laliste = [1]
+    d = 2
+    while d &lt; n:
+        if n % d == 0:
+            laliste.append(d)
+        d = d + 1
+    if n &gt; 1:
+        laliste.append(n)
+    return laliste
+</code></pre></div>
+<figcaption><span class="type">Bloc de code</span><span class="space"> </span><span class="codenumber">3.2.11<span class="period">.</span></span><span class="space"> </span>Une algorithme sur les entiers</figcaption></figure> <pre class="ptx-sagecell sagecell-sage" id="sage-9"><script type="text/x-sage">
+</script></pre></article><span class="incontext"><a href="sec-divisibilite.html#exercise-169" class="internal">Contexte</a></span>
 </body>
 </html>

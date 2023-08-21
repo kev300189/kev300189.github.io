@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MaDIR Circuits logiques</title>
@@ -13,20 +13,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Mathématiques discrètes">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-    renderActions: {
-        findScript: [10, function (doc) {
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
                 var display = !!node.type.match(/; *mode=display/);
                 var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
@@ -36,41 +54,174 @@ window.MathJax = {
                 math.end = {node: text, delim: '', n: 0};
                 doc.math.push(math);
             });
-        }, '']
-    },
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-},
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
-<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_green_plum.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_green_plum.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Sauter au contenu</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes:</span> <span class="subtitle">Version préliminaire</span></a></h1>
+<p class="byline"></p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Résultats de la recherche: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>Aucun résultat.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Table des matières</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-propquant.html" title="Précédent"><span class="icon">&lt;</span><span class="name">Précédent</span></a><a class="up-button button" href="chap-logique.html" title="Haut"><span class="icon">^</span><span class="name">Haut</span></a><a class="next-button button" href="chap-reptheonombres.html" title="Suivant"><span class="name">Suivant</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
 \newcommand{\Z}{\mathbb{Z}}                
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -136,112 +287,290 @@ $\Box$
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes:</span> <span class="subtitle">Version préliminaire</span></a></h1>
-<p class="byline"></p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Table des matières</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-propquant.html" title="Précédent">Précédent</a><a id="upbutton" class="up-button button toolbar-item" href="chap-logique.html" title="Haut">Haut</a><a id="nextbutton" class="next-button button toolbar-item" href="chap-reptheonombres.html" title="Suivant">Suivant</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Table des matières</button><a class="previous-button toolbar-item button" href="sec-propquant.html" title="Précédent">Précédent</a><a class="up-button button toolbar-item" href="chap-logique.html" title="Haut">Haut</a><a class="next-button button toolbar-item" href="chap-reptheonombres.html" title="Suivant">Suivant</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link">
-<a href="chap-ensfct.html" data-scroll="chap-ensfct" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a><ul>
-<li><a href="sec-ens.html" data-scroll="sec-ens" class="internal">Les ensembles</a></li>
-<li><a href="sec-opens.html" data-scroll="sec-opens" class="internal">Opérations sur les ensembles</a></li>
-<li><a href="sec-fonctions.html" data-scroll="sec-fonctions" class="internal">Les fonctions</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="chap-ensfct.html" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-ens.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Les ensembles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-ens.html#subsection-1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Définitions et exemples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Relation entre deux ensembles</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Représentation graphique d’ensembles</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#subsection-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Ensembles particuliers</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#exo-ens" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-logique.html" data-scroll="chap-logique" class="internal"><span class="codenumber">2</span> <span class="title">Logique mathématique</span></a><ul>
-<li><a href="sec-logprop.html" data-scroll="sec-logprop" class="internal">La logique propositionnelle</a></li>
-<li><a href="sec-eqlogfnc.html" data-scroll="sec-eqlogfnc" class="internal">Équivalence logique et formes normales</a></li>
-<li><a href="sec-propquant.html" data-scroll="sec-propquant" class="internal">Les propositions quantifiées</a></li>
-<li><a href="sec-circuits.html" data-scroll="sec-circuits" class="active">Circuits logiques</a></li>
+<li>
+<div class="toc-item"><a href="sec-opens.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Opérations sur les ensembles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-opens.html#sssec-opens" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Opérations élémentaires sur les ensembles</span></a></div></li>
+<li><div class="toc-item"><a href="sec-opens.html#sssec-propoper" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Propriétés des opérations élémentaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec-opens.html#rq-opens" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-opens.html#exo-opens" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-reptheonombres.html" data-scroll="chap-reptheonombres" class="internal"><span class="codenumber">3</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a><ul>
-<li><a href="sec-representation.html" data-scroll="sec-representation" class="internal">Représentation des nombres</a></li>
-<li><a href="sec-divisibilite.html" data-scroll="sec-divisibilite" class="internal">La divisibilité dans les entiers</a></li>
-<li><a href="sec-modulo.html" data-scroll="sec-modulo" class="internal">Arithmétique modulaire</a></li>
+<li>
+<div class="toc-item"><a href="sec-fonctions.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Les fonctions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-fonctions.html#subsection-7" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Définitions et exemples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#subsection-8" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Représentation d’une fonction</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#subsection-9" class="internal"><span class="codenumber">1.3.3</span> <span class="title">La composition de fonctions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#sssec-injsurj" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Fonctions injectives et surjectives</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#reading-questions-2" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#exo-" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-denombrement.html" data-scroll="chap-denombrement" class="internal"><span class="codenumber">4</span> <span class="title">Dénombrement</span></a><ul>
-<li><a href="sec_prodSomme.html" data-scroll="sec_prodSomme" class="internal">Méthodes de dénombrement: Principes de base</a></li>
-<li><a href="sec_arrCombinaison.html" data-scroll="sec_arrCombinaison" class="internal">Permutations et combinaisons</a></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-preuveMath.html" data-scroll="chap-preuveMath" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a><ul>
-<li><a href="sec_methodePreuve.html" data-scroll="sec_methodePreuve" class="internal">Méthodes de preuves</a></li>
-<li><a href="sec_pidgeonHoles.html" data-scroll="sec_pidgeonHoles" class="internal">Principe des tiroirs de Dirichlet</a></li>
-<li><a href="sec_induction.html" data-scroll="sec_induction" class="internal">Les preuves par récurrence (par induction)</a></li>
+<li>
+<div class="toc-item"><a href="chap-logique.html" class="internal"><span class="codenumber">2</span> <span class="title">Logique mathématique</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-logprop.html" class="internal"><span class="codenumber">2.1</span> <span class="title">La logique propositionnelle</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-logprop.html#subsection-11" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Propositions mathématiques et connecteurs logiques</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#subsection-12" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Table de vérité</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#subsection-13" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Implication, réciproque et contraposée</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#reading-questions-3" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#exo-logprop" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-relationRecurrence.html" data-scroll="chap-relationRecurrence" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a><ul>
-<li><a href="sec-relRecLinHom.html" data-scroll="sec-relRecLinHom" class="internal">Relations de récurrence linéaires homogènes</a></li>
-<li><a href="sec-relRecLinNonHom.html" data-scroll="sec-relRecLinNonHom" class="internal">Relations de récurrence linéaires non-homogènes</a></li>
+<li>
+<div class="toc-item"><a href="sec-eqlogfnc.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Équivalence logique et formes normales</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#subsection-14" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Équivalence logique</span></a></div></li>
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#subsection-15" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Formes normales</span></a></div></li>
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#rq-eqlogfnc" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#exo-eqlogfnc" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chap-theorieGraphes.html" data-scroll="chap-theorieGraphes" class="internal"><span class="codenumber">7</span> <span class="title">Théorie des graphes</span></a><ul>
-<li><a href="sec-introGraphes.html" data-scroll="sec-introGraphes" class="internal">Introduction à la théorie des graphes</a></li>
-<li><a href="sec-propGraphes.html" data-scroll="sec-propGraphes" class="internal">Propriétés des graphes</a></li>
+<li>
+<div class="toc-item"><a href="sec-propquant.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Les propositions quantifiées</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-propquant.html#sssec-predicats" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Prédicats</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#sssec-quantificateurs" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Quantificateurs existentiel et universel</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#subsection-18" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Négation et combinaisons de quantificateurs</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#rq-propquant" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#exo-propquant" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Rédigé avec PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content">
+<li class="active">
+<div class="toc-item"><a href="sec-circuits.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Circuits logiques</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-circuits.html#subsection-19" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Portes logiques</span></a></div></li>
+<li><div class="toc-item"><a href="sec-circuits.html#subsection-20" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Parallèle avec la logique propositionnelle</span></a></div></li>
+<li><div class="toc-item"><a href="sec-circuits.html#rq-circuits" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-circuits.html#exo-circuits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-reptheonombres.html" class="internal"><span class="codenumber">3</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-representation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Représentation des nombres</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-representation.html#subsection-21" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Systèmes positionnels</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-22" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Représentation en base deux</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-23" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Représentation en base hexadécimale</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-24" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Opérations élémentaires en base deux</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-25" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Représentation en circuits d’opérations binaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#rq-representation" class="internal"><span class="codenumber">3.1.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#exo-representation" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-divisibilite.html" class="internal"><span class="codenumber">3.2</span> <span class="title">La divisibilité dans les entiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-divisibilite.html#subsection-26" class="internal"><span class="codenumber">3.2.1</span> <span class="title">L’opération de division</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#subsection-27" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Retour sur la conversion à partir de la base dix</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#subsection-28" class="internal"><span class="codenumber">3.2.3</span> <span class="title">L’algorithme d’Euclide</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#rq-divisibilite" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#exo-divisibilite" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-modulo.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Arithmétique modulaire</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-29" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-30" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Arithmétique modulaire</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-31" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Résolution d’équations en congruence modulo</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-32" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Introduction à la cryptographie</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#rq-modulo" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#exo-modulo" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-denombrement.html" class="internal"><span class="codenumber">4</span> <span class="title">Dénombrement</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec_prodSomme.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Méthodes de dénombrement: Principes de base</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-regleProd" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Principe du produit</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-regleSomme" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Principe de la somme</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-combProdSomme1" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Combinaison du principe du produit et du principe de la somme</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-incExclu" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Le principe de la soustraction (ou le principe d’inclusion-exclusion)</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-div" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Le principe de la division</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#rq-prodSomme" class="internal"><span class="codenumber">4.1.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#exo-prodSomme" class="internal"><span class="codenumber">4.1.7</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_arrCombinaison.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Permutations et combinaisons</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subs_permArr" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Les permutations</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subs_combBinomial" class="internal"><span class="codenumber">4.2.2</span> <span class="title"></span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec_arrCombinaison.html#subs-permCombGen" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Les permutations et combinaisons généralisées</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsub-permInd" class="internal"><span class="codenumber">4.2.3.1</span> <span class="title">Permutations avec des objets indiscernables</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsub-permRep" class="internal"><span class="codenumber">4.2.3.2</span> <span class="title">Permutations avec répétitions</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsub-combRep" class="internal"><span class="codenumber">4.2.3.3</span> <span class="title">Combinaisons avec répétitions</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#rq-arrCombinaison" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#exo-combinatoire" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-preuveMath.html" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec_methodePreuve.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Méthodes de preuves</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subs-terminomolgie" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Un peu de terminologie</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec_methodePreuve.html#subs-methodePreuve" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Différentes méthodes de preuve</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-preuveDirecte" class="internal"><span class="codenumber">5.1.2.1</span> <span class="title">Preuve directe</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-preuvInd" class="internal"><span class="codenumber">5.1.2.2</span> <span class="title">Preuve indirecte</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-preuveContradiction" class="internal"><span class="codenumber">5.1.2.3</span> <span class="title">Preuve par contradiction</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-bidirectionnel" class="internal"><span class="codenumber">5.1.2.4</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#rq-methodePreuve" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#exo-methodePreuve" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_pidgeonHoles.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Principe des tiroirs de Dirichlet</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_pidgeonHoles.html#subs_statement" class="internal"><span class="codenumber">5.2.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec_pidgeonHoles.html#rq-pigeonHoles" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_pidgeonHoles.html#exo-pigeonHoles" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_induction.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Les preuves par récurrence (par induction)</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_induction.html#subs_introInduction" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Les différentes étapes</span></a></div></li>
+<li><div class="toc-item"><a href="sec_induction.html#subs-exemples" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Exemples de preuves par récurrence</span></a></div></li>
+<li><div class="toc-item"><a href="sec_induction.html#rq-induction" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_induction.html#exo-induction" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-relationRecurrence.html" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-relRecLinHom.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-relRecLinHom" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Relations de récurrence  et forme générale</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-recLinHom" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-solLinHom" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d’odre 2: Cas 1</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-solLinHom2" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d’odre 2: Cas 2</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-ordrePGDeux" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Relations de récurrence linéaires homogènes d’ordre <span class="process-math">\(k\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#rq-relRecLinHom" class="internal"><span class="codenumber">6.1.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#exo-relRecLinHom" class="internal"><span class="codenumber">6.1.7</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-relRecLinNonHom.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Relations de récurrence linéaires non-homogènes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-relRecLinNonHom.html#subs-" class="internal"><span class="codenumber">6.2.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinNonHom.html#rq-relRexLinNonHom" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinNonHom.html#exo-relRecLinNonHom" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-theorieGraphes.html" class="internal"><span class="codenumber">7</span> <span class="title">Théorie des graphes</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-introGraphes.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction à la théorie des graphes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-introGraphes.html#subs-defGraphe" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Qu’est-ce qu’un graphe?</span></a></div></li>
+<li><div class="toc-item"><a href="sec-introGraphes.html#subs-degre" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Le degré d’un sommet</span></a></div></li>
+<li><div class="toc-item"><a href="sec-introGraphes.html#subs-grapheParticulier" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Quelques graphes particuliers</span></a></div></li>
+<li><div class="toc-item"><a href="sec-introGraphes.html#rq-introGraphes" class="internal"><span class="codenumber">7.1.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-propGraphes.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Propriétés des graphes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-propGraphes.html#subs-graphesBiColoration" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Graphes bipartis et coloration des graphes</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propGraphes.html#subs-cheminCircuit" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Chemins et circuits</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propGraphes.html#subs-eulerien" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Chemins et circuits eulériens</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propGraphes.html#subs-hamiltonien" class="internal"><span class="codenumber">7.2.4</span> <span class="title">Chemins et circuits hamiltoniens</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propGraphes.html#subs-isoGraphe" class="internal"><span class="codenumber">7.2.5</span> <span class="title">Isomorphismes de graphes</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propGraphes.html#rq-propGraphes" class="internal"><span class="codenumber">7.2.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="sec-circuits"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Circuits logiques</span>
 </h2>
-<section class="introduction" id="intro-circuits"><p id="p-1065">Pour la première fois, on évoque spécifiquement  le fonctionnement d'un ordinateur. Les composantes d'un ordinateur sont presque toutes composées de petits circuits électroniques qui sont fait pour accepter deux intensité de courant électrique. Un circuit qui reçoit le niveau élevé de courant sera représenté par un <span class="process-math">\(1\)</span> alors qu'un circuit qui reçoit un faible niveau sera représenté par un <span class="process-math">\(0\text{.}\)</span> Cette dualité n'est pas sans rappeler les sections précédentes où les propositions étaient vraie ou fausse.</p>
-<p id="p-1066">Un ordinateur combine l'information de tous ses circuits pour effectuer ses tâches. Pour cela, il combine ces informations à l'aide de ce qu'on appelle des portes, qui sont analogues aux connecteurs logiques. Les éléments de la présente section sont d'une certaine façon une manière graphique de visualiser les notions de la section <a href="sec-logprop.html" class="internal" title="Section 2.1: La logique propositionnelle">2.1</a>.</p>
-<p id="p-1067">Dans cette section, on définit les portes logiques élémentaires, les circuits logiques et leur construction,</p></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<section class="introduction" id="intro-circuits"> <div class="para" id="p-1104">Pour la première fois, on évoque spécifiquement  le fonctionnement d’un ordinateur. Les composantes d’un ordinateur sont presque toutes composées de petits circuits électroniques qui sont fait pour accepter deux intensité de courant électrique. Un circuit qui reçoit le niveau élevé de courant sera représenté par un <span class="process-math">\(1\)</span> alors qu’un circuit qui reçoit un faible niveau sera représenté par un <span class="process-math">\(0\text{.}\)</span> Cette dualité n’est pas sans rappeler les sections précédentes où les propositions étaient vraie ou fausse.</div> <div class="para" id="p-1105">Un ordinateur combine l’information de tous ses circuits pour effectuer ses tâches. Pour cela, il combine ces informations à l’aide de ce qu’on appelle des portes, qui sont analogues aux connecteurs logiques. Les éléments de la présente section sont d’une certaine façon une manière graphique de visualiser les notions de la section <a href="sec-logprop.html" class="internal" title="Section 2.1: La logique propositionnelle">2.1</a>.</div> <div class="para" id="p-1106">Dans cette section, on définit les portes logiques élémentaires, les circuits logiques et leur construction,</div></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
 <span class="type">Sous-section</span> <span class="codenumber">2.4.1</span> <span class="title">Portes logiques</span>
 </h3>
-<p id="p-1068">Une porte logique est un dispositif agissant sur un certain nombre d'entrée et produisant à partir de ceux-ci une sortie. Typiquement dans un ordinateur, le niveau de tension de composantes est fourni en entrée afin de produire un résultat ou une information. On peut aussi voir les entrées comme des Vrai ou Faux, des Ouvert ou Fermé ou des <span class="process-math">\(1\)</span> ou <span class="process-math">\(0\text{.}\)</span> Une partie d'un circuit peut être illustré comme sur la figure <a href="" class="xref" data-knowl="./knowl/fig-circuitintro.html" title="Figure 2.4.1">2.4.1</a>. À gauche, on retrouve les entrées (il peut y en avoir une ou plusieurs) et à droite la sortie (encore une fois, une ou plusieurs). Au centre, on retrouve une porte, une espèce de boite noire qui accomplit des opérations logiques pour produire la sortie.</p>
+<div class="para" id="p-1107">Une porte logique est un dispositif agissant sur un certain nombre d’entrée et produisant à partir de ceux-ci une sortie. Typiquement dans un ordinateur, le niveau de tension de composantes est fourni en entrée afin de produire un résultat ou une information. On peut aussi voir les entrées comme des Vrai ou Faux, des Ouvert ou Fermé ou des <span class="process-math">\(1\)</span> ou <span class="process-math">\(0\text{.}\)</span> Une partie d’un circuit peut être illustré comme sur la figure <a href="" class="xref" data-knowl="./knowl/fig-circuitintro.html" title="Figure 2.4.1">2.4.1</a>. À gauche, on retrouve les entrées (il peut y en avoir une ou plusieurs) et à droite la sortie (encore une fois, une ou plusieurs). Au centre, on retrouve une porte, une espèce de boite noire qui accomplit des opérations logiques pour produire la sortie.</div>
 <figure class="figure figure-like" id="fig-circuitintro"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuitintro.svg" class="contained" alt="Un rectangle, représentant une porte de nature inconnue, est représenté avec à sa gauche, deux petits traits pour les entrées et à sa droite, un trait pour la sortie."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.1<span class="period">.</span></span><span class="space"> </span>Une partie de circuit avec une porte inconnue</figcaption></figure><p id="p-1069">On définit maintenant les trois portes principales d'un circuit logique. Elles les équivalents des opérateurs logiques <span class="process-math">\(\neg,\wedge,\vee\text{.}\)</span> Les portes  NON, ET et OU sont illustrées ci-dessous.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.1<span class="period">.</span></span><span class="space"> </span>Une partie de circuit avec une porte inconnue</figcaption></figure><div class="para" id="p-1108">On définit maintenant les trois portes principales d’un circuit logique. Elles les équivalents des opérateurs logiques <span class="process-math">\(\neg,\wedge,\vee\text{.}\)</span> Les portes  NON, ET et OU sont illustrées ci-dessous.</div>
 <figure class="figure figure-like" id="fig-portesdebase"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig-porteNON"><img src="external/NON.svg" class="contained" alt="Un triangle avec un côté vertical à gauche et une extrémité à droite est représenté avec à sa gauche, un petit trait pour l'entrée et à sa droite, un trait pour la sortie. On retrouve aussi à l'extrémité droite du triangle un petit cercle ouvert."><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Porte logique NON</figcaption></figure></div>
-<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig-porteET"><img src="external/ET.svg" class="contained" alt="Une moitié d'ellipse avec un côté vertical à gauche et une extrémité arrondie à droite est représenté avec à sa gauche, deux petits traits pour les entrées et à sa droite, un trait pour la sortie."><figcaption><span class="codenumber">(b)</span><span class="space"> </span>Porte logique ET</figcaption></figure></div>
-<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig-porteOU"><img src="external/OU.svg" class="contained" alt="Une figure ressemblant à une fusée couchée sur le côté est représentée avec un côté concave arrondie à gauche et une extrémité à arrondie à droite. À sa gauche, deux petits traits pour l'entrée et à sa droite, un trait pour la sortie."><figcaption><span class="codenumber">(c)</span><span class="space"> </span>Porte logiqueOU</figcaption></figure></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig-porteNON"><img src="external/NON.svg" class="contained" alt="Un triangle avec un côté vertical à gauche et une extrémité à droite est représenté avec à sa gauche, un petit trait pour l’entrée et à sa droite, un trait pour la sortie. On retrouve aussi à l’extrémité droite du triangle un petit cercle ouvert."><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Porte logique NON</figcaption></figure></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig-porteET"><img src="external/ET.svg" class="contained" alt="Une moitié d’ellipse avec un côté vertical à gauche et une extrémité arrondie à droite est représenté avec à sa gauche, deux petits traits pour les entrées et à sa droite, un trait pour la sortie."><figcaption><span class="codenumber">(b)</span><span class="space"> </span>Porte logique ET</figcaption></figure></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig-porteOU"><img src="external/OU.svg" class="contained" alt="Une figure ressemblant à une fusée couchée sur le côté est représentée avec un côté concave arrondie à gauche et une extrémité à arrondie à droite. À sa gauche, deux petits traits pour l’entrée et à sa droite, un trait pour la sortie."><figcaption><span class="codenumber">(c)</span><span class="space"> </span>Porte logiqueOU</figcaption></figure></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.2<span class="period">.</span></span><span class="space"> </span>Trois portes logiques élémentaires</figcaption></figure><p id="p-1070">En plus des portes élémentaires, on peut aussi définir des portes pour des opérations comme le ou exclusif. On peut même définir ses propres opérations logiques et leur créer une porte. Concrètement, la porte NON va changer le signal de l'entrée pour l'inverser. Ainsi si une composante avait une tension élevée, envoyer son signal dans une porte NON convertira la tension en basse. Une porte ET regarde les deux entrées et retourne un signal à tension élevée si les deux signaux d'entrée étaient aussi à tension élevée. Finalement la porte OU envoie un signal à tension élevée dès que l'une de ses entrée l'était. Pour se coller à la tradition informatique, on parlera désormais en termes de <span class="process-math">\(1\)</span> et de <span class="process-math">\(0\)</span> pour parler de l'entrée et de la sortie d'un circuit.</p>
-<p id="p-1071">Évidemment, ces portes à elles seules ne sont pas très intéressante, mais c'est en les combinant qu'on peut faire des choses complexes et utiles. Il y a toutefois quelques règles à respecter. Sous ces conditions, la sortie d'un circuit sera entièrement déterminée par la valeur de ces entrées au moment de la lecture de celles-ci. On regarde un exemple de circuit plus complexe avant d'établir les règles pour combiner les portes.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.2<span class="period">.</span></span><span class="space"> </span>Trois portes logiques élémentaires</figcaption></figure><div class="para" id="p-1109">En plus des portes élémentaires, on peut aussi définir des portes pour des opérations comme le ou exclusif. On peut même définir ses propres opérations logiques et leur créer une porte. Concrètement, la porte NON va changer le signal de l’entrée pour l’inverser. Ainsi si une composante avait une tension élevée, envoyer son signal dans une porte NON convertira la tension en basse. Une porte ET regarde les deux entrées et retourne un signal à tension élevée si les deux signaux d’entrée étaient aussi à tension élevée. Finalement la porte OU envoie un signal à tension élevée dès que l’une de ses entrée l’était. Pour se coller à la tradition informatique, on parlera désormais en termes de <span class="process-math">\(1\)</span> et de <span class="process-math">\(0\)</span> pour parler de l’entrée et de la sortie d’un circuit.</div>
+<div class="para" id="p-1110">Évidemment, ces portes à elles seules ne sont pas très intéressante, mais c’est en les combinant qu’on peut faire des choses complexes et utiles. Il y a toutefois quelques règles à respecter. Sous ces conditions, la sortie d’un circuit sera entièrement déterminée par la valeur de ces entrées au moment de la lecture de celles-ci. On regarde un exemple de circuit plus complexe avant d’établir les règles pour combiner les portes.</div>
 <article class="example example-like" id="ex-circuit1"><a href="" data-knowl="" class="id-ref example-knowl original has-image has-interactive" data-refid="hk-ex-circuit1"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Un premier circuit combiné: dynamique.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-circuit1"><article class="example example-like"><p id="p-1072">On considère le circuit de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit1.html" title="Figure 2.4.4">2.4.4</a>. Si <span class="process-math">\(X=1,Y=0,Z=1\text{,}\)</span> quelle est la sortie du circuit?</p>
-<figure class="figure figure-like" id="fig-circuit1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit1.svg" class="contained" alt="Un circuit complexe ayant trois entrées est illustrée. Les entrées X et Y passent dans une porte ET, l'entrée Y est transformée par une porte NON et par la suite combinée dans une porte ET avec l'entrée Z. Finalement, le résultat des deux portes ET est combiné dans une porte OU."></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-circuit1"><article class="example example-like"><div class="para" id="p-1111">On considère le circuit de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit1.html" title="Figure 2.4.4">2.4.4</a>. Si <span class="process-math">\(X=1,Y=0,Z=1\text{,}\)</span> quelle est la sortie du circuit?</div> <figure class="figure figure-like" id="fig-circuit1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit1.svg" class="contained" alt="Un circuit complexe ayant trois entrées est illustrée. Les entrées X et Y passent dans une porte ET, l’entrée Y est transformée par une porte NON et par la suite combinée dans une porte ET avec l’entrée Z. Finalement, le résultat des deux portes ET est combiné dans une porte OU."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.4<span class="period">.</span></span><span class="space"> </span>Un premier circuit combiné</figcaption></figure><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original has-interactive" data-refid="hk-solution-72" id="solution-72"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-72"><div class="solution solution-like">
-<p id="p-1073">La figure ci-dessous permet de faire la résolution de ce circuit de manière interactive.</p>
-<figure class="figure figure-like" id="fig-circuit1sol"><div style="width:840px;"><p id="p-1074">Utiliser le curseur afin d'obtenir les étapes de la solutions. Il sera par la suite possible de changer les entrées des valeurs <span class="process-math">\(X,Y\)</span> et <span class="process-math">\(Z\text{.}\)</span></p></div>
-<iframe id="geog-circuit1" width="840" height="840" src="geog-circuit1-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.5<span class="period">.</span></span><span class="space"> </span>La solution du circuit</figcaption></figure>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-interactive" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-79"><div class="solution solution-like">
+<div class="para" id="p-1112">La figure ci-dessous permet de faire la résolution de ce circuit de manière interactive.</div> <figure class="figure figure-like" id="fig-circuit1sol"><iframe id="geog-circuit1" width="840" height="840" src="geog-circuit1-if.html"></iframe><div class="instructions">
+<a href="" data-knowl="" class="id-ref instructions-knowl original" data-refid="hk-instructions-3" id="instructions-3"><h5 class="heading"><span class="type">Instructions<span class="period">.</span></span></h5></a><div class="hidden-content tex2jax_ignore" id="hk-instructions-3"><div class="solution-like"><div class="para" id="p-1113">Utiliser le curseur afin d’obtenir les étapes de la solutions. Il sera par la suite possible de changer les entrées des valeurs <span class="process-math">\(X,Y\)</span> et <span class="process-math">\(Z\text{.}\)</span>
+</div></div></div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.5<span class="period">.</span></span><span class="space"> </span>La solution du circuit</figcaption></figure>
 </div></div>
 </div></article></div>
-<p id="p-1075">Quelles sont donc les règles pour avoir un circuit logique valide? Il y en a quatre. La dernière, si elle n'est pas respectée, peut donner lieu à des circuits appelés séquentiels. On ne considère pas ce type de circuits.</p>
+<div class="para logical" id="p-1114">
+<div class="para">Quelles sont donc les règles pour avoir un circuit logique valide? Il y en a quatre. La dernière, si elle n’est pas respectée, peut donner lieu à des circuits appelés séquentiels. On ne considère pas ce type de circuits.</div>
 <ol class="decimal">
-<li id="li-278"><p id="p-1076">On ne combine pas deux fils d'entrée.</p></li>
-<li id="li-279"><p id="p-1077">Une entrée peut se séparer comme l'entrée <span class="process-math">\(Y\)</span> dans le circuit de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit1.html" title="Figure 2.4.4">2.4.4</a> afin d'être utilisée par plus d'une porte.</p></li>
-<li id="li-280"><p id="p-1078">Une sortie peut être utilisée comme entrée.</p></li>
-<li id="li-281"><p id="p-1079">Par contre, aucune sortie ne retourne dans la porte d'où elle provient, que ce soit immédiatement ou éventuellement.</p></li>
-</ol></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+<li id="li-278"><div class="para" id="p-1115">On ne combine pas deux fils d’entrée.</div></li>
+<li id="li-279"><div class="para" id="p-1116">Une entrée peut se séparer comme l’entrée <span class="process-math">\(Y\)</span> dans le circuit de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit1.html" title="Figure 2.4.4">2.4.4</a> afin d’être utilisée par plus d’une porte.</div></li>
+<li id="li-280"><div class="para" id="p-1117">Une sortie peut être utilisée comme entrée.</div></li>
+<li id="li-281"><div class="para" id="p-1118">Par contre, aucune sortie ne retourne dans la porte d’où elle provient, que ce soit immédiatement ou éventuellement.</div></li>
+</ol>
+</div></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
 <span class="type">Sous-section</span> <span class="codenumber">2.4.2</span> <span class="title">Parallèle avec la logique propositionnelle</span>
 </h3>
-<p id="p-1080">On sait que pour chaque possibilité des entrées d'un circuit, on obtiendra une valeur de sortie. Lorsque le nombre de possibilités est raisonnable, on peut faire une table des possibilités. C'est l'équivalent de la table de vérité de la logique propositionnelle. Ci-dessous, la table du circuit de l'exemple <a href="" class="xref" data-knowl="./knowl/ex-circuit1.html" title="Exemple 2.4.3: Un premier circuit combiné: dynamique">2.4.3</a>. On peut vérifier avec la figure interactive <a href="" class="xref" data-knowl="./knowl/fig-circuit1sol.html" title="Figure 2.4.5">2.4.5</a> que les valeurs sont exactes.</p>
-<figure class="table table-like" id="table-19"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.6<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit de l'exemple 2.4.3</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-1119">On sait que pour chaque possibilité des entrées d’un circuit, on obtiendra une valeur de sortie. Lorsque le nombre de possibilités est raisonnable, on peut faire une table des possibilités. C’est l’équivalent de la table de vérité de la logique propositionnelle. Ci-dessous, la table du circuit de l’exemple <a href="" class="xref" data-knowl="./knowl/ex-circuit1.html" title="Exemple 2.4.3: Un premier circuit combiné: dynamique">2.4.3</a>. On peut vérifier avec la figure interactive <a href="" class="xref" data-knowl="./knowl/fig-circuit1sol.html" title="Figure 2.4.5">2.4.5</a> que les valeurs sont exactes.</div>
+<figure class="table table-like" id="table-23"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.6<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit de l’exemple 2.4.3</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(X\)</span></td>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(Y\)</span></td>
@@ -296,24 +625,18 @@ $\Box$
 <td class="l m b3 r2 l0 t0 lines">0</td>
 <td class="c m b3 r0 l0 t0 lines">0</td>
 </tr>
-</table></div></figure><p id="p-1081">S'il est possible d'associer à un circuit logique une table de vérité, il est également possible de lui associer une expression logique. La sortie du circuit de l'exemple <a href="" class="xref" data-knowl="./knowl/ex-circuit1.html" title="Exemple 2.4.3: Un premier circuit combiné: dynamique">2.4.3</a> se lisait d'ailleurs <span class="process-math">\((X\wedge Y)\vee(\neg Y\wedge Z)\text{.}\)</span></p>
+</table></div></figure><div class="para" id="p-1120">S’il est possible d’associer à un circuit logique une table de vérité, il est également possible de lui associer une expression logique. La sortie du circuit de l’exemple <a href="" class="xref" data-knowl="./knowl/ex-circuit1.html" title="Exemple 2.4.3: Un premier circuit combiné: dynamique">2.4.3</a> se lisait d’ailleurs <span class="process-math">\((X\wedge Y)\vee(\neg Y\wedge Z)\text{.}\)</span>
+</div>
 <aside class="aside aside-like" id="aside-2"><h4 class="heading"><span class="title">En passant.</span></h4>
-<p id="p-1082">Certaines personnes changent la symbolique lorsqu'ils transforment les circuits en expressions. Ils utilisent <span class="process-math">\(\bar{X}\)</span> pour la négation, <span class="process-math">\(X\cdot Y\)</span> pour <span class="process-math">\(X\wedge Y\)</span> et <span class="process-math">\(X+Y\)</span> au lieu de <span class="process-math">\(X\vee Y\text{.}\)</span> On a préféré ici garder la notation propositionnelle afin d'éviter la confusion.</p></aside><article class="example example-like" id="example-32"><a href="" data-knowl="" class="id-ref example-knowl original has-image has-tabular" data-refid="hk-example-32"><h4 class="heading">
-<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">D'autres exemples de circuits logiques.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-32"><article class="example example-like"><p id="p-1083">On considère les circuits de la figure ci-dessous. On cherche à déterminer la table de vérité et une expression de logique propositionnelle pour chacun.</p>
-<figure class="figure figure-like" id="figure-28"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-29"><img src="external/circuit2.svg" class="contained" alt="Un circuit à deux entrées et trois portes logiques est illustré. Le X et le Y sont combinés dans une porte OU. Le Y passe également à travers une porte NON avant d'être combiné avec le résultat de la première porte dans une porte ET."><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Un circuit à deux entrées</figcaption></figure></div>
+<div class="para" id="p-1121">Certaines personnes changent la symbolique lorsqu’ils transforment les circuits en expressions. Ils utilisent <span class="process-math">\(\bar{X}\)</span> pour la négation, <span class="process-math">\(X\cdot Y\)</span> pour <span class="process-math">\(X\wedge Y\)</span> et <span class="process-math">\(X+Y\)</span> au lieu de <span class="process-math">\(X\vee Y\text{.}\)</span> On a préféré ici garder la notation propositionnelle afin d’éviter la confusion.</div></aside><article class="example example-like" id="example-32"><a href="" data-knowl="" class="id-ref example-knowl original has-image has-tabular" data-refid="hk-example-32"><h4 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">D’autres exemples de circuits logiques.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-32"><article class="example example-like"><div class="para" id="p-1122">On considère les circuits de la figure ci-dessous. On cherche à déterminer la table de vérité et une expression de logique propositionnelle pour chacun.</div> <figure class="figure figure-like" id="figure-28"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-29"><img src="external/circuit2.svg" class="contained" alt="Un circuit à deux entrées et trois portes logiques est illustré. Le X et le Y sont combinés dans une porte OU. Le Y passe également à travers une porte NON avant d’être combiné avec le résultat de la première porte dans une porte ET."><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Un circuit à deux entrées</figcaption></figure></div>
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-30"><img src="external/circuit3.svg" class="contained" alt="Un circuit à trois entrées et quatre portes logiques est illustrés. Le X et le Y sont combinés dans une porte OU. Le Y et le Z sont combinés dans une porte ET et le résultat de cette porte est inversé par une porte NON. Finalement, cette inversion est combiné avec la porte OU du début dans une porte ET."><figcaption><span class="codenumber">(b)</span><span class="space"> </span>Un circuit à trois entrées</figcaption></figure></div>
 </div></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.8<span class="period">.</span></span><span class="space"> </span>Deux circuits logiques</figcaption></figure><div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-73"><div class="solution solution-like">
-<p id="p-1084">On débute par la table de vérité de ce circuit.</p>
-<p id="p-1085">On commence avec la paire d'entrées <span class="process-math">\(1\)</span>-<span class="process-math">\(1\text{.}\)</span> La porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span> La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(0\text{,}\)</span> la porte ET retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</p>
-<p id="p-1086">Pour la paire d'entrée <span class="process-math">\(1\)</span>-<span class="process-math">\(0\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(1\text{,}\)</span> la porte ET retourne <span class="process-math">\(1\)</span> comme sortie du circuit.</p>
-<p id="p-1087">Pour la paire d'entrée <span class="process-math">\(0\)</span>-<span class="process-math">\(1\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(0\text{,}\)</span> la porte ET retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</p>
-<p id="p-1088">Pour la paire d'entrée <span class="process-math">\(0\)</span>-<span class="process-math">\(0\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET.  La valeur du Y a été inversée et est maintenant <span class="process-math">\(1\text{,}\)</span> mais la porte OU a retourné <span class="process-math">\(0\text{.}\)</span> La porte ET finale retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</p>
-<p id="p-1089">Le résumé de ces calculs se trouve dans la table ci-dessous.</p>
-<figure class="table table-like" id="table-20"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.9<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-80" id="solution-80"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-80"><div class="solution solution-like">
+<div class="para" id="p-1123">On débute par la table de vérité de ce circuit.</div> <div class="para" id="p-1124">On commence avec la paire d’entrées <span class="process-math">\(1\)</span>-<span class="process-math">\(1\text{.}\)</span> La porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span> La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(0\text{,}\)</span> la porte ET retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</div> <div class="para" id="p-1125">Pour la paire d’entrée <span class="process-math">\(1\)</span>-<span class="process-math">\(0\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(1\text{,}\)</span> la porte ET retourne <span class="process-math">\(1\)</span> comme sortie du circuit.</div> <div class="para" id="p-1126">Pour la paire d’entrée <span class="process-math">\(0\)</span>-<span class="process-math">\(1\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(0\text{,}\)</span> la porte ET retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</div> <div class="para" id="p-1127">Pour la paire d’entrée <span class="process-math">\(0\)</span>-<span class="process-math">\(0\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET.  La valeur du Y a été inversée et est maintenant <span class="process-math">\(1\text{,}\)</span> mais la porte OU a retourné <span class="process-math">\(0\text{.}\)</span> La porte ET finale retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</div> <div class="para" id="p-1128">Le résumé de ces calculs se trouve dans la table ci-dessous.</div> <figure class="table table-like" id="table-24"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.9<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(X\)</span></td>
 <td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(Y\)</span></td>
@@ -344,13 +667,12 @@ $\Box$
 <td class="l m b3 r2 l0 t0 lines">0</td>
 <td class="l m b3 r2 l0 t0 lines">0</td>
 </tr>
-</table></div></figure><p id="p-1090">Pour ce qui est de l'expression logique, en suivant le raisonnement des calculs précédents, on arrive à <span class="process-math">\((X\vee Y)\wedge (\neg Y)\text{.}\)</span></p>
+</table></div></figure> <div class="para" id="p-1129">Pour ce qui est de l’expression logique, en suivant le raisonnement des calculs précédents, on arrive à <span class="process-math">\((X\vee Y)\wedge (\neg Y)\text{.}\)</span>
+</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-74"><div class="solution solution-like">
-<p id="p-1091">Souvent, il est plus simple de déterminer d'abord l'expression logique et à partir de celle-ci, écrire la table de vérité. C'est l'approche préconisée ici.</p>
-<p id="p-1092">On peut procéder comme dans le circuit à deux entrées. On peut aussi procéder de la sortie vers les entrées. La porte finale est une porte ET. On sait donc qu'on aura une conjonction de deux propositions. La première partie de la conjonction correspond à la sortie de la porte OU, qui combine le <span class="process-math">\(X\)</span> et le <span class="process-math">\(Y\text{.}\)</span> La seconde partie de la porte finale est la sortie d'une inversion. On aura donc une négation. Ce qui est inversé, c'est le résultat de la porte ET, qui combine le <span class="process-math">\(Y\)</span> et le <span class="process-math">\(Z\text{.}\)</span> En combinant ces informations, on obtient <span class="process-math">\((X\vee Y)\wedge \neg(Y\wedge Z)\text{.}\)</span></p>
-<p id="p-1093">On peut ensuite trouver la table de vérité ci-dessous.</p>
-<figure class="table table-like" id="table-21"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.10<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-81" id="solution-81"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-81"><div class="solution solution-like">
+<div class="para" id="p-1130">Souvent, il est plus simple de déterminer d’abord l’expression logique et à partir de celle-ci, écrire la table de vérité. C’est l’approche préconisée ici.</div> <div class="para" id="p-1131">On peut procéder comme dans le circuit à deux entrées. On peut aussi procéder de la sortie vers les entrées. La porte finale est une porte ET. On sait donc qu’on aura une conjonction de deux propositions. La première partie de la conjonction correspond à la sortie de la porte OU, qui combine le <span class="process-math">\(X\)</span> et le <span class="process-math">\(Y\text{.}\)</span> La seconde partie de la porte finale est la sortie d’une inversion. On aura donc une négation. Ce qui est inversé, c’est le résultat de la porte ET, qui combine le <span class="process-math">\(Y\)</span> et le <span class="process-math">\(Z\text{.}\)</span> En combinant ces informations, on obtient <span class="process-math">\((X\vee Y)\wedge \neg(Y\wedge Z)\text{.}\)</span>
+</div> <div class="para" id="p-1132">On peut ensuite trouver la table de vérité ci-dessous.</div> <figure class="table table-like" id="table-25"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.10<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(X\)</span></td>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(Y\)</span></td>
@@ -426,11 +748,10 @@ $\Box$
 </table></div></figure>
 </div></div>
 </div></article></div>
-<p id="p-1094">Si on peut trouver une expression logique et une table de vérité à partir d'un circuit logique, on peut probablement trouver une circuit logique à partir d'une expression ou d'une table de vérité. Pour cette dernière option, la forme normale disjonctive sera particulièrement utile.</p>
+<div class="para" id="p-1133">Si on peut trouver une expression logique et une table de vérité à partir d’un circuit logique, on peut probablement trouver une circuit logique à partir d’une expression ou d’une table de vérité. Pour cette dernière option, la forme normale disjonctive sera particulièrement utile.</div>
 <article class="example example-like" id="example-33"><a href="" data-knowl="" class="id-ref example-knowl original has-image has-tabular" data-refid="hk-example-33"><h4 class="heading">
-<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.4.11</span><span class="period">.</span><span class="space"> </span><span class="title">Des circuits à partir d'une expression logique ou d'une table de vérité.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-33"><article class="example example-like"><p id="p-1095">On considère l'expression logique <span class="process-math">\((X\vee \neg Z)\wedge (\neg Y\vee Z) \)</span> et la table de vérité suivante.</p>
-<figure class="table table-like" id="table-22"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.12<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">2.4.11</span><span class="period">.</span><span class="space"> </span><span class="title">Des circuits à partir d’une expression logique ou d’une table de vérité.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-33"><article class="example example-like"><div class="para" id="p-1134">On considère l’expression logique <span class="process-math">\((X\vee \neg Z)\wedge (\neg Y\vee Z) \)</span> et la table de vérité suivante.</div> <figure class="table table-like" id="table-26"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.12<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(X\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(Y\)</span></td>
@@ -485,111 +806,106 @@ $\Box$
 <td class="c m b0 r2 l0 t0 lines">0</td>
 <td class="c m b0 r0 l0 t0 lines">0</td>
 </tr>
-</table></div></figure><p id="p-1096">On veut dessiner des circuits logiques équivalents à ceux-ci.</p>
+</table></div></figure> <div class="para" id="p-1135">On veut dessiner des circuits logiques équivalents à ceux-ci.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-75"><div class="solution solution-like">
-<p id="p-1097">On débute avec l'expression logique. On voit que la sortie sera obtenue après une porte ET qui combine les deux paires de parenthèses. Dans la première paire, le <span class="process-math">\(X\)</span> est combiné à la négation de <span class="process-math">\(Z\)</span> par une porte OU et dans la seconde, c'est la négation de <span class="process-math">\(Y\)</span> qui est combinée à <span class="process-math">\(Z\text{,}\)</span> aussi par une porte OU.</p>
-<p id="p-1098">Comme <span class="process-math">\(Z\)</span> apparait dans les deux paires de parenthèses, il faudra séparer l'entrée en deux. Une solution possible est donner ci-dessous.</p>
-<figure class="figure figure-like" id="figure-31"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit4.svg" class="contained" alt="Un circuit à trois entrées est illustré. L'entrée X est combinée avec l'inverse de l'entrée Z dans une porte OU. L'entrée Y est inversée et combinée avec l'entrée Z, aussi dans une porte OU. Le résultat de ces deux portes OU est finalement combiné dans une porte ET."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.13<span class="period">.</span></span><span class="space"> </span>Le circuit associé à l'expression logique</figcaption></figure>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-82" id="solution-82"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-82"><div class="solution solution-like">
+<div class="para" id="p-1136">On débute avec l’expression logique. On voit que la sortie sera obtenue après une porte ET qui combine les deux paires de parenthèses. Dans la première paire, le <span class="process-math">\(X\)</span> est combiné à la négation de <span class="process-math">\(Z\)</span> par une porte OU et dans la seconde, c’est la négation de <span class="process-math">\(Y\)</span> qui est combinée à <span class="process-math">\(Z\text{,}\)</span> aussi par une porte OU.</div> <div class="para" id="p-1137">Comme <span class="process-math">\(Z\)</span> apparait dans les deux paires de parenthèses, il faudra séparer l’entrée en deux. Une solution possible est donner ci-dessous.</div> <figure class="figure figure-like" id="figure-31"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit4.svg" class="contained" alt="Un circuit à trois entrées est illustré. L’entrée X est combinée avec l’inverse de l’entrée Z dans une porte OU. L’entrée Y est inversée et combinée avec l’entrée Z, aussi dans une porte OU. Le résultat de ces deux portes OU est finalement combiné dans une porte ET."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.13<span class="period">.</span></span><span class="space"> </span>Le circuit associé à l’expression logique</figcaption></figure>
 </div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-76"><div class="solution solution-like">
-<p id="p-1099">Le plus simple pour construire le circuit associé à une table de vérité est de construire la forme normale disjonctive de l'expression. Comme toutes les sorties tels que <span class="process-math">\(X\)</span> est <span class="process-math">\(1\)</span> donnent <span class="process-math">\(1\text{,}\)</span>en combinant <span class="process-math">\(X\)</span> à la cinquième ligne, on obtient <span class="process-math">\(X\vee (\neg X\wedge Y\wedge Z)\text{.}\)</span> Il faudra donc combiner l'inverse de <span class="process-math">\(X\)</span> avec <span class="process-math">\(Y\)</span> et ensuite combiner ce résultat avec <span class="process-math">\(Z\)</span> dans des portes ET. Ensuite, on combine cette sortie avec <span class="process-math">\(X\)</span> dans une porte OU. À noter qu'à l'exercice <a href="" class="xref" data-knowl="./knowl/exo-ETmultiple.html" title="Exercice 2.4.4.1">2.4.4.1</a>, on verra qu'on peut combiner plus de deux entrées dans une porte ET grâce à l'associativité.</p>
-<p id="p-1100">Le circuit associé à cette table de vérité est illustré ci-dessous.</p>
-<figure class="figure figure-like" id="figure-32"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit5.svg" class="contained" alt="Un circuit à trois entrées est illustré. L'entrée X est inversée et combinée avec l'entrée Y dans une porte ET. Ensuite, la sortie de cette porte est combinée avec Z dans une autre porte ET. Finalement le résultat de cette seconde porte ET est combinée avec X dans une porte OU."></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-83" id="solution-83"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-83"><div class="solution solution-like">
+<div class="para" id="p-1138">Le plus simple pour construire le circuit associé à une table de vérité est de construire la forme normale disjonctive de l’expression. Comme toutes les sorties tels que <span class="process-math">\(X\)</span> est <span class="process-math">\(1\)</span> donnent <span class="process-math">\(1\text{,}\)</span>en combinant <span class="process-math">\(X\)</span> à la cinquième ligne, on obtient <span class="process-math">\(X\vee (\neg X\wedge Y\wedge Z)\text{.}\)</span> Il faudra donc combiner l’inverse de <span class="process-math">\(X\)</span> avec <span class="process-math">\(Y\)</span> et ensuite combiner ce résultat avec <span class="process-math">\(Z\)</span> dans des portes ET. Ensuite, on combine cette sortie avec <span class="process-math">\(X\)</span> dans une porte OU. À noter qu’à l’exercice <a href="" class="xref" data-knowl="./knowl/exo-ETmultiple.html" title="Exercice 2.4.4.1">2.4.4.1</a>, on verra qu’on peut combiner plus de deux entrées dans une porte ET grâce à l’associativité.</div> <div class="para" id="p-1139">Le circuit associé à cette table de vérité est illustré ci-dessous.</div> <figure class="figure figure-like" id="figure-32"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit5.svg" class="contained" alt="Un circuit à trois entrées est illustré. L’entrée X est inversée et combinée avec l’entrée Y dans une porte ET. Ensuite, la sortie de cette porte est combinée avec Z dans une autre porte ET. Finalement le résultat de cette seconde porte ET est combinée avec X dans une porte OU."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.14<span class="period">.</span></span><span class="space"> </span>Le circuit associé à la table de vérité</figcaption></figure>
 </div></div>
 </div></article></div>
-<p id="p-1101">En plus de déterminer des circuits équivalents à des expressions ou des tables de vérité, on peut aussi déterminer l'équivalence de circuits entre eux. Grâce aux règles de la logique, on peut simplifier les circuits. Si on réussit à réduire le nombre de portes utilisées, on aura potentiellement sauvé des coûts de construction du circuit et peut-être aussi en maintenance ou alimentation.</p></section><section class="conclusion" id="concl-circuits"><p id="p-1102">Les éléments importants de cette section sont:</p>
+<div class="para" id="p-1140">En plus de déterminer des circuits équivalents à des expressions ou des tables de vérité, on peut aussi déterminer l’équivalence de circuits entre eux. Grâce aux règles de la logique, on peut simplifier les circuits. Si on réussit à réduire le nombre de portes utilisées, on aura potentiellement sauvé des coûts de construction du circuit et peut-être aussi en maintenance ou alimentation.</div></section><section class="conclusion" id="concl-circuits"> <div class="para logical" id="p-1141">
+<div class="para">Les éléments importants de cette section sont:</div>
 <ul class="disc">
-<li id="li-282"><p id="p-1103">Les <a href="" class="xref" data-knowl="./knowl/fig-portesdebase.html" title="Figure 2.4.2">représentations</a> des portes NON,ET et OU.</p></li>
-<li id="li-283"><p id="p-1104">Le parallèle entre les circuits et les expressions logiques.</p></li>
-</ul></section><section class="reading-questions" id="rq-circuits"><h3 class="heading hide-type">
+<li id="li-282"><div class="para" id="p-1142">Les <a href="" class="xref" data-knowl="./knowl/fig-portesdebase.html" title="Figure 2.4.2">représentations</a> des portes NON,ET et OU.</div></li>
+<li id="li-283"><div class="para" id="p-1143">Le parallèle entre les circuits et les expressions logiques.</div></li>
+</ul>
+</div></section><section class="reading-questions" id="rq-circuits"><h3 class="heading hide-type">
 <span class="type">Questions de compréhension de la lecture</span> <span class="codenumber">2.4.3</span> <span class="title">Questions de compréhension de la lecture</span>
 </h3>
-<section class="introduction" id="introduction-101"><p id="p-1105">Ces questions sont à faire en classe et à terminer à la maison si nécessaire.</p></section><article class="exercise exercise-like" id="exercise-122"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-102">
-<p id="p-1106">On considère le circuit illustré à la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit7.html" title="Figure 2.4.15">2.4.15</a>.</p>
-<figure class="figure figure-like" id="fig-circuit7"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit7.svg" class="contained" alt="Un circuit à trois entrées est illustrée dans lequel l'entrée X est combinée avec l'inverse de l'entrée Y dans une porte ET. Ce résultat est finalement combinée avec Z dans une porte OU."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.15<span class="period">.</span></span><span class="space"> </span>Un circuit à trois entrées</figcaption></figure><p id="p-1107">Déterminer la valeur de la sortie si:</p>
+<section class="introduction" id="introduction-102"><div class="para" id="p-1144">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</div></section><article class="exercise exercise-like" id="exercise-127"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-103">
+<div class="para" id="p-1145">On considère le circuit illustré à la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit7.html" title="Figure 2.4.15">2.4.15</a>.</div> <figure class="figure figure-like" id="fig-circuit7"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit7.svg" class="contained" alt="Un circuit à trois entrées est illustrée dans lequel l’entrée X est combinée avec l’inverse de l’entrée Y dans une porte ET. Ce résultat est finalement combinée avec Z dans une porte OU."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.15<span class="period">.</span></span><span class="space"> </span>Un circuit à trois entrées</figcaption></figure> <div class="para" id="p-1146">Déterminer la valeur de la sortie si:</div>
 </div>
-<article class="task exercise-like" id="task-306"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-1108"><span class="process-math">\(X=1,Y=0,Z=0\text{;}\)</span></p></article><article class="task exercise-like" id="task-307"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-1109"><span class="process-math">\(X=0,Y=1,Z=0\text{;}\)</span></p></article><article class="task exercise-like" id="task-308"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-1110"><span class="process-math">\(X=0,Y=0,Z=1\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-123"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-1111">Déterminer la table de vérité du circuit illustré à la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit6.html" title="Figure 2.4.16">2.4.16</a>. Par quelle porte plus simple aurait-on pu le remplacer?</p>
-<figure class="figure figure-like" id="fig-circuit6"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit6.svg" class="contained" alt="Un circuit à deux entrées est illustrée dans lequel l'entrée X est inversée pour être combinée avec l'entrée Y dans une porte ET. Le résultat de cette porte est ensuite combinée dans une porte OU avec l'entrée X."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.16<span class="period">.</span></span><span class="space"> </span>Un circuit à trois portes à simplifier</figcaption></figure></article><article class="exercise exercise-like" id="exercise-124"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-1112">En plus des portes NON,ET et OU, on peut aussi créer d'autres portes à l'aide d'expressions fréquemment utilisées. Dans cet exercice, on s'intéresse au circuit du <a href="" class="xref" data-knowl="./knowl/exo-ouexclusiflogique.html" title="Question de compréhension 2.1.4.4">ou exclusif</a>. Une porte associée à cette opération s'appelle une porte XOR. Elle est illustrée à la figure <a href="" class="xref" data-knowl="./knowl/fig-XOR.html" title="Figure 2.4.17">2.4.17</a>.</p>
-<figure class="figure figure-like" id="fig-XOR"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/XOR.svg" class="contained" alt="Une porte à deux entrée est illustrée, semblable à la porte du OU, mais avec un demi-cercle supplémentaire à gauche."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.17<span class="period">.</span></span><span class="space"> </span>Une porte XOR</figcaption></figure><p id="p-1113">Déterminer une circuit équivalent à une simple porte XOR en termes de porte NON, ET et OU.</p></article><article class="exercise exercise-like" id="exercise-125"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-1114">Quel serait un circuit associé à l'expression <span class="process-math">\(p\rightarrow q\text{?}\)</span></p></article><article class="exercise exercise-like" id="exo-demiadditionneur"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-1115">Un circuit peut avoir plus d'une sortie. C'est particulièrement utile quand un circuit est en fait une partie d'un système plus complexe. Le circuit illustré à la figure <a href="" class="xref" data-knowl="./knowl/fig-demiadditionneur.html" title="Figure 2.4.18">2.4.18</a> est une partie d'un circuit utilisé pour qu'un ordinateur effectue des additions. On reviendra sur ce type de circuit dans le chapitre <a href="chap-reptheonombres.html" class="internal" title="Chapitre 3: Représentation des nombres et arithmétique modulaire">3</a>.</p>
-<figure class="figure figure-like" id="fig-demiadditionneur"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/demiadditionneur.svg" class="contained" alt="Un circuit à deux entrée est illustrée dans lequel les entrées X et Y sont combinées dans une porte XOR et dans une porte ET. Le circuit retourne deux sorties, le résultat de chacune de ces combinaisons."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.18<span class="period">.</span></span><span class="space"> </span>Le circuit demi-additionneur</figcaption></figure><p id="p-1116">Déterminer la table de vérité de ce circuit.</p></article><article class="exercise exercise-like" id="exercise-127"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<p id="p-1117">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</p></article></section><section class="exercises" id="exo-circuits"><h3 class="heading hide-type">
+<article class="task exercise-like" id="task-307"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-1147"><span class="process-math">\(X=1,Y=0,Z=0\text{;}\)</span></div></article><article class="task exercise-like" id="task-308"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-1148"><span class="process-math">\(X=0,Y=1,Z=0\text{;}\)</span></div></article><article class="task exercise-like" id="task-309"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-1149"><span class="process-math">\(X=0,Y=0,Z=1\text{.}\)</span></div></article></article><article class="exercise exercise-like" id="exercise-128"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1150">Déterminer la table de vérité du circuit illustré à la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit6.html" title="Figure 2.4.16">2.4.16</a>. Par quelle porte plus simple aurait-on pu le remplacer?</div> <figure class="figure figure-like" id="fig-circuit6"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit6.svg" class="contained" alt="Un circuit à deux entrées est illustrée dans lequel l’entrée X est inversée pour être combinée avec l’entrée Y dans une porte ET. Le résultat de cette porte est ensuite combinée dans une porte OU avec l’entrée X."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.16<span class="period">.</span></span><span class="space"> </span>Un circuit à trois portes à simplifier</figcaption></figure></article><article class="exercise exercise-like" id="exercise-129"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1151">En plus des portes NON,ET et OU, on peut aussi créer d’autres portes à l’aide d’expressions fréquemment utilisées. Dans cet exercice, on s’intéresse au circuit du <a href="" class="xref" data-knowl="./knowl/exo-ouexclusiflogique.html" title="Question de compréhension 2.1.4.4">ou exclusif</a>. Une porte associée à cette opération s’appelle une porte XOR. Elle est illustrée à la figure <a href="" class="xref" data-knowl="./knowl/fig-XOR.html" title="Figure 2.4.17">2.4.17</a>.</div> <figure class="figure figure-like" id="fig-XOR"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/XOR.svg" class="contained" alt="Une porte à deux entrée est illustrée, semblable à la porte du OU, mais avec un demi-cercle supplémentaire à gauche."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.17<span class="period">.</span></span><span class="space"> </span>Une porte XOR</figcaption></figure> <div class="para" id="p-1152">Déterminer une circuit équivalent à une simple porte XOR en termes de porte NON, ET et OU.</div></article><article class="exercise exercise-like" id="exercise-130"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1153">Quel serait un circuit associé à l’expression <span class="process-math">\(p\rightarrow q\text{?}\)</span>
+</div></article><article class="exercise exercise-like" id="exo-demiadditionneur"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1154">Un circuit peut avoir plus d’une sortie. C’est particulièrement utile quand un circuit est en fait une partie d’un système plus complexe. Le circuit illustré à la figure <a href="" class="xref" data-knowl="./knowl/fig-demiadditionneur.html" title="Figure 2.4.18">2.4.18</a> est une partie d’un circuit utilisé pour qu’un ordinateur effectue des additions. On reviendra sur ce type de circuit dans le chapitre <a href="chap-reptheonombres.html" class="internal" title="Chapitre 3: Représentation des nombres et arithmétique modulaire">3</a>.</div> <figure class="figure figure-like" id="fig-demiadditionneur"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/demiadditionneur.svg" class="contained" alt="Un circuit à deux entrée est illustrée dans lequel les entrées X et Y sont combinées dans une porte XOR et dans une porte ET. Le circuit retourne deux sorties, le résultat de chacune de ces combinaisons."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.18<span class="period">.</span></span><span class="space"> </span>Le circuit demi-additionneur</figcaption></figure> <div class="para" id="p-1155">Déterminer la table de vérité de ce circuit.</div></article><article class="exercise exercise-like" id="exercise-132"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-1156">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</div></article><article class="exercise exercise-like" id="exercise-133"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-1157">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</div></article></section><section class="exercises" id="exo-circuits"><h3 class="heading hide-type">
 <span class="type">Exercices</span> <span class="codenumber">2.4.4</span> <span class="title">Exercices</span>
 </h3>
-<article class="subexercises" id="subexercises-2"><h4 class="heading"><span class="title">À faire à la maison.</span></h4>
-<div class="introduction" id="introduction-103"><p id="p-1118">Ces servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés. Ils sont à faire d'ici le prochain cours</p></div>
+<article class="subexercises" id="subexercises-2"><h4 class="heading"><span class="title">À faire en classe</span></h4>
+<div class="introduction" id="introduction-104"><div class="para" id="p-1158">Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d’apprentissage plus avancés.</div></div>
 <article class="exercise exercise-like" id="exo-ETmultiple"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-104"><p id="p-1119">Dans cet exercice, on constate qu'il est parfois possible de combiner deux portes en une seule de même nature.</p></div>
-<article class="task exercise-like" id="task-309"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1120">Vérifier que les deux circuits suivants sont équivalents.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="introduction" id="introduction-105"><div class="para" id="p-1159">Dans cet exercice, on constate qu’il est parfois possible de combiner deux portes en une seule de même nature.</div></div>
+<article class="task exercise-like" id="task-310"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="p-1160">Vérifier que les deux circuits suivants sont équivalents.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-37"><img src="external/multiET1.svg" class="contained" alt="Une circuit à trois entrée dans lequel les entrées X et Y sont combinées dans une porte ET pour ensuite être combinées avec Z dans une autre porte ET."><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.19<span class="period">.</span></span><span class="space"> </span>Le premier circuit</figcaption></figure></div>
-<div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-38"><img src="external/multiET2.svg" class="contained" alt="Une circuit à trois entrée dans lequel l'entrée X est combinée dans une porte ET avec la combinaison par une porte ET des entrées Y et Z"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.20<span class="period">.</span></span><span class="space"> </span>Le second circuit</figcaption></figure></div>
-</div></div>
-<p id="p-1121">Comment justifier cela avec les notions de la section <a href="sec-eqlogfnc.html" class="internal" title="Section 2.2: Équivalence logique et formes normales">2.2</a>?</p></article><article class="task exercise-like" id="task-310"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1122">Vérifier que le résultat est le même si on remplace les portes ET par des portes OU.</p></article><div class="conclusion" id="conclusion-10">
-<p id="p-1123">Puisque les circuits sont équivalents, on utilisera parfois une porte ET ou une porte OU à plus de deux entrées pour alléger les diagrammes. Un exemple d'une porte ET à trois entrées est illustré ci-dessous.</p>
-<figure class="figure figure-like" id="figure-39"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/multiET3.svg" class="contained" alt="Une circuit à trois entrée dans les entrées X,Y et Z sont combinées dans une unique porte ET."></div>
+<div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-38"><img src="external/multiET2.svg" class="contained" alt="Une circuit à trois entrée dans lequel l’entrée X est combinée dans une porte ET avec la combinaison par une porte ET des entrées Y et Z"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.20<span class="period">.</span></span><span class="space"> </span>Le second circuit</figcaption></figure></div>
+</div></div> <div class="para" id="p-1161">Comment justifier cela avec les notions de la section <a href="sec-eqlogfnc.html" class="internal" title="Section 2.2: Équivalence logique et formes normales">2.2</a>?</div></article><article class="task exercise-like" id="task-311"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-1162">Vérifier que le résultat est le même si on remplace les portes ET par des portes OU.</div></article><div class="conclusion" id="conclusion-10">
+<div class="para" id="p-1163">Puisque les circuits sont équivalents, on utilisera parfois une porte ET ou une porte OU à plus de deux entrées pour alléger les diagrammes. Un exemple d’une porte ET à trois entrées est illustré ci-dessous.</div> <figure class="figure figure-like" id="figure-39"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/multiET3.svg" class="contained" alt="Une circuit à trois entrée dans les entrées X,Y et Z sont combinées dans une unique porte ET."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.21<span class="period">.</span></span><span class="space"> </span>Une porte ET à trois entrées</figcaption></figure>
 </div></article><article class="exercise exercise-like" id="exo-EGAL"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<p id="p-1124">Si la porte XOR, associé au ou exclusif, retourne <span class="process-math">\(1\)</span> lorsque les entrées sont différentes et <span class="process-math">\(0\)</span> lorsqu'elle sont égales, on peut aussi définir une porte qui fait le contraire, c'est-à-dire une porte qui retournera <span class="process-math">\(1\)</span> en cas d'égalité et <span class="process-math">\(0\)</span> sinon. En termes de propositions logiques, on veut alors le complément du ou exclusif. On parlera d'une porte ÉGAL, qui est illustrée à la figure <a href="" class="xref" data-knowl="./knowl/fig-EGAL.html" title="Figure 2.4.22">2.4.22</a>. On note que c'est la même porte que le XOR, mais avec le point de l'inversion à la sortie. Lorsqu'une porte quelconque est possède ce point à sa sortie, on comprendra que c'est l'inversion de la porte sans le point qui est donnée.</p>
-<figure class="figure figure-like" id="fig-EGAL"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/EGAL.svg" class="contained" alt="Une porte à deux entrées identique à une porte XOR, mais possédant un point ouvert à l'extrémité droite de la porte, signifiant l'inversion."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.22<span class="period">.</span></span><span class="space"> </span>Une porte ÉGAL</figcaption></figure><p id="p-1125">Déterminer un circuit équivalent à une porte ÉGAL qui n'utilise que des portes NON,ET et OU.</p>
+<div class="para" id="p-1164">Si la porte XOR, associé au ou exclusif, retourne <span class="process-math">\(1\)</span> lorsque les entrées sont différentes et <span class="process-math">\(0\)</span> lorsqu’elle sont égales, on peut aussi définir une porte qui fait le contraire, c’est-à-dire une porte qui retournera <span class="process-math">\(1\)</span> en cas d’égalité et <span class="process-math">\(0\)</span> sinon. En termes de propositions logiques, on veut alors le complément du ou exclusif. On parlera d’une porte ÉGAL, qui est illustrée à la figure <a href="" class="xref" data-knowl="./knowl/fig-EGAL.html" title="Figure 2.4.22">2.4.22</a>. On note que c’est la même porte que le XOR, mais avec le point de l’inversion à la sortie. Lorsqu’une porte quelconque est possède ce point à sa sortie, on comprendra que c’est l’inversion de la porte sans le point qui est donnée.</div> <figure class="figure figure-like" id="fig-EGAL"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/EGAL.svg" class="contained" alt="Une porte à deux entrées identique à une porte XOR, mais possédant un point ouvert à l’extrémité droite de la porte, signifiant l’inversion."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.22<span class="period">.</span></span><span class="space"> </span>Une porte ÉGAL</figcaption></figure> <div class="para" id="p-1165">Déterminer un circuit équivalent à une porte ÉGAL qui n’utilise que des portes NON,ET et OU.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-1126">Une possibilité est d'ajouter tout simplement une porte NON à la fin du circuit pour la porte XOR. Ceci devrait normalement donner les cinq portes du XOR et la porte NON. Il est toutefois possible de le faire à l'aide de cinq portes au total si on utilise les lois de la logique pour simplifier le complément du ou exclusif.</p></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-17" id="hint-17"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-17"><div class="hint solution-like"><div class="para" id="p-1166">Une possibilité est d’ajouter tout simplement une porte NON à la fin du circuit pour la porte XOR. Ceci devrait normalement donner les cinq portes du XOR et la porte NON. Il est toutefois possible de le faire à l’aide de cinq portes au total si on utilise les lois de la logique pour simplifier le complément du ou exclusif.</div></div></div>
 </div></article><article class="exercise exercise-like" id="exo-NET"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-105">
-<p id="p-1127">À l'exercice <a href="" class="xref" data-knowl="./knowl/exo-EGAL.html" title="Exercice 2.4.4.2">2.4.4.2</a>, il a été mentionné qu'une porte avec un point ouvert à la sortie représente l'inversion de cette porte. On peut ainsi définir les portes NET et NOU, illustrées ci-dessous.</p>
-<figure class="figure figure-like" id="figure-41"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-42"><img src="external/NET.svg" class="contained" alt="Une porte identique à la porte ET, mais avec un petit point ouvert à l'extrémité droite, signifiant l'inversion."><figcaption><span class="codenumber">(a)</span><span class="space"> </span>La porte NET</figcaption></figure></div>
-<div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-43"><img src="external/NOU.svg" class="contained" alt="Une porte identique à la porte OU, mais avec un petit point ouvert à l'extrémité droite, signifiant l'inversion."><figcaption><span class="codenumber">(b)</span><span class="space"> </span>La porte NOU</figcaption></figure></div>
-</div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.23<span class="period">.</span></span><span class="space"> </span>La négation des portes ET et OU</figcaption></figure><p id="p-1128">En particulier, dans l'exercice sur la <a href="" class="xref" data-knowl="./knowl/exo-Sheffer.html" title="Exercice 2.2.4.14: La barre de Sheffer">barre de Sheffer</a>, il a été question de l'opérateur logique NAND (anglais pour NET). Pour chaque question ci-dessous, l'exercice équivalent sur la barre de Sheffer pourrait être utile.</p>
-</div>
-<article class="task exercise-like" id="task-311"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1129">Trouver un circuit logique ne possédant que des portes NET équivalent à l'inversion.</p></article><article class="task exercise-like" id="task-312"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1130">Trouver un circuit logique ne possédant que des portes NET équivalent à une porte ET.</p></article><article class="task exercise-like" id="task-313"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1131">Trouver un circuit logique ne possédant que des portes NET équivalent à une porte OU.</p></article></article><article class="exercise exercise-like" id="exercise-131"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
 <div class="introduction" id="introduction-106">
-<p id="p-1132">Déterminer quel est le résultat du circuit ci-dessous pour les entrées demandées. Attention aux portes avec des inversions <span class="process-math">\(\circ\text{.}\)</span></p>
-<figure class="figure figure-like" id="figure-44"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit8.svg" class="contained" alt="Un circuit à trois entrées est illustré. Dans un premier temps, une porte NOU combine les entrées X et Y. L'inversion de Y est ensuite combinée avec Z dans une porte ET. Le résultat de cette porte ET est combiné dans une porte XOR avec l'inversion de Y. Finalement, la sortie de la porte XOR est combinée avec la sortie de la première porte NOU dans une porte NET."></div>
+<div class="para" id="p-1167">À l’exercice <a href="" class="xref" data-knowl="./knowl/exo-EGAL.html" title="Exercice 2.4.4.2">2.4.4.2</a>, il a été mentionné qu’une porte avec un point ouvert à la sortie représente l’inversion de cette porte. On peut ainsi définir les portes NET et NOU, illustrées ci-dessous.</div> <figure class="figure figure-like" id="figure-41"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-42"><img src="external/NET.svg" class="contained" alt="Une porte identique à la porte ET, mais avec un petit point ouvert à l’extrémité droite, signifiant l’inversion."><figcaption><span class="codenumber">(a)</span><span class="space"> </span>La porte NET</figcaption></figure></div>
+<div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="figure-43"><img src="external/NOU.svg" class="contained" alt="Une porte identique à la porte OU, mais avec un petit point ouvert à l’extrémité droite, signifiant l’inversion."><figcaption><span class="codenumber">(b)</span><span class="space"> </span>La porte NOU</figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.23<span class="period">.</span></span><span class="space"> </span>La négation des portes ET et OU</figcaption></figure> <div class="para" id="p-1168">En particulier, dans l’exercice sur la <a href="" class="xref" data-knowl="./knowl/exo-Sheffer.html" title="Exercice 2.2.4.14: La barre de Sheffer">barre de Sheffer</a>, il a été question de l’opérateur logique NAND (anglais pour NET). Pour chaque question ci-dessous, l’exercice équivalent sur la barre de Sheffer pourrait être utile.</div>
+</div>
+<article class="task exercise-like" id="task-312"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="p-1169">Trouver un circuit logique ne possédant que des portes NET équivalent à l’inversion.</div></article><article class="task exercise-like" id="task-313"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-1170">Trouver un circuit logique ne possédant que des portes NET équivalent à une porte ET.</div></article><article class="task exercise-like" id="task-314"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-1171">Trouver un circuit logique ne possédant que des portes NET équivalent à une porte OU.</div></article></article><article class="exercise exercise-like" id="exercise-137"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-107">
+<div class="para" id="p-1172">Déterminer quel est le résultat du circuit ci-dessous pour les entrées demandées. Attention aux portes avec des inversions <span class="process-math">\(\circ\text{.}\)</span>
+</div> <figure class="figure figure-like" id="figure-44"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit8.svg" class="contained" alt="Un circuit à trois entrées est illustré. Dans un premier temps, une porte NOU combine les entrées X et Y. L’inversion de Y est ensuite combinée avec Z dans une porte ET. Le résultat de cette porte ET est combiné dans une porte XOR avec l’inversion de Y. Finalement, la sortie de la porte XOR est combinée avec la sortie de la première porte NOU dans une porte NET."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.24<span class="period">.</span></span><span class="space"> </span>Un circuit complexe avec des portes inversées</figcaption></figure>
 </div>
-<article class="task exercise-like" id="task-314"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1133"><span class="process-math">\(X=0,Y=0,Z=0\)</span></p></article><article class="task exercise-like" id="task-315"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1134"><span class="process-math">\(X=1,Y=0,Z=0\)</span></p></article><article class="task exercise-like" id="task-316"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1135"><span class="process-math">\(X=0,Y=1,Z=0\)</span></p></article><article class="task exercise-like" id="task-317"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1136"><span class="process-math">\(X=0,Y=0,Z=1\)</span></p></article><article class="task exercise-like" id="task-318"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-1137"><span class="process-math">\(X=1,Y=1,Z=1\)</span></p></article></article><article class="exercise exercise-like" id="exercise-132"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<p id="p-1138">Construire un circuit à trois entrées qui retourne <span class="process-math">\(1\)</span> si et seulement si <span class="process-math">\(X=Y\)</span> et <span class="process-math">\(Y\neq Z\)</span> en n'utilisant que les trois portes de base</p></article><article class="exercise exercise-like" id="exercise-133"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<p id="p-1139">Construire un circuit à trois entrées qui retourne <span class="process-math">\(1\)</span> si au moins deux entrées sont ouvertes et <span class="process-math">\(0\)</span> sinon. Utiliser n'importe quelle(s) porte(s) vues jusqu'ici.</p></article></article><article class="subexercises" id="subexercises-3"><h4 class="heading"><span class="title">Exercices supplémentaires</span></h4>
-<article class="exercise exercise-like" id="exercise-134"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<p id="p-1140">Un pont de la région de Vancouver possède trois voies qui s'utilisent dans les deux sens, selon la direction du trafic (vers l'île ou vers l'extérieur). Afin d'orienter les usagers, des symboles lumineux vert ou rouge indique si une voie est accessible. L'affichage de ces symboles est contrôlé par deux interrupteurs <span class="process-math">\(X,Y\text{.}\)</span></p>
-<p id="p-1141">Lorsque les deux interrupteurs sont fermés (<span class="process-math">\(0\)</span>), les trois voies affichent rouge. Lorsque <span class="process-math">\(X\)</span> seulement est ouvert, la voie la plus à droite des trois est au vert et les deux autres sont au rouge. Lorsque <span class="process-math">\(Y\)</span> seulement est ouvert, ce sont les deux voies de droites qui sont au vert, la troisième est au rouge. Finalement, si les deux interrupteurs sont ouverts, les trois voies sont au vert.</p>
-<p id="p-1142">Donner un circuit à deux entrées et trois sorties illustrant cette situation.</p>
-<figure class="figure figure-like" id="figure-45"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/LGBridge.jpg" class="contained" alt="Une photo du Lion's Gate Bridge de Vancouver sur laquelle on peut apercevoir des voyants lumineux, indiquant aux automobilistes quelle voies ils peuvent emprunter."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.25<span class="period">.</span></span><span class="space"> </span>Le Lion's Gate Bridge, de la région de Vancouver<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a></figcaption></figure></article><article class="exercise exercise-like" id="exercise-135"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-107">Les circuits trouvés à l'exercice <a href="" class="xref" data-knowl="./knowl/exo-NET.html" title="Exercice 2.4.4.3">2.4.4.3</a> peuvent aussi se faire en n'utilisant que des portes NOU.</div>
-<article class="task exercise-like" id="task-319"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1143">Trouver un circuit logique ne possédant que des portes NOU équivalent à l'inversion.</p></article><article class="task exercise-like" id="task-320"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1144">Trouver un circuit logique ne possédant que des portes NOU équivalent à une porte ET.</p></article><article class="task exercise-like" id="task-321"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1145">Trouver un circuit logique ne possédant que des portes NOU équivalent à une porte OU.</p></article><div class="conclusion" id="conclusion-11"><p id="p-1146">L'opérateur logique équivalent à la porte NOU est appelé la flèche de Peirce. On note l'opération <span class="process-math">\(p\downarrow q\text{.}\)</span></p></div></article></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">Image tirée de Wikipedia, libre de droits</div></div>
+<article class="task exercise-like" id="task-315"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="p-1173"><span class="process-math">\(X=0,Y=0,Z=0\)</span></div></article><article class="task exercise-like" id="task-316"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-1174"><span class="process-math">\(X=1,Y=0,Z=0\)</span></div></article><article class="task exercise-like" id="task-317"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-1175"><span class="process-math">\(X=0,Y=1,Z=0\)</span></div></article><article class="task exercise-like" id="task-318"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="p-1176"><span class="process-math">\(X=0,Y=0,Z=1\)</span></div></article><article class="task exercise-like" id="task-319"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="para" id="p-1177"><span class="process-math">\(X=1,Y=1,Z=1\)</span></div></article></article><article class="exercise exercise-like" id="exercise-138"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para" id="p-1178">Construire un circuit à trois entrées qui retourne <span class="process-math">\(1\)</span> si et seulement si <span class="process-math">\(X=Y\)</span> et <span class="process-math">\(Y\neq Z\)</span> en n’utilisant que les trois portes de base</div></article><article class="exercise exercise-like" id="exercise-139"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="para" id="p-1179">Construire un circuit à trois entrées qui retourne <span class="process-math">\(1\)</span> si au moins deux entrées sont ouvertes et <span class="process-math">\(0\)</span> sinon. Utiliser n’importe quelle(s) porte(s) vues jusqu’ici.</div></article></article><article class="subexercises" id="subexercises-3"><h4 class="heading"><span class="title">Exercices supplémentaires</span></h4>
+<article class="exercise exercise-like" id="exercise-140"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="para" id="p-1180">Un pont de la région de Vancouver possède trois voies qui s’utilisent dans les deux sens, selon la direction du trafic (vers l’île ou vers l’extérieur). Afin d’orienter les usagers, des symboles lumineux vert ou rouge indique si une voie est accessible. L’affichage de ces symboles est contrôlé par deux interrupteurs <span class="process-math">\(X,Y\text{.}\)</span>
+</div> <div class="para" id="p-1181">Lorsque les deux interrupteurs sont fermés (<span class="process-math">\(0\)</span>), les trois voies affichent rouge. Lorsque <span class="process-math">\(X\)</span> seulement est ouvert, la voie la plus à droite des trois est au vert et les deux autres sont au rouge. Lorsque <span class="process-math">\(Y\)</span> seulement est ouvert, ce sont les deux voies de droites qui sont au vert, la troisième est au rouge. Finalement, si les deux interrupteurs sont ouverts, les trois voies sont au vert.</div> <div class="para" id="p-1182">Donner un circuit à deux entrées et trois sorties illustrant cette situation.</div> <figure class="figure figure-like" id="figure-45"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/LGBridge.jpg" class="contained" alt="Une photo du Lion’s Gate Bridge de Vancouver sur laquelle on peut apercevoir des voyants lumineux, indiquant aux automobilistes quelle voies ils peuvent emprunter."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.25<span class="period">.</span></span><span class="space"> </span>Le Lion’s Gate Bridge, de la région de Vancouver<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></figcaption></figure></article><article class="exercise exercise-like" id="exercise-141"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-108">Les circuits trouvés à l’exercice <a href="" class="xref" data-knowl="./knowl/exo-NET.html" title="Exercice 2.4.4.3">2.4.4.3</a> peuvent aussi se faire en n’utilisant que des portes NOU.</div>
+<article class="task exercise-like" id="task-320"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="p-1183">Trouver un circuit logique ne possédant que des portes NOU équivalent à l’inversion.</div></article><article class="task exercise-like" id="task-321"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-1184">Trouver un circuit logique ne possédant que des portes NOU équivalent à une porte ET.</div></article><article class="task exercise-like" id="task-322"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-1185">Trouver un circuit logique ne possédant que des portes NOU équivalent à une porte OU.</div></article><div class="conclusion" id="conclusion-11"><div class="para" id="p-1186">L’opérateur logique équivalent à la porte NOU est appelé la flèche de Peirce. On note l’opération <span class="process-math">\(p\downarrow q\text{.}\)</span>
+</div></div></article></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">Image tirée de Wikipedia, libre de droits</div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-propquant.html" title="Précédent"><span class="icon">&lt;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="chap-reptheonombres.html" title="Suivant"><span class="name">Suivant</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
 </body>
 </html>

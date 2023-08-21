@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,21 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p><em class="alert">Pour <span class="process-math">\(H \)</span></em></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-V(a)\amp=\{b,d,e\} \amp \deg(a)\amp=3\\
-V(b)\amp=\{a,c,d\} \amp \deg(b)\amp=3\\
-V(c)\amp=\{b\} \amp \deg(c)\amp=1\\
-V(d)\amp=\{a,b,e\} \amp \deg(d)\amp=3\\
-V(e)\amp=\{a,d\} \amp \deg(e)\amp=2
-\end{align*}
-</div>
-<p>De plus, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\deg(a)+\deg(b)+\deg(c)+\deg(d)+\deg(e)=3+3+1+3+2=12
-\end{equation*}
+<div class="para">On cherche une relation de récurrence pour <span class="process-math">\(n\geq 5.\)</span> Pour déterminer <span class="process-math">\(p_n,\)</span> on utilise le principe de la somme selon la denrnière pièce ou le dernier billet utilisé afin de donner les <span class="process-math">\(n\)</span> dollars.</div> <div class="para">Il s’agit soit d’une pièce de <span class="process-math">\(1\$,\)</span> soit une pièce de <span class="process-math">\(2\$\)</span> ou bien un billet de <span class="process-math">\(5\$\)</span>
+</div> <div class="para">Ainsi, avant de donner la dernière pièce/le dernier billet, on avait donné <span class="process-math">\(n-1,\, n-2\)</span> ou bien <span class="process-math">\(n-5\)</span> dollar.</div> <div class="para">Par le principe de la somme, on a <span class="process-math">\(p_n=p_{n-1} + p_{n-2}+p_{n-5}\text{.}\)</span>
 </div>
 </div></body>
 </html>

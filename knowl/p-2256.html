@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,8 +11,29 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraphe</span></h4>
-<p>Les deux exemples précédant sont des exemples de relations de récurrence linéaire ( non-homogène pour <a href="" class="xref" data-knowl="./knowl/exe-formGen1.html" title="Exemple 6.1.10: Forme générale d'une relation de récurrence">6.1.10</a>, et homogène pour <a href="" class="xref" data-knowl="./knowl/exe-formGen2.html" title="Exemple 6.1.11: Forme générale d'une relation de récurrence: une deuxième stratégie">6.1.11</a>). On regarde un dernier exemple, qui sera un peu plus complexe que les précédent.</p>
-<span class="incontext"><a href="sec-relRecLinHom.html#p-2256" class="internal">Contexte</a></span>
+<h6 class="heading"><span class="type">Paragraphe</span></h6>
+<div class="para logical">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2^{k+1}\gt (k+1)^2
+\end{equation*}
+</div>
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’inégalité, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp2^{k+1}= 2\left(2^k\right)\\
+\amp\gt 2\left(k^2\right) \text{ par H.I.}\\
+\amp= k^2+k^2=k^2+k\cdot k\\
+\amp\gt k^2 + 3k \text{ car } k\geq 5\gt 3\\
+\amp= k^2 + 2k +k \\
+\amp\gt k^2 + 2k +1  \text{ car } k\geq 5\gt 1 \\
+\amp= (k+1)^2 \text{(factorisation)}
+\end{align*}
+</div>
+<div class="para">c’est-à-dire que <span class="process-math">\(2^{k+1}\gt (k+1)^2 \text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec_induction.html#p-2256" class="internal">Contexte</a></span>
 </body>
 </html>

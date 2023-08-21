@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,21 +13,28 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.14.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.5.2</span><span class="period">.</span>
 </h4>
-<p>Puisque <span class="process-math">\(1010_2=1000_2+0010_2\text{,}\)</span> on aura</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-1001_2\times 1010_2=1001_2\times (1000_2+10_2)=1001_2\times 1000_2+1001_2\times 10_2\text{.}
-\end{equation*}
-</div>
-<p class="continuation">On ajoute à chaque terme le bon nombre de zéros et on obtient <span class="process-math">\(1001000_2+10010_2\text{.}\)</span> Finalement, on additionne</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical">
+<div class="para">On montre une manière plus concise d’écrire le raisonnement précédent. La plus grande puissance de <span class="process-math">\(2\)</span> qui est inférieure ou égale à <span class="process-math">\(187\)</span> est <span class="process-math">\(128\text{.}\)</span> On a donc</div>
+<div class="displaymath process-math">
 \begin{align*}
-&amp; &amp; 10 01000_2&amp;\\
-&amp;+&amp;{}{}10010_2&amp;\\
-\hline&amp; &amp; 10 11010_2&amp; 
+187&amp;=128+\text{quelque chose}\\
 \end{align*}
+<p class="intertext">Puisque 187-128=59 et que la plus grande puissance de 2 inférieure à 59 est 32, on a</p>
+\begin{align*}
+187&amp;=128+32+\text{autre chose}\\
+\end{align*}
+<p class="intertext">autre chose doit être égal à 27 lorsqu’on fait la soustraction. La plus grande puissance inférieure à cela est 16 et donc</p>
+\begin{align*}
+187&amp;=128+32+16+\text{quelque chose d'autre}\\
+\end{align*}
+<p class="intertext">on poursuit ainsi et on obtient finalement</p>
+\begin{align*}
+187&amp;=128+32+16+8+2+1\\
+187&amp;=10111011_2
+\end{align*}
+</div>
 </div>
 </div>
 <span class="incontext"><a href="sec-representation.html#solution-87" class="internal">Contexte</a></span>

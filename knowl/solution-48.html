@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,22 +12,135 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.4.1.b.1</span><span class="period">.</span>
-</h6>On veut montrer que cette proposition est une tautologie. On a:<div class="displaymath process-math" data-contains-math-knowls="">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.6.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Pour des propositions complexes, il peut être utile de les décomposer en morceaux avec d’appliquer une règle ou une propriété sur chacun des morceaux et d’ensuite réécrire. Les solutions suivantes illustrent cela.</div>
+<ol class="decimal">
+<li>
+<div class="para logical">
+<div class="para">On pose <span class="process-math">\(P=(\neg p \vee q)\)</span> et <span class="process-math">\(Q=p\wedge \neg r\text{.}\)</span> La proposition à nier est équivalente à <span class="process-math">\(P\wedge Q\text{.}\)</span> Selon la <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">loi de De Morgan</a> pour la conjonction, on a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(P\wedge Q)\equiv\neg P\vee \neg Q\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">On doit maintenant écrire les négations respectives de <span class="process-math">\(P\equiv\neg p \vee q\)</span> et <span class="process-math">\(Q\equivp\wedge \neg r\text{.}\)</span> Pour <span class="process-math">\(P\text{,}\)</span> on a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
 \begin{align*}
-((p\rightarrow q)\wedge \neg q)\rightarrow \neg p &amp; \neg((\neg p \vee q)\wedge \neg q) \vee \neg p   \\
-&amp; (\neg(\neg p \vee q)\vee \neg\neg q) \vee \neg p \text{ par De Morgan.}   \\
-&amp; ((\neg\neg p \wedge \neg q)\vee q) \vee \neg p \text{  par De Morgan.}   \\
-&amp; ((p \wedge \neg q)\vee q) \vee \neg p \\
-&amp; ((p\vee q) \wedge (\neg q\vee q)) \vee \neg p \text{   par la distributivité.} \\
-&amp; ((p\vee q) \wedge V ) \vee \neg p \text{   par domination.} \\
-&amp; p\vee q   \vee \neg p \text{   par identité et associativité.} \\
-&amp; p\vee \neg p   \vee q \text{   par commutativité.} \\
-&amp; V \vee q  \text{   par les propriétés de négation.}\\
-&amp; V  \text{   par domination.} 
+\neg P&amp;\equiv\neg (\neg p\vee q)\\
+&amp;\equiv(\neg (\neg p))\wedge \neg q &amp; &amp; \text{selon } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;\equiv p\wedge \neg q &amp;&amp; \text{selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
 \end{align*}
-</div>Ainsi, cette proposition est une tautologie.</div>
+</div>
+<div class="para">Pour <span class="process-math">\(Q\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
+\begin{align*}
+\neg Q&amp;\equiv\neg(p\wedge \neg r)\\
+&amp;\equiv(\neg p)\vee(\neg (\neg r))&amp; &amp; \text{selon } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;\equiv \neg p\vee  r &amp;&amp; \text{selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
+\end{align*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">Finalement en combinant le tout, on obtient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\neg((\neg p\vee q)\wedge (p\wedge \neg r))=(p\wedge \neg q )\vee (\neg p\vee  r)\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">D’une manière similaire, on pose <span class="process-math">\(P=\neg (p\wedge q)\)</span> et <span class="process-math">\(Q=r\vee q\)</span> de sorte <span class="process-math">\(\neg (p\wedge q)\vee (r\vee q)=P\vee Q\text{.}\)</span> Selon la <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">loi de De Morgan</a> pour la conjonction, on a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(P\vee Q)\equiv\neg P\wedge \neg Q\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">On doit maintenant écrire les négations respectives de <span class="process-math">\(P=\neg (p \wedge q)\)</span> et <span class="process-math">\(Q=r\vee  q\text{.}\)</span> Pour <span class="process-math">\(P\text{,}\)</span> on a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogcomp.html ./knowl/li-oplogDeMorgan.html">
+\begin{align*}
+\neg P&amp;\equiv\neg \neg (p \wedge q)\\
+&amp;\equiv p \wedge  q &amp;&amp; \text{selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
+\end{align*}
+</div>
+<div class="para">Pour <span class="process-math">\(Q\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogcomp.html ./knowl/li-oplogDeMorgan.html">
+\begin{align*}
+\neg Q&amp;\equiv\neg(r\vee q)\\
+&amp;\equiv\neg r\wedge \neg q&amp; &amp; \text{selon } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\text{.}
+\end{align*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">En combinant le tout , on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\neg (\neg (p\wedge q)\vee (r\vee q))\equiv (p \wedge q)\wedge (\neg r\wedge \neg q)\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">Pour cette proposition, on commence par définir des variables. On pose</div>
+<div class="displaymath process-math">
+\begin{gather*}
+s=\text{Je vais prendre des sushis au saumon.}\\
+t=\text{Je vais prendre des sushis au thon.}\\
+p=\text{Je vais prendre un bol poke.}\\
+r=\text{Je vais prendre un rouleau de printemps.}
+\end{gather*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">La proposition peut donc être écrite comme étant <span class="process-math">\((s\wedge t)\vee (p\wedge r)\text{.}\)</span> Selon <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">De Morgan</a>, la négation de l’union devient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(s\wedge t)\vee (p\wedge r)\equiv\neg(s\wedge t)\wedge \neg(p\wedge r)\text{.}
+\end{equation*}
+</div>
+<div class="para">Toujours selon <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">De Morgan</a>, les intersections deviennent respectivement</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(s\wedge t)\equiv\neg s\vee \neg t
+\end{equation*}
+</div>
+<div class="para">et</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(p\wedge r)\equiv\neg p\vee \neg r\text{.}
+\end{equation*}
+</div>
+<div class="para">On obtient alors <span class="process-math">\(\neg((s\wedge t)\vee (p\wedge r))\equiv(\neg s\vee \neg t)\wedge \neg p\vee \neg r\text{.}\)</span>
+</div>
+</div>
+<div class="para logical">
+<div class="para">Individuellement, on peut traduire la négation des quatre propositions initiales par</div>
+<div class="displaymath process-math">
+\begin{align*}
+\neg s&amp;\equiv\text{Je ne prendrai pas de sushis au saumon.}\\
+\neg t&amp;\equiv\text{Je ne prendrai pas de sushis au thon.}\\
+\neg p&amp;\equiv\text{Je ne prendrai pas de bol poke.}\\
+\neg r&amp;\equiv\text{Je ne prendrai pas de rouleau de printemps.}
+\end{align*}
+</div>
+</div>
+<div class="para">Au final, la négation de la proposition serait “Je ne prendrai pas de sushis au saumon ou au thon et je ne prendrai pas de bol poke ou de rouleau de printemps.”; ce à quoi l’auteur répondrait de considérer de changer de restaurant!</div>
+<div class="para">On a choisi de considérer le “ou” comme étant inclusif ici, d’une part parce que cela simplifie le problème en fonction de ce qui a été vu et d’autre part, il n’est pas déraisonnable qu’une personne commande à la fois des sushis et un bol poke ou un rouleau de printemps.</div>
+</li>
+</ol>
+</div>
+</div>
 <span class="incontext"><a href="sec-eqlogfnc.html#solution-48" class="internal">Contexte</a></span>
 </body>
 </html>

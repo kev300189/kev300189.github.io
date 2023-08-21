@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,8 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraphe</span></h3>
-<p>Son considère la proposition <span class="process-math">\(P(n):\, 1+2+\cdots + n =\frac{n(n+1)}{2} .\)</span>  Comment peut-on montrer que la proposition <span class="process-math">\(P(n)\)</span> est vraie pour  tout <span class="process-math">\(n\in\, \N^\ast?\)</span> En remplaçant <span class="process-math">\(n\)</span> par différentes valeurs, on peut remarquer que la proposition est vraie, mais il est difficile (mais pas impossible) de le montrer en utilisant les méthodes utilisés jusqu'à maintenant.</p>
-<span class="incontext"><a href="sec_induction.html#p-2137" class="internal">Contexte</a></span>
+<h6 class="heading"><span class="type">Paragraphe</span></h6>
+<div class="para logical">
+<div class="para">Supposons que <span class="process-math">\(b\)</span> soit impair. On a alors</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-sommePuissancePair.html">
+\begin{align*}
+0 = a^3 + ab^2+b^3 \amp\equiv a^3+ a^2 +1  \mod 2\\
+0 \amp\equiv 0+ 1 \mod 2 \text{ par l'exercice }\knowl{./knowl/exo-sommePuissancePair.html}{\text{5.1.4.5}}\\
+0 \amp\equiv 1 \mod 2 
+\end{align*}
+</div>
+<div class="para">ce qui est une contradiction. Ainsi, on doit avoir que <span class="process-math">\(b\)</span> est pair.</div>
+</div>
+<span class="incontext"><a href="sec_methodePreuve.html#p-2137" class="internal">Contexte</a></span>
 </body>
 </html>

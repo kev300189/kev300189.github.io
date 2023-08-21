@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,8 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraphe</span></h4>
-<p><span class="process-math">\(\displaystyle p\vee (q\vee r)\equiv (p\vee q)\vee r\)</span></p>
-<span class="incontext"><a href="sec-eqlogfnc.html#p-746" class="internal">Contexte</a></span>
+<h6 class="heading"><span class="type">Paragraphe</span></h6>
+<div class="para logical">
+<div class="para">On veut montrer que <span class="process-math">\((A\cup B)^c=A^c\cap B^c\text{.}\)</span> Par définition, on a <span class="process-math">\(A\cup B=\{c~|~ c\in A\vee c\in B\}\text{.}\)</span> D’un point de vue de la logique, le complément représente la négation. On a alors</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negdisj.html">
+\begin{align*}
+(A\cup B)^c&amp;=\{c~|~\neg ( c\in A\vee c\in B)\}\\
+&amp;=\{c~|~\neg (c\in A)\wedge \neg( c\in B)\} &amp; &amp; \text{Selon } \knowl{./knowl/exo-negdisj.html}{\text{2.1.5.6}}\\
+&amp;=\{c~|~c\notin A\wedge c\notin B)\}&amp; &amp; \text{négation de ka relation d'appartenance}\\
+&amp;=A^c\cap B^c &amp;&amp; \text{définition de l'intersection}
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="sec-logprop.html#p-746" class="internal">Contexte</a></span>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,20 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negimplication.html ./knowl/exo-negimplication.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
 \begin{align*}
-((p\rightarrow q)\wedge \neg q)\rightarrow \neg p &amp; \neg((\neg p \vee q)\wedge \neg q) \vee \neg p   \\
-&amp; (\neg(\neg p \vee q)\vee \neg\neg q) \vee \neg p \text{ par De Morgan.}   \\
-&amp; ((\neg\neg p \wedge \neg q)\vee q) \vee \neg p \text{  par De Morgan.}   \\
-&amp; ((p \wedge \neg q)\vee q) \vee \neg p \\
-&amp; ((p\vee q) \wedge (\neg q\vee q)) \vee \neg p \text{   par la distributivité.} \\
-&amp; ((p\vee q) \wedge V ) \vee \neg p \text{   par domination.} \\
-&amp; p\vee q   \vee \neg p \text{   par identité et associativité.} \\
-&amp; p\vee \neg p   \vee q \text{   par commutativité.} \\
-&amp; V \vee q  \text{   par les propriétés de négation.}\\
-&amp; V  \text{   par domination.} 
+p\rightarrow q&amp;\equiv\neg \neg (p\rightarrow q) \\
+&amp;\equiv\neg (p\wedge \neg q) &amp;&amp; \text{Selon } \knowl{./knowl/exo-negimplication.html}{\text{2.1.5.7}}\\
+&amp;\equiv \neg p \vee \neg\neg q &amp;&amp; \text{Selon De Morgan } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}} \\
+&amp;\equiv \neg p \vee q &amp;&amp; \text{Selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-eqlogfnc.html#md-20" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#md-21" class="internal">Contexte</a></span>
 </body>
 </html>

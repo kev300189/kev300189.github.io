@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -9,31 +9,69 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
-                       linked: true,
-                       languages: ['sage'],
-                       evalButtonText: 'Évaluer (Sage)'});
-</script>
 </head>
 <body class="ignore-math">
-<article class="exercise exercise-like"><h4 class="heading">
-<span class="type">Question de compréhension</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
-</h4>
-<p>Que fait l'algorithme suivant?</p>
-<figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-py">def algo(n):
-    laliste = [1]
-    d = 2
-    while d &lt; n:
-        if n % d == 0:
-            laliste.append(d)
-        d = d + 1
-    if n &gt; 1:
-        laliste.append(n)
-    return laliste
-</code></pre></div>
-<figcaption><span class="type">Bloc de code</span><span class="space"> </span><span class="codenumber">3.2.11<span class="period">.</span></span><span class="space"> </span>Une algorithme sur les entiers</figcaption></figure><pre class="ptx-sagecell sagecell-sage" id="sage-9"><script type="text/x-sage">
-</script></pre></article><span class="incontext"><a href="sec-divisibilite.html#exercise-162" class="internal">Contexte</a></span>
+<article class="exercise exercise-like"><h5 class="heading">
+<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">14<span class="period">.</span></span><span class="space"> </span><span class="title">La complémentation à <span class="process-math">\(2\)</span>.</span>
+</h5>
+<div class="introduction">
+<div class="para logical">
+<div class="para">On a vu dans le texte, faire une soustraction est une opération difficile comparativement à faire une addition. L’exercice <a href="" class="xref" data-knowl="./knowl/exo-puissmoinsnombre.html" title="Exercice 3.1.7.13">3.1.7.13</a> laisse entrevoir une manière différente de faire les soustractions. C’est d’ailleurs avec cette méthode (un peu modifiée) qu’un ordinateur effectue les soustractions. La méthode est basée sur l’observation suivante:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-puissmoinsnombre.html">
+\begin{align*}
+A-B&amp;=A-B+2^n-2^n\\
+&amp;=A+(2^n-B)-2^n\text{.}
+\end{align*}
+</div>
+</div> <div class="para">Pour soustraire <span class="process-math">\(B\)</span> à <span class="process-math">\(A\text{,}\)</span> on lui additionne plutôt le <em class="emphasis">complément à <span class="process-math">\(2\)</span></em> de <span class="process-math">\(B\)</span> selon la puissance <span class="process-math">\(n\text{.}\)</span> On décortique la méthode ci-dessous.</div>
+</div>
+<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="introduction">
+<div class="para logical">
+<div class="para">Le complément à <span class="process-math">\(2\)</span> selon la puissance <span class="process-math">\(n\)</span> d’un nombre binaire <span class="process-math">\(B\)</span> est le nombre obtenu en faisant la soustraction <span class="process-math">\(2^n_{10}-B_{10}\text{.}\)</span> Grâce à l’exercice <a href="" class="xref" data-knowl="./knowl/exo-puissmoinsnombre.html" title="Exercice 3.1.7.13">3.1.7.13</a>, on peut observer ceci. Le complément par rapport à une puissance <span class="process-math">\(n\)</span> est obtenu en écrivant le nombre avec <span class="process-math">\(n\)</span> chiffres, ajoutant au besoin des zéros à gauche. Par la suite:</div>
+<ol class="lower-alpha">
+<li><div class="para">À partir de la droite, on garde les premiers zéros et le premier un.</div></li>
+<li><div class="para">Tous les autres chiffres sont inversés. Les zéros deviennent des uns et les uns deviennent des zéros.</div></li>
+</ol>
+</div> <div class="para logical">
+<div class="para">Par exemple, le complément de <span class="process-math">\(1010_2\)</span> par rapport à la puissance <span class="process-math">\(n=4\)</span> est</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-complementexemple.html">
+\begin{equation*}
+(1010_2)^{c}=(0110_2)\text{.}
+\end{equation*}
+</div>
+<div class="para">Celui-ci correspond à la réponse de la soustraction à l’exercice <a href="" class="xref" data-knowl="./knowl/exo-complementexemple.html" title="Tâche 3.1.7.13.j">3.1.7.13.j</a>.</div>
+</div>
+</div>
+<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<div class="para">Vérifier les réponses de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-puissmoinsnombre.html" title="Exercice 3.1.7.13">3.1.7.13</a> en utilisant la méthode du complément.</div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<div class="para">Trouver le complément de <span class="process-math">\(11101_2\)</span> par rapport à la puissance <span class="process-math">\(n=8\text{.}\)</span>
+</div>
+<div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-172-hidden.html" title="Réponse 3.1.7.14.a.ii.1"><span class="type">Réponse</span><span class="period">.</span></a></div></article></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="introduction"><div class="para">Pour revenir à la soustraction <span class="process-math">\(A-B\text{,}\)</span> une fois le complément de <span class="process-math">\(B\)</span> calculé, on additionne <span class="process-math">\(A+B^c\text{,}\)</span> ce qui donne un nombre à au plus <span class="process-math">\(n+1\)</span> chiffres significatifs (à partir du premier <span class="process-math">\(1\)</span> à gauche). On distingue alors deux cas, selon si <span class="process-math">\(A&gt;B\)</span> ou <span class="process-math">\(A&lt;B\text{.}\)</span>
+</div></div>
+<article class="task exercise-like"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<div class="para">Vérifier que <span class="process-math">\(101011_2-1101_2=0101011_2+(0001101_2)^c-10000000_2=0101011_2+(1110011_2)^c-10000000_2=\)</span> et que le résultat correspond au résultat de <span class="process-math">\(0101011_2+(0001101_2)^c\)</span> en ignorant le chiffre le plus à gauche. On prend le complément selon la puissance <span class="process-math">\(n=7\text{.}\)</span>
+</div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<div class="para">Calculer <span class="process-math">\(11001_2-10100_2\)</span> en utilisant l’observation ci-dessus.</div>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-97-hidden.html" title="Solution 3.1.7.14.b.ii.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<div class="introduction"><div class="para logical">
+<div class="para">Lorsque <span class="process-math">\(A&lt;B\text{,}\)</span> l’algorithme de soustraction ne fonctionne pas. On a alors deux options. La première consiste à faire <span class="process-math">\(B-A\)</span> à la place et de mettre un signe négatif devant la réponse, puisque <span class="process-math">\(A-B=-(B-A)\text{.}\)</span> L’autre option utilise un argument similaire pour montrer que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A-B=A+B^c-2^n=-(2^n-(A+B^c))\text{.}
+\end{equation*}
+</div>
+<div class="para">Le membre de droite de l’équation précédente n’est rien d’autre que le complément de <span class="process-math">\(A+B^c\text{.}\)</span> On a donc</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A-B=(A+B^c)^c\text{.}
+\end{equation*}
+</div>
+</div></div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(iv)</span></h6>
+<div class="para">Utiliser la première méthode pour calculer <span class="process-math">\(1011_2-10101_2\text{.}\)</span>
+</div></article><article class="task exercise-like"><h6 class="heading"><span class="codenumber">(v)</span></h6>
+<div class="para">Utiliser la seconde méthode pour calculer <span class="process-math">\(111_2-10111_2\text{.}\)</span>
+</div></article></article></article><span class="incontext"><a href="sec-representation.html#exercise-162" class="internal">Contexte</a></span>
 </body>
 </html>

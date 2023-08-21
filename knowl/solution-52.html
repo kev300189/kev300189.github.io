@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,19 +12,16 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.4.3.a.1</span><span class="period">.</span>
-</h6>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-\neg (p \vee (\neg p \wedge q)) &amp; \neg p \wedge \neg(\neg p \wege q) \text{ par De Morgan.} \\
-&amp; \neg p \wedge (\neg\neg p \vee \neg q) \text{ par De Morgan.} \\
-&amp; \neg p \wedge (p \vee \neg q) \text{ par De Morgan.} \\
-&amp; (\neg p \wedge p) \vee (\neg p \wedge \neg q) \text{ par distributivité.} \\
-&amp; (V) \vee (\neg p \wedge \neg q) \text{ par les propriétés de la négation.} \\
-&amp; (\neg p \wedge \neg q) \text{ par l'identité.} \\
-&amp; \neg( p \vee q) \text{ par De Morgan.} 
-\end{align*}
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.10.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">En regardant la table de vérité, on cible les lignes qui rendent la propositions vraie. Il y a lorsque <span class="process-math">\(p,q\)</span> et <span class="process-math">\(\neg r\)</span> sont vraies, de même que lorsque <span class="process-math">\(\neg p, q\)</span> et <span class="process-math">\(\neg r\text{.}\)</span> La proposition peut donc s’écrire de manière équivalente comme</div>
+<div class="displaymath process-math">
+\begin{equation*}
+((p\wedge q)\vee r)\wedge (q\wedge \neg r)\equiv (p\wedge q\wedge \neg r)\vee (\neg p\wedge q\wedge \neg r)\text{.}
+\end{equation*}
+</div>
 </div>
 </div>
 <span class="incontext"><a href="sec-eqlogfnc.html#solution-52" class="internal">Contexte</a></span>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,7 +12,28 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<p>Montrer que <span class="process-math">\((\neg p \wedge q)\wedge (p\vee \neg q)\)</span> est une contradiction.</p>
+<div class="para logical">
+<div class="para">La proposition peut donc être écrite comme étant <span class="process-math">\((s\wedge t)\vee (p\wedge r)\text{.}\)</span> Selon <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">De Morgan</a>, la négation de l’union devient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(s\wedge t)\vee (p\wedge r)\equiv\neg(s\wedge t)\wedge \neg(p\wedge r)\text{.}
+\end{equation*}
+</div>
+<div class="para">Toujours selon <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">De Morgan</a>, les intersections deviennent respectivement</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(s\wedge t)\equiv\neg s\vee \neg t
+\end{equation*}
+</div>
+<div class="para">et</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(p\wedge r)\equiv\neg p\vee \neg r\text{.}
+\end{equation*}
+</div>
+<div class="para">On obtient alors <span class="process-math">\(\neg((s\wedge t)\vee (p\wedge r))\equiv(\neg s\vee \neg t)\wedge \neg p\vee \neg r\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-804" class="internal">Contexte</a></span>
 </body>
 </html>

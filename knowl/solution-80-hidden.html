@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,24 +11,38 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>On montre une manière plus concise d'écrire le raisonnement précédent. La plus grande puissance de <span class="process-math">\(2\)</span> qui est inférieure ou égale à <span class="process-math">\(187\)</span> est <span class="process-math">\(128\text{.}\)</span> On a donc</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-187&amp;=128+\text{quelque chose}\\
-\end{align*}
-<p class="intertext">Puisque 187-128=59 et que la plus grande puissance de 2 inférieure à 59 est 32, on a</p>
-\begin{align*}
-187&amp;=128+32+\text{autre chose}\\
-\end{align*}
-<p class="intertext">autre chose doit être égal à 27 lorsqu'on fait la soustraction. La plus grande puissance inférieure à cela est 16 et donc</p>
-\begin{align*}
-187&amp;=128+32+16+\text{quelque chose d'autre}\\
-\end{align*}
-<p class="intertext">on poursuit ainsi et on obtient finalement</p>
-\begin{align*}
-187&amp;=128+32+16+8+2+1\\
-187&amp;=10111011_2
-\end{align*}
+<div class="para">On débute par la table de vérité de ce circuit.</div> <div class="para">On commence avec la paire d’entrées <span class="process-math">\(1\)</span>-<span class="process-math">\(1\text{.}\)</span> La porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span> La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(0\text{,}\)</span> la porte ET retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</div> <div class="para">Pour la paire d’entrée <span class="process-math">\(1\)</span>-<span class="process-math">\(0\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(1\text{,}\)</span> la porte ET retourne <span class="process-math">\(1\)</span> comme sortie du circuit.</div> <div class="para">Pour la paire d’entrée <span class="process-math">\(0\)</span>-<span class="process-math">\(1\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant <span class="process-math">\(0\text{,}\)</span> la porte ET retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</div> <div class="para">Pour la paire d’entrée <span class="process-math">\(0\)</span>-<span class="process-math">\(0\text{,}\)</span> la porte OU les combinant retournent <span class="process-math">\(1\text{.}\)</span>  La valeur de <span class="process-math">\(Y\)</span> est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET.  La valeur du Y a été inversée et est maintenant <span class="process-math">\(1\text{,}\)</span> mais la porte OU a retourné <span class="process-math">\(0\text{.}\)</span> La porte ET finale retourne <span class="process-math">\(0\)</span> comme sortie du circuit.</div> <div class="para">Le résumé de ces calculs se trouve dans la table ci-dessous.</div> <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.9<span class="period">.</span></span><span class="space"> </span>Table de vérité du circuit</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(X\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(Y\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(X\vee Y\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\((X\vee Y)\wedge \neg Y\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">1</td>
+<td class="l m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">0</td>
+<td class="l m b3 r2 l0 t0 lines">0</td>
+<td class="l m b3 r2 l0 t0 lines">0</td>
+<td class="l m b3 r2 l0 t0 lines">0</td>
+</tr>
+</table></div></figure> <div class="para">Pour ce qui est de l’expression logique, en suivant le raisonnement des calculs précédents, on arrive à <span class="process-math">\((X\vee Y)\wedge (\neg Y)\text{.}\)</span>
 </div>
 </div></body>
 </html>

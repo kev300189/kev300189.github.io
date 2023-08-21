@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,8 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraphe</span></h6>
-<p><span class="process-math">\(p\wedge \neg (q\rightarrow p)\)</span></p>
+<h5 class="heading"><span class="type">Paragraphe</span></h5>
+<div class="para logical">
+<div class="para">La différence de deux ensembles s’écrit d’un point de vu logique comme</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+A-B=\{x~|~ x\in A\wedge x\notin B\}\text{.}
+\end{equation*}
+</div>
+<div class="para">On cherche le complément de cet ensemble, et donc la négation de la proposition <span class="process-math">\(x\in A\wedge x\notin B\text{.}\)</span> On a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{align*}
+(A-B)^c&amp;=\{x~|~ \neg(x\in A\wedge x\notin B)\}\\
+&amp;=\{x~|~ \neg(x\in A)\vee \neg (x\notin B)&amp;&amp; \text{Selon De Morgan} \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
+&amp;=\{x~|~ x\notin A \vee x\in B\} &amp;&amp; \text{La négation de la relation d'appartenance est la non appartenance et vice-versa}\\
+&amp;= A^c\cup B&amp;&amp;\text{Définition de l'union et du complément}\text{.}
+\end{align*}
+</div>
+</div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-810" class="internal">Contexte</a></span>
 </body>
 </html>

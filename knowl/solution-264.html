@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,31 +13,29 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.2.7.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.1.24.1</span><span class="period">.</span>
 </h4>
-<p>On sait que la soultion aura la forme <span class="process-math">\(a_n=a_n^{(h)}+a_n^{(p)},\)</span> où <span class="process-math">\(a_n^{(h)}=\alpha_1\cdot 3^n+\alpha_2n\cdot 3^n,\)</span> par l'exemple <a href="" class="xref" data-knowl="./knowl/exe-solRecLinHomDeuxMult.html" title="Exemple 6.1.24: Une première solution">6.1.24</a>, et on propose <span class="process-math">\(a^{(p)}_n=c\cdot 2^n\)</span></p>
-<p>Pour trouver la valeur de <span class="process-math">\(c\)</span> telle que <span class="process-math">\(c\cdot 2^n\)</span> est une solution particulière, on remplace <span class="process-math">\(a_n\)</span> par <span class="process-math">\(c\cdot 2^n\)</span> dans la relation de récurrence, et on trouve la valeur de <span class="process-math">\(c\)</span> satisfaisant l'équation résultante.</p>
-<p>On a</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">À l’exemple <a href="" class="xref" data-knowl="./knowl/exe-LinHomMult.html" title="Exemple 6.1.22: Équations caractéristiques à une seule racine">6.1.22</a>, on a déjà montré que l’équation caractéristique de cette relation possède l’unique solution <span class="process-math">\(r_1=3\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Par la proposition <a href="" class="xref" data-knowl="./knowl/prop-solRecLinHomDeuxMult.html" title="Proposition 6.1.23: Solution aux relations de récurrence linéaires homogènes d’ordre 2 cas 2">6.1.23</a>, on sait que la solution devra avoir la forme</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-solRecLinHomDeuxMult.html">
+\begin{equation}
+a_n=\alpha_1r_1^n+\alpha_2nr_1^n=\alpha_1(3)^n+\alpha_2 n(3)^n\text{.}\tag{6.5}
+\end{equation}
+</div>
+</div> <div class="para logical">
+<div class="para">Ainsi, puisque <span class="process-math">\(a_0=2\)</span> et <span class="process-math">\(a_1=15,\)</span> en remplaçant <span class="process-math">\(n\)</span> par <span class="process-math">\(0\)</span> et <span class="process-math">\(1\)</span> dans <a href="" class="xref" data-knowl="./knowl/eq-formGenMult.html" title="Équation 6.5">(6.5)</a>, on obtient le système d’équations suivants.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-formGenMult.html">
 \begin{align*}
-c\cdot 2^n\amp= 6c\cdot 2^{n-1}-9c\cdot 2^{n-2}+2^n\\
-2^{n-2}(c\cdot 2^2)\amp= 2^{n-2}(6c\cdot 2-9c+2^2)\\
-c\cdot 4\amp= 12c-9c+4\\
-(4-12+9)c\amp= 4\\
-c\amp= 4
+2\amp= \alpha_1(3)^0 +\alpha_2(0)(3)^0=\alpha_1;\\
+15\amp= \alpha_1 (3)^1+\alpha_2(1)(3)^1=3\alpha_1+3\alpha_2.
 \end{align*}
 </div>
-<p class="continuation">Ainsi, <span class="process-math">\(a^{(p)}_n=4\cdot 2^n\)</span> est une solution particulière à la relation de récurrence.</p>
-<p>On a donc <span class="process-math">\(a_m=n=\alpha_1(3^n)+\alpha_2(n3^n)+4\cdot 2^n\text{.}\)</span></p>
-<p>Pour trouver <span class="process-math">\(\alpha_1\)</span> et <span class="process-math">\(alpha_2\text{,}\)</span> on doit résoudre le système d'équations</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-1\amp= \alpha_1 +4;\\
-4\amp= 3\alpha_1+3\alpha_2+8;
-\end{align*}
+<div class="para">En résolvant ce sytème d’équations, on a que <span class="process-math">\(\alpha_1=2\)</span> et <span class="process-math">\(\alpha_2=3\text{.}\)</span>
 </div>
-<p class="continuation">En résolvant ces équations, on trouve <span class="process-math">\(\alpha_1=-3\)</span> et <span class="process-math">\(\alpha_2=\frac{5}{3}\text{.}\)</span></p>
+</div> <div class="para">Ainsi, on a que la suite <span class="process-math">\(\{a_n\}\)</span> est la suite dont le terme général est <span class="process-math">\(a_n=2(3)^n+3n(3)^n\text{.}\)</span>
 </div>
-<span class="incontext"><a href="sec-relRecLinNonHom.html#solution-264" class="internal">Contexte</a></span>
+</div>
+<span class="incontext"><a href="sec-relRecLinHom.html#solution-264" class="internal">Contexte</a></span>
 </body>
 </html>

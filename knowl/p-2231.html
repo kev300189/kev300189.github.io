@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,8 +11,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraphe</span></h4>
-<p>On a que <span class="process-math">\(a_2=a_1 - a_0=6-2=4.\)</span> Ainsi, on a également <span class="process-math">\(a_3=a_2-a_1=4-6=-2.\)</span> Finalement, on a <span class="process-math">\(a_4=a_3-a_2=-2-4=-6\text{.}\)</span></p>
-<span class="incontext"><a href="sec-relRecLinHom.html#p-2231" class="internal">Contexte</a></span>
+<h6 class="heading"><span class="type">Paragraphe</span></h6>
+<div class="para logical">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1^2+2^2+\cdots + k^2+ (k+1)^2=\frac{(k+1)(k+2)(2k+3)}{6}
+\end{equation*}
+</div>
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’égalité, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp1^2+2^2+\cdot + k^2+ (k+1)^2\\
+\amp= \left(1^2+2^2+\cdots + k^2\right) + \left(k+1\right)^2 \\
+\amp= \left( \frac{k(k+1)(2k+1)}{6} \right) + \left(k+1\right)^2 \text{ par H.I.}\\
+\amp= \left( \frac{k(k+1)(2k+1)}{6} \right) + \frac{6(k+1)(k+1)}{6} \text{ même dénominateur.}\\
+\amp= \frac{k(k+1)(2k+1)+6(k+1)(k+1)}{6}\\
+\amp=\frac{(k+1)(2k^2+k)+(k+1)(6k+6)}{6} \text{ en distribuant le }k \text{ et le }6.\\
+\amp= \frac{(k+1)(2k^2+k+6k+6)}{6}=\frac{(k+1)(2k^2+7k+6)}{6} \\
+\amp=\frac{(k+1)(k+2)(2k+3)}{6}\text{ en factorisant.}
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="sec_induction.html#p-2231" class="internal">Contexte</a></span>
 </body>
 </html>

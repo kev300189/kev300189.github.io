@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,8 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>Soit <span class="process-math">\(a\ in A\text{,}\)</span> on veut comparer <span class="process-math">\(\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)\\)</span> à <span class="process-math">\(\mathbb{1}_{C\cap D}(a)\text{.}\)</span></p>
-<p>Si <span class="process-math">\(a\in C\cup D\text{,}\)</span> alors <span class="process-math">\(\mathbb{1}_{C\cap D}(a)=1\text{.}\)</span> De plus, on a que <span class="process-math">\(a\in C\)</span> et <span class="process-math">\(a \in D\text{.}\)</span> Ainsi, <span class="process-math">\(\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)=1\cdot 1=1\\)</span></p>
-<p>Si <span class="process-math">\(a\notin C\cup D\text{,}\)</span> alors <span class="process-math">\(\mathbb{1}_{C\cap D}(a)=0\text{.}\)</span> De plus, on a que <span class="process-math">\(a\notin C\)</span> ou <span class="process-math">\(a \notin D\text{.}\)</span> Ainsi, <span class="process-math">\(\mathbb{1}_C(a)\cdot \mathbb{1}_D(a)=0\cdot 1=0\\text{.}\)</span></p>
+<div class="para">Pour montrer que deux fonctions sont égales, on doit montrer que si on applique les deux fonctions à n’importe quel élément du domaine, on obtient la même image.</div> <div class="para">Soit <span class="process-math">\(a \in A\)</span> un élément quelconque de <span class="process-math">\(A\text{,}\)</span> on doit montrer que <span class="process-math">\((f\circ g)\circ h(a)=f\circ (g\circ h)(a)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">En utilisant la définition de la composition de fontions à plusieurs reprises, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+{\color{blue}{(f\circ g)}} \circ {\color{red}{h (a)}} \amp = ({\color{blue}{f\circ g}})\left( {\color{red}{h(a)}}\right)\\
+({\color{blue}{f\circ g}}) \circ {\color{red}{h (a)}} \amp = ({\color{blue}{f}}\circ {\color{green}{g}})\left( {\color{red}{h(a)}}\right)\\
+\amp = {\color{blue}{f}}\left({\color{green}{g}}{\color{red}{\left(h(a)\right)}}\right)\\
+\amp = {\color{blue}{f}}\left({\color{green}{g}}\circ {\color{red}{h\left(a\right)}}\right)\\
+\amp = {\color{blue}{f}}\left({\color{red}{g\circ h}}\left(a\right)\right)\\
+\amp = {\color{blue}{f}}\circ \left({\color{red}{g\circ h}}\right)(a)
+\end{align*}
+</div>
+</div>
 </div></body>
 </html>

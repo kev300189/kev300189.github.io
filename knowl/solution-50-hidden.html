@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -10,15 +10,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">On veut montrer que cette proposition est une tautologie. En effet, on a<div class="displaymath process-math" data-contains-math-knowls="">
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">Selon l’exercice <a href="" class="xref" data-knowl="./knowl/exo-negimplication.html" title="Exercice 2.1.5.7">2.1.5.7</a>, il est possible d’écrire</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negimplication.html ./knowl/exo-negimplication.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
+\begin{equation*}
+\neg (p\rightarrow q)\equiv p\wedge \neg q\text{.}
+\end{equation*}
+</div>
+<div class="para">Si on nie à nouveau cette équivalence, on devrait pouvoir réécrire l’implication sans flèche. Ainsi</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negimplication.html ./knowl/exo-negimplication.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
 \begin{align*}
-(p\wedge (p\rightarrow q))\rightarrow q&amp;\equiv \neg(p\wedge (\neg p\vee q))\vee q\\
-&amp;\equiv \neg((p\wedge\neg p) \vee (p\wedge q) )\vee q \text{ par distributivité.}\\
-&amp;\equiv \neg( F \vee (p\wedge q) )\vee q \text{ par les propriétés de la négation.}\\
-&amp; \equiv \neg( p\wedge q )\vee q \text{ par la propriété de l'identité.}\\
-&amp;\equiv  \neg p \vee (\neg q \vee q) \text{ par De Morgan et associativité.}\\
-&amp;\equiv  \neg p \vee V \text{ par les proporiétés de la négation.}\\
-&amp;\equiv  V \text{ par domination.}
+p\rightarrow q&amp;\equiv\neg \neg (p\rightarrow q) \\
+&amp;\equiv\neg (p\wedge \neg q) &amp;&amp; \text{Selon } \knowl{./knowl/exo-negimplication.html}{\text{2.1.5.7}}\\
+&amp;\equiv \neg p \vee \neg\neg q &amp;&amp; \text{Selon De Morgan } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}} \\
+&amp;\equiv \neg p \vee q &amp;&amp; \text{Selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
 \end{align*}
-</div>Ainsi, cette proposition toujours vraie, et donc est une tautologie.</div></body>
+</div>
+</div> <div class="para">On peut donc dire que <span class="process-math">\(p\rightarrow q\equiv \neg p\vee q\text{.}\)</span>
+</div>
+</div></body>
 </html>

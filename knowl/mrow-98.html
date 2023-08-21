@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,12 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{align*}
-p \oplus q \equiv \neg(\neg(p \oplus q))&amp;\equiv \neg ( (p \wedge q)\vee(\neg p \wedge \neg q)  )\\
-&amp;\equiv \neg (p \wedge q)\wedge\neg(\neg p \wedge \neg q) \\
-&amp;\equiv (\neg p \vee \neg q)\wedge(\neg\neg p \vee \neg\neg q) \\
-&amp;\equiv (\neg p \vee \neg q)\wedge(p \vee q) 
+(p\wedge (p\rightarrow q))\rightarrow q&amp;\equiv \neg(p\wedge (\neg p\vee q))\vee q\\
+&amp;\equiv \neg((p\wedge\neg p) \vee (p\wedge q) )\vee q \text{ par distributivité.}\\
+&amp;\equiv \neg( F \vee (p\wedge q) )\vee q \text{ par les propriétés de la négation.}\\
+&amp; \equiv \neg( p\wedge q )\vee q \text{ par la propriété de l'identité.}\\
+&amp;\equiv  \neg p \vee (\neg q \vee q) \text{ par De Morgan et associativité.}\\
+&amp;\equiv  \neg p \vee V \text{ par les proporiétés de la négation.}\\
+&amp;\equiv  V \text{ par domination.}
 \end{align*}
 </div>
 <span class="incontext"><a href="sec-eqlogfnc.html#md-25" class="internal">Contexte</a></span>

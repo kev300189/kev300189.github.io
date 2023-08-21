@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,19 +11,36 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>On considère les <span class="process-math">\(n+1\)</span> nombres suivants: <span class="process-math">\(1,\ 11,\ 111\,\dots,\ 11\dots 1\text{,}\)</span> où le dernier nombre est l'entier formé de <span class="process-math">\(n+1\)</span> chiffres <span class="process-math">\(1\)</span> dans sa représentation en base dix. On numérote <span class="process-math">\(n\)</span> boites de <span class="process-math">\(0\)</span> à <span class="process-math">\(n-1\text{.}\)</span> Ensuite on place chacun des <span class="process-math">\(n+1\)</span> nombres précédents dans la boite étiquettée par sont reste lors de la division par <span class="process-math">\(n\text{.}\)</span></p>
-<p>Puisqu'il y a <span class="process-math">\(n+1\)</span> nombres et <span class="process-math">\(n\)</span> boites (restes), par le principe des tiroirs de Dirichlet, il existe deux de ces entiers, disons <span class="process-math">\(k_1\gt k_2\text{,}\)</span> tels que</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-k_1\equiv k_2 \mod n\text{.}
-\end{equation*}
+<div class="para logical">
+<div class="para">On suppose que <span class="process-math">\(r=\frac{a}{b}\)</span> où  <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span> Ainsi, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+0 \amp= r^3+r+1 \\
+0 \amp= \left(\frac{a}{b}\right)^3+\frac{a}{b}+1 \\
+0 \amp= \frac{a^3}{b^3}+\frac{a}{b} + 1 \\
+0 \amp= a^3+ab^2 +b^3
+\end{align*}
 </div>
-<p class="continuation">Par la définition équivalente decongruence, on a</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-n\mid (k_1-k_2)\text{.}
-\end{equation*}
+</div> <div class="para">On veut montrer que <span class="process-math">\(a\)</span> et <span class="process-math">\(b\)</span> sont pairs</div> <div class="para logical">
+<div class="para">Supposons que <span class="process-math">\(b\)</span> soit impair. On a alors</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-sommePuissancePair.html">
+\begin{align*}
+0 = a^3 + ab^2+b^3 \amp\equiv a^3+ a^2 +1  \mod 2\\
+0 \amp\equiv 0+ 1 \mod 2 \text{ par l'exercice }\knowl{./knowl/exo-sommePuissancePair.html}{\text{5.1.4.5}}\\
+0 \amp\equiv 1 \mod 2 
+\end{align*}
 </div>
-<p>Ainsi, <span class="process-math">\(k_1-k_2\)</span> est un multiple de <span class="process-math">\(n\)</span> et il s'écrit avec uniquement des <span class="process-math">\(1\)</span> et des <span class="process-math">\(0\text{.}\)</span></p>
+<div class="para">ce qui est une contradiction. Ainsi, on doit avoir que <span class="process-math">\(b\)</span> est pair.</div>
+</div> <div class="para logical">
+<div class="para">Sachant que <span class="process-math">\(b\)</span> est pair, on veut également montrer que <span class="process-math">\(a\)</span> est pair. Puisque <span class="process-math">\(b\)</span> est pair, on a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html">
+\begin{align*}
+0 = a^3 + ab^2+b^3 \amp\equiv a^3+ a^2\cdot 0+0   \mod 2\\
+0 \amp\equiv a^3   \mod 2
+\end{align*}
+</div>
+<div class="para">Ainsi, <span class="process-math">\(a^3\)</span> est pair, d’où <span class="process-math">\(a\)</span> est également pair par <a href="" class="xref" data-knowl="./knowl/exo-cubeEvenBaseEven.html" title="Exercice 5.1.4.4">5.1.4.4</a>.</div>
+</div> <div class="para">Avec tout ce travail, on a montrer que <span class="process-math">\(2\mid a\)</span> et <span class="process-math">\(2\mid b\text{,}\)</span> mais alors <span class="process-math">\(2\leq \pgcd(a,b)=1,\)</span> ce qui est une contradiction. Il n’y a donc pas de solution rationnelle à l’équation <span class="process-math">\(x^3+x+1=0\text{.}\)</span>
+</div>
 </div></body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -10,5 +10,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><span class="process-math">\(f(p,q,r)\equiv (p \wedge q \wedge r)\vee(p \wedge q \wedge \neg r)\vee (p \wedge \neg q \wedge r)\vee(\neg p \wedge q \wedge r)\vee(\neg p \wedge \neg q \wedge \neg r)\)</span></div></body>
+<body class="ignore-math"><div class="solution solution-like">On veut montrer que cette proposition est une tautologie. On a:<div class="displaymath process-math">
+\begin{align*}
+((p\rightarrow q)\wedge \neg q)\rightarrow \neg p &amp; \neg((\neg p \vee q)\wedge \neg q) \vee \neg p   \\
+&amp; (\neg(\neg p \vee q)\vee \neg\neg q) \vee \neg p \text{ par De Morgan.}   \\
+&amp; ((\neg\neg p \wedge \neg q)\vee q) \vee \neg p \text{  par De Morgan.}   \\
+&amp; ((p \wedge \neg q)\vee q) \vee \neg p \\
+&amp; ((p\vee q) \wedge (\neg q\vee q)) \vee \neg p \text{   par la distributivité.} \\
+&amp; ((p\vee q) \wedge V ) \vee \neg p \text{   par domination.} \\
+&amp; p\vee q   \vee \neg p \text{   par identité et associativité.} \\
+&amp; p\vee \neg p   \vee q \text{   par commutativité.} \\
+&amp; V \vee q  \text{   par les propriétés de négation.}\\
+&amp; V  \text{   par domination.} 
+\end{align*}
+</div>Ainsi, cette proposition est une tautologie.</div></body>
 </html>

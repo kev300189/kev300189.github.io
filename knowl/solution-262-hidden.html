@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,18 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>Toutes les solutions auront la forme <span class="process-math">\(a_n=a^{(h)}_n+a^{(p)_n}\)</span> où <span class="process-math">\(a^{(h)}_n\)</span> est une solution de la relation homgogène <span class="process-math">\(a_n=5a_{n-1}-6a_{n-2}\text{.}\)</span></p>
-<p>On peut alors montrer que <span class="process-math">\(a_n^{(h)}=\alpha_1\cdot 3^n+ \alpha_2\cdot 2^n\text{.}\)</span></p>
-<p>Par la suite, on veut déterminer sous quelles conditions est-ce que <span class="process-math">\(a^{(p)}_n=c7^n.\)</span> est une solution à la relation initiale. Pour cela, on doit avoir</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">L’équation caractéristique de cette relation est <span class="process-math">\(0=r^2-5r+6=(r-2)(r-3).\)</span> Ainsi, on pose <span class="process-math">\(r_1=2\)</span> et <span class="process-math">\(r_2=3\)</span> les deux solutions à cette équation.</div> <div class="para logical">
+<div class="para">Par la proposition <a href="" class="xref" data-knowl="./knowl/prop-solRecLinHomDeux.html" title="Proposition 6.1.19: Solution aux relations de récurrence linéaires homogènes d’ordre 2 cas 1">6.1.19</a>, on sait que la solution devra avoir la forme</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-solRecLinHomDeux.html">
+\begin{equation}
+a_n=\alpha_1r_1^n+\alpha_2r_2^n=\alpha_1(2)^n+\alpha_2(3)^n\text{.}\tag{6.2}
+\end{equation}
+</div>
+</div> <div class="para logical">
+<div class="para">Ainsi, puisque <span class="process-math">\(a_0=1\)</span> et <span class="process-math">\(a_1=0,\)</span> en remplaçant <span class="process-math">\(n\)</span> par <span class="process-math">\(0\)</span> et <span class="process-math">\(1\)</span> dans <a href="" class="xref" data-knowl="./knowl/eq-formGenn.html" title="Équation 6.2">(6.2)</a>, on obtient le système d’équations suivants.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-formGenn.html">
 \begin{align*}
-c7^n \amp= 5(c7^{n-1})-6(c7^{n-2})+7^n \\
-c7^n \amp=  (5\cdot 7^{1}c-6c+7^{2}) 7^{n-2}\\
-c7^2 \amp=  35c-6c+7^{2}  \\
-c(49-35+6) \amp=  49  \\
-c \amp=  \frac{49}{20}  
+1\amp=\alpha_1+\alpha_2;\\
+0\amp= 2\alpha_1 +3\alpha_2.
 \end{align*}
 </div>
-<p class="continuation">Ainsi, toute les solutions à la relation de récurrence seront <span class="process-math">\(a_n=\left( \frac{49}{20}\right)7^n+\alpha_1\cdot 3^n+\alpha_2\cdot 2^n \text{.}\)</span></p>
+<div class="para">En résolvant ce sytème d’équations, on a que <span class="process-math">\(\alpha_1=3\)</span> et <span class="process-math">\(\alpha_2=-2\text{.}\)</span>
+</div>
+</div> <div class="para">Ainsi, on a que la suite <span class="process-math">\(\{a_n\}\)</span> est la suite dont le terme général est <span class="process-math">\(a_n=3(2)^n-2(3)^n\text{.}\)</span>
+</div>
 </div></body>
 </html>

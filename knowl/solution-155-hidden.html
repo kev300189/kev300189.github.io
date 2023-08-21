@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,9 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>On commence par décider d'assigner une première chaise à Valérie. Celle-ci choisit arbitrairement une chaise qu'on numérote par <span class="process-math">\(1\text{.}\)</span> Ensuite, on numérote les autres chaises de <span class="process-math">\(2\)</span> à <span class="process-math">\(4\)</span> de façon systématique (disons en tournant dans le sens horaire). Il y aura <span class="process-math">\(4\)</span> façons différentes de faire ceci, car le résultat dépend uniquement du choix de Valérie.</p>
-<p>Par la suite, on assigne arbitrairement une personne à la chaise <span class="process-math">\(2\)</span> (il y aura <span class="process-math">\(3\)</span> façons de faire ce choix).  On continue pour la chaise <span class="process-math">\(3\)</span> (<span class="process-math">\(2\)</span> façons) et finalement la chaise <span class="process-math">\(4\)</span> ( <span class="process-math">\(1\)</span> seule façon de faire).</p>
-<p>Par le principe du produit, il y a <span class="process-math">\(4\cdot 3\cdot 2\cdot 1 = 4!=24\)</span> façons d'accomplir cette tâche.</p>
-<p>Cependant, on se rend compte que le choix de la première chaise n'a pas d'impacte sur l'arrangement final, car on distingue deux arrangements seulement si les voisins des gens sont différents. Par le principe de la division, il y aura <span class="process-math">\(\frac{24}{4}=6\)</span> façons différentes d'assoir les gens.</p>
+<div class="para">Supposons qu’on ordonne les éléments de <span class="process-math">\(A\)</span> d’une manière quelconque, c’est-à-dire qu’on les étiquette par <span class="process-math">\(a_1,\ a_2\,\ \dots, a_n\text{.}\)</span>
+</div> <div class="para">On veut maintenant construire un sous-ensemble <span class="process-math">\(E\)</span> de <span class="process-math">\(A\text{.}\)</span> Pour se faire, regarde successivement chaque élément de <span class="process-math">\(A\text{.}\)</span> Pour chaque élément <span class="process-math">\(a_i\text{,}\)</span> il y a deux choix possibles. Soit <span class="process-math">\(a_i\in\ E\text{,}\)</span> soit <span class="process-math">\(a_i\notin\ E\text{.}\)</span> Par le principe du produit, il y a <span class="process-math">\(2\times 2\times \cdots\times 2 =2^n\)</span> façons différentes de créer le sous-ensemble <span class="process-math">\(E\text{.}\)</span> Ainsi, <span class="process-math">\(\left|\mathscr{P}(A)\right|=2^n\text{.}\)</span>
+</div>
 </div></body>
 </html>

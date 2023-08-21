@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,12 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{align*}
-\neg(\forall x \forall y\, P(x,y))&amp;\equiv \exists x\, \neg(\forall y\, P(x,y))\\
-&amp;\equiv \exists x\, \exists y\,\neg P(x,y)
+\neg (p \vee (\neg p \wedge q)) &amp; \neg p \wedge \neg(\neg p \wege q) \text{ par De Morgan.} \\
+&amp; \neg p \wedge (\neg\neg p \vee \neg q) \text{ par De Morgan.} \\
+&amp; \neg p \wedge (p \vee \neg q) \text{ par De Morgan.} \\
+&amp; (\neg p \wedge p) \vee (\neg p \wedge \neg q) \text{ par distributivité.} \\
+&amp; (V) \vee (\neg p \wedge \neg q) \text{ par les propriétés de la négation.} \\
+&amp; (\neg p \wedge \neg q) \text{ par l'identité.} \\
+&amp; \neg( p \vee q) \text{ par De Morgan.} 
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-propquant.html#md-27" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#md-27" class="internal">Contexte</a></span>
 </body>
 </html>

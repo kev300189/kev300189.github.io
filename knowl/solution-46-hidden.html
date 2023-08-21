@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,20 +11,41 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<p>On considère la négation de la proposition initiale. Cette négation est vraie aux lignes <span class="process-math">\(1,2,4,5,6\)</span> de la table de vérité. On peut, à la manière de l'exemple <a href="" class="xref" data-knowl="./knowl/ex-fnddetable.html" title="Exemple 2.2.10: Forme normale disjonctive à partir de la table de vérité">2.2.10</a> dire que</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-fnddetable.html">
-\begin{equation*}
-\neg(\neg (p\vee q)\vee (r\wedge \neg q))\equiv (p\wedge q\wedge r)\vee (p\wedge q\wedge \neg r)\vee (p\wedge \neg q\wedge \neg r)\vee (\neg p\wedge q\wedge r)\vee (\neg p \wedge q \wedge \neg r)\text{.}
-\end{equation*}
-</div>
-<p>Pour retrouver la forme conjonctive de la proposition initiale, on nie l'équivalence ci-dessus. On a alors</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-\neg (p\vee q)\vee (r\wedge \neg q)&amp;\equiv\neg((p\wedge q\wedge r)\vee (p\wedge q\wedge \neg r)\vee (p\wedge \neg q\wedge \neg r)\vee (\neg p\wedge q\wedge r)\vee (\neg p \wedge q \wedge \neg r))\\
-&amp;\equiv \neg(p\wedge q\wedge r)\wedge \neg(p\wedge q\wedge \neg r)\wedge \neg(p\wedge \neg q\wedge \neg r)\wedge \neg(\neg p\wedge q\wedge r)\wedge \neg(\neg p \wedge q \wedge \neg r)\\
-&amp;\equiv (\neg p\vee \neg q\vee \neg r)\wedge (\neg p\vee \neg q\vee r)\wedge (\neg p\vee  q\vee  r)\wedge ( p\vee\neg q\vee \neg r)\wedge ( p \vee\neg q \vee  r)\text{,}
-\end{align*}
-</div>
-<p class="continuation">où on a utilisé De Morgan pour transformer les négations.</p>
-</div></body>
+<div class="para">Pour ce type de proposition, il convient de décomposer en plus petits morceaux et d’analyser chacun de ces morceaux afin de former le tout. La table de vérité</div> <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.8<span class="period">.</span></span><span class="space"> </span>Table de vérité d’une proposition complexe</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\)</span></td>
+<td class="l m b0 r1 l0 t3 lines"><span class="process-math">\(q\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\wedge q\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(\neg(p\wedge q)\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\vee \neg(p\wedge q)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r1 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r1 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r1 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">F</td>
+<td class="l m b3 r1 l0 t0 lines">F</td>
+<td class="l m b3 r0 l0 t0 lines">F</td>
+<td class="l m b3 r2 l0 t0 lines">V</td>
+<td class="l m b3 r0 l0 t0 lines">V</td>
+</tr>
+</table></div></figure> <div class="para">Comme on peut le voir, la proposition finale est toujours vraie, indépendamment de la véracité des propositions individuelles <span class="process-math">\(p,q\text{.}\)</span> </div> </div></body>
 </html>

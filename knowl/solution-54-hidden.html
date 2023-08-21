@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -10,9 +10,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<p>Sachant que l'énnoncé “J'ai capturé la fille du commissaire Gordon ou posé la bombe dans la banque de Gotham” est fausse, on sait que le Sphynx n'a ni capturé la fille du commisaaire Gordon ni posé la bombe dans la banque de Gotham.</p>
-<p>Sachant que l'énnoncé “Si j'ai piraté les archives du palais de justice, alors j'ai donné un pot-de-vin à un procureur.” est fausse, on sait que le Sphynx a piraté les archives du palais de justice, mais il n'a pas donné un pot-de-vin à un procureur.</p>
-<p>Sachant que l'énnocné “Je n'ai pas donné de pot-de-vin ni incendié l'hôpital” est fausse. alors soit il a donné un pot-de-vin, soit il a incendié l'hôpital. On sait déjà qu'il n'a pas donné de pot-de-vin, on sait qu'il doit avoir incendié l'hôpital.</p>
+<body class="ignore-math"><div class="solution solution-like">On montre que cette proposition est une contradiction. En effet, on a montrer en classe que <span class="process-math">\(p\rightarrow q \equiv \neg p \vee q \text{.}\)</span> Ainsi,<div class="displaymath process-math">
+\begin{align*}
+p \wedge \neg(q\rightarrow p) &amp;\equiv p\wedge \neg(\neg q \vee p)\\
+&amp;\equiv p \wedge (\neg\neg q \wedge \neg p) \text{   par De Morgan.}\\
+&amp;\equiv p \wedge q\wedge \neg p \text{   par propriétés de la négations et associativité.}\\
+&amp;\equiv p \wedge \neg p \wedge q \text{   par commutativité.}\\
+&amp;\equiv F \wedge q \equiv F \text{   par propriétés de la négation et domination.}
+\end{align*}
+</div>
 </div></body>
 </html>

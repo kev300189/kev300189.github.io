@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA">
+<html lang="fr-CA" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -10,11 +10,35 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">On a que<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-p\rightarrow (q \wedge r) &amp;\equiv \neg p \vee (q\wedge r) \equiv (\neg p \vee q )\wedge (\neg p \vee r) \text{ par la distributivité.} \\
-&amp;\equiv (p\rightarrow q)\wedge (p\rightarrow r)
-\end{align*}
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">Il faut utiliser la loi de  <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">De Morgan</a> afin d’enlever la négation devant la première parenthèse. Celle-ci devient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(p\vee q)\equiv\neg p \wedge \neg q\text{.}
+\end{equation*}
+</div>
+<div class="para">On peut ensuite réécrire la proposition comme étant</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(p\vee q)\vee (r\wedge \neg q)\equiv(\neg p \wedge \neg q)\vee (r\wedge \neg q)\text{,}
+\end{equation*}
+</div>
+<div class="para">qui est une forme normale disjonctive.</div>
+</div> <div class="para logical">
+<div class="para">Pour la seconde proposition, il faut distribuer la disjonction dans l’expression <span class="process-math">\((p\wedge q)\vee r\text{.}\)</span> En utilisant <a href="" class="xref" data-knowl="./knowl/li-oplogdis.html" title="Point 2.2.5:8">la distributivité</a>, on obtient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogdis.html">
+\begin{equation*}
+(p\wedge q)\vee r\equiv(p\vee r)\wedge (q\vee r)\text{.}
+\end{equation*}
+</div>
+<div class="para">En combinant avec le reste de la proposition initiale, on a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogdis.html">
+\begin{equation*}
+((p\wedge q)\vee r)\wedge (q\vee \neg r)\equiv (p\vee r)\wedge (q\vee r)\wedge (q\vee \neg r)\text{,}
+\end{equation*}
+</div>
+<div class="para">qui est une forme normale conjonctive.</div>
 </div>
 </div></body>
 </html>
