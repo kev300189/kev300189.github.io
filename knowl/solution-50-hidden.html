@@ -12,22 +12,33 @@
 </head>
 <body class="ignore-math"><div class="solution solution-like">
 <div class="para logical">
-<div class="para">Selon l’exercice <a href="" class="xref" data-knowl="./knowl/exo-negimplication.html" title="Exercice 2.1.5.7">2.1.5.7</a>, il est possible d’écrire</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negimplication.html ./knowl/exo-negimplication.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
+<div class="para">Il faut utiliser la loi de  <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">De Morgan</a> afin d’enlever la négation devant la première parenthèse. Celle-ci devient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
 \begin{equation*}
-\neg (p\rightarrow q)\equiv p\wedge \neg q\text{.}
+\neg(p\vee q)\equiv\neg p \wedge \neg q\text{.}
 \end{equation*}
 </div>
-<div class="para">Si on nie à nouveau cette équivalence, on devrait pouvoir réécrire l’implication sans flèche. Ainsi</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negimplication.html ./knowl/exo-negimplication.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
-\begin{align*}
-p\rightarrow q&amp;\equiv\neg \neg (p\rightarrow q) \\
-&amp;\equiv\neg (p\wedge \neg q) &amp;&amp; \text{Selon } \knowl{./knowl/exo-negimplication.html}{\text{2.1.5.7}}\\
-&amp;\equiv \neg p \vee \neg\neg q &amp;&amp; \text{Selon De Morgan } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}} \\
-&amp;\equiv \neg p \vee q &amp;&amp; \text{Selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
-\end{align*}
+<div class="para">On peut ensuite réécrire la proposition comme étant</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(p\vee q)\vee (r\wedge \neg q)\equiv(\neg p \wedge \neg q)\vee (r\wedge \neg q)\text{,}
+\end{equation*}
 </div>
-</div> <div class="para">On peut donc dire que <span class="process-math">\(p\rightarrow q\equiv \neg p\vee q\text{.}\)</span>
+<div class="para">qui est une forme normale disjonctive.</div>
+</div> <div class="para logical">
+<div class="para">Pour la seconde proposition, il faut distribuer la disjonction dans l’expression <span class="process-math">\((p\wedge q)\vee r\text{.}\)</span> En utilisant <a href="" class="xref" data-knowl="./knowl/li-oplogdis.html" title="Point 2.2.5:8">la distributivité</a>, on obtient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogdis.html">
+\begin{equation*}
+(p\wedge q)\vee r\equiv(p\vee r)\wedge (q\vee r)\text{.}
+\end{equation*}
+</div>
+<div class="para">En combinant avec le reste de la proposition initiale, on a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogdis.html">
+\begin{equation*}
+((p\wedge q)\vee r)\wedge (q\vee \neg r)\equiv (p\vee r)\wedge (q\vee r)\wedge (q\vee \neg r)\text{,}
+\end{equation*}
+</div>
+<div class="para">qui est une forme normale conjonctive.</div>
 </div>
 </div></body>
 </html>

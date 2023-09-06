@@ -13,15 +13,25 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.10.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.12.1</span><span class="period">.</span>
 </h4>
 <div class="para logical">
-<div class="para">En regardant la table de vérité, on cible les lignes qui rendent la propositions vraie. Il y a lorsque <span class="process-math">\(p,q\)</span> et <span class="process-math">\(\neg r\)</span> sont vraies, de même que lorsque <span class="process-math">\(\neg p, q\)</span> et <span class="process-math">\(\neg r\text{.}\)</span> La proposition peut donc s’écrire de manière équivalente comme</div>
-<div class="displaymath process-math">
+<div class="para">On considère la négation de la proposition initiale. Cette négation est vraie aux lignes <span class="process-math">\(1,2,4,5,6\)</span> de la table de vérité. On peut, à la manière de l’exemple <a href="" class="xref" data-knowl="./knowl/ex-fnddetable.html" title="Exemple 2.2.10: Forme normale disjonctive à partir de la table de vérité">2.2.10</a> dire que</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-fnddetable.html">
 \begin{equation*}
-((p\wedge q)\vee r)\wedge (q\wedge \neg r)\equiv (p\wedge q\wedge \neg r)\vee (\neg p\wedge q\wedge \neg r)\text{.}
+\neg(\neg (p\vee q)\vee (r\wedge \neg q))\equiv (p\wedge q\wedge r)\vee (p\wedge q\wedge \neg r)\vee (p\wedge \neg q\wedge \neg r)\vee (\neg p\wedge q\wedge r)\vee (\neg p \wedge q \wedge \neg r)\text{.}
 \end{equation*}
 </div>
+</div> <div class="para logical">
+<div class="para">Pour retrouver la forme conjonctive de la proposition initiale, on nie l’équivalence ci-dessus. On a alors</div>
+<div class="displaymath process-math">
+\begin{align*}
+\neg (p\vee q)\vee (r\wedge \neg q)&amp;\equiv\neg((p\wedge q\wedge r)\vee (p\wedge q\wedge \neg r)\vee (p\wedge \neg q\wedge \neg r)\vee (\neg p\wedge q\wedge r)\vee (\neg p \wedge q \wedge \neg r))\\
+&amp;\equiv \neg(p\wedge q\wedge r)\wedge \neg(p\wedge q\wedge \neg r)\wedge \neg(p\wedge \neg q\wedge \neg r)\wedge \neg(\neg p\wedge q\wedge r)\wedge \neg(\neg p \wedge q \wedge \neg r)\\
+&amp;\equiv (\neg p\vee \neg q\vee \neg r)\wedge (\neg p\vee \neg q\vee r)\wedge (\neg p\vee  q\vee  r)\wedge ( p\vee\neg q\vee \neg r)\wedge ( p \vee\neg q \vee  r)\text{,}
+\end{align*}
+</div>
+<div class="para">où on a utilisé De Morgan pour transformer les négations.</div>
 </div>
 </div>
 <span class="incontext"><a href="sec-eqlogfnc.html#solution-52" class="internal">Contexte</a></span>

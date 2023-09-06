@@ -13,28 +13,55 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.15.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.16.1</span><span class="period">.</span>
 </h4>
-<div class="para logical">
-<div class="para">En suivant la méthode pour les entiers, on décompose l’un des facteur en une somme de de puissances de deux. Ici, on choisit de décomposer le deuxième facteur, puisqu’il contient moins de chiffre. On a</div>
-<div class="displaymath process-math">
-\begin{equation*}
-101.101_2=100_2+1_2+0.1_2+0.001_2\text{.}
-\end{equation*}
-</div>
-<div class="para">Le produit devient</div>
-<div class="displaymath process-math">
-\begin{align*}
-10011.1011_2\times 101.101_2&amp;=10011.1011_2\times (100_2+1_2+0.1_2+0.001_2)\\
-&amp;=10011.1011_2\times 100_2+10011.1011_2\times 1_2+10011.1011_2\times 0.1_2+10011.1011_2\times 0.001_2.\\
-\end{align*}
-<p class="intertext">En déplaçant le point, on trouve</p>
-\begin{align*}
-\phantom{10011.1011_2\times 101.101_2}&amp;=1001110.11_2+10011.1011_2+1001.11011_2+10.0111011_2\\
-\phantom{10011.1011_2\times 101.101_2}&amp;=1101110.1011111
-\end{align*}
-</div>
-</div>
+<div class="para">On commence par convertir les nombres en binaire. Pour <span class="process-math">\(218\text{,}\)</span> on obtient <span class="process-math">\(11011010_2=218\)</span> et pour <span class="process-math">\(22\text{,}\)</span> c’est <span class="process-math">\(10110_2=22\text{.}\)</span> Le résultat de la division est donné ci-dessous.</div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(11011(\cancel{0}10)_2\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(10110_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(10110_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(001010(\cancel{1}0)_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\downarrow\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(0_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10101(\cancel{0})_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\downarrow\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(0_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(100_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(101010_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\downarrow\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\phantom{1}10110_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1001_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">reste</td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10100_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div>
 </div>
 <span class="incontext"><a href="sec-representation.html#solution-95" class="internal">Contexte</a></span>
 </body>

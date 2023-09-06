@@ -12,18 +12,46 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.3.6.16.c.1</span><span class="period">.</span>
-</h6>On peut remarquer que le nombre <span class="process-math">\(r \in ]0,1[\text{,}\)</span> mais <span class="process-math">\(r\)</span> n’est pas dans l’image de <span class="process-math">\(f\text{,}\)</span> c’est-à-dire que <span class="process-math">\(f(n)\neq r\)</span> pour tout <span class="process-math">\(n \in \N\text{.}\)</span> En effet, <span class="process-math">\(r\)</span> a été construit en prenant la diagonale de la liste<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-bijTan.html">
-\begin{align*}
-f(0)&amp;=0.d_{0,0}d_{0,1}d_{0,2}d_{0,3}d_{0,4}\cdots\\
-f(1)&amp;=0.d_{1,0}d_{1,1}d_{1,2}d_{1,3}d_{1,4}\cdots\\
-f(2)&amp;=0.d_{2,0}d_{2,1}d_{2,2}d_{2,3}d_{2,4}\cdots\\
-f(3)&amp;=0.d_{3,0}d_{3,1}d_{3,2}d_{3,3}d_{3,4}\cdots\\
-\vdots&amp;= \vdots
-\end{align*}
-</div>, pour ensuite changer chacun des termes, c’est- a-dire que <span class="process-math">\(r_i\neq d_{i,i}\text{.}\)</span>  Ainsi, <span class="process-math">\(f\)</span> ne peut pas être une bijection, ce qui est en contradiction avec notre hypothèse initiale. Il n’existe donc pas de bijection entre <span class="process-math">\(\N\)</span> et <span class="process-math">\(]0,1[\text{.}\)</span> Par <a href="" class="xref" data-knowl="./knowl/exo-bijTan.html" title="Tâche 1.3.6.16.b">1.3.6.16.b</a>, il ne peut pas y avoir de bijection entre <span class="process-math">\(\N\)</span> et <span class="process-math">\(\R\text{.}\)</span> En fait <span class="process-math">\(|\N| \lt |\R|\text{.}\)</span>
-</div>
-<span class="incontext"><a href="sec-fonctions.html#solution-45" class="internal">Contexte</a></span>
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.1.7.1</span><span class="period">.</span>
+</h4>
+<div class="para">Pour ce type de proposition, il convient de décomposer en plus petits morceaux et d’analyser chacun de ces morceaux afin de former le tout. La table de vérité</div> <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.8<span class="period">.</span></span><span class="space"> </span>Table de vérité d’une proposition complexe</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\)</span></td>
+<td class="l m b0 r1 l0 t3 lines"><span class="process-math">\(q\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\wedge q\)</span></td>
+<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(\neg(p\wedge q)\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\vee \neg(p\wedge q)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r1 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r2 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+<td class="l m b0 r1 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r1 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r2 l0 t0 lines">V</td>
+<td class="l m b0 r0 l0 t0 lines">V</td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">F</td>
+<td class="l m b3 r1 l0 t0 lines">F</td>
+<td class="l m b3 r0 l0 t0 lines">F</td>
+<td class="l m b3 r2 l0 t0 lines">V</td>
+<td class="l m b3 r0 l0 t0 lines">V</td>
+</tr>
+</table></div></figure> <div class="para">Comme on peut le voir, la proposition finale est toujours vraie, indépendamment de la véracité des propositions individuelles <span class="process-math">\(p,q\text{.}\)</span> </div> </div>
+<span class="incontext"><a href="sec-logprop.html#solution-45" class="internal">Contexte</a></span>
 </body>
 </html>

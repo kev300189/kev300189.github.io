@@ -12,7 +12,16 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<div class="para">Pour la conversion de la base décimale vers la base seize, on regarde encore quelle est la plus grande puissance de seize qui est inférieure ou égale au nombre à convertir. Pour <span class="process-math">\(987654321\text{,}\)</span> c’est <span class="process-math">\(16^7=268435456\)</span> qui sera utilisé. Il y a toutefois une étape supplémentaire à considérer par rapport à la conversion au binaire. Combien de fois <span class="process-math">\(16^7\)</span> rentre-t-il dans <span class="process-math">\(987654321\text{?}\)</span> On utilise Sage pour faire ce calcul, en notant qu’à la section suivante on aura un opérateur spécial qui donnera directement la réponse, sans tenir compte de la partie fractionnaire.</div>
+<div class="para logical">
+<div class="para">Comme on obtient <span class="process-math">\(3.67929906026\text{,}\)</span> on déduit qu’on peut mettre trois puissances de <span class="process-math">\(16^7\text{,}\)</span> mais pas quatre. On a donc</div>
+<div class="displaymath process-math">
+\begin{equation*}
+987654321=3\times 16^7+\text{quelque chose}\text{.}
+\end{equation*}
+</div>
+<div class="para">On poursuit les calculs avec Sage. Dans un premier temps, que reste-t-il si on soustrait <span class="process-math">\(3\times 16^7\)</span> à <span class="process-math">\(987654321\text{?}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-representation.html#p-1234" class="internal">Contexte</a></span>
 </body>
 </html>

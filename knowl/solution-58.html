@@ -12,12 +12,18 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h5 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.4.2.1</span><span class="period">.</span>
-</h5>On a que<div class="displaymath process-math">
+<h6 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.4.3.a.1</span><span class="period">.</span>
+</h6>
+<div class="displaymath process-math">
 \begin{align*}
-p\rightarrow (q \wedge r) &amp;\equiv \neg p \vee (q\wedge r) \equiv (\neg p \vee q )\wedge (\neg p \vee r) \text{ par la distributivité.} \\
-&amp;\equiv (p\rightarrow q)\wedge (p\rightarrow r)
+\neg (p \vee (\neg p \wedge q)) &amp; \neg p \wedge \neg(\neg p \wege q) \text{ par De Morgan.} \\
+&amp; \neg p \wedge (\neg\neg p \vee \neg q) \text{ par De Morgan.} \\
+&amp; \neg p \wedge (p \vee \neg q) \text{ par De Morgan.} \\
+&amp; (\neg p \wedge p) \vee (\neg p \wedge \neg q) \text{ par distributivité.} \\
+&amp; (V) \vee (\neg p \wedge \neg q) \text{ par les propriétés de la négation.} \\
+&amp; (\neg p \wedge \neg q) \text{ par l'identité.} \\
+&amp; \neg( p \vee q) \text{ par De Morgan.} 
 \end{align*}
 </div>
 </div>

@@ -10,6 +10,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">À l’aide d’un tableau de vérité, on peut vérifier que si <span class="process-math">\(p\)</span> est vraie et <span class="process-math">\(q\)</span> est vraie, alors cette proposition est vraie. De plus, si <span class="process-math">\(p\)</span> est fausse et <span class="process-math">\(q\)</span> est vraie, alors la proposition est fausse. Ainsi, cette proposition est une proposition quelconque. En fait, on peut montrer que cette proposition est équivalente à <span class="process-math">\(p\text{.}\)</span>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like">On veut montrer que cette proposition est une tautologie. En effet, on a<div class="displaymath process-math">
+\begin{align*}
+(p\wedge (p\rightarrow q))\rightarrow q&amp;\equiv \neg(p\wedge (\neg p\vee q))\vee q\\
+&amp;\equiv \neg((p\wedge\neg p) \vee (p\wedge q) )\vee q \text{ par distributivité.}\\
+&amp;\equiv \neg( F \vee (p\wedge q) )\vee q \text{ par les propriétés de la négation.}\\
+&amp; \equiv \neg( p\wedge q )\vee q \text{ par la propriété de l'identité.}\\
+&amp;\equiv  \neg p \vee (\neg q \vee q) \text{ par De Morgan et associativité.}\\
+&amp;\equiv  \neg p \vee V \text{ par les proporiétés de la négation.}\\
+&amp;\equiv  V \text{ par domination.}
+\end{align*}
+</div>Ainsi, cette proposition toujours vraie, et donc est une tautologie.</div></body>
 </html>

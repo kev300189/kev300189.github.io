@@ -10,20 +10,49 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para logical"><ol class="decimal">
-<li><div class="para">L’énoncé est vrai puisque <span class="process-math">\(8/4=2\)</span> et <span class="process-math">\(2\in \mathbb{Z}\text{.}\)</span>
-</div></li>
-<li><div class="para">L’énoncé est faux étant donné que <span class="process-math">\(4/8=1/2\)</span> et que <span class="process-math">\(1/2\notin \mathbb{Z}\text{.}\)</span>
-</div></li>
-<li><div class="para">L’énoncé est faux, car non ne peut pas diviser par <span class="process-math">\(0\text{.}\)</span>
-</div></li>
-<li><div class="para">L’énoncé est vrai, car <span class="process-math">\(0=0\times 5\text{.}\)</span> En fait, n’importe quel nombre <span class="process-math">\(k\in \mathbb{Z}\)</span> non nul divise <span class="process-math">\(0\text{.}\)</span>
-</div></li>
-<li><div class="para">L’énoncé est vrai puisque <span class="process-math">\(12\)</span> est un facteur de <span class="process-math">\(60\text{.}\)</span>
-</div></li>
-<li><div class="para">Le fait que le nombre est négatif ne pose pas de problème. On peut utiliser n’importe quelle des définitions équivalentes, par exemple <span class="process-math">\(48\)</span> est un multiple de <span class="process-math">\(-6\text{,}\)</span> spécifiquement <span class="process-math">\(-8\)</span> fois <span class="process-math">\(-6\)</span> et donc <span class="process-math">\(-6| 48\)</span> est vraie.</div></li>
-<li><div class="para">Puisque <span class="process-math">\(n^2=n\times n\text{,}\)</span> on conclut que <span class="process-math">\(n\)</span> est un facteur de <span class="process-math">\(n^2\)</span> et donc que <span class="process-math">\(n| n^2\)</span> peu importe la valeur de <span class="process-math">\(n\)</span> non nulle. La proposition est vraie.</div></li>
-<li><div class="para">Si on peut montrer une valeur de <span class="process-math">\(n\)</span> qui ne respecte pas la condition, alors la proposition sera fausse. Par exemple, si <span class="process-math">\(n=2\text{,}\)</span> c’est faux de dire que <span class="process-math">\(2^2| 2\)</span> puisque <span class="process-math">\(2/4=1/2\)</span> et ce n’est pas un entier. Donc la proposition est fausse.</div></li>
-<li><div class="para">Si on arrive à trouver une valeur, la proposition d’existence sera vérifiée. En prenant <span class="process-math">\(n=1\text{,}\)</span> on observe que <span class="process-math">\(1^2| 1\)</span> et donc la proposition est vraie.</div></li>
-</ol></div></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">On utilise une table dans laquelle on note les quotients et les restes. Ceux-ci peuvent être calculés avec Sage.</div> <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.7<span class="period">.</span></span><span class="space"> </span>Conversion de 987654321 en hexadécimale avec la méthode des quotients et des restes</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(987654321\div\)</span></td>
+<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(16\)</span></td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">Quotients</td>
+<td class="l m b2 r0 l0 t0 lines">Restes</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(61728395\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3858024\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(11=B\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(241126\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(15070\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(941\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(14=E\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(58\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(13=D\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10=A\)</span></td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b3 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+</tr>
+</table></div></figure> <div class="para">Le résultat est donc bel et bien <span class="process-math">\(987654321=3ADE68B1_{16}\text{.}\)</span>
+</div>
+</div></body>
 </html>

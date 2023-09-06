@@ -90,13 +90,17 @@ window.MathJax = {
 sagecell.makeSagecell({
   "inputLocation": "pre.sagecell-sage",
   "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
   "languages": [
     "sage"
   ],
   "evalButtonText": "Évaluer (Sage)"
 });
 </script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.css" integrity="sha512-nXlJLUeqPMp1Q3+Bd8Qds8tXeRVQscMscwysJm821C++9w6WtsFbJjPenZ8cQVMXyqSAismveQJc0C1splFDCA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.8/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -104,16 +108,17 @@ sagecell.makeSagecell({
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/colors_green_plum.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.8/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/colors_green_plum.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -127,7 +132,10 @@ sagecell.makeSagecell({
 <div id="searchempty" class="searchempty"><span>Aucun résultat.</span></div>
 <ol id="searchresults" class="searchresults"></ol>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Table des matières</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Table des matières</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="chap-reptheonombres.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="chap-reptheonombres.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><a class="next-button button" href="sec-divisibilite.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button>
+</div></div>
+<span class="nav-runestone-controls"><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
 <li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
 <ol class="hidden avatar">
 <li data-val="You!" tabindex="-1">
@@ -229,9 +237,7 @@ sagecell.makeSagecell({
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="chap-reptheonombres.html" title="Précédent"><span class="icon">&lt;</span><span class="name">Précédent</span></a><a class="up-button button" href="chap-reptheonombres.html" title="Haut"><span class="icon">^</span><span class="name">Haut</span></a><a class="next-button button" href="sec-divisibilite.html" title="Suivant"><span class="name">Suivant</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
+</ol></div></button></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
 \newcommand{\Z}{\mathbb{Z}}                
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -451,9 +457,9 @@ $\Box$
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-representation"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Représentation des nombres</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Représentation des nombres</span>
 </h2>
-<section class="introduction" id="intro-representation"> <div class="para logical" id="p-1187">
+<section class="introduction" id="intro-representation"> <div class="para logical" id="p-1186">
 <div class="para">À l’école primaire, on apprend à interpréter un nombre comme <span class="process-math">\(1234\)</span> en le décomposant selon ses unités, dizaines, centaines et milliers. En termes plus mathématiques, on peut écrire</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -461,7 +467,7 @@ $\Box$
 \end{equation*}
 </div>
 <div class="para">Pourquoi une telle décomposition? D’où vient le choix de <span class="process-math">\(1,10,100\)</span> et <span class="process-math">\(1000\text{?}\)</span> L’hypothèse la plus plausible est que les systèmes de numération qui se développèrent au fil du temps ont en quelque sorte converger vers l’utilisation des chiffres <span class="process-math">\(0,1,2,\ldots,9\text{;}\)</span> dix symboles, autant de doigts qu’un humain possède.</div>
-</div> <div class="para logical" id="p-1188">
+</div> <div class="para logical" id="p-1187">
 <div class="para">L’importance du nombre dix se fait d’autant plus remarquer quand on réécrit</div>
 <div class="displaymath process-math" id="eq-basedix">
 \begin{equation}
@@ -469,28 +475,28 @@ $\Box$
 \end{equation}
 </div>
 <div class="para">Cela n’a toutefois pas toujours été ainsi. Différents système de représentation des nombres ont été élaborés dans l’histoire. Encore aujourd’hui, d’autres systèmes sont utilisés dans certains contexte. En informatique, la représentation binaire est prédominante.</div>
-</div> <div class="para" id="p-1189">Dans cette section, on rappelle la notion d’écriture en base dix, on définit la représentation en base deux (binaire) et seize (hexadécimale). On effectue aussi des opérations élémentaires sur les nombres écrits en base deux et on voit comment convertir un nombre d’une base à une autre.</div></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
-<span class="type">Sous-section</span> <span class="codenumber">3.1.1</span> <span class="title">Systèmes positionnels</span>
+</div> <div class="para" id="p-1188">Dans cette section, on rappelle la notion d’écriture en base dix, on définit la représentation en base deux (binaire) et seize (hexadécimale). On effectue aussi des opérations élémentaires sur les nombres écrits en base deux et on voit comment convertir un nombre d’une base à une autre.</div></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="space"> </span><span class="title">Systèmes positionnels</span>
 </h3>
-<div class="para" id="p-1190">La représentation d’un nombre peut se faire de plusieurs manières. Une manière brute et assez inefficace consiste par exemple à faire un trait pour chaque unité. Ce système devient vite encombrant et il est difficile de rapidement lire un nombre. D’autres systèmes un peu mieux ont été inventés par différentes civilisation au cours de l’histoire.  Un système dans lequel un nombre peut s’écrire sous une forme ressemblant à l’équation <a href="" class="xref" data-knowl="./knowl/eq-basedix.html" title="Équation 3.1">(3.1)</a> de l’introduction est appelé un système positionnel. Ces systèmes sont normalement construits selon une base entière <span class="process-math">\(b&gt;1\text{,}\)</span> dans le cas de l’introduction, c’est dix, et d’un ensemble de symboles en nombre égal à la base. On peut utiliser une base différente, par exemple quatre avec les symboles <span class="process-math">\(0,1,2,3\text{,}\)</span> pour représenter n’importe quel nombre.</div>
-<div class="para" id="p-1191">Chaque position correspond à une puissance de la base, puissance croissante lorsqu’on lit le nombre de droite à gauche. Ainsi le nombre à droite correspond aux unités, le deuxième nombre correspond à un multiple de <span class="process-math">\(b\text{,}\)</span> le troisième au multiple de <span class="process-math">\(b^2\)</span> et ainsi de suite. Afin de distinguer du cas usuel, lorsque la base sera différente de dix, on l’indiquera en indice. Cet indice sera toujours sous-entendu comme étant écrit en base dix.</div>
+<div class="para" id="p-1189">La représentation d’un nombre peut se faire de plusieurs manières. Une manière brute et assez inefficace consiste par exemple à faire un trait pour chaque unité. Ce système devient vite encombrant et il est difficile de rapidement lire un nombre. D’autres systèmes un peu mieux ont été inventés par différentes civilisation au cours de l’histoire.  Un système dans lequel un nombre peut s’écrire sous une forme ressemblant à l’équation <a href="" class="xref" data-knowl="./knowl/eq-basedix.html" title="Équation 3.1">(3.1)</a> de l’introduction est appelé un système positionnel. Ces systèmes sont normalement construits selon une base entière <span class="process-math">\(b&gt;1\text{,}\)</span> dans le cas de l’introduction, c’est dix, et d’un ensemble de symboles en nombre égal à la base. On peut utiliser une base différente, par exemple quatre avec les symboles <span class="process-math">\(0,1,2,3\text{,}\)</span> pour représenter n’importe quel nombre.</div>
+<div class="para" id="p-1190">Chaque position correspond à une puissance de la base, puissance croissante lorsqu’on lit le nombre de droite à gauche. Ainsi le nombre à droite correspond aux unités, le deuxième nombre correspond à un multiple de <span class="process-math">\(b\text{,}\)</span> le troisième au multiple de <span class="process-math">\(b^2\)</span> et ainsi de suite. Afin de distinguer du cas usuel, lorsque la base sera différente de dix, on l’indiquera en indice. Cet indice sera toujours sous-entendu comme étant écrit en base dix.</div>
 <article class="example example-like" id="example-34"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-34"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Des exemples en base quatre.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-34"><article class="example example-like"><div class="para logical" id="p-1192">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-34"><article class="example example-like"><div class="para logical" id="p-1191">
 <div class="para">On considère les nombres suivants, écrits en base quatre:</div>
 <ol class="decimal">
-<li id="li-284"><div class="para" id="p-1193"><span class="process-math">\(123_4\text{;}\)</span></div></li>
-<li id="li-285"><div class="para" id="p-1194"><span class="process-math">\(102030_4\text{;}\)</span></div></li>
-<li id="li-286"><div class="para" id="p-1195"><span class="process-math">\(3223_4\text{.}\)</span></div></li>
+<li id="li-284"><div class="para" id="p-1192"><span class="process-math">\(123_4\text{;}\)</span></div></li>
+<li id="li-285"><div class="para" id="p-1193"><span class="process-math">\(102030_4\text{;}\)</span></div></li>
+<li id="li-286"><div class="para" id="p-1194"><span class="process-math">\(3223_4\text{.}\)</span></div></li>
 </ol>
 <div class="para">On cherche leur valeur en base dix.</div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-84" id="solution-84"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-84"><div class="solution solution-like"><div class="para logical" id="p-1196">
-<div class="para"><div class="para" id="p-1197">L’idée est de reprendre le principe de la décomposition sous une forme des puissances de <span class="process-math">\(4\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-83" id="solution-83"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-83"><div class="solution solution-like"><div class="para logical" id="p-1195">
+<div class="para"><div class="para" id="p-1196">L’idée est de reprendre le principe de la décomposition sous une forme des puissances de <span class="process-math">\(4\text{.}\)</span>
 </div></div>
 <ol class="decimal">
-<li id="li-287"><div class="para logical" id="p-1198">
+<li id="li-287"><div class="para logical" id="p-1197">
 <div class="para">On a donc</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -498,7 +504,7 @@ $\Box$
 \end{equation*}
 </div>
 </div></li>
-<li id="li-288"><div class="para logical" id="p-1199">
+<li id="li-288"><div class="para logical" id="p-1198">
 <div class="para">De plus,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -506,7 +512,7 @@ $\Box$
 \end{equation*}
 </div>
 </div></li>
-<li id="li-289"><div class="para logical" id="p-1200">
+<li id="li-289"><div class="para logical" id="p-1199">
 <div class="para">Finalement,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -517,16 +523,16 @@ $\Box$
 </ol>
 </div></div></div>
 </div></article></div>
-<div class="para" id="p-1201">La figure interactive <a href="" class="xref" data-knowl="./knowl/fig-repbase.html" title="Figure 3.1.2">3.1.2</a> permet de visualiser les nombres de <span class="process-math">\(0\)</span> à <span class="process-math">\(30\)</span> dans chacune des bases deux,trois, quatre et cinq. Il est intéressant de voir comment la représentation d’un nombre évolue au fur et à mesure que celui-ci grandit.</div>
+<div class="para" id="p-1200">La figure interactive <a href="" class="xref" data-knowl="./knowl/fig-repbase.html" title="Figure 3.1.2">3.1.2</a> permet de visualiser les nombres de <span class="process-math">\(0\)</span> à <span class="process-math">\(30\)</span> dans chacune des bases deux,trois, quatre et cinq. Il est intéressant de voir comment la représentation d’un nombre évolue au fur et à mesure que celui-ci grandit.</div>
 <figure class="figure figure-like" id="fig-repbase"><iframe id="geog-repbase" width="840" height="840" src="geog-repbase-if.html"></iframe><div class="instructions">
-<a href="" data-knowl="" class="id-ref instructions-knowl original" data-refid="hk-instructions-4" id="instructions-4"><h4 class="heading"><span class="type">Instructions<span class="period">.</span></span></h4></a><div class="hidden-content tex2jax_ignore" id="hk-instructions-4"><div class="solution-like"><div class="para" id="p-1202">Le curseur <span class="process-math">\(b\)</span> représente la base utilisée et le curseur <span class="process-math">\(n\)</span> représente le nombre en base dix. On peut choisir de voir comment un nombre change selon la base ou voir comment les nombres changent pour une base donnée.</div></div></div>
+<a href="" data-knowl="" class="id-ref instructions-knowl original" data-refid="hk-instructions-4" id="instructions-4"><h4 class="heading"><span class="type">Instructions<span class="period">.</span></span></h4></a><div class="hidden-content tex2jax_ignore" id="hk-instructions-4"><div class="solution-like"><div class="para" id="p-1201">Le curseur <span class="process-math">\(b\)</span> représente la base utilisée et le curseur <span class="process-math">\(n\)</span> représente le nombre en base dix. On peut choisir de voir comment un nombre change selon la base ou voir comment les nombres changent pour une base donnée.</div></div></div>
 </div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.2<span class="period">.</span></span><span class="space"> </span>Les nombres de <span class="process-math">\(0\)</span> à <span class="process-math">\(30\)</span> dans différentes bases</figcaption></figure></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
-<span class="type">Sous-section</span> <span class="codenumber">3.1.2</span> <span class="title">Représentation en base deux</span>
+<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="space"> </span><span class="title">Représentation en base deux</span>
 </h3>
-<div class="para" id="p-1203">Autre que la base dix, la base deux, ou représentation binaire est probablement la plus utilisée. Une des raisons est que les signaux envoyées par les pièces électroniques se trouvent en deux états, tel que mentionné dans la section <a href="sec-circuits.html" class="internal" title="Section 2.4: Circuits logiques">2.4</a>. La représentation binaire utilise les puissances de deux et l’ensemble de chiffres <span class="process-math">\(\{0,1\}\)</span> pour représenter les nombres. Tout nombre entier peut être représenté comme une somme de termes <span class="process-math">\(d\times 2^n\)</span> où <span class="process-math">\(d\in \{0,1\}\)</span> et <span class="process-math">\(n\in \N\text{.}\)</span> Les nombres de <span class="process-math">\(0\)</span> à <span class="process-math">\(30\)</span> peuvent être visualisés dans la figure interactive <a href="" class="xref" data-knowl="./knowl/fig-repbase.html" title="Figure 3.1.2">3.1.2</a> en mettant la valeur de <span class="process-math">\(b=2\text{.}\)</span>
+<div class="para" id="p-1202">Autre que la base dix, la base deux, ou représentation binaire est probablement la plus utilisée. Une des raisons est que les signaux envoyées par les pièces électroniques se trouvent en deux états, tel que mentionné dans la section <a href="sec-circuits.html" class="internal" title="Section 2.4: Circuits logiques">2.4</a>. La représentation binaire utilise les puissances de deux et l’ensemble de chiffres <span class="process-math">\(\{0,1\}\)</span> pour représenter les nombres. Tout nombre entier peut être représenté comme une somme de termes <span class="process-math">\(d\times 2^n\)</span> où <span class="process-math">\(d\in \{0,1\}\)</span> et <span class="process-math">\(n\in \N\text{.}\)</span> Les nombres de <span class="process-math">\(0\)</span> à <span class="process-math">\(30\)</span> peuvent être visualisés dans la figure interactive <a href="" class="xref" data-knowl="./knowl/fig-repbase.html" title="Figure 3.1.2">3.1.2</a> en mettant la valeur de <span class="process-math">\(b=2\text{.}\)</span>
 </div>
-<div class="para" id="p-1204">La conversion d’un nombre d’une base à l’autre dépend des bases utilisées. Lorsque la base dix est impliquée, le processus est plus naturel. On peut comparer la conversion à la traduction entre deux langues. Traduire un mot d’une langue proche de la sienne, mais inconnue, est souvent un peu plus simple que de prendre un mot de sa langue et le traduire dans la langue inconnue. C’est un peu le même principe pour la conversion entre une base <span class="process-math">\(b\)</span> et la base dix. De la base <span class="process-math">\(b\)</span> vers dix est un peu plus simple que de la base dix vers la base <span class="process-math">\(b\text{.}\)</span> Pour le binaire, connaitre les premières puissances de deux peut-être pratique. Les <span class="process-math">\(13\)</span> premières sont données dans la table <a href="" class="xref" data-knowl="./knowl/tab-puissances2.html" title="Table 3.1.3: Les premières puissances de 2">3.1.3</a>.</div>
+<div class="para" id="p-1203">La conversion d’un nombre d’une base à l’autre dépend des bases utilisées. Lorsque la base dix est impliquée, le processus est plus naturel. On peut comparer la conversion à la traduction entre deux langues. Traduire un mot d’une langue proche de la sienne, mais inconnue, est souvent un peu plus simple que de prendre un mot de sa langue et le traduire dans la langue inconnue. C’est un peu le même principe pour la conversion entre une base <span class="process-math">\(b\)</span> et la base dix. De la base <span class="process-math">\(b\)</span> vers dix est un peu plus simple que de la base dix vers la base <span class="process-math">\(b\text{.}\)</span> Pour le binaire, connaitre les premières puissances de deux peut-être pratique. Les <span class="process-math">\(13\)</span> premières sont données dans la table <a href="" class="xref" data-knowl="./knowl/tab-puissances2.html" title="Table 3.1.3: Les premières puissances de 2">3.1.3</a>.</div>
 <figure class="table table-like" id="tab-puissances2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.1.3<span class="period">.</span></span><span class="space"> </span>Les premières puissances de <span class="process-math">\(2\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines">Puissance de <span class="process-math">\(2\)</span>
@@ -563,18 +569,18 @@ $\Box$
 </tr>
 </table></div></figure><article class="example example-like" id="example-35"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-35"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Du binaire vers la base dix.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><div class="para logical" id="p-1205">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><div class="para logical" id="p-1204">
 <div class="para">On veut convertir les nombres suivants en base dix:</div>
 <ol class="decimal">
-<li id="li-290"><div class="para" id="p-1206"><span class="process-math">\(100110_2\text{;}\)</span></div></li>
-<li id="li-291"><div class="para" id="p-1207"><span class="process-math">\(110111_2\text{;}\)</span></div></li>
-<li id="li-292"><div class="para" id="p-1208"><span class="process-math">\(111111_2\text{;}\)</span></div></li>
-<li id="li-293"><div class="para" id="p-1209"><span class="process-math">\(100100100_2\text{.}\)</span></div></li>
+<li id="li-290"><div class="para" id="p-1205"><span class="process-math">\(100110_2\text{;}\)</span></div></li>
+<li id="li-291"><div class="para" id="p-1206"><span class="process-math">\(110111_2\text{;}\)</span></div></li>
+<li id="li-292"><div class="para" id="p-1207"><span class="process-math">\(111111_2\text{;}\)</span></div></li>
+<li id="li-293"><div class="para" id="p-1208"><span class="process-math">\(100100100_2\text{.}\)</span></div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-85" id="solution-85"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-85"><div class="solution solution-like"><div class="para logical" id="p-1210"><ol class="decimal">
-<li id="li-294"><div class="para logical" id="p-1211">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-84" id="solution-84"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-84"><div class="solution solution-like"><div class="para logical" id="p-1209"><ol class="decimal">
+<li id="li-294"><div class="para logical" id="p-1210">
 <div class="para">On réécrit avec les puissances de deux</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -582,7 +588,7 @@ $\Box$
 \end{equation*}
 </div>
 </div></li>
-<li id="li-295"><div class="para logical" id="p-1212">
+<li id="li-295"><div class="para logical" id="p-1211">
 <div class="para">On réécrit avec les puissances de deux</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -590,7 +596,7 @@ $\Box$
 \end{equation*}
 </div>
 </div></li>
-<li id="li-296"><div class="para logical" id="p-1213">
+<li id="li-296"><div class="para logical" id="p-1212">
 <div class="para">On réécrit avec les puissances de deux</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -598,7 +604,7 @@ $\Box$
 \end{equation*}
 </div>
 </div></li>
-<li id="li-297"><div class="para logical" id="p-1214">
+<li id="li-297"><div class="para logical" id="p-1213">
 <div class="para">On réécrit avec les puissances de deux</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -608,26 +614,26 @@ $\Box$
 </div></li>
 </ol></div></div></div>
 </div></article></div>
-<div class="para" id="p-1215">Une méthode pour convertir un nombre de la base décimale à une autre base est présentée ci-dessous. Une autre méthode sera présentée dans la section suivante.</div>
+<div class="para" id="p-1214">Une méthode pour convertir un nombre de la base décimale à une autre base est présentée ci-dessous. Une autre méthode sera présentée dans la section suivante.</div>
 <article class="example example-like" id="ex-decimalebinaire"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-decimalebinaire"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">De la base dix vers le binaire.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-decimalebinaire"><article class="example example-like"><div class="para logical" id="p-1216">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-decimalebinaire"><article class="example example-like"><div class="para logical" id="p-1215">
 <div class="para">On cherche à convertir les nombres suivants en binaire:</div>
 <ol class="decimal">
-<li id="li-298"><div class="para" id="p-1217"><span class="process-math">\(101\text{;}\)</span></div></li>
-<li id="li-299"><div class="para" id="p-1218"><span class="process-math">\(187\text{.}\)</span></div></li>
+<li id="li-298"><div class="para" id="p-1216"><span class="process-math">\(101\text{;}\)</span></div></li>
+<li id="li-299"><div class="para" id="p-1217"><span class="process-math">\(187\text{.}\)</span></div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-86" id="solution-86"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-86"><div class="solution solution-like">
-<div class="para logical" id="p-1219">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-85" id="solution-85"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-85"><div class="solution solution-like">
+<div class="para logical" id="p-1218">
 <div class="para">On sait qu’un nombre en binaire va s’écrire sous la forme <span class="process-math">\(d_n2^n+d_{n-1}2^{n-1}+\cdots + d_12^1+d_02^0\)</span> avec tous les <span class="process-math">\(d_k\in \{0,1\}\text{.}\)</span> Pour trouver <span class="process-math">\(n\text{,}\)</span> on cherche la plus grande puissance de la base qui est plus petite ou égale au  nombre à convertir. Le nombre <span class="process-math">\(n\)</span> sera celui la valeur de cette puissance. Ainsi pour <span class="process-math">\(101\text{,}\)</span> la plus grande puissance qui est plus petite est <span class="process-math">\(2^6=64\text{.}\)</span> On a donc</div>
 <div class="displaymath process-math">
 \begin{equation*}
 101=d_62^6+d_{5}2^{5}+\cdots + d_12^1+d_02^0\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1220">
+</div> <div class="para logical" id="p-1219">
 <div class="para">Il faut ensuite choisir la plus grande valeur de <span class="process-math">\(d_n\)</span> possible de sorte que <span class="process-math">\(d_n b^n\)</span> soit inférieure au nombre <span class="process-math">\(n\text{.}\)</span> Pour la base deux, le choix est simple et sera toujours <span class="process-math">\(1\text{.}\)</span> Ainsi pour <span class="process-math">\(101\text{,}\)</span> on a <span class="process-math">\(d_6=1\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -666,7 +672,7 @@ $\Box$
 </div>
 </div>
 </div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-87" id="solution-87"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-87"><div class="solution solution-like"><div class="para logical" id="p-1221">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-86" id="solution-86"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-86"><div class="solution solution-like"><div class="para logical" id="p-1220">
 <div class="para">On montre une manière plus concise d’écrire le raisonnement précédent. La plus grande puissance de <span class="process-math">\(2\)</span> qui est inférieure ou égale à <span class="process-math">\(187\)</span> est <span class="process-math">\(128\text{.}\)</span> On a donc</div>
 <div class="displaymath process-math" id="md-33">
 \begin{align*}
@@ -688,7 +694,7 @@ $\Box$
 </div>
 </div></div></div>
 </div></article></div>
-<div class="para logical" id="p-1222">
+<div class="para logical" id="p-1221">
 <div class="para">En plus des nombres naturels, on peut aussi représenter les nombres négatifs ou même réels en d’autre base. Pour un nombre négatif, on se contentera de convertir le nombre en valeur absolue en binaire et d’ajouter un signe <span class="process-math">\(-\)</span> devant. Pour un ordinateur toutefois, la réalité est un peu plus complexe. Pour les nombres décimaux, on peut procéder d’une manière similaire à celles utilisées pour convertir d’une base à l’autre. Si on considère un nombre à virgule écrit en binaire (dont la partie entière sera <span class="process-math">\(0\text{,}\)</span> pour simplifier), par exemple <span class="process-math">\(0.1011001_2\text{,}\)</span> alors il suffit de poursuivre l’écriture en puissance avec des nombres négatifs:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -699,9 +705,9 @@ $\Box$
 </div>
 <article class="example example-like" id="example-37"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-37"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">D’une représentation binaire fractionnaire à décimale.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-37"><article class="example example-like"><div class="para" id="p-1223">On considère le nombre <span class="process-math">\(0.1011_2\)</span> et on cherche sa conversion en base dix.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-37"><article class="example example-like"><div class="para" id="p-1222">On considère le nombre <span class="process-math">\(0.1011_2\)</span> et on cherche sa conversion en base dix.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-88" id="solution-88"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-88"><div class="solution solution-like"><div class="para logical" id="p-1224">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-87" id="solution-87"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-87"><div class="solution solution-like"><div class="para logical" id="p-1223">
 <div class="para">On décompose le nombre selon les puissances négatives de <span class="process-math">\(2\)</span> pour obtenir</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -710,7 +716,7 @@ $\Box$
 </div>
 </div></div></div>
 </div></article></div>
-<div class="para" id="p-1225">Il est possible qu’un nombre ayant une représentation décimale finie possède une représentation binaire infinie, il faut donc bien choisir les exemples pour éviter que cela arrive. Dans la prochaine section, on verra comment convertir un nombre décimal qui devient à représentation infinie périodique. La table suivante pourra être utile.</div>
+<div class="para" id="p-1224">Il est possible qu’un nombre ayant une représentation décimale finie possède une représentation binaire infinie, il faut donc bien choisir les exemples pour éviter que cela arrive. Dans la prochaine section, on verra comment convertir un nombre décimal qui devient à représentation infinie périodique. La table suivante pourra être utile.</div>
 <figure class="table table-like" id="table-28"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.1.7<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines">Puissance de <span class="process-math">\(2\)</span>
@@ -737,9 +743,9 @@ $\Box$
 </tr>
 </table></div></figure><article class="example example-like" id="example-38"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-38"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">D’une représentation décimale fractionnaire à binaire.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-38"><article class="example example-like"><div class="para" id="p-1226">On veut convertir le nombre <span class="process-math">\(0.40625\)</span> en binaire.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-38"><article class="example example-like"><div class="para" id="p-1225">On veut convertir le nombre <span class="process-math">\(0.40625\)</span> en binaire.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-89" id="solution-89"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-89"><div class="solution solution-like"><div class="para logical" id="p-1227">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-88" id="solution-88"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-88"><div class="solution solution-like"><div class="para logical" id="p-1226">
 <div class="para">L’idée est la même que celle utilisée à l’exemple <a href="" class="xref" data-knowl="./knowl/ex-decimalebinaire.html" title="Exemple 3.1.5: De la base dix vers le binaire">3.1.5</a>. On cherche la plus grande puissance de <span class="process-math">\(2\)</span> qui est plus petite ou égale à <span class="process-math">\(0.40625\text{.}\)</span> Dans ce cas, c’est <span class="process-math">\(2^{-2}=0.25\text{.}\)</span> On a donc</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-decimalebinaire.html" id="md-34">
 \begin{align*}
@@ -757,9 +763,9 @@ $\Box$
 </div>
 </div></div></div>
 </div></article></div></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
-<span class="type">Sous-section</span> <span class="codenumber">3.1.3</span> <span class="title">Représentation en base hexadécimale</span>
+<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="space"> </span><span class="title">Représentation en base hexadécimale</span>
 </h3>
-<div class="para logical" id="p-1228">
+<div class="para logical" id="p-1227">
 <div class="para">La représentation binaire d’un nombre prend beaucoup plus de place que la représentation décimale. C’est un désavantage avec lequel on est prêt à vivre en informatique étant donné la simplicité d’un système à deux possibilités (ouvert-fermé, haut-bas, vrai-faux, etc.). On a dit au tout début de la section que n’importe quelle nombre <span class="process-math">\(b&gt;1\text{.}\)</span> Si <span class="process-math">\(b&gt;10\)</span> est un entier, quels symboles utilise-t-on pour représenter les nombres? L’un des systèmes les plus utilisés est le système hexadécimal. Celui-ci correspond à la base seize. Pour compléter l’ensemble des chiffres, on ajoute aux symboles les six premières lettres de l’alphabet, en majuscule. Ainsi, un nombre entier exprimé en hexadécimal sera de la forme</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -769,11 +775,11 @@ d_{n}\times 16^n + d_{n-1}\times 16^{n-1} +\cdots + d_{_1}\times 16^1 + d_{_0}\t
 <div class="para">avec tous les <span class="process-math">\(d_k\in \{0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F\}\text{.}\)</span> Dans les calculs, on se rappelera que <span class="process-math">\(A=10,B=11,C=12,D=13,E=14\)</span> et <span class="process-math">\(F=15\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-1229">Les nombres naturels de <span class="process-math">\(0\)</span> à <span class="process-math">\(3840\)</span> sont transformés en base seize dans la figure interactive ci-dessous.</div>
+<div class="para" id="p-1228">Les nombres naturels de <span class="process-math">\(0\)</span> à <span class="process-math">\(3840\)</span> sont transformés en base seize dans la figure interactive ci-dessous.</div>
 <figure class="figure figure-like" id="fig-repbas16"><iframe id="geog-repbase16" width="840" height="840" src="geog-repbase16-if.html"></iframe><div class="instructions">
-<a href="" data-knowl="" class="id-ref instructions-knowl original" data-refid="hk-instructions-5" id="instructions-5"><h4 class="heading"><span class="type">Instructions<span class="period">.</span></span></h4></a><div class="hidden-content tex2jax_ignore" id="hk-instructions-5"><div class="solution-like"><div class="para" id="p-1230">Le curseur <span class="process-math">\(n\)</span> représente le nombre en base dix. On peut voir sa conversion en représentation hexadécimale.</div></div></div>
+<a href="" data-knowl="" class="id-ref instructions-knowl original" data-refid="hk-instructions-5" id="instructions-5"><h4 class="heading"><span class="type">Instructions<span class="period">.</span></span></h4></a><div class="hidden-content tex2jax_ignore" id="hk-instructions-5"><div class="solution-like"><div class="para" id="p-1229">Le curseur <span class="process-math">\(n\)</span> représente le nombre en base dix. On peut voir sa conversion en représentation hexadécimale.</div></div></div>
 </div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.9<span class="period">.</span></span><span class="space"> </span>Les nombres de <span class="process-math">\(0\)</span> à <span class="process-math">\(3840\)</span> en base seize</figcaption></figure><div class="para" id="p-1231">Les méthodes pour convertir entre la base dix et seize sont identiques à celles pour convertir entre base dix et deux. On donne deux exemples ci-dessous. La table des premières puissances de <span class="process-math">\(16\)</span> est donné ici pour référence.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.9<span class="period">.</span></span><span class="space"> </span>Les nombres de <span class="process-math">\(0\)</span> à <span class="process-math">\(3840\)</span> en base seize</figcaption></figure><div class="para" id="p-1230">Les méthodes pour convertir entre la base dix et seize sont identiques à celles pour convertir entre base dix et deux. On donne deux exemples ci-dessous. La table des premières puissances de <span class="process-math">\(16\)</span> est donné ici pour référence.</div>
 <figure class="table table-like" id="table-29"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.1.10<span class="period">.</span></span><span class="space"> </span>Puissances de 16</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines">Puissance de seize</td>
@@ -801,9 +807,9 @@ d_{n}\times 16^n + d_{n-1}\times 16^{n-1} +\cdots + d_{_1}\times 16^1 + d_{_0}\t
 </tr>
 </table></div></figure><article class="example example-like" id="ex-decihexa"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-decihexa"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Conversion entre système décimal et système hexadécimal.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-decihexa"><article class="example example-like"><div class="para" id="p-1232">On veut convertir <span class="process-math">\(A0E2F3_{16}\)</span> en décimal et <span class="process-math">\(987654321\)</span> en hexadécimal.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-decihexa"><article class="example example-like"><div class="para" id="p-1231">On veut convertir <span class="process-math">\(A0E2F3_{16}\)</span> en décimal et <span class="process-math">\(987654321\)</span> en hexadécimal.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-90" id="solution-90"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-90"><div class="solution solution-like"><div class="para logical" id="p-1233">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-89" id="solution-89"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-89"><div class="solution solution-like"><div class="para logical" id="p-1232">
 <div class="para">La conversion d’hexadécimal vers la base dix étant plus simple, on débute par celle-ci. On a</div>
 <div class="displaymath process-math" id="md-35">
 \begin{align*}
@@ -816,9 +822,9 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 \end{align*}
 </div>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-91" id="solution-91"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-91"><div class="solution solution-like">
-<div class="para" id="p-1234">Pour la conversion de la base décimale vers la base seize, on regarde encore quelle est la plus grande puissance de seize qui est inférieure ou égale au nombre à convertir. Pour <span class="process-math">\(987654321\text{,}\)</span> c’est <span class="process-math">\(16^7=268435456\)</span> qui sera utilisé. Il y a toutefois une étape supplémentaire à considérer par rapport à la conversion au binaire. Combien de fois <span class="process-math">\(16^7\)</span> rentre-t-il dans <span class="process-math">\(987654321\text{?}\)</span> On utilise Sage pour faire ce calcul, en notant qu’à la section suivante on aura un opérateur spécial qui donnera directement la réponse, sans tenir compte de la partie fractionnaire.</div> <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-1"><script type="text/x-sage">987654321.0/16^7
-</script></pre> <div class="para logical" id="p-1235">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-90" id="solution-90"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-90"><div class="solution solution-like">
+<div class="para" id="p-1233">Pour la conversion de la base décimale vers la base seize, on regarde encore quelle est la plus grande puissance de seize qui est inférieure ou égale au nombre à convertir. Pour <span class="process-math">\(987654321\text{,}\)</span> c’est <span class="process-math">\(16^7=268435456\)</span> qui sera utilisé. Il y a toutefois une étape supplémentaire à considérer par rapport à la conversion au binaire. Combien de fois <span class="process-math">\(16^7\)</span> rentre-t-il dans <span class="process-math">\(987654321\text{?}\)</span> On utilise Sage pour faire ce calcul, en notant qu’à la section suivante on aura un opérateur spécial qui donnera directement la réponse, sans tenir compte de la partie fractionnaire.</div> <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-1"><script type="text/x-sage">987654321.0/16^7
+</script></pre> <div class="para logical" id="p-1234">
 <div class="para">Comme on obtient <span class="process-math">\(3.67929906026\text{,}\)</span> on déduit qu’on peut mettre trois puissances de <span class="process-math">\(16^7\text{,}\)</span> mais pas quatre. On a donc</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -828,9 +834,9 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 <div class="para">On poursuit les calculs avec Sage. Dans un premier temps, que reste-t-il si on soustrait <span class="process-math">\(3\times 16^7\)</span> à <span class="process-math">\(987654321\text{?}\)</span>
 </div>
 </div> <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-2"><script type="text/x-sage">987654321-3*16^7
-</script></pre> <div class="para" id="p-1236">La plus grande puissance de <span class="process-math">\(16\)</span> qui est plus petite que ce nombre est <span class="process-math">\(16^6\text{.}\)</span> En répétant la méthode ci-dessus, on calcule combien de fois cette puissance rentre dans <span class="process-math">\(182347953\text{.}\)</span>
+</script></pre> <div class="para" id="p-1235">La plus grande puissance de <span class="process-math">\(16\)</span> qui est plus petite que ce nombre est <span class="process-math">\(16^6\text{.}\)</span> En répétant la méthode ci-dessus, on calcule combien de fois cette puissance rentre dans <span class="process-math">\(182347953\text{.}\)</span>
 </div> <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-3"><script type="text/x-sage">182347953.0/16^6
-</script></pre> <div class="para logical" id="p-1237">
+</script></pre> <div class="para logical" id="p-1236">
 <div class="para">La puissance peut rentrer <span class="process-math">\(10\)</span> fois, ce qui veut dire que le symbole utilisé sera <span class="process-math">\(A\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -840,8 +846,8 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 </div>
 <div class="para">On soustrait <span class="process-math">\(10\times 16^6\)</span> de <span class="process-math">\(182347953\)</span> pour obtenir le reste.</div>
 </div> <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-4"><script type="text/x-sage">182347953-10*16^6
-</script></pre> <div class="para" id="p-1238">On effectue une dernière étape complète avant de donner la réponse. Le reste pourra être complété en exercice. La cinquième puissance de <span class="process-math">\(16\)</span> sera la prochaine à être utilisée.</div> <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-5"><script type="text/x-sage">14575793.0/16^5
-</script></pre> <div class="para logical" id="p-1239">
+</script></pre> <div class="para" id="p-1237">On effectue une dernière étape complète avant de donner la réponse. Le reste pourra être complété en exercice. La cinquième puissance de <span class="process-math">\(16\)</span> sera la prochaine à être utilisée.</div> <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-5"><script type="text/x-sage">14575793.0/16^5
+</script></pre> <div class="para logical" id="p-1238">
 <div class="para">On peut donc mettre <span class="process-math">\(13\)</span> fois <span class="process-math">\(16^5\)</span> dans <span class="process-math">\(14575793\text{,}\)</span> ce qui signifie que le symbole utilisé sera <span class="process-math">\(D\text{.}\)</span> On aura</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -850,7 +856,7 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 </div>
 <div class="para">Le reste sera égal à <span class="process-math">\(944305\)</span> , comme le montre le calcul ci-dessous.</div>
 </div> <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-6"><script type="text/x-sage">14575793-13*16^5
-</script></pre> <div class="para logical" id="p-1240">
+</script></pre> <div class="para logical" id="p-1239">
 <div class="para">Au final, on peut montrer que</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-hexaafinir.html">
 \begin{equation*}
@@ -861,7 +867,7 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 </div>
 </div></div>
 </div></article></div>
-<div class="para logical" id="p-1241">
+<div class="para logical" id="p-1240">
 <div class="para">La base hexadécimale est beaucoup utilisée en informatique, car on peut passer facilement de binaire à hexadécimale ou l’inverse sans passer par l’intermédiaire de la base dix. De plus, un nombre en base seize est moins long à écrire qu’un nombre en base deux (en terme de nombre de caractère à utiliser). Pour voir comment passer de la base deux vers la base hexadécimale, on considère l’exemple suivant. On veut convertir le nombre <span class="process-math">\(110110010110_{2}\)</span> sous forme hexadécimale. Exprimé sous forme de puissances de deux, ce nombre est</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -883,37 +889,37 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 \end{align}
 </div>
 </div>
-<div class="para" id="p-1242">On remarque que les chiffres <span class="process-math">\(\{1,0\}\)</span> dans les parenthèses de l’équation <a href="" class="xref" data-knowl="./knowl/eq-bintohex.html" title="Équation">(✶)</a> sont les mêmes chiffres que ceux de la représentation binaire, séparés en groupe de quatre. Pourquoi quatre? Parce que tel qu’observé, en effectuant une mise en évidence pour un groupe de quatre, on obtient des puissances de seize. L’algorithme suivant décrit la procédure pour convertir un nombre binaire en hexadécimal et hexadécimal en binaire</div>
+<div class="para" id="p-1241">On remarque que les chiffres <span class="process-math">\(\{1,0\}\)</span> dans les parenthèses de l’équation <a href="" class="xref" data-knowl="./knowl/eq-bintohex.html" title="Équation">(✶)</a> sont les mêmes chiffres que ceux de la représentation binaire, séparés en groupe de quatre. Pourquoi quatre? Parce que tel qu’observé, en effectuant une mise en évidence pour un groupe de quatre, on obtient des puissances de seize. L’algorithme suivant décrit la procédure pour convertir un nombre binaire en hexadécimal et hexadécimal en binaire</div>
 <article class="algorithm theorem-like" id="algo-binhex"><h4 class="heading">
 <span class="type">Algorithme</span><span class="space"> </span><span class="codenumber">3.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Conversion entre binaire et hexadécimale.</span>
 </h4>
-<div class="para logical" id="p-1243">
+<div class="para logical" id="p-1242">
 <div class="para">Pour convertir un nombre binaire en hexadécimale, on effectue les étapes suivantes.</div>
 <ol class="decimal">
-<li id="li-300"><div class="para" id="p-1244">De droite à gauche, sépare les chiffres en groupe de quatre. Si le groupe à gauche ne contient pas quatre chiffres, on comble avec des zéros à sa gauche.</div></li>
-<li id="li-301"><div class="para" id="p-1245">On convertit chaque groupe de quatre en une valeur de <span class="process-math">\(0\)</span> à <span class="process-math">\(15\text{,}\)</span> en associant <span class="process-math">\(10=A,11=B,12=C,13=D,14=E\)</span> et <span class="process-math">\(15=F\)</span> si nécessaire.</div></li>
-<li id="li-302"><div class="para" id="p-1246">En juxtaposant les chiffres obtenus, on obtient la représentation en hexadécimale.</div></li>
+<li id="li-300"><div class="para" id="p-1243">De droite à gauche, sépare les chiffres en groupe de quatre. Si le groupe à gauche ne contient pas quatre chiffres, on comble avec des zéros à sa gauche.</div></li>
+<li id="li-301"><div class="para" id="p-1244">On convertit chaque groupe de quatre en une valeur de <span class="process-math">\(0\)</span> à <span class="process-math">\(15\text{,}\)</span> en associant <span class="process-math">\(10=A,11=B,12=C,13=D,14=E\)</span> et <span class="process-math">\(15=F\)</span> si nécessaire.</div></li>
+<li id="li-302"><div class="para" id="p-1245">En juxtaposant les chiffres obtenus, on obtient la représentation en hexadécimale.</div></li>
 </ol>
-</div> <div class="para logical" id="p-1247">
+</div> <div class="para logical" id="p-1246">
 <div class="para">En inversant ce processus on peut aussi convertir d’hexadécimal à binaire.</div>
 <ol class="decimal">
-<li id="li-303"><div class="para" id="p-1248">Convertir chaque caractère du nombre hexadecimal en binaire, en ajoutant des zéros à la gauche au besoin pour former des groupes de quatre chiffres.</div></li>
-<li id="li-304"><div class="para" id="p-1249">Regrouper les groupes en un seul nombre.</div></li>
-<li id="li-305"><div class="para" id="p-1250">Supprimer les zéros complètement à gauche si nécessaire.</div></li>
+<li id="li-303"><div class="para" id="p-1247">Convertir chaque caractère du nombre hexadecimal en binaire, en ajoutant des zéros à la gauche au besoin pour former des groupes de quatre chiffres.</div></li>
+<li id="li-304"><div class="para" id="p-1248">Regrouper les groupes en un seul nombre.</div></li>
+<li id="li-305"><div class="para" id="p-1249">Supprimer les zéros complètement à gauche si nécessaire.</div></li>
 </ol>
-</div></article><div class="para" id="p-1251">On montre des exemples additionnels de cette procédure dans l’exemple suivant.</div>
+</div></article><div class="para" id="p-1250">On montre des exemples additionnels de cette procédure dans l’exemple suivant.</div>
 <article class="example example-like" id="example-40"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-40"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Des conversions entre binaire et hexadécimal.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-40"><article class="example example-like"><div class="para" id="p-1252">On veut convertir les nombres <span class="process-math">\(101110_2\)</span> et <span class="process-math">\(1001001_2\)</span> en hexadécimal et les nombres <span class="process-math">\(1234_{16}\)</span> et <span class="process-math">\(BEBE2020_{16}\)</span> en binaire.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-40"><article class="example example-like"><div class="para" id="p-1251">On veut convertir les nombres <span class="process-math">\(101110_2\)</span> et <span class="process-math">\(1001001_2\)</span> en hexadécimal et les nombres <span class="process-math">\(1234_{16}\)</span> et <span class="process-math">\(BEBE2020_{16}\)</span> en binaire.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-92" id="solution-92"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-92"><div class="solution solution-like"><div class="para" id="p-1253">On commence par convertir les nombres binaires en base seize. Pour <span class="process-math">\(101110_2\text{,}\)</span> on forme les groupes <span class="process-math">\(0010\,1110\text{,}\)</span> ayant pris soin d’ajouter deux zéros à la gauche du premier bloc. Ces nombres correspondent respectivement à <span class="process-math">\(2\)</span> et <span class="process-math">\(14=E\)</span> en hexadécimal et donc, <span class="process-math">\(101110_2=2E_{16}\text{.}\)</span> D’une manière similaire, <span class="process-math">\(1001001_2\)</span> se regroupe comme <span class="process-math">\(0100\,1001\text{,}\)</span> qui se convertissent comme <span class="process-math">\(4\)</span> et <span class="process-math">\(9\text{,}\)</span> pour donner <span class="process-math">\(1001001_2=49_{16}\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-91" id="solution-91"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-91"><div class="solution solution-like"><div class="para" id="p-1252">On commence par convertir les nombres binaires en base seize. Pour <span class="process-math">\(101110_2\text{,}\)</span> on forme les groupes <span class="process-math">\(0010\,1110\text{,}\)</span> ayant pris soin d’ajouter deux zéros à la gauche du premier bloc. Ces nombres correspondent respectivement à <span class="process-math">\(2\)</span> et <span class="process-math">\(14=E\)</span> en hexadécimal et donc, <span class="process-math">\(101110_2=2E_{16}\text{.}\)</span> D’une manière similaire, <span class="process-math">\(1001001_2\)</span> se regroupe comme <span class="process-math">\(0100\,1001\text{,}\)</span> qui se convertissent comme <span class="process-math">\(4\)</span> et <span class="process-math">\(9\text{,}\)</span> pour donner <span class="process-math">\(1001001_2=49_{16}\text{.}\)</span>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-93" id="solution-93"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-93"><div class="solution solution-like"><div class="para" id="p-1254">Pour convertir les nombres hexadecimaux en binaire, on suit la procédure établie dans l’algorithme <a href="" class="xref" data-knowl="./knowl/algo-binhex.html" title="Algorithme 3.1.12: Conversion entre binaire et hexadécimale">3.1.12</a>. Pour <span class="process-math">\(1234_{16}\text{,}\)</span> on obtient <span class="process-math">\(0001\,0010\,0011\,0100\text{,}\)</span> ce qui donne en regroupant et en éliminant les zéros de gauche <span class="process-math">\(1234_{16}=1001000110100_2\text{.}\)</span> Ensuite pour <span class="process-math">\(BEBE2020_{16}\text{,}\)</span> on a <span class="process-math">\(1011\,1110\,1011\,1110\,0010\,0000\,0010\,0000\text{,}\)</span> ce qui donne <span class="process-math">\(BEBE2020_{16}=10111110101111100010000000100000_2\text{.}\)</span> On voit bien ici l’avantage du système hexadécimal pour la longueur du nombre.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-92" id="solution-92"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-92"><div class="solution solution-like"><div class="para" id="p-1253">Pour convertir les nombres hexadecimaux en binaire, on suit la procédure établie dans l’algorithme <a href="" class="xref" data-knowl="./knowl/algo-binhex.html" title="Algorithme 3.1.12: Conversion entre binaire et hexadécimale">3.1.12</a>. Pour <span class="process-math">\(1234_{16}\text{,}\)</span> on obtient <span class="process-math">\(0001\,0010\,0011\,0100\text{,}\)</span> ce qui donne en regroupant et en éliminant les zéros de gauche <span class="process-math">\(1234_{16}=1001000110100_2\text{.}\)</span> Ensuite pour <span class="process-math">\(BEBE2020_{16}\text{,}\)</span> on a <span class="process-math">\(1011\,1110\,1011\,1110\,0010\,0000\,0010\,0000\text{,}\)</span> ce qui donne <span class="process-math">\(BEBE2020_{16}=10111110101111100010000000100000_2\text{.}\)</span> On voit bien ici l’avantage du système hexadécimal pour la longueur du nombre.</div></div></div>
 </div></article></div></section><section class="subsection" id="subsection-24"><h3 class="heading hide-type">
-<span class="type">Sous-section</span> <span class="codenumber">3.1.4</span> <span class="title">Opérations élémentaires en base deux</span>
+<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="space"> </span><span class="title">Opérations élémentaires en base deux</span>
 </h3>
-<div class="para" id="p-1255">On s’intéresse maintenant à l’arithmétique dans les autres bases. Par simplicité, on n’utilise que le binaire, mais les opérations dans les autres bases se font essentiellement de la même manière.</div>
-<div class="para logical" id="p-1256">
+<div class="para" id="p-1254">On s’intéresse maintenant à l’arithmétique dans les autres bases. Par simplicité, on n’utilise que le binaire, mais les opérations dans les autres bases se font essentiellement de la même manière.</div>
+<div class="para logical" id="p-1255">
 <div class="para">Pour additionner deux nombres, on apprend assez tôt de faire l’addition position par position, en appliquant la retenue lorsque la somme des chiffres d’une même colonne dépasse dix. Le principe est le même en binaire, toutefois les retenues arrivent dès que la somme est supérieure ou égale à deux. En binaire, <span class="process-math">\(1_2+1_2=10_2\text{.}\)</span> Voici un exemple d’addition de <span class="process-math">\(110101_2\)</span> et <span class="process-math">\(101110_2\)</span> en base deux.</div>
 <div class="displaymath process-math" id="md-37">
 \begin{alignat*}{6}
@@ -925,7 +931,7 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 </div>
 <div class="para">Dans la colonne à droite de cet exemple, on effectue <span class="process-math">\(1+1\)</span> en binaire. Le résultat donne <span class="process-math">\(10_2\text{,}\)</span> d’où le <span class="process-math">\(0\)</span> dans la troisième ligne et le <span class="process-math">\(1\)</span> dans la ligne des retenues. Ensuite, on additionne cette retenue avec le <span class="process-math">\(0\)</span> et le <span class="process-math">\(1\)</span> de cette colonne. Ceci donne encore une fois <span class="process-math">\(1+0+1=10_2\text{,}\)</span> entrainant une autre retenue dans la colonne à gauche. Cette fois, pour la troisième colonne, il y a deux <span class="process-math">\(1\)</span> à additionner en plus de la retenue. Cela donne <span class="process-math">\(1+1+1=11_2\text{,}\)</span> expliquant pourquoi dans la réponse on obtient un <span class="process-math">\(1\)</span> ainsi que dans la retenue. On poursuit ensuite de droite à gauche jusqu’à épuisement des nombres et des retenues.</div>
 </div>
-<div class="para logical" id="p-1257">
+<div class="para logical" id="p-1256">
 <div class="para">Les soustractions fonctionnent aussi de manière similaire à l’arithmétique en base dix. Au lieu d’avoir des retenues, on fait des emprunts lorsqu’on doit soustraire <span class="process-math">\(1\)</span> à <span class="process-math">\(0\text{.}\)</span> Dans ce cas, la soustraction <span class="process-math">\(0_2-1_2\)</span>  devient <span class="process-math">\(10_2-1_2=1_2\)</span> après emprunt, et l’emprunt se fait vers la gauche sur le prochain chiffre non nul (on ne peut emprunter à un <span class="process-math">\(0\)</span>). Voici un exemple de la soustraction de <span class="process-math">\(1100101_2\)</span> et <span class="process-math">\(1001010_2\text{.}\)</span>
 </div>
 <div class="displaymath process-math" id="md-38">
@@ -937,9 +943,9 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 \end{alignat*}
 </div>
 </div>
-<div class="para" id="p-1258">Dans la deuxième colonne, il a été nécessaire de faire un emprunt. On a donc remplacé le <span class="process-math">\(0\)</span> de la première colonne par <span class="process-math">\(10_2\)</span> et en soustrayant le <span class="process-math">\(1\text{,}\)</span> on obtient <span class="process-math">\(10_2-1_2=1_2\text{.}\)</span> Il a aussi fallu emprunter dans la troisième colonne. Comme la quatrième est aussi nulle, on emprunte à la cinquième, ainsi <span class="process-math">\(100_2\)</span> devient <span class="process-math">\(011_2\)</span> avec le dernier <span class="process-math">\(1\)</span> considéré comme <span class="process-math">\(10_2\text{.}\)</span> La troisième colonne devient <span class="process-math">\(10_2-1_2=1_2\text{,}\)</span> la quatrième <span class="process-math">\(1_2-0_2=1_2\)</span> et la cinquième <span class="process-math">\(0_2-0_2=0_2\text{.}\)</span> Finalement, la dernière colonne est <span class="process-math">\(1_2-1_2=0_2\text{.}\)</span> Au final on a <span class="process-math">\(1100101_2-1001010_2=11011_2\text{.}\)</span>
+<div class="para" id="p-1257">Dans la deuxième colonne, il a été nécessaire de faire un emprunt. On a donc remplacé le <span class="process-math">\(0\)</span> de la première colonne par <span class="process-math">\(10_2\)</span> et en soustrayant le <span class="process-math">\(1\text{,}\)</span> on obtient <span class="process-math">\(10_2-1_2=1_2\text{.}\)</span> Il a aussi fallu emprunter dans la troisième colonne. Comme la quatrième est aussi nulle, on emprunte à la cinquième, ainsi <span class="process-math">\(100_2\)</span> devient <span class="process-math">\(011_2\)</span> avec le dernier <span class="process-math">\(1\)</span> considéré comme <span class="process-math">\(10_2\text{.}\)</span> La troisième colonne devient <span class="process-math">\(10_2-1_2=1_2\text{,}\)</span> la quatrième <span class="process-math">\(1_2-0_2=1_2\)</span> et la cinquième <span class="process-math">\(0_2-0_2=0_2\text{.}\)</span> Finalement, la dernière colonne est <span class="process-math">\(1_2-1_2=0_2\text{.}\)</span> Au final on a <span class="process-math">\(1100101_2-1001010_2=11011_2\text{.}\)</span>
 </div>
-<div class="para logical" id="p-1259">
+<div class="para logical" id="p-1258">
 <div class="para">On veut maintenant effectuer une multiplication de deux nombres binaires. L’algorithme utilisé pour faire une multiplication en base dix peut être repris, mais on utilise une approche différente, similaire à la manière dont les ordinateurs font les calculs. Celle-ci exploite le fait que multiplié un nombre par une puissance de deux est équivalents à ajouter un certain nombre de zéros à la fin, comme multiplié par <span class="process-math">\(10,100,1000,\)</span> etc. en base dix. Par exemple, pour faire <span class="process-math">\(1101_2\times 100_2\)</span> on a</div>
 <div class="displaymath process-math" id="md-39">
 \begin{align*}
@@ -950,12 +956,12 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 \end{align*}
 </div>
 </div>
-<div class="para" id="p-1260">De manière plus générale, on ajoute autant de zéros qu’il y en a dans l’écriture de la puissance de deux.Pour un produit quelconque, on va décomposer l’un des facteur selon ses puissances de deux, distribuer sur l’autre facteur et additionner les nombres obtenus.</div>
+<div class="para" id="p-1259">De manière plus générale, on ajoute autant de zéros qu’il y en a dans l’écriture de la puissance de deux.Pour un produit quelconque, on va décomposer l’un des facteur selon ses puissances de deux, distribuer sur l’autre facteur et additionner les nombres obtenus.</div>
 <article class="example example-like" id="example-41"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-41"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Une multiplication binaire.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-41"><article class="example example-like"><div class="para" id="p-1261">On veut effectuer le produit de <span class="process-math">\(1001_2\)</span> par <span class="process-math">\(1010_2\)</span> en décomposant <span class="process-math">\(1010_2\)</span> selon ses puissances.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-41"><article class="example example-like"><div class="para" id="p-1260">On veut effectuer le produit de <span class="process-math">\(1001_2\)</span> par <span class="process-math">\(1010_2\)</span> en décomposant <span class="process-math">\(1010_2\)</span> selon ses puissances.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-94" id="solution-94"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-94"><div class="solution solution-like"><div class="para logical" id="p-1262">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-93" id="solution-93"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-93"><div class="solution solution-like"><div class="para logical" id="p-1261">
 <div class="para">Puisque <span class="process-math">\(1010_2=1000_2+0010_2\text{,}\)</span> on aura</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -972,13 +978,13 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 </div>
 </div></div></div>
 </div></article></div>
-<div class="para" id="p-1263">Si on veut multiplier des nombres réels avec un nombre fini de chiffre après le point, on procède comme suit. Une puissance négative de deux équivaut à déplacer le point vers la gauche, de un chiffre par valeur de <span class="process-math">\(n\)</span> dans <span class="process-math">\(2^{-n}\text{.}\)</span> Ainsi, <span class="process-math">\(1101.01_2\times 0.01_2=11.0101\text{,}\)</span> puisque <span class="process-math">\(0.01_2=2^{-2}\text{.}\)</span> On considère un exemple plus complexe.</div>
+<div class="para" id="p-1262">Si on veut multiplier des nombres réels avec un nombre fini de chiffre après le point, on procède comme suit. Une puissance négative de deux équivaut à déplacer le point vers la gauche, de un chiffre par valeur de <span class="process-math">\(n\)</span> dans <span class="process-math">\(2^{-n}\text{.}\)</span> Ainsi, <span class="process-math">\(1101.01_2\times 0.01_2=11.0101\text{,}\)</span> puisque <span class="process-math">\(0.01_2=2^{-2}\text{.}\)</span> On considère un exemple plus complexe.</div>
 <article class="example example-like" id="example-42"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-42"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplication binaire de nombres réels.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-42"><article class="example example-like"><div class="para" id="p-1264">On veut effectuer <span class="process-math">\(10011.1011_2\times 101.101_2\text{.}\)</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-42"><article class="example example-like"><div class="para" id="p-1263">On veut effectuer <span class="process-math">\(10011.1011_2\times 101.101_2\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-95" id="solution-95"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-95"><div class="solution solution-like"><div class="para logical" id="p-1265">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-94" id="solution-94"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-94"><div class="solution solution-like"><div class="para logical" id="p-1264">
 <div class="para">En suivant la méthode pour les entiers, on décompose l’un des facteur en une somme de de puissances de deux. Ici, on choisit de décomposer le deuxième facteur, puisqu’il contient moins de chiffre. On a</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -999,7 +1005,7 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 </div>
 </div></div></div>
 </div></article></div>
-<div class="para" id="p-1266">Finalement, la division en binaire s’effectue aussi comme la division en base dix, en cherchant combien de fois on peut mettre ce par quoi on divise dans le nombre divisé. Une fois que suffisamment de chiffres du dividende (le nombre qui est divisé) ont été considérés pour que le diviseur puisse être soustrait au moins une fois, on utilise les autres chiffres du dividende de droite à gauche en abaissant un à un après la soustraction. Un exemple est illustré ci-dessous.</div>
+<div class="para" id="p-1265">Finalement, la division en binaire s’effectue aussi comme la division en base dix, en cherchant combien de fois on peut mettre ce par quoi on divise dans le nombre divisé. Une fois que suffisamment de chiffres du dividende (le nombre qui est divisé) ont été considérés pour que le diviseur puisse être soustrait au moins une fois, on utilise les autres chiffres du dividende de droite à gauche en abaissant un à un après la soustraction. Un exemple est illustré ci-dessous.</div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -1042,7 +1048,7 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
-<div class="para" id="p-1267">Pour la division binaire, les chiffres du quotient (la réponse) ne peuvent être que <span class="process-math">\(1\)</span> ou <span class="process-math">\(0\text{.}\)</span> On revoit la même division que ci-dessous, mais en binaire, soit <span class="process-math">\(1011101001_2 \div 11_2\text{.}\)</span>
+<div class="para" id="p-1266">Pour la division binaire, les chiffres du quotient (la réponse) ne peuvent être que <span class="process-math">\(1\)</span> ou <span class="process-math">\(0\text{.}\)</span> On revoit la même division que ci-dessous, mais en binaire, soit <span class="process-math">\(1011101001_2 \div 11_2\text{.}\)</span>
 </div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -1131,13 +1137,13 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
-<div class="para" id="p-1268">On pourra vérifier que <span class="process-math">\(11111000_2=248\)</span> et bien sûr, <span class="process-math">\(1_2=1\text{.}\)</span> On considère un autre exemple.</div>
+<div class="para" id="p-1267">On pourra vérifier que <span class="process-math">\(11111000_2=248\)</span> et bien sûr, <span class="process-math">\(1_2=1\text{.}\)</span> On considère un autre exemple.</div>
 <article class="example example-like" id="example-43"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-example-43"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.1.16</span><span class="period">.</span><span class="space"> </span><span class="title">Division en binaire.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-43"><article class="example example-like"><div class="para" id="p-1269">On souhaite effectuer la division de <span class="process-math">\(218\)</span> par <span class="process-math">\(22\)</span> en binaire.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-43"><article class="example example-like"><div class="para" id="p-1268">On souhaite effectuer la division de <span class="process-math">\(218\)</span> par <span class="process-math">\(22\)</span> en binaire.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-96" id="solution-96"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-96"><div class="solution solution-like">
-<div class="para" id="p-1270">On commence par convertir les nombres en binaire. Pour <span class="process-math">\(218\text{,}\)</span> on obtient <span class="process-math">\(11011010_2=218\)</span> et pour <span class="process-math">\(22\text{,}\)</span> c’est <span class="process-math">\(10110_2=22\text{.}\)</span> Le résultat de la division est donné ci-dessous.</div> <div class="tabular-box natural-width"><table class="tabular">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-95" id="solution-95"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-95"><div class="solution solution-like">
+<div class="para" id="p-1269">On commence par convertir les nombres en binaire. Pour <span class="process-math">\(218\text{,}\)</span> on obtient <span class="process-math">\(11011010_2=218\)</span> et pour <span class="process-math">\(22\text{,}\)</span> c’est <span class="process-math">\(10110_2=22\text{.}\)</span> Le résultat de la division est donné ci-dessous.</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(11011(\cancel{0}10)_2\)</span></td>
@@ -1186,14 +1192,14 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 </table></div>
 </div></div>
 </div></article></div>
-<div class="para" id="p-1271">La division de réels est bien sûr possible, mais on se restreint à la division de nombres naturels.</div></section><section class="subsection" id="subsection-25"><h3 class="heading hide-type">
-<span class="type">Sous-section</span> <span class="codenumber">3.1.5</span> <span class="title">Représentation en circuits d’opérations binaires</span>
+<div class="para" id="p-1270">La division de réels est bien sûr possible, mais on se restreint à la division de nombres naturels.</div></section><section class="subsection" id="subsection-25"><h3 class="heading hide-type">
+<span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="space"> </span><span class="title">Représentation en circuits d’opérations binaires</span>
 </h3>
-<div class="para" id="p-1272">À l’exercice <a href="" class="xref" data-knowl="./knowl/exo-demiadditionneur.html" title="Question de compréhension 2.4.3.5">2.4.3.5</a>, on définit un circuit à deux entrées et deux sorties. Ce circuit est appelé un demi-additionneur. Étant donné deux entrées binaires, il retourne leur somme comme un nombre à deux chiffres, la puissance de <span class="process-math">\(2^0\)</span> comme somme <span class="process-math">\(S\)</span> et la puissance de <span class="process-math">\(2^1\)</span> comme retenue <span class="process-math">\(R\text{.}\)</span> Ainsi, <span class="process-math">\(0_2+1_2=1_2\)</span> sera retournée comme <span class="process-math">\(S=1\)</span> et <span class="process-math">\(R=0\text{,}\)</span> alors que <span class="process-math">\(1_2+1_2=10_2\)</span> sera retournée comme <span class="process-math">\(S=0\)</span> et <span class="process-math">\(R=1\text{.}\)</span>
+<div class="para" id="p-1271">À l’exercice <a href="" class="xref" data-knowl="./knowl/exo-demiadditionneur.html" title="Question de compréhension 2.4.3.5">2.4.3.5</a>, on définit un circuit à deux entrées et deux sorties. Ce circuit est appelé un demi-additionneur. Étant donné deux entrées binaires, il retourne leur somme comme un nombre à deux chiffres, la puissance de <span class="process-math">\(2^0\)</span> comme somme <span class="process-math">\(S\)</span> et la puissance de <span class="process-math">\(2^1\)</span> comme retenue <span class="process-math">\(R\text{.}\)</span> Ainsi, <span class="process-math">\(0_2+1_2=1_2\)</span> sera retournée comme <span class="process-math">\(S=1\)</span> et <span class="process-math">\(R=0\text{,}\)</span> alors que <span class="process-math">\(1_2+1_2=10_2\)</span> sera retournée comme <span class="process-math">\(S=0\)</span> et <span class="process-math">\(R=1\text{.}\)</span>
 </div>
-<div class="para" id="p-1273">On peut maintenant considérer l’addition binaire générale. Une addition se fait colonne par colonne. La somme d’une colonne est obtenue en faisant la somme des chiffres des nombres à additionner plus la retenue de la colonne précédente, le cas échéant. On va maintenant construire le circuit effectuant cette opération. Dans ce circuit, on note <span class="process-math">\(A\)</span> le chiffre du premier terme de l’addition, <span class="process-math">\(B\)</span> le second, <span class="process-math">\(P\)</span> la retenue de la colonne précédente, <span class="process-math">\(S\)</span> la somme de la colonne et <span class="process-math">\(R\)</span> la nouvelle retenue. La figure <a href="" class="xref" data-knowl="./knowl/fig-additionneur.html" title="Figure 3.1.17">3.1.17</a> illustre l’additionneur.</div>
+<div class="para" id="p-1272">On peut maintenant considérer l’addition binaire générale. Une addition se fait colonne par colonne. La somme d’une colonne est obtenue en faisant la somme des chiffres des nombres à additionner plus la retenue de la colonne précédente, le cas échéant. On va maintenant construire le circuit effectuant cette opération. Dans ce circuit, on note <span class="process-math">\(A\)</span> le chiffre du premier terme de l’addition, <span class="process-math">\(B\)</span> le second, <span class="process-math">\(P\)</span> la retenue de la colonne précédente, <span class="process-math">\(S\)</span> la somme de la colonne et <span class="process-math">\(R\)</span> la nouvelle retenue. La figure <a href="" class="xref" data-knowl="./knowl/fig-additionneur.html" title="Figure 3.1.17">3.1.17</a> illustre l’additionneur.</div>
 <figure class="figure figure-like" id="fig-additionneur"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/additionneur.svg" class="contained" alt="Une circuit à trois entrées et deux sorties est illustré. Les entrées A et B se combinent dans une porte XOR et dans une porte ET. Le résultat de la porte XOR se combine dans une autre porte XOR avec l’entrée P pour donner la sortie S. Puis la première porte XOR se combine encore avec P, mais cette fois-ci dans une porte ET. Le résultat des deux portes ET se combinent dans une porte OU pour produire la sortie R."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.17<span class="period">.</span></span><span class="space"> </span>Un circuit additionneur</figcaption></figure><div class="para" id="p-1274">On peut comprendre le circuit en considérant la table de vérité de l’opération <span class="process-math">\(A+B+P\)</span> et en utilisant une forme normale. La table est donnée ci-dessous</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.17<span class="period">.</span></span><span class="space"> </span>Un circuit additionneur</figcaption></figure><div class="para" id="p-1273">On peut comprendre le circuit en considérant la table de vérité de l’opération <span class="process-math">\(A+B+P\)</span> et en utilisant une forme normale. La table est donnée ci-dessous</div>
 <figure class="table table-like" id="table-30"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.1.18<span class="period">.</span></span><span class="space"> </span>L’addition de deux chiffres et une retenue en binaire</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(A\)</span></td>
@@ -1258,7 +1264,7 @@ A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 </tr>
-</table></div></figure><div class="para logical" id="p-1275">
+</table></div></figure><div class="para logical" id="p-1274">
 <div class="para">On regarde l’expression pour <span class="process-math">\(S\)</span> à l’aide de la forme normale disjonctive. La sortie <span class="process-math">\(S\)</span> sera égale à <span class="process-math">\(1\)</span> si <span class="process-math">\((\neg A\wedge \neg B\wedge P)\vee (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)\text{.}\)</span> On peut ensuite utiliser les règles de la logique pour simplifier un peu l’expression.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negationxor.html ./knowl/exo-circuitretenue.html" id="md-42">
 \begin{align*}
@@ -1274,311 +1280,311 @@ S&amp;\equiv(\neg A\wedge \neg B\wedge P)\vee (\neg A \wedge B \wedge\neg P)\vee
 <div class="para">L’exercice <a href="" class="xref" data-knowl="./knowl/exo-circuitretenue.html" title="Exercice 3.1.7.12">3.1.7.12</a> permettra de montrer que <span class="process-math">\(R\equiv ((A\oplus B)\wedge P)\vee (A\wedge B)\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-1276">On observe dans le circuit de l’additionneur la présence de deux circuits demi-additionneurs, illustrés par les boites dans le circuit équivalent de la figure <a href="" class="xref" data-knowl="./knowl/fig-additionneurreduit.html" title="Figure 3.1.19">3.1.19</a>.</div>
+<div class="para" id="p-1275">On observe dans le circuit de l’additionneur la présence de deux circuits demi-additionneurs, illustrés par les boites dans le circuit équivalent de la figure <a href="" class="xref" data-knowl="./knowl/fig-additionneurreduit.html" title="Figure 3.1.19">3.1.19</a>.</div>
 <figure class="figure figure-like" id="fig-additionneurreduit"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/additionneurreduit.svg" class="contained" alt="Une circuit à trois entrées et deux sorties est illustré. Les entrées A et B se combinent dans un circuit demi-additionneur. La sortie S de ce circuit se combine dans un autre circuit demi-additionneur avec l’entrée P. La sortie S de ce second demi-additionneur produit la sortie S globale du circuit. Puis, les sorties R des deux demi-additionneurs se combinent pour produire la sortie globale R du circuit."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.19<span class="period">.</span></span><span class="space"> </span>Un circuit additionneur réduit grâce aux circuits demi-additonneurs</figcaption></figure><div class="para" id="p-1277">Maintenant, à partir de plusieurs combinaisons de circuits additionneurs, on peut illustrer comment faire l’addition de deux nombres binaires. La quantité de circuits additionneurs à utiliser dépend du nombres de chiffres utilisés pour représenter les nombres. Dans la figure <a href="" class="xref" data-knowl="./knowl/fig-additionneur4bits.html" title="Figure 3.1.20">3.1.20</a>, on illustre un circuit permettant de faire l’addition de nombres binaires écrits avec quatre chiffres. La sortie d’un tel système sera un nombre à cinq chiffres, avec potentiellement le premier de ces chiffres égal à zéro. Pour faire <span class="process-math">\(A+B=S\text{,}\)</span> on suppose que <span class="process-math">\(A=(A_3A_2A_1A_0)_2\text{,}\)</span> <span class="process-math">\(B=(B_3B_2B_1B_0)_2\)</span> et <span class="process-math">\(S=(S_4S_3S_2S_1S_0)_2\text{.}\)</span> Le circuit additionne, de haut en bas, les chiffres de droite à gauche de <span class="process-math">\(A\)</span> et <span class="process-math">\(B\text{.}\)</span>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.19<span class="period">.</span></span><span class="space"> </span>Un circuit additionneur réduit grâce aux circuits demi-additonneurs</figcaption></figure><div class="para" id="p-1276">Maintenant, à partir de plusieurs combinaisons de circuits additionneurs, on peut illustrer comment faire l’addition de deux nombres binaires. La quantité de circuits additionneurs à utiliser dépend du nombres de chiffres utilisés pour représenter les nombres. Dans la figure <a href="" class="xref" data-knowl="./knowl/fig-additionneur4bits.html" title="Figure 3.1.20">3.1.20</a>, on illustre un circuit permettant de faire l’addition de nombres binaires écrits avec quatre chiffres. La sortie d’un tel système sera un nombre à cinq chiffres, avec potentiellement le premier de ces chiffres égal à zéro. Pour faire <span class="process-math">\(A+B=S\text{,}\)</span> on suppose que <span class="process-math">\(A=(A_3A_2A_1A_0)_2\text{,}\)</span> <span class="process-math">\(B=(B_3B_2B_1B_0)_2\)</span> et <span class="process-math">\(S=(S_4S_3S_2S_1S_0)_2\text{.}\)</span> Le circuit additionne, de haut en bas, les chiffres de droite à gauche de <span class="process-math">\(A\)</span> et <span class="process-math">\(B\text{.}\)</span>
 </div>
 <figure class="figure figure-like" id="fig-additionneur4bits"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/additionneur4bits.svg" class="contained" alt="Une circuit à huit entrées et cinq sorties est illustré. Les entrées A0 et B0 se combinent dans un circuit demi-additionneur. La sortie S de ce circuit produit la sortie S0 puis la sortie R se combine avec les entrées A1 et B1 dans un additionneur. La sortie S de cette additionneur produit S1 et la sortie R se combine avec A2 et B2 dans un autre additionneur. On continue ainsi de suite jusqu’au dernier additionneur, qui produit S3 par sa sortie S et S4 par sa sortie R."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.20<span class="period">.</span></span><span class="space"> </span>Un circuit additionneur pour des nombres binaires à quatre chiffre</figcaption></figure></section><section class="conclusion" id="concl-representation"> <div class="para logical" id="p-1278">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.20<span class="period">.</span></span><span class="space"> </span>Un circuit additionneur pour des nombres binaires à quatre chiffre</figcaption></figure></section><section class="conclusion" id="concl-representation"> <div class="para logical" id="p-1277">
 <div class="para">Les points importants de cette section sont:</div>
 <ul class="disc">
-<li id="li-306"><div class="para" id="p-1279">Le principe d’un système positionnel, où chaque chiffre représente un multiple d’une puissance de la base.</div></li>
-<li id="li-307"><div class="para" id="p-1280">La conversion d’un nombre en binaire en un nombre en base dix.</div></li>
-<li id="li-308"><div class="para" id="p-1281">La conversion d’un nombre en base dix en un nombre en binaire.</div></li>
-<li id="li-309"><div class="para" id="p-1282">La conversion d’un nombre en hexadécimal en un nombre en base dix.</div></li>
-<li id="li-310"><div class="para" id="p-1283">La conversion d’un nombre en base dix en un nombre en hexadécimal.</div></li>
-<li id="li-311"><div class="para" id="p-1284">La conversion directe entre binaire et hexadécimal.</div></li>
-<li id="li-312"><div class="para" id="p-1285">Les opérations d’addition,soustraction,multiplication et division en base deux.</div></li>
-<li id="li-313"><div class="para" id="p-1286">Le principe de construction du circuit additionneur.</div></li>
+<li id="li-306"><div class="para" id="p-1278">Le principe d’un système positionnel, où chaque chiffre représente un multiple d’une puissance de la base.</div></li>
+<li id="li-307"><div class="para" id="p-1279">La conversion d’un nombre en binaire en un nombre en base dix.</div></li>
+<li id="li-308"><div class="para" id="p-1280">La conversion d’un nombre en base dix en un nombre en binaire.</div></li>
+<li id="li-309"><div class="para" id="p-1281">La conversion d’un nombre en hexadécimal en un nombre en base dix.</div></li>
+<li id="li-310"><div class="para" id="p-1282">La conversion d’un nombre en base dix en un nombre en hexadécimal.</div></li>
+<li id="li-311"><div class="para" id="p-1283">La conversion directe entre binaire et hexadécimal.</div></li>
+<li id="li-312"><div class="para" id="p-1284">Les opérations d’addition,soustraction,multiplication et division en base deux.</div></li>
+<li id="li-313"><div class="para" id="p-1285">Le principe de construction du circuit additionneur.</div></li>
 </ul>
 </div></section><section class="reading-questions" id="rq-representation"><h3 class="heading hide-type">
-<span class="type">Questions de compréhension de la lecture</span> <span class="codenumber">3.1.6</span> <span class="title">Questions de compréhension de la lecture</span>
+<span class="type">Questions de compréhension de la lecture</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="space"> </span><span class="title">Questions de compréhension de la lecture</span>
 </h3>
-<section class="introduction" id="introduction-111"><div class="para" id="p-1287">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</div></section><article class="subexercises" id="subexercises-4"><article class="exercise exercise-like" id="exercise-142"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-1288">Donner les huit nombres binaires qui suivent <span class="process-math">\(101101_2\text{.}\)</span>
+<section class="introduction" id="introduction-111"><div class="para" id="p-1286">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</div></section><article class="subexercises" id="subexercises-4"><article class="exercise exercise-like" id="exercise-142"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="p-1287">Donner les huit nombres binaires qui suivent <span class="process-math">\(101101_2\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-143"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-1289">Donner les dix nombres hexadécimaux qui suivent <span class="process-math">\(ABCD_{16}\text{.}\)</span>
+<div class="para" id="p-1288">Donner les dix nombres hexadécimaux qui suivent <span class="process-math">\(ABCD_{16}\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-144"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="p-1290">Qu’ont de particulier les nombres binaires qui se terminent par <span class="process-math">\(0\text{?}\)</span>
+<div class="para" id="p-1289">Qu’ont de particulier les nombres binaires qui se terminent par <span class="process-math">\(0\text{?}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-145"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-112"><div class="para" id="p-1291">Convertir les nombres suivants en base dix.</div></div>
+<div class="introduction" id="introduction-112"><div class="para" id="p-1290">Convertir les nombres suivants en base dix.</div></div>
 <article class="task exercise-like" id="task-323"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1292"><span class="process-math">\(1010111_2\)</span></div></article><article class="task exercise-like" id="task-324"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1293"><span class="process-math">\(101010_2\)</span></div></article><article class="task exercise-like" id="task-325"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1294"><span class="process-math">\(1111111_2\)</span></div></article><article class="task exercise-like" id="task-326"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1295"><span class="process-math">\(1010111_2\)</span></div></article><article class="task exercise-like" id="task-327"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<div class="para" id="p-1296"><span class="process-math">\(ABCDEF_{16}\)</span></div></article><article class="task exercise-like" id="task-328"><h6 class="heading"><span class="codenumber">(f)</span></h6>
-<div class="para" id="p-1297"><span class="process-math">\(123456_{16}\)</span></div></article><article class="task exercise-like" id="task-329"><h6 class="heading"><span class="codenumber">(g)</span></h6>
-<div class="para" id="p-1298"><span class="process-math">\(1A2B3C_{16}\)</span></div></article><article class="task exercise-like" id="task-330"><h6 class="heading"><span class="codenumber">(h)</span></h6>
-<div class="para" id="p-1299"><span class="process-math">\(A1B2C3_{16}\)</span></div></article></article></article><article class="subexercises" id="subexercises-5"><article class="exercise exercise-like" id="exercise-146"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-113"><div class="para" id="p-1300">Effectuer les additions suivantes.</div></div>
+<div class="para" id="p-1291"><span class="process-math">\(1010111_2\)</span></div></article><article class="task exercise-like" id="task-324"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-1292"><span class="process-math">\(101010_2\)</span></div></article><article class="task exercise-like" id="task-325"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-1293"><span class="process-math">\(1111111_2\)</span></div></article><article class="task exercise-like" id="task-326"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="p-1294"><span class="process-math">\(1010111_2\)</span></div></article><article class="task exercise-like" id="task-327"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="para" id="p-1295"><span class="process-math">\(ABCDEF_{16}\)</span></div></article><article class="task exercise-like" id="task-328"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<div class="para" id="p-1296"><span class="process-math">\(123456_{16}\)</span></div></article><article class="task exercise-like" id="task-329"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<div class="para" id="p-1297"><span class="process-math">\(1A2B3C_{16}\)</span></div></article><article class="task exercise-like" id="task-330"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<div class="para" id="p-1298"><span class="process-math">\(A1B2C3_{16}\)</span></div></article></article></article><article class="subexercises" id="subexercises-5"><article class="exercise exercise-like" id="exercise-146"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-113"><div class="para" id="p-1299">Effectuer les additions suivantes.</div></div>
 <article class="task exercise-like" id="task-331"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1301"><span class="process-math">\(1011_2+101_2\)</span></div></article><article class="task exercise-like" id="task-332"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1302"><span class="process-math">\(1010111_2+101000_2\)</span></div></article><article class="task exercise-like" id="task-333"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1303"><span class="process-math">\(1111011_2+1011111_2\)</span></div></article><article class="task exercise-like" id="task-334"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1304"><span class="process-math">\(1.0101_2+11.101_2\)</span></div></article></article><article class="exercise exercise-like" id="exercise-147"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-114"><div class="para" id="p-1305">Effectuer les multiplications suivantes.</div></div>
+<div class="para" id="p-1300"><span class="process-math">\(1011_2+101_2\)</span></div></article><article class="task exercise-like" id="task-332"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-1301"><span class="process-math">\(1010111_2+101000_2\)</span></div></article><article class="task exercise-like" id="task-333"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-1302"><span class="process-math">\(1111011_2+1011111_2\)</span></div></article><article class="task exercise-like" id="task-334"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="p-1303"><span class="process-math">\(1.0101_2+11.101_2\)</span></div></article></article><article class="exercise exercise-like" id="exercise-147"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-114"><div class="para" id="p-1304">Effectuer les multiplications suivantes.</div></div>
 <article class="task exercise-like" id="task-335"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1306"><span class="process-math">\(1011_2\times 101_2\)</span></div></article><article class="task exercise-like" id="task-336"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1307"><span class="process-math">\(1.0101_2\times 11.101_2\)</span></div></article></article><article class="exercise exercise-like" id="exercise-148"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="para" id="p-1308">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</div></article></article></section><section class="exercises" id="exo-representation"><h3 class="heading hide-type">
-<span class="type">Exercices</span> <span class="codenumber">3.1.7</span> <span class="title">Exercices</span>
+<div class="para" id="p-1305"><span class="process-math">\(1011_2\times 101_2\)</span></div></article><article class="task exercise-like" id="task-336"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-1306"><span class="process-math">\(1.0101_2\times 11.101_2\)</span></div></article></article><article class="exercise exercise-like" id="exercise-148"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="para" id="p-1307">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</div></article></article></section><section class="exercises" id="exo-representation"><h3 class="heading hide-type">
+<span class="type">Exercices</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="space"> </span><span class="title">Exercices</span>
 </h3>
 <article class="subexercises" id="subexercises-6"><h4 class="heading"><span class="title">À faire en classe</span></h4>
-<div class="introduction" id="introduction-115"><div class="para" id="p-1309">Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d’apprentissage plus avancés.</div></div>
+<div class="introduction" id="introduction-115"><div class="para" id="p-1308">Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d’apprentissage plus avancés.</div></div>
 <article class="exercise exercise-like" id="exo-conversionbinaire"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-116"><div class="para" id="p-1310">Convertir les nombres suivants en binaire.</div></div>
+<div class="introduction" id="introduction-116"><div class="para" id="p-1309">Convertir les nombres suivants en binaire.</div></div>
 <article class="task exercise-like" id="task-337"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1311"><span class="process-math">\(17\)</span></div>
+<div class="para" id="p-1310"><span class="process-math">\(17\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-121" id="answer-121"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-121"><div class="answer solution-like"><span class="process-math">\(17=10001_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-338"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1312"><span class="process-math">\(144\)</span></div>
+<div class="para" id="p-1311"><span class="process-math">\(144\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-122" id="answer-122"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-122"><div class="answer solution-like"><span class="process-math">\(144=10010000_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-339"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1313"><span class="process-math">\(1492\)</span></div>
+<div class="para" id="p-1312"><span class="process-math">\(1492\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-123" id="answer-123"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-123"><div class="answer solution-like"><span class="process-math">\(1492=10111010100_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-340"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1314"><span class="process-math">\(1534\)</span></div>
+<div class="para" id="p-1313"><span class="process-math">\(1534\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-124" id="answer-124"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-124"><div class="answer solution-like"><span class="process-math">\(1534=10111111111_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-341"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<div class="para" id="p-1315"><span class="process-math">\(1608\)</span></div>
+<div class="para" id="p-1314"><span class="process-math">\(1608\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-125" id="answer-125"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-125"><div class="answer solution-like"><span class="process-math">\(1608=11001001000_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-342"><h6 class="heading"><span class="codenumber">(f)</span></h6>
-<div class="para" id="p-1316"><span class="process-math">\(1642\)</span></div>
+<div class="para" id="p-1315"><span class="process-math">\(1642\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-126" id="answer-126"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-126"><div class="answer solution-like"><span class="process-math">\(1642=11001101010_2\)</span></div></div>
 </div></article></article><article class="exercise exercise-like" id="exo-conversionhexadecimale"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-117"><div class="para" id="p-1317">Convertir les nombres suivants en hexadécimal.</div></div>
+<div class="introduction" id="introduction-117"><div class="para" id="p-1316">Convertir les nombres suivants en hexadécimal.</div></div>
 <article class="task exercise-like" id="task-343"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1318"><span class="process-math">\(1938\)</span></div>
+<div class="para" id="p-1317"><span class="process-math">\(1938\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-127" id="answer-127"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-127"><div class="answer solution-like"><span class="process-math">\(1938=792_{16}\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-344"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1319"><span class="process-math">\(1928\)</span></div>
+<div class="para" id="p-1318"><span class="process-math">\(1928\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-128" id="answer-128"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-128"><div class="answer solution-like"><span class="process-math">\(1928=788_{16}\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-345"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1320"><span class="process-math">\(1999\)</span></div>
+<div class="para" id="p-1319"><span class="process-math">\(1999\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-129" id="answer-129"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-129"><div class="answer solution-like"><span class="process-math">\(1999=7CF_{16}\)</span></div></div>
 </div></article></article><article class="exercise exercise-like" id="exercise-151"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-118"><div class="para" id="p-1321">Convertir les nombres réels suivants en base deux.</div></div>
+<div class="introduction" id="introduction-118"><div class="para" id="p-1320">Convertir les nombres réels suivants en base deux.</div></div>
 <article class="task exercise-like" id="task-346"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1322"><span class="process-math">\(0.875\)</span></div>
+<div class="para" id="p-1321"><span class="process-math">\(0.875\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-130" id="answer-130"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-130"><div class="answer solution-like"><span class="process-math">\(0,875=0,111_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-347"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1323"><span class="process-math">\(0.1640625\)</span></div>
+<div class="para" id="p-1322"><span class="process-math">\(0.1640625\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-131" id="answer-131"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-131"><div class="answer solution-like"><span class="process-math">\(0,1640625=0,0010101_2\)</span></div></div>
 </div></article></article><article class="exercise exercise-like" id="exercise-152"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
 <div class="introduction" id="introduction-119">
-<div class="para" id="p-1324">Convertir les nombres ci-dessous en base seize sans passer par la base dix</div>.</div>
+<div class="para" id="p-1323">Convertir les nombres ci-dessous en base seize sans passer par la base dix</div>.</div>
 <article class="task exercise-like" id="task-348"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1325"><span class="process-math">\(1011011111000101_2\)</span></div>
+<div class="para" id="p-1324"><span class="process-math">\(1011011111000101_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-132" id="answer-132"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-132"><div class="answer solution-like"><span class="process-math">\(1011011111000101_2=B7C5_{16}\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-349"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1326"><span class="process-math">\(101110_2\)</span></div>
+<div class="para" id="p-1325"><span class="process-math">\(101110_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-133" id="answer-133"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-133"><div class="answer solution-like"><span class="process-math">\(101110_2=2E_{16}\)</span></div></div>
 </div></article></article><article class="exercise exercise-like" id="exercise-153"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-120"><div class="para" id="p-1327">Convertir les nombres ci-dessous en binaire sans passer par la base dix.</div></div>
+<div class="introduction" id="introduction-120"><div class="para" id="p-1326">Convertir les nombres ci-dessous en binaire sans passer par la base dix.</div></div>
 <article class="task exercise-like" id="task-350"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1328"><span class="process-math">\(CAFE_{16}\)</span></div>
+<div class="para" id="p-1327"><span class="process-math">\(CAFE_{16}\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-134" id="answer-134"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-134"><div class="answer solution-like"><span class="process-math">\(CAFE_{16}=1100101011111110_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-351"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1329"><span class="process-math">\(ABBA2021_{16}\)</span></div>
+<div class="para" id="p-1328"><span class="process-math">\(ABBA2021_{16}\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-135" id="answer-135"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-135"><div class="answer solution-like"><span class="process-math">\(ABBA2021_{16}=10101011101110100010000000100001_2\)</span></div></div>
 </div></article></article><article class="exercise exercise-like" id="exo-hexaafinir"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="para" id="p-1330">Compléter la conversion de <span class="process-math">\(987654321\)</span> en hexadécimal entamée à l’exemple <a href="" class="xref" data-knowl="./knowl/ex-decihexa.html" title="Exemple 3.1.11: Conversion entre système décimal et système hexadécimal">3.1.11</a>.</div>
+<div class="para" id="p-1329">Compléter la conversion de <span class="process-math">\(987654321\)</span> en hexadécimal entamée à l’exemple <a href="" class="xref" data-knowl="./knowl/ex-decihexa.html" title="Exemple 3.1.11: Conversion entre système décimal et système hexadécimal">3.1.11</a>.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-136" id="answer-136"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-136"><div class="answer solution-like"><span class="process-math">\(987654321=3ADE68B1_{16}\)</span></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-155"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-121"><div class="para" id="p-1331">On considère <span class="process-math">\(\Omega=\{n\in \N ~|~ n\leq 15\}\text{.}\)</span> On pose <span class="process-math">\(A_0\subseteq \Omega\)</span> l’ensemble des nombres dans <span class="process-math">\(\Omega\)</span> qui ont un <span class="process-math">\(1\)</span> à la position <span class="process-math">\(2^0\)</span> dans leur représentation binaire, <span class="process-math">\(A_1\subseteq\Omega\)</span> ceux qui ont un <span class="process-math">\(1\)</span> à la position <span class="process-math">\(2^1\)</span> et ainsi de suite.</div></div>
+<div class="introduction" id="introduction-121"><div class="para" id="p-1330">On considère <span class="process-math">\(\Omega=\{n\in \N ~|~ n\leq 15\}\text{.}\)</span> On pose <span class="process-math">\(A_0\subseteq \Omega\)</span> l’ensemble des nombres dans <span class="process-math">\(\Omega\)</span> qui ont un <span class="process-math">\(1\)</span> à la position <span class="process-math">\(2^0\)</span> dans leur représentation binaire, <span class="process-math">\(A_1\subseteq\Omega\)</span> ceux qui ont un <span class="process-math">\(1\)</span> à la position <span class="process-math">\(2^1\)</span> et ainsi de suite.</div></div>
 <article class="task exercise-like" id="task-352"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1332">Donner une description en extension de <span class="process-math">\(A_2\text{.}\)</span>
+<div class="para" id="p-1331">Donner une description en extension de <span class="process-math">\(A_2\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-137" id="answer-137"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-137"><div class="answer solution-like"><span class="process-math">\(A_2=\{2,3,6,7,10,11,14,15\}\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-353"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1333">Que sont les nombres dans <span class="process-math">\(A_3^c\text{?}\)</span>
+<div class="para" id="p-1332">Que sont les nombres dans <span class="process-math">\(A_3^c\text{?}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-138" id="answer-138"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-138"><div class="answer solution-like">
 <span class="process-math">\(A_3=\{4,5,6,7,12,13,14,15\}\text{,}\)</span> et donc <span class="process-math">\(A_3^c=\{0,1,2,3,8,9,10,11\}\)</span>
 </div></div>
 </div></article><article class="task exercise-like" id="task-354"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1334">Que vaut <span class="process-math">\(\lvert A_1\cup A_0\rvert\)</span>
+<div class="para" id="p-1333">Que vaut <span class="process-math">\(\lvert A_1\cup A_0\rvert\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-139" id="answer-139"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-139"><div class="answer solution-like"><span class="process-math">\(|A_1\cup A_0|=12\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-355"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1335">Énumérer les éléments dans <span class="process-math">\(A_3\cap A_1\text{.}\)</span>
+<div class="para" id="p-1334">Énumérer les éléments dans <span class="process-math">\(A_3\cap A_1\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-140" id="answer-140"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-140"><div class="answer solution-like"><span class="process-math">\(A_3\cap A_1 =\{5,7,13,15\}\)</span></div></div>
 </div></article></article><article class="exercise exercise-like" id="exercise-156"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-122"><div class="para" id="p-1336">On considère la fonction <span class="process-math">\(f:\mathbb{N}\to \mathbb{N}\)</span> qui associe à chaque nombre naturel la somme de ses chiffres dans la représentation binaire, par exemple <span class="process-math">\(f(11001_2)=3\text{.}\)</span> Soit <span class="process-math">\(A=\{0,1,2,\ldots , 100\}\text{.}\)</span>
+<div class="introduction" id="introduction-122"><div class="para" id="p-1335">On considère la fonction <span class="process-math">\(f:\mathbb{N}\to \mathbb{N}\)</span> qui associe à chaque nombre naturel la somme de ses chiffres dans la représentation binaire, par exemple <span class="process-math">\(f(11001_2)=3\text{.}\)</span> Soit <span class="process-math">\(A=\{0,1,2,\ldots , 100\}\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="task-356"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1337">Calculer <span class="process-math">\(f(66)\text{.}\)</span>
+<div class="para" id="p-1336">Calculer <span class="process-math">\(f(66)\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-141" id="answer-141"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-141"><div class="answer solution-like"><span class="process-math">\(f(66)=f(1000010_2)=2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-357"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1338">Quelle est l’image de l’ensemble <span class="process-math">\(A\text{?}\)</span>
+<div class="para" id="p-1337">Quelle est l’image de l’ensemble <span class="process-math">\(A\text{?}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-142" id="answer-142"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-142"><div class="answer solution-like"><span class="process-math">\(\text{Ima}(f)=\{0,1,2,3,4,5,6\}\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-358"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1339">Donner <span class="process-math">\((f^{-1}(\{1\}))\cap A\text{,}\)</span> soit les nombres dans <span class="process-math">\(A\)</span> qui ont comme image <span class="process-math">\(1\text{.}\)</span>
+<div class="para" id="p-1338">Donner <span class="process-math">\((f^{-1}(\{1\}))\cap A\text{,}\)</span> soit les nombres dans <span class="process-math">\(A\)</span> qui ont comme image <span class="process-math">\(1\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-143" id="answer-143"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-143"><div class="answer solution-like"><span class="process-math">\((f^{-1}(\{1\}))\cap A=\{1,2,4,8,16,32,64\}\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-359"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1340">De façon générale, que vaut <span class="process-math">\(f^{-1}(\{1\})\text{?}\)</span>
+<div class="para" id="p-1339">De façon générale, que vaut <span class="process-math">\(f^{-1}(\{1\})\text{?}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-144" id="answer-144"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-144"><div class="answer solution-like">
 <span class="process-math">\(f^{-1}(\{1\})\)</span> est l’ensemble des puissance de <span class="process-math">\(2\text{.}\)</span>
 </div></div>
 </div></article></article></article><article class="subexercises" id="subexercises-7"><h4 class="heading"><span class="title">À faire à la maison.</span></h4>
-<div class="introduction" id="introduction-123"><div class="para" id="p-1341">Ces exercices servent à approfondir les notions de la section et à atteindre les objectifs d’apprentissage plus avancés. Il sont à faire après le deuxième cours de la semaine.</div></div>
+<div class="introduction" id="introduction-123"><div class="para" id="p-1340">Ces exercices servent à approfondir les notions de la section et à atteindre les objectifs d’apprentissage plus avancés. Il sont à faire après le deuxième cours de la semaine.</div></div>
 <article class="exercise exercise-like" id="exercise-157"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
 <div class="introduction" id="introduction-124">Effectuer les opérations suivantes.</div>
 <article class="task exercise-like" id="task-360"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1342"><span class="process-math">\(110111011_2+1001011010_2\)</span></div>
+<div class="para" id="p-1341"><span class="process-math">\(110111011_2+1001011010_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-145" id="answer-145"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-145"><div class="answer solution-like"><span class="process-math">\(110111011_2+1001011010_2=10000010101_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-361"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1343"><span class="process-math">\(111_2\times 111_2\)</span></div>
+<div class="para" id="p-1342"><span class="process-math">\(111_2\times 111_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-146" id="answer-146"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-146"><div class="answer solution-like"><span class="process-math">\(111_2\times 111_2=110001_2\)</span></div></div>
 </div></article></article><article class="exercise exercise-like" id="exercise-158"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-125"><div class="para" id="p-1344">Effectuer les soustractions suivantes.</div></div>
+<div class="introduction" id="introduction-125"><div class="para" id="p-1343">Effectuer les soustractions suivantes.</div></div>
 <article class="task exercise-like" id="task-362"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1345"><span class="process-math">\(111000_2-101000_2\)</span></div>
+<div class="para" id="p-1344"><span class="process-math">\(111000_2-101000_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-147" id="answer-147"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-147"><div class="answer solution-like"><span class="process-math">\(111000_2-101000_2=10000_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-363"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1346"><span class="process-math">\(111000_2-111_2\)</span></div>
+<div class="para" id="p-1345"><span class="process-math">\(111000_2-111_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-148" id="answer-148"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-148"><div class="answer solution-like"><span class="process-math">\(111000_2-111_2=110001_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-364"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1347"><span class="process-math">\(1110011_2-111111_2\)</span></div>
+<div class="para" id="p-1346"><span class="process-math">\(1110011_2-111111_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-149" id="answer-149"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-149"><div class="answer solution-like"><span class="process-math">\(1110011_2-111111_2=110100_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-365"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1348"><span class="process-math">\(100000_2-10101_2\)</span></div>
+<div class="para" id="p-1347"><span class="process-math">\(100000_2-10101_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-150" id="answer-150"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-150"><div class="answer solution-like"><span class="process-math">\(100000_2-10101_2=1011_2\)</span></div></div>
 </div></article></article><article class="exercise exercise-like" id="exercise-159"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-126"><div class="para" id="p-1349">Effectuer les divisions suivantes afin de trouver le quotient et le reste.</div></div>
+<div class="introduction" id="introduction-126"><div class="para" id="p-1348">Effectuer les divisions suivantes afin de trouver le quotient et le reste.</div></div>
 <article class="task exercise-like" id="task-366"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1350"><span class="process-math">\(1101001_2\div 11_2\)</span></div>
+<div class="para" id="p-1349"><span class="process-math">\(1101001_2\div 11_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-151" id="answer-151"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-151"><div class="answer solution-like"><span class="process-math">\(1101001_2\div 11_2 = 100011_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-367"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1351"><span class="process-math">\(1011101_2\div 110_2\)</span></div>
+<div class="para" id="p-1350"><span class="process-math">\(1011101_2\div 110_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-152" id="answer-152"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-152"><div class="answer solution-like"><span class="process-math">\(1011101_2\div 110_2 = 1111_2\text{ avec reste de }11_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-368"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1352"><span class="process-math">\(110001_2\div 1111_2\)</span></div>
+<div class="para" id="p-1351"><span class="process-math">\(110001_2\div 1111_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-153" id="answer-153"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-153"><div class="answer solution-like"><span class="process-math">\(110001_2\div 1111_2=11_2 \text{ avec reste de } 100_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-369"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1353"><span class="process-math">\(101110111_2\div 11011_2\)</span></div>
+<div class="para" id="p-1352"><span class="process-math">\(101110111_2\div 11011_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-154" id="answer-154"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-154"><div class="answer solution-like"><span class="process-math">\(101110111_2\div 11011_2= 1100_2 \texte{ avec reste de } 11000_2\)</span></div></div>
 </div></article></article><article class="exercise exercise-like" id="exo-circuitretenue"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
-<div class="para" id="p-1354">Montrer en utilisant une table de vérité et la forme normale disjonctive que la retenue d’un additionneur s’écrit comme <span class="process-math">\(R\equiv ((A\oplus B)\wedge P)\vee (A\wedge B)\text{.}\)</span>
+<div class="para" id="p-1353">Montrer en utilisant une table de vérité et la forme normale disjonctive que la retenue d’un additionneur s’écrit comme <span class="process-math">\(R\equiv ((A\oplus B)\wedge P)\vee (A\wedge B)\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exo-puissmoinsnombre"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-127"><div class="para" id="p-1355">Effectuer les soustractions suivantes, en décimale ou en binaire. Remarquer que le nombre de gauche est toujours une puissance de deux.</div></div>
+<div class="introduction" id="introduction-127"><div class="para" id="p-1354">Effectuer les soustractions suivantes, en décimale ou en binaire. Remarquer que le nombre de gauche est toujours une puissance de deux.</div></div>
 <article class="task exercise-like" id="task-370"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1356"><span class="process-math">\(10_2-1_2\)</span></div>
+<div class="para" id="p-1355"><span class="process-math">\(10_2-1_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-155" id="answer-155"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-155"><div class="answer solution-like"><span class="process-math">\(10_2-1_2=1_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-371"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1357"><span class="process-math">\(100_2-10_2\)</span></div>
+<div class="para" id="p-1356"><span class="process-math">\(100_2-10_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-156" id="answer-156"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-156"><div class="answer solution-like"><span class="process-math">\(100_2-10_2=10_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-372"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1358"><span class="process-math">\(100_2-11_2\)</span></div>
+<div class="para" id="p-1357"><span class="process-math">\(100_2-11_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-157" id="answer-157"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-157"><div class="answer solution-like"><span class="process-math">\(100_2-11_2=01_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-373"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1359"><span class="process-math">\(1000_2-100_2\)</span></div>
+<div class="para" id="p-1358"><span class="process-math">\(1000_2-100_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-158" id="answer-158"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-158"><div class="answer solution-like"><span class="process-math">\(1000_2-100_2=100_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-374"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<div class="para" id="p-1360"><span class="process-math">\(1000_2-101_2\)</span></div>
+<div class="para" id="p-1359"><span class="process-math">\(1000_2-101_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-159" id="answer-159"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-159"><div class="answer solution-like"><span class="process-math">\(1000_2-101_2=011_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-375"><h6 class="heading"><span class="codenumber">(f)</span></h6>
-<div class="para" id="p-1361"><span class="process-math">\(1000_2-110_2\)</span></div>
+<div class="para" id="p-1360"><span class="process-math">\(1000_2-110_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-160" id="answer-160"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-160"><div class="answer solution-like"><span class="process-math">\(1000_2-110_2=010_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-376"><h6 class="heading"><span class="codenumber">(g)</span></h6>
-<div class="para" id="p-1362"><span class="process-math">\(1000_2-111_2\)</span></div>
+<div class="para" id="p-1361"><span class="process-math">\(1000_2-111_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-161" id="answer-161"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-161"><div class="answer solution-like"><span class="process-math">\(1000_2-111_2=001_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-377"><h6 class="heading"><span class="codenumber">(h)</span></h6>
-<div class="para" id="p-1363"><span class="process-math">\(10000_2-1000_2\)</span></div>
+<div class="para" id="p-1362"><span class="process-math">\(10000_2-1000_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-162" id="answer-162"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-162"><div class="answer solution-like"><span class="process-math">\(10000_2-1000_2=1000_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-378"><h6 class="heading"><span class="codenumber">(i)</span></h6>
-<div class="para" id="p-1364"><span class="process-math">\(10000_2-1001_2\)</span></div>
+<div class="para" id="p-1363"><span class="process-math">\(10000_2-1001_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-163" id="answer-163"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-163"><div class="answer solution-like"><span class="process-math">\(10000_2-1001_2=0111_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="exo-complementexemple"><h6 class="heading"><span class="codenumber">(j)</span></h6>
-<div class="para" id="p-1365"><span class="process-math">\(10000_2-1010_2\)</span></div>
+<div class="para" id="p-1364"><span class="process-math">\(10000_2-1010_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-164" id="answer-164"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-164"><div class="answer solution-like"><span class="process-math">\(10000_2-1010_2=0110_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-380"><h6 class="heading"><span class="codenumber">(k)</span></h6>
-<div class="para" id="p-1366"><span class="process-math">\(10000_2-1011_2\)</span></div>
+<div class="para" id="p-1365"><span class="process-math">\(10000_2-1011_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-165" id="answer-165"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-165"><div class="answer solution-like"><span class="process-math">\(10000_2-1011_2=0101_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-381"><h6 class="heading"><span class="codenumber">(l)</span></h6>
-<div class="para" id="p-1367"><span class="process-math">\(10000_2-1100_2\)</span></div>
+<div class="para" id="p-1366"><span class="process-math">\(10000_2-1100_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-166" id="answer-166"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-166"><div class="answer solution-like"><span class="process-math">\(10000_2-1100_2=0100_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-382"><h6 class="heading"><span class="codenumber">(m)</span></h6>
-<div class="para" id="p-1368"><span class="process-math">\(10000_2-1101_2\)</span></div>
+<div class="para" id="p-1367"><span class="process-math">\(10000_2-1101_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-167" id="answer-167"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-167"><div class="answer solution-like"><span class="process-math">\(10000_2-1101_2=0011_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-383"><h6 class="heading"><span class="codenumber">(n)</span></h6>
-<div class="para" id="p-1369"><span class="process-math">\(10000_2-1110_2\)</span></div>
+<div class="para" id="p-1368"><span class="process-math">\(10000_2-1110_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-168" id="answer-168"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-168"><div class="answer solution-like"><span class="process-math">\(1000_2-1110_2=0010_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-384"><h6 class="heading"><span class="codenumber">(o)</span></h6>
-<div class="para" id="p-1370"><span class="process-math">\(10000_2-1111_2\)</span></div>
+<div class="para" id="p-1369"><span class="process-math">\(10000_2-1111_2\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-169" id="answer-169"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-169"><div class="answer solution-like"><span class="process-math">\(10000_2-1111_2=0001_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-385"><h6 class="heading"><span class="codenumber">(p)</span></h6>
-<div class="para" id="p-1371"><span class="process-math">\(100000000_2-110100\)</span></div>
+<div class="para" id="p-1370"><span class="process-math">\(100000000_2-110100\)</span></div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-170" id="answer-170"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-170"><div class="answer solution-like"><span class="process-math">\(100000000_2-110100_2=001100_2\)</span></div></div>
 </div></article><article class="task exercise-like" id="task-386"><h6 class="heading"><span class="codenumber">(q)</span></h6>
-<div class="para" id="p-1372">Que peut-on dire du résulat de la soustraction d’un nombre à une puissance de deux supérieure?</div>
+<div class="para" id="p-1371">Que peut-on dire du résulat de la soustraction d’un nombre à une puissance de deux supérieure?</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-171" id="answer-171"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-171"><div class="answer solution-like">Le résultat de la soustraction est obtenu de la manière suivante: <ol class="lower-alpha">
-<li id="li-314"><div class="para" id="p-1373">À partir de la droite, on garde les premiers zéros et le premier un.</div></li>
-<li id="li-315"><div class="para" id="p-1374">Tous les autres chiffres sont inversés. Les zéros deviennent des uns et les uns deviennent des zéros.</div></li>
+<li id="li-314"><div class="para" id="p-1372">À partir de la droite, on garde les premiers zéros et le premier un.</div></li>
+<li id="li-315"><div class="para" id="p-1373">Tous les autres chiffres sont inversés. Les zéros deviennent des uns et les uns deviennent des zéros.</div></li>
 </ol>
 </div></div>
 </div></article></article><article class="exercise exercise-like" id="exercise-162"><h5 class="heading">
 <span class="codenumber">14<span class="period">.</span></span><span class="space"> </span><span class="title">La complémentation à <span class="process-math">\(2\)</span>.</span>
 </h5>
 <div class="introduction" id="introduction-128">
-<div class="para logical" id="p-1375">
+<div class="para logical" id="p-1374">
 <div class="para">On a vu dans le texte, faire une soustraction est une opération difficile comparativement à faire une addition. L’exercice <a href="" class="xref" data-knowl="./knowl/exo-puissmoinsnombre.html" title="Exercice 3.1.7.13">3.1.7.13</a> laisse entrevoir une manière différente de faire les soustractions. C’est d’ailleurs avec cette méthode (un peu modifiée) qu’un ordinateur effectue les soustractions. La méthode est basée sur l’observation suivante:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-puissmoinsnombre.html" id="md-43">
 \begin{align*}
@@ -1586,17 +1592,17 @@ A-B&amp;=A-B+2^n-2^n\\
 &amp;=A+(2^n-B)-2^n\text{.}
 \end{align*}
 </div>
-</div> <div class="para" id="p-1376">Pour soustraire <span class="process-math">\(B\)</span> à <span class="process-math">\(A\text{,}\)</span> on lui additionne plutôt le <em class="emphasis">complément à <span class="process-math">\(2\)</span></em> de <span class="process-math">\(B\)</span> selon la puissance <span class="process-math">\(n\text{.}\)</span> On décortique la méthode ci-dessous.</div>
+</div> <div class="para" id="p-1375">Pour soustraire <span class="process-math">\(B\)</span> à <span class="process-math">\(A\text{,}\)</span> on lui additionne plutôt le <em class="emphasis">complément à <span class="process-math">\(2\)</span></em> de <span class="process-math">\(B\)</span> selon la puissance <span class="process-math">\(n\text{.}\)</span> On décortique la méthode ci-dessous.</div>
 </div>
 <article class="task exercise-like" id="task-387"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <div class="introduction" id="introduction-129">
-<div class="para logical" id="p-1377">
+<div class="para logical" id="p-1376">
 <div class="para">Le complément à <span class="process-math">\(2\)</span> selon la puissance <span class="process-math">\(n\)</span> d’un nombre binaire <span class="process-math">\(B\)</span> est le nombre obtenu en faisant la soustraction <span class="process-math">\(2^n_{10}-B_{10}\text{.}\)</span> Grâce à l’exercice <a href="" class="xref" data-knowl="./knowl/exo-puissmoinsnombre.html" title="Exercice 3.1.7.13">3.1.7.13</a>, on peut observer ceci. Le complément par rapport à une puissance <span class="process-math">\(n\)</span> est obtenu en écrivant le nombre avec <span class="process-math">\(n\)</span> chiffres, ajoutant au besoin des zéros à gauche. Par la suite:</div>
 <ol class="lower-alpha">
-<li id="li-316"><div class="para" id="p-1378">À partir de la droite, on garde les premiers zéros et le premier un.</div></li>
-<li id="li-317"><div class="para" id="p-1379">Tous les autres chiffres sont inversés. Les zéros deviennent des uns et les uns deviennent des zéros.</div></li>
+<li id="li-316"><div class="para" id="p-1377">À partir de la droite, on garde les premiers zéros et le premier un.</div></li>
+<li id="li-317"><div class="para" id="p-1378">Tous les autres chiffres sont inversés. Les zéros deviennent des uns et les uns deviennent des zéros.</div></li>
 </ol>
-</div> <div class="para logical" id="p-1380">
+</div> <div class="para logical" id="p-1379">
 <div class="para">Par exemple, le complément de <span class="process-math">\(1010_2\)</span> par rapport à la puissance <span class="process-math">\(n=4\)</span> est</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-complementexemple.html">
 \begin{equation*}
@@ -1607,20 +1613,20 @@ A-B&amp;=A-B+2^n-2^n\\
 </div>
 </div>
 <article class="task exercise-like" id="task-388"><h6 class="heading"><span class="codenumber">(i)</span></h6>
-<div class="para" id="p-1381">Vérifier les réponses de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-puissmoinsnombre.html" title="Exercice 3.1.7.13">3.1.7.13</a> en utilisant la méthode du complément.</div></article><article class="task exercise-like" id="task-389"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
-<div class="para" id="p-1382">Trouver le complément de <span class="process-math">\(11101_2\)</span> par rapport à la puissance <span class="process-math">\(n=8\text{.}\)</span>
+<div class="para" id="p-1380">Vérifier les réponses de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-puissmoinsnombre.html" title="Exercice 3.1.7.13">3.1.7.13</a> en utilisant la méthode du complément.</div></article><article class="task exercise-like" id="task-389"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<div class="para" id="p-1381">Trouver le complément de <span class="process-math">\(11101_2\)</span> par rapport à la puissance <span class="process-math">\(n=8\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-172" id="answer-172"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-172"><div class="answer solution-like"><span class="process-math">\((00011101_2)^c=11100011_2\)</span></div></div>
 </div></article></article><article class="task exercise-like" id="task-390"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="introduction" id="introduction-130"><div class="para" id="p-1383">Pour revenir à la soustraction <span class="process-math">\(A-B\text{,}\)</span> une fois le complément de <span class="process-math">\(B\)</span> calculé, on additionne <span class="process-math">\(A+B^c\text{,}\)</span> ce qui donne un nombre à au plus <span class="process-math">\(n+1\)</span> chiffres significatifs (à partir du premier <span class="process-math">\(1\)</span> à gauche). On distingue alors deux cas, selon si <span class="process-math">\(A&gt;B\)</span> ou <span class="process-math">\(A&lt;B\text{.}\)</span>
+<div class="introduction" id="introduction-130"><div class="para" id="p-1382">Pour revenir à la soustraction <span class="process-math">\(A-B\text{,}\)</span> une fois le complément de <span class="process-math">\(B\)</span> calculé, on additionne <span class="process-math">\(A+B^c\text{,}\)</span> ce qui donne un nombre à au plus <span class="process-math">\(n+1\)</span> chiffres significatifs (à partir du premier <span class="process-math">\(1\)</span> à gauche). On distingue alors deux cas, selon si <span class="process-math">\(A&gt;B\)</span> ou <span class="process-math">\(A&lt;B\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="task-391"><h6 class="heading"><span class="codenumber">(i)</span></h6>
-<div class="para" id="p-1384">Vérifier que <span class="process-math">\(101011_2-1101_2=0101011_2+(0001101_2)^c-10000000_2=0101011_2+(1110011_2)^c-10000000_2=\)</span> et que le résultat correspond au résultat de <span class="process-math">\(0101011_2+(0001101_2)^c\)</span> en ignorant le chiffre le plus à gauche. On prend le complément selon la puissance <span class="process-math">\(n=7\text{.}\)</span>
+<div class="para" id="p-1383">Vérifier que <span class="process-math">\(101011_2-1101_2=0101011_2+(0001101_2)^c-10000000_2=0101011_2+(1110011_2)^c-10000000_2=\)</span> et que le résultat correspond au résultat de <span class="process-math">\(0101011_2+(0001101_2)^c\)</span> en ignorant le chiffre le plus à gauche. On prend le complément selon la puissance <span class="process-math">\(n=7\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-392"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
-<div class="para" id="p-1385">Calculer <span class="process-math">\(11001_2-10100_2\)</span> en utilisant l’observation ci-dessus.</div>
+<div class="para" id="p-1384">Calculer <span class="process-math">\(11001_2-10100_2\)</span> en utilisant l’observation ci-dessus.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-97" id="solution-97"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-97"><div class="solution solution-like">En prenant le complément à 2 selon la puissance 5, on a<div class="displaymath process-math">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-96" id="solution-96"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-96"><div class="solution solution-like">En prenant le complément à 2 selon la puissance 5, on a<div class="displaymath process-math">
 \begin{equation*}
 11001_2 + (10100_2)^c = 1 1001_2+0 1100_2= 10 0101_2\text{.}
 \end{equation*}
@@ -1631,7 +1637,7 @@ A-B&amp;=A-B+2^n-2^n\\
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-393"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
-<div class="introduction" id="introduction-131"><div class="para logical" id="p-1386">
+<div class="introduction" id="introduction-131"><div class="para logical" id="p-1385">
 <div class="para">Lorsque <span class="process-math">\(A&lt;B\text{,}\)</span> l’algorithme de soustraction ne fonctionne pas. On a alors deux options. La première consiste à faire <span class="process-math">\(B-A\)</span> à la place et de mettre un signe négatif devant la réponse, puisque <span class="process-math">\(A-B=-(B-A)\text{.}\)</span> L’autre option utilise un argument similaire pour montrer que</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1645,30 +1651,30 @@ A-B=(A+B^c)^c\text{.}
 \end{equation*}
 </div>
 </div></div></article><article class="task exercise-like" id="task-394"><h6 class="heading"><span class="codenumber">(iv)</span></h6>
-<div class="para" id="p-1387">Utiliser la première méthode pour calculer <span class="process-math">\(1011_2-10101_2\text{.}\)</span>
+<div class="para" id="p-1386">Utiliser la première méthode pour calculer <span class="process-math">\(1011_2-10101_2\text{.}\)</span>
 </div></article><article class="task exercise-like" id="task-395"><h6 class="heading"><span class="codenumber">(v)</span></h6>
-<div class="para" id="p-1388">Utiliser la seconde méthode pour calculer <span class="process-math">\(111_2-10111_2\text{.}\)</span>
+<div class="para" id="p-1387">Utiliser la seconde méthode pour calculer <span class="process-math">\(111_2-10111_2\text{.}\)</span>
 </div></article></article></article></article><article class="subexercises" id="subexercises-8"><h4 class="heading"><span class="title">Exercices supplémentaires</span></h4>
 <article class="exercise exercise-like" id="exo-circuitegalite"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-132"><div class="para" id="p-1389">On désire construire un circuit qui va permettre de déterminer si deux nombres <span class="process-math">\(A,B\)</span> écrits en binaire sont égaux. L’idée est de comparer chiffre par chiffre, l’égalité étant vérifiée si tous les chiffres à la même position sont égaux.</div></div>
+<div class="introduction" id="introduction-132"><div class="para" id="p-1388">On désire construire un circuit qui va permettre de déterminer si deux nombres <span class="process-math">\(A,B\)</span> écrits en binaire sont égaux. L’idée est de comparer chiffre par chiffre, l’égalité étant vérifiée si tous les chiffres à la même position sont égaux.</div></div>
 <article class="task exercise-like" id="task-396"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1390">Quelle porte permet de vérifier si deux entrées ont la même valeur?</div>
+<div class="para" id="p-1389">Quelle porte permet de vérifier si deux entrées ont la même valeur?</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-18" id="hint-18"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><div class="para" id="p-1391">C’est la négation d’une porte spécifique.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-18" id="hint-18"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><div class="para" id="p-1390">C’est la négation d’une porte spécifique.</div></div></div>
 </div></article><article class="task exercise-like" id="task-397"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1392">Illustrer le circuit permettant de vérifier l’égalité de deux nombres écrits à l’aide de deux chiffres.</div></article><article class="task exercise-like" id="task-398"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1393">Généraliser l’idée du circuit précédent pour des nombres à <span class="process-math">\(n\)</span> chiffres.</div>
+<div class="para" id="p-1391">Illustrer le circuit permettant de vérifier l’égalité de deux nombres écrits à l’aide de deux chiffres.</div></article><article class="task exercise-like" id="task-398"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-1392">Généraliser l’idée du circuit précédent pour des nombres à <span class="process-math">\(n\)</span> chiffres.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><div class="para" id="p-1394">Penser à utiliser une porte ET multiple.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><div class="para" id="p-1393">Penser à utiliser une porte ET multiple.</div></div></div>
 </div></article></article><article class="exercise exercise-like" id="exercise-164"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-133"><div class="para" id="p-1395">On considère le circuit de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit9.html" title="Figure 3.1.21">3.1.21</a>, qui prend deux nombres binaires écrits à l’aide de deux chiffres.</div></div>
+<div class="introduction" id="introduction-133"><div class="para" id="p-1394">On considère le circuit de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit9.html" title="Figure 3.1.21">3.1.21</a>, qui prend deux nombres binaires écrits à l’aide de deux chiffres.</div></div>
 <article class="task exercise-like" id="task-399"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1396">Comparer différentes possibilités de <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> afin de déterminer ce que fait ce circuit.</div> <figure class="figure figure-like" id="fig-circuit9"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit9.svg" class="contained" alt="Un circuit à quatre entrées et une sortie est représentée. L’entrée A0 se combine avec la négation de l’entrée B0 dans une porte ET. Les entrées A1 et B1 se combinent dans une porte NXOR (non ou exclusif). La sortie de cette porte se combine avec la sortie de la première porte ET dans une deuxième porte ET. Ensuite, A1 se combine cette fois avec la négation de B1 dans une porte ET, et le résultat de cette porte se combine dans une porte OU avec le résultat de la deuxième porte ET pour produire la sortie finale du circuit."></div>
+<div class="para" id="p-1395">Comparer différentes possibilités de <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> afin de déterminer ce que fait ce circuit.</div> <figure class="figure figure-like" id="fig-circuit9"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit9.svg" class="contained" alt="Un circuit à quatre entrées et une sortie est représentée. L’entrée A0 se combine avec la négation de l’entrée B0 dans une porte ET. Les entrées A1 et B1 se combinent dans une porte NXOR (non ou exclusif). La sortie de cette porte se combine avec la sortie de la première porte ET dans une deuxième porte ET. Ensuite, A1 se combine cette fois avec la négation de B1 dans une porte ET, et le résultat de cette porte se combine dans une porte OU avec le résultat de la deuxième porte ET pour produire la sortie finale du circuit."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.21<span class="period">.</span></span><span class="space"> </span>Un circuit pour nombres binaires à deux chiffres</figcaption></figure></article><article class="task exercise-like" id="task-400"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1397">Vérifier que le cicuit correspond à l’expression <span class="process-math">\((A_1\wedge \neg B_1)\vee ((A_1=B_1)\wedge(A_0\wedge \neg B_0))\text{,}\)</span> où l’expression <span class="process-math">\(A_1=B_1\)</span> vaut <span class="process-math">\(1\)</span> si les deux entrées ont la même valeur et <span class="process-math">\(0\)</span> sinon.</div></article><article class="task exercise-like" id="task-401"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1398">En utilisant une boite générique pour illustrer le circuit d’égalité de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-circuitegalite.html" title="Exercice 3.1.7.15">3.1.7.15</a>, illustrer un circuit permettant de généraliser celui de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit9.html" title="Figure 3.1.21">3.1.21</a> pour des nombres à <span class="process-math">\(\text{}\)</span> chiffres.</div></article></article></article></section></section></div>
+<div class="para" id="p-1396">Vérifier que le cicuit correspond à l’expression <span class="process-math">\((A_1\wedge \neg B_1)\vee ((A_1=B_1)\wedge(A_0\wedge \neg B_0))\text{,}\)</span> où l’expression <span class="process-math">\(A_1=B_1\)</span> vaut <span class="process-math">\(1\)</span> si les deux entrées ont la même valeur et <span class="process-math">\(0\)</span> sinon.</div></article><article class="task exercise-like" id="task-401"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-1397">En utilisant une boite générique pour illustrer le circuit d’égalité de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-circuitegalite.html" title="Exercice 3.1.7.15">3.1.7.15</a>, illustrer un circuit permettant de généraliser celui de la figure <a href="" class="xref" data-knowl="./knowl/fig-circuit9.html" title="Figure 3.1.21">3.1.21</a> pour des nombres à <span class="process-math">\(\text{}\)</span> chiffres.</div></article></article></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="chap-reptheonombres.html" title="Précédent"><span class="icon">&lt;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-divisibilite.html" title="Suivant"><span class="name">Suivant</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="chap-reptheonombres.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-divisibilite.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

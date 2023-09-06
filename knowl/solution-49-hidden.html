@@ -10,21 +10,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
-<div class="para">La différence de deux ensembles s’écrit d’un point de vu logique comme</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">Selon l’exercice <a href="" class="xref" data-knowl="./knowl/exo-negimplication.html" title="Exercice 2.1.5.7">2.1.5.7</a>, il est possible d’écrire</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negimplication.html ./knowl/exo-negimplication.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
 \begin{equation*}
-A-B=\{x~|~ x\in A\wedge x\notin B\}\text{.}
+\neg (p\rightarrow q)\equiv p\wedge \neg q\text{.}
 \end{equation*}
 </div>
-<div class="para">On cherche le complément de cet ensemble, et donc la négation de la proposition <span class="process-math">\(x\in A\wedge x\notin B\text{.}\)</span> On a</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+<div class="para">Si on nie à nouveau cette équivalence, on devrait pouvoir réécrire l’implication sans flèche. Ainsi</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negimplication.html ./knowl/exo-negimplication.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
 \begin{align*}
-(A-B)^c&amp;=\{x~|~ \neg(x\in A\wedge x\notin B)\}\\
-&amp;=\{x~|~ \neg(x\in A)\vee \neg (x\notin B)&amp;&amp; \text{Selon De Morgan} \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}}\\
-&amp;=\{x~|~ x\notin A \vee x\in B\} &amp;&amp; \text{La négation de la relation d'appartenance est la non appartenance et vice-versa}\\
-&amp;= A^c\cup B&amp;&amp;\text{Définition de l'union et du complément}\text{.}
+p\rightarrow q&amp;\equiv\neg \neg (p\rightarrow q) \\
+&amp;\equiv\neg (p\wedge \neg q) &amp;&amp; \text{Selon } \knowl{./knowl/exo-negimplication.html}{\text{2.1.5.7}}\\
+&amp;\equiv \neg p \vee \neg\neg q &amp;&amp; \text{Selon De Morgan } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}} \\
+&amp;\equiv \neg p \vee q &amp;&amp; \text{Selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
 \end{align*}
 </div>
-</div></div></body>
+</div> <div class="para">On peut donc dire que <span class="process-math">\(p\rightarrow q\equiv \neg p\vee q\text{.}\)</span>
+</div>
+</div></body>
 </html>

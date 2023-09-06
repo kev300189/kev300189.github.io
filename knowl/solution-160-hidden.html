@@ -11,11 +11,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">On note <span class="process-math">\(P\)</span> le nombre de mots de passe total, et <span class="process-math">\(P_i\)</span> le nombre de mots de passe à <span class="process-math">\(i\)</span> caractères, pour <span class="process-math">\(i\in\ \{6,\ 7,\ 8\}\text{.}\)</span> Par le principe de la somme, on a <span class="process-math">\(P=P_6+P_7+P_8\text{.}\)</span>
-</div> <div class="para">Pour calculer <span class="process-math">\(P_6\text{,}\)</span> on compte tous les mots de passe à <span class="process-math">\(6\)</span> caractères. Par la suite, on soustrait à ce nombre le nombre de mots de passe à <span class="process-math">\(6\)</span> caractères qui ne contiennent pas de chiffres. En effet, par le principe de la somme <span class="process-math">\(\text{Mots de passe à }6\text{ caractères }=\text{Mots de passe à }6\text{ caractère sans chiffre}+\text{Mots de passe à }6\text{ caractère avec chiffres}\text{,}\)</span> et donc <span class="process-math">\(\text{Mots de passe à }6\text{ caractère avec chiffres}=\text{Mots de passe à }6\text{ caractères }-\text{Mots de passe à }6\text{ caractère sans chiffres}\text{.}\)</span>
-</div> <div class="para">Par le principe du produit (et le principe de la somme), il y a <span class="process-math">\(36^6\)</span> chaîne de <span class="process-math">\(6\)</span> caractères alphanumériques. De plus, <span class="process-math">\(26^6\)</span> de ces chaînes ne contiennent que des lettres, c’est-à-dire ne contiennent pas de chiffres. Ainsi, par l’argument donné au paragraphe précédent, <span class="process-math">\(P_6=36^6-26^6=2\ 176\ 782\ 336-308\ 915\ 776=1\ 867\ 866\ 560\text{.}\)</span> On utilise le même argument pour <span class="process-math">\(P_7\)</span> et <span class="process-math">\(P_8\text{.}\)</span>
-</div> <div class="para">Pour <span class="process-math">\(P_8\text{,}\)</span> on obtient <span class="process-math">\(P_8=36^8-26^8= 2\ 821\ 109\ 907\ 456 - 208\ 827\ 064\ 576 =2\ 612\ 282\ 842\ 880\)</span>
-</div> <div class="para">Ainsi, on a <span class="process-math">\(P = P_6+P_7+P_8=2\ 684\ 483\ 063\ 360\text{.}\)</span>
+<div class="para">Soit <span class="process-math">\(B\)</span> le nombre de chaînes binaires voulues, et soit <span class="process-math">\(B_1\)</span> les chaînes binaires de longueur <span class="process-math">\(8\)</span> commençant par un <span class="process-math">\(1\)</span> et <span class="process-math">\(B_{00}\)</span> les chaînes binaires de longueur <span class="process-math">\(8\)</span> se terminant avec deux <span class="process-math">\(0\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Si on utilise directement le principe de la somme (de façon erronée), on obtient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=B_1+B_{00}.
+\end{equation*}
+</div>
+<div class="para">Cependant, on ne peut pas utiliser le principe de la somme, car il existe des chaînes binaires de longueur <span class="process-math">\(8\)</span> qui commence par un <span class="process-math">\(1\)</span> <em class="alert">ET</em> se terminent par deux <span class="process-math">\(0\text{.}\)</span> On note ces chaînes <span class="process-math">\(B_{100}=B_1\cap B_{00}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Ainsi, par le principe de la soustraction, on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=B_1+B_{00}-B_{100}.
+\end{equation*}
+</div>
+</div> <div class="para">Par le principe du produit, on a que <span class="process-math">\(B_1=2^7\text{.}\)</span> En effet, chaque caractère, sauf le premier (qui est fixé à <span class="process-math">\(1\)</span>), peut être un <span class="process-math">\(1\)</span> ou un <span class="process-math">\(0\text{.}\)</span> Il reste donc <span class="process-math">\(7\)</span> choix à faire, avec <span class="process-math">\(2\)</span> possibilités pour chaque choix.</div> <div class="para">De même, on peut voir que <span class="process-math">\(B_00= 2^6\text{,}\)</span> car cette fois deux des caractères sont fixés.</div> <div class="para">Enfin, on peut également voir par le principe du produit que <span class="process-math">\(B_{100}=2^5\text{,}\)</span> car trois des caractères sont fixés.</div> <div class="para logical">
+<div class="para">Finalement, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+B\amp=B_1+B_{00}-B_{100}=2^7+2^6-2^5\\
+\amp=1000\ 0000_2+100\ 0000_2-10\ 0000_2\\
+\amp=1010\ 0000_2=160
+\end{align*}
+</div>
 </div>
 </div></body>
 </html>

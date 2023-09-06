@@ -13,11 +13,39 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.4.11.2</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.1.1</span><span class="period">.</span>
 </h4>
-<div class="para">Le plus simple pour construire le circuit associé à une table de vérité est de construire la forme normale disjonctive de l’expression. Comme toutes les sorties tels que <span class="process-math">\(X\)</span> est <span class="process-math">\(1\)</span> donnent <span class="process-math">\(1\text{,}\)</span>en combinant <span class="process-math">\(X\)</span> à la cinquième ligne, on obtient <span class="process-math">\(X\vee (\neg X\wedge Y\wedge Z)\text{.}\)</span> Il faudra donc combiner l’inverse de <span class="process-math">\(X\)</span> avec <span class="process-math">\(Y\)</span> et ensuite combiner ce résultat avec <span class="process-math">\(Z\)</span> dans des portes ET. Ensuite, on combine cette sortie avec <span class="process-math">\(X\)</span> dans une porte OU. À noter qu’à l’exercice <a href="" class="xref" data-knowl="./knowl/exo-ETmultiple.html" title="Exercice 2.4.4.1">2.4.4.1</a>, on verra qu’on peut combiner plus de deux entrées dans une porte ET grâce à l’associativité.</div> <div class="para">Le circuit associé à cette table de vérité est illustré ci-dessous.</div> <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circuit5.svg" class="contained" alt="Un circuit à trois entrées est illustré. L’entrée X est inversée et combinée avec l’entrée Y dans une porte ET. Ensuite, la sortie de cette porte est combinée avec Z dans une autre porte ET. Finalement le résultat de cette seconde porte ET est combinée avec X dans une porte OU."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4.14<span class="period">.</span></span><span class="space"> </span>Le circuit associé à la table de vérité</figcaption></figure>
+<div class="para logical">
+<div class="para"><div class="para">L’idée est de reprendre le principe de la décomposition sous une forme des puissances de <span class="process-math">\(4\text{.}\)</span>
+</div></div>
+<ol class="decimal">
+<li><div class="para logical">
+<div class="para">On a donc</div>
+<div class="displaymath process-math">
+\begin{equation*}
+123_4=1\times 4^2+2\times 4^1 +3\times 4^0=16+8+3=27\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-circuits.html#solution-83" class="internal">Contexte</a></span>
+</div></li>
+<li><div class="para logical">
+<div class="para">De plus,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+102030_4=1\times 4^5 + 0\times 4^4 + 2\times 4^3 + 0\times 4^2 + 3\times 4^1 + 0\times 4^0=1164 \text{.}
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Finalement,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3223_4=3\times4^3+2\times 4^2+2\times 4^1+3\times 4^0=235\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div>
+</div>
+<span class="incontext"><a href="sec-representation.html#solution-83" class="internal">Contexte</a></span>
 </body>
 </html>

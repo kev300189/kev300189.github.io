@@ -12,13 +12,10 @@
 </head>
 <body class="ignore-math"><div class="solution solution-like"><div class="displaymath process-math">
 \begin{align*}
-\neg (p \vee (\neg p \wedge q)) &amp; \neg p \wedge \neg(\neg p \wege q) \text{ par De Morgan.} \\
-&amp; \neg p \wedge (\neg\neg p \vee \neg q) \text{ par De Morgan.} \\
-&amp; \neg p \wedge (p \vee \neg q) \text{ par De Morgan.} \\
-&amp; (\neg p \wedge p) \vee (\neg p \wedge \neg q) \text{ par distributivité.} \\
-&amp; (V) \vee (\neg p \wedge \neg q) \text{ par les propriétés de la négation.} \\
-&amp; (\neg p \wedge \neg q) \text{ par l'identité.} \\
-&amp; \neg( p \vee q) \text{ par De Morgan.} 
+\neg (p \wedge (q \vee r)) &amp; \neg p \vee \neg(q \vee r) \text{ par De Morgan.} \\
+&amp; \neg p \vee (\neg q \wedge \neg r) \text{ par De Morgan.} \\
+&amp; (\neg p \vee \neg q) \wedge (\neg p \vee \neg r) \text{ par distributivité.} \\
+&amp; (p \rightarrow \neg q) \wedge ( p \rightarrow \neg r) 
 \end{align*}
 </div></div></body>
 </html>

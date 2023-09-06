@@ -13,14 +13,23 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.6.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.8.1</span><span class="period">.</span>
 </h4>
 <div class="para logical">
-<div class="para">On décompose le nombre selon les puissances négatives de <span class="process-math">\(2\)</span> pour obtenir</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0.1011_2=1\times 2^{-1}+0\times 2^{-2}+1\times 2^{-3}+1\times 2^{-4}=0.5+0.125+0.0625=0.6875\text{.}
-\end{equation*}
+<div class="para">L’idée est la même que celle utilisée à l’exemple <a href="" class="xref" data-knowl="./knowl/ex-decimalebinaire.html" title="Exemple 3.1.5: De la base dix vers le binaire">3.1.5</a>. On cherche la plus grande puissance de <span class="process-math">\(2\)</span> qui est plus petite ou égale à <span class="process-math">\(0.40625\text{.}\)</span> Dans ce cas, c’est <span class="process-math">\(2^{-2}=0.25\text{.}\)</span> On a donc</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-decimalebinaire.html">
+\begin{align*}
+0.40625&amp;=0\times 2^{-1}+1\times 2^{-2}+\text{autre chose}\\
+\end{align*}
+<p class="intertext">En soustrayant,  il reste 0.15625, pour lequel 0.125 est la plus grande puissance inférieure ou égale à ce nombre. On a alors</p>
+\begin{align*}
+0.40625&amp;=0\times 2^{-1}+\times 2^{-2}+\times 2^{-3}+\text{quelque chose}\\
+\end{align*}
+<p class="intertext">On soustrait une autre fois et on obtient 0.03125, qui est une puissance exacte de 2. Alors</p>
+\begin{align*}
+0.40625&amp;=0\times 2^{-1}+ 2^{-2}+ 2^{-3}+2^{-5}\\
+0.40625&amp;=0.01101_2\text{.}
+\end{align*}
 </div>
 </div>
 </div>
