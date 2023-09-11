@@ -11,8 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraphe</span></h3>
-<div class="para">Les différentes <a href="" class="xref" data-knowl="./knowl/li-oplogprop.html" title="Liste 2.2.5: Équivalences logiques de base">équivalences logiques</a> de base et leurs liens avec les <a href="" class="xref" data-knowl="./knowl/li-opensprop.html" title="Liste 1.2.13: Propriétés des opérations sur les ensembles">propriétés</a> des opérations sur les ensembles;</div>
+<h5 class="heading"><span class="type">Paragraphe</span></h5>
+<div class="para logical">
+<div class="para">Selon l’exercice <a href="" class="xref" data-knowl="./knowl/exo-negimplication.html" title="Exercice 2.1.5.7">2.1.5.7</a>, il est possible d’écrire</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negimplication.html ./knowl/exo-negimplication.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
+\begin{equation*}
+\neg (p\rightarrow q)\equiv p\wedge \neg q\text{.}
+\end{equation*}
+</div>
+<div class="para">Si on nie à nouveau cette équivalence, on devrait pouvoir réécrire l’implication sans flèche. Ainsi</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negimplication.html ./knowl/exo-negimplication.html ./knowl/li-oplogDeMorgan.html ./knowl/li-oplogcomp.html">
+\begin{align*}
+p\rightarrow q&amp;\equiv\neg \neg (p\rightarrow q) \\
+&amp;\equiv\neg (p\wedge \neg q) &amp;&amp; \text{Selon } \knowl{./knowl/exo-negimplication.html}{\text{2.1.5.7}}\\
+&amp;\equiv \neg p \vee \neg\neg q &amp;&amp; \text{Selon De Morgan } \knowl{./knowl/li-oplogDeMorgan.html}{\text{2.2.5:9}} \\
+&amp;\equiv \neg p \vee q &amp;&amp; \text{Selon } \knowl{./knowl/li-oplogcomp.html}{\text{2.2.5:4}}\text{.}
+\end{align*}
+</div>
+</div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-834" class="internal">Contexte</a></span>
 </body>
 </html>

@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<div class="para">Déterminer si <span class="process-math">\(p\rightarrow (q\vee r)\)</span> est équivalent à <span class="process-math">\((p\rightarrow q)\vee (p\rightarrow r)\text{,}\)</span> à savoir si l’implication se distribue sur la disjonction.</div>
+<div class="para logical">
+<div class="para">Pour la seconde proposition, il faut distribuer la disjonction dans l’expression <span class="process-math">\((p\wedge q)\vee r\text{.}\)</span> En utilisant <a href="" class="xref" data-knowl="./knowl/li-oplogdis.html" title="Point 2.2.5:8">la distributivité</a>, on obtient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogdis.html">
+\begin{equation*}
+(p\wedge q)\vee r\equiv(p\vee r)\wedge (q\vee r)\text{.}
+\end{equation*}
+</div>
+<div class="para">En combinant avec le reste de la proposition initiale, on a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogdis.html">
+\begin{equation*}
+((p\wedge q)\vee r)\wedge (q\vee \neg r)\equiv (p\vee r)\wedge (q\vee r)\wedge (q\vee \neg r)\text{,}
+\end{equation*}
+</div>
+<div class="para">qui est une forme normale conjonctive.</div>
+</div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-841" class="internal">Contexte</a></span>
 </body>
 </html>

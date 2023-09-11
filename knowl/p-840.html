@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<div class="para">Montrer que <span class="process-math">\((\neg p \wedge q)\wedge (p\vee \neg q)\)</span> est une contradiction.</div>
+<div class="para logical">
+<div class="para">Il faut utiliser la loi de  <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">De Morgan</a> afin d’enlever la négation devant la première parenthèse. Celle-ci devient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(p\vee q)\equiv\neg p \wedge \neg q\text{.}
+\end{equation*}
+</div>
+<div class="para">On peut ensuite réécrire la proposition comme étant</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(p\vee q)\vee (r\wedge \neg q)\equiv(\neg p \wedge \neg q)\vee (r\wedge \neg q)\text{,}
+\end{equation*}
+</div>
+<div class="para">qui est une forme normale disjonctive.</div>
+</div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-840" class="internal">Contexte</a></span>
 </body>
 </html>

@@ -13,14 +13,17 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
 <div class="para logical">
-<div class="para">On considère l’exemple suivant. Un magasin de bagels vend quatre sortes de bagels différents: nature, sésame, pavot et bleuet. En supposons que le magasin possède plus de <span class="process-math">\(8\)</span> bagels de chaque sorte, de combien de façons peut-on choisir <span class="process-math">\(8\)</span> bagels. Ceci est un exemple de combinaisons avec répétition. Ici,  on pourrait par exemple choisir</div>
+<div class="para">Le nombre de façons de choisir les <span class="process-math">\(r\)</span> éléments de <span class="process-math">\(E\)</span> est <span class="process-math">\(\Binomial{n}{r}\text{.}\)</span> Pour chaque choix de <span class="process-math">\(r\)</span> éléments , le nombre de façons d’ordonner ceux-ci  est <span class="process-math">\(r!\)</span> (le nombre de permutations des <span class="process-math">\(r\)</span> éléments!). Ainsi, par le principe du produit, on a</div>
 <div class="displaymath process-math">
-\begin{align*}
-2 \amp \text{ bagels natures;} \amp \text{ ou bien }  \amp\amp2\amp\text{ bagels natures;}\\
-4 \amp \text{ bagels au sésame;} \amp \amp\amp1 \amp\text{ bagels au sésame;}\\
-1 \amp \text{ bagels au pavot;} \amp \amp\amp 3\amp\text{ bagels au pavot;}\\
-1 \amp \text{ bagels au bleuet;} \amp \amp\amp 2 \amp\text{ bagels au bleuet;}
-\end{align*}
+\begin{equation*}
+\Permutation{n}{r}=\Binomial{n}{r}\cdot r!\text{.}
+\end{equation*}
+</div>
+<div class="para">Ainsi, on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Binomial{n}{r}=\frac{\Permutation{n}{r}}{r!}=\frac{n!}{r!(n-r)!}\text{.}
+\end{equation*}
 </div>
 </div>
 <span class="incontext"><a href="sec_arrCombinaison.html#p-1927" class="internal">Contexte</a></span>

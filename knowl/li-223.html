@@ -12,9 +12,53 @@
 </head>
 <body class="ignore-math">
 <article class="li"><h5 class="heading">
-<span class="type">Point</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span>
+<span class="type">Point</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span>
 </h5>
-<div class="para">Parmi les lettres qui composent “Jean-Sébastien”, on retrouve les voyelles <span class="process-math">\(\{a,e,i\}\text{.}\)</span>
-</div></article><span class="incontext"><a href="sec-propquant.html#li-223" class="internal">Contexte</a></span>
+<div class="para logical">
+<div class="para">Pour cette proposition, on commence par définir des variables. On pose</div>
+<div class="displaymath process-math">
+\begin{gather*}
+s=\text{Je vais prendre des sushis au saumon.}\\
+t=\text{Je vais prendre des sushis au thon.}\\
+p=\text{Je vais prendre un bol poke.}\\
+r=\text{Je vais prendre un rouleau de printemps.}
+\end{gather*}
+</div>
+</div>
+<div class="para logical">
+<div class="para">La proposition peut donc être écrite comme étant <span class="process-math">\((s\wedge t)\vee (p\wedge r)\text{.}\)</span> Selon <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">De Morgan</a>, la négation de l’union devient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(s\wedge t)\vee (p\wedge r)\equiv\neg(s\wedge t)\wedge \neg(p\wedge r)\text{.}
+\end{equation*}
+</div>
+<div class="para">Toujours selon <a href="" class="xref" data-knowl="./knowl/li-oplogDeMorgan.html" title="Point 2.2.5:9">De Morgan</a>, les intersections deviennent respectivement</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(s\wedge t)\equiv\neg s\vee \neg t
+\end{equation*}
+</div>
+<div class="para">et</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/li-oplogDeMorgan.html ./knowl/li-oplogDeMorgan.html">
+\begin{equation*}
+\neg(p\wedge r)\equiv\neg p\vee \neg r\text{.}
+\end{equation*}
+</div>
+<div class="para">On obtient alors <span class="process-math">\(\neg((s\wedge t)\vee (p\wedge r))\equiv(\neg s\vee \neg t)\wedge \neg p\vee \neg r\text{.}\)</span>
+</div>
+</div>
+<div class="para logical">
+<div class="para">Individuellement, on peut traduire la négation des quatre propositions initiales par</div>
+<div class="displaymath process-math">
+\begin{align*}
+\neg s&amp;\equiv\text{Je ne prendrai pas de sushis au saumon.}\\
+\neg t&amp;\equiv\text{Je ne prendrai pas de sushis au thon.}\\
+\neg p&amp;\equiv\text{Je ne prendrai pas de bol poke.}\\
+\neg r&amp;\equiv\text{Je ne prendrai pas de rouleau de printemps.}
+\end{align*}
+</div>
+</div>
+<div class="para">Au final, la négation de la proposition serait “Je ne prendrai pas de sushis au saumon ou au thon et je ne prendrai pas de bol poke ou de rouleau de printemps.”; ce à quoi l’auteur répondrait de considérer de changer de restaurant!</div>
+<div class="para">On a choisi de considérer le “ou” comme étant inclusif ici, d’une part parce que cela simplifie le problème en fonction de ce qui a été vu et d’autre part, il n’est pas déraisonnable qu’une personne commande à la fois des sushis et un bol poke ou un rouleau de printemps.</div></article><span class="incontext"><a href="sec-eqlogfnc.html#li-223" class="internal">Contexte</a></span>
 </body>
 </html>

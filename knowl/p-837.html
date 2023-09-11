@@ -12,7 +12,33 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraphe</span></h4>
-<div class="para">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</div>
+<div class="para logical">
+<div class="para">On exige dans un premier temps que toute négation affecte seulement une variable, quitte à utiliser les lois de De Morgan si nécessaire. Par la suite, la forme normale disjonctive est écrite comme un certain nombre de conjonctions (<span class="process-math">\(\wedge\)</span>) connectées par des disjonctions (<span class="process-math">\(\vee\)</span>), alors que la forme normale conjonctive est écrite comme un certain nombre de disjonctions connectées par des conjonctions. Par exemple,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\neg p\wedge q \wedge \neg r)\vee (p\wedge \neg q)
+\end{equation*}
+</div>
+<div class="para">est une forme normale disjonctive alors que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(p\vee \neg q)\wedge \neg r
+\end{equation*}
+</div>
+<div class="para">est une forme normale conjonctive. Par contre,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\neg(p\vee q)\vee (r\wedge \neg q)
+\end{equation*}
+</div>
+<div class="para">et</div>
+<div class="displaymath process-math">
+\begin{equation*}
+((p\wedge q)\vee r)\wedge (q\vee \neg r)
+\end{equation*}
+</div>
+<div class="para">n’en sont pas. La première possède une négation qui affecte plus d’une variable, alors que la seconde contient une parenthèse ayant à la fois une conjonction et une disjonction.</div>
+</div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-837" class="internal">Contexte</a></span>
 </body>
 </html>
