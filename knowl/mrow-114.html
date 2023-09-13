@@ -11,14 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-implicationsansfleche.html">
 \begin{align*}
-p \oplus q \equiv \neg(\neg(p \oplus q))&amp;\equiv \neg ( (p \wedge q)\vee(\neg p \wedge \neg q)  )\\
-&amp;\equiv \neg (p \wedge q)\wedge\neg(\neg p \wedge \neg q) \\
-&amp;\equiv (\neg p \vee \neg q)\wedge(\neg\neg p \vee \neg\neg q) \\
-&amp;\equiv (\neg p \vee \neg q)\wedge(p \vee q) 
+\neg (p \wedge (q \vee r)) &amp;\equiv \neg p \vee \neg(q \vee r) &amp;&amp;\text{ par De Morgan.} \\
+&amp; \equiv \neg p \vee (\neg q \wedge \neg r) &amp;&amp;\text{ par De Morgan.} \\
+&amp; \equiv (\neg p \vee \neg q) \wedge (\neg p \vee \neg r) &amp;&amp;\text{ par distributivité.} \\
+&amp;\equiv (p \rightarrow \neg q) \wedge ( p \rightarrow \neg r) &amp;&amp; \text{par \knowl{./knowl/ex-implicationsansfleche.html}{\text{2.2.8}}} 
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-eqlogfnc.html#md-29" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#md-28" class="internal">Contexte</a></span>
 </body>
 </html>

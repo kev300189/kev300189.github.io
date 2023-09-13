@@ -12,10 +12,21 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.4.10.b.1</span><span class="period">.</span>
-</h6>
-<span class="process-math">\(f(p,q) \equiv (p \wedge \neg q)\vee(\neg p \wedge q)\)</span>
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.4.6.1</span><span class="period">.</span>
+</h5>
+<div class="para">D’une part, la proposition <span class="process-math">\(p \oplus q\)</span> est vraie uniquement lorsque <span class="process-math">\(p\)</span> est vraie et <span class="process-math">\(q\)</span> est fausse, ou  <span class="process-math">\(p\)</span> est fausse et <span class="process-math">\(q\)</span> est vraie.</div> <div class="para">Ainsi <span class="process-math">\(p \oplus q \equiv (p \wedge \neg q)\vee(\neg p \wedge q)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">D’autre part, la proposition <span class="process-math">\(\neg(p \oplus q)\)</span> est vraie uniquement lorsque <span class="process-math">\(p\)</span> et <span class="process-math">\(q\)</span> sont vraies, ou  <span class="process-math">\(p\)</span> et <span class="process-math">\(q\)</span> sont fausses. Ainsi, <span class="process-math">\(\neg(p \oplus q)\equiv (p \wedge q)\vee(\neg p \wedge \neg q)\text{.}\)</span> En prennant la négation de cette proposition, on obtien:</div>
+<div class="displaymath process-math">
+\begin{align*}
+p \oplus q \equiv \neg(\neg(p \oplus q))&amp;\equiv \neg ( (p \wedge q)\vee(\neg p \wedge \neg q)  )\\
+&amp;\equiv \neg (p \wedge q)\wedge\neg(\neg p \wedge \neg q) \\
+&amp;\equiv (\neg p \vee \neg q)\wedge(\neg\neg p \vee \neg\neg q) \\
+&amp;\equiv (\neg p \vee \neg q)\wedge(p \vee q) 
+\end{align*}
+</div>
+</div>
 </div>
 <span class="incontext"><a href="sec-eqlogfnc.html#solution-62" class="internal">Contexte</a></span>
 </body>

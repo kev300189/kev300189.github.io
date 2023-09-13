@@ -13,12 +13,15 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-\neg (p \wedge (q \vee r)) &amp; \neg p \vee \neg(q \vee r) \text{ par De Morgan.} \\
-&amp; \neg p \vee (\neg q \wedge \neg r) \text{ par De Morgan.} \\
-&amp; (\neg p \vee \neg q) \wedge (\neg p \vee \neg r) \text{ par distributivité.} \\
-&amp; (p \rightarrow \neg q) \wedge ( p \rightarrow \neg r) 
+\neg (p \vee (\neg p \wedge q)) &amp; \equiv \neg p \wedge \neg(\neg p \wedge q) &amp;&amp; \text{ par De Morgan.} \\
+&amp; \equiv \neg p \wedge (\neg\neg p \vee \neg q) &amp;&amp; \text{ par De Morgan.} \\
+&amp; \equiv \neg p \wedge (p \vee \neg q)\\
+&amp; \equiv (\neg p \wedge p) \vee (\neg p \wedge \neg q) &amp;&amp;\text{ par distributivité.} \\
+&amp; \equiv (V) \vee (\neg p \wedge \neg q) &amp;&amp; \text{ par la négation.} \\
+&amp; \equiv (\neg p \wedge \neg q) &amp;&amp;\text{ par l'identité.} \\
+&amp;\equiv \neg( p \vee q) &amp;&amp;\text{ par De Morgan.} 
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-eqlogfnc.html#md-28" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#md-27" class="internal">Contexte</a></span>
 </body>
 </html>

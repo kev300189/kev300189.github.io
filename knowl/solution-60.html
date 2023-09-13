@@ -12,10 +12,17 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h5 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.4.5.1</span><span class="period">.</span>
-</h5>
-<div class="para">Sachant que l’énnoncé “J’ai capturé la fille du commissaire Gordon ou posé la bombe dans la banque de Gotham” est fausse, on sait que le Sphynx n’a ni capturé la fille du commisaaire Gordon ni posé la bombe dans la banque de Gotham.</div> <div class="para">Sachant que l’énnoncé “Si j’ai piraté les archives du palais de justice, alors j’ai donné un pot-de-vin à un procureur.” est fausse, on sait que le Sphynx a piraté les archives du palais de justice, mais il n’a pas donné un pot-de-vin à un procureur.</div> <div class="para">Sachant que l’énnocné “Je n’ai pas donné de pot-de-vin ni incendié l’hôpital” est fausse. alors soit il a donné un pot-de-vin, soit il a incendié l’hôpital. On sait déjà qu’il n’a pas donné de pot-de-vin, on sait qu’il doit avoir incendié l’hôpital.</div>
+<h6 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.4.3.b.1</span><span class="period">.</span>
+</h6>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-implicationsansfleche.html">
+\begin{align*}
+\neg (p \wedge (q \vee r)) &amp;\equiv \neg p \vee \neg(q \vee r) &amp;&amp;\text{ par De Morgan.} \\
+&amp; \equiv \neg p \vee (\neg q \wedge \neg r) &amp;&amp;\text{ par De Morgan.} \\
+&amp; \equiv (\neg p \vee \neg q) \wedge (\neg p \vee \neg r) &amp;&amp;\text{ par distributivité.} \\
+&amp;\equiv (p \rightarrow \neg q) \wedge ( p \rightarrow \neg r) &amp;&amp; \text{par \knowl{./knowl/ex-implicationsansfleche.html}{\text{2.2.8}}} 
+\end{align*}
+</div>
 </div>
 <span class="incontext"><a href="sec-eqlogfnc.html#solution-60" class="internal">Contexte</a></span>
 </body>

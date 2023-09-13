@@ -10,53 +10,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<div class="para">On commence par convertir les nombres en binaire. Pour <span class="process-math">\(218\text{,}\)</span> on obtient <span class="process-math">\(11011010_2=218\)</span> et pour <span class="process-math">\(22\text{,}\)</span> c’est <span class="process-math">\(10110_2=22\text{.}\)</span> Le résultat de la division est donné ci-dessous.</div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(11011(\cancel{0}10)_2\)</span></td>
-<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(10110_2\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-\)</span></td>
-<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(10110_2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1_2\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(001010(\cancel{1}0)_2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\downarrow\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-\)</span></td>
-<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(0_2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10_2\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10101(\cancel{0})_2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\downarrow\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-\)</span></td>
-<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(0_2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(100_2\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(101010_2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\downarrow\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-\)</span></td>
-<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(\phantom{1}10110_2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1001_2\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r2 l0 t0 lines">reste</td>
-<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(10100_2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
+<div class="para">Puisque <span class="process-math">\(1010_2=1000_2+0010_2\text{,}\)</span> on aura</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1001_2\times 1010_2=1001_2\times (1000_2+10_2)=1001_2\times 1000_2+1001_2\times 10_2\text{.}
+\end{equation*}
+</div>
+<div class="para">On ajoute à chaque terme le bon nombre de zéros et on obtient <span class="process-math">\(1001000_2+10010_2\text{.}\)</span> Finalement, on additionne</div>
+<div class="displaymath process-math">
+\begin{align*}
+&amp; &amp; 10 01000_2&amp;\\
+&amp;+&amp;{}{}10010_2&amp;\\
+\hline&amp; &amp; 10 11010_2&amp; 
+\end{align*}
+</div>
+</div></div></body>
 </html>

@@ -13,11 +13,11 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.5.8.d.i.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.5.8.c.i.1</span><span class="period">.</span>
 </h6>
-<div class="para">Cette-fois, on distingue trois cas: Christian est présent, mais pas Sophie, Sophie est présent, mais pas Christian ou ni Sophie ni Christian sont présents. Ces trois cas sont disctincts et le principe d’addition permettra d’obtenir l’ensemble des possibilités.</div> <div class="para">Si Christian est présent, il faut ensuite choisir les <span class="process-math">\(9\)</span> autres invités parmi les <span class="process-math">\(12\)</span> personnes qui ne sont pas Sophie (ou Christian). Cela donne <span class="process-math">\(\frac{12!}{9!3!}\text{.}\)</span> Le même argument montre que si Sophie est présente, mais pas Christian, le nombre de possibilités est aussi <span class="process-math">\(\frac{12!}{9!3!}\text{.}\)</span>
-</div> <div class="para">Finalement, si les deux sont absents, il faut choisir les <span class="process-math">\(10\)</span> invités parmi les <span class="process-math">\(12\)</span> autres possibilités. On obtient alors <span class="process-math">\(\frac{12!}{10!2!}\text{.}\)</span>
-</div> <div class="para">En combinant le tout, il y a <span class="process-math">\(2\times \frac{12!}{9!3!}+\frac{12!}{10!2!}\)</span> possibilités.</div>
+<div class="para">On commence par décider si le couple est invité ou non. On obtient leur présence ou absence entraine deux sous-ensembles disjoints de possibilités. Si le couple fait partie des invités, alors il reste <span class="process-math">\(8\)</span> places à combler, à choisir parmi les <span class="process-math">\(12\)</span> autres personnes. Cela fait <span class="process-math">\(\frac{12!}{8!4!}\text{.}\)</span>
+</div> <div class="para">À cela, on ajoute les possibilités où Roxanne et Samuel ne sont pas invités. Il faut alors choisir les <span class="process-math">\(10\)</span> invités parmi les <span class="process-math">\(12\)</span> personnes. Cela fait <span class="process-math">\(\frac{12!}{10!2!}\text{.}\)</span>
+</div> <div class="para">Par le principe d’addition, on a un total de <span class="process-math">\(\frac{12!}{8!4!}+\frac{12!}{10!2!}\)</span> possibilités.</div>
 </div>
 <span class="incontext"><a href="sec_arrCombinaison.html#solution-185" class="internal">Contexte</a></span>
 </body>

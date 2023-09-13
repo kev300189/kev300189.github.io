@@ -13,9 +13,20 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.13.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.11.1</span><span class="period">.</span>
 </h4>
-<div class="para">On commence par convertir les nombres binaires en base seize. Pour <span class="process-math">\(101110_2\text{,}\)</span> on forme les groupes <span class="process-math">\(0010\,1110\text{,}\)</span> ayant pris soin d’ajouter deux zéros à la gauche du premier bloc. Ces nombres correspondent respectivement à <span class="process-math">\(2\)</span> et <span class="process-math">\(14=E\)</span> en hexadécimal et donc, <span class="process-math">\(101110_2=2E_{16}\text{.}\)</span> D’une manière similaire, <span class="process-math">\(1001001_2\)</span> se regroupe comme <span class="process-math">\(0100\,1001\text{,}\)</span> qui se convertissent comme <span class="process-math">\(4\)</span> et <span class="process-math">\(9\text{,}\)</span> pour donner <span class="process-math">\(1001001_2=49_{16}\text{.}\)</span>
+<div class="para logical">
+<div class="para">La conversion d’hexadécimal vers la base dix étant plus simple, on débute par celle-ci. On a</div>
+<div class="displaymath process-math">
+\begin{align*}
+A0E2F3_{16}&amp;=A\times 16^5+0\times 16^4+E\times 16^3+2\times 16^2+F\times 16^1+3\times 16^0\\
+&amp;=10\times 16^5+14\times 16^3+2\times 16^2+15\times 16^1+3\times 16^0\\
+\end{align*}
+<p class="intertext">qui après addition de toutes ces puissances donne</p>
+\begin{align*}
+&amp;=10543859\text{.}
+\end{align*}
+</div>
 </div>
 </div>
 <span class="incontext"><a href="sec-representation.html#solution-91" class="internal">Contexte</a></span>

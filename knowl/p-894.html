@@ -12,62 +12,17 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraphe</span></h6>
-<div class="para"><figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.14<span class="period">.</span></span><span class="space"> </span>Table de vérité de <span class="process-math">\(f(p,q,r)\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(p\)</span></td>
-<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="l m b0 r2 l0 t3 lines"><span class="process-math">\(r\)</span></td>
-<td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(f(p,q,r)\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r2 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r2 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r2 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r2 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r2 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">V</td>
-<td class="l m b0 r2 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-<td class="l m b0 r2 l0 t0 lines">V</td>
-<td class="l m b0 r0 l0 t0 lines">F</td>
-</tr>
-<tr>
-<td class="l m b3 r0 l0 t0 lines">F</td>
-<td class="l m b3 r0 l0 t0 lines">F</td>
-<td class="l m b3 r2 l0 t0 lines">F</td>
-<td class="l m b3 r0 l0 t0 lines">V</td>
-</tr>
-</table></div></figure></div>
+<div class="para logical">
+<div class="para">D’autre part, la proposition <span class="process-math">\(\neg(p \oplus q)\)</span> est vraie uniquement lorsque <span class="process-math">\(p\)</span> et <span class="process-math">\(q\)</span> sont vraies, ou  <span class="process-math">\(p\)</span> et <span class="process-math">\(q\)</span> sont fausses. Ainsi, <span class="process-math">\(\neg(p \oplus q)\equiv (p \wedge q)\vee(\neg p \wedge \neg q)\text{.}\)</span> En prennant la négation de cette proposition, on obtien:</div>
+<div class="displaymath process-math">
+\begin{align*}
+p \oplus q \equiv \neg(\neg(p \oplus q))&amp;\equiv \neg ( (p \wedge q)\vee(\neg p \wedge \neg q)  )\\
+&amp;\equiv \neg (p \wedge q)\wedge\neg(\neg p \wedge \neg q) \\
+&amp;\equiv (\neg p \vee \neg q)\wedge(\neg\neg p \vee \neg\neg q) \\
+&amp;\equiv (\neg p \vee \neg q)\wedge(p \vee q) 
+\end{align*}
+</div>
+</div>
 <span class="incontext"><a href="sec-eqlogfnc.html#p-894" class="internal">Contexte</a></span>
 </body>
 </html>

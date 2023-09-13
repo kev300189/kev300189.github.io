@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraphe</span></h4>
-<div class="para">On peut trouver le <span class="process-math">\(\pgcd\)</span> de deux nombres en donnant la liste de tous leurs diviseurs et en prenant le plus grand qu’ils ont en commun. Pour de petits nombres, cette approche est viable, mais pour de plus grands nombres, cela risque d’être inefficace et peu pratique. En fait, factoriser de très grands nombres est une opération difficile. Une grande partie de la sécurité informatique repose sur le fait qu’un même un puissance ordinateur ne peut pas factoriser facilement de très grands nombres. L’algorithme d’Euclide fournit une méthode plus efficace pour calculer le <span class="process-math">\(\pgcd\)</span> de deux nombres. Avec de très grands nombres, ça peut être long, mais ça utilise des opérations qu’un ordinateur effectue facilement.</div>
+<h5 class="heading"><span class="type">Paragraphe</span></h5>
+<div class="para">Sage est capable de calculer facilement les entiers <span class="process-math">\(q\)</span> et <span class="process-math">\(r\)</span> de la proposition <a href="" class="xref" data-knowl="./knowl/prop-divisioneuclidienne.html" title="Proposition 3.2.3: La division euclidienne">3.2.3</a> grâce à deux opérateurs spéciaux. Si <code class="code-inline tex2jax_ignore">a/b</code> produit la division usuelle, donnant un nombre rationnel lorsque <span class="process-math">\(b\nmid a\text{,}\)</span> l’opération <code class="code-inline tex2jax_ignore">a//b</code> elle produit le quotient <span class="process-math">\(q\)</span> dans l’expession <span class="process-math">\(a=bq+r\text{.}\)</span> Pour obtenir le reste, il faut utiliser <code class="code-inline tex2jax_ignore">a%b</code>. La cellule ci-dessous illustre ces opérations.</div>
 <span class="incontext"><a href="sec-divisibilite.html#p-1469" class="internal">Contexte</a></span>
 </body>
 </html>

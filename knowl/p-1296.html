@@ -12,22 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraphe</span></h4>
-<div class="para logical">
-<div class="para">On regarde l’expression pour <span class="process-math">\(S\)</span> à l’aide de la forme normale disjonctive. La sortie <span class="process-math">\(S\)</span> sera égale à <span class="process-math">\(1\)</span> si <span class="process-math">\((\neg A\wedge \neg B\wedge P)\vee (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)\text{.}\)</span> On peut ensuite utiliser les règles de la logique pour simplifier un peu l’expression.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-negationxor.html ./knowl/exo-circuitretenue.html">
-\begin{align*}
-S&amp;\equiv(\neg A\wedge \neg B\wedge P)\vee (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)&amp;&amp;\\
-&amp;\equiv (\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P)\vee (A\wedge B\wedge P)\vee(\neg A\wedge \neg B\wedge P)&amp;&amp;\text{commutativité de l'union}\\
-&amp;\equiv((\neg A \wedge B \wedge\neg P)\vee (A\wedge\neg B\wedge \neg P))\vee ((A\wedge B\wedge P)\vee(\neg A\wedge \neg B\wedge P)&amp;&amp;\text{associativité de l'union})\\
-&amp;\equiv(((\neg A\wedge B)\vee(A\wedge \neg B))\wedge \neg P)\vee(((\neg A\wedge \neg B)\vee(A\wedge  B))\wedge P)&amp;&amp;\text{distributivité de l'intersection sur l'union}\\
-&amp;\equiv((A\oplus B)\wedge \neg P)\vee ((\neg A\oplus B)\wedge P)&amp;&amp; \text{définition du ou exclusif}\\
-&amp;\equiv((A\oplus B)\wedge \neg P)\vee (\neg( A\oplus B)\wedge P)&amp;&amp;\text{voir l'exercice }\knowl{./knowl/exo-negationxor.html}{\text{2.2.4.4}}\\
-&amp;\equiv(A\oplus B)\oplus P &amp;&amp;\text{définition du ou exclusif}\text{.}
-\end{align*}
-</div>
-<div class="para">L’exercice <a href="" class="xref" data-knowl="./knowl/exo-circuitretenue.html" title="Exercice 3.1.7.12">3.1.7.12</a> permettra de montrer que <span class="process-math">\(R\equiv ((A\oplus B)\wedge P)\vee (A\wedge B)\text{.}\)</span>
-</div>
-</div>
+<div class="para">De manière plus générale, on ajoute autant de zéros qu’il y en a dans l’écriture de la puissance de deux.Pour un produit quelconque, on va décomposer l’un des facteur selon ses puissances de deux, distribuer sur l’autre facteur et additionner les nombres obtenus.</div>
 <span class="incontext"><a href="sec-representation.html#p-1296" class="internal">Contexte</a></span>
 </body>
 </html>

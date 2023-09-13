@@ -13,16 +13,11 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.5.9.b.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.5.8.c.iii.1</span><span class="period">.</span>
 </h6>
-<div class="para">Pour que la fonction <span class="process-math">\(h\)</span> soit surjective, on doit avoir <span class="process-math">\(|f^{-1}(b)|\geq 1\)</span> pour <span class="process-math">\(b\in\, B\text{,}\)</span> et on doit aussi avoir <span class="process-math">\(|f^{-1}(1)|+|f^{-1}(2)|+|f^{-1}(3)|+|f^{-1}(4)|=5\text{.}\)</span> Ainsi, il doit y avoir avoir exactement un élément <span class="process-math">\(b\in\,B\)</span> tel que <span class="process-math">\(|f^{-1}(b)|=2\)</span> alors que tous les autres éléments aurons une seule préimage.</div> <div class="para">Donc, pour définir une fonction surjective <span class="process-math">\(h:B\to A\text{,}\)</span> on doit choisir l’élément <span class="process-math">\(b\)</span> de <span class="process-math">\(B\)</span> ayant deux préimages (<span class="process-math">\(4\)</span> possibilité). Enusite, on choisit les deux préimage de <span class="process-math">\(b\)</span> (il y <span class="process-math">\(\Binomial{5}{2}\)</span> possibilités.) Finalement, on doit choisir la préimage des autres éléments de <span class="process-math">\(B\text{.}\)</span> Ceci evient à permuter trois éléments (il y a <span class="process-math">\(3!\)</span> possibilités).</div> <div class="para logical">
-<div class="para">Ainsi, par le principe du produit, il y a</div>
-<div class="displaymath process-math">
-\begin{equation*}
-4\cdot \Binomial{5}{2}\cdot 3!=4\cdot \frac{5!}{3!2!}\cdot 3!=2\cdot 5!
-\end{equation*}
-</div>
-</div>
+<div class="para">Encore une fois, on sépare en deux cas distincts, selon si Roxanne et Samuel sont présents ou non. Dans le cas où ils sont présent, on doit ensute choisir <span class="process-math">\(4\)</span> hommes parmi les <span class="process-math">\(7\)</span> restant et <span class="process-math">\(4\)</span> femmes parmi les <span class="process-math">\(5\)</span> restant. Selon le principe de multiplication, ceci donnera <span class="process-math">\(\frac{7!}{4!3!}\times\frac{5!}{4!1!}\text{.}\)</span>
+</div> <div class="para">À cela, on doit ajouter les possiblités où Roxanne et Samuel sont absents. Il faut choisir <span class="process-math">\(5\)</span> hommes parmi les <span class="process-math">\(7\)</span> qui ne sont pas Samuel et <span class="process-math">\(5\)</span> femmes parmi les <span class="process-math">\(5\)</span> qui ne sont pas Roxanne. On obtient alors, par le principe de multiplication <span class="process-math">\(\frac{7!}{5!2!}\times \frac{5!}{5!0!}\text{.}\)</span>
+</div> <div class="para">On combine finalement avec le principe d’addition pour avoir un total de <span class="process-math">\(\frac{7!}{4!3!}\times\frac{5!}{4!1!}+\frac{7!}{5!2!}\times \frac{5!}{5!0!}\)</span> possibilités.</div>
 </div>
 <span class="incontext"><a href="sec_arrCombinaison.html#solution-186" class="internal">Contexte</a></span>
 </body>

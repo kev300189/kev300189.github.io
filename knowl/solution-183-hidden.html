@@ -10,9 +10,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<div class="para">On commence par décider si le couple est invité ou non. On obtient leur présence ou absence entraine deux sous-ensembles disjoints de possibilités. Si le couple fait partie des invités, alors il reste <span class="process-math">\(8\)</span> places à combler, à choisir parmi les <span class="process-math">\(12\)</span> autres personnes. Cela fait <span class="process-math">\(\frac{12!}{8!4!}\text{.}\)</span>
-</div> <div class="para">À cela, on ajoute les possibilités où Roxanne et Samuel ne sont pas invités. Il faut alors choisir les <span class="process-math">\(10\)</span> invités parmi les <span class="process-math">\(12\)</span> personnes. Cela fait <span class="process-math">\(\frac{12!}{10!2!}\text{.}\)</span>
-</div> <div class="para">Par le principe d’addition, on a un total de <span class="process-math">\(\frac{12!}{8!4!}+\frac{12!}{10!2!}\)</span> possibilités.</div>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
+<div class="para">Soit <span class="process-math">\(n\)</span> le nombre de personnes dans la classe. Si <span class="process-math">\(n&lt; 5\text{,}\)</span> alors c’est impossible. Sinon, le nombre de possibilités est</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{n!}{5!(n-5)!}\text{.}
+\end{equation*}
+</div>
+<div class="para">Pour cela, on identifie les personnes avec <span class="process-math">\(5\)</span> étiquettes <span class="process-math">\(V\)</span> pour volontaires et <span class="process-math">\(n-5\)</span> étiquettes <span class="process-math">\(N\)</span> pour non volontaires.</div>
+</div></div></body>
 </html>

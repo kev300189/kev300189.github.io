@@ -13,10 +13,12 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-\neg(\forall n\in \N\, n^2=n+2)&amp;\equiv \exists n\in \N \neg(n^2=n+2)\\
-&amp;\equiv \exists n\in \N n^2\neq n+2
+p \oplus q \equiv \neg(\neg(p \oplus q))&amp;\equiv \neg ( (p \wedge q)\vee(\neg p \wedge \neg q)  )\\
+&amp;\equiv \neg (p \wedge q)\wedge\neg(\neg p \wedge \neg q) \\
+&amp;\equiv (\neg p \vee \neg q)\wedge(\neg\neg p \vee \neg\neg q) \\
+&amp;\equiv (\neg p \vee \neg q)\wedge(p \vee q) 
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-propquant.html#md-30" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-eqlogfnc.html#md-29" class="internal">Contexte</a></span>
 </body>
 </html>
