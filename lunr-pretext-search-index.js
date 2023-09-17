@@ -1609,7 +1609,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Les propositions quantifiées",
-  "body": "  Les propositions quantifiées    On a vu qu'un énoncé comme x>0 n'est pas une proposition puisqu'il ne possède pas de valeur de vérité claire. Si , l'énoncé devient une proposition fausse, alors que si , il devient une proposition vraie. Bien que certains énoncés avec variables peuvent sembler vrais peu importe la valeur de la variable, on préfèrera ne pas les considérer comme des propositions. Un exemple d'un tel énoncé serait . Comme fonction réelle, il est vrai qu'un nombre au carré est toujours positif. Il existe toutefois d'autre contexte où cette équation ne serait plus nécessairement vraie. Pour en savoir plus, voir les nombres complexes .  Pour remédier à cela, on doit préciser ce que signifie les variables. On dira alors qu'on les quantifie.  Dans cette section, on définit le quantificateur existensiel et le quantificateur universel. On explique aussi comme obtenir la négation d'une proposition quantifiée.    Prédicats  Un énoncé qui contient une ou des variables est appelé un prédicat. Ce n'est pas une proposition, car la valeur de vérité dépendra de la valeurs des variables. On spécifie normalement un ensemble univers qui consiste aux diverses possibilités que peuvent prendre les variables. Pour des valeurs spécifiques des variables, le prédicat devient une proposition.   Des prédicats  On considère l'ensemble des nombres réels comme ensemble univers et les prédicats suivants:  ;  ;  .   On cherche à évaluer la valeur de vérité des propositions obtenues lorsque .   Lorsque , la proposition est , qui est fausse.  La proposition est , qui est vraie.  Puisque , la proposition est fausse.     L'ensemble de toutes les valeurs de qui rendent un prédicat vrai est appelé l'ensemble de vérité de . On le note .   Des ensembles de vérité  On considère le prédicat est une voyelle . On cherche les ensembles de vérité de ce prédicat lorsque l'ensemble univers est  , l'alphabet usuel;  , les lettres composant le prénom de l'auteur.     L'ensemble des lettres de l'alphabet usuel qui sont des voyelles et donc, qui rendent le prédicat vrai sont .  Parmi les lettres qui composent Jean-Sébastien , on retrouve les voyelles .       Quantificateurs existentiel et universel  On peut donc transformer un prédicat en proposition en assignant aux variables certaines valeurs. On peut aussi ajouter un quantificateur à un prédicat. Un quantificateur est un mot du genre certains, quelques, toutes, \\etc qui vient parler, d'une manière plus ou moins précise, de combien de valeurs de la variable on s'intéresse. Ainsi si on dit, pour certaines valeurs de on a ,on obtient une proposition. Dans ce cas-ci, elle est vraie, mais si on avait dit pour toutes les valeurs de , on a , on aurait obtenu une proposition fausse.  En mathématiques, il y a deux principaux quantificateurs qui sont utilisés. Le quantificateur existentiel et le quantificateur universel. Le premier s'intéresse à l'existence d'une valeur des variables qui rendent le prédicat vrai. Il n'est même pas nécessaire de la trouver cette valeur, et il pourrait y en avoir plus d'une. L'important, c'est qu'elle existe. Le quantificateur universel lui veut que le prédicat soit vrai pour toutes les valeurs de l'ensemble univers.   Quantificateur existentiel  Soit un prédicat et l'ensemble univers de la variable . Une proposition existentielle est un énoncé de la forme il existe tel que est vrai . D'un point de vue symbolique, on la dénote (le symbole se lit il existe ). La proposition est vraie s'il existe au moins une valeur dans qui rende vrai et est fausse si toutes les valeurs de font que est faux.  Au lieu de il existe , on dit parfois aussi pour un certain , on peut trouver , pour au moins , etc.   Avec une proposition contenant un quantificateur existentiel, on obtient la valeur de vérité vraie dès qu' (au moins) une valeur de rende le prédicat vrai. Pour que la proposition soit fausse, il faut toutefois vérifier que le prédicat est faux pour toutes les valeurs dans , ou du moins argumenter cela.  Des propositions avec quantificateur existentiel  On considère les propositions suivantes:   où .  Il y a un mammifère qui pond des oeufs.  Il existe un moment précis où l'auteur mesurait cm. (Présentement, il en fait environ .)    On cherche la valeur de vérité de ces propositions.    On peut essayer de trouver un exemple qui fonctionne. Rapidement, on voit que est une solution. La proposition est donc vraie.  Puisque Jean-Sébastien ne contient aucune des lettres u,v,w,x,y et z, la proposition est fausse.  Il y a en fait deux types de mammifères qui pondent des oeufs. L'ornithorynque est probablement l'exemple le plus connu, mais il y a aussi les échidnés.  Ceci constitue un bon exemple de l'existence d'une valeur, sans toutefois pouvoir la déterminer. Comme la croissance d'une personne est un processus continu et qu'un humain nait normalement entre 46 et 56 cm (le record étant de 71!), il existe bel et bien un moment où l'auteur mesurait 100 cm. Bien malin toutefois celui qui pourra dire quand cela s'est produit.    Alors que le quantificateur existentiel souhaite l'existence d'une valeur rendant le prédicat vrai, le quantificateur universel lui veut que le prédicat soit vrai pour toutes les valeurs de l'univers considéré.   Quantificateur universel   Soit un prédicat et l'ensemble univers de la variable . Une proposition universelle est un énoncé de la forme pour tout on a que est vrai . D'un point de vue symbolique, on la dénote (le symbole se lit pour tout ). La proposition est vraie si chaque valeur de dans rend vrai et est fausse dès qu'une valeur de font que est faux.  Au lieu de pour tout , on dit parfois aussi pour chaque , pour n'importe quel ,etc.    Avec une proposition contenant un quantificateur universel, il faut vérifier (ou argumenter pour) toutes les valeurs de pour que la proposition soit vraie. Pour qu'elle soit fausse, il suffit d'exhiber une valeur de pour laquelle est faux.  Des propositions avec quantificateur universel  On considère les propositions suivantes:   où .  Tous les oiseaux peuvent voler.  N'importe quel nombre naturel est pair ou impair.    On cherche la valeur de vérité de ces propositions.     Il suffit de tester pour certaines valeurs de , comme pour se rendre compte que la proposition est fausse.  Le prénom de l'auteur étant Jean-Sébastien, on vérifie aisément que a,b,s,t en font tous partie.  La proposition est fausse, les autruches étant un exemple d'oiseaux ne pouvant pas voler.  La proposition est vraie, la parité d'un nombre créant une dichotomie des nombres naturels. On aura les outils nécessaire pour formaliser ceci prochainement.     Une proposition universelle est souvent présentée à l'aide d'une implication. On retrouve donc fréquemment, pour des prédicats et , la forme . En langage courant, cela signifie que pour tout dans l'ensemble univers, avoir la propriété implique aussi avoir la propriété .  Par exemple, on pourrait dire , si alors . Ceci n'est pas très surprenant comme propriété. Cette proposition apporte toutefois une vision intéressante sur la table de vérité de l'implication, en particulier, pourquoi les ligne - et - sont vraies.  Si dans son ensemble la proposition , si alors est vraie, alors selon la définition du quantificateur universel, il faut que si alors soit vraie pour toutes les valeurs de . En particulier, il faut que  soit vraie (ce qui correspond à - )  et que soit vraie (ce qui correspond à - ).   Il existe bien entendu plusieurs manières équivalentes d'écrire des propositions. Par exemple, si est l'ensemble des polygones, , si est un carré alors est un rectangle pourrait être écrite de manière équivalente comme carré, est un rectangle.   En fait, on peut toujours traduire la proposition par , où est l'ensemble de vérité de prédicat .  D'un point de vue pratique, et dans le but d'alléger l'écriture, on omet parfois l'écriture des quantificateurs universels. Ainsi, la proposition doit être comprise comme la proposition quantifiée . On décide de garder l'écriture complète avec le quantificateur dans ce chapitre, mais il est possible qu'à l'occasion on le laisse tomber aussi au profit d'une écriture plus concise. Dans un souci de disctinction, on introduit la notation suivante:       Négation et combinaisons de quantificateurs  On s'intéresse maintenant à la négation d'une proposition quantifiée. On reprend la proposition il y a un mammifère qui pond des oeufs . Quelle est sa négation? À première vue, on pourrait penser que c'est il y a un mammifère qui ne pond pas d'oeufs , mais ce n'est pas tout à fait cela. Si on veut inverser la valeur de vérité de , et donc dire il est faux de dire qu'il y a un mammifère qui pond des oeufs ,il faudrait que tous les mammifères ne pondent pas d'oeufs.  On obtient donc la règle suivante: .  De même, pour nier la proposition tous les oiseaux peuvent voler , on cherche à exprimer il est faux de dire que tous les oiseaux peuvent voler . Intuitivement, on comprend donc que c'est équivalent à dire qu'il existe un oiseau qui ne peut pas voler. Ainsi, .  On répète ici qu'après analyse, cela ne devrait pas trop surprendre. S'il n'y a pas un objet avec une propriété, alors tous les objets n'ont pas la propriétés. De même, si ce n'est pas tous les objects qui ont une propriétés, alors il existe (au moins) un objet qui n'a pas la propriété. Le symbolisme en apparence complexe ne doit pas distraire du caractère simple de la chose.   Négation de propositions quantifiées   On considère les propositions suivantes:   où .  N'importe quel nombre naturel est pair ou impair.  Il existe un moment précis où l'auteur mesurait cm.    On cherche la négation de ces propositions.      Selon la règle établie, on a .    On peut nier cette proposition en écrivant , qui devient .    Cette proposition est équivalente à . Sa négation devient donc une proposition avec un quantificateur existentiel qui a la forme . On aurait aussi pu écrire plus simplement le prédicat comme est ni pair ni impair. Le et fait toutefois ressortir la loi de De Morgann dans la négation du ou .   Pour nier cette proposition, on pourrait dire qu'à tout moment de sa vie, l'auteur n'a jamais mesuré cm.     Il est également possible d'utiliser plus d'un quantificateur avec un prédicat. La forme symbolique mathématique prend alors toute son importance. Par exemple, on imagine la proposition suivante il existe un gardien pour tous les animaux du zoo . Qu'est-ce que cela signifie? Est-ce  il y a un seul gardien qui s'occupe de tous les animaux du zoo;  ou bien chaque animal du zoo a son propre gardien.   On réécrit ces deux possibilités en langage symbolique: signifie qu'il existe un unique gardien qui est le gardien de tous les animaux alors que signifie que chaque animal possède son gardien. On note toutefois que cela n'empêche pas que deux animaux aient le même gardien.  Pour cet exemple particulier, ce n'est pas trop grave si on interpète incorrectement la phrase il existe un gardien pour tous les animaux du zoo . Par contre en informatique, dans un contexte de programmation, il est primordial de bien interpréter ce qui est demandé afin que l'ordinateur puisse appliquer ce que l'utilisateur veut.  On imagine un prédicat en deux variables . La proposition peut s'interpréter de la manière suivante. On imagine quelqu'un qui choisit un . Il faut ensuite trouver un tel que est vrai. Le choix de risque de dépendre du qui est choisi.  Par contre dans la proposition , c'est le , s'il existe, qui dépendra des . On doit trouver un qui fonctionnera peu importe le que quelqu'un choisirait   Des quantificateurs juxtaposés  On considère la grille ci-dessous ainsi que les propositions suivantes:  Il existe un triangle tel que pour tout cercle , est à la droite de .  Il existe un cercle pour lequel il existe un triangle de la même couleur.  Pour tout triangle , il existe un carré tel que et sont de la même couleur.  Pour tout triangle , tous les carrés se retrouvent à une ligne inférieure à .    Une grille avec des figures   Une grille de taille cinq par cinq est affichée avec à l'intérieur des carrés, triangles et cercles de couleurs variées.     On cherche la valeur de vérité de ces propositions.   Pour cette proposition, il suffit de trouver un triangle pour lequel tout cercle, le triangle sera à la droite du cercle. En regardant la figure , on constate que les triangles et satisfont cette propriété. En effet, les trois cercles sont tous à la gauche de ces triangles. On peut donc dire que et sont à la droite de tous les cercles. Ainsi, la proposition est vraie.  Pour cette proposition, on cherche un cercle et un triangle de la même couleur. Aucun triangle n'est bleu, ce qui élimine les triangles . Par contre, le cercle et le triangle (ou ) sont rouges. La proposition est donc vraie.  Cette fois-ci, il n'est pas suffisant de trouver deux formes de la même couleur. Il faut s'assurer que pour chaque triangle, il existe un carré ayant la même couleur. On identifie trois triangles, soit et . Le triangle est vert. On vérifie sur la figure que le carré est aussi vert. Le triangle est rouge, tout comme le triangle . Dans les deux cas, le carré ou le carré sont aussi rouges. La propriété est donc vraie.  On doit vérifier la condition pour chaque triangle. Pour le triangle , il est vrai de dire que tous les carrés sont sur une ligne inférieure, comme on peut le voir sur la figure . Par contre il y a des carrés sur la même ligne que le triangle (les carrés ) et des carrés sur des lignes supérieures au triangle (toujours les carrés ). Pour ces raisons, la proposition est fausse.   Comment se comportent les propositions formées de plus d'un quantificateur lorsqu'on considère leur négation? À l'aide des règles établies plus haut et en procédant en étape, on peut arriver à trouver la négation d'une telle proposition. On donne deux exemples de propositions formées de deux quantificateurs. D'autres se trouvent dans les exercices.  Dans un premier temps, on considère la proposition . On pose la proposition . La proposition originale s'écrit donc comme . Selon la négation d'une proposition quantifiée par un quantificateur existentiel, on a . On peut ensuite calculer la négation de en utilisant la règle pour la négation d'une proposition quantifiée par un quantificateur universel. On obtient . Ainsi, .  On regarde maintenant la proposition . En utilisant un procédé similaire, on obtient .        Les éléments importants de cette section sont:  La notion de prédicat, à distinguer d'une proposition.  Le quantificateur existentiel et son symbole .  Le quantificateur universel et son symbole .  Les notations raccourcies et .  La négation d'une proposition quantifiée par un quantificateur existentiel est une proposition quantifiée par un quantificateur universel suivi de la négation du prédicat.  La négation d'une proposition quantifiée par un quantificateur universel est une proposition quantifiée par un quantificateur existentiel suivi de la négation du prédicat.  L'importance de l'ordre des quantificateurs lorsque plus d'un quantificateur de type différent sont présents.        Ces questions sont à faire avant de venir en classe et à remettre au début du cours.   Soit la proposition . Déterminer si les propositions suivantes sont vraie, fausse ou indéterminée. ; ; ; ; ; ; ; ;  Dans une ferme, on retrouve les animaux suivants: un chien blanc et noir ainsi qu'un chien brun, treize vaches de couleur blanche et noire, seize moutons blancs, quatre chats noirs, trente-trois poules brunes.  On considère les éléments de notation suivants:  respectivement pour chien,vache,mouton,chat et poule.  respectivement pour possède la couleur blanc et noir,brun,noir,jaune et enfin gris, et plus généralement pour une allusion à la couleur quelconque.  respectivement pour est un mammifère ou un oiseau.  pour le nombre d'animaux est premier  l'ensemble des espèces animales de cette ferme.   La proposition peut être interprétée comme il existe un chien brun . Identifier les prédicats et transcrire en symbolique les propositions suivantes.  Il y a une animal jaune à cette ferme. Tous les animaux de la ferme sont des mammifères ou des oiseaux. Pour tout animal, avoir du blanc signifie aussi avoir du noir. Le nombre d'animaux d'une certaines espèces est un nombre premier. Aucun animal n'est de couleur grise. Il existe deux animaux de même couleurs et qui ne sont pas des vaches.  Est-ce que ? Argumenter ou donner un exemple où l'équivalence n'est pas vraie.  Est-ce que ? Argumenter ou donner un exemple où l'équivalence n'est pas vraie.  Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.  Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.      Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Si représente la proposition Il existe un nombre tel que . , déterminer la valeur de vérité de ; ; ; ; , où ; Indéterminé , où . , où est .  Si représente la proposition . , déterminer la valeur de vérité de ;  ;  ;  ;   ;   .   Soit la proposition connait déjà un peu de programmation où est un étudiant quelconque de la classe.  Décrire en langue française les propositions suivantes:  Il y a au moins un étudiant de la classe qui connait déjà un peu de programmation. Tous les étudiants de la classe connaissent déjà un peu de programmation. Il y a au moins un étudiant de la classe qui ne connait pas déjà un peu de programmation. Aucun des étudiants de la classe ne connaient déjà un peu de programmation. Aucun des étudiants de la classe ne connaient déjà un peu de programmation. Il y a au moins un étudiant de la classe qui ne connait pas déjà un peu de programmation.  Soit la proposition est un mammifère et soit la proposition pond des oeufs , où est un animal quelconque.  Décrire en langue française les propositions suivantes:  Tous les annimaux sont soit des mammifères ou pondents des oeufs. Il y a un mammifère qui pond des oeufs. Tous les animaux ne sont pas des mammifères et pondent des oeufs. Il y a un animal qui est un mammifère et qui pond des oeufs.  On considère le scénario suivant. Une urne contient deux billes blanches et une bille noire. La proposition est fausse. Si l'urne ne contient aucune bille, que peut-on dire de cette même proposition? Expliquer. Est-ce que la négation de cette proposition est vraie ou fausse? Si l'urne ne contient aucune bille, cette proposition est vraie. En effet, la négation de la proposition est Or, si l'urne est vide, cette proposition ne peut pas être vraie, et donc est fausse. Si la négation est fausse, alors l'énnoncé initiale doit être vraie.  Soit des nombres réels. Traduire les propositions suivantes en langue française et déterminer la valeur de vérité de chacune. Pour tout nombre réel , il existe un nombre réel tel que . Cette proposition est vraie. Pour chaque , il suffit de prendre . Il existe un nombre réel tel que, pour tout nombre réel , on a . Cette proposition est fausse. En effet, pour tout nombre réel on peut trouver un nombre réel pour lequel la proposition est fausse. Il suffit de poser . Pour tout nombre réel , et pour tout nombre réel , si est strictement positif, alors et sont tous les deux strictement positifs. Cette proposition en fausse, car le prédicat est faux lorsque . Pour toutes paires de nombres réels et , si et sont strictement positifs, alors est strictement positif. Cette proposition est vraie par les propriétés des nombres réels. Déterminer à nouveau la valeur de vérité des deux premières propositions précédentes si le domaine est maintenant l'intervalle . La proposition reste vraie, mais la proposition change de valeur et devient vraie. En effet, en prennant , le prédicat est vrai pour tout nombre réel .  Réécrire les propositions suivantes pour que les négations soient à l'intérieur des quantificateurs.  Réécrire les négations suivantes de sorte à ce que le symbole ne soit appliqué que sur les prédicats:             Exercices supplémentaires  Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple. S'il existe un tel que et sont vraies, alors certainement qu'il existe un tel que est vraie et un (le même!) tel que est vraie. Est-ce qu'on peut affirmer l'inverse?  Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple.  Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple.  Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple. Il faut penser à des propositions qui sont complémentaires.  Soit des figures quelconques. On définit les éléments de notation suivants:  Triangle( ),Cercle( ),Carré( ) représentent respectivement la proposition est un triangle, cercle ou carré.  Rouge( ),Vert( ),Bleu( ) représentent respectivement la proposition la figure est de couleur rouge,vert, bleu.  Gauche(f,g),Droite(f,g),Haut(f,g),Bas(f,g) représente respectivement la proposition est à gauche, à droite, en haut, en bas de .  MêmeCouleur( ),MêmeForme( ) représente respectivement les figures ont la même couleur,forme.  La figure interactive suivante permet d'afficher un certain nombre de formes géométriques de couleurs variées.   Une grille interactive de figures    Pour chaque proposition, décrire en mots, déterminer la valeur de vérité et écrire la négation sous une forme symbolique simplifiée. L'ensemble univers est toujours la grille et sera omis pour alléger l'écriture des propositions. Pour chaque proposition, décrire en symbole, déterminer la valeur de vérité et écrire la négation en langage courant. L'ensemble univers est toujours la grille et sera omis pour alléger l'écriture des propositions. Il existe une forme géométrique rouge à la droite de . La couleur d'un cercle n'est pas bleue ou il existe une carré en bas de . Il y a un triangle vert à droite d'un cercle bleu. Il existe une forme autre que qui est identique. Pour tout cercle, on peut trouver un carré de même couleur. Il existe une figure rouge telle que tous les carrés sont à sa gauche. Tous les cercles sont en haut des triangles. Il existe un triangle et il existe un carré tels que le carré est à droite ou en haut du triangle.     "
+  "body": "  Les propositions quantifiées    On a vu qu'un énoncé comme x>0 n'est pas une proposition puisqu'il ne possède pas de valeur de vérité claire. Si , l'énoncé devient une proposition fausse, alors que si , il devient une proposition vraie. Bien que certains énoncés avec variables peuvent sembler vrais peu importe la valeur de la variable, on préfèrera ne pas les considérer comme des propositions. Un exemple d'un tel énoncé serait . Comme fonction réelle, il est vrai qu'un nombre au carré est toujours positif. Il existe toutefois d'autre contexte où cette équation ne serait plus nécessairement vraie. Pour en savoir plus, voir les nombres complexes .  Pour remédier à cela, on doit préciser ce que signifie les variables. On dira alors qu'on les quantifie.  Dans cette section, on définit le quantificateur existensiel et le quantificateur universel. On explique aussi comme obtenir la négation d'une proposition quantifiée.    Prédicats  Un énoncé qui contient une ou des variables est appelé un prédicat. Ce n'est pas une proposition, car la valeur de vérité dépendra de la valeurs des variables. On spécifie normalement un ensemble univers qui consiste aux diverses possibilités que peuvent prendre les variables. Pour des valeurs spécifiques des variables, le prédicat devient une proposition.   Des prédicats  On considère l'ensemble des nombres réels comme ensemble univers et les prédicats suivants:  ;  ;  .   On cherche à évaluer la valeur de vérité des propositions obtenues lorsque .   Lorsque , la proposition est , qui est fausse.  La proposition est , qui est vraie.  Puisque , la proposition est fausse.     L'ensemble de toutes les valeurs de qui rendent un prédicat vrai est appelé l'ensemble de vérité de . On le note .   Des ensembles de vérité  On considère le prédicat est une voyelle . On cherche les ensembles de vérité de ce prédicat lorsque l'ensemble univers est  , l'alphabet usuel;  , les lettres composant le prénom de l'auteur.     L'ensemble des lettres de l'alphabet usuel qui sont des voyelles et donc, qui rendent le prédicat vrai sont .  Parmi les lettres qui composent Jean-Sébastien , on retrouve les voyelles .       Quantificateurs existentiel et universel  On peut donc transformer un prédicat en proposition en assignant aux variables certaines valeurs. On peut aussi ajouter un quantificateur à un prédicat. Un quantificateur est un mot du genre certains, quelques, toutes, \\etc qui vient parler, d'une manière plus ou moins précise, de combien de valeurs de la variable on s'intéresse. Ainsi si on dit, pour certaines valeurs de on a ,on obtient une proposition. Dans ce cas-ci, elle est vraie, mais si on avait dit pour toutes les valeurs de , on a , on aurait obtenu une proposition fausse.  En mathématiques, il y a deux principaux quantificateurs qui sont utilisés. Le quantificateur existentiel et le quantificateur universel. Le premier s'intéresse à l'existence d'une valeur des variables qui rendent le prédicat vrai. Il n'est même pas nécessaire de la trouver cette valeur, et il pourrait y en avoir plus d'une. L'important, c'est qu'elle existe. Le quantificateur universel lui veut que le prédicat soit vrai pour toutes les valeurs de l'ensemble univers.   Quantificateur existentiel  Soit un prédicat et l'ensemble univers de la variable . Une proposition existentielle est un énoncé de la forme il existe tel que est vrai . D'un point de vue symbolique, on la dénote (le symbole se lit il existe ). La proposition est vraie s'il existe au moins une valeur dans qui rende vrai et est fausse si toutes les valeurs de font que est faux.  Au lieu de il existe , on dit parfois aussi pour un certain , on peut trouver , pour au moins , etc.   Avec une proposition contenant un quantificateur existentiel, on obtient la valeur de vérité vraie dès qu' (au moins) une valeur de rende le prédicat vrai. Pour que la proposition soit fausse, il faut toutefois vérifier que le prédicat est faux pour toutes les valeurs dans , ou du moins argumenter cela.  Des propositions avec quantificateur existentiel  On considère les propositions suivantes:   où .  Il y a un mammifère qui pond des oeufs.  Il existe un moment précis où l'auteur mesurait cm. (Présentement, il en fait environ .)    On cherche la valeur de vérité de ces propositions.    On peut essayer de trouver un exemple qui fonctionne. Rapidement, on voit que est une solution. La proposition est donc vraie.  Puisque Jean-Sébastien ne contient aucune des lettres u,v,w,x,y et z, la proposition est fausse.  Il y a en fait deux types de mammifères qui pondent des oeufs. L'ornithorynque est probablement l'exemple le plus connu, mais il y a aussi les échidnés.  Ceci constitue un bon exemple de l'existence d'une valeur, sans toutefois pouvoir la déterminer. Comme la croissance d'une personne est un processus continu et qu'un humain nait normalement entre 46 et 56 cm (le record étant de 71!), il existe bel et bien un moment où l'auteur mesurait 100 cm. Bien malin toutefois celui qui pourra dire quand cela s'est produit.    Alors que le quantificateur existentiel souhaite l'existence d'une valeur rendant le prédicat vrai, le quantificateur universel lui veut que le prédicat soit vrai pour toutes les valeurs de l'univers considéré.   Quantificateur universel   Soit un prédicat et l'ensemble univers de la variable . Une proposition universelle est un énoncé de la forme pour tout on a que est vrai . D'un point de vue symbolique, on la dénote (le symbole se lit pour tout ). La proposition est vraie si chaque valeur de dans rend vrai et est fausse dès qu'une valeur de font que est faux.  Au lieu de pour tout , on dit parfois aussi pour chaque , pour n'importe quel ,etc.    Avec une proposition contenant un quantificateur universel, il faut vérifier (ou argumenter pour) toutes les valeurs de pour que la proposition soit vraie. Pour qu'elle soit fausse, il suffit d'exhiber une valeur de pour laquelle est faux.  Des propositions avec quantificateur universel  On considère les propositions suivantes:   où .  Tous les oiseaux peuvent voler.  N'importe quel nombre naturel est pair ou impair.    On cherche la valeur de vérité de ces propositions.     Il suffit de tester pour certaines valeurs de , comme pour se rendre compte que la proposition est fausse.  Le prénom de l'auteur étant Jean-Sébastien, on vérifie aisément que a,b,s,t en font tous partie.  La proposition est fausse, les autruches étant un exemple d'oiseaux ne pouvant pas voler.  La proposition est vraie, la parité d'un nombre créant une dichotomie des nombres naturels. On aura les outils nécessaire pour formaliser ceci prochainement.     Une proposition universelle est souvent présentée à l'aide d'une implication. On retrouve donc fréquemment, pour des prédicats et , la forme . En langage courant, cela signifie que pour tout dans l'ensemble univers, avoir la propriété implique aussi avoir la propriété .  Par exemple, on pourrait dire , si alors . Ceci n'est pas très surprenant comme propriété. Cette proposition apporte toutefois une vision intéressante sur la table de vérité de l'implication, en particulier, pourquoi les ligne - et - sont vraies.  Si dans son ensemble la proposition , si alors est vraie, alors selon la définition du quantificateur universel, il faut que si alors soit vraie pour toutes les valeurs de . En particulier, il faut que  soit vraie (ce qui correspond à - )  et que soit vraie (ce qui correspond à - ).   Il existe bien entendu plusieurs manières équivalentes d'écrire des propositions. Par exemple, si est l'ensemble des polygones, , si est un carré alors est un rectangle pourrait être écrite de manière équivalente comme carré, est un rectangle.   En fait, on peut toujours traduire la proposition par , où est l'ensemble de vérité de prédicat .  D'un point de vue pratique, et dans le but d'alléger l'écriture, on omet parfois l'écriture des quantificateurs universels. Ainsi, la proposition doit être comprise comme la proposition quantifiée . On décide de garder l'écriture complète avec le quantificateur dans ce chapitre, mais il est possible qu'à l'occasion on le laisse tomber aussi au profit d'une écriture plus concise. Dans un souci de disctinction, on introduit la notation suivante:       Négation et combinaisons de quantificateurs  On s'intéresse maintenant à la négation d'une proposition quantifiée. On reprend la proposition il y a un mammifère qui pond des oeufs . Quelle est sa négation? À première vue, on pourrait penser que c'est il y a un mammifère qui ne pond pas d'oeufs , mais ce n'est pas tout à fait cela. Si on veut inverser la valeur de vérité de , et donc dire il est faux de dire qu'il y a un mammifère qui pond des oeufs ,il faudrait que tous les mammifères ne pondent pas d'oeufs.  On obtient donc la règle suivante: .  De même, pour nier la proposition tous les oiseaux peuvent voler , on cherche à exprimer il est faux de dire que tous les oiseaux peuvent voler . Intuitivement, on comprend donc que c'est équivalent à dire qu'il existe un oiseau qui ne peut pas voler. Ainsi, .  On répète ici qu'après analyse, cela ne devrait pas trop surprendre. S'il n'y a pas un objet avec une propriété, alors tous les objets n'ont pas la propriétés. De même, si ce n'est pas tous les objects qui ont une propriétés, alors il existe (au moins) un objet qui n'a pas la propriété. Le symbolisme en apparence complexe ne doit pas distraire du caractère simple de la chose.   Négation de propositions quantifiées   On considère les propositions suivantes:   où .  N'importe quel nombre naturel est pair ou impair.  Il existe un moment précis où l'auteur mesurait cm.    On cherche la négation de ces propositions.      Selon la règle établie, on a .    On peut nier cette proposition en écrivant , qui devient .    Cette proposition est équivalente à . Sa négation devient donc une proposition avec un quantificateur existentiel qui a la forme . On aurait aussi pu écrire plus simplement le prédicat comme est ni pair ni impair. Le et fait toutefois ressortir la loi de De Morgann dans la négation du ou .   Pour nier cette proposition, on pourrait dire qu'à tout moment de sa vie, l'auteur n'a jamais mesuré cm.     Il est également possible d'utiliser plus d'un quantificateur avec un prédicat. La forme symbolique mathématique prend alors toute son importance. Par exemple, on imagine la proposition suivante il existe un gardien pour tous les animaux du zoo . Qu'est-ce que cela signifie? Est-ce  il y a un seul gardien qui s'occupe de tous les animaux du zoo;  ou bien chaque animal du zoo a son propre gardien.   On réécrit ces deux possibilités en langage symbolique: signifie qu'il existe un unique gardien qui est le gardien de tous les animaux alors que signifie que chaque animal possède son gardien. On note toutefois que cela n'empêche pas que deux animaux aient le même gardien.  Pour cet exemple particulier, ce n'est pas trop grave si on interpète incorrectement la phrase il existe un gardien pour tous les animaux du zoo . Par contre en informatique, dans un contexte de programmation, il est primordial de bien interpréter ce qui est demandé afin que l'ordinateur puisse appliquer ce que l'utilisateur veut.  On imagine un prédicat en deux variables . La proposition peut s'interpréter de la manière suivante. On imagine quelqu'un qui choisit un . Il faut ensuite trouver un tel que est vrai. Le choix de risque de dépendre du qui est choisi.  Par contre dans la proposition , c'est le , s'il existe, qui dépendra des . On doit trouver un qui fonctionnera peu importe le que quelqu'un choisirait   Des quantificateurs juxtaposés  On considère la grille ci-dessous ainsi que les propositions suivantes:  Il existe un triangle tel que pour tout cercle , est à la droite de .  Il existe un cercle pour lequel il existe un triangle de la même couleur.  Pour tout triangle , il existe un carré tel que et sont de la même couleur.  Pour tout triangle , tous les carrés se retrouvent à une ligne inférieure à .    Une grille avec des figures   Une grille de taille cinq par cinq est affichée avec à l'intérieur des carrés, triangles et cercles de couleurs variées.     On cherche la valeur de vérité de ces propositions.   Pour cette proposition, il suffit de trouver un triangle pour lequel tout cercle, le triangle sera à la droite du cercle. En regardant la figure , on constate que les triangles et satisfont cette propriété. En effet, les trois cercles sont tous à la gauche de ces triangles. On peut donc dire que et sont à la droite de tous les cercles. Ainsi, la proposition est vraie.  Pour cette proposition, on cherche un cercle et un triangle de la même couleur. Aucun triangle n'est bleu, ce qui élimine les triangles . Par contre, le cercle et le triangle (ou ) sont rouges. La proposition est donc vraie.  Cette fois-ci, il n'est pas suffisant de trouver deux formes de la même couleur. Il faut s'assurer que pour chaque triangle, il existe un carré ayant la même couleur. On identifie trois triangles, soit et . Le triangle est vert. On vérifie sur la figure que le carré est aussi vert. Le triangle est rouge, tout comme le triangle . Dans les deux cas, le carré ou le carré sont aussi rouges. La propriété est donc vraie.  On doit vérifier la condition pour chaque triangle. Pour le triangle , il est vrai de dire que tous les carrés sont sur une ligne inférieure, comme on peut le voir sur la figure . Par contre il y a des carrés sur la même ligne que le triangle (les carrés ) et des carrés sur des lignes supérieures au triangle (toujours les carrés ). Pour ces raisons, la proposition est fausse.   Comment se comportent les propositions formées de plus d'un quantificateur lorsqu'on considère leur négation? À l'aide des règles établies plus haut et en procédant en étape, on peut arriver à trouver la négation d'une telle proposition. On donne deux exemples de propositions formées de deux quantificateurs. D'autres se trouvent dans les exercices.  Dans un premier temps, on considère la proposition . On pose la proposition . La proposition originale s'écrit donc comme . Selon la négation d'une proposition quantifiée par un quantificateur existentiel, on a . On peut ensuite calculer la négation de en utilisant la règle pour la négation d'une proposition quantifiée par un quantificateur universel. On obtient . Ainsi, .  On regarde maintenant la proposition . En utilisant un procédé similaire, on obtient .        Les éléments importants de cette section sont:  La notion de prédicat, à distinguer d'une proposition.  Le quantificateur existentiel et son symbole .  Le quantificateur universel et son symbole .  Les notations raccourcies et .  La négation d'une proposition quantifiée par un quantificateur existentiel est une proposition quantifiée par un quantificateur universel suivi de la négation du prédicat.  La négation d'une proposition quantifiée par un quantificateur universel est une proposition quantifiée par un quantificateur existentiel suivi de la négation du prédicat.  L'importance de l'ordre des quantificateurs lorsque plus d'un quantificateur de type différent sont présents.        Ces questions sont à faire avant de venir en classe et à remettre au début du cours.   Soit la proposition . Déterminer si les propositions suivantes sont vraie, fausse ou indéterminée. ; ; ; ; ; ; ; ;  Dans une ferme, on retrouve les animaux suivants: un chien blanc et noir ainsi qu'un chien brun, treize vaches de couleur blanche et noire, seize moutons blancs, quatre chats noirs, trente-trois poules brunes.  On considère les éléments de notation suivants:  respectivement pour chien,vache,mouton,chat et poule.  respectivement pour possède la couleur blanc et noir,brun,noir,jaune et enfin gris, et plus généralement pour une allusion à la couleur quelconque.  respectivement pour est un mammifère ou un oiseau.  pour le nombre d'animaux est premier  l'ensemble des espèces animales de cette ferme.   La proposition peut être interprétée comme il existe un chien brun . Identifier les prédicats et transcrire en symbolique les propositions suivantes.  Il y a une animal jaune à cette ferme. Tous les animaux de la ferme sont des mammifères ou des oiseaux. Pour tout animal, avoir du blanc signifie aussi avoir du noir. Le nombre d'animaux d'une certaines espèces est un nombre premier. Aucun animal n'est de couleur grise. Il existe deux animaux de même couleurs et qui ne sont pas des vaches.  Est-ce que ? Argumenter ou donner un exemple où l'équivalence n'est pas vraie.  Est-ce que ? Argumenter ou donner un exemple où l'équivalence n'est pas vraie.  Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.      Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Si représente la proposition Il existe un nombre tel que . , déterminer la valeur de vérité de ; ; ; ; , où ; Indéterminé , où . , où est .  Si représente la proposition . , déterminer la valeur de vérité de ;  ;  ;  ;   ;   .   Soit la proposition connait déjà un peu de programmation où est un étudiant quelconque de la classe.  Décrire en langue française les propositions suivantes:  Il y a au moins un étudiant de la classe qui connait déjà un peu de programmation. Tous les étudiants de la classe connaissent déjà un peu de programmation. Il y a au moins un étudiant de la classe qui ne connait pas déjà un peu de programmation. Aucun des étudiants de la classe ne connait déjà un peu de programmation. Aucun des étudiants de la classe ne connait déjà un peu de programmation. Il y a au moins un étudiant de la classe qui ne connait pas déjà un peu de programmation.  Soit la proposition est un mammifère et soit la proposition pond des oeufs , où est un animal quelconque.  Décrire en langue française les propositions suivantes:  Tous les animaux sont soit des mammifères ou pondents des oeufs. Il y a un mammifère qui pond des oeufs. Tous les animaux ne sont pas des mammifères et ils pondent des oeufs. Il y a un animal qui n'est pas un mammifère et qui pond des oeufs.  On considère le scénario suivant. Une urne contient deux billes blanches et une bille noire. La proposition est fausse. Si l'urne ne contient aucune bille, que peut-on dire de cette même proposition? Expliquer. Est-ce que la négation de cette proposition est vraie ou fausse? Si l'urne ne contient aucune bille, cette proposition est vraie. En effet, la négation de la proposition est Or, si l'urne est vide, cette proposition ne peut pas être vraie, et donc est fausse. Si la négation est fausse, alors l'énnoncé initiale doit être vraie.  Soit des nombres réels. Traduire les propositions suivantes en langue française et déterminer la valeur de vérité de chacune. Pour tout nombre réel , il existe un nombre réel tel que . Cette proposition est vraie. Pour chaque , il suffit de prendre, par exemple, . Il existe un nombre réel tel que, pour tout nombre réel , on a . Cette proposition est fausse. En effet, pour tout nombre réel on peut trouver un nombre réel pour lequel la proposition est fausse. Il suffit de poser, par exemple, . Pour tout nombre réel , et pour tout nombre réel , si est strictement positif, alors et sont tous les deux strictement positifs. Cette proposition en fausse, car le prédicat est faux lorsque . Pour toutes paires de nombres réels et , si et sont strictement positifs, alors est strictement positif. Cette proposition est vraie par les propriétés des nombres réels. Déterminer à nouveau la valeur de vérité des deux premières propositions précédentes si le domaine est maintenant l'intervalle . La proposition reste vraie. En effet, pour tout , on peut trouver un nombre réel tel que . Cependant, la proposition change de valeur et devient vraie. En effet, en prennant , le prédicat est vrai pour tout nombre réel .  Réécrire les propositions suivantes pour que les négations soient à l'intérieur des quantificateurs.  Réécrire les négations suivantes de sorte à ce que le symbole ne soit appliqué que sur les prédicats:             Exercices supplémentaires  Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple. S'il existe un tel que et sont vraies, alors certainement qu'il existe un tel que est vraie et un (le même!) tel que est vraie. Est-ce qu'on peut affirmer l'inverse?  Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple.  Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple.  Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple. Il faut penser à des propositions qui sont complémentaires.  Soit des figures quelconques. On définit les éléments de notation suivants:  Triangle( ),Cercle( ),Carré( ) représentent respectivement la proposition est un triangle, cercle ou carré.  Rouge( ),Vert( ),Bleu( ) représentent respectivement la proposition la figure est de couleur rouge,vert, bleu.  Gauche(f,g),Droite(f,g),Haut(f,g),Bas(f,g) représente respectivement la proposition est à gauche, à droite, en haut, en bas de .  MêmeCouleur( ),MêmeForme( ) représente respectivement les figures ont la même couleur,forme.  La figure interactive suivante permet d'afficher un certain nombre de formes géométriques de couleurs variées.   Une grille interactive de figures    Pour chaque proposition, décrire en mots, déterminer la valeur de vérité et écrire la négation sous une forme symbolique simplifiée. L'ensemble univers est toujours la grille et sera omis pour alléger l'écriture des propositions. Pour chaque proposition, décrire en symbole, déterminer la valeur de vérité et écrire la négation en langage courant. L'ensemble univers est toujours la grille et sera omis pour alléger l'écriture des propositions. Il existe une forme géométrique rouge à la droite de . La couleur d'un cercle n'est pas bleue ou il existe une carré en bas de . Il y a un triangle vert à droite d'un cercle bleu. Il existe une forme autre que qui est identique. Pour tout cercle, on peut trouver un carré de même couleur. Il existe une figure rouge telle que tous les carrés sont à sa gauche. Tous les cercles sont en haut des triangles. Il existe un triangle et il existe un carré tels que le carré est à droite ou en haut du triangle.     "
 },
 {
   "id": "example-25",
@@ -1732,98 +1732,98 @@ var ptx_lunr_docs = [
   "id": "exercise-113",
   "level": "2",
   "url": "sec-propquant.html#exercise-113",
-  "type": "Question de compréhension",
-  "number": "2.3.4.6",
-  "title": "",
-  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
-},
-{
-  "id": "exercise-114",
-  "level": "2",
-  "url": "sec-propquant.html#exercise-114",
   "type": "Exercice",
   "number": "2.3.5.1",
   "title": "",
   "body": "Si représente la proposition Il existe un nombre tel que . , déterminer la valeur de vérité de ; ; ; ; , où ; Indéterminé , où . , où est . "
 },
 {
-  "id": "exercise-115",
+  "id": "exercise-114",
   "level": "2",
-  "url": "sec-propquant.html#exercise-115",
+  "url": "sec-propquant.html#exercise-114",
   "type": "Exercice",
   "number": "2.3.5.2",
   "title": "",
   "body": "Si représente la proposition . , déterminer la valeur de vérité de ;  ;  ;  ;   ;   .  "
 },
 {
+  "id": "exercise-115",
+  "level": "2",
+  "url": "sec-propquant.html#exercise-115",
+  "type": "Exercice",
+  "number": "2.3.5.3",
+  "title": "",
+  "body": "Soit la proposition connait déjà un peu de programmation où est un étudiant quelconque de la classe.  Décrire en langue française les propositions suivantes:  Il y a au moins un étudiant de la classe qui connait déjà un peu de programmation. Tous les étudiants de la classe connaissent déjà un peu de programmation. Il y a au moins un étudiant de la classe qui ne connait pas déjà un peu de programmation. Aucun des étudiants de la classe ne connait déjà un peu de programmation. Aucun des étudiants de la classe ne connait déjà un peu de programmation. Il y a au moins un étudiant de la classe qui ne connait pas déjà un peu de programmation. "
+},
+{
   "id": "exercise-116",
   "level": "2",
   "url": "sec-propquant.html#exercise-116",
   "type": "Exercice",
-  "number": "2.3.5.3",
+  "number": "2.3.5.4",
   "title": "",
-  "body": "Soit la proposition connait déjà un peu de programmation où est un étudiant quelconque de la classe.  Décrire en langue française les propositions suivantes:  Il y a au moins un étudiant de la classe qui connait déjà un peu de programmation. Tous les étudiants de la classe connaissent déjà un peu de programmation. Il y a au moins un étudiant de la classe qui ne connait pas déjà un peu de programmation. Aucun des étudiants de la classe ne connaient déjà un peu de programmation. Aucun des étudiants de la classe ne connaient déjà un peu de programmation. Il y a au moins un étudiant de la classe qui ne connait pas déjà un peu de programmation. "
+  "body": "Soit la proposition est un mammifère et soit la proposition pond des oeufs , où est un animal quelconque.  Décrire en langue française les propositions suivantes:  Tous les animaux sont soit des mammifères ou pondents des oeufs. Il y a un mammifère qui pond des oeufs. Tous les animaux ne sont pas des mammifères et ils pondent des oeufs. Il y a un animal qui n'est pas un mammifère et qui pond des oeufs. "
 },
 {
   "id": "exercise-117",
   "level": "2",
   "url": "sec-propquant.html#exercise-117",
   "type": "Exercice",
-  "number": "2.3.5.4",
+  "number": "2.3.5.5",
   "title": "",
-  "body": "Soit la proposition est un mammifère et soit la proposition pond des oeufs , où est un animal quelconque.  Décrire en langue française les propositions suivantes:  Tous les annimaux sont soit des mammifères ou pondents des oeufs. Il y a un mammifère qui pond des oeufs. Tous les animaux ne sont pas des mammifères et pondent des oeufs. Il y a un animal qui est un mammifère et qui pond des oeufs. "
+  "body": "On considère le scénario suivant. Une urne contient deux billes blanches et une bille noire. La proposition est fausse. Si l'urne ne contient aucune bille, que peut-on dire de cette même proposition? Expliquer. Est-ce que la négation de cette proposition est vraie ou fausse? Si l'urne ne contient aucune bille, cette proposition est vraie. En effet, la négation de la proposition est Or, si l'urne est vide, cette proposition ne peut pas être vraie, et donc est fausse. Si la négation est fausse, alors l'énnoncé initiale doit être vraie. "
 },
 {
   "id": "exercise-118",
   "level": "2",
   "url": "sec-propquant.html#exercise-118",
   "type": "Exercice",
-  "number": "2.3.5.5",
+  "number": "2.3.5.6",
   "title": "",
-  "body": "On considère le scénario suivant. Une urne contient deux billes blanches et une bille noire. La proposition est fausse. Si l'urne ne contient aucune bille, que peut-on dire de cette même proposition? Expliquer. Est-ce que la négation de cette proposition est vraie ou fausse? Si l'urne ne contient aucune bille, cette proposition est vraie. En effet, la négation de la proposition est Or, si l'urne est vide, cette proposition ne peut pas être vraie, et donc est fausse. Si la négation est fausse, alors l'énnoncé initiale doit être vraie. "
+  "body": "Soit des nombres réels. Traduire les propositions suivantes en langue française et déterminer la valeur de vérité de chacune. Pour tout nombre réel , il existe un nombre réel tel que . Cette proposition est vraie. Pour chaque , il suffit de prendre, par exemple, . Il existe un nombre réel tel que, pour tout nombre réel , on a . Cette proposition est fausse. En effet, pour tout nombre réel on peut trouver un nombre réel pour lequel la proposition est fausse. Il suffit de poser, par exemple, . Pour tout nombre réel , et pour tout nombre réel , si est strictement positif, alors et sont tous les deux strictement positifs. Cette proposition en fausse, car le prédicat est faux lorsque . Pour toutes paires de nombres réels et , si et sont strictement positifs, alors est strictement positif. Cette proposition est vraie par les propriétés des nombres réels. Déterminer à nouveau la valeur de vérité des deux premières propositions précédentes si le domaine est maintenant l'intervalle . La proposition reste vraie. En effet, pour tout , on peut trouver un nombre réel tel que . Cependant, la proposition change de valeur et devient vraie. En effet, en prennant , le prédicat est vrai pour tout nombre réel . "
 },
 {
   "id": "exercise-119",
   "level": "2",
   "url": "sec-propquant.html#exercise-119",
   "type": "Exercice",
-  "number": "2.3.5.6",
+  "number": "2.3.5.7",
   "title": "",
-  "body": "Soit des nombres réels. Traduire les propositions suivantes en langue française et déterminer la valeur de vérité de chacune. Pour tout nombre réel , il existe un nombre réel tel que . Cette proposition est vraie. Pour chaque , il suffit de prendre . Il existe un nombre réel tel que, pour tout nombre réel , on a . Cette proposition est fausse. En effet, pour tout nombre réel on peut trouver un nombre réel pour lequel la proposition est fausse. Il suffit de poser . Pour tout nombre réel , et pour tout nombre réel , si est strictement positif, alors et sont tous les deux strictement positifs. Cette proposition en fausse, car le prédicat est faux lorsque . Pour toutes paires de nombres réels et , si et sont strictement positifs, alors est strictement positif. Cette proposition est vraie par les propriétés des nombres réels. Déterminer à nouveau la valeur de vérité des deux premières propositions précédentes si le domaine est maintenant l'intervalle . La proposition reste vraie, mais la proposition change de valeur et devient vraie. En effet, en prennant , le prédicat est vrai pour tout nombre réel . "
+  "body": "Réécrire les propositions suivantes pour que les négations soient à l'intérieur des quantificateurs. "
 },
 {
   "id": "exercise-120",
   "level": "2",
   "url": "sec-propquant.html#exercise-120",
   "type": "Exercice",
-  "number": "2.3.5.7",
+  "number": "2.3.5.8",
   "title": "",
-  "body": "Réécrire les propositions suivantes pour que les négations soient à l'intérieur des quantificateurs. "
+  "body": "Réécrire les négations suivantes de sorte à ce que le symbole ne soit appliqué que sur les prédicats:          "
 },
 {
   "id": "exercise-121",
   "level": "2",
   "url": "sec-propquant.html#exercise-121",
   "type": "Exercice",
-  "number": "2.3.5.8",
+  "number": "2.3.5.9",
   "title": "",
-  "body": "Réécrire les négations suivantes de sorte à ce que le symbole ne soit appliqué que sur les prédicats:          "
+  "body": "Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple. S'il existe un tel que et sont vraies, alors certainement qu'il existe un tel que est vraie et un (le même!) tel que est vraie. Est-ce qu'on peut affirmer l'inverse? "
 },
 {
   "id": "exercise-122",
   "level": "2",
   "url": "sec-propquant.html#exercise-122",
   "type": "Exercice",
-  "number": "2.3.5.9",
+  "number": "2.3.5.10",
   "title": "",
-  "body": "Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple. S'il existe un tel que et sont vraies, alors certainement qu'il existe un tel que est vraie et un (le même!) tel que est vraie. Est-ce qu'on peut affirmer l'inverse? "
+  "body": "Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple. "
 },
 {
   "id": "exercise-123",
   "level": "2",
   "url": "sec-propquant.html#exercise-123",
   "type": "Exercice",
-  "number": "2.3.5.10",
+  "number": "2.3.5.11",
   "title": "",
   "body": "Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple. "
 },
@@ -1832,23 +1832,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-propquant.html#exercise-124",
   "type": "Exercice",
-  "number": "2.3.5.11",
-  "title": "",
-  "body": "Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple. "
-},
-{
-  "id": "exercise-125",
-  "level": "2",
-  "url": "sec-propquant.html#exercise-125",
-  "type": "Exercice",
   "number": "2.3.5.12",
   "title": "",
   "body": "Soit deux propositions .Est-ce que ?  Démontrer ou trouver une exemple. Il faut penser à des propositions qui sont complémentaires. "
 },
 {
-  "id": "exercise-126",
+  "id": "exercise-125",
   "level": "2",
-  "url": "sec-propquant.html#exercise-126",
+  "url": "sec-propquant.html#exercise-125",
   "type": "Exercice",
   "number": "2.3.5.13",
   "title": "",
@@ -1861,7 +1852,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Circuits logiques",
-  "body": "  Circuits logiques    Pour la première fois, on évoque spécifiquement le fonctionnement d'un ordinateur. Les composantes d'un ordinateur sont presque toutes composées de petits circuits électroniques qui sont fait pour accepter deux intensité de courant électrique. Un circuit qui reçoit le niveau élevé de courant sera représenté par un alors qu'un circuit qui reçoit un faible niveau sera représenté par un . Cette dualité n'est pas sans rappeler les sections précédentes où les propositions étaient vraie ou fausse.  Un ordinateur combine l'information de tous ses circuits pour effectuer ses tâches. Pour cela, il combine ces informations à l'aide de ce qu'on appelle des portes, qui sont analogues aux connecteurs logiques. Les éléments de la présente section sont d'une certaine façon une manière graphique de visualiser les notions de la section .  Dans cette section, on définit les portes logiques élémentaires, les circuits logiques et leur construction,    Portes logiques  Une porte logique est un dispositif agissant sur un certain nombre d'entrée et produisant à partir de ceux-ci une sortie. Typiquement dans un ordinateur, le niveau de tension de composantes est fourni en entrée afin de produire un résultat ou une information. On peut aussi voir les entrées comme des Vrai ou Faux, des Ouvert ou Fermé ou des ou . Une partie d'un circuit peut être illustré comme sur la figure . À gauche, on retrouve les entrées (il peut y en avoir une ou plusieurs) et à droite la sortie (encore une fois, une ou plusieurs). Au centre, on retrouve une porte, une espèce de boite noire qui accomplit des opérations logiques pour produire la sortie.   Une partie de circuit avec une porte inconnue   Un rectangle, représentant une porte de nature inconnue, est représenté avec à sa gauche, deux petits traits pour les entrées et à sa droite, un trait pour la sortie.    On définit maintenant les trois portes principales d'un circuit logique. Elles les équivalents des opérateurs logiques . Les portes NON, ET et OU sont illustrées ci-dessous.   Trois portes logiques élémentaires    Porte logique NON   Un triangle avec un côté vertical à gauche et une extrémité à droite est représenté avec à sa gauche, un petit trait pour l'entrée et à sa droite, un trait pour la sortie. On retrouve aussi à l'extrémité droite du triangle un petit cercle ouvert.     Porte logique ET   Une moitié d'ellipse avec un côté vertical à gauche et une extrémité arrondie à droite est représenté avec à sa gauche, deux petits traits pour les entrées et à sa droite, un trait pour la sortie.     Porte logiqueOU   Une figure ressemblant à une fusée couchée sur le côté est représentée avec un côté concave arrondie à gauche et une extrémité à arrondie à droite. À sa gauche, deux petits traits pour l'entrée et à sa droite, un trait pour la sortie.      En plus des portes élémentaires, on peut aussi définir des portes pour des opérations comme le ou exclusif. On peut même définir ses propres opérations logiques et leur créer une porte. Concrètement, la porte NON va changer le signal de l'entrée pour l'inverser. Ainsi si une composante avait une tension élevée, envoyer son signal dans une porte NON convertira la tension en basse. Une porte ET regarde les deux entrées et retourne un signal à tension élevée si les deux signaux d'entrée étaient aussi à tension élevée. Finalement la porte OU envoie un signal à tension élevée dès que l'une de ses entrée l'était. Pour se coller à la tradition informatique, on parlera désormais en termes de et de pour parler de l'entrée et de la sortie d'un circuit.  Évidemment, ces portes à elles seules ne sont pas très intéressante, mais c'est en les combinant qu'on peut faire des choses complexes et utiles. Il y a toutefois quelques règles à respecter. Sous ces conditions, la sortie d'un circuit sera entièrement déterminée par la valeur de ces entrées au moment de la lecture de celles-ci. On regarde un exemple de circuit plus complexe avant d'établir les règles pour combiner les portes.   Un premier circuit combiné: dynamique  On considère le circuit de la figure . Si , quelle est la sortie du circuit?   Un premier circuit combiné   Un circuit complexe ayant trois entrées est illustrée. Les entrées X et Y passent dans une porte ET, l'entrée Y est transformée par une porte NON et par la suite combinée dans une porte ET avec l'entrée Z. Finalement, le résultat des deux portes ET est combiné dans une porte OU.      La figure ci-dessous permet de faire la résolution de ce circuit de manière interactive.   La solution du circuit      Quelles sont donc les règles pour avoir un circuit logique valide? Il y en a quatre. La dernière, si elle n'est pas respectée, peut donner lieu à des circuits appelés séquentiels. On ne considère pas ce type de circuits.  On ne combine pas deux fils d'entrée.  Une entrée peut se séparer comme l'entrée dans le circuit de la figure afin d'être utilisée par plus d'une porte.  Une sortie peut être utilisée comme entrée.  Par contre, aucune sortie ne retourne dans la porte d'où elle provient, que ce soit immédiatement ou éventuellement.      Parallèle avec la logique propositionnelle  On sait que pour chaque possibilité des entrées d'un circuit, on obtiendra une valeur de sortie. Lorsque le nombre de possibilités est raisonnable, on peut faire une table des possibilités. C'est l'équivalent de la table de vérité de la logique propositionnelle. Ci-dessous, la table du circuit de l'exemple . On peut vérifier avec la figure interactive que les valeurs sont exactes.   Table de vérité du circuit de l'exemple             Sortie    1  1  1  1    1  1  0  1    1  0  1  1    1  0  0  0    0  1  1  0    0  1  0  0    0  0  1  1    0  0  0  0     S'il est possible d'associer à un circuit logique une table de vérité, il est également possible de lui associer une expression logique. La sortie du circuit de l'exemple se lisait d'ailleurs . En passant Certaines personnes changent la symbolique lorsqu'ils transforment les circuits en expressions. Ils utilisent pour la négation, pour et au lieu de . On a préféré ici garder la notation propositionnelle afin d'éviter la confusion.   D'autres exemples de circuits logiques  On considère les circuits de la figure ci-dessous. On cherche à déterminer la table de vérité et une expression de logique propositionnelle pour chacun.   Deux circuits logiques    Un circuit à deux entrées   Un circuit à deux entrées et trois portes logiques est illustré. Le X et le Y sont combinés dans une porte OU. Le Y passe également à travers une porte NON avant d'être combiné avec le résultat de la première porte dans une porte ET.     Un circuit à trois entrées   Un circuit à trois entrées et quatre portes logiques est illustrés. Le X et le Y sont combinés dans une porte OU. Le Y et le Z sont combinés dans une porte ET et le résultat de cette porte est inversé par une porte NON. Finalement, cette inversion est combiné avec la porte OU du début dans une porte ET.        On débute par la table de vérité de ce circuit.  On commence avec la paire d'entrées - . La porte OU les combinant retournent . La valeur de est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant , la porte ET retourne comme sortie du circuit.  Pour la paire d'entrée - , la porte OU les combinant retournent . La valeur de est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant , la porte ET retourne comme sortie du circuit.  Pour la paire d'entrée - , la porte OU les combinant retournent . La valeur de est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant , la porte ET retourne comme sortie du circuit.  Pour la paire d'entrée - , la porte OU les combinant retournent . La valeur de est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. La valeur du Y a été inversée et est maintenant , mais la porte OU a retourné . La porte ET finale retourne comme sortie du circuit.  Le résumé de ces calculs se trouve dans la table ci-dessous.   Table de vérité du circuit                  1  1  1  0    1  0  1  1    0  1  1  0    0  0  0  0     Pour ce qui est de l'expression logique, en suivant le raisonnement des calculs précédents, on arrive à .   Souvent, il est plus simple de déterminer d'abord l'expression logique et à partir de celle-ci, écrire la table de vérité. C'est l'approche préconisée ici.  On peut procéder comme dans le circuit à deux entrées. On peut aussi procéder de la sortie vers les entrées. La porte finale est une porte ET. On sait donc qu'on aura une conjonction de deux propositions. La première partie de la conjonction correspond à la sortie de la porte OU, qui combine le et le . La seconde partie de la porte finale est la sortie d'une inversion. On aura donc une négation. Ce qui est inversé, c'est le résultat de la porte ET, qui combine le et le . En combinant ces informations, on obtient .  On peut ensuite trouver la table de vérité ci-dessous.   Table de vérité du circuit                        1  1  1  1  0  0    1  1  0  1  1  1    1  0  1  1  1  1    1  0  0  1  1  1    0  1  1  1  0  0    0  1  0  1  1  1    0  0  1  0  1  0    0  0  0  0  1  0       Si on peut trouver une expression logique et une table de vérité à partir d'un circuit logique, on peut probablement trouver une circuit logique à partir d'une expression ou d'une table de vérité. Pour cette dernière option, la forme normale disjonctive sera particulièrement utile.   Des circuits à partir d'une expression logique ou d'une table de vérité   On considère l'expression logique et la table de vérité suivante.  Table de vérité du circuit                  1  1  1  1    1  1  0  1    1  0  1  1    1  0  0  1    0  1  1  1    0  1  0  0    0  0  1  0    0  0  0  0     On veut dessiner des circuits logiques équivalents à ceux-ci.    On débute avec l'expression logique. On voit que la sortie sera obtenue après une porte ET qui combine les deux paires de parenthèses. Dans la première paire, le est combiné à la négation de par une porte OU et dans la seconde, c'est la négation de qui est combinée à , aussi par une porte OU.  Comme apparait dans les deux paires de parenthèses, il faudra séparer l'entrée en deux. Une solution possible est donner ci-dessous.   Le circuit associé à l'expression logique   Un circuit à trois entrées est illustré. L'entrée X est combinée avec l'inverse de l'entrée Z dans une porte OU. L'entrée Y est inversée et combinée avec l'entrée Z, aussi dans une porte OU. Le résultat de ces deux portes OU est finalement combiné dans une porte ET.     Le plus simple pour construire le circuit associé à une table de vérité est de construire la forme normale disjonctive de l'expression. Comme toutes les sorties tels que est donnent ,en combinant à la cinquième ligne, on obtient . Il faudra donc combiner l'inverse de avec et ensuite combiner ce résultat avec dans des portes ET. Ensuite, on combine cette sortie avec dans une porte OU. À noter qu'à l'exercice , on verra qu'on peut combiner plus de deux entrées dans une porte ET grâce à l'associativité.  Le circuit associé à cette table de vérité est illustré ci-dessous.   Le circuit associé à la table de vérité   Un circuit à trois entrées est illustré. L'entrée X est inversée et combinée avec l'entrée Y dans une porte ET. Ensuite, la sortie de cette porte est combinée avec Z dans une autre porte ET. Finalement le résultat de cette seconde porte ET est combinée avec X dans une porte OU.      En plus de déterminer des circuits équivalents à des expressions ou des tables de vérité, on peut aussi déterminer l'équivalence de circuits entre eux. Grâce aux règles de la logique, on peut simplifier les circuits. Si on réussit à réduire le nombre de portes utilisées, on aura potentiellement sauvé des coûts de construction du circuit et peut-être aussi en maintenance ou alimentation.      Les éléments importants de cette section sont:  Les représentations des portes NON,ET et OU.  Le parallèle entre les circuits et les expressions logiques.       Ces questions sont à faire avant de venir en classe et à remettre au début du cours.   On considère le circuit illustré à la figure .   Un circuit à trois entrées   Un circuit à trois entrées est illustrée dans lequel l'entrée X est combinée avec l'inverse de l'entrée Y dans une porte ET. Ce résultat est finalement combinée avec Z dans une porte OU.    Déterminer la valeur de la sortie si: ; ; .  Déterminer la table de vérité du circuit illustré à la figure . Par quelle porte plus simple aurait-on pu le remplacer?   Un circuit à trois portes à simplifier   Un circuit à deux entrées est illustrée dans lequel l'entrée X est inversée pour être combinée avec l'entrée Y dans une porte ET. Le résultat de cette porte est ensuite combinée dans une porte OU avec l'entrée X.     En plus des portes NON,ET et OU, on peut aussi créer d'autres portes à l'aide d'expressions fréquemment utilisées. Dans cet exercice, on s'intéresse au circuit du ou exclusif . Une porte associée à cette opération s'appelle une porte XOR. Elle est illustrée à la figure .   Une porte XOR   Une porte à deux entrée est illustrée, semblable à la porte du OU, mais avec un demi-cercle supplémentaire à gauche.    Déterminer une circuit équivalent à une simple porte XOR en termes de porte NON, ET et OU.  Quel serait un circuit associé à l'expression ?  Un circuit peut avoir plus d'une sortie. C'est particulièrement utile quand un circuit est en fait une partie d'un système plus complexe. Le circuit illustré à la figure est une partie d'un circuit utilisé pour qu'un ordinateur effectue des additions. On reviendra sur ce type de circuit dans le chapitre .   Le circuit demi-additionneur   Un circuit à deux entrée est illustrée dans lequel les entrées X et Y sont combinées dans une porte XOR et dans une porte ET. Le circuit retourne deux sorties, le résultat de chacune de ces combinaisons.    Déterminer la table de vérité de ce circuit.   Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.  Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.      Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Dans cet exercice, on constate qu'il est parfois possible de combiner deux portes en une seule de même nature.  Vérifier que les deux circuits suivants sont équivalents.    Le premier circuit   Une circuit à trois entrée dans lequel les entrées X et Y sont combinées dans une porte ET pour ensuite être combinées avec Z dans une autre porte ET.     Le second circuit   Une circuit à trois entrée dans lequel l'entrée X est combinée dans une porte ET avec la combinaison par une porte ET des entrées Y et Z     Comment justifier cela avec les notions de la section ?  Vérifier que le résultat est le même si on remplace les portes ET par des portes OU. Puisque les circuits sont équivalents, on utilisera parfois une porte ET ou une porte OU à plus de deux entrées pour alléger les diagrammes. Un exemple d'une porte ET à trois entrées est illustré ci-dessous.   Une porte ET à trois entrées   Une circuit à trois entrée dans les entrées X,Y et Z sont combinées dans une unique porte ET.     Si la porte XOR, associé au ou exclusif, retourne lorsque les entrées sont différentes et lorsqu'elle sont égales, on peut aussi définir une porte qui fait le contraire, c'est-à-dire une porte qui retournera en cas d'égalité et sinon. En termes de propositions logiques, on veut alors le complément du ou exclusif. On parlera d'une porte ÉGAL, qui est illustrée à la figure . On note que c'est la même porte que le XOR, mais avec le point de l'inversion à la sortie. Lorsqu'une porte quelconque est possède ce point à sa sortie, on comprendra que c'est l'inversion de la porte sans le point qui est donnée.   Une porte ÉGAL   Une porte à deux entrées identique à une porte XOR, mais possédant un point ouvert à l'extrémité droite de la porte, signifiant l'inversion.    Déterminer un circuit équivalent à une porte ÉGAL qui n'utilise que des portes NON,ET et OU.  Une possibilité est d'ajouter tout simplement une porte NON à la fin du circuit pour la porte XOR. Ceci devrait normalement donner les cinq portes du XOR et la porte NON. Il est toutefois possible de le faire à l'aide de cinq portes au total si on utilise les lois de la logique pour simplifier le complément du ou exclusif.  À l'exercice , il a été mentionné qu'une porte avec un point ouvert à la sortie représente l'inversion de cette porte. On peut ainsi définir les portes NET et NOU, illustrées ci-dessous.   La négation des portes ET et OU    La porte NET   Une porte identique à la porte ET, mais avec un petit point ouvert à l'extrémité droite, signifiant l'inversion.     La porte NOU   Une porte identique à la porte OU, mais avec un petit point ouvert à l'extrémité droite, signifiant l'inversion.      En particulier, dans l'exercice sur la barre de Sheffer , il a été question de l'opérateur logique NAND (anglais pour NET). Pour chaque question ci-dessous, l'exercice équivalent sur la barre de Sheffer pourrait être utile.  Trouver un circuit logique ne possédant que des portes NET équivalent à l'inversion. Trouver un circuit logique ne possédant que des portes NET équivalent à une porte ET. Trouver un circuit logique ne possédant que des portes NET équivalent à une porte OU.  Déterminer quel est le résultat du circuit ci-dessous pour les entrées demandées. Attention aux portes avec des inversions .   Un circuit complexe avec des portes inversées   Un circuit à trois entrées est illustré. Dans un premier temps, une porte NOU combine les entrées X et Y. L'inversion de Y est ensuite combinée avec Z dans une porte ET. Le résultat de cette porte ET est combiné dans une porte XOR avec l'inversion de Y. Finalement, la sortie de la porte XOR est combinée avec la sortie de la première porte NOU dans une porte NET.     Construire un circuit à trois entrées qui retourne si et seulement si et en n'utilisant que les trois portes de base  Construire un circuit à trois entrées qui retourne si au moins deux entrées sont ouvertes et sinon. Utiliser n'importe quelle(s) porte(s) vues jusqu'ici.    Exercices supplémentaires  Un pont de la région de Vancouver possède trois voies qui s'utilisent dans les deux sens, selon la direction du trafic (vers l'île ou vers l'extérieur). Afin d'orienter les usagers, des symboles lumineux vert ou rouge indique si une voie est accessible. L'affichage de ces symboles est contrôlé par deux interrupteurs .  Lorsque les deux interrupteurs sont fermés ( ), les trois voies affichent rouge. Lorsque seulement est ouvert, la voie la plus à droite des trois est au vert et les deux autres sont au rouge. Lorsque seulement est ouvert, ce sont les deux voies de droites qui sont au vert, la troisième est au rouge. Finalement, si les deux interrupteurs sont ouverts, les trois voies sont au vert.  Donner un circuit à deux entrées et trois sorties illustrant cette situation.   Le Lion's Gate Bridge, de la région de Vancouver Image tirée de Wikipedia, libre de droits   Une photo du Lion's Gate Bridge de Vancouver sur laquelle on peut apercevoir des voyants lumineux, indiquant aux automobilistes quelle voies ils peuvent emprunter.     Les circuits trouvés à l'exercice peuvent aussi se faire en n'utilisant que des portes NOU. Trouver un circuit logique ne possédant que des portes NOU équivalent à l'inversion. Trouver un circuit logique ne possédant que des portes NOU équivalent à une porte ET. Trouver un circuit logique ne possédant que des portes NOU équivalent à une porte OU. L'opérateur logique équivalent à la porte NOU est appelé la flèche de Peirce. On note l'opération .     "
+  "body": "  Circuits logiques    Pour la première fois, on évoque spécifiquement le fonctionnement d'un ordinateur. Les composantes d'un ordinateur sont presque toutes composées de petits circuits électroniques qui sont fait pour accepter deux intensité de courant électrique. Un circuit qui reçoit le niveau élevé de courant sera représenté par un alors qu'un circuit qui reçoit un faible niveau sera représenté par un . Cette dualité n'est pas sans rappeler les sections précédentes où les propositions étaient vraie ou fausse.  Un ordinateur combine l'information de tous ses circuits pour effectuer ses tâches. Pour cela, il combine ces informations à l'aide de ce qu'on appelle des portes, qui sont analogues aux connecteurs logiques. Les éléments de la présente section sont d'une certaine façon une manière graphique de visualiser les notions de la section .  Dans cette section, on définit les portes logiques élémentaires, les circuits logiques et leur construction,    Portes logiques  Une porte logique est un dispositif agissant sur un certain nombre d'entrée et produisant à partir de ceux-ci une sortie. Typiquement dans un ordinateur, le niveau de tension de composantes est fourni en entrée afin de produire un résultat ou une information. On peut aussi voir les entrées comme des Vrai ou Faux, des Ouvert ou Fermé ou des ou . Une partie d'un circuit peut être illustré comme sur la figure . À gauche, on retrouve les entrées (il peut y en avoir une ou plusieurs) et à droite la sortie (encore une fois, une ou plusieurs). Au centre, on retrouve une porte, une espèce de boite noire qui accomplit des opérations logiques pour produire la sortie.   Une partie de circuit avec une porte inconnue   Un rectangle, représentant une porte de nature inconnue, est représenté avec à sa gauche, deux petits traits pour les entrées et à sa droite, un trait pour la sortie.    On définit maintenant les trois portes principales d'un circuit logique. Elles les équivalents des opérateurs logiques . Les portes NON, ET et OU sont illustrées ci-dessous.   Trois portes logiques élémentaires    Porte logique NON   Un triangle avec un côté vertical à gauche et une extrémité à droite est représenté avec à sa gauche, un petit trait pour l'entrée et à sa droite, un trait pour la sortie. On retrouve aussi à l'extrémité droite du triangle un petit cercle ouvert.     Porte logique ET   Une moitié d'ellipse avec un côté vertical à gauche et une extrémité arrondie à droite est représenté avec à sa gauche, deux petits traits pour les entrées et à sa droite, un trait pour la sortie.     Porte logiqueOU   Une figure ressemblant à une fusée couchée sur le côté est représentée avec un côté concave arrondie à gauche et une extrémité à arrondie à droite. À sa gauche, deux petits traits pour l'entrée et à sa droite, un trait pour la sortie.      En plus des portes élémentaires, on peut aussi définir des portes pour des opérations comme le ou exclusif. On peut même définir ses propres opérations logiques et leur créer une porte. Concrètement, la porte NON va changer le signal de l'entrée pour l'inverser. Ainsi si une composante avait une tension élevée, envoyer son signal dans une porte NON convertira la tension en basse. Une porte ET regarde les deux entrées et retourne un signal à tension élevée si les deux signaux d'entrée étaient aussi à tension élevée. Finalement la porte OU envoie un signal à tension élevée dès que l'une de ses entrée l'était. Pour se coller à la tradition informatique, on parlera désormais en termes de et de pour parler de l'entrée et de la sortie d'un circuit.  Évidemment, ces portes à elles seules ne sont pas très intéressante, mais c'est en les combinant qu'on peut faire des choses complexes et utiles. Il y a toutefois quelques règles à respecter. Sous ces conditions, la sortie d'un circuit sera entièrement déterminée par la valeur de ces entrées au moment de la lecture de celles-ci. On regarde un exemple de circuit plus complexe avant d'établir les règles pour combiner les portes.   Un premier circuit combiné: dynamique  On considère le circuit de la figure . Si , quelle est la sortie du circuit?   Un premier circuit combiné   Un circuit complexe ayant trois entrées est illustrée. Les entrées X et Y passent dans une porte ET, l'entrée Y est transformée par une porte NON et par la suite combinée dans une porte ET avec l'entrée Z. Finalement, le résultat des deux portes ET est combiné dans une porte OU.      La figure ci-dessous permet de faire la résolution de ce circuit de manière interactive.   La solution du circuit      Quelles sont donc les règles pour avoir un circuit logique valide? Il y en a quatre. La dernière, si elle n'est pas respectée, peut donner lieu à des circuits appelés séquentiels. On ne considère pas ce type de circuits.  On ne combine pas deux fils d'entrée.  Une entrée peut se séparer comme l'entrée dans le circuit de la figure afin d'être utilisée par plus d'une porte.  Une sortie peut être utilisée comme entrée.  Par contre, aucune sortie ne retourne dans la porte d'où elle provient, que ce soit immédiatement ou éventuellement.      Parallèle avec la logique propositionnelle  On sait que pour chaque possibilité des entrées d'un circuit, on obtiendra une valeur de sortie. Lorsque le nombre de possibilités est raisonnable, on peut faire une table des possibilités. C'est l'équivalent de la table de vérité de la logique propositionnelle. Ci-dessous, la table du circuit de l'exemple . On peut vérifier avec la figure interactive que les valeurs sont exactes.   Table de vérité du circuit de l'exemple             Sortie    1  1  1  1    1  1  0  1    1  0  1  1    1  0  0  0    0  1  1  0    0  1  0  0    0  0  1  1    0  0  0  0     S'il est possible d'associer à un circuit logique une table de vérité, il est également possible de lui associer une expression logique. La sortie du circuit de l'exemple se lisait d'ailleurs . En passant Certaines personnes changent la symbolique lorsqu'ils transforment les circuits en expressions. Ils utilisent pour la négation, pour et au lieu de . On a préféré ici garder la notation propositionnelle afin d'éviter la confusion.   D'autres exemples de circuits logiques  On considère les circuits de la figure ci-dessous. On cherche à déterminer la table de vérité et une expression de logique propositionnelle pour chacun.   Deux circuits logiques    Un circuit à deux entrées   Un circuit à deux entrées et trois portes logiques est illustré. Le X et le Y sont combinés dans une porte OU. Le Y passe également à travers une porte NON avant d'être combiné avec le résultat de la première porte dans une porte ET.     Un circuit à trois entrées   Un circuit à trois entrées et quatre portes logiques est illustrés. Le X et le Y sont combinés dans une porte OU. Le Y et le Z sont combinés dans une porte ET et le résultat de cette porte est inversé par une porte NON. Finalement, cette inversion est combiné avec la porte OU du début dans une porte ET.        On débute par la table de vérité de ce circuit.  On commence avec la paire d'entrées - . La porte OU les combinant retournent . La valeur de est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant , la porte ET retourne comme sortie du circuit.  Pour la paire d'entrée - , la porte OU les combinant retournent . La valeur de est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant , la porte ET retourne comme sortie du circuit.  Pour la paire d'entrée - , la porte OU les combinant retournent . La valeur de est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. Comme la valeur du Y a été inversée et est maintenant , la porte ET retourne comme sortie du circuit.  Pour la paire d'entrée - , la porte OU les combinant retournent . La valeur de est inversée par la porte non et se combine ensuite avec le résultat précédent dans la porte ET. La valeur du Y a été inversée et est maintenant , mais la porte OU a retourné . La porte ET finale retourne comme sortie du circuit.  Le résumé de ces calculs se trouve dans la table ci-dessous.   Table de vérité du circuit                  1  1  1  0    1  0  1  1    0  1  1  0    0  0  0  0     Pour ce qui est de l'expression logique, en suivant le raisonnement des calculs précédents, on arrive à .   Souvent, il est plus simple de déterminer d'abord l'expression logique et à partir de celle-ci, écrire la table de vérité. C'est l'approche préconisée ici.  On peut procéder comme dans le circuit à deux entrées. On peut aussi procéder de la sortie vers les entrées. La porte finale est une porte ET. On sait donc qu'on aura une conjonction de deux propositions. La première partie de la conjonction correspond à la sortie de la porte OU, qui combine le et le . La seconde partie de la porte finale est la sortie d'une inversion. On aura donc une négation. Ce qui est inversé, c'est le résultat de la porte ET, qui combine le et le . En combinant ces informations, on obtient .  On peut ensuite trouver la table de vérité ci-dessous.   Table de vérité du circuit                        1  1  1  1  0  0    1  1  0  1  1  1    1  0  1  1  1  1    1  0  0  1  1  1    0  1  1  1  0  0    0  1  0  1  1  1    0  0  1  0  1  0    0  0  0  0  1  0       Si on peut trouver une expression logique et une table de vérité à partir d'un circuit logique, on peut probablement trouver une circuit logique à partir d'une expression ou d'une table de vérité. Pour cette dernière option, la forme normale disjonctive sera particulièrement utile.   Des circuits à partir d'une expression logique ou d'une table de vérité   On considère l'expression logique et la table de vérité suivante.  Table de vérité du circuit                  1  1  1  1    1  1  0  1    1  0  1  1    1  0  0  1    0  1  1  1    0  1  0  0    0  0  1  0    0  0  0  0     On veut dessiner des circuits logiques équivalents à ceux-ci.    On débute avec l'expression logique. On voit que la sortie sera obtenue après une porte ET qui combine les deux paires de parenthèses. Dans la première paire, le est combiné à la négation de par une porte OU et dans la seconde, c'est la négation de qui est combinée à , aussi par une porte OU.  Comme apparait dans les deux paires de parenthèses, il faudra séparer l'entrée en deux. Une solution possible est donner ci-dessous.   Le circuit associé à l'expression logique   Un circuit à trois entrées est illustré. L'entrée X est combinée avec l'inverse de l'entrée Z dans une porte OU. L'entrée Y est inversée et combinée avec l'entrée Z, aussi dans une porte OU. Le résultat de ces deux portes OU est finalement combiné dans une porte ET.     Le plus simple pour construire le circuit associé à une table de vérité est de construire la forme normale disjonctive de l'expression. Comme toutes les sorties tels que est donnent ,en combinant à la cinquième ligne, on obtient . Il faudra donc combiner l'inverse de avec et ensuite combiner ce résultat avec dans des portes ET. Ensuite, on combine cette sortie avec dans une porte OU. À noter qu'à l'exercice , on verra qu'on peut combiner plus de deux entrées dans une porte ET grâce à l'associativité.  Le circuit associé à cette table de vérité est illustré ci-dessous.   Le circuit associé à la table de vérité   Un circuit à trois entrées est illustré. L'entrée X est inversée et combinée avec l'entrée Y dans une porte ET. Ensuite, la sortie de cette porte est combinée avec Z dans une autre porte ET. Finalement le résultat de cette seconde porte ET est combinée avec X dans une porte OU.      En plus de déterminer des circuits équivalents à des expressions ou des tables de vérité, on peut aussi déterminer l'équivalence de circuits entre eux. Grâce aux règles de la logique, on peut simplifier les circuits. Si on réussit à réduire le nombre de portes utilisées, on aura potentiellement sauvé des coûts de construction du circuit et peut-être aussi en maintenance ou alimentation.      Les éléments importants de cette section sont:  Les représentations des portes NON,ET et OU.  Le parallèle entre les circuits et les expressions logiques.       Ces questions sont à faire avant de venir en classe et à remettre au début du cours.   On considère le circuit illustré à la figure .   Un circuit à trois entrées   Un circuit à trois entrées est illustrée dans lequel l'entrée X est combinée avec l'inverse de l'entrée Y dans une porte ET. Ce résultat est finalement combinée avec Z dans une porte OU.    Déterminer la valeur de la sortie si: ; ; .  Déterminer la table de vérité du circuit illustré à la figure . Par quelle porte plus simple aurait-on pu le remplacer?   Un circuit à trois portes à simplifier   Un circuit à deux entrées est illustrée dans lequel l'entrée X est inversée pour être combinée avec l'entrée Y dans une porte ET. Le résultat de cette porte est ensuite combinée dans une porte OU avec l'entrée X.     En plus des portes NON,ET et OU, on peut aussi créer d'autres portes à l'aide d'expressions fréquemment utilisées. Dans cet exercice, on s'intéresse au circuit du ou exclusif . Une porte associée à cette opération s'appelle une porte XOR. Elle est illustrée à la figure .   Une porte XOR   Une porte à deux entrée est illustrée, semblable à la porte du OU, mais avec un demi-cercle supplémentaire à gauche.    Déterminer une circuit équivalent à une simple porte XOR en termes de porte NON, ET et OU.  Quel serait un circuit associé à l'expression ?  Un circuit peut avoir plus d'une sortie. C'est particulièrement utile quand un circuit est en fait une partie d'un système plus complexe. Le circuit illustré à la figure est une partie d'un circuit utilisé pour qu'un ordinateur effectue des additions. On reviendra sur ce type de circuit dans le chapitre .   Le circuit demi-additionneur   Un circuit à deux entrée est illustrée dans lequel les entrées X et Y sont combinées dans une porte XOR et dans une porte ET. Le circuit retourne deux sorties, le résultat de chacune de ces combinaisons.    Déterminer la table de vérité de ce circuit.   Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.  Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.      Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Dans cet exercice, on constate qu'il est parfois possible de combiner deux portes en une seule de même nature.  Vérifier que les deux circuits suivants sont équivalents.    Le premier circuit   Une circuit à trois entrée dans lequel les entrées X et Y sont combinées dans une porte ET pour ensuite être combinées avec Z dans une autre porte ET.     Le second circuit   Une circuit à trois entrée dans lequel l'entrée X est combinée dans une porte ET avec la combinaison par une porte ET des entrées Y et Z     Comment justifier cela avec les notions de la section ?  Vérifier que le résultat est le même si on remplace les portes ET par des portes OU. Puisque les circuits sont équivalents, on utilisera parfois une porte ET ou une porte OU à plus de deux entrées pour alléger les diagrammes. Un exemple d'une porte ET à trois entrées est illustré ci-dessous.   Une porte ET à trois entrées   Une circuit à trois entrée dans les entrées X,Y et Z sont combinées dans une unique porte ET.     Si la porte XOR, associé au ou exclusif, retourne lorsque les entrées sont différentes et lorsqu'elle sont égales, on peut aussi définir une porte qui fait le contraire, c'est-à-dire une porte qui retournera en cas d'égalité et sinon. En termes de propositions logiques, on veut alors le complément du ou exclusif. On parlera d'une porte ÉGAL, qui est illustrée à la figure . On note que c'est la même porte que le XOR, mais avec le point de l'inversion à la sortie. Lorsqu'une porte quelconque possède ce point à sa sortie, on comprendra que c'est l'inversion de la porte sans le point qui est donnée.   Une porte ÉGAL   Une porte à deux entrées identique à une porte XOR, mais possédant un point ouvert à l'extrémité droite de la porte, signifiant l'inversion.    Déterminer un circuit équivalent à une porte ÉGAL qui n'utilise que des portes NON,ET et OU.  Une possibilité est d'ajouter tout simplement une porte NON à la fin du circuit pour la porte XOR. Ceci devrait normalement donner les cinq portes du XOR et la porte NON. Il est toutefois possible de le faire à l'aide de cinq portes au total si on utilise les lois de la logique pour simplifier le complément du ou exclusif.  À l'exercice , il a été mentionné qu'une porte avec un point ouvert à la sortie représente l'inversion de cette porte. On peut ainsi définir les portes NET et NOU, illustrées ci-dessous.   La négation des portes ET et OU    La porte NET   Une porte identique à la porte ET, mais avec un petit point ouvert à l'extrémité droite, signifiant l'inversion.     La porte NOU   Une porte identique à la porte OU, mais avec un petit point ouvert à l'extrémité droite, signifiant l'inversion.      En particulier, dans l'exercice sur la barre de Sheffer , il a été question de l'opérateur logique NAND (anglais pour NET). Pour chaque question ci-dessous, l'exercice équivalent sur la barre de Sheffer pourrait être utile.  Trouver un circuit logique ne possédant que des portes NET équivalent à l'inversion. Trouver un circuit logique ne possédant que des portes NET équivalent à une porte ET. Trouver un circuit logique ne possédant que des portes NET équivalent à une porte OU.  Déterminer quel est le résultat du circuit ci-dessous pour les entrées demandées. Attention aux portes avec des inversions .   Un circuit complexe avec des portes inversées   Un circuit à trois entrées est illustré. Dans un premier temps, une porte NOU combine les entrées X et Y. L'inversion de Y est ensuite combinée avec Z dans une porte ET. Le résultat de cette porte ET est combiné dans une porte XOR avec l'inversion de Y. Finalement, la sortie de la porte XOR est combinée avec la sortie de la première porte NOU dans une porte NET.     Construire un circuit à trois entrées qui retourne si et seulement si et en n'utilisant que les trois portes de base  Construire un circuit à trois entrées qui retourne si au moins deux entrées sont ouvertes et sinon. Utiliser n'importe quelle(s) porte(s) vues jusqu'ici.    Exercices supplémentaires  Un pont de la région de Vancouver possède trois voies qui s'utilisent dans les deux sens, selon la direction du trafic (vers l'île ou vers l'extérieur). Afin d'orienter les usagers, des symboles lumineux vert ou rouge indique si une voie est accessible. L'affichage de ces symboles est contrôlé par deux interrupteurs .  Lorsque les deux interrupteurs sont fermés ( ), les trois voies affichent rouge. Lorsque seulement est ouvert, la voie la plus à droite des trois est au vert et les deux autres sont au rouge. Lorsque seulement est ouvert, ce sont les deux voies de droites qui sont au vert, la troisième est au rouge. Finalement, si les deux interrupteurs sont ouverts, les trois voies sont au vert.  Donner un circuit à deux entrées et trois sorties illustrant cette situation.   Le Lion's Gate Bridge, de la région de Vancouver Image tirée de Wikipedia, libre de droits   Une photo du Lion's Gate Bridge de Vancouver sur laquelle on peut apercevoir des voyants lumineux, indiquant aux automobilistes quelle voies ils peuvent emprunter.     Les circuits trouvés à l'exercice peuvent aussi se faire en n'utilisant que des portes NOU. Trouver un circuit logique ne possédant que des portes NOU équivalent à l'inversion. Trouver un circuit logique ne possédant que des portes NOU équivalent à une porte ET. Trouver un circuit logique ne possédant que des portes NOU équivalent à une porte OU. L'opérateur logique équivalent à la porte NOU est appelé la flèche de Peirce. On note l'opération .     "
 },
 {
   "id": "fig-circuitintro",
@@ -1918,36 +1909,36 @@ var ptx_lunr_docs = [
   "body": " Des circuits à partir d'une expression logique ou d'une table de vérité   On considère l'expression logique et la table de vérité suivante.  Table de vérité du circuit                  1  1  1  1    1  1  0  1    1  0  1  1    1  0  0  1    0  1  1  1    0  1  0  0    0  0  1  0    0  0  0  0     On veut dessiner des circuits logiques équivalents à ceux-ci.    On débute avec l'expression logique. On voit que la sortie sera obtenue après une porte ET qui combine les deux paires de parenthèses. Dans la première paire, le est combiné à la négation de par une porte OU et dans la seconde, c'est la négation de qui est combinée à , aussi par une porte OU.  Comme apparait dans les deux paires de parenthèses, il faudra séparer l'entrée en deux. Une solution possible est donner ci-dessous.   Le circuit associé à l'expression logique   Un circuit à trois entrées est illustré. L'entrée X est combinée avec l'inverse de l'entrée Z dans une porte OU. L'entrée Y est inversée et combinée avec l'entrée Z, aussi dans une porte OU. Le résultat de ces deux portes OU est finalement combiné dans une porte ET.     Le plus simple pour construire le circuit associé à une table de vérité est de construire la forme normale disjonctive de l'expression. Comme toutes les sorties tels que est donnent ,en combinant à la cinquième ligne, on obtient . Il faudra donc combiner l'inverse de avec et ensuite combiner ce résultat avec dans des portes ET. Ensuite, on combine cette sortie avec dans une porte OU. À noter qu'à l'exercice , on verra qu'on peut combiner plus de deux entrées dans une porte ET grâce à l'associativité.  Le circuit associé à cette table de vérité est illustré ci-dessous.   Le circuit associé à la table de vérité   Un circuit à trois entrées est illustré. L'entrée X est inversée et combinée avec l'entrée Y dans une porte ET. Ensuite, la sortie de cette porte est combinée avec Z dans une autre porte ET. Finalement le résultat de cette seconde porte ET est combinée avec X dans une porte OU.     "
 },
 {
-  "id": "exercise-127",
+  "id": "exercise-126",
   "level": "2",
-  "url": "sec-circuits.html#exercise-127",
+  "url": "sec-circuits.html#exercise-126",
   "type": "Question de compréhension",
   "number": "2.4.3.1",
   "title": "",
   "body": "On considère le circuit illustré à la figure .   Un circuit à trois entrées   Un circuit à trois entrées est illustrée dans lequel l'entrée X est combinée avec l'inverse de l'entrée Y dans une porte ET. Ce résultat est finalement combinée avec Z dans une porte OU.    Déterminer la valeur de la sortie si: ; ; . "
 },
 {
-  "id": "exercise-128",
+  "id": "exercise-127",
   "level": "2",
-  "url": "sec-circuits.html#exercise-128",
+  "url": "sec-circuits.html#exercise-127",
   "type": "Question de compréhension",
   "number": "2.4.3.2",
   "title": "",
   "body": "Déterminer la table de vérité du circuit illustré à la figure . Par quelle porte plus simple aurait-on pu le remplacer?   Un circuit à trois portes à simplifier   Un circuit à deux entrées est illustrée dans lequel l'entrée X est inversée pour être combinée avec l'entrée Y dans une porte ET. Le résultat de cette porte est ensuite combinée dans une porte OU avec l'entrée X.    "
 },
 {
-  "id": "exercise-129",
+  "id": "exercise-128",
   "level": "2",
-  "url": "sec-circuits.html#exercise-129",
+  "url": "sec-circuits.html#exercise-128",
   "type": "Question de compréhension",
   "number": "2.4.3.3",
   "title": "",
   "body": "En plus des portes NON,ET et OU, on peut aussi créer d'autres portes à l'aide d'expressions fréquemment utilisées. Dans cet exercice, on s'intéresse au circuit du ou exclusif . Une porte associée à cette opération s'appelle une porte XOR. Elle est illustrée à la figure .   Une porte XOR   Une porte à deux entrée est illustrée, semblable à la porte du OU, mais avec un demi-cercle supplémentaire à gauche.    Déterminer une circuit équivalent à une simple porte XOR en termes de porte NON, ET et OU. "
 },
 {
-  "id": "exercise-130",
+  "id": "exercise-129",
   "level": "2",
-  "url": "sec-circuits.html#exercise-130",
+  "url": "sec-circuits.html#exercise-129",
   "type": "Question de compréhension",
   "number": "2.4.3.4",
   "title": "",
@@ -1963,18 +1954,18 @@ var ptx_lunr_docs = [
   "body": "Un circuit peut avoir plus d'une sortie. C'est particulièrement utile quand un circuit est en fait une partie d'un système plus complexe. Le circuit illustré à la figure est une partie d'un circuit utilisé pour qu'un ordinateur effectue des additions. On reviendra sur ce type de circuit dans le chapitre .   Le circuit demi-additionneur   Un circuit à deux entrée est illustrée dans lequel les entrées X et Y sont combinées dans une porte XOR et dans une porte ET. Le circuit retourne deux sorties, le résultat de chacune de ces combinaisons.    Déterminer la table de vérité de ce circuit.  "
 },
 {
-  "id": "exercise-132",
+  "id": "exercise-131",
   "level": "2",
-  "url": "sec-circuits.html#exercise-132",
+  "url": "sec-circuits.html#exercise-131",
   "type": "Question de compréhension",
   "number": "2.4.3.6",
   "title": "",
   "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
 {
-  "id": "exercise-133",
+  "id": "exercise-132",
   "level": "2",
-  "url": "sec-circuits.html#exercise-133",
+  "url": "sec-circuits.html#exercise-132",
   "type": "Question de compréhension",
   "number": "2.4.3.7",
   "title": "",
@@ -1996,7 +1987,7 @@ var ptx_lunr_docs = [
   "type": "Exercice",
   "number": "2.4.4.2",
   "title": "",
-  "body": "Si la porte XOR, associé au ou exclusif, retourne lorsque les entrées sont différentes et lorsqu'elle sont égales, on peut aussi définir une porte qui fait le contraire, c'est-à-dire une porte qui retournera en cas d'égalité et sinon. En termes de propositions logiques, on veut alors le complément du ou exclusif. On parlera d'une porte ÉGAL, qui est illustrée à la figure . On note que c'est la même porte que le XOR, mais avec le point de l'inversion à la sortie. Lorsqu'une porte quelconque est possède ce point à sa sortie, on comprendra que c'est l'inversion de la porte sans le point qui est donnée.   Une porte ÉGAL   Une porte à deux entrées identique à une porte XOR, mais possédant un point ouvert à l'extrémité droite de la porte, signifiant l'inversion.    Déterminer un circuit équivalent à une porte ÉGAL qui n'utilise que des portes NON,ET et OU.  Une possibilité est d'ajouter tout simplement une porte NON à la fin du circuit pour la porte XOR. Ceci devrait normalement donner les cinq portes du XOR et la porte NON. Il est toutefois possible de le faire à l'aide de cinq portes au total si on utilise les lois de la logique pour simplifier le complément du ou exclusif. "
+  "body": "Si la porte XOR, associé au ou exclusif, retourne lorsque les entrées sont différentes et lorsqu'elle sont égales, on peut aussi définir une porte qui fait le contraire, c'est-à-dire une porte qui retournera en cas d'égalité et sinon. En termes de propositions logiques, on veut alors le complément du ou exclusif. On parlera d'une porte ÉGAL, qui est illustrée à la figure . On note que c'est la même porte que le XOR, mais avec le point de l'inversion à la sortie. Lorsqu'une porte quelconque possède ce point à sa sortie, on comprendra que c'est l'inversion de la porte sans le point qui est donnée.   Une porte ÉGAL   Une porte à deux entrées identique à une porte XOR, mais possédant un point ouvert à l'extrémité droite de la porte, signifiant l'inversion.    Déterminer un circuit équivalent à une porte ÉGAL qui n'utilise que des portes NON,ET et OU.  Une possibilité est d'ajouter tout simplement une porte NON à la fin du circuit pour la porte XOR. Ceci devrait normalement donner les cinq portes du XOR et la porte NON. Il est toutefois possible de le faire à l'aide de cinq portes au total si on utilise les lois de la logique pour simplifier le complément du ou exclusif. "
 },
 {
   "id": "exo-NET",
@@ -2008,45 +1999,45 @@ var ptx_lunr_docs = [
   "body": "À l'exercice , il a été mentionné qu'une porte avec un point ouvert à la sortie représente l'inversion de cette porte. On peut ainsi définir les portes NET et NOU, illustrées ci-dessous.   La négation des portes ET et OU    La porte NET   Une porte identique à la porte ET, mais avec un petit point ouvert à l'extrémité droite, signifiant l'inversion.     La porte NOU   Une porte identique à la porte OU, mais avec un petit point ouvert à l'extrémité droite, signifiant l'inversion.      En particulier, dans l'exercice sur la barre de Sheffer , il a été question de l'opérateur logique NAND (anglais pour NET). Pour chaque question ci-dessous, l'exercice équivalent sur la barre de Sheffer pourrait être utile.  Trouver un circuit logique ne possédant que des portes NET équivalent à l'inversion. Trouver un circuit logique ne possédant que des portes NET équivalent à une porte ET. Trouver un circuit logique ne possédant que des portes NET équivalent à une porte OU. "
 },
 {
-  "id": "exercise-137",
+  "id": "exercise-136",
   "level": "2",
-  "url": "sec-circuits.html#exercise-137",
+  "url": "sec-circuits.html#exercise-136",
   "type": "Exercice",
   "number": "2.4.4.4",
   "title": "",
   "body": "Déterminer quel est le résultat du circuit ci-dessous pour les entrées demandées. Attention aux portes avec des inversions .   Un circuit complexe avec des portes inversées   Un circuit à trois entrées est illustré. Dans un premier temps, une porte NOU combine les entrées X et Y. L'inversion de Y est ensuite combinée avec Z dans une porte ET. Le résultat de cette porte ET est combiné dans une porte XOR avec l'inversion de Y. Finalement, la sortie de la porte XOR est combinée avec la sortie de la première porte NOU dans une porte NET.    "
 },
 {
-  "id": "exercise-138",
+  "id": "exercise-137",
   "level": "2",
-  "url": "sec-circuits.html#exercise-138",
+  "url": "sec-circuits.html#exercise-137",
   "type": "Exercice",
   "number": "2.4.4.5",
   "title": "",
   "body": "Construire un circuit à trois entrées qui retourne si et seulement si et en n'utilisant que les trois portes de base "
 },
 {
-  "id": "exercise-139",
+  "id": "exercise-138",
   "level": "2",
-  "url": "sec-circuits.html#exercise-139",
+  "url": "sec-circuits.html#exercise-138",
   "type": "Exercice",
   "number": "2.4.4.6",
   "title": "",
   "body": "Construire un circuit à trois entrées qui retourne si au moins deux entrées sont ouvertes et sinon. Utiliser n'importe quelle(s) porte(s) vues jusqu'ici. "
 },
 {
-  "id": "exercise-140",
+  "id": "exercise-139",
   "level": "2",
-  "url": "sec-circuits.html#exercise-140",
+  "url": "sec-circuits.html#exercise-139",
   "type": "Exercice",
   "number": "2.4.4.7",
   "title": "",
   "body": "Un pont de la région de Vancouver possède trois voies qui s'utilisent dans les deux sens, selon la direction du trafic (vers l'île ou vers l'extérieur). Afin d'orienter les usagers, des symboles lumineux vert ou rouge indique si une voie est accessible. L'affichage de ces symboles est contrôlé par deux interrupteurs .  Lorsque les deux interrupteurs sont fermés ( ), les trois voies affichent rouge. Lorsque seulement est ouvert, la voie la plus à droite des trois est au vert et les deux autres sont au rouge. Lorsque seulement est ouvert, ce sont les deux voies de droites qui sont au vert, la troisième est au rouge. Finalement, si les deux interrupteurs sont ouverts, les trois voies sont au vert.  Donner un circuit à deux entrées et trois sorties illustrant cette situation.   Le Lion's Gate Bridge, de la région de Vancouver Image tirée de Wikipedia, libre de droits   Une photo du Lion's Gate Bridge de Vancouver sur laquelle on peut apercevoir des voyants lumineux, indiquant aux automobilistes quelle voies ils peuvent emprunter.    "
 },
 {
-  "id": "exercise-141",
+  "id": "exercise-140",
   "level": "2",
-  "url": "sec-circuits.html#exercise-141",
+  "url": "sec-circuits.html#exercise-140",
   "type": "Exercice",
   "number": "2.4.4.8",
   "title": "",
@@ -2242,63 +2233,63 @@ var ptx_lunr_docs = [
   "body": " Un circuit additionneur pour des nombres binaires à quatre chiffre   Une circuit à huit entrées et cinq sorties est illustré. Les entrées A0 et B0 se combinent dans un circuit demi-additionneur. La sortie S de ce circuit produit la sortie S0 puis la sortie R se combine avec les entrées A1 et B1 dans un additionneur. La sortie S de cette additionneur produit S1 et la sortie R se combine avec A2 et B2 dans un autre additionneur. On continue ainsi de suite jusqu'au dernier additionneur, qui produit S3 par sa sortie S et S4 par sa sortie R.   "
 },
 {
-  "id": "exercise-142",
+  "id": "exercise-141",
   "level": "2",
-  "url": "sec-representation.html#exercise-142",
+  "url": "sec-representation.html#exercise-141",
   "type": "Question de compréhension",
   "number": "3.1.6.1",
   "title": "",
   "body": "Donner les huit nombres binaires qui suivent . "
 },
 {
-  "id": "exercise-143",
+  "id": "exercise-142",
   "level": "2",
-  "url": "sec-representation.html#exercise-143",
+  "url": "sec-representation.html#exercise-142",
   "type": "Question de compréhension",
   "number": "3.1.6.2",
   "title": "",
   "body": "Donner les dix nombres hexadécimaux qui suivent . "
 },
 {
-  "id": "exercise-144",
+  "id": "exercise-143",
   "level": "2",
-  "url": "sec-representation.html#exercise-144",
+  "url": "sec-representation.html#exercise-143",
   "type": "Question de compréhension",
   "number": "3.1.6.3",
   "title": "",
   "body": "Qu'ont de particulier les nombres binaires qui se terminent par ? "
 },
 {
-  "id": "exercise-145",
+  "id": "exercise-144",
   "level": "2",
-  "url": "sec-representation.html#exercise-145",
+  "url": "sec-representation.html#exercise-144",
   "type": "Question de compréhension",
   "number": "3.1.6.4",
   "title": "",
   "body": "Convertir les nombres suivants en base dix. "
 },
 {
-  "id": "exercise-146",
+  "id": "exercise-145",
   "level": "2",
-  "url": "sec-representation.html#exercise-146",
+  "url": "sec-representation.html#exercise-145",
   "type": "Question de compréhension",
   "number": "3.1.6.5",
   "title": "",
   "body": "Effectuer les additions suivantes. "
 },
 {
-  "id": "exercise-147",
+  "id": "exercise-146",
   "level": "2",
-  "url": "sec-representation.html#exercise-147",
+  "url": "sec-representation.html#exercise-146",
   "type": "Question de compréhension",
   "number": "3.1.6.6",
   "title": "",
   "body": "Effectuer les multiplications suivantes. "
 },
 {
-  "id": "exercise-148",
+  "id": "exercise-147",
   "level": "2",
-  "url": "sec-representation.html#exercise-148",
+  "url": "sec-representation.html#exercise-147",
   "type": "Question de compréhension",
   "number": "3.1.6.7",
   "title": "",
@@ -2323,27 +2314,27 @@ var ptx_lunr_docs = [
   "body": "Convertir les nombres suivants en hexadécimal. "
 },
 {
-  "id": "exercise-151",
+  "id": "exercise-150",
   "level": "2",
-  "url": "sec-representation.html#exercise-151",
+  "url": "sec-representation.html#exercise-150",
   "type": "Exercice",
   "number": "3.1.7.3",
   "title": "",
   "body": "Convertir les nombres réels suivants en base deux. "
 },
 {
-  "id": "exercise-152",
+  "id": "exercise-151",
   "level": "2",
-  "url": "sec-representation.html#exercise-152",
+  "url": "sec-representation.html#exercise-151",
   "type": "Exercice",
   "number": "3.1.7.4",
   "title": "",
   "body": "Convertir les nombres ci-dessous en base seize sans passer par la base dix . "
 },
 {
-  "id": "exercise-153",
+  "id": "exercise-152",
   "level": "2",
-  "url": "sec-representation.html#exercise-153",
+  "url": "sec-representation.html#exercise-152",
   "type": "Exercice",
   "number": "3.1.7.5",
   "title": "",
@@ -2359,45 +2350,45 @@ var ptx_lunr_docs = [
   "body": "Compléter la conversion de en hexadécimal entamée à l'exemple . "
 },
 {
-  "id": "exercise-155",
+  "id": "exercise-154",
   "level": "2",
-  "url": "sec-representation.html#exercise-155",
+  "url": "sec-representation.html#exercise-154",
   "type": "Exercice",
   "number": "3.1.7.7",
   "title": "",
   "body": "On considère . On pose l'ensemble des nombres dans qui ont un à la position dans leur représentation binaire, ceux qui ont un à la position et ainsi de suite. Donner une description en extension de . Que sont les nombres dans ? , et donc Que vaut Énumérer les éléments dans .   "
 },
 {
-  "id": "exercise-156",
+  "id": "exercise-155",
   "level": "2",
-  "url": "sec-representation.html#exercise-156",
+  "url": "sec-representation.html#exercise-155",
   "type": "Exercice",
   "number": "3.1.7.8",
   "title": "",
   "body": "On considère la fonction qui associe à chaque nombre naturel la somme de ses chiffres dans la représentation binaire, par exemple . Soit . Calculer .   Quelle est l'image de l'ensemble ?   Donner , soit les nombres dans qui ont comme image .   De façon générale, que vaut ?  est l'ensemble des puissance de . "
 },
 {
-  "id": "exercise-157",
+  "id": "exercise-156",
   "level": "2",
-  "url": "sec-representation.html#exercise-157",
+  "url": "sec-representation.html#exercise-156",
   "type": "Exercice",
   "number": "3.1.7.9",
   "title": "",
   "body": "Effectuer les opérations suivantes.     "
 },
 {
-  "id": "exercise-158",
+  "id": "exercise-157",
   "level": "2",
-  "url": "sec-representation.html#exercise-158",
+  "url": "sec-representation.html#exercise-157",
   "type": "Exercice",
   "number": "3.1.7.10",
   "title": "",
   "body": "Effectuer les soustractions suivantes.     "
 },
 {
-  "id": "exercise-159",
+  "id": "exercise-158",
   "level": "2",
-  "url": "sec-representation.html#exercise-159",
+  "url": "sec-representation.html#exercise-158",
   "type": "Exercice",
   "number": "3.1.7.11",
   "title": "",
@@ -2422,9 +2413,9 @@ var ptx_lunr_docs = [
   "body": "Effectuer les soustractions suivantes, en décimale ou en binaire. Remarquer que le nombre de gauche est toujours une puissance de deux.                       Que peut-on dire du résulat de la soustraction d'un nombre à une puissance de deux supérieure? Le résultat de la soustraction est obtenu de la manière suivante:  À partir de la droite, on garde les premiers zéros et le premier un.  Tous les autres chiffres sont inversés. Les zéros deviennent des uns et les uns deviennent des zéros.   "
 },
 {
-  "id": "exercise-162",
+  "id": "exercise-161",
   "level": "2",
-  "url": "sec-representation.html#exercise-162",
+  "url": "sec-representation.html#exercise-161",
   "type": "Exercice",
   "number": "3.1.7.14",
   "title": "La complémentation à <span class=\"process-math\">\\(2\\)<\/span>.",
@@ -2440,9 +2431,9 @@ var ptx_lunr_docs = [
   "body": "On désire construire un circuit qui va permettre de déterminer si deux nombres écrits en binaire sont égaux. L'idée est de comparer chiffre par chiffre, l'égalité étant vérifiée si tous les chiffres à la même position sont égaux. Quelle porte permet de vérifier si deux entrées ont la même valeur? C'est la négation d'une porte spécifique. Illustrer le circuit permettant de vérifier l'égalité de deux nombres écrits à l'aide de deux chiffres. Généraliser l'idée du circuit précédent pour des nombres à chiffres. Penser à utiliser une porte ET multiple. "
 },
 {
-  "id": "exercise-164",
+  "id": "exercise-163",
   "level": "2",
-  "url": "sec-representation.html#exercise-164",
+  "url": "sec-representation.html#exercise-163",
   "type": "Exercice",
   "number": "3.1.7.16",
   "title": "",
@@ -2539,65 +2530,74 @@ var ptx_lunr_docs = [
   "body": " Calcul d'un   En utilisant l'algorithme d'Euclide, on veut calculer  ;  .    On a . Selon l'algorithme d'Euclide, , le dernier reste non nul.   Cette fois-ci, on a . Selon l'algorithme d'Euclide, , le dernier reste non nul. Ces nombres sont donc copremiers.   "
 },
 {
-  "id": "exercise-165",
+  "id": "exercise-164",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-165",
+  "url": "sec-divisibilite.html#exercise-164",
   "type": "Question de compréhension",
   "number": "3.2.4.1",
   "title": "",
   "body": " Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode par étranglement comme dans ce paragraphe .  "
 },
 {
-  "id": "exercise-166",
+  "id": "exercise-165",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-166",
+  "url": "sec-divisibilite.html#exercise-165",
   "type": "Question de compréhension",
   "number": "3.2.4.2",
   "title": "",
   "body": " Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode de division à la main comme au primaire.  "
 },
 {
-  "id": "exercise-167",
+  "id": "exercise-166",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-167",
+  "url": "sec-divisibilite.html#exercise-166",
   "type": "Question de compréhension",
   "number": "3.2.4.3",
   "title": "",
   "body": "Convertir les nombres de l'exercice en binaire en utilisant la méthode des divisions. "
 },
 {
-  "id": "exercise-168",
+  "id": "exercise-167",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-168",
+  "url": "sec-divisibilite.html#exercise-167",
   "type": "Question de compréhension",
   "number": "3.2.4.4",
   "title": "",
   "body": "Convertir les nombres de l'exercice en hexadécimale en utilisant la méthode des divisions. "
 },
 {
-  "id": "exercise-169",
+  "id": "exercise-168",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-169",
+  "url": "sec-divisibilite.html#exercise-168",
   "type": "Question de compréhension",
   "number": "3.2.4.5",
   "title": "",
   "body": "Que fait l'algorithme suivant?   Une algorithme sur les entiers   def algo(n): laliste = [1] d = 2 while d < n: if n % d == 0: laliste.append(d) d = d + 1 if n > 1: laliste.append(n) return laliste     "
 },
 {
-  "id": "exercise-170",
+  "id": "exercise-169",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-170",
+  "url": "sec-divisibilite.html#exercise-169",
   "type": "Question de compréhension",
   "number": "3.2.4.6",
   "title": "",
   "body": "L'algorithme suivant retourne un couple représentant le quotient et le reste de la division , mais il est incomplet. Pour chacun des quatre endroits écrits ÀCOMPLÉTER , écrire les instructions pour que l'algorithme fonctionne. Il est possible de le tester à même la cellule.   La division euclidienne   def divisionEuclidienne(a, b): #Une algorithme qui retourne (q,r) la forme quotient reste de a\/b: a=bq+r if :#ÀCOMPLÉTER1 print('Le pgcd est non défini') elif a == 0: return #ÀCOMPLÉTER2 else: s = b \/ abs(b) # le signe de b q=0 r =a if a > 0: while r - abs(b) >= 0: q = q + s r = #ÀCOMPLÉTER3 return q, r else: #a <0 while r < 0: q = q - s r = #ÀCOMPLÉTER4 return q, r     "
 },
 {
+  "id": "exercise-170",
+  "level": "2",
+  "url": "sec-divisibilite.html#exercise-170",
+  "type": "Question de compréhension",
+  "number": "3.2.4.7",
+  "title": "",
+  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
+},
+{
   "id": "exercise-171",
   "level": "2",
   "url": "sec-divisibilite.html#exercise-171",
   "type": "Question de compréhension",
-  "number": "3.2.4.7",
+  "number": "3.2.4.8",
   "title": "",
   "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
@@ -2605,51 +2605,42 @@ var ptx_lunr_docs = [
   "id": "exercise-172",
   "level": "2",
   "url": "sec-divisibilite.html#exercise-172",
-  "type": "Question de compréhension",
-  "number": "3.2.4.8",
-  "title": "",
-  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
-},
-{
-  "id": "exercise-173",
-  "level": "2",
-  "url": "sec-divisibilite.html#exercise-173",
   "type": "Exercice",
   "number": "3.2.5.1",
   "title": "",
   "body": "Convertir les nombres suivants dans la base demandée en utilisant un tableau de division. en binaire.  en binaire en hexadécimale "
 },
 {
-  "id": "exercise-174",
+  "id": "exercise-173",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-174",
+  "url": "sec-divisibilite.html#exercise-173",
   "type": "Exercice",
   "number": "3.2.5.2",
   "title": "",
   "body": "Donner la liste de tous les diviseurs de chaque nombre et déduire le . et .  L'ensemble des diviseurs de 27 est .  L'ensemble des diviseurs de 72 est .  Ainsi, .  et .  L'ensemble des diviseurs de 66 est .  L'ensemble des diviseurs de 111 est .  Ainsi, .  et .  L'ensemble des diviseurs de 60 est .  L'ensemble des diviseurs de 100 est .  Ainsi, .  "
 },
 {
-  "id": "exercise-175",
+  "id": "exercise-174",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-175",
+  "url": "sec-divisibilite.html#exercise-174",
   "type": "Exercice",
   "number": "3.2.5.3",
   "title": "",
   "body": "Calculer le des paires de nombres suivants en utilisant l'algorithme d'Euclide. et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,  "
 },
 {
-  "id": "exercise-176",
+  "id": "exercise-175",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-176",
+  "url": "sec-divisibilite.html#exercise-175",
   "type": "Exercice",
   "number": "3.2.5.4",
   "title": "",
   "body": "Donner une explication intuitive du fait que si sont des naturels non nuls et que , alors . Si le était égal à , que pourrait-on dire que ? Suppons . Dans ce cas, on a que . Aussi, on sait que pour , car . De même, on a que pour . Cela implique que et , c'est-à-dire que et . Or, puisque , cela contredit le fait que . "
 },
 {
-  "id": "exercise-177",
+  "id": "exercise-176",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-177",
+  "url": "sec-divisibilite.html#exercise-176",
   "type": "Exercice",
   "number": "3.2.5.5",
   "title": "",
@@ -2665,9 +2656,9 @@ var ptx_lunr_docs = [
   "body": "Le lemme de Bézout  Soit des naturels non nuls tels que . Alors il existe tels que  Cette relation a des conséquences importantes en théorie des nombres. On montre dans cet exercice comment démontrer l'existence des entiers et on explique comment on peut trouver de tels entiers.  On considère l'ensemble . C'est donc l'ensemble des naturels plus grands que zéro qu'il est possible de former avec en les combinant avec des entiers quelconques.  Montrer que est non vide. En particulier, puisque est un ensemble de nombres naturels, il existe un plus petit élément.  Il suffit de montrer qu'il existe au moins une pare telle que . Pour cela, on prend et . Dans ce cas, on a que et . Ainsi, , car on suppose si on calcul le . On pose le plus petit élément de cet ensemble. On veut montrer que et . On considère la division de par , qu'on écrit sous la forme quotient reste .  Montrer que en l'écrivant comme avec .  Puisque , on peut écrire pour . Ainsi, on a où et . Ainsi, soit , ou bien . Utiliser le fait que dans la forme quotient reste, on a , le fait que et le fait que est le plus petit élément de pour déterminer la valeur de . On veut montrer que . En effet, Puisque , si , alors et . Or, si , alors par définition de , on a que , ce qui est impossible si . On doit donc avoir , c'est-à-dire que . Conclure que . Puisque , on a que , et donc . Argumenter que divise aussi pour les mêmes raisons. On remplace par dans la partie précédente, et on obtient que . Le plus petit élément de est donc un diviseur de et . On va maintenant montrer que c'est nécessairement le de ces deux nombres.  Si est un diviseur commun de et , montrer que divise en utilisant l'équation pour certains . Si , alors nécessairement , ce qui complète la preuve. Si et , alors et pour . Ainsi, on a Ainsi, , car . "
 },
 {
-  "id": "exercise-179",
+  "id": "exercise-178",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-179",
+  "url": "sec-divisibilite.html#exercise-178",
   "type": "Exercice",
   "number": "3.2.5.7",
   "title": "Le plus petit commun multiple.",
@@ -2845,29 +2836,38 @@ var ptx_lunr_docs = [
   "body": " Un inverse modulo  On cherche un inverse à modulo , c'est-à-dire un nombre tel que .   Pour trouver un inverse, il faut trouver tel que . En d'autres mots, pour un certain . En réécrivant, on remarque qu'il faut que et de plus, . Le lemme de Bézout et l'algorithme d'Euclide seront utiles pour trouver l'inverse. D'une part, on a , selon l'algorithme d'Euclide. Puis, en réorganisant ces équations, on trouve .  est donc un inverse à modulo .   "
 },
 {
-  "id": "exercise-180",
+  "id": "exercise-179",
   "level": "2",
-  "url": "sec-modulo.html#exercise-180",
+  "url": "sec-modulo.html#exercise-179",
   "type": "Question de compréhension",
   "number": "3.3.5.1",
   "title": "",
   "body": "Déterminer La journée de la semaine jours après un jeudi; La journée de la semaine jours après un mardi; La journée de la semaine jours avant un samedi. "
 },
 {
-  "id": "exercise-181",
+  "id": "exercise-180",
   "level": "2",
-  "url": "sec-modulo.html#exercise-181",
+  "url": "sec-modulo.html#exercise-180",
   "type": "Question de compréhension",
   "number": "3.3.5.2",
   "title": "",
   "body": "Donner entiers qui sont congrus à modulo . "
 },
 {
+  "id": "exercise-181",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-181",
+  "type": "Question de compréhension",
+  "number": "3.3.5.3",
+  "title": "",
+  "body": "Donner les tables d'addition et de multiplication modulo . "
+},
+{
   "id": "exercise-182",
   "level": "2",
   "url": "sec-modulo.html#exercise-182",
   "type": "Question de compréhension",
-  "number": "3.3.5.3",
+  "number": "3.3.5.4",
   "title": "",
   "body": "Donner les tables d'addition et de multiplication modulo . "
 },
@@ -2876,16 +2876,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modulo.html#exercise-183",
   "type": "Question de compréhension",
-  "number": "3.3.5.4",
+  "number": "3.3.5.5",
   "title": "",
-  "body": "Donner les tables d'addition et de multiplication modulo . "
+  "body": "Quels sont les entiers dans qui ont un inverse modulo ? Est-ce que cela satisfait la définition . "
 },
 {
   "id": "exercise-184",
   "level": "2",
   "url": "sec-modulo.html#exercise-184",
   "type": "Question de compréhension",
-  "number": "3.3.5.5",
+  "number": "3.3.5.6",
   "title": "",
   "body": "Quels sont les entiers dans qui ont un inverse modulo ? Est-ce que cela satisfait la définition . "
 },
@@ -2894,25 +2894,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modulo.html#exercise-185",
   "type": "Question de compréhension",
-  "number": "3.3.5.6",
+  "number": "3.3.5.7",
   "title": "",
-  "body": "Quels sont les entiers dans qui ont un inverse modulo ? Est-ce que cela satisfait la définition . "
+  "body": "Le message ORTEGAXGVGYJKIXEVZUMXGVNOKGRKDGSKT a été encodé à l'aide d'un chiffrement de César avec décalage correspondant à la date de l'examen intra. Quel est ce message. "
 },
 {
   "id": "exercise-186",
   "level": "2",
   "url": "sec-modulo.html#exercise-186",
   "type": "Question de compréhension",
-  "number": "3.3.5.7",
+  "number": "3.3.5.8",
   "title": "",
-  "body": "Le message ORTEGAXGVGYJKIXEVZUMXGVNOKGRKDGSKT a été encodé à l'aide d'un chiffrement de César avec décalage correspondant à la date de l'examen intra. Quel est ce message. "
+  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
 {
   "id": "exercise-187",
   "level": "2",
   "url": "sec-modulo.html#exercise-187",
   "type": "Question de compréhension",
-  "number": "3.3.5.8",
+  "number": "3.3.5.9",
   "title": "",
   "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
@@ -2920,150 +2920,141 @@ var ptx_lunr_docs = [
   "id": "exercise-188",
   "level": "2",
   "url": "sec-modulo.html#exercise-188",
-  "type": "Question de compréhension",
-  "number": "3.3.5.9",
-  "title": "",
-  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
-},
-{
-  "id": "exercise-189",
-  "level": "2",
-  "url": "sec-modulo.html#exercise-189",
   "type": "Exercice",
   "number": "3.3.6.1",
   "title": "",
   "body": "Déterminer le plus petit entier positif congru à modulo: ;  Ainsi, le plus pentit entirer positif congru à modulo est . Puisque est un nombre impair, on sait que le plus pentit entirer positif congru à modulo est ;  Ainsi, le plus pentit entirer positif congru à modulo est . ;  Ainsi, le plus pentit entirer positif congru à modulo est . ;  Ainsi, le plus pentit entirer positif congru à modulo est . "
 },
 {
-  "id": "exercise-190",
+  "id": "exercise-189",
   "level": "2",
-  "url": "sec-modulo.html#exercise-190",
+  "url": "sec-modulo.html#exercise-189",
   "type": "Exercice",
   "number": "3.3.6.2",
   "title": "",
   "body": "Pour chaque opération ci-dessous, donner la réponse sous la forme d'un entier entre et . ; ; ; Rappel: On utilise la notation pour représenter le reste de la division de par . Par exemple,  "
 },
 {
-  "id": "exercise-191",
+  "id": "exercise-190",
   "level": "2",
-  "url": "sec-modulo.html#exercise-191",
+  "url": "sec-modulo.html#exercise-190",
   "type": "Exercice",
   "number": "3.3.6.3",
   "title": "",
   "body": "Donner les réponses aux calculs de l'exercice précédent sous la forme d'un entier entre et .       "
 },
 {
-  "id": "exercise-192",
+  "id": "exercise-191",
   "level": "2",
-  "url": "sec-modulo.html#exercise-192",
+  "url": "sec-modulo.html#exercise-191",
   "type": "Exercice",
   "number": "3.3.6.4",
   "title": "",
   "body": "Montrer que chacune des classes d'équivalence modulo , obtenues à l'exemple , peut être écrite sous la forme de l'ensemble . "
 },
 {
-  "id": "exercise-193",
+  "id": "exercise-192",
   "level": "2",
-  "url": "sec-modulo.html#exercise-193",
+  "url": "sec-modulo.html#exercise-192",
   "type": "Exercice",
   "number": "3.3.6.5",
   "title": "",
   "body": "On considère les entiers impairs . Pour , calculer pour quelques entiers. Comment démontrer que cela sera toujours vrai? "
 },
 {
-  "id": "exercise-194",
+  "id": "exercise-193",
   "level": "2",
-  "url": "sec-modulo.html#exercise-194",
+  "url": "sec-modulo.html#exercise-193",
   "type": "Exercice",
   "number": "3.3.6.6",
   "title": "",
   "body": "Un tableau contenant une infinité de lignes et colonnes contenant les nombres naturels est construit. Les premières lignes sont données à la table ci-dessous. On considère l'élément à la première ligne et la première colonne comme la position . De manière générale, un élément en position est à la ligne et colonne . Par exemple, est à la position .   Un tableau de nombres                                                                                                         À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on votre numéro de DA? Votre DA se trouve à la position , où est le reste de votre DA lors de la division par . "
 },
 {
-  "id": "exercise-195",
+  "id": "exercise-194",
   "level": "2",
-  "url": "sec-modulo.html#exercise-195",
+  "url": "sec-modulo.html#exercise-194",
   "type": "Exercice",
   "number": "3.3.6.7",
   "title": "",
   "body": "Résoudre les congruences suivantes ou expliquer pourquoi il n'y a pas de solutions. Cette équation ne possède aucune solution, car \\pgcd{(4,6)}=2\\not| \\ 1. "
 },
 {
-  "id": "exercise-196",
+  "id": "exercise-195",
   "level": "2",
-  "url": "sec-modulo.html#exercise-196",
+  "url": "sec-modulo.html#exercise-195",
   "type": "Exercice",
   "number": "3.3.6.8",
   "title": "",
   "body": "Résoudre les congruences suivantes sans essayer toutes les possibilités ou expliquer pourquoi il n'y a pas de solutions.  Ainsi, est une solution à l'équation si et seulement si .  Ainsi, est une solution à l'équation si et seulement si .  Ainsi, est une solution à l'équation si et seulement si . Cette équation ne possède aucune solution, car \\pgcd{(4,6)}=2\\not| \\ 5.  Ainsi, est une solution à l'équation si et seulement si . Les résultats de l'exercice précédent peuvent être utile. On peut aussi y aller par essaie-erreur pour la plus part des équations. "
 },
 {
-  "id": "exercise-197",
+  "id": "exercise-196",
   "level": "2",
-  "url": "sec-modulo.html#exercise-197",
+  "url": "sec-modulo.html#exercise-196",
   "type": "Exercice",
   "number": "3.3.6.9",
   "title": "",
   "body": "Sachant que est une solution à l'équation , trouver une solution à .  Ainsi, une solution est , ou encore . "
 },
 {
-  "id": "exercise-198",
+  "id": "exercise-197",
   "level": "2",
-  "url": "sec-modulo.html#exercise-198",
+  "url": "sec-modulo.html#exercise-197",
   "type": "Exercice",
   "number": "3.3.6.10",
   "title": "",
   "body": "On consdière la paire de congruences suivantes: .  Trouver une valeur de qui satisfait simultanément ces deux équations.  Écrire la soution à la première congruence comme et remplacer dans la deuxième.  Clairement, si , alors est une solution de la première équation, mais pas de la deuxième. Cependant, on sait que toutes les solutions de la première équation s'écrive comme , où .  Ainsi, en remplaçant par dans la deuxième équation, on obtient   Ainsi, on peut obtenir une solution en remplaçant cette fois par dans , ce qui donne . On peut en effet vérifier que:   En fait, on a montrer que, pour que soit une solution à la deuxième équation, on doit avoir , c'est-à-dire , pour .  Ainsi, en remplaçant dans , on a que , c'est-à-dire que est une solution aux deux équation si et seulement si est une solution à l'équation ou encore .  "
 },
 {
-  "id": "exercise-199",
+  "id": "exercise-198",
   "level": "2",
-  "url": "sec-modulo.html#exercise-199",
+  "url": "sec-modulo.html#exercise-198",
   "type": "Exercice",
   "number": "3.3.6.11",
   "title": "",
   "body": "Une relation entre deux objets est une relation d'équivalence si pour on a  que la relation est symétrique, c'est-à-dire que si , alors ;  que la relation est réflexive, c'est-à-dire que ;  que la relation est transitive, c'est-à-dire que si et , alors .   Pour la congruence modulo , on peut plus simplement écrire . Montrer que la congruence modulo est une relation d'équivalence.  "
 },
 {
-  "id": "exercise-200",
+  "id": "exercise-199",
   "level": "2",
-  "url": "sec-modulo.html#exercise-200",
+  "url": "sec-modulo.html#exercise-199",
   "type": "Exercice",
   "number": "3.3.6.12",
   "title": "",
   "body": "Encoder les messages suivants avec le décalage de César précisé avec le message. Mon enseignant est le meilleur avec décalage Je vais faire tous les devoirs avec décalage Un jour je serai le meilleur dresseur avec décalage "
 },
 {
-  "id": "exercise-201",
+  "id": "exercise-200",
   "level": "2",
-  "url": "sec-modulo.html#exercise-201",
+  "url": "sec-modulo.html#exercise-200",
   "type": "Exercice",
   "number": "3.3.6.13",
   "title": "",
   "body": "Décoder les messages suivants, qui ont été chiffrés par un décalage de César précisé avec le message. EHBWEPXAWQZADKNO avec décalage MNBYXVVNBMNBYXRANBMNBJWJWJB avec décalage MFTNBUIFNBUJRVFTEJTDSFUFTDFTUWSBJNFOUHFOJBM avec décalage "
 },
 {
-  "id": "exercise-202",
+  "id": "exercise-201",
   "level": "2",
-  "url": "sec-modulo.html#exercise-202",
+  "url": "sec-modulo.html#exercise-201",
   "type": "Exercice",
   "number": "3.3.6.14",
   "title": "",
   "body": "Encoder les messages suivants avec le système RSA dont les paramètres sont précisés avec le message. Mon enseignant est le meilleur avec paramètres Je vais faire tous les devoirs avec paramètres Un jour je serai le meilleur dresseur avec paramètres Qui a-t-il de particulier avec ces messages codés? Est-ce qu'il y a une lettre qui est facile à décoder? En utilisant des blocs de lettres comme dans le vrai RSA, ceci ne se produit pas. "
 },
 {
-  "id": "exercise-203",
+  "id": "exercise-202",
   "level": "2",
-  "url": "sec-modulo.html#exercise-203",
+  "url": "sec-modulo.html#exercise-202",
   "type": "Exercice",
   "number": "3.3.6.15",
   "title": "",
   "body": "Décoder les messages suivants, qui ont été chiffrés par RSA avec paramètres précisés avec le message. [8, 349, 1231, 64, 1000, 1, 684, 125, 807, 8, 349, 1231, 64] avec [6041, 80552, 64471, 1, 40280, 76462, 6041, 75310, 6041, 40280, 2122, 78295, 80552, 16446, 1, 32487, 2122, 80552, 6041, 73799, 1, 20790, 3336, 6041, 40280, 20790, 16446, 1, 79033, 2122, 46951, 6415, 70263, 2122, 46951, 40280] avec [10, 1, 7357, 15878, 6017, 16044, 6017, 1172, 6017, 341, 6017, 10370, 341, 6017, 13378, 1, 16044, 11527, 341, 1518, 11527, 7357, 3855] avec "
 },
 {
-  "id": "exercise-204",
+  "id": "exercise-203",
   "level": "2",
-  "url": "sec-modulo.html#exercise-204",
+  "url": "sec-modulo.html#exercise-203",
   "type": "Exercice",
   "number": "3.3.6.16",
   "title": "QFINXUFWNYNTS.",
@@ -3205,72 +3196,72 @@ var ptx_lunr_docs = [
   "body": " Exemple de base du principe de la division  Supposons qu'on doivent placer quatre personnes, Damien, Jean-Michel, Alexandre et Valérie, autours du table rondes (à quatre chaises). De combien de façons différentes peut-on accomplir cette tâche, si deux façons de s'assoir sont considérées les mêmes si chaque personne possède le même voisin à gauche et le même voisin à droite.    On commence par décider d'assigner une première chaise à Valérie. Celle-ci choisit arbitrairement une chaise qu'on numérote par . Ensuite, on numérote les autres chaises de à de façon systématique (disons en tournant dans le sens horaire). Il y aura façons différentes de faire ceci, car le résultat dépend uniquement du choix de Valérie.  Par la suite, on assigne arbitrairement une personne à la chaise (il y aura façons de faire ce choix). On continue pour la chaise ( façons) et finalement la chaise ( seule façon de faire).  Par le principe du produit, il y a façons d'accomplir cette tâche.  Cependant, on se rend compte que le choix de la première chaise n'a pas d'impacte sur l'arrangement final, car on distingue deux arrangements seulement si les voisins des gens sont différents. Par le principe de la division, il y aura façons différentes d'assoir les gens.   "
 },
 {
-  "id": "exercise-205",
+  "id": "exercise-204",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-205",
+  "url": "sec_prodSomme.html#exercise-204",
   "type": "Question de compréhension",
   "number": "4.1.6.1",
   "title": "",
   "body": " Un test est formé de questions à choix multiples. Chaque question possède réponse possible.  De combien de façons un étudiant peut-il répondre aux questions s'il répond à toutes les questions? De combien de façons un étudiant peut-il répondre aux questions s'il peut laisser une réponse vide à certaines questions? "
 },
 {
-  "id": "exercise-206",
+  "id": "exercise-205",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-206",
+  "url": "sec_prodSomme.html#exercise-205",
   "type": "Question de compréhension",
   "number": "4.1.6.2",
   "title": "",
   "body": "Une marque populaire de vêtements produit des chandails en couleurs, en version à manches courtes ou à manches longues et est offert en trois tailles différentes. Combien de types de chandails différents sont produit par cette marque? "
 },
 {
-  "id": "exercise-207",
+  "id": "exercise-206",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-207",
+  "url": "sec_prodSomme.html#exercise-206",
   "type": "Question de compréhension",
   "number": "4.1.6.3",
   "title": "",
   "body": "Combien d'entiers : sont divisible par ? sont divisible par , mais pas par ? sont divisible par et par ? sont divisible par ou par ? sont divisible par exactement un des entiers ou ? ne sont divisible ni par ni par ? ont des chiffres différents les uns des autres? ont des chiffres différents les uns des autres et sont pair? "
 },
 {
-  "id": "exercise-208",
+  "id": "exercise-207",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-208",
+  "url": "sec_prodSomme.html#exercise-207",
   "type": "Question de compréhension",
   "number": "4.1.6.4",
   "title": "",
   "body": " On considère des chaînes de trois caractères de chiffres en base . Combien de ces chaînes:  ne contiennent pas le même chiffre trois fois? ont exactement deux chiffres qui sont des . "
 },
 {
-  "id": "exercise-209",
+  "id": "exercise-208",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-209",
+  "url": "sec_prodSomme.html#exercise-208",
   "type": "Question de compréhension",
   "number": "4.1.6.5",
   "title": "",
   "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
 {
-  "id": "exercise-210",
+  "id": "exercise-209",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-210",
+  "url": "sec_prodSomme.html#exercise-209",
   "type": "Exercice",
   "number": "4.1.7.1",
   "title": "",
   "body": " Combien de chaînes de quatre chiffres  sont formées de chiffres différents? . Lorsqu'on choisit le premier chiffre, il y a possibilités. Pour chaque chiffre qu'on choisit par la suite, il y a toujours un choix de moins que pour le chiffre précédent. Ainsi, par le principe du produit, on a  se terminent par un nombre pair? On commence par choisir le dernier chiffre. Pour que celui-ci soit pair, il y a choix possibles. Pour chacun des autres chiffres, il y a possibilités, car les chiffres peuvent se répéter. ont exactement trois chiffres qui sont des ?  On conditionne sur la position du chiffre qui n'est pas un . C'est-à-dire qu'on utilise le principe de la somme selon la position du chiffre qui n'est pas .  Le chiffre est soit à la position , soit à la position , soit à la position ou bien à la position . Dans chacun des cas, il ne reste qu'à trouver la valeur de ce chiffre, car on sait que les autres chiffres sont des . Il y aura donc possibilités, soit , , , , , , , ou .  Ainsi, par le principe de la somme, il y a possibilités.  "
 },
 {
-  "id": "exercise-211",
+  "id": "exercise-210",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-211",
+  "url": "sec_prodSomme.html#exercise-210",
   "type": "Exercice",
   "number": "4.1.7.2",
   "title": "",
   "body": "Lors de la finale de la course du mètres aux derniers jeux Olympiques, il y avait coureurs. De combien de manières possibles le podium pouvait-il être composé?   La notation sera définie à la prochaine section .  "
 },
 {
-  "id": "exercise-212",
+  "id": "exercise-211",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-212",
+  "url": "sec_prodSomme.html#exercise-211",
   "type": "Exercice",
   "number": "4.1.7.3",
   "title": "",
@@ -3295,63 +3286,63 @@ var ptx_lunr_docs = [
   "body": "Combien de chaînes binaires de longueur contiennent quatre consécutifs ou trois consécutifs? Cette question est similaire au numéro précédent , mais plus dificile, car on peut avoir plusieurs fois trois consécutifs dans la même chaîne.  On commence par compter celles qui ont une séquence de quatre consécutifs. De plus, on conditionne sur la position du premier de la première séquence de consécutifs.  Si la séquence commence à la première position, les chaînes seront de la forme , où les sont quelconques ( ). Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la deuxième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la troisième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la quatrième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la cinquième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Ainsi, il y a chaînes ayant une séquence de cinq consécutifs.  Par la suite, on compte celles qui ont une séquence de trois consécutifs. De plus, on conditionne sur la position du premier de la première séquence de consécutifs.  Si la séquence commence à la première position, les chaînes seront de la forme , où les sont quelconques ( ). Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la deuxième position, les chaînes seront de la forme . Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la troisième position, les chaînes seront de la forme . Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la quatrième position, les chaînes seront de la forme , mais ne peut pas être car la première séquence doit commencer à la quatrième position! Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la cinquième position, les chaînes seront de la forme . Cependant, il y a chaînes ayant une séquence d'au moins trois au début de la chaîne. Il s'agit de , et . Il y a donc chaînes dont la première séquence de commence à cette position.  Ainsi, il y a chaînes ayant une séquence de cinq consécutifs.  Finalement, on doit remarquer qu'il y a huit chaînes qui possèdent une séquences de quatre consécutifs et une séquence de trois consécutifs.  Par le principe d'inclusion-exclusion, on a .  "
 },
 {
-  "id": "exercise-215",
+  "id": "exercise-214",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-215",
+  "url": "sec_prodSomme.html#exercise-214",
   "type": "Exercice",
   "number": "4.1.7.6",
   "title": "",
   "body": "Soit un ensemble tel que . Combien de sous-ensembles de possède plus d'un élément? Il y a sous-ensemble au total. Il y a un sous-ensemble qui ne contient aucun élément (l'esemble vide) et il y a sous-ensemble contenant un seul élément. Ainsi, il y aura sous-ensembles avec plus d'un élément. "
 },
 {
-  "id": "exercise-216",
+  "id": "exercise-215",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-216",
+  "url": "sec_prodSomme.html#exercise-215",
   "type": "Exercice",
   "number": "4.1.7.7",
   "title": "",
   "body": "On considère les entiers , . Combien de ces entiers sont divisibles par ou ? Pour être divisible par et par , il faut et il suffit d'être divisible par . Combien de ces entiers ne sont divisibles ni par ni par ? L'énoncé n'est divisible ni par , ni par est la négation de l'éoncé est divisible par ou par . "
 },
 {
-  "id": "exercise-217",
+  "id": "exercise-216",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-217",
+  "url": "sec_prodSomme.html#exercise-216",
   "type": "Exercice",
   "number": "4.1.7.8",
   "title": "",
   "body": "Supposons qu'un mot de passe pour un système informatique doit avoir entre et (inclusivement) caractères, où chaque caractère est soit une lettre minuscule ou manjuscule, un chiffre ou l'un des caractères spéciaux . Combien de mots de passe différents sont disponibles pour ce système informatique? Pour chaque caractère, il y a possibilités. Il faut utiliser le principe de la somme selon le nombre de caractères. Combien de ces mots de passe contiennent au moins un des caractères spéciaux? Combien de ces mots de passe ne contiennt pas de caractères spéciaux? "
 },
 {
-  "id": "exercise-218",
+  "id": "exercise-217",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-218",
+  "url": "sec_prodSomme.html#exercise-217",
   "type": "Exercice",
   "number": "4.1.7.9",
   "title": "",
   "body": "On considère l'ensemble des propositions formées à partir de propositions atomiques. Combien de lignes possède le tableau de vérité d'une de ces propositions? Chaque de ligne dans le tableau de vérité correspond à une combinaison des valeurs de vérités des propositions atomiques. Combien de tableaux de vérité différents y a-t-il pour ces propositions? On considère que deux tableaux sont les mêmes si leur dernière colone sont les mêmes. On considère que deux tableaux de vérités sont les mêmes si les propositions se trouvant à la dernière colone sont équivalentes. Si est une proposition de cet ensemble, pour chaque ligne du tableau de vérité, combien de valeur de vérité est-ce que peut avoir ? "
 },
 {
-  "id": "exercise-219",
+  "id": "exercise-218",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-219",
+  "url": "sec_prodSomme.html#exercise-218",
   "type": "Exercice",
   "number": "4.1.7.10",
   "title": "",
   "body": "On considère les fonctions où . Conbien de ces fonctions sont injectives? Si , il y en a . Si , il y en a aussi 2. Si , il y en a . Combien de ces fonctions sont telles que ? Si ou , il y en a une seule. Si , il y en a . Combien de ces fonctions sont telles que ? Ici, on doit supposer que , car sinon la notation n'est pas cohérente. Si , alors il y aura fonctions qui respectent la condition. "
 },
 {
-  "id": "exercise-220",
+  "id": "exercise-219",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-220",
+  "url": "sec_prodSomme.html#exercise-219",
   "type": "Exercice",
   "number": "4.1.7.11",
   "title": "",
   "body": "Pour un mariage, de combien de façons différentes est-ce qu'un photographe peu arranger en une ligne personnes d'un groupe de , où les mariés sont dans le groupe de, si la mariée doit être sur la photo? On commence par placer la mariée. Une fois la mariée placée, il reste à placer personnes parmi les personnes restantes.  les mariés doivent tous deux être sur la photo? On commence par placer la mariée. Une fois la mariée placée, on place le marié. Une fois les mariés placé, il reste à placer personnes parmi les personnes restantes.  exactement un des mariés doit être sur la photo? On commence par choisir si c'est la marié ou le marié qui est sur la photo. On peut aussi utiliser le principe de la somme selon lequel des deux est sur la photo. "
 },
 {
-  "id": "exercise-221",
+  "id": "exercise-220",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-221",
+  "url": "sec_prodSomme.html#exercise-220",
   "type": "Exercice",
   "number": "4.1.7.12",
   "title": "",
@@ -3547,135 +3538,135 @@ var ptx_lunr_docs = [
   "body": " Combinaisons avec répétition  Déterminer le nombre de solutions à l'équation , pour , avec , si :  il n'y a pas d'autre condition?  pour tout ?  Pour s'assurer que , on introduit des variables intermédiaires telles que . Ainsi, en remplaçant dans l'équation, on a , ce qui devient .  Ainsi, il y aura     Pour s'assurer que , on introduit la variable intermédiaire telle que . Ainsi, en remplaçant dans l'équation, on a , ce qui devient .  Ainsi, il y aura     On compte toutes les solutions à l'équation (sans restriction) et on retire les solutions qui ne respecte pas la condition, c'est-à-dire les solutions telles que . Pour s'assurer que , on introduit la variable intermédiaire telle que . Ainsi, en remplaçant dans l'équation , ce qui devient .  Ainsi, il y aura   "
 },
 {
-  "id": "exercise-222",
+  "id": "exercise-221",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-222",
+  "url": "sec_arrCombinaison.html#exercise-221",
   "type": "Question de compréhension",
   "number": "4.2.4.1",
   "title": "",
   "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
 {
-  "id": "exercise-223",
+  "id": "exercise-222",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-223",
+  "url": "sec_arrCombinaison.html#exercise-222",
   "type": "Exercice",
   "number": "4.2.5.1",
   "title": "",
   "body": "Combien de permutations de l'ensemble y a-t-il? "
 },
 {
-  "id": "exercise-224",
+  "id": "exercise-223",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-224",
+  "url": "sec_arrCombinaison.html#exercise-223",
   "type": "Exercice",
   "number": "4.2.5.2",
   "title": "",
   "body": "Combien de permutations de l'ensemble commencent par ? Puisque est fixé en première position, il suffit de compter les permutations des lettres restantes. Il y en a . "
 },
 {
-  "id": "exercise-225",
+  "id": "exercise-224",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-225",
+  "url": "sec_arrCombinaison.html#exercise-224",
   "type": "Exercice",
   "number": "4.2.5.3",
   "title": "",
   "body": "On lance une pièce à deux faces à reprises. Le résultat est Pile ou Face. Combien de résultats: y a-t-il au total? . contiennent exactement deux Face? On choisit deux positions parmi les possibles pour les Face. contiennent exactement trois Pile?  contiennent le même nombre de Pile que de Face?  "
 },
 {
-  "id": "exercise-226",
+  "id": "exercise-225",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-226",
+  "url": "sec_arrCombinaison.html#exercise-225",
   "type": "Exercice",
   "number": "4.2.5.4",
   "title": "",
   "body": "De combien de manières peut-on sélectionner volontaires dans la classe? (On suppose qu'il y a personnes dans la classe.) Soit le nombre de personnes dans la classe. Si , alors c'est impossible. Sinon, le nombre de possibilités est . Pour cela, on identifie les personnes avec étiquettes pour volontaires et étiquettes pour non volontaires. "
 },
 {
-  "id": "exercise-227",
+  "id": "exercise-226",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-227",
+  "url": "sec_arrCombinaison.html#exercise-226",
   "type": "Exercice",
   "number": "4.2.5.5",
   "title": "",
   "body": "Aux olympiades scolaire de l'école du Bonheur, tous les participants gagnent une médaille. S'il y a élèves et qu'on attribue médailles d'or, médailles d'argent et le reste en bronze, de combien de manières est-ce que la distribution peut être faite? "
 },
 {
-  "id": "exercise-228",
+  "id": "exercise-227",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-228",
+  "url": "sec_arrCombinaison.html#exercise-227",
   "type": "Exercice",
   "number": "4.2.5.6",
   "title": "",
   "body": "Dans un groupe de personnes, on veut former deux équipes. La première sera composée de attaquants, défenseurs, gardiens et réservistes. La deuxième équipe sera formée de avants, passeur, arrières et réservistes. On suppose que personne ne fait partie des deux équipes. Combien y a-t-il de possibilités? "
 },
 {
-  "id": "exercise-229",
+  "id": "exercise-228",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-229",
+  "url": "sec_arrCombinaison.html#exercise-228",
   "type": "Exercice",
   "number": "4.2.5.7",
   "title": "",
   "body": "Pour une fin de semaine au chalet, on veut apporter jeux de société. Dans la collection, on trouve jeux coopératifs et jeux de stratégies. Combien de possibilités y a-t-il si: On ne donne aucune restriction?  On souhaite avoir exactement deux jeux coopératifs?  On utilise le principe du produit pour séparer la tâche en deux étapes. Premièrement, on choisit deux jeux coopratif et ensuite on choisit trois jeux de statégies. Ainsi, la réponse sera . Pour des raisons évidentes, on décide d'exclure des jeux coopératifs le jeu Pandémie et si on veut absolument apporter le jeu de stratégie Smallworld ? "
 },
 {
-  "id": "exercise-230",
+  "id": "exercise-229",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-230",
+  "url": "sec_arrCombinaison.html#exercise-229",
   "type": "Exercice",
   "number": "4.2.5.8",
   "title": "",
   "body": "Pour mon anniversaire, je souhaite faire un petit événement avec invités. J'ai bons amis hommes et bonnes amies femmes que je considère inviter. Combien de choix est-ce que j'ai si: Je ne mets aucune restriction? Je veux hommes et femmes? Roxanne et Samuel forme un couple. Si je décide d'en inviter un des deux, l'autre doit venir aussi. Combien de possibilités s'il n'y a pas d'autres restrictions? On commence par décider si le couple est invité ou non. On obtient leur présence ou absence entraine deux sous-ensembles disjoints de possibilités. Si le couple fait partie des invités, alors il reste places à combler, à choisir parmi les autres personnes. Cela fait .  À cela, on ajoute les possibilités où Roxanne et Samuel ne sont pas invités. Il faut alors choisir les invités parmi les personnes. Cela fait .  Par le principe d'addition, on a un total de possibilités.  Parmi celles-ci, combien comprennent le couple? Combien de possibilités si je veux avoir au total hommes et femmes? Encore une fois, on sépare en deux cas distincts, selon si Roxanne et Samuel sont présents ou non. Dans le cas où ils sont présent, on doit ensute choisir hommes parmi les restant et femmes parmi les restant. Selon le principe de multiplication, ceci donnera .  À cela, on doit ajouter les possiblités où Roxanne et Samuel sont absents. Il faut choisir hommes parmi les qui ne sont pas Samuel et femmes parmi les qui ne sont pas Roxanne. On obtient alors, par le principe de multiplication .  On combine finalement avec le principe d'addition pour avoir un total de possibilités.  Parmi celles-ci, combien comprennent le couple? Parmi mes amis, il y a aussi Christian et Sophie, qui sont en chicane et ne peuvent pas être tous les deux présents. Combien de possibilités y a-t-il s'il n'y a pas d'autres restrictions? Cette-fois, on distingue trois cas: Christian est présent, mais pas Sophie, Sophie est présent, mais pas Christian ou ni Sophie ni Christian sont présents. Ces trois cas sont disctincts et le principe d'addition permettra d'obtenir l'ensemble des possibilités.  Si Christian est présent, il faut ensuite choisir les autres invités parmi les personnes qui ne sont pas Sophie (ou Christian). Cela donne . Le même argument montre que si Sophie est présente, mais pas Christian, le nombre de possibilités est aussi .  Finalement, si les deux sont absents, il faut choisir les invités parmi les autres possibilités. On obtient alors .  En combinant le tout, il y a possibilités.  Combien de possibilités si je veux avoir au total hommes et femmes? "
 },
 {
-  "id": "exercise-231",
+  "id": "exercise-230",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-231",
+  "url": "sec_arrCombinaison.html#exercise-230",
   "type": "Exercice",
   "number": "4.2.5.9",
   "title": "",
   "body": "Soit et Combien y a-t-il de fonctions et ? Il y a fonctions , alors qu'il y a fonctions . Combien y a-t-il de fonctions qui sont surjectives?   Pour que la fonction soit surjective, on doit avoir pour , et on doit aussi avoir . Ainsi, il doit y avoir avoir exactement un élément tel que alors que tous les autres éléments aurons une seule préimage.  Donc, pour définir une fonction surjective , on doit choisir l'élément de ayant deux préimages ( possibilité). Enusite, on choisit les deux préimage de (il y possibilités.) Finalement, on doit choisir la préimage des autres éléments de . Ceci evient à permuter trois éléments (il y a possibilités).  Ainsi, par le principe du produit, il y a  Combien y a-t-il de fonctions qui sont injectives? \\Permutation{5}{4}=\\frac{5!}{(5-4)!}=5! "
 },
 {
-  "id": "exercise-232",
+  "id": "exercise-231",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-232",
+  "url": "sec_arrCombinaison.html#exercise-231",
   "type": "Exercice",
   "number": "4.2.5.10",
   "title": "",
   "body": "Soit . Combien de solutions y a-t-il si sont des naturels (plus grands ou égaux à )?   sont des naturels plus grands ou égaux à ?  "
 },
 {
-  "id": "exercise-233",
+  "id": "exercise-232",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-233",
+  "url": "sec_arrCombinaison.html#exercise-232",
   "type": "Exercice",
   "number": "4.2.5.11",
   "title": "",
   "body": "Soit un ensemble à éléments. Une -partition de est un ensemble de sous-ensembles de qui ont les propriétés suivantes:  ils sont non vides, c'est à dire ;  leur intersection deux à deux sont vides, c'est-à-dire si ;  leur union donne , c'est-à-dire .   Par exemple, pour , les ensembles et forment une -partition de . Combien y a-t-il de -partition de ?  Chaque -partition de est formé de deux ensembles de cardinalité et un ensemble de cardinalité . Chaque -partition est uniquement définie par le sous-ensemble de carinalité qu'elle contient.   "
 },
 {
-  "id": "exercise-234",
+  "id": "exercise-233",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-234",
+  "url": "sec_arrCombinaison.html#exercise-233",
   "type": "Exercice",
   "number": "4.2.5.12",
   "title": "",
   "body": "Une éducatrice en garderie a un groupe de enfants. De combien de manières peut-elle former trois sous-groupes? On suppose qu'un groupe n'est pas vide, mais pourrait contenir un seul enfant. "
 },
 {
-  "id": "exercise-235",
+  "id": "exercise-234",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-235",
+  "url": "sec_arrCombinaison.html#exercise-234",
   "type": "Exercice",
   "number": "4.2.5.13",
   "title": "",
   "body": "On considère l'ensemble . Combien de fonctions de vers ont la propriété que, si , alors . Par exemple, est un telle fonction.  Une telle fonction est dite monotone.  Ce problème est difficile si on ne le prend pas sous le bon angle. Commencer par énumer les possibilités. Il y en a . Considérer les éléments du codomaine comme étant les urnes et les éléments du domaines comme étant les billes. Des fonctions de vers , on cherche à compter celles qui sont monotones. On imagine la représentation d'une fonction en termes de billes et d'urnes. Par exemple, la figure suivante représente la fonction donné en exemple dans l'énoncé.      On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. Dans la première urne, une bille identifiée 1 est présente et des billes identifiées respectivement 2 et 3 sont présentes dans l'urne 2. La troisième urne est vide.    La figure ci-dessous représente quant à elle la fonction non monotone . Les mêmes urnes contiennent le même nombre de billes, mais les billes sont différentes.      On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. Dans l'urne 2, on peut voir des billes identifiées respectivement 1 et 3 et dans l'urne 3, on voit une bille identifiée 2. L'urne 1 est vide.    On prend maintenant une configuration arbitraire de trois billes identiques dans trois urnes distinctes.      On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. L'urne 2 contient deux billes et l'urne 3 en contient une, mais les billes ne sont pas identifiées.    À partir de cette configuration, il n'y a qu'une seule manière de créer une fonction monotone. On prend les billes de la première urne non vide (identifiée par le plus petit nombre) et on numérotte ses billes par les plus petits éléments du domaine. On poursuit ainsi avec les autres urnes non vide. On obtient alors une fonction monotone. Avec la configuration de la figure , on obtient .  "
 },
 {
-  "id": "exercise-236",
+  "id": "exercise-235",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-236",
+  "url": "sec_arrCombinaison.html#exercise-235",
   "type": "Exercice",
   "number": "4.2.5.14",
   "title": "",

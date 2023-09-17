@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<div class="para">Dans les quatre années suivant <span class="process-math">\(2021\text{,}\)</span> il y a nécessairement une année bissextile. Celle-ci se trouve en <span class="process-math">\(2024\text{.}\)</span> Donc pour calculer le jour de la semaine, il faut ajouter <span class="process-math">\(4\times 365+1\)</span> jours au vendredi <span class="process-math">\((5)\)</span> de <span class="process-math">\(2021\)</span> et travailler encore une fois modulo <span class="process-math">\(7\text{.}\)</span> On trouve alors <span class="process-math">\(5+4\times 365+1=1466\equiv 3\mod 7\text{.}\)</span> Le <span class="process-math">\(17\)</span> septembre <span class="process-math">\(2025\)</span> sera (était?) donc un mercredi.</div>
+<div class="para">À partir d’ici, les choses se compliquent légèrement. La difficulté vient du fait que les mois n’ont pas tous le même nombre de jours et donc, on ne peut pas travailler modulo un entier régulier. On commence par ajouter les <span class="process-math">\(35\)</span> jours à <span class="process-math">\(17\)</span> pour obtenir <span class="process-math">\(35+17=52\text{.}\)</span> Puisque septembre compte <span class="process-math">\(30\)</span> jours, on travaillera modulo <span class="process-math">\(30\text{.}\)</span> On apportera toutefois une précision dans la prochaine solution.</div>
 <span class="incontext"><a href="sec-modulo.html#p-1601" class="internal">Contexte</a></span>
 </body>
 </html>

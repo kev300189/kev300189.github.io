@@ -11,27 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraphe</span></h5>
+<h4 class="heading"><span class="type">Paragraphe</span></h4>
 <div class="para logical">
-<div class="para">On montre une manière plus concise d’écrire le raisonnement précédent. La plus grande puissance de <span class="process-math">\(2\)</span> qui est inférieure ou égale à <span class="process-math">\(187\)</span> est <span class="process-math">\(128\text{.}\)</span> On a donc</div>
+<div class="para">En plus des nombres naturels, on peut aussi représenter les nombres négatifs ou même réels en d’autre base. Pour un nombre négatif, on se contentera de convertir le nombre en valeur absolue en binaire et d’ajouter un signe <span class="process-math">\(-\)</span> devant. Pour un ordinateur toutefois, la réalité est un peu plus complexe. Pour les nombres décimaux, on peut procéder d’une manière similaire à celles utilisées pour convertir d’une base à l’autre. Si on considère un nombre à virgule écrit en binaire (dont la partie entière sera <span class="process-math">\(0\text{,}\)</span> pour simplifier), par exemple <span class="process-math">\(0.1011001_2\text{,}\)</span> alors il suffit de poursuivre l’écriture en puissance avec des nombres négatifs:</div>
 <div class="displaymath process-math">
-\begin{align*}
-187&amp;=128+\text{quelque chose}\\
-\end{align*}
-<p class="intertext">Puisque 187-128=59 et que la plus grande puissance de 2 inférieure à 59 est 32, on a</p>
-\begin{align*}
-187&amp;=128+32+\text{autre chose}\\
-\end{align*}
-<p class="intertext">autre chose doit être égal à 27 lorsqu’on fait la soustraction. La plus grande puissance inférieure à cela est 16 et donc</p>
-\begin{align*}
-187&amp;=128+32+16+\text{quelque chose d'autre}\\
-\end{align*}
-<p class="intertext">on poursuit ainsi et on obtient finalement</p>
-\begin{align*}
-187&amp;=128+32+16+8+2+1\\
-187&amp;=10111011_2
-\end{align*}
+\begin{equation*}
+0\times 2^0+d_{-1}2^{-1}+d_{-2}2^{-2}+\cdots +d_{-m}2^{-m}\text{.}
+\end{equation*}
 </div>
+<div class="para">À noter toutefois que, comme dans le cas des nombres décimaux, il est possible que la partie fractionnaire soit infinie, périodique ou non. On se contentera de cas où la représentation sera finie.</div>
 </div>
 <span class="incontext"><a href="sec-representation.html#p-1257" class="internal">Contexte</a></span>
 </body>
