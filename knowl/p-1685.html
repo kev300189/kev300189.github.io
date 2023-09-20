@@ -12,7 +12,11 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraphe</span></h4>
-<div class="para">Damien reçoit donc le message <code class="code-inline tex2jax_ignore">32 71 14 82 71 21 44</code> et entreprend donc de le décoder. Pour cela, il doit calculer un inverse de <span class="process-math">\(e\)</span> modulo <span class="process-math">\((p-1)(q-1)\text{.}\)</span> Puisque <span class="process-math">\(e\)</span> avait été choisi pour qu’un inverse existe, il sait que  c’est posssible. Damien se souvient de l’exemple <a href="" class="xref" data-knowl="./knowl/ex-inversemodulo.html" title="Exemple 3.3.18: Un inverse modulo 72">3.3.18</a> et sait que <span class="process-math">\(d=29\)</span> est un inverse pour <span class="process-math">\(5\)</span> modulo <span class="process-math">\(72\text{.}\)</span> Pour décoder le message de Marie, Damien applique à chaque nombre reçu la formule <span class="process-math">\(M=C^d \mod pq\text{.}\)</span> On utilise Sage pour décoder le message.</div>
+<div class="para logical">
+<div class="para">Ainsi, si on reçoit le message</div>
+<pre class="code-display tex2jax_ignore">HBJSHPYKLSHSBULTVUHTPWPLYYVAWYLALTVPAHWSBTLWVBYLJYPYLBUTVATHJOHUKLSSLLZATVYALQLUHPWSBZKLMLBVBCYLTVPAHWVYALWVBYSHTVBYKLKPLB</pre>
+<div class="para">, on peut vérifier que la lettre la plus fréquente dans ce message est “L”. Sage peut être utile avec la fonction <code class="code-inline tex2jax_ignore">mode</code>, qui retourne l’élément d’une liste qui apparait le plus souvent.</div>
+</div>
 <span class="incontext"><a href="sec-modulo.html#p-1685" class="internal">Contexte</a></span>
 </body>
 </html>
