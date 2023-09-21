@@ -459,84 +459,84 @@ $\Box$
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-divisibilite"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">La divisibilité dans les entiers</span>
 </h2>
-<section class="introduction" id="intro-divisibilite"> <div class="para" id="p-1442">Si on prend deux nombres <span class="process-math">\(a,b\in \mathbb{Z}\text{,}\)</span> on peut les additionner, les soustraire et les multiplier et le résultat sera encore un entier. La division est la seule des quatre opérations élémentaires qui n’est pas garantie de rester un entier. C’est peut-être ce qui en fait une opération si riche et si intéressante. Quand est-ce que la division de deux nombres va produire un entier? Comment le vérifier?</div> <div class="para" id="p-1443">Dans cette section, on rappelle la notion de division entière, quotient et reste, on définit le plus grand commun diviseur et le plus petit commun multiple de deux nombres naturels, on montre l’algorithme d’Euclide pour calculer le plus grand commun diviseur.</div></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
+<section class="introduction" id="intro-divisibilite"> <div class="para" id="p-1443">Si on prend deux nombres <span class="process-math">\(a,b\in \mathbb{Z}\text{,}\)</span> on peut les additionner, les soustraire et les multiplier et le résultat sera encore un entier. La division est la seule des quatre opérations élémentaires qui n’est pas garantie de rester un entier. C’est peut-être ce qui en fait une opération si riche et si intéressante. Quand est-ce que la division de deux nombres va produire un entier? Comment le vérifier?</div> <div class="para" id="p-1444">Dans cette section, on rappelle la notion de division entière, quotient et reste, on définit le plus grand commun diviseur et le plus petit commun multiple de deux nombres naturels, on montre l’algorithme d’Euclide pour calculer le plus grand commun diviseur.</div></section><section class="subsection" id="subsection-26"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="space"> </span><span class="title">L’opération de division</span>
 </h3>
-<div class="para" id="p-1444">Soit <span class="process-math">\(a,b\)</span> deux entiers. Si on divise <span class="process-math">\(a\)</span> par <span class="process-math">\(b\text{,}\)</span> le résultat peut être un entier, comme par exemple avec <span class="process-math">\(8/4=2\text{,}\)</span> un rationnel, avec en exemple <span class="process-math">\(1/2\)</span> ou même non défini, si on divise par <span class="process-math">\(0\text{.}\)</span> On expliquera prochainement la raison pour laquelle le fait que la division par <span class="process-math">\(0\)</span> est non définie est une bonne chose. Dans le cas où <span class="process-math">\(a/b\in \mathbb{Z}\text{,}\)</span> donc où le résultat de la division produit un entier, on dit que <span class="process-math">\(b\)</span> divise <span class="process-math">\(a\text{,}\)</span> et on écrit <span class="process-math">\(b| a\)</span> (la barre étant verticale et non pas oblique comme pour l’opérateur de division).</div>
+<div class="para" id="p-1445">Soit <span class="process-math">\(a,b\)</span> deux entiers. Si on divise <span class="process-math">\(a\)</span> par <span class="process-math">\(b\text{,}\)</span> le résultat peut être un entier, comme par exemple avec <span class="process-math">\(8/4=2\text{,}\)</span> un rationnel, avec en exemple <span class="process-math">\(1/2\)</span> ou même non défini, si on divise par <span class="process-math">\(0\text{.}\)</span> On expliquera prochainement la raison pour laquelle le fait que la division par <span class="process-math">\(0\)</span> est non définie est une bonne chose. Dans le cas où <span class="process-math">\(a/b\in \mathbb{Z}\text{,}\)</span> donc où le résultat de la division produit un entier, on dit que <span class="process-math">\(b\)</span> divise <span class="process-math">\(a\text{,}\)</span> et on écrit <span class="process-math">\(b| a\)</span> (la barre étant verticale et non pas oblique comme pour l’opérateur de division).</div>
 <article class="definition definition-like" id="def-divisibilite"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">La divisibilité.</span>
-</h4> <div class="para logical" id="p-1445">
+</h4> <div class="para logical" id="p-1446">
 <div class="para">Soit <span class="process-math">\(a,b\in \mathbb{Z}\)</span> avec <span class="process-math">\(b\neq 0\text{.}\)</span> On dit que “<span class="process-math">\(b\)</span> divise <span class="process-math">\(a\)</span>” et on écrit <span class="process-math">\(b| a\)</span> si le résultat <span class="process-math">\(a/b\)</span> est un entier. On note que les quatre conditions suivantes sont équivalentes:</div>
 <ul class="disc">
-<li id="li-339"><div class="para" id="p-1446"><span class="process-math">\(\displaystyle b| a\)</span></div></li>
-<li id="li-340"><div class="para" id="p-1447">
+<li id="li-339"><div class="para" id="p-1447"><span class="process-math">\(\displaystyle b| a\)</span></div></li>
+<li id="li-340"><div class="para" id="p-1448">
 <span class="process-math">\(a=kb\)</span> pour un certain <span class="process-math">\(k\in \mathbb{Z}\)</span>
 </div></li>
-<li id="li-341"><div class="para" id="p-1448">
+<li id="li-341"><div class="para" id="p-1449">
 <span class="process-math">\(b\)</span> est un facteur (ou diviseur) de <span class="process-math">\(a\)</span>
 </div></li>
-<li id="li-342"><div class="para" id="p-1449">
+<li id="li-342"><div class="para" id="p-1450">
 <span class="process-math">\(a\)</span> est un multiple de <span class="process-math">\(b\text{.}\)</span>
 </div></li>
 </ul>
-</div></article><div class="para" id="p-1450">Quand on écrit <span class="process-math">\(b| a\text{,}\)</span> c’est soit vrai, soit faux selon <span class="process-math">\(a,b\text{.}\)</span> On a donc une proposition. Pour écrire la négation de cette proposition, on peut utiliser la notation  <span class="process-math">\(b\nmid a\)</span> pour dire que <span class="process-math">\(b\)</span> me divise pas <span class="process-math">\(a\text{.}\)</span>
+</div></article><div class="para" id="p-1451">Quand on écrit <span class="process-math">\(b| a\text{,}\)</span> c’est soit vrai, soit faux selon <span class="process-math">\(a,b\text{.}\)</span> On a donc une proposition. Pour écrire la négation de cette proposition, on peut utiliser la notation  <span class="process-math">\(b\nmid a\)</span> pour dire que <span class="process-math">\(b\)</span> me divise pas <span class="process-math">\(a\text{.}\)</span>
 </div>
 <article class="example example-like" id="example-44"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-44"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Exemples de divisibilité.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-44"><article class="example example-like"><div class="para logical" id="p-1451">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-44"><article class="example example-like"><div class="para logical" id="p-1452">
 <div class="para">On cherche la valeur de vérité des propositions suivantes.</div>
 <ol class="decimal">
-<li id="li-343"><div class="para" id="p-1452"><span class="process-math">\(\displaystyle 4| 8\)</span></div></li>
-<li id="li-344"><div class="para" id="p-1453"><span class="process-math">\(\displaystyle 8| 4\)</span></div></li>
-<li id="li-345"><div class="para" id="p-1454"><span class="process-math">\(\displaystyle 0| 5\)</span></div></li>
-<li id="li-346"><div class="para" id="p-1455"><span class="process-math">\(\displaystyle 5| 0\)</span></div></li>
-<li id="li-347"><div class="para" id="p-1456"><span class="process-math">\(\displaystyle 12| 60\)</span></div></li>
-<li id="li-348"><div class="para" id="p-1457"><span class="process-math">\(\displaystyle -6| 48\)</span></div></li>
-<li id="li-349"><div class="para" id="p-1458"><span class="process-math">\(\displaystyle \forall n\neq 0\in \mathbb{Z},\, n| n^2\)</span></div></li>
-<li id="li-350"><div class="para" id="p-1459"><span class="process-math">\(\displaystyle \forall n\neq 0\in \mathbb{Z},\, n^2| n\)</span></div></li>
-<li id="li-351"><div class="para" id="p-1460"><span class="process-math">\(\displaystyle \exists n\in \mathbb{Z},\, n^2| n\)</span></div></li>
+<li id="li-343"><div class="para" id="p-1453"><span class="process-math">\(\displaystyle 4| 8\)</span></div></li>
+<li id="li-344"><div class="para" id="p-1454"><span class="process-math">\(\displaystyle 8| 4\)</span></div></li>
+<li id="li-345"><div class="para" id="p-1455"><span class="process-math">\(\displaystyle 0| 5\)</span></div></li>
+<li id="li-346"><div class="para" id="p-1456"><span class="process-math">\(\displaystyle 5| 0\)</span></div></li>
+<li id="li-347"><div class="para" id="p-1457"><span class="process-math">\(\displaystyle 12| 60\)</span></div></li>
+<li id="li-348"><div class="para" id="p-1458"><span class="process-math">\(\displaystyle -6| 48\)</span></div></li>
+<li id="li-349"><div class="para" id="p-1459"><span class="process-math">\(\displaystyle \forall n\neq 0\in \mathbb{Z},\, n| n^2\)</span></div></li>
+<li id="li-350"><div class="para" id="p-1460"><span class="process-math">\(\displaystyle \forall n\neq 0\in \mathbb{Z},\, n^2| n\)</span></div></li>
+<li id="li-351"><div class="para" id="p-1461"><span class="process-math">\(\displaystyle \exists n\in \mathbb{Z},\, n^2| n\)</span></div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-99" id="solution-99"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-99"><div class="solution solution-like"><div class="para logical" id="p-1461"><ol class="decimal">
-<li id="li-352"><div class="para" id="p-1462">L’énoncé est vrai puisque <span class="process-math">\(8/4=2\)</span> et <span class="process-math">\(2\in \mathbb{Z}\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-99" id="solution-99"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-99"><div class="solution solution-like"><div class="para logical" id="p-1462"><ol class="decimal">
+<li id="li-352"><div class="para" id="p-1463">L’énoncé est vrai puisque <span class="process-math">\(8/4=2\)</span> et <span class="process-math">\(2\in \mathbb{Z}\text{.}\)</span>
 </div></li>
-<li id="li-353"><div class="para" id="p-1463">L’énoncé est faux étant donné que <span class="process-math">\(4/8=1/2\)</span> et que <span class="process-math">\(1/2\notin \mathbb{Z}\text{.}\)</span>
+<li id="li-353"><div class="para" id="p-1464">L’énoncé est faux étant donné que <span class="process-math">\(4/8=1/2\)</span> et que <span class="process-math">\(1/2\notin \mathbb{Z}\text{.}\)</span>
 </div></li>
-<li id="li-354"><div class="para" id="p-1464">L’énoncé est faux, car non ne peut pas diviser par <span class="process-math">\(0\text{.}\)</span>
+<li id="li-354"><div class="para" id="p-1465">L’énoncé est faux, car non ne peut pas diviser par <span class="process-math">\(0\text{.}\)</span>
 </div></li>
-<li id="li-355"><div class="para" id="p-1465">L’énoncé est vrai, car <span class="process-math">\(0=0\times 5\text{.}\)</span> En fait, n’importe quel nombre <span class="process-math">\(k\in \mathbb{Z}\)</span> non nul divise <span class="process-math">\(0\text{.}\)</span>
+<li id="li-355"><div class="para" id="p-1466">L’énoncé est vrai, car <span class="process-math">\(0=0\times 5\text{.}\)</span> En fait, n’importe quel nombre <span class="process-math">\(k\in \mathbb{Z}\)</span> non nul divise <span class="process-math">\(0\text{.}\)</span>
 </div></li>
-<li id="li-356"><div class="para" id="p-1466">L’énoncé est vrai puisque <span class="process-math">\(12\)</span> est un facteur de <span class="process-math">\(60\text{.}\)</span>
+<li id="li-356"><div class="para" id="p-1467">L’énoncé est vrai puisque <span class="process-math">\(12\)</span> est un facteur de <span class="process-math">\(60\text{.}\)</span>
 </div></li>
-<li id="li-357"><div class="para" id="p-1467">Le fait que le nombre est négatif ne pose pas de problème. On peut utiliser n’importe quelle des définitions équivalentes, par exemple <span class="process-math">\(48\)</span> est un multiple de <span class="process-math">\(-6\text{,}\)</span> spécifiquement <span class="process-math">\(-8\)</span> fois <span class="process-math">\(-6\)</span> et donc <span class="process-math">\(-6| 48\)</span> est vraie.</div></li>
-<li id="li-358"><div class="para" id="p-1468">Puisque <span class="process-math">\(n^2=n\times n\text{,}\)</span> on conclut que <span class="process-math">\(n\)</span> est un facteur de <span class="process-math">\(n^2\)</span> et donc que <span class="process-math">\(n| n^2\)</span> peu importe la valeur de <span class="process-math">\(n\)</span> non nulle. La proposition est vraie.</div></li>
-<li id="li-359"><div class="para" id="p-1469">Si on peut montrer une valeur de <span class="process-math">\(n\)</span> qui ne respecte pas la condition, alors la proposition sera fausse. Par exemple, si <span class="process-math">\(n=2\text{,}\)</span> c’est faux de dire que <span class="process-math">\(2^2| 2\)</span> puisque <span class="process-math">\(2/4=1/2\)</span> et ce n’est pas un entier. Donc la proposition est fausse.</div></li>
-<li id="li-360"><div class="para" id="p-1470">Si on arrive à trouver une valeur, la proposition d’existence sera vérifiée. En prenant <span class="process-math">\(n=1\text{,}\)</span> on observe que <span class="process-math">\(1^2| 1\)</span> et donc la proposition est vraie.</div></li>
+<li id="li-357"><div class="para" id="p-1468">Le fait que le nombre est négatif ne pose pas de problème. On peut utiliser n’importe quelle des définitions équivalentes, par exemple <span class="process-math">\(48\)</span> est un multiple de <span class="process-math">\(-6\text{,}\)</span> spécifiquement <span class="process-math">\(-8\)</span> fois <span class="process-math">\(-6\)</span> et donc <span class="process-math">\(-6| 48\)</span> est vraie.</div></li>
+<li id="li-358"><div class="para" id="p-1469">Puisque <span class="process-math">\(n^2=n\times n\text{,}\)</span> on conclut que <span class="process-math">\(n\)</span> est un facteur de <span class="process-math">\(n^2\)</span> et donc que <span class="process-math">\(n| n^2\)</span> peu importe la valeur de <span class="process-math">\(n\)</span> non nulle. La proposition est vraie.</div></li>
+<li id="li-359"><div class="para" id="p-1470">Si on peut montrer une valeur de <span class="process-math">\(n\)</span> qui ne respecte pas la condition, alors la proposition sera fausse. Par exemple, si <span class="process-math">\(n=2\text{,}\)</span> c’est faux de dire que <span class="process-math">\(2^2| 2\)</span> puisque <span class="process-math">\(2/4=1/2\)</span> et ce n’est pas un entier. Donc la proposition est fausse.</div></li>
+<li id="li-360"><div class="para" id="p-1471">Si on arrive à trouver une valeur, la proposition d’existence sera vérifiée. En prenant <span class="process-math">\(n=1\text{,}\)</span> on observe que <span class="process-math">\(1^2| 1\)</span> et donc la proposition est vraie.</div></li>
 </ol></div></div></div>
 </div></article></div>
-<section class="paragraphs" id="par-etranglement">Les valeurs numériques de l’exemple précédent étaient relativement petites qu’on savait si la relation de divisibilité était vraie assez facilement. Par contre, si on se demande est-ce que <span class="process-math">\(123\)</span> divise <span class="process-math">\(198823\text{,}\)</span> alors là ce n’est plus aussi évident. Comment peut-on procéder? On veut  trouver un multiple de <span class="process-math">\(123\)</span> qui donne <span class="process-math">\(881123\)</span> ou montrer que c’est impossible. On peut essayer de procéder par étranglement. Si on fait <span class="process-math">\(123\times 10000=1230000\text{,}\)</span> on obtient une valeur trop grande, alors que si on fait <span class="process-math">\(123\times 1000=123000\text{,}\)</span> on obtient une valeur trop petite. Si un multiple existe, il se trouve nécessairement entre <span class="process-math">\(1000\)</span> et <span class="process-math">\(10000\text{.}\)</span> On essaie <span class="process-math">\(123\times 5000=615000\text{,}\)</span> qui est encore trop petit. Avec <span class="process-math">\(123\times 7500=922500\text{,}\)</span> on est maintenant trop haut. Le multiple s’il existe se retrouve donc entre <span class="process-math">\(5000\)</span> et <span class="process-math">\(7500\text{.}\)</span> On peut continuer de couper la poire en deux comme cela pendant un certain temps et éventuellement, on arrive à <span class="process-math">\(123\times 7163=881049\)</span> qui est plus petit et <span class="process-math">\(7164\times 123=881172\)</span> qui est trop grand. On conclut donc que <span class="process-math">\(881123\)</span> n’est pas un multiple de <span class="process-math">\(123\)</span> et donc <span class="process-math">\(123 \nmid 881123\text{.}\)</span></section><div class="para" id="p-1471">En prenant <span class="process-math">\(123\times 7163=881049\text{,}\)</span> on remarque qu’on est à <span class="process-math">\(74\)</span> entiers de la cible. On peut donc écrire <span class="process-math">\(881123=123\times 7163+74\text{.}\)</span> Il se trouve qu’on peut généraliser se résultat pour obtenir la notion bien connue de division.</div>
+<section class="paragraphs" id="par-etranglement">Les valeurs numériques de l’exemple précédent étaient relativement petites qu’on savait si la relation de divisibilité était vraie assez facilement. Par contre, si on se demande est-ce que <span class="process-math">\(123\)</span> divise <span class="process-math">\(198823\text{,}\)</span> alors là ce n’est plus aussi évident. Comment peut-on procéder? On veut  trouver un multiple de <span class="process-math">\(123\)</span> qui donne <span class="process-math">\(881123\)</span> ou montrer que c’est impossible. On peut essayer de procéder par étranglement. Si on fait <span class="process-math">\(123\times 10000=1230000\text{,}\)</span> on obtient une valeur trop grande, alors que si on fait <span class="process-math">\(123\times 1000=123000\text{,}\)</span> on obtient une valeur trop petite. Si un multiple existe, il se trouve nécessairement entre <span class="process-math">\(1000\)</span> et <span class="process-math">\(10000\text{.}\)</span> On essaie <span class="process-math">\(123\times 5000=615000\text{,}\)</span> qui est encore trop petit. Avec <span class="process-math">\(123\times 7500=922500\text{,}\)</span> on est maintenant trop haut. Le multiple s’il existe se retrouve donc entre <span class="process-math">\(5000\)</span> et <span class="process-math">\(7500\text{.}\)</span> On peut continuer de couper la poire en deux comme cela pendant un certain temps et éventuellement, on arrive à <span class="process-math">\(123\times 7163=881049\)</span> qui est plus petit et <span class="process-math">\(7164\times 123=881172\)</span> qui est trop grand. On conclut donc que <span class="process-math">\(881123\)</span> n’est pas un multiple de <span class="process-math">\(123\)</span> et donc <span class="process-math">\(123 \nmid 881123\text{.}\)</span></section><div class="para" id="p-1472">En prenant <span class="process-math">\(123\times 7163=881049\text{,}\)</span> on remarque qu’on est à <span class="process-math">\(74\)</span> entiers de la cible. On peut donc écrire <span class="process-math">\(881123=123\times 7163+74\text{.}\)</span> Il se trouve qu’on peut généraliser se résultat pour obtenir la notion bien connue de division.</div>
 <article class="proposition theorem-like" id="prop-divisioneuclidienne"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">La division euclidienne.</span>
 </h4>
-<div class="para logical" id="p-1472">
+<div class="para logical" id="p-1473">
 <div class="para">Soit <span class="process-math">\(a,b\in \mathbb{Z}\)</span> avec <span class="process-math">\(b\neq 0\text{.}\)</span> Alors il existe des uniques entiers <span class="process-math">\(q,r\)</span> avec <span class="process-math">\(0\leq r\leq \lvert b\rvert\)</span> pour lesquels</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a=bq+r\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1473">L’entier <span class="process-math">\(q\)</span> est appelé le quotient et l’entier <span class="process-math">\(r\)</span> est appelé le reste.</div></article><div class="para" id="p-1474">Pour trouver <span class="process-math">\(q\)</span> et <span class="process-math">\(r\text{,}\)</span> on peut procéder comme dans le paragraphe précédant la proposition <a href="" class="xref" data-knowl="./knowl/prop-divisioneuclidienne.html" title="Proposition 3.2.3: La division euclidienne">3.2.3</a>, ou encore utiliser la méthode pour diviser enseignée au primaire.</div>
-<div class="para" id="p-1475">On termine avec un exemple présentant des opérateurs de division sur Sage.</div>
+</div> <div class="para" id="p-1474">L’entier <span class="process-math">\(q\)</span> est appelé le quotient et l’entier <span class="process-math">\(r\)</span> est appelé le reste.</div></article><div class="para" id="p-1475">Pour trouver <span class="process-math">\(q\)</span> et <span class="process-math">\(r\text{,}\)</span> on peut procéder comme dans le paragraphe précédant la proposition <a href="" class="xref" data-knowl="./knowl/prop-divisioneuclidienne.html" title="Proposition 3.2.3: La division euclidienne">3.2.3</a>, ou encore utiliser la méthode pour diviser enseignée au primaire.</div>
+<div class="para" id="p-1476">On termine avec un exemple présentant des opérateurs de division sur Sage.</div>
 <article class="computation computation-like" id="computation-1"><h4 class="heading">
 <span class="type">Calcul</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">La divisibilité et Sage.</span>
-</h4> <div class="para" id="p-1476">Sage est capable de calculer facilement les entiers <span class="process-math">\(q\)</span> et <span class="process-math">\(r\)</span> de la proposition <a href="" class="xref" data-knowl="./knowl/prop-divisioneuclidienne.html" title="Proposition 3.2.3: La division euclidienne">3.2.3</a> grâce à deux opérateurs spéciaux. Si <code class="code-inline tex2jax_ignore">a/b</code> produit la division usuelle, donnant un nombre rationnel lorsque <span class="process-math">\(b\nmid a\text{,}\)</span> l’opération <code class="code-inline tex2jax_ignore">a//b</code> elle produit le quotient <span class="process-math">\(q\)</span> dans l’expession <span class="process-math">\(a=bq+r\text{.}\)</span> Pour obtenir le reste, il faut utiliser <code class="code-inline tex2jax_ignore">a%b</code>. La cellule ci-dessous illustre ces opérations.</div> <pre class="ptx-sagecell sagecell-sage" id="sage-7"><script type="text/x-sage">a=881123 #Changer a,b pour voir d'autres exemples
+</h4> <div class="para" id="p-1477">Sage est capable de calculer facilement les entiers <span class="process-math">\(q\)</span> et <span class="process-math">\(r\)</span> de la proposition <a href="" class="xref" data-knowl="./knowl/prop-divisioneuclidienne.html" title="Proposition 3.2.3: La division euclidienne">3.2.3</a> grâce à deux opérateurs spéciaux. Si <code class="code-inline tex2jax_ignore">a/b</code> produit la division usuelle, donnant un nombre rationnel lorsque <span class="process-math">\(b\nmid a\text{,}\)</span> l’opération <code class="code-inline tex2jax_ignore">a//b</code> elle produit le quotient <span class="process-math">\(q\)</span> dans l’expession <span class="process-math">\(a=bq+r\text{.}\)</span> Pour obtenir le reste, il faut utiliser <code class="code-inline tex2jax_ignore">a%b</code>. La cellule ci-dessous illustre ces opérations.</div> <pre class="ptx-sagecell sagecell-sage" id="sage-7"><script type="text/x-sage">a=881123 #Changer a,b pour voir d'autres exemples
 b=123
 show("a/b=",a/b)# La division usuelle
 show("a/b=",a/b.n()) # En décimale pour avoir une meilleure idée de l'ordre de grandeur
 show("q=",a//b) # Le quotient
 show("r=",a%b) # Le reste
-</script></pre> <div class="para" id="p-1477">Voici une version interactive de la cellule précédente.</div> <pre class="ptx-sagecell sagecell-sage" id="sage-8"><script type="text/x-sage">@interact
+</script></pre> <div class="para" id="p-1478">Voici une version interactive de la cellule précédente.</div> <pre class="ptx-sagecell sagecell-sage" id="sage-8"><script type="text/x-sage">@interact
 def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
     if b_negatif==True:
         b=-b
@@ -544,10 +544,10 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
     show("a/b=",a/b.n()) # En décimale pour avoir une meilleure idée de l'ordre de grandeur
     show("q=",a//b) # Le quotient
     show("r=",a%b) # Le reste
-</script></pre></article><div class="para" id="p-1478">À remarquer que lorsque <span class="process-math">\(b\)</span> est négatif, Sage retourne un reste négatif alors que dans la proposition <a href="" class="xref" data-knowl="./knowl/prop-divisioneuclidienne.html" title="Proposition 3.2.3: La division euclidienne">3.2.3</a>, on mentionne que le reste doit satisfaire <span class="process-math">\(0\leq r&lt; \lvert b \rvert\text{.}\)</span> Il existe tout de même un autre entier qui satisfait cette relation, qui entrainera une valeur du quotient différente.</div></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+</script></pre></article><div class="para" id="p-1479">À remarquer que lorsque <span class="process-math">\(b\)</span> est négatif, Sage retourne un reste négatif alors que dans la proposition <a href="" class="xref" data-knowl="./knowl/prop-divisioneuclidienne.html" title="Proposition 3.2.3: La division euclidienne">3.2.3</a>, on mentionne que le reste doit satisfaire <span class="process-math">\(0\leq r&lt; \lvert b \rvert\text{.}\)</span> Il existe tout de même un autre entier qui satisfait cette relation, qui entrainera une valeur du quotient différente.</div></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="space"> </span><span class="title">Retour sur la conversion à partir de la base dix</span>
 </h3>
-<div class="para logical" id="p-1479">
+<div class="para logical" id="p-1480">
 <div class="para">Dans la section précédente, on a utilisé une méthode similaire à l’étranglement pour convertir un nombre de la base décimale aux bases binaires et hexadécimale. On peut utiliser l’écriture sous forme quotient et reste pour trouver les chiffres de l’écriture dans la nouvelle base. On montre l’idée générale avec un exempe concret, qu’on pourra généraliser facilement par la suite. On considère l’écriture de <span class="process-math">\(187\)</span> dans la base deux, établie à l’exemple <a href="" class="xref" data-knowl="./knowl/ex-decimalebinaire.html" title="Exemple 3.1.5: De la base dix vers le binaire">3.1.5</a>. On suppose que l’écriture de <span class="process-math">\(187\)</span> a <span class="process-math">\(n\)</span> chiffres. On remarque que</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-decimalebinaire.html ./knowl/prop-divisioneuclidienne.html" id="md-45">
 \begin{align*}
@@ -565,7 +565,7 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
 <div class="para">, on peut trouver <span class="process-math">\(d_1=1\)</span> et le prochain quotient égal à <span class="process-math">\(46\text{.}\)</span> Avec cela, on obtient <span class="process-math">\(d_2=0\text{,}\)</span> amenant le quotient suivant à <span class="process-math">\(23\text{.}\)</span> On obtient <span class="process-math">\(d_3=1\)</span> et le quotient suivant vaut <span class="process-math">\(11\text{.}\)</span> On continue avec <span class="process-math">\(d_4=1\)</span> pour un quotient de <span class="process-math">\(5\text{,}\)</span> puis d_5=1 pour un quotient de <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(d_6=0\)</span> pour un quotient de <span class="process-math">\(1\)</span> et finalement, <span class="process-math">\(d_7=1\)</span> pour un quotient de <span class="process-math">\(0\text{.}\)</span> On peut donc écrire <span class="process-math">\(187=10111011_2\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-1480">Ce qui est bien avec le binaire, c’est que le reste se déduit facilement avec la parité du nombre divisé. Si celui-ci est pair, le reste est de <span class="process-math">\(0\)</span> et s’il est impair, le reste est de <span class="process-math">\(1.\)</span> On peut simplifier la procédure en écrivant les quotients et les restes dans un tableau. La colonne des restes correspond à l’écriture binaire du nombre, les nombres de droite à gauche se trouvant de haut en bas de la colonne. Afin d’illustrer, la conversion du nombre <span class="process-math">\(101=1100101_2\text{,}\)</span> aussi de l’exemple <a href="" class="xref" data-knowl="./knowl/ex-decimalebinaire.html" title="Exemple 3.1.5: De la base dix vers le binaire">3.1.5</a> est donnée dans la table <a href="" class="xref" data-knowl="./knowl/tab-binairedecimale101.html" title="Table 3.2.5: Conversion de 101 en binaire avec la méthode des quotients et des restes">3.2.5</a>.</div>
+<div class="para" id="p-1481">Ce qui est bien avec le binaire, c’est que le reste se déduit facilement avec la parité du nombre divisé. Si celui-ci est pair, le reste est de <span class="process-math">\(0\)</span> et s’il est impair, le reste est de <span class="process-math">\(1.\)</span> On peut simplifier la procédure en écrivant les quotients et les restes dans un tableau. La colonne des restes correspond à l’écriture binaire du nombre, les nombres de droite à gauche se trouvant de haut en bas de la colonne. Afin d’illustrer, la conversion du nombre <span class="process-math">\(101=1100101_2\text{,}\)</span> aussi de l’exemple <a href="" class="xref" data-knowl="./knowl/ex-decimalebinaire.html" title="Exemple 3.1.5: De la base dix vers le binaire">3.1.5</a> est donnée dans la table <a href="" class="xref" data-knowl="./knowl/tab-binairedecimale101.html" title="Table 3.2.5: Conversion de 101 en binaire avec la méthode des quotients et des restes">3.2.5</a>.</div>
 <figure class="table table-like" id="tab-binairedecimale101"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.5<span class="period">.</span></span><span class="space"> </span>Conversion de 101 en binaire avec la méthode des quotients et des restes</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(101\div\)</span></td>
@@ -603,13 +603,13 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
 <td class="l m b3 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="l m b3 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 </tr>
-</table></div></figure><div class="para" id="p-1481">La procédure est la même pour les autres bases, mais les restes ne peuvent pas être déterminés aussi facilement qu’en regardant la parité.</div>
+</table></div></figure><div class="para" id="p-1482">La procédure est la même pour les autres bases, mais les restes ne peuvent pas être déterminés aussi facilement qu’en regardant la parité.</div>
 <article class="example example-like" id="example-45"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-example-45"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Conversion d’un nombre binaire en hexadécimale.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-45"><article class="example example-like"><div class="para" id="p-1482">On veut convertir <span class="process-math">\(987654321\)</span> en base hexadécimale, afin de valider l’exemple <a href="" class="xref" data-knowl="./knowl/ex-decihexa.html" title="Exemple 3.1.11: Conversion entre système décimal et système hexadécimal">3.1.11</a>.</div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-45"><article class="example example-like"><div class="para" id="p-1483">On veut convertir <span class="process-math">\(987654321\)</span> en base hexadécimale, afin de valider l’exemple <a href="" class="xref" data-knowl="./knowl/ex-decihexa.html" title="Exemple 3.1.11: Conversion entre système décimal et système hexadécimal">3.1.11</a>.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-100" id="solution-100"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-100"><div class="solution solution-like">
-<div class="para" id="p-1483">On utilise une table dans laquelle on note les quotients et les restes. Ceux-ci peuvent être calculés avec Sage.</div> <figure class="table table-like" id="table-44"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.7<span class="period">.</span></span><span class="space"> </span>Conversion de 987654321 en hexadécimale avec la méthode des quotients et des restes</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="p-1484">On utilise une table dans laquelle on note les quotients et les restes. Ceux-ci peuvent être calculés avec Sage.</div> <figure class="table table-like" id="table-44"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.2.7<span class="period">.</span></span><span class="space"> </span>Conversion de 987654321 en hexadécimale avec la méthode des quotients et des restes</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(987654321\div\)</span></td>
 <td class="l m b0 r0 l0 t3 lines"><span class="process-math">\(16\)</span></td>
@@ -650,30 +650,30 @@ def _(a=(-100..100),b=(1..100),b_negatif=("b négatif?",False)):
 <td class="l m b3 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="l m b3 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
 </tr>
-</table></div></figure> <div class="para" id="p-1484">Le résultat est donc bel et bien <span class="process-math">\(987654321=3ADE68B1_{16}\text{.}\)</span>
+</table></div></figure> <div class="para" id="p-1485">Le résultat est donc bel et bien <span class="process-math">\(987654321=3ADE68B1_{16}\text{.}\)</span>
 </div>
 </div></div>
 </div></article></div></section><section class="subsection" id="subsection-28"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="space"> </span><span class="title">L’algorithme d’Euclide</span>
 </h3>
-<div class="para" id="p-1485">Un concept important en théorie des nombres est celui du plus grand commun diviseur, ou pgcd. Le nom est assez évocateur de ce qu’il représente, mais voici une définition formelle.</div>
+<div class="para" id="p-1486">Un concept important en théorie des nombres est celui du plus grand commun diviseur, ou pgcd. Le nom est assez évocateur de ce qu’il représente, mais voici une définition formelle.</div>
 <article class="definition definition-like" id="def-pgcd"><h4 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Le plus grand commun diviseur.</span>
-</h4> <div class="para logical" id="p-1486">
+</h4> <div class="para logical" id="p-1487">
 <div class="para">Soit <span class="process-math">\(a,b\in \mathbb{Z}\)</span> avec <span class="process-math">\(\lvert a\rvert +\lvert b\rvert\neq 0\)</span> (les nombres ne sont pas tous les deux nuls). Le <dfn class="terminology">plus grand commun diviseur</dfn> de <span class="process-math">\(a,b\text{,}\)</span> noté <span class="process-math">\(\pgcd{(a,b)}\text{,}\)</span> est un entier <span class="process-math">\(d\)</span> qui satisfait les trois propriétés suivantes:</div>
 <ol class="decimal">
-<li id="li-361"><div class="para" id="p-1487"><span class="process-math">\(d&gt;0\text{;}\)</span></div></li>
-<li id="li-362"><div class="para" id="p-1488">
+<li id="li-361"><div class="para" id="p-1488"><span class="process-math">\(d&gt;0\text{;}\)</span></div></li>
+<li id="li-362"><div class="para" id="p-1489">
 <span class="process-math">\(d| a\)</span> et <span class="process-math">\(d| b\text{;}\)</span>
 </div></li>
-<li id="li-363"><div class="para" id="p-1489">Pour tout <span class="process-math">\(c\in \mathbb{Z}\text{,}\)</span> si <span class="process-math">\(c| a\)</span> et <span class="process-math">\(c| b\text{,}\)</span> alors <span class="process-math">\(c\leq d\text{.}\)</span>
+<li id="li-363"><div class="para" id="p-1490">Pour tout <span class="process-math">\(c\in \mathbb{Z}\text{,}\)</span> si <span class="process-math">\(c| a\)</span> et <span class="process-math">\(c| b\text{,}\)</span> alors <span class="process-math">\(c\leq d\text{.}\)</span>
 </div></li>
 </ol>
-</div> <div class="para" id="p-1490">Lorsque <span class="process-math">\(\pgcd{(a,b)}=1\text{,}\)</span> on dit que <span class="process-math">\(a\)</span> et <span class="process-math">\(b\)</span> sont copremiers.</div></article><div class="para" id="p-1491">On peut trouver le <span class="process-math">\(\pgcd\)</span> de deux nombres en donnant la liste de tous leurs diviseurs et en prenant le plus grand qu’ils ont en commun. Pour de petits nombres, cette approche est viable, mais pour de plus grands nombres, cela risque d’être inefficace et peu pratique. En fait, factoriser de très grands nombres est une opération difficile. Une grande partie de la sécurité informatique repose sur le fait qu’un même un puissance ordinateur ne peut pas factoriser facilement de très grands nombres. L’algorithme d’Euclide fournit une méthode plus efficace pour calculer le <span class="process-math">\(\pgcd\)</span> de deux nombres. Avec de très grands nombres, ça peut être long, mais ça utilise des opérations qu’un ordinateur effectue facilement.</div>
+</div> <div class="para" id="p-1491">Lorsque <span class="process-math">\(\pgcd{(a,b)}=1\text{,}\)</span> on dit que <span class="process-math">\(a\)</span> et <span class="process-math">\(b\)</span> sont copremiers.</div></article><div class="para" id="p-1492">On peut trouver le <span class="process-math">\(\pgcd\)</span> de deux nombres en donnant la liste de tous leurs diviseurs et en prenant le plus grand qu’ils ont en commun. Pour de petits nombres, cette approche est viable, mais pour de plus grands nombres, cela risque d’être inefficace et peu pratique. En fait, factoriser de très grands nombres est une opération difficile. Une grande partie de la sécurité informatique repose sur le fait qu’un même un puissance ordinateur ne peut pas factoriser facilement de très grands nombres. L’algorithme d’Euclide fournit une méthode plus efficace pour calculer le <span class="process-math">\(\pgcd\)</span> de deux nombres. Avec de très grands nombres, ça peut être long, mais ça utilise des opérations qu’un ordinateur effectue facilement.</div>
 <article class="algorithm theorem-like" id="algo-euclide"><h4 class="heading">
 <span class="type">Algorithme</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">L’algorithme d’Euclide.</span>
 </h4>
-<div class="para logical" id="p-1492">
+<div class="para logical" id="p-1493">
 <div class="para">Soit <span class="process-math">\(a&gt;b&gt; 0\)</span> des nombres naturels. Le plus grand commun diviseur de <span class="process-math">\(a\)</span> et <span class="process-math">\(b\)</span> est le dernier reste non nul de la suite suivante:</div>
 <div class="displaymath process-math" id="md-47">
 \begin{align*}
@@ -688,15 +688,15 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
 </div>
 </div></article><article class="example example-like" id="example-46"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-46"><h4 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Calcul d’un <span class="process-math">\(\pgcd\)</span>.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-46"><article class="example example-like"><div class="para logical" id="p-1493">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-46"><article class="example example-like"><div class="para logical" id="p-1494">
 <div class="para">En utilisant l’algorithme d’Euclide, on veut calculer</div>
 <ol class="decimal">
-<li id="li-364"><div class="para" id="p-1494"><span class="process-math">\(\pgcd{(402,312)}\text{;}\)</span></div></li>
-<li id="li-365"><div class="para" id="p-1495"><span class="process-math">\(\pgcd{(147,74)}\text{.}\)</span></div></li>
+<li id="li-364"><div class="para" id="p-1495"><span class="process-math">\(\pgcd{(402,312)}\text{;}\)</span></div></li>
+<li id="li-365"><div class="para" id="p-1496"><span class="process-math">\(\pgcd{(147,74)}\text{.}\)</span></div></li>
 </ol>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-101" id="solution-101"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-101"><div class="solution solution-like"><div class="para logical" id="p-1496">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-101" id="solution-101"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-101"><div class="solution solution-like"><div class="para logical" id="p-1497">
 <div class="para">On a</div>
 <div class="displaymath process-math" id="md-48">
 \begin{align*}
@@ -708,7 +708,7 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
 </div>
 <div class="para">Selon l’algorithme d’Euclide, <span class="process-math">\(\pgcd{(402,312)}=6\text{,}\)</span> le dernier reste non nul.</div>
 </div></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-102" id="solution-102"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-102"><div class="solution solution-like"><div class="para logical" id="p-1497">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-102" id="solution-102"><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-102"><div class="solution solution-like"><div class="para logical" id="p-1498">
 <div class="para">Cette fois-ci, on a</div>
 <div class="displaymath process-math" id="md-49">
 \begin{align*}
@@ -719,34 +719,34 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
 </div>
 <div class="para">Selon l’algorithme d’Euclide, <span class="process-math">\(\pgcd{(147,74)}=1\text{,}\)</span> le dernier reste non nul. Ces nombres sont donc copremiers.</div>
 </div></div></div>
-</div></article></div></section><section class="conclusion" id="concl-divisibilite"> <div class="para logical" id="p-1498">
+</div></article></div></section><section class="conclusion" id="concl-divisibilite"> <div class="para logical" id="p-1499">
 <div class="para">Les points importants de cette section sont:</div>
 <ul class="disc">
-<li id="li-366"><div class="para" id="p-1499">La définition de la <a href="" class="xref" data-knowl="./knowl/def-divisibilite.html" title="Définition 3.2.1: La divisibilité">divisibilité</a>;</div></li>
-<li id="li-367"><div class="para" id="p-1500">L’écriture en <a href="" class="xref" data-knowl="./knowl/prop-divisioneuclidienne.html" title="Proposition 3.2.3: La division euclidienne">quotient et reste</a> de la division d’un entier par un autre entier;</div></li>
-<li id="li-368"><div class="para" id="p-1501">La conversion d’un nombre en base dix vers une autre base à l’aide de la division euclidienne;</div></li>
-<li id="li-369"><div class="para" id="p-1502">La définition du <a href="" class="xref" data-knowl="./knowl/def-pgcd.html" title="Définition 3.2.8: Le plus grand commun diviseur">plus grand commun diviseur</a> de deux nombres;</div></li>
-<li id="li-370"><div class="para" id="p-1503">
+<li id="li-366"><div class="para" id="p-1500">La définition de la <a href="" class="xref" data-knowl="./knowl/def-divisibilite.html" title="Définition 3.2.1: La divisibilité">divisibilité</a>;</div></li>
+<li id="li-367"><div class="para" id="p-1501">L’écriture en <a href="" class="xref" data-knowl="./knowl/prop-divisioneuclidienne.html" title="Proposition 3.2.3: La division euclidienne">quotient et reste</a> de la division d’un entier par un autre entier;</div></li>
+<li id="li-368"><div class="para" id="p-1502">La conversion d’un nombre en base dix vers une autre base à l’aide de la division euclidienne;</div></li>
+<li id="li-369"><div class="para" id="p-1503">La définition du <a href="" class="xref" data-knowl="./knowl/def-pgcd.html" title="Définition 3.2.8: Le plus grand commun diviseur">plus grand commun diviseur</a> de deux nombres;</div></li>
+<li id="li-370"><div class="para" id="p-1504">
 <a href="" class="xref" data-knowl="./knowl/algo-euclide.html" title="Algorithme 3.2.9: L’algorithme d’Euclide">L’algorithme d’Euclide</a> pour calculer le <span class="process-math">\(\pgcd\text{.}\)</span>
 </div></li>
 </ul>
 </div></section><section class="reading-questions" id="rq-divisibilite"><h3 class="heading hide-type">
 <span class="type">Questions de compréhension de la lecture</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="space"> </span><span class="title">Questions de compréhension de la lecture</span>
 </h3>
-<section class="introduction" id="introduction-135"><div class="para" id="p-1504">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</div></section><article class="exercise exercise-like" id="exercise-164"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-136"><div class="para" id="p-1505">Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode par étranglement comme dans ce <a href="" class="xref" data-knowl="./knowl/par-etranglement.html" title="Paragraphes: ">paragraphe</a>.</div></div>
+<section class="introduction" id="introduction-135"><div class="para" id="p-1505">Ces questions sont à faire avant de venir en classe et à remettre au début du cours.</div></section><article class="exercise exercise-like" id="exercise-165"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-136"><div class="para" id="p-1506">Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode par étranglement comme dans ce <a href="" class="xref" data-knowl="./knowl/par-etranglement.html" title="Paragraphes: ">paragraphe</a>.</div></div>
 <article class="task exercise-like" id="task-402"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-1506"><span class="process-math">\(\frac{321}{17}\)</span></div></article><article class="task exercise-like" id="task-403"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-1507"><span class="process-math">\(\frac{1167}{93}\)</span></div></article><article class="task exercise-like" id="task-404"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-1508"><span class="process-math">\(\frac{2467}{711}\)</span></div></article></article><article class="exercise exercise-like" id="exercise-165"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-137"><div class="para" id="p-1509">Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode de division à la main comme au primaire.</div></div>
+<div class="para" id="p-1507"><span class="process-math">\(\frac{321}{17}\)</span></div></article><article class="task exercise-like" id="task-403"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-1508"><span class="process-math">\(\frac{1167}{93}\)</span></div></article><article class="task exercise-like" id="task-404"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-1509"><span class="process-math">\(\frac{2467}{711}\)</span></div></article></article><article class="exercise exercise-like" id="exercise-166"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-137"><div class="para" id="p-1510">Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode de division à la main comme au primaire.</div></div>
 <article class="task exercise-like" id="task-405"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-1510"><span class="process-math">\(\frac{123}{4}\)</span></div></article><article class="task exercise-like" id="task-406"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-1511"><span class="process-math">\(\frac{677}{21}\)</span></div></article><article class="task exercise-like" id="task-407"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-1512"><span class="process-math">\(\frac{5427}{9}\)</span></div></article></article><article class="exercise exercise-like" id="exercise-166"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-1513">Convertir les nombres de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-conversionbinaire.html" title="Exercice 3.1.7.1">3.1.7.1</a> en binaire en utilisant la méthode des divisions.</div></article><article class="exercise exercise-like" id="exercise-167"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-1514">Convertir les nombres de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-conversionhexadecimale.html" title="Exercice 3.1.7.2">3.1.7.2</a> en hexadécimale en utilisant la méthode des divisions.</div></article><article class="exercise exercise-like" id="exercise-168"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-1515">Que fait l’algorithme suivant?</div> <figure class="listing figure-like" id="listing-1"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-py">def algo(n):
+<div class="para" id="p-1511"><span class="process-math">\(\frac{123}{4}\)</span></div></article><article class="task exercise-like" id="task-406"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-1512"><span class="process-math">\(\frac{677}{21}\)</span></div></article><article class="task exercise-like" id="task-407"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-1513"><span class="process-math">\(\frac{5427}{9}\)</span></div></article></article><article class="exercise exercise-like" id="exercise-167"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1514">Convertir les nombres de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-conversionbinaire.html" title="Exercice 3.1.7.1">3.1.7.1</a> en binaire en utilisant la méthode des divisions.</div></article><article class="exercise exercise-like" id="exercise-168"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1515">Convertir les nombres de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-conversionhexadecimale.html" title="Exercice 3.1.7.2">3.1.7.2</a> en hexadécimale en utilisant la méthode des divisions.</div></article><article class="exercise exercise-like" id="exercise-169"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1516">Que fait l’algorithme suivant?</div> <figure class="listing figure-like" id="listing-1"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-py">def algo(n):
     laliste = [1]
     d = 2
     while d &lt; n:
@@ -758,8 +758,8 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
     return laliste
 </code></pre></div>
 <figcaption><span class="type">Bloc de code</span><span class="space"> </span><span class="codenumber">3.2.11<span class="period">.</span></span><span class="space"> </span>Une algorithme sur les entiers</figcaption></figure> <pre class="ptx-sagecell sagecell-sage" id="sage-9"><script type="text/x-sage">
-</script></pre></article><article class="exercise exercise-like" id="exercise-169"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-1516">L’algorithme suivant retourne un couple <span class="process-math">\(q,r\)</span> représentant le quotient et le reste de la division <span class="process-math">\(a/b\text{,}\)</span> mais il est incomplet. Pour chacun des quatre endroits écrits “ÀCOMPLÉTER”, écrire les instructions pour que l’algorithme fonctionne. Il est possible de le tester à même la cellule.</div> <figure class="listing figure-like" id="listing-2"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-py">def divisionEuclidienne(a, b):
+</script></pre></article><article class="exercise exercise-like" id="exercise-170"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-1517">L’algorithme suivant retourne un couple <span class="process-math">\(q,r\)</span> représentant le quotient et le reste de la division <span class="process-math">\(a/b\text{,}\)</span> mais il est incomplet. Pour chacun des quatre endroits écrits “ÀCOMPLÉTER”, écrire les instructions pour que l’algorithme fonctionne. Il est possible de le tester à même la cellule.</div> <figure class="listing figure-like" id="listing-2"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-py">def divisionEuclidienne(a, b):
     #Une algorithme qui retourne (q,r) la forme quotient reste de a/b:  a=bq+r
     if :#ÀCOMPLÉTER1
         print('Le pgcd est non défini')
@@ -782,64 +782,64 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
             return q, r
 </code></pre></div>
 <figcaption><span class="type">Bloc de code</span><span class="space"> </span><span class="codenumber">3.2.12<span class="period">.</span></span><span class="space"> </span>La division euclidienne</figcaption></figure> <pre class="ptx-sagecell sagecell-sage" id="sage-10"><script type="text/x-sage">
-</script></pre></article><article class="exercise exercise-like" id="exercise-170"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-1517">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</div></article><article class="exercise exercise-like" id="exercise-171"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-1518">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</div></article></section><section class="exercises" id="exo-divisibilite"><h3 class="heading hide-type">
+</script></pre></article><article class="exercise exercise-like" id="exercise-171"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-1518">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</div></article><article class="exercise exercise-like" id="exercise-172"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-1519">Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision/clarification à apporter. Note: cette question est facultative.</div></article></section><section class="exercises" id="exo-divisibilite"><h3 class="heading hide-type">
 <span class="type">Exercices</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="space"> </span><span class="title">Exercices</span>
 </h3>
 <article class="subexercises" id="subexercises-9"><h4 class="heading"><span class="title">À faire en classe</span></h4>
-<div class="introduction" id="introduction-138"><div class="para" id="p-1519">Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d’apprentissage plus avancés.</div></div>
-<article class="exercise exercise-like" id="exercise-172"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-139"><div class="para" id="p-1520">Convertir les nombres suivants dans la base demandée en utilisant un tableau de division.</div></div>
+<div class="introduction" id="introduction-138"><div class="para" id="p-1520">Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d’apprentissage plus avancés.</div></div>
+<article class="exercise exercise-like" id="exercise-173"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-139"><div class="para" id="p-1521">Convertir les nombres suivants dans la base demandée en utilisant un tableau de division.</div></div>
 <article class="task exercise-like" id="task-408"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1521"><div class="para" id="p-1522">
+<div class="para" id="p-1522"><div class="para" id="p-1523">
 <span class="process-math">\(1775\)</span> en binaire.</div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-208" id="answer-208"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-208"><div class="answer solution-like"><span class="process-math">\(1775=110\ 1110\ 1111_2\)</span></div></div></article><article class="task exercise-like" id="task-409"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1523"><div class="para" id="p-1524">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-209" id="answer-209"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-209"><div class="answer solution-like"><span class="process-math">\(1775=110\ 1110\ 1111_2\)</span></div></div></article><article class="task exercise-like" id="task-409"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-1524"><div class="para" id="p-1525">
 <span class="process-math">\(2730\)</span> en binaire</div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-209" id="answer-209"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-209"><div class="answer solution-like"><span class="process-math">\(2730=1010\ 1010\ 1010_2 \)</span></div></div></article><article class="task exercise-like" id="task-410"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1525"><div class="para" id="p-1526">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-210" id="answer-210"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-210"><div class="answer solution-like"><span class="process-math">\(2730=1010\ 1010\ 1010_2 \)</span></div></div></article><article class="task exercise-like" id="task-410"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-1526"><div class="para" id="p-1527">
 <span class="process-math">\(10632005\)</span> en hexadécimale</div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-210" id="answer-210"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-210"><div class="answer solution-like"><span class="process-math">\(10632005=A23B45_{16}\)</span></div></div></article></article><article class="exercise exercise-like" id="exercise-173"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-140"><div class="para" id="p-1527">Donner la liste de tous les diviseurs de chaque nombre et déduire le <span class="process-math">\(\pgcd\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-211" id="answer-211"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-211"><div class="answer solution-like"><span class="process-math">\(10632005=A23B45_{16}\)</span></div></div></article></article><article class="exercise exercise-like" id="exercise-174"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-140"><div class="para" id="p-1528">Donner la liste de tous les diviseurs de chaque nombre et déduire le <span class="process-math">\(\pgcd\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="task-411"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1528">
+<div class="para" id="p-1529">
 <span class="process-math">\(27\)</span> et <span class="process-math">\(72\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-103" id="solution-103"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-103"><div class="solution solution-like">
-<div class="para" id="p-1529">L’ensemble des diviseurs de 27 est <span class="process-math">\(\{1,3,9,27\}\text{.}\)</span>
-</div> <div class="para" id="p-1530">L’ensemble des diviseurs de 72 est <span class="process-math">\(\{1,2,3,4,6,8,9,12,18,24,36,72\}\text{.}\)</span>
-</div> <div class="para" id="p-1531">Ainsi, <span class="process-math">\(\text{pgcd}(27,72)=9\text{.}\)</span>
+<div class="para" id="p-1530">L’ensemble des diviseurs de 27 est <span class="process-math">\(\{1,3,9,27\}\text{.}\)</span>
+</div> <div class="para" id="p-1531">L’ensemble des diviseurs de 72 est <span class="process-math">\(\{1,2,3,4,6,8,9,12,18,24,36,72\}\text{.}\)</span>
+</div> <div class="para" id="p-1532">Ainsi, <span class="process-math">\(\text{pgcd}(27,72)=9\text{.}\)</span>
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-412"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1532">
+<div class="para" id="p-1533">
 <span class="process-math">\(66\)</span> et <span class="process-math">\(111\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-104" id="solution-104"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-104"><div class="solution solution-like">
-<div class="para" id="p-1533">L’ensemble des diviseurs de 66 est <span class="process-math">\(\{1,2,3,6,11,22,33,66\}\text{.}\)</span>
-</div> <div class="para" id="p-1534">L’ensemble des diviseurs de 111 est <span class="process-math">\(\{1,3,37,111\}\text{.}\)</span>
-</div> <div class="para" id="p-1535">Ainsi, <span class="process-math">\(\text{pgcd}(66,111)=3\text{.}\)</span>
+<div class="para" id="p-1534">L’ensemble des diviseurs de 66 est <span class="process-math">\(\{1,2,3,6,11,22,33,66\}\text{.}\)</span>
+</div> <div class="para" id="p-1535">L’ensemble des diviseurs de 111 est <span class="process-math">\(\{1,3,37,111\}\text{.}\)</span>
+</div> <div class="para" id="p-1536">Ainsi, <span class="process-math">\(\text{pgcd}(66,111)=3\text{.}\)</span>
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-413"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1536">
+<div class="para" id="p-1537">
 <span class="process-math">\(60\)</span> et <span class="process-math">\(100\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-105" id="solution-105"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-105"><div class="solution solution-like">
-<div class="para" id="p-1537">L’ensemble des diviseurs de 60 est <span class="process-math">\(\{1,2,3,4,5,6,10,12,15,20,30,60\}\text{.}\)</span>
-</div> <div class="para" id="p-1538">L’ensemble des diviseurs de 100 est <span class="process-math">\(\{1,2,4,5,10,20,25,50,100\}\text{.}\)</span>
-</div> <div class="para" id="p-1539">Ainsi, <span class="process-math">\(\text{pgcd}(60,100)=20\text{.}\)</span>
+<div class="para" id="p-1538">L’ensemble des diviseurs de 60 est <span class="process-math">\(\{1,2,3,4,5,6,10,12,15,20,30,60\}\text{.}\)</span>
+</div> <div class="para" id="p-1539">L’ensemble des diviseurs de 100 est <span class="process-math">\(\{1,2,4,5,10,20,25,50,100\}\text{.}\)</span>
+</div> <div class="para" id="p-1540">Ainsi, <span class="process-math">\(\text{pgcd}(60,100)=20\text{.}\)</span>
 </div>
 </div></div>
-</div></article></article><article class="exercise exercise-like" id="exercise-174"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-141"><div class="para" id="p-1540">Calculer le <span class="process-math">\(\pgcd\)</span> des paires de nombres suivants en utilisant l’algorithme d’Euclide.</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-175"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-141"><div class="para" id="p-1541">Calculer le <span class="process-math">\(\pgcd\)</span> des paires de nombres suivants en utilisant l’algorithme d’Euclide.</div></div>
 <article class="task exercise-like" id="task-414"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1541">
+<div class="para" id="p-1542">
 <span class="process-math">\(1988\)</span> et <span class="process-math">\(1992\)</span>
 </div>
 <div class="solutions">
@@ -850,11 +850,11 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
 1988\amp = 4\cdot 497 
 \end{align*}
 </div>
-<div class="para" id="p-1542">Ainsi, <span class="process-math">\(\text{pgcd}(1992,1988)=4\)</span>
+<div class="para" id="p-1543">Ainsi, <span class="process-math">\(\text{pgcd}(1992,1988)=4\)</span>
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-415"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1543">
+<div class="para" id="p-1544">
 <span class="process-math">\(1234\)</span> et <span class="process-math">\(5678\)</span>
 </div>
 <div class="solutions">
@@ -870,11 +870,11 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
 8\amp = 2\cdot 4 
 \end{align*}
 </div>
-<div class="para" id="p-1544">Ainsi, <span class="process-math">\(\text{pgcd}(1234,5678)=2\)</span>
+<div class="para" id="p-1545">Ainsi, <span class="process-math">\(\text{pgcd}(1234,5678)=2\)</span>
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-416"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1545">
+<div class="para" id="p-1546">
 <span class="process-math">\(1357\)</span> et <span class="process-math">\(2468\)</span>
 </div>
 <div class="solutions">
@@ -891,11 +891,11 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
 7\amp = 1\cdot 7 
 \end{align*}
 </div>
-<div class="para" id="p-1546">Ainsi, <span class="process-math">\(\text{pgcd}(1357,2468)=1\)</span>
+<div class="para" id="p-1547">Ainsi, <span class="process-math">\(\text{pgcd}(1357,2468)=1\)</span>
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-417"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1547">
+<div class="para" id="p-1548">
 <span class="process-math">\(1272\)</span> et <span class="process-math">\(1488\)</span>
 </div>
 <div class="solutions">
@@ -908,11 +908,11 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
 192\amp = 24\cdot 8 
 \end{align*}
 </div>
-<div class="para" id="p-1548">Ainsi, <span class="process-math">\(\text{pgcd}(1272,1488)=24\)</span>
+<div class="para" id="p-1549">Ainsi, <span class="process-math">\(\text{pgcd}(1272,1488)=24\)</span>
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-418"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<div class="para" id="p-1549">
+<div class="para" id="p-1550">
 <span class="process-math">\(2184\)</span> et <span class="process-math">\(6138\)</span>
 </div>
 <div class="solutions">
@@ -930,11 +930,11 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
 12\amp = 6\cdot 2 
 \end{align*}
 </div>
-<div class="para" id="p-1550">Ainsi, <span class="process-math">\(\text{pgcd}(6138,2184)=6\)</span>
+<div class="para" id="p-1551">Ainsi, <span class="process-math">\(\text{pgcd}(6138,2184)=6\)</span>
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-419"><h6 class="heading"><span class="codenumber">(f)</span></h6>
-<div class="para" id="p-1551">
+<div class="para" id="p-1552">
 <span class="process-math">\(1339\)</span> et <span class="process-math">\(7828\)</span>
 </div>
 <div class="solutions">
@@ -947,72 +947,72 @@ r_{t-1}&amp;=r_{t}q_{t+1}+r_{t+1} &amp; &amp;\text{avec} &amp;&amp;\phantom{0\le
 206\amp = 103\cdot 2 
 \end{align*}
 </div>
-<div class="para" id="p-1552">Ainsi, <span class="process-math">\(\text{pgcd}(7828,1339)=103\)</span>
+<div class="para" id="p-1553">Ainsi, <span class="process-math">\(\text{pgcd}(7828,1339)=103\)</span>
 </div>
 </div></div>
-</div></article></article><article class="exercise exercise-like" id="exercise-175"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="p-1553">Donner une explication intuitive du fait que si <span class="process-math">\(a,b\in \mathbb{N}\)</span> sont des naturels non nuls et que <span class="process-math">\(\pgcd(a,b)=d\text{,}\)</span> alors <span class="process-math">\(\pgcd{\left(\frac{a}{d},\frac{b}{d}\right)}=1\text{.}\)</span>
+</div></article></article><article class="exercise exercise-like" id="exercise-176"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para" id="p-1554">Donner une explication intuitive du fait que si <span class="process-math">\(a,b\in \mathbb{N}\)</span> sont des naturels non nuls et que <span class="process-math">\(\pgcd(a,b)=d\text{,}\)</span> alors <span class="process-math">\(\pgcd{\left(\frac{a}{d},\frac{b}{d}\right)}=1\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-20" id="hint-20"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-20"><div class="hint solution-like"><div class="para" id="p-1554">Si le <span class="process-math">\(\text{pgcd}\left(\frac{a}{d},\frac{b}{d}\right)\)</span> était égal à <span class="process-math">\(c&gt;1\text{,}\)</span> que pourrait-on dire que <span class="process-math">\(d\text{?}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-20" id="hint-20"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-20"><div class="hint solution-like"><div class="para" id="p-1555">Si le <span class="process-math">\(\text{pgcd}\left(\frac{a}{d},\frac{b}{d}\right)\)</span> était égal à <span class="process-math">\(c&gt;1\text{,}\)</span> que pourrait-on dire que <span class="process-math">\(d\text{?}\)</span>
 </div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-112" id="solution-112"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-112"><div class="solution solution-like">Suppons <span class="process-math">\(\text{pgcd}\left(\frac{a}{d},\frac{b}{d}\right)= c &gt; 1\text{.}\)</span> Dans ce cas, on a que <span class="process-math">\(cd &gt; d \text{.}\)</span> Aussi, on sait que <span class="process-math">\(\frac{a}{d}=cq_1\)</span> pour <span class="process-math">\(q_1\in \Z\text{,}\)</span> car <span class="process-math">\(c\left| \frac{a}{d}\right.\text{.}\)</span> De même, on a que <span class="process-math">\(\frac{b}{d}=cq_2\)</span> pour <span class="process-math">\(q_2\in \Z\text{.}\)</span> Cela implique que <span class="process-math">\(a=q_1(dc)\)</span> et <span class="process-math">\(b=q_2(dc)\text{,}\)</span> c’est-à-dire que <span class="process-math">\((dc)|a\)</span> et <span class="process-math">\((dc)|b\text{.}\)</span> Or, puisque <span class="process-math">\(dc&gt; d \text{,}\)</span> cela contredit le fait que <span class="process-math">\(\text{pgcd}(a,b)=d\text{.}\)</span>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-176"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-142"><div class="para" id="p-1555">L’algorithme d’Euclide permet de trouver le <span class="process-math">\(\pgcd\)</span> d’entiers strictement positifs. On peut toutefois facilement étendre la notion aux entiers quelconques.</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-177"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-142"><div class="para" id="p-1556">L’algorithme d’Euclide permet de trouver le <span class="process-math">\(\pgcd\)</span> d’entiers strictement positifs. On peut toutefois facilement étendre la notion aux entiers quelconques.</div></div>
 <article class="task exercise-like" id="task-420"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1556">Montrer que si <span class="process-math">\(a&gt;0\text{,}\)</span> alors <span class="process-math">\(\pgcd(a,0)=a\text{.}\)</span>
+<div class="para" id="p-1557">Montrer que si <span class="process-math">\(a&gt;0\text{,}\)</span> alors <span class="process-math">\(\pgcd(a,0)=a\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-113" id="solution-113"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-113"><div class="solution solution-like">Posons <span class="process-math">\(d=\text{pgcd}(a,0)\text{.}\)</span> On sait que pour tout <span class="process-math">\(a \in \Z\text{,}\)</span> si <span class="process-math">\(a\neq 0\text{,}\)</span> alors <span class="process-math">\(a|0\)</span> et <span class="process-math">\(a|a\text{.}\)</span> Ainsi, par définition de <span class="process-math">\(d\text{,}\)</span> on a que <span class="process-math">\(a\leq d\text{.}\)</span> Or, puisque <span class="process-math">\(d|a\text{,}\)</span> on a aussi que <span class="process-math">\(d\leq a\text{.}\)</span> Ainsi, <span class="process-math">\(a\leq d \leq a\)</span> et donc <span class="process-math">\(a=d\text{.}\)</span>
 </div></div>
 </div></article><article class="task exercise-like" id="task-421"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1557">Montrer que si <span class="process-math">\(a&lt;0\)</span> et <span class="process-math">\(b\geq 0\text{,}\)</span> alors <span class="process-math">\(\pgcd{(a,b)}=\pgcd{(|a|,b)}\text{.}\)</span>
+<div class="para" id="p-1558">Montrer que si <span class="process-math">\(a&lt;0\)</span> et <span class="process-math">\(b\geq 0\text{,}\)</span> alors <span class="process-math">\(\pgcd{(a,b)}=\pgcd{(|a|,b)}\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-114" id="solution-114"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-114"><div class="solution solution-like">Posons <span class="process-math">\(d_1=\text{pgcd}(a,b)\)</span> et <span class="process-math">\(d_2=\text{pgcd}(|a|,b)\text{.}\)</span> Ainsi, on sait que <span class="process-math">\(d_1|a\)</span> et <span class="process-math">\(d_1|b\text{,}\)</span> alors que <span class="process-math">\(d_2|(|a|)\)</span> et <span class="process-math">\(d_2|b\text{.}\)</span> On a donc <span class="process-math">\(a=d_1q_1\)</span> et <span class="process-math">\(|a|=-a=d_2q_2\)</span> pour <span class="process-math">\(q_1,\ q_2\ \in \Z\text{.}\)</span> En multipliant les deux égalités par <span class="process-math">\(-1\text{,}\)</span> on obtient <span class="process-math">\(-a=|a|=d_1(-q_1)\)</span> et <span class="process-math">\(a=d_2(-q_2)\text{,}\)</span> c’est-à-dire que <span class="process-math">\(d_1|(|a|)\)</span> et <span class="process-math">\(d_2|a\text{.}\)</span> Par définition de <span class="process-math">\(d_1\)</span> et <span class="process-math">\(d_2\text{,}\)</span> on a que <span class="process-math">\(d_1\leq d_2\leq d_1\text{,}\)</span> et donc <span class="process-math">\(d_1=d_2\text{.}\)</span>
 </div></div>
 </div></article><article class="task exercise-like" id="task-422"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1558">Montrer que pour <span class="process-math">\(a,b\in \Z\text{,}\)</span> on a <span class="process-math">\(\pgcd{(a,b)}=\pgcd{(|a|,|b|)}\text{.}\)</span>
+<div class="para" id="p-1559">Montrer que pour <span class="process-math">\(a,b\in \Z\text{,}\)</span> on a <span class="process-math">\(\pgcd{(a,b)}=\pgcd{(|a|,|b|)}\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-115" id="solution-115"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-115"><div class="solution solution-like">
-<div class="para" id="p-1559">Par ce qu’on a fait précédemment, il suffit de montrer que l’égalité est vraie pour <span class="process-math">\(a,b\lt 0\text{.}\)</span>
-</div> <div class="para" id="p-1560">Posons <span class="process-math">\(d_1=\text{pgcd}(a,b)\text{.}\)</span> Ainsi, on sait que <span class="process-math">\(d_1|a\)</span> et <span class="process-math">\(d_1|b\text{.}\)</span> On a donc <span class="process-math">\(a=d_1q_1\)</span> et <span class="process-math">\(b=d_1q_2\)</span> pour <span class="process-math">\(q_1,\ q_2\ \in \Z\text{.}\)</span> En multipliant les deux égalités par <span class="process-math">\(-1\text{,}\)</span> on obtient <span class="process-math">\(-a=|a|=d_1(-q_1)\)</span> et <span class="process-math">\(-b=|b|=d_2(-q_2)\text{,}\)</span> c’est-à-dire que <span class="process-math">\(d_1|(|a|)\)</span> et <span class="process-math">\(d_2|(|b|)\text{.}\)</span>
-</div> <div class="para" id="p-1561">Posons <span class="process-math">\(d_2=\text{pgcd}(|a|,|b|)\text{.}\)</span> Ainsi, on sait que <span class="process-math">\(d_2|(|a|)\)</span> et <span class="process-math">\(d_2|(|b|)\text{.}\)</span> On a donc <span class="process-math">\(|a|=-a=d_2k_1\)</span> et <span class="process-math">\(|b|=-b=d_2k_2\)</span> pour <span class="process-math">\(k_1,\ k_2\ \in \Z\text{.}\)</span> En multipliant les deux égalités par <span class="process-math">\(-1\text{,}\)</span> on obtient <span class="process-math">\(a=d_1(-k_1)\)</span> et <span class="process-math">\(b=d_2(-k_2)\text{,}\)</span> c’est-à-dire que <span class="process-math">\(d_2|a\)</span> et <span class="process-math">\(d_2|b\text{.}\)</span>
-</div> <div class="para" id="p-1562">Par définition de <span class="process-math">\(d_1\)</span> et <span class="process-math">\(d_2\text{,}\)</span> on a que <span class="process-math">\(d_1\leq d_2\leq d_1\text{,}\)</span> et donc <span class="process-math">\(d_1=d_2\text{.}\)</span>
+<div class="para" id="p-1560">Par ce qu’on a fait précédemment, il suffit de montrer que l’égalité est vraie pour <span class="process-math">\(a,b\lt 0\text{.}\)</span>
+</div> <div class="para" id="p-1561">Posons <span class="process-math">\(d_1=\text{pgcd}(a,b)\text{.}\)</span> Ainsi, on sait que <span class="process-math">\(d_1|a\)</span> et <span class="process-math">\(d_1|b\text{.}\)</span> On a donc <span class="process-math">\(a=d_1q_1\)</span> et <span class="process-math">\(b=d_1q_2\)</span> pour <span class="process-math">\(q_1,\ q_2\ \in \Z\text{.}\)</span> En multipliant les deux égalités par <span class="process-math">\(-1\text{,}\)</span> on obtient <span class="process-math">\(-a=|a|=d_1(-q_1)\)</span> et <span class="process-math">\(-b=|b|=d_2(-q_2)\text{,}\)</span> c’est-à-dire que <span class="process-math">\(d_1|(|a|)\)</span> et <span class="process-math">\(d_2|(|b|)\text{.}\)</span>
+</div> <div class="para" id="p-1562">Posons <span class="process-math">\(d_2=\text{pgcd}(|a|,|b|)\text{.}\)</span> Ainsi, on sait que <span class="process-math">\(d_2|(|a|)\)</span> et <span class="process-math">\(d_2|(|b|)\text{.}\)</span> On a donc <span class="process-math">\(|a|=-a=d_2k_1\)</span> et <span class="process-math">\(|b|=-b=d_2k_2\)</span> pour <span class="process-math">\(k_1,\ k_2\ \in \Z\text{.}\)</span> En multipliant les deux égalités par <span class="process-math">\(-1\text{,}\)</span> on obtient <span class="process-math">\(a=d_1(-k_1)\)</span> et <span class="process-math">\(b=d_2(-k_2)\text{,}\)</span> c’est-à-dire que <span class="process-math">\(d_2|a\)</span> et <span class="process-math">\(d_2|b\text{.}\)</span>
+</div> <div class="para" id="p-1563">Par définition de <span class="process-math">\(d_1\)</span> et <span class="process-math">\(d_2\text{,}\)</span> on a que <span class="process-math">\(d_1\leq d_2\leq d_1\text{,}\)</span> et donc <span class="process-math">\(d_1=d_2\text{.}\)</span>
 </div>
 </div></div>
 </div></article></article><article class="exercise exercise-like" id="exo-Bezout"><h5 class="heading">
 <span class="codenumber">6<span class="period">.</span></span><span class="space"> </span><span class="title">Le lemme de Bézout.</span>
 </h5>
 <div class="introduction" id="introduction-143">
-<div class="para logical" id="p-1563">
+<div class="para logical" id="p-1564">
 <div class="para">Soit <span class="process-math">\(a,b\)</span> des naturels non nuls tels que <span class="process-math">\(\pgcd{(a,b)}=d\text{.}\)</span> Alors il existe <span class="process-math">\(x,y\in \Z\)</span> tels que</div>
 <div class="displaymath process-math">
 \begin{equation*}
 d=ax+by
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1564">Cette relation a des conséquences importantes en théorie des nombres. On montre dans cet exercice comment démontrer l’existence des entiers <span class="process-math">\(x,y\)</span> et on explique comment on peut trouver de tels entiers.</div>
+</div> <div class="para" id="p-1565">Cette relation a des conséquences importantes en théorie des nombres. On montre dans cet exercice comment démontrer l’existence des entiers <span class="process-math">\(x,y\)</span> et on explique comment on peut trouver de tels entiers.</div>
 </div>
 <article class="task exercise-like" id="task-423"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1565">On considère l’ensemble <span class="process-math">\(S=\{n\in \N~|~ n=ax+by \text{ avec } x,y\in \Z\text{ et } n&gt;0\}\text{.}\)</span> C’est donc l’ensemble des naturels plus grands que zéro qu’il est possible de former avec <span class="process-math">\(a,b\)</span> en les combinant avec des entiers quelconques.</div> <div class="para" id="p-1566">Montrer que <span class="process-math">\(S\)</span> est non vide. En particulier, puisque <span class="process-math">\(S\)</span> est un ensemble de nombres naturels, il existe un plus petit élément.</div>
+<div class="para" id="p-1566">On considère l’ensemble <span class="process-math">\(S=\{n\in \N~|~ n=ax+by \text{ avec } x,y\in \Z\text{ et } n&gt;0\}\text{.}\)</span> C’est donc l’ensemble des naturels plus grands que zéro qu’il est possible de former avec <span class="process-math">\(a,b\)</span> en les combinant avec des entiers quelconques.</div> <div class="para" id="p-1567">Montrer que <span class="process-math">\(S\)</span> est non vide. En particulier, puisque <span class="process-math">\(S\)</span> est un ensemble de nombres naturels, il existe un plus petit élément.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-116" id="solution-116"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-116"><div class="solution solution-like">Il suffit de montrer qu’il existe au moins une pare <span class="process-math">\((x,y)\in \Z\times \Z\)</span> telle que <span class="process-math">\(ax+by&gt; 0\text{.}\)</span> Pour cela, on prend <span class="process-math">\(x=\frac{|a|}{a}\)</span> et <span class="process-math">\(y=\frac{|b|}{b}\text{.}\)</span> Dans ce cas, on a que <span class="process-math">\(ax=|a|\)</span> et <span class="process-math">\(by=|b|\text{.}\)</span> Ainsi, <span class="process-math">\(ax+by\gt 0\text{,}\)</span> car on suppose <span class="process-math">\(|a|+|b|\neq 0\)</span> si on calcul le <span class="process-math">\(\pgcd{(a,b)}\text{.}\)</span>
 </div></div>
 </div></article><article class="task exercise-like" id="task-424"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="introduction" id="introduction-144"><div class="para" id="p-1567">On pose <span class="process-math">\(d\in S\)</span> le plus petit élément de cet ensemble. On veut montrer que <span class="process-math">\(d|a\)</span> et <span class="process-math">\(d|b\text{.}\)</span>
+<div class="introduction" id="introduction-144"><div class="para" id="p-1568">On pose <span class="process-math">\(d\in S\)</span> le plus petit élément de cet ensemble. On veut montrer que <span class="process-math">\(d|a\)</span> et <span class="process-math">\(d|b\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="task-425"><h6 class="heading"><span class="codenumber">(i)</span></h6>
-<div class="para logical" id="p-1568">
+<div class="para logical" id="p-1569">
 <div class="para">On considère la division de <span class="process-math">\(a\)</span> par <span class="process-math">\(d\text{,}\)</span> qu’on écrit sous la forme quotient reste</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a=bq+r\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1569">Montrer que <span class="process-math">\(r\in S\cup\{0\}\)</span> en l’écrivant comme <span class="process-math">\(ax+by\)</span> avec <span class="process-math">\(x,y\in \mathbb{Z}\text{.}\)</span>
+</div> <div class="para" id="p-1570">Montrer que <span class="process-math">\(r\in S\cup\{0\}\)</span> en l’écrivant comme <span class="process-math">\(ax+by\)</span> avec <span class="process-math">\(x,y\in \mathbb{Z}\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-117" id="solution-117"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-117"><div class="solution solution-like">Puisque <span class="process-math">\(d\in S\text{,}\)</span> on peut écrire <span class="process-math">\(d=ax_1+by_1\)</span> pour <span class="process-math">\(x_1,\ y_1\ \in \Z\text{.}\)</span> Ainsi, on a<div class="displaymath process-math" id="md-56">
@@ -1025,24 +1025,24 @@ r\amp = a-(ax_1+by_1)q \\
 </div>où <span class="process-math">\(x=1-qx_1\ \in\ \Z\)</span> et <span class="process-math">\(y=-qy_1\ \in\ \Z\text{.}\)</span> Ainsi, soit <span class="process-math">\(r=0\text{,}\)</span> ou bien <span class="process-math">\(r\ \in\ \Z\text{.}\)</span>
 </div></div>
 </div></article><article class="task exercise-like" id="task-426"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
-<div class="para" id="p-1570">Utiliser le fait que dans la forme quotient reste, on a <span class="process-math">\(0\leq r&lt; d\text{,}\)</span> le fait que <span class="process-math">\(r\in S\cup\{0\}\)</span> et le fait que <span class="process-math">\(d\)</span> est le plus petit élément de <span class="process-math">\(S\)</span> pour déterminer la valeur de <span class="process-math">\(r\text{.}\)</span>
+<div class="para" id="p-1571">Utiliser le fait que dans la forme quotient reste, on a <span class="process-math">\(0\leq r&lt; d\text{,}\)</span> le fait que <span class="process-math">\(r\in S\cup\{0\}\)</span> et le fait que <span class="process-math">\(d\)</span> est le plus petit élément de <span class="process-math">\(S\)</span> pour déterminer la valeur de <span class="process-math">\(r\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-118" id="solution-118"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-118"><div class="solution solution-like">On veut montrer que <span class="process-math">\(r=0\text{.}\)</span> En effet, Puisque <span class="process-math">\(r\in S\cup\{0\}\text{,}\)</span> si <span class="process-math">\(r\neq 0\text{,}\)</span> alors <span class="process-math">\(r\in S\)</span> et <span class="process-math">\(0\lt r \lt d\text{.}\)</span> Or, si <span class="process-math">\(r\in\ S\text{,}\)</span> alors par définition de <span class="process-math">\(d\text{,}\)</span> on a que <span class="process-math">\(d\leq r\text{,}\)</span> ce qui est impossible si <span class="process-math">\(0\lt r \lt d\text{.}\)</span> On doit donc avoir <span class="process-math">\(r\in\ \{0\}\text{,}\)</span> c’est-à-dire que <span class="process-math">\(r=0\text{.}\)</span>
 </div></div>
 </div></article><article class="task exercise-like" id="task-427"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
-<div class="para" id="p-1571">Conclure que <span class="process-math">\(d|a\text{.}\)</span>
+<div class="para" id="p-1572">Conclure que <span class="process-math">\(d|a\text{.}\)</span>
 </div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like">Puisque <span class="process-math">\(r=0\text{,}\)</span> on a que <span class="process-math">\(a=dq\text{,}\)</span> et donc <span class="process-math">\(d|a\text{.}\)</span>
 </div></div>
 </div></article></article><article class="task exercise-like" id="task-428"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1572">Argumenter que <span class="process-math">\(d\)</span> divise aussi <span class="process-math">\(b\)</span> pour les mêmes raisons.</div>
+<div class="para" id="p-1573">Argumenter que <span class="process-math">\(d\)</span> divise aussi <span class="process-math">\(b\)</span> pour les mêmes raisons.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-120" id="solution-120"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-120"><div class="solution solution-like">On remplace <span class="process-math">\(a\)</span> par <span class="process-math">\(b\)</span> dans la partie précédente, et on obtient que <span class="process-math">\(d|b\text{.}\)</span>
 </div></div>
 </div></article><article class="task exercise-like" id="task-429"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1573">Le plus petit élément de <span class="process-math">\(S\)</span> est donc un diviseur de <span class="process-math">\(a\)</span> et <span class="process-math">\(b\text{.}\)</span> On va maintenant montrer que c’est nécessairement le <span class="process-math">\(\pgcd\)</span> de ces deux nombres.</div> <div class="para logical" id="p-1574">
+<div class="para" id="p-1574">Le plus petit élément de <span class="process-math">\(S\)</span> est donc un diviseur de <span class="process-math">\(a\)</span> et <span class="process-math">\(b\text{.}\)</span> On va maintenant montrer que c’est nécessairement le <span class="process-math">\(\pgcd\)</span> de ces deux nombres.</div> <div class="para logical" id="p-1575">
 <div class="para">Si <span class="process-math">\(c\)</span> est un diviseur commun de <span class="process-math">\(a\)</span> et <span class="process-math">\(b\text{,}\)</span> montrer que <span class="process-math">\(c\)</span> divise <span class="process-math">\(d\)</span> en utilisant l’équation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1059,27 +1059,27 @@ d=as+bt=cq_1s+cq_2t = c(q_1s+q_2t).
 </div>Ainsi, <span class="process-math">\(c|d\text{,}\)</span> car <span class="process-math">\((q_1s+q_2t)\ \in\ \Z\text{.}\)</span>
 </div></div>
 </div></article></article></article><article class="subexercises" id="subexercises-10"><h4 class="heading"><span class="title">Exercices supplémentaires</span></h4>
-<article class="exercise exercise-like" id="exercise-178"><h5 class="heading">
+<article class="exercise exercise-like" id="exercise-179"><h5 class="heading">
 <span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Le plus petit commun multiple.</span>
 </h5>
-<div class="introduction" id="introduction-145"><div class="para logical" id="p-1575">
+<div class="introduction" id="introduction-145"><div class="para logical" id="p-1576">
 <div class="para">Soit <span class="process-math">\(a,b\in \Z\)</span> deux entiers non nuls. On définit le plus petit commun multiple de <span class="process-math">\(a,b\text{,}\)</span> noté <span class="process-math">\(\ppcm{(a,b)}\)</span> comme étant le nombre <span class="process-math">\(m\)</span> qui satisfait les propriétés suivantes:</div>
 <ol class="lower-alpha">
-<li id="li-371"><div class="para" id="p-1576"><span class="process-math">\(m&gt;0\text{;}\)</span></div></li>
-<li id="li-372"><div class="para" id="p-1577">
+<li id="li-371"><div class="para" id="p-1577"><span class="process-math">\(m&gt;0\text{;}\)</span></div></li>
+<li id="li-372"><div class="para" id="p-1578">
 <span class="process-math">\(a|m\)</span> et <span class="process-math">\(b|m\text{;}\)</span>
 </div></li>
-<li id="li-373"><div class="para" id="p-1578">Pour tout <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> si <span class="process-math">\(a|n\)</span> et <span class="process-math">\(b|n\text{,}\)</span> alors <span class="process-math">\(m\leq n\text{.}\)</span>
+<li id="li-373"><div class="para" id="p-1579">Pour tout <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> si <span class="process-math">\(a|n\)</span> et <span class="process-math">\(b|n\text{,}\)</span> alors <span class="process-math">\(m\leq n\text{.}\)</span>
 </div></li>
 </ol>
 <div class="para">Calculer les plus petits communs multiples suivants.</div>
 </div></div>
 <article class="task exercise-like" id="task-430"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1579"><span class="process-math">\(\ppcm{(2,3)}\)</span></div></article><article class="task exercise-like" id="task-431"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1580"><span class="process-math">\(\ppcm{(2,4)}\)</span></div></article><article class="task exercise-like" id="task-432"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1581"><span class="process-math">\(\ppcm{(12,18)}\)</span></div></article><article class="task exercise-like" id="task-433"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1582"><span class="process-math">\(\ppcm{(2^2\cdot 3,2\cdot 3^2)}\)</span></div></article><article class="task exercise-like" id="task-434"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<div class="para" id="p-1583"><span class="process-math">\(\ppcm{(2^4\cdot 3\cdot 4,2^2\cdot 3^3\cdot 7)}\)</span></div></article></article></article></section></section></div>
+<div class="para" id="p-1580"><span class="process-math">\(\ppcm{(2,3)}\)</span></div></article><article class="task exercise-like" id="task-431"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-1581"><span class="process-math">\(\ppcm{(2,4)}\)</span></div></article><article class="task exercise-like" id="task-432"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-1582"><span class="process-math">\(\ppcm{(12,18)}\)</span></div></article><article class="task exercise-like" id="task-433"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="para" id="p-1583"><span class="process-math">\(\ppcm{(2^2\cdot 3,2\cdot 3^2)}\)</span></div></article><article class="task exercise-like" id="task-434"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="para" id="p-1584"><span class="process-math">\(\ppcm{(2^4\cdot 3\cdot 4,2^2\cdot 3^3\cdot 7)}\)</span></div></article></article></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-representation.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-modulo.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

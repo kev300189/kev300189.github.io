@@ -11,8 +11,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraphe</span></h4>
-<div class="para">Finalement, la division en binaire s’effectue aussi comme la division en base dix, en cherchant combien de fois on peut mettre ce par quoi on divise dans le nombre divisé. Une fois que suffisamment de chiffres du dividende (le nombre qui est divisé) ont été considérés pour que le diviseur puisse être soustrait au moins une fois, on utilise les autres chiffres du dividende de droite à gauche en abaissant un à un après la soustraction. Un exemple est illustré ci-dessous.</div>
+<h5 class="heading"><span class="type">Paragraphe</span></h5>
+<div class="para logical">
+<div class="para">En suivant la méthode pour les entiers, on décompose l’un des facteur en une somme de de puissances de deux. Ici, on choisit de décomposer le deuxième facteur, puisqu’il contient moins de chiffre. On a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+101.101_2=100_2+1_2+0.1_2+0.001_2\text{.}
+\end{equation*}
+</div>
+<div class="para">Le produit devient</div>
+<div class="displaymath process-math">
+\begin{align*}
+10011.1011_2\times 101.101_2&amp;=10011.1011_2\times (100_2+1_2+0.1_2+0.001_2)\\
+&amp;=10011.1011_2\times 100_2+10011.1011_2\times 1_2+10011.1011_2\times 0.1_2+10011.1011_2\times 0.001_2.\\
+\end{align*}
+<p class="intertext">En déplaçant le point, on trouve</p>
+\begin{align*}
+\phantom{10011.1011_2\times 101.101_2}&amp;=1001110.11_2+10011.1011_2+1001.11011_2+10.0111011_2\\
+\phantom{10011.1011_2\times 101.101_2}&amp;=1101110.1011111
+\end{align*}
+</div>
+</div>
 <span class="incontext"><a href="sec-representation.html#p-1309" class="internal">Contexte</a></span>
 </body>
 </html>
