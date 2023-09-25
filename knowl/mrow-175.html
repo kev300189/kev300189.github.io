@@ -11,10 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-puissmoinsnombre.html">
+<div class="displaymath process-math">
 \begin{align*}
-A-B&amp;=A-B+2^n-2^n\\
-&amp;=A+(2^n-B)-2^n
+R&amp;\equiv (\neg A \wedge B\wedge P)\vee( A \wedge \neg B\wedge P)\vee(A \wedge  B\wedge  \neg P)\vee(A \wedge B\wedge P)&amp;&amp;\\
+&amp;\equiv (((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee(A \wedge  B\wedge  \neg P)\vee(A \wedge B\wedge P)&amp;&amp;\text{distributivité de la conjonction sur la disjonction}\\
+&amp;\equiv(((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee ((A\wedge B)\wedge(\neg P \vee P))&amp;&amp;\text{distributivité de la conjonction sur la disjonction}\\
+&amp;\equiv (((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee ((A\wedge B)\wedge(V))&amp;&amp;\text{propriété de la négation}\\
+&amp;\equiv (((\neg A \wedge B)\vee(A \wedge \neg B)) \wedge P )\vee (A\wedge B)&amp;&amp;\text{propriété d'identité}\\
+&amp;\equiv((A\oplus B)\wedge P)\vee (A\wedge B)&amp;&amp; \text{définition du ou exclusif}
 \end{align*}
 </div>
 <span class="incontext"><a href="sec-representation.html#md-44" class="internal">Contexte</a></span>
