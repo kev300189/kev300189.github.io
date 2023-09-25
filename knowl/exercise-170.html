@@ -30,7 +30,7 @@ sagecell.makeSagecell({
 <div class="para">L’algorithme suivant retourne un couple <span class="process-math">\(q,r\)</span> représentant le quotient et le reste de la division <span class="process-math">\(a/b\text{,}\)</span> mais il est incomplet. Pour chacun des quatre endroits écrits “ÀCOMPLÉTER”, écrire les instructions pour que l’algorithme fonctionne. Il est possible de le tester à même la cellule.</div> <figure class="listing figure-like"><div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-py">def divisionEuclidienne(a, b):
     #Une algorithme qui retourne (q,r) la forme quotient reste de a/b:  a=bq+r
     if :#ÀCOMPLÉTER1
-        print('Le pgcd est non défini')
+        print('Le quotient est non défini')
     elif a == 0:
         return #ÀCOMPLÉTER2
     else:
@@ -43,7 +43,7 @@ sagecell.makeSagecell({
                 q = q + s
                 r = #ÀCOMPLÉTER3
             return q, r
-        else: #a &lt;0
+        else: a &lt;0
             while r &lt; 0:
                 q = q - s
                 r = #ÀCOMPLÉTER4

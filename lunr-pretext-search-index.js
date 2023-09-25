@@ -2455,7 +2455,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "La divisibilité dans les entiers",
-  "body": "  La divisibilité dans les entiers    Si on prend deux nombres , on peut les additionner, les soustraire et les multiplier et le résultat sera encore un entier. La division est la seule des quatre opérations élémentaires qui n'est pas garantie de rester un entier. C'est peut-être ce qui en fait une opération si riche et si intéressante. Quand est-ce que la division de deux nombres va produire un entier? Comment le vérifier?  Dans cette section, on rappelle la notion de division entière, quotient et reste, on définit le plus grand commun diviseur et le plus petit commun multiple de deux nombres naturels, on montre l'algorithme d'Euclide pour calculer le plus grand commun diviseur.     L'opération de division  Soit deux entiers. Si on divise par , le résultat peut être un entier, comme par exemple avec , un rationnel, avec en exemple ou même non défini, si on divise par . On expliquera prochainement la raison pour laquelle le fait que la division par est non définie est une bonne chose. Dans le cas où , donc où le résultat de la division produit un entier, on dit que divise , et on écrit (la barre étant verticale et non pas oblique comme pour l'opérateur de division).   La divisibilité  Soit avec . On dit que divise et on écrit si le résultat est un entier. On note que les quatre conditions suivantes sont équivalentes:   pour un certain  est un facteur (ou diviseur) de  est un multiple de .     Quand on écrit , c'est soit vrai, soit faux selon . On a donc une proposition. Pour écrire la négation de cette proposition, on peut utiliser la notation pour dire que me divise pas .   Exemples de divisibilité   On cherche la valeur de vérité des propositions suivantes.                 L'énoncé est vrai puisque et .  L'énoncé est faux étant donné que et que .  L'énoncé est faux, car non ne peut pas diviser par .  L'énoncé est vrai, car . En fait, n'importe quel nombre non nul divise .  L'énoncé est vrai puisque est un facteur de .  Le fait que le nombre est négatif ne pose pas de problème. On peut utiliser n'importe quelle des définitions équivalentes, par exemple est un multiple de , spécifiquement fois et donc est vraie.  Puisque , on conclut que est un facteur de et donc que peu importe la valeur de non nulle. La proposition est vraie.  Si on peut montrer une valeur de qui ne respecte pas la condition, alors la proposition sera fausse. Par exemple, si , c'est faux de dire que puisque et ce n'est pas un entier. Donc la proposition est fausse.  Si on arrive à trouver une valeur, la proposition d'existence sera vérifiée. En prenant , on observe que et donc la proposition est vraie.      Les valeurs numériques de l'exemple précédent étaient relativement petites qu'on savait si la relation de divisibilité était vraie assez facilement. Par contre, si on se demande est-ce que divise , alors là ce n'est plus aussi évident. Comment peut-on procéder? On veut trouver un multiple de qui donne ou montrer que c'est impossible. On peut essayer de procéder par étranglement. Si on fait , on obtient une valeur trop grande, alors que si on fait , on obtient une valeur trop petite. Si un multiple existe, il se trouve nécessairement entre et . On essaie , qui est encore trop petit. Avec , on est maintenant trop haut. Le multiple s'il existe se retrouve donc entre et . On peut continuer de couper la poire en deux comme cela pendant un certain temps et éventuellement, on arrive à qui est plus petit et qui est trop grand. On conclut donc que n'est pas un multiple de et donc .  En prenant , on remarque qu'on est à entiers de la cible. On peut donc écrire . Il se trouve qu'on peut généraliser se résultat pour obtenir la notion bien connue de division.   La division euclidienne  Soit avec . Alors il existe des uniques entiers avec pour lesquels .  L'entier est appelé le quotient et l'entier est appelé le reste.    Pour trouver et , on peut procéder comme dans le paragraphe précédant la proposition , ou encore utiliser la méthode pour diviser enseignée au primaire.  On termine avec un exemple présentant des opérateurs de division sur Sage.   La divisibilité et Sage   Sage est capable de calculer facilement les entiers et de la proposition grâce à deux opérateurs spéciaux. Si a\/b produit la division usuelle, donnant un nombre rationnel lorsque , l'opération a\/\/b elle produit le quotient dans l'expession . Pour obtenir le reste, il faut utiliser a%b . La cellule ci-dessous illustre ces opérations.   Voici une version interactive de la cellule précédente.     À remarquer que lorsque est négatif, Sage retourne un reste négatif alors que dans la proposition , on mentionne que le reste doit satisfaire . Il existe tout de même un autre entier qui satisfait cette relation, qui entrainera une valeur du quotient différente.    Retour sur la conversion à partir de la base dix  Dans la section précédente, on a utilisé une méthode similaire à l'étranglement pour convertir un nombre de la base décimale aux bases binaires et hexadécimale. On peut utiliser l'écriture sous forme quotient et reste pour trouver les chiffres de l'écriture dans la nouvelle base. On montre l'idée générale avec un exempe concret, qu'on pourra généraliser facilement par la suite. On considère l'écriture de dans la base deux, établie à l'exemple . On suppose que l'écriture de a chiffres. On remarque que . Puisque , on voit que et donc, selon la proposition , le premier chiffre de l'écriture de en binaire correspond au reste de la division de par . Ensuite pour trouver , on répète avec le quotient . Dans le cas de , on a et . En continuant, , on peut trouver et le prochain quotient égal à . Avec cela, on obtient , amenant le quotient suivant à . On obtient et le quotient suivant vaut . On continue avec pour un quotient de , puis d_5=1 pour un quotient de , pour un quotient de et finalement, pour un quotient de . On peut donc écrire .  Ce qui est bien avec le binaire, c'est que le reste se déduit facilement avec la parité du nombre divisé. Si celui-ci est pair, le reste est de et s'il est impair, le reste est de On peut simplifier la procédure en écrivant les quotients et les restes dans un tableau. La colonne des restes correspond à l'écriture binaire du nombre, les nombres de droite à gauche se trouvant de haut en bas de la colonne. Afin d'illustrer, la conversion du nombre , aussi de l'exemple est donnée dans la table .   Conversion de 101 en binaire avec la méthode des quotients et des restes            Quotients  Restes                                                             La procédure est la même pour les autres bases, mais les restes ne peuvent pas être déterminés aussi facilement qu'en regardant la parité.   Conversion d'un nombre binaire en hexadécimale  On veut convertir en base hexadécimale, afin de valider l'exemple .   On utilise une table dans laquelle on note les quotients et les restes. Ceux-ci peuvent être calculés avec Sage.   Conversion de 987654321 en hexadécimale avec la méthode des quotients et des restes            Quotients  Restes                                                                     Le résultat est donc bel et bien .      L'algorithme d'Euclide  Un concept important en théorie des nombres est celui du plus grand commun diviseur, ou pgcd. Le nom est assez évocateur de ce qu'il représente, mais voici une définition formelle.   Le plus grand commun diviseur  Soit avec (les nombres ne sont pas tous les deux nuls). Le plus grand commun diviseur de , noté , est un entier qui satisfait les trois propriétés suivantes:  ;  et ;  Pour tout , si et , alors .    Lorsque , on dit que et sont copremiers.    On peut trouver le de deux nombres en donnant la liste de tous leurs diviseurs et en prenant le plus grand qu'ils ont en commun. Pour de petits nombres, cette approche est viable, mais pour de plus grands nombres, cela risque d'être inefficace et peu pratique. En fait, factoriser de très grands nombres est une opération difficile. Une grande partie de la sécurité informatique repose sur le fait qu'un même un puissance ordinateur ne peut pas factoriser facilement de très grands nombres. L'algorithme d'Euclide fournit une méthode plus efficace pour calculer le de deux nombres. Avec de très grands nombres, ça peut être long, mais ça utilise des opérations qu'un ordinateur effectue facilement.   L'algorithme d'Euclide  Soit des nombres naturels. Le plus grand commun diviseur de et est le dernier reste non nul de la suite suivante: .    Calcul d'un   En utilisant l'algorithme d'Euclide, on veut calculer  ;  .    On a . Selon l'algorithme d'Euclide, , le dernier reste non nul.   Cette fois-ci, on a . Selon l'algorithme d'Euclide, , le dernier reste non nul. Ces nombres sont donc copremiers.       Les points importants de cette section sont:  La définition de la divisibilité ;  L'écriture en quotient et reste de la division d'un entier par un autre entier;  La conversion d'un nombre en base dix vers une autre base à l'aide de la division euclidienne;  La définition du plus grand commun diviseur de deux nombres;  L'algorithme d'Euclide pour calculer le .        Ces questions sont à faire avant de venir en classe et à remettre au début du cours.    Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode par étranglement comme dans ce paragraphe .    Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode de division à la main comme au primaire.   Convertir les nombres de l'exercice en binaire en utilisant la méthode des divisions.  Convertir les nombres de l'exercice en hexadécimale en utilisant la méthode des divisions.  Que fait l'algorithme suivant?   Une algorithme sur les entiers   def algo(n): laliste = [1] d = 2 while d < n: if n % d == 0: laliste.append(d) d = d + 1 if n > 1: laliste.append(n) return laliste      L'algorithme suivant retourne un couple représentant le quotient et le reste de la division , mais il est incomplet. Pour chacun des quatre endroits écrits ÀCOMPLÉTER , écrire les instructions pour que l'algorithme fonctionne. Il est possible de le tester à même la cellule.   La division euclidienne   def divisionEuclidienne(a, b): #Une algorithme qui retourne (q,r) la forme quotient reste de a\/b: a=bq+r if :#ÀCOMPLÉTER1 print('Le pgcd est non défini') elif a == 0: return #ÀCOMPLÉTER2 else: s = b \/ abs(b) # le signe de b q=0 r =a if a > 0: while r - abs(b) >= 0: q = q + s r = #ÀCOMPLÉTER3 return q, r else: #a <0 while r < 0: q = q - s r = #ÀCOMPLÉTER4 return q, r      Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.  Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.      Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Convertir les nombres suivants dans la base demandée en utilisant un tableau de division. en binaire.  en binaire en hexadécimale  Donner la liste de tous les diviseurs de chaque nombre et déduire le . et .  L'ensemble des diviseurs de 27 est .  L'ensemble des diviseurs de 72 est .  Ainsi, .  et .  L'ensemble des diviseurs de 66 est .  L'ensemble des diviseurs de 111 est .  Ainsi, .  et .  L'ensemble des diviseurs de 60 est .  L'ensemble des diviseurs de 100 est .  Ainsi, .   Calculer le des paires de nombres suivants en utilisant l'algorithme d'Euclide. et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,   Donner une explication intuitive du fait que si sont des naturels non nuls et que , alors . Si le était égal à , que pourrait-on dire que ? Suppons . Dans ce cas, on a que . Aussi, on sait que pour , car . De même, on a que pour . Cela implique que et , c'est-à-dire que et . Or, puisque , cela contredit le fait que .  L'algorithme d'Euclide permet de trouver le d'entiers strictement positifs. On peut toutefois facilement étendre la notion aux entiers quelconques. Montrer que si , alors . Posons . On sait que pour tout , si , alors et . Ainsi, par définition de , on a que . Or, puisque , on a aussi que . Ainsi, et donc . Montrer que si et , alors . Posons et . Ainsi, on sait que et , alors que et . On a donc et pour . En multipliant les deux égalités par , on obtient et , c'est-à-dire que et . Par définition de et , on a que , et donc . Montrer que pour , on a . Par ce qu'on a fait précédemment, il suffit de montrer que l'égalité est vraie pour .  Posons . Ainsi, on sait que et . On a donc et pour . En multipliant les deux égalités par , on obtient et , c'est-à-dire que et .  Posons . Ainsi, on sait que et . On a donc et pour . En multipliant les deux égalités par , on obtient et , c'est-à-dire que et .  Par définition de et , on a que , et donc .   Le lemme de Bézout  Soit des naturels non nuls tels que . Alors il existe tels que  Cette relation a des conséquences importantes en théorie des nombres. On montre dans cet exercice comment démontrer l'existence des entiers et on explique comment on peut trouver de tels entiers.  On considère l'ensemble . C'est donc l'ensemble des naturels plus grands que zéro qu'il est possible de former avec en les combinant avec des entiers quelconques.  Montrer que est non vide. En particulier, puisque est un ensemble de nombres naturels, il existe un plus petit élément.  Il suffit de montrer qu'il existe au moins une pare telle que . Pour cela, on prend et . Dans ce cas, on a que et . Ainsi, , car on suppose si on calcul le . On pose le plus petit élément de cet ensemble. On veut montrer que et . On considère la division de par , qu'on écrit sous la forme quotient reste .  Montrer que en l'écrivant comme avec .  Puisque , on peut écrire pour . Ainsi, on a où et . Ainsi, soit , ou bien . Utiliser le fait que dans la forme quotient reste, on a , le fait que et le fait que est le plus petit élément de pour déterminer la valeur de . On veut montrer que . En effet, Puisque , si , alors et . Or, si , alors par définition de , on a que , ce qui est impossible si . On doit donc avoir , c'est-à-dire que . Conclure que . Puisque , on a que , et donc . Argumenter que divise aussi pour les mêmes raisons. On remplace par dans la partie précédente, et on obtient que . Le plus petit élément de est donc un diviseur de et . On va maintenant montrer que c'est nécessairement le de ces deux nombres.  Si est un diviseur commun de et , montrer que divise en utilisant l'équation pour certains . Si , alors nécessairement , ce qui complète la preuve. Si et , alors et pour . Ainsi, on a Ainsi, , car .    Exercices supplémentaires  Le plus petit commun multiple  Soit deux entiers non nuls. On définit le plus petit commun multiple de , noté comme étant le nombre qui satisfait les propriétés suivantes:  ;  et ;  Pour tout , si et , alors .  Calculer les plus petits communs multiples suivants.     "
+  "body": "  La divisibilité dans les entiers    Si on prend deux nombres , on peut les additionner, les soustraire et les multiplier et le résultat sera encore un entier. La division est la seule des quatre opérations élémentaires qui n'est pas garantie de rester un entier. C'est peut-être ce qui en fait une opération si riche et si intéressante. Quand est-ce que la division de deux nombres va produire un entier? Comment le vérifier?  Dans cette section, on rappelle la notion de division entière, quotient et reste, on définit le plus grand commun diviseur et le plus petit commun multiple de deux nombres naturels, on montre l'algorithme d'Euclide pour calculer le plus grand commun diviseur.     L'opération de division  Soit deux entiers. Si on divise par , le résultat peut être un entier, comme par exemple avec , un rationnel, avec en exemple ou même non défini, si on divise par . On expliquera prochainement la raison pour laquelle le fait que la division par est non définie est une bonne chose. Dans le cas où , donc où le résultat de la division produit un entier, on dit que divise , et on écrit (la barre étant verticale et non pas oblique comme pour l'opérateur de division).   La divisibilité  Soit avec . On dit que divise et on écrit si le résultat est un entier. On note que les quatre conditions suivantes sont équivalentes:   pour un certain  est un facteur (ou diviseur) de  est un multiple de .     Quand on écrit , c'est soit vrai, soit faux selon . On a donc une proposition. Pour écrire la négation de cette proposition, on peut utiliser la notation pour dire que me divise pas .   Exemples de divisibilité   On cherche la valeur de vérité des propositions suivantes.                 L'énoncé est vrai puisque et .  L'énoncé est faux étant donné que et que .  L'énoncé est faux, car non ne peut pas diviser par .  L'énoncé est vrai, car . En fait, n'importe quel nombre non nul divise .  L'énoncé est vrai puisque est un facteur de .  Le fait que le nombre est négatif ne pose pas de problème. On peut utiliser n'importe quelle des définitions équivalentes, par exemple est un multiple de , spécifiquement fois et donc est vraie.  Puisque , on conclut que est un facteur de et donc que peu importe la valeur de non nulle. La proposition est vraie.  Si on peut montrer une valeur de qui ne respecte pas la condition, alors la proposition sera fausse. Par exemple, si , c'est faux de dire que puisque et ce n'est pas un entier. Donc la proposition est fausse.  Si on arrive à trouver une valeur, la proposition d'existence sera vérifiée. En prenant , on observe que et donc la proposition est vraie.      Les valeurs numériques de l'exemple précédent étaient relativement petites qu'on savait si la relation de divisibilité était vraie assez facilement. Par contre, si on se demande est-ce que divise , alors là ce n'est plus aussi évident. Comment peut-on procéder? On veut trouver un multiple de qui donne ou montrer que c'est impossible. On peut essayer de procéder par étranglement. Si on fait , on obtient une valeur trop grande, alors que si on fait , on obtient une valeur trop petite. Si un multiple existe, il se trouve nécessairement entre et . On essaie , qui est encore trop petit. Avec , on est maintenant trop haut. Le multiple s'il existe se retrouve donc entre et . On peut continuer de couper la poire en deux comme cela pendant un certain temps et éventuellement, on arrive à qui est plus petit et qui est trop grand. On conclut donc que n'est pas un multiple de et donc .  En prenant , on remarque qu'on est à entiers de la cible. On peut donc écrire . Il se trouve qu'on peut généraliser se résultat pour obtenir la notion bien connue de division.   La division euclidienne  Soit avec . Alors il existe des uniques entiers avec pour lesquels .  L'entier est appelé le quotient et l'entier est appelé le reste.    Pour trouver et , on peut procéder comme dans le paragraphe précédant la proposition , ou encore utiliser la méthode pour diviser enseignée au primaire.  On termine avec un exemple présentant des opérateurs de division sur Sage.   La divisibilité et Sage   Sage est capable de calculer facilement les entiers et de la proposition grâce à deux opérateurs spéciaux. Si a\/b produit la division usuelle, donnant un nombre rationnel lorsque , l'opération a\/\/b elle produit le quotient dans l'expession . Pour obtenir le reste, il faut utiliser a%b . La cellule ci-dessous illustre ces opérations.   Voici une version interactive de la cellule précédente.     À remarquer que lorsque est négatif, Sage retourne un reste négatif alors que dans la proposition , on mentionne que le reste doit satisfaire . Il existe tout de même un autre entier qui satisfait cette relation, qui entrainera une valeur du quotient différente.    Retour sur la conversion à partir de la base dix  Dans la section précédente, on a utilisé une méthode similaire à l'étranglement pour convertir un nombre de la base décimale aux bases binaires et hexadécimale. On peut utiliser l'écriture sous forme quotient et reste pour trouver les chiffres de l'écriture dans la nouvelle base. On montre l'idée générale avec un exempe concret, qu'on pourra généraliser facilement par la suite. On considère l'écriture de dans la base deux, établie à l'exemple . On suppose que l'écriture de a chiffres. On remarque que . Puisque , on voit que et donc, selon la proposition , le premier chiffre de l'écriture de en binaire correspond au reste de la division de par . Ensuite pour trouver , on répète avec le quotient . Dans le cas de , on a et . En continuant, , on peut trouver et le prochain quotient égal à . Avec cela, on obtient , amenant le quotient suivant à . On obtient et le quotient suivant vaut . On continue avec pour un quotient de , puis d_5=1 pour un quotient de , pour un quotient de et finalement, pour un quotient de . On peut donc écrire .  Ce qui est bien avec le binaire, c'est que le reste se déduit facilement avec la parité du nombre divisé. Si celui-ci est pair, le reste est de et s'il est impair, le reste est de On peut simplifier la procédure en écrivant les quotients et les restes dans un tableau. La colonne des restes correspond à l'écriture binaire du nombre, les nombres de droite à gauche se trouvant de haut en bas de la colonne. Afin d'illustrer, la conversion du nombre , aussi de l'exemple est donnée dans la table .   Conversion de 101 en binaire avec la méthode des quotients et des restes            Quotients  Restes                                                             La procédure est la même pour les autres bases, mais les restes ne peuvent pas être déterminés aussi facilement qu'en regardant la parité.   Conversion d'un nombre binaire en hexadécimale  On veut convertir en base hexadécimale, afin de valider l'exemple .   On utilise une table dans laquelle on note les quotients et les restes. Ceux-ci peuvent être calculés avec Sage.   Conversion de 987654321 en hexadécimale avec la méthode des quotients et des restes            Quotients  Restes                                                                     Le résultat est donc bel et bien .      L'algorithme d'Euclide  Un concept important en théorie des nombres est celui du plus grand commun diviseur, ou pgcd. Le nom est assez évocateur de ce qu'il représente, mais voici une définition formelle.   Le plus grand commun diviseur  Soit avec (les nombres ne sont pas tous les deux nuls). Le plus grand commun diviseur de , noté , est un entier qui satisfait les trois propriétés suivantes:  ;  et ;  Pour tout , si et , alors .    Lorsque , on dit que et sont copremiers.    On peut trouver le de deux nombres en donnant la liste de tous leurs diviseurs et en prenant le plus grand qu'ils ont en commun. Pour de petits nombres, cette approche est viable, mais pour de plus grands nombres, cela risque d'être inefficace et peu pratique. En fait, factoriser de très grands nombres est une opération difficile. Une grande partie de la sécurité informatique repose sur le fait qu'un même un puissance ordinateur ne peut pas factoriser facilement de très grands nombres. L'algorithme d'Euclide fournit une méthode plus efficace pour calculer le de deux nombres. Avec de très grands nombres, ça peut être long, mais ça utilise des opérations qu'un ordinateur effectue facilement.   L'algorithme d'Euclide  Soit des nombres naturels. Le plus grand commun diviseur de et est le dernier reste non nul de la suite suivante: .    Calcul d'un   En utilisant l'algorithme d'Euclide, on veut calculer  ;  .    On a . Selon l'algorithme d'Euclide, , le dernier reste non nul.   Cette fois-ci, on a . Selon l'algorithme d'Euclide, , le dernier reste non nul. Ces nombres sont donc copremiers.       Les points importants de cette section sont:  La définition de la divisibilité ;  L'écriture en quotient et reste de la division d'un entier par un autre entier;  La conversion d'un nombre en base dix vers une autre base à l'aide de la division euclidienne;  La définition du plus grand commun diviseur de deux nombres;  L'algorithme d'Euclide pour calculer le .        Ces questions sont à faire avant de venir en classe et à remettre au début du cours.    Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode par étranglement comme dans ce paragraphe .    Écrire les divisions suivantes sous la forme quotient et reste. Utiliser la méthode de division à la main comme au primaire.   Convertir les nombres de l'exercice en binaire en utilisant la méthode des divisions.  Convertir les nombres de l'exercice en hexadécimale en utilisant la méthode des divisions.  Que fait l'algorithme suivant?   Une algorithme sur les entiers   def algo(n): laliste = [1] d = 2 while d < n: if n % d == 0: laliste.append(d) d = d + 1 if n > 1: laliste.append(n) return laliste      L'algorithme suivant retourne un couple représentant le quotient et le reste de la division , mais il est incomplet. Pour chacun des quatre endroits écrits ÀCOMPLÉTER , écrire les instructions pour que l'algorithme fonctionne. Il est possible de le tester à même la cellule.   La division euclidienne   def divisionEuclidienne(a, b): #Une algorithme qui retourne (q,r) la forme quotient reste de a\/b: a=bq+r if :#ÀCOMPLÉTER1 print('Le quotient est non défini') elif a == 0: return #ÀCOMPLÉTER2 else: s = b \/ abs(b) # le signe de b q=0 r =a if a > 0: while r - abs(b) >= 0: q = q + s r = #ÀCOMPLÉTER3 return q, r else: a <0 while r < 0: q = q - s r = #ÀCOMPLÉTER4 return q, r      Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.      Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Convertir les nombres suivants dans la base demandée en utilisant un tableau de division. en binaire.  en binaire en hexadécimale  Donner la liste de tous les diviseurs de chaque nombre et déduire le . et .  L'ensemble des diviseurs de 27 est .  L'ensemble des diviseurs de 72 est .  Ainsi, .  et .  L'ensemble des diviseurs de 66 est .  L'ensemble des diviseurs de 111 est .  Ainsi, .  et .  L'ensemble des diviseurs de 60 est .  L'ensemble des diviseurs de 100 est .  Ainsi, .   Calculer le des paires de nombres suivants en utilisant l'algorithme d'Euclide. et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,   Donner une explication intuitive du fait que si sont des naturels non nuls et que , alors . Si le était égal à , que pourrait-on dire que ? Suppons . Dans ce cas, on a que . Aussi, on sait que pour , car . De même, on a que pour . Cela implique que et , c'est-à-dire que et . Or, puisque , cela contredit le fait que .  L'algorithme d'Euclide permet de trouver le d'entiers strictement positifs. On peut toutefois facilement étendre la notion aux entiers quelconques. Montrer que si , alors . Posons . On sait que pour tout , si , alors et . Ainsi, par définition de , on a que . Or, puisque , on a aussi que . Ainsi, et donc . Montrer que si et , alors . Posons et . Ainsi, on sait que et , alors que et . On a donc et pour . En multipliant les deux égalités par , on obtient et , c'est-à-dire que et . Par définition de et , on a que , et donc . Montrer que pour , on a . Par ce qu'on a fait précédemment, il suffit de montrer que l'égalité est vraie pour .  Posons . Ainsi, on sait que et . On a donc et pour . En multipliant les deux égalités par , on obtient et , c'est-à-dire que et .  Posons . Ainsi, on sait que et . On a donc et pour . En multipliant les deux égalités par , on obtient et , c'est-à-dire que et .  Par définition de et , on a que , et donc .   Le lemme de Bézout  Soit des naturels non nuls tels que . Alors il existe tels que  Cette relation a des conséquences importantes en théorie des nombres. On montre dans cet exercice comment démontrer l'existence des entiers et on explique comment on peut trouver de tels entiers.  On considère l'ensemble . C'est donc l'ensemble des naturels plus grands que zéro qu'il est possible de former avec en les combinant avec des entiers quelconques.  Montrer que est non vide. En particulier, puisque est un ensemble de nombres naturels, il existe un plus petit élément.  Il suffit de montrer qu'il existe au moins une pare telle que . Pour cela, on prend et . Dans ce cas, on a que et . Ainsi, , car on suppose si on calcul le . On pose le plus petit élément de cet ensemble. On veut montrer que et . On considère la division de par , qu'on écrit sous la forme quotient reste .  Montrer que en l'écrivant comme avec .  Puisque , on peut écrire pour . Ainsi, on a où et . Ainsi, soit , ou bien . Utiliser le fait que dans la forme quotient reste, on a , le fait que et le fait que est le plus petit élément de pour déterminer la valeur de . On veut montrer que . En effet, Puisque , si , alors et . Or, si , alors par définition de , on a que , ce qui est impossible si . On doit donc avoir , c'est-à-dire que . Conclure que . Puisque , on a que , et donc . Argumenter que divise aussi pour les mêmes raisons. On remplace par dans la partie précédente, et on obtient que . Le plus petit élément de est donc un diviseur de et . On va maintenant montrer que c'est nécessairement le de ces deux nombres.  Si est un diviseur commun de et , montrer que divise en utilisant l'équation pour certains . Si , alors nécessairement , ce qui complète la preuve. Si et , alors et pour . Ainsi, on a Ainsi, , car .    Exercices supplémentaires  Le plus petit commun multiple  Soit deux entiers non nuls. On définit le plus petit commun multiple de , noté comme étant le nombre qui satisfait les propriétés suivantes:  ;  et ;  Pour tout , si et , alors .  Calculer les plus petits communs multiples suivants.     "
 },
 {
   "id": "def-divisibilite",
@@ -2590,7 +2590,7 @@ var ptx_lunr_docs = [
   "type": "Question de compréhension",
   "number": "3.2.4.6",
   "title": "",
-  "body": "L'algorithme suivant retourne un couple représentant le quotient et le reste de la division , mais il est incomplet. Pour chacun des quatre endroits écrits ÀCOMPLÉTER , écrire les instructions pour que l'algorithme fonctionne. Il est possible de le tester à même la cellule.   La division euclidienne   def divisionEuclidienne(a, b): #Une algorithme qui retourne (q,r) la forme quotient reste de a\/b: a=bq+r if :#ÀCOMPLÉTER1 print('Le pgcd est non défini') elif a == 0: return #ÀCOMPLÉTER2 else: s = b \/ abs(b) # le signe de b q=0 r =a if a > 0: while r - abs(b) >= 0: q = q + s r = #ÀCOMPLÉTER3 return q, r else: #a <0 while r < 0: q = q - s r = #ÀCOMPLÉTER4 return q, r     "
+  "body": "L'algorithme suivant retourne un couple représentant le quotient et le reste de la division , mais il est incomplet. Pour chacun des quatre endroits écrits ÀCOMPLÉTER , écrire les instructions pour que l'algorithme fonctionne. Il est possible de le tester à même la cellule.   La division euclidienne   def divisionEuclidienne(a, b): #Une algorithme qui retourne (q,r) la forme quotient reste de a\/b: a=bq+r if :#ÀCOMPLÉTER1 print('Le quotient est non défini') elif a == 0: return #ÀCOMPLÉTER2 else: s = b \/ abs(b) # le signe de b q=0 r =a if a > 0: while r - abs(b) >= 0: q = q + s r = #ÀCOMPLÉTER3 return q, r else: a <0 while r < 0: q = q - s r = #ÀCOMPLÉTER4 return q, r     "
 },
 {
   "id": "exercise-171",
@@ -2605,51 +2605,42 @@ var ptx_lunr_docs = [
   "id": "exercise-172",
   "level": "2",
   "url": "sec-divisibilite.html#exercise-172",
-  "type": "Question de compréhension",
-  "number": "3.2.4.8",
-  "title": "",
-  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
-},
-{
-  "id": "exercise-173",
-  "level": "2",
-  "url": "sec-divisibilite.html#exercise-173",
   "type": "Exercice",
   "number": "3.2.5.1",
   "title": "",
   "body": "Convertir les nombres suivants dans la base demandée en utilisant un tableau de division. en binaire.  en binaire en hexadécimale "
 },
 {
-  "id": "exercise-174",
+  "id": "exercise-173",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-174",
+  "url": "sec-divisibilite.html#exercise-173",
   "type": "Exercice",
   "number": "3.2.5.2",
   "title": "",
   "body": "Donner la liste de tous les diviseurs de chaque nombre et déduire le . et .  L'ensemble des diviseurs de 27 est .  L'ensemble des diviseurs de 72 est .  Ainsi, .  et .  L'ensemble des diviseurs de 66 est .  L'ensemble des diviseurs de 111 est .  Ainsi, .  et .  L'ensemble des diviseurs de 60 est .  L'ensemble des diviseurs de 100 est .  Ainsi, .  "
 },
 {
-  "id": "exercise-175",
+  "id": "exercise-174",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-175",
+  "url": "sec-divisibilite.html#exercise-174",
   "type": "Exercice",
   "number": "3.2.5.3",
   "title": "",
   "body": "Calculer le des paires de nombres suivants en utilisant l'algorithme d'Euclide. et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,  et   Ainsi,  "
 },
 {
-  "id": "exercise-176",
+  "id": "exercise-175",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-176",
+  "url": "sec-divisibilite.html#exercise-175",
   "type": "Exercice",
   "number": "3.2.5.4",
   "title": "",
   "body": "Donner une explication intuitive du fait que si sont des naturels non nuls et que , alors . Si le était égal à , que pourrait-on dire que ? Suppons . Dans ce cas, on a que . Aussi, on sait que pour , car . De même, on a que pour . Cela implique que et , c'est-à-dire que et . Or, puisque , cela contredit le fait que . "
 },
 {
-  "id": "exercise-177",
+  "id": "exercise-176",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-177",
+  "url": "sec-divisibilite.html#exercise-176",
   "type": "Exercice",
   "number": "3.2.5.5",
   "title": "",
@@ -2665,9 +2656,9 @@ var ptx_lunr_docs = [
   "body": "Le lemme de Bézout  Soit des naturels non nuls tels que . Alors il existe tels que  Cette relation a des conséquences importantes en théorie des nombres. On montre dans cet exercice comment démontrer l'existence des entiers et on explique comment on peut trouver de tels entiers.  On considère l'ensemble . C'est donc l'ensemble des naturels plus grands que zéro qu'il est possible de former avec en les combinant avec des entiers quelconques.  Montrer que est non vide. En particulier, puisque est un ensemble de nombres naturels, il existe un plus petit élément.  Il suffit de montrer qu'il existe au moins une pare telle que . Pour cela, on prend et . Dans ce cas, on a que et . Ainsi, , car on suppose si on calcul le . On pose le plus petit élément de cet ensemble. On veut montrer que et . On considère la division de par , qu'on écrit sous la forme quotient reste .  Montrer que en l'écrivant comme avec .  Puisque , on peut écrire pour . Ainsi, on a où et . Ainsi, soit , ou bien . Utiliser le fait que dans la forme quotient reste, on a , le fait que et le fait que est le plus petit élément de pour déterminer la valeur de . On veut montrer que . En effet, Puisque , si , alors et . Or, si , alors par définition de , on a que , ce qui est impossible si . On doit donc avoir , c'est-à-dire que . Conclure que . Puisque , on a que , et donc . Argumenter que divise aussi pour les mêmes raisons. On remplace par dans la partie précédente, et on obtient que . Le plus petit élément de est donc un diviseur de et . On va maintenant montrer que c'est nécessairement le de ces deux nombres.  Si est un diviseur commun de et , montrer que divise en utilisant l'équation pour certains . Si , alors nécessairement , ce qui complète la preuve. Si et , alors et pour . Ainsi, on a Ainsi, , car . "
 },
 {
-  "id": "exercise-179",
+  "id": "exercise-178",
   "level": "2",
-  "url": "sec-divisibilite.html#exercise-179",
+  "url": "sec-divisibilite.html#exercise-178",
   "type": "Exercice",
   "number": "3.2.5.7",
   "title": "Le plus petit commun multiple.",
@@ -2845,29 +2836,38 @@ var ptx_lunr_docs = [
   "body": " Un inverse modulo  On cherche un inverse à modulo , c'est-à-dire un nombre tel que .   Pour trouver un inverse, il faut trouver tel que . En d'autres mots, pour un certain . En réécrivant, on remarque qu'il faut que et de plus, . Le lemme de Bézout et l'algorithme d'Euclide seront utiles pour trouver l'inverse. D'une part, on a , selon l'algorithme d'Euclide. Puis, en réorganisant ces équations, on trouve .  est donc un inverse à modulo .   "
 },
 {
-  "id": "exercise-180",
+  "id": "exercise-179",
   "level": "2",
-  "url": "sec-modulo.html#exercise-180",
+  "url": "sec-modulo.html#exercise-179",
   "type": "Question de compréhension",
   "number": "3.3.5.1",
   "title": "",
   "body": "Déterminer La journée de la semaine jours après un jeudi; La journée de la semaine jours après un mardi; La journée de la semaine jours avant un samedi. "
 },
 {
-  "id": "exercise-181",
+  "id": "exercise-180",
   "level": "2",
-  "url": "sec-modulo.html#exercise-181",
+  "url": "sec-modulo.html#exercise-180",
   "type": "Question de compréhension",
   "number": "3.3.5.2",
   "title": "",
   "body": "Donner entiers qui sont congrus à modulo . "
 },
 {
+  "id": "exercise-181",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-181",
+  "type": "Question de compréhension",
+  "number": "3.3.5.3",
+  "title": "",
+  "body": "Donner les tables d'addition et de multiplication modulo . "
+},
+{
   "id": "exercise-182",
   "level": "2",
   "url": "sec-modulo.html#exercise-182",
   "type": "Question de compréhension",
-  "number": "3.3.5.3",
+  "number": "3.3.5.4",
   "title": "",
   "body": "Donner les tables d'addition et de multiplication modulo . "
 },
@@ -2876,16 +2876,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modulo.html#exercise-183",
   "type": "Question de compréhension",
-  "number": "3.3.5.4",
+  "number": "3.3.5.5",
   "title": "",
-  "body": "Donner les tables d'addition et de multiplication modulo . "
+  "body": "Quels sont les entiers dans qui ont un inverse modulo ? Est-ce que cela satisfait la définition . "
 },
 {
   "id": "exercise-184",
   "level": "2",
   "url": "sec-modulo.html#exercise-184",
   "type": "Question de compréhension",
-  "number": "3.3.5.5",
+  "number": "3.3.5.6",
   "title": "",
   "body": "Quels sont les entiers dans qui ont un inverse modulo ? Est-ce que cela satisfait la définition . "
 },
@@ -2894,25 +2894,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-modulo.html#exercise-185",
   "type": "Question de compréhension",
-  "number": "3.3.5.6",
+  "number": "3.3.5.7",
   "title": "",
-  "body": "Quels sont les entiers dans qui ont un inverse modulo ? Est-ce que cela satisfait la définition . "
+  "body": "Le message ORTEGAXGVGYJKIXEVZUMXGVNOKGRKDGSKT a été encodé à l'aide d'un chiffrement de César avec décalage correspondant à la date de l'examen intra. Quel est ce message. "
 },
 {
   "id": "exercise-186",
   "level": "2",
   "url": "sec-modulo.html#exercise-186",
   "type": "Question de compréhension",
-  "number": "3.3.5.7",
+  "number": "3.3.5.8",
   "title": "",
-  "body": "Le message ORTEGAXGVGYJKIXEVZUMXGVNOKGRKDGSKT a été encodé à l'aide d'un chiffrement de César avec décalage correspondant à la date de l'examen intra. Quel est ce message. "
+  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
 {
   "id": "exercise-187",
   "level": "2",
   "url": "sec-modulo.html#exercise-187",
   "type": "Question de compréhension",
-  "number": "3.3.5.8",
+  "number": "3.3.5.9",
   "title": "",
   "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
@@ -2920,150 +2920,141 @@ var ptx_lunr_docs = [
   "id": "exercise-188",
   "level": "2",
   "url": "sec-modulo.html#exercise-188",
-  "type": "Question de compréhension",
-  "number": "3.3.5.9",
-  "title": "",
-  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
-},
-{
-  "id": "exercise-189",
-  "level": "2",
-  "url": "sec-modulo.html#exercise-189",
   "type": "Exercice",
   "number": "3.3.6.1",
   "title": "",
   "body": "Déterminer le plus petit entier positif congru à modulo: ;  Ainsi, le plus pentit entirer positif congru à modulo est . Puisque est un nombre impair, on sait que le plus pentit entirer positif congru à modulo est ;  Ainsi, le plus pentit entirer positif congru à modulo est . ;  Ainsi, le plus pentit entirer positif congru à modulo est . ;  Ainsi, le plus pentit entirer positif congru à modulo est . "
 },
 {
-  "id": "exercise-190",
+  "id": "exercise-189",
   "level": "2",
-  "url": "sec-modulo.html#exercise-190",
+  "url": "sec-modulo.html#exercise-189",
   "type": "Exercice",
   "number": "3.3.6.2",
   "title": "",
   "body": "Pour chaque opération ci-dessous, donner la réponse sous la forme d'un entier entre et . ; ; ; Rappel: On utilise la notation pour représenter le reste de la division de par . Par exemple,  "
 },
 {
-  "id": "exercise-191",
+  "id": "exercise-190",
   "level": "2",
-  "url": "sec-modulo.html#exercise-191",
+  "url": "sec-modulo.html#exercise-190",
   "type": "Exercice",
   "number": "3.3.6.3",
   "title": "",
   "body": "Donner les réponses aux calculs de l'exercice précédent sous la forme d'un entier entre et .       "
 },
 {
-  "id": "exercise-192",
+  "id": "exercise-191",
   "level": "2",
-  "url": "sec-modulo.html#exercise-192",
+  "url": "sec-modulo.html#exercise-191",
   "type": "Exercice",
   "number": "3.3.6.4",
   "title": "",
   "body": "Montrer que chacune des classes d'équivalence modulo , obtenues à l'exemple , peut être écrite sous la forme de l'ensemble . "
 },
 {
-  "id": "exercise-193",
+  "id": "exercise-192",
   "level": "2",
-  "url": "sec-modulo.html#exercise-193",
+  "url": "sec-modulo.html#exercise-192",
   "type": "Exercice",
   "number": "3.3.6.5",
   "title": "",
   "body": "On considère les entiers impairs . Pour , calculer pour quelques entiers. Comment démontrer que cela sera toujours vrai? "
 },
 {
-  "id": "exercise-194",
+  "id": "exercise-193",
   "level": "2",
-  "url": "sec-modulo.html#exercise-194",
+  "url": "sec-modulo.html#exercise-193",
   "type": "Exercice",
   "number": "3.3.6.6",
   "title": "",
   "body": "Un tableau contenant une infinité de lignes et colonnes contenant les nombres naturels est construit. Les premières lignes sont données à la table ci-dessous. On considère l'élément à la première ligne et la première colonne comme la position . De manière générale, un élément en position est à la ligne et colonne . Par exemple, est à la position .   Un tableau de nombres                                                                                                         À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on votre numéro de DA? Votre DA se trouve à la position , où est le reste de votre DA lors de la division par . "
 },
 {
-  "id": "exercise-195",
+  "id": "exercise-194",
   "level": "2",
-  "url": "sec-modulo.html#exercise-195",
+  "url": "sec-modulo.html#exercise-194",
   "type": "Exercice",
   "number": "3.3.6.7",
   "title": "",
   "body": "Résoudre les congruences suivantes ou expliquer pourquoi il n'y a pas de solutions. Cette équation ne possède aucune solution, car \\pgcd{(4,6)}=2\\not| \\ 1. "
 },
 {
-  "id": "exercise-196",
+  "id": "exercise-195",
   "level": "2",
-  "url": "sec-modulo.html#exercise-196",
+  "url": "sec-modulo.html#exercise-195",
   "type": "Exercice",
   "number": "3.3.6.8",
   "title": "",
   "body": "Résoudre les congruences suivantes sans essayer toutes les possibilités ou expliquer pourquoi il n'y a pas de solutions.  Ainsi, est une solution à l'équation si et seulement si .  Ainsi, est une solution à l'équation si et seulement si .  Ainsi, est une solution à l'équation si et seulement si . Cette équation ne possède aucune solution, car \\pgcd{(4,6)}=2\\not| \\ 5.  Ainsi, est une solution à l'équation si et seulement si . Les résultats de l'exercice précédent peuvent être utile. On peut aussi y aller par essaie-erreur pour la plus part des équations. "
 },
 {
-  "id": "exercise-197",
+  "id": "exercise-196",
   "level": "2",
-  "url": "sec-modulo.html#exercise-197",
+  "url": "sec-modulo.html#exercise-196",
   "type": "Exercice",
   "number": "3.3.6.9",
   "title": "",
   "body": "Sachant que est une solution à l'équation , trouver une solution à .  Ainsi, une solution est , ou encore . "
 },
 {
-  "id": "exercise-198",
+  "id": "exercise-197",
   "level": "2",
-  "url": "sec-modulo.html#exercise-198",
+  "url": "sec-modulo.html#exercise-197",
   "type": "Exercice",
   "number": "3.3.6.10",
   "title": "",
   "body": "On consdière la paire de congruences suivantes: .  Trouver une valeur de qui satisfait simultanément ces deux équations.  Écrire la soution à la première congruence comme et remplacer dans la deuxième.  Clairement, si , alors est une solution de la première équation, mais pas de la deuxième. Cependant, on sait que toutes les solutions de la première équation s'écrive comme , où .  Ainsi, en remplaçant par dans la deuxième équation, on obtient   Ainsi, on peut obtenir une solution en remplaçant cette fois par dans , ce qui donne . On peut en effet vérifier que:   En fait, on a montrer que, pour que soit une solution à la deuxième équation, on doit avoir , c'est-à-dire , pour .  Ainsi, en remplaçant dans , on a que , c'est-à-dire que est une solution aux deux équation si et seulement si est une solution à l'équation ou encore .  "
 },
 {
-  "id": "exercise-199",
+  "id": "exercise-198",
   "level": "2",
-  "url": "sec-modulo.html#exercise-199",
+  "url": "sec-modulo.html#exercise-198",
   "type": "Exercice",
   "number": "3.3.6.11",
   "title": "",
   "body": "Une relation entre deux objets est une relation d'équivalence si pour on a  que la relation est symétrique, c'est-à-dire que si , alors ;  que la relation est réflexive, c'est-à-dire que ;  que la relation est transitive, c'est-à-dire que si et , alors .   Pour la congruence modulo , on peut plus simplement écrire . Montrer que la congruence modulo est une relation d'équivalence.  "
 },
 {
-  "id": "exercise-200",
+  "id": "exercise-199",
   "level": "2",
-  "url": "sec-modulo.html#exercise-200",
+  "url": "sec-modulo.html#exercise-199",
   "type": "Exercice",
   "number": "3.3.6.12",
   "title": "",
   "body": "Encoder les messages suivants avec le décalage de César précisé avec le message. Mon enseignant est le meilleur avec décalage Je vais faire tous les devoirs avec décalage Un jour je serai le meilleur dresseur avec décalage "
 },
 {
-  "id": "exercise-201",
+  "id": "exercise-200",
   "level": "2",
-  "url": "sec-modulo.html#exercise-201",
+  "url": "sec-modulo.html#exercise-200",
   "type": "Exercice",
   "number": "3.3.6.13",
   "title": "",
   "body": "Décoder les messages suivants, qui ont été chiffrés par un décalage de César précisé avec le message. EHBWEPXAWQZADKNO avec décalage MNBYXVVNBMNBYXRANBMNBJWJWJB avec décalage MFTNBUIFNBUJRVFTEJTDSFUFTDFTUWSBJNFOUHFOJBM avec décalage "
 },
 {
-  "id": "exercise-202",
+  "id": "exercise-201",
   "level": "2",
-  "url": "sec-modulo.html#exercise-202",
+  "url": "sec-modulo.html#exercise-201",
   "type": "Exercice",
   "number": "3.3.6.14",
   "title": "",
   "body": "Encoder les messages suivants avec le système RSA dont les paramètres sont précisés avec le message. Mon enseignant est le meilleur avec paramètres Je vais faire tous les devoirs avec paramètres Un jour je serai le meilleur dresseur avec paramètres Qui a-t-il de particulier avec ces messages codés? Est-ce qu'il y a une lettre qui est facile à décoder? En utilisant des blocs de lettres comme dans le vrai RSA, ceci ne se produit pas. "
 },
 {
-  "id": "exercise-203",
+  "id": "exercise-202",
   "level": "2",
-  "url": "sec-modulo.html#exercise-203",
+  "url": "sec-modulo.html#exercise-202",
   "type": "Exercice",
   "number": "3.3.6.15",
   "title": "",
   "body": "Décoder les messages suivants, qui ont été chiffrés par RSA avec paramètres précisés avec le message. [8, 349, 1231, 64, 1000, 1, 684, 125, 807, 8, 349, 1231, 64] avec [6041, 80552, 64471, 1, 40280, 76462, 6041, 75310, 6041, 40280, 2122, 78295, 80552, 16446, 1, 32487, 2122, 80552, 6041, 73799, 1, 20790, 3336, 6041, 40280, 20790, 16446, 1, 79033, 2122, 46951, 6415, 70263, 2122, 46951, 40280] avec [10, 1, 7357, 15878, 6017, 16044, 6017, 1172, 6017, 341, 6017, 10370, 341, 6017, 13378, 1, 16044, 11527, 341, 1518, 11527, 7357, 3855] avec "
 },
 {
-  "id": "exercise-204",
+  "id": "exercise-203",
   "level": "2",
-  "url": "sec-modulo.html#exercise-204",
+  "url": "sec-modulo.html#exercise-203",
   "type": "Exercice",
   "number": "3.3.6.16",
   "title": "QFINXUFWNYNTS.",
@@ -3205,72 +3196,72 @@ var ptx_lunr_docs = [
   "body": " Exemple de base du principe de la division  Supposons qu'on doivent placer quatre personnes, Damien, Jean-Michel, Alexandre et Valérie, autours du table rondes (à quatre chaises). De combien de façons différentes peut-on accomplir cette tâche, si deux façons de s'assoir sont considérées les mêmes si chaque personne possède le même voisin à gauche et le même voisin à droite.    On commence par décider d'assigner une première chaise à Valérie. Celle-ci choisit arbitrairement une chaise qu'on numérote par . Ensuite, on numérote les autres chaises de à de façon systématique (disons en tournant dans le sens horaire). Il y aura façons différentes de faire ceci, car le résultat dépend uniquement du choix de Valérie.  Par la suite, on assigne arbitrairement une personne à la chaise (il y aura façons de faire ce choix). On continue pour la chaise ( façons) et finalement la chaise ( seule façon de faire).  Par le principe du produit, il y a façons d'accomplir cette tâche.  Cependant, on se rend compte que le choix de la première chaise n'a pas d'impacte sur l'arrangement final, car on distingue deux arrangements seulement si les voisins des gens sont différents. Par le principe de la division, il y aura façons différentes d'assoir les gens.   "
 },
 {
-  "id": "exercise-205",
+  "id": "exercise-204",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-205",
+  "url": "sec_prodSomme.html#exercise-204",
   "type": "Question de compréhension",
   "number": "4.1.6.1",
   "title": "",
   "body": " Un test est formé de questions à choix multiples. Chaque question possède réponse possible.  De combien de façons un étudiant peut-il répondre aux questions s'il répond à toutes les questions? De combien de façons un étudiant peut-il répondre aux questions s'il peut laisser une réponse vide à certaines questions? "
 },
 {
-  "id": "exercise-206",
+  "id": "exercise-205",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-206",
+  "url": "sec_prodSomme.html#exercise-205",
   "type": "Question de compréhension",
   "number": "4.1.6.2",
   "title": "",
   "body": "Une marque populaire de vêtements produit des chandails en couleurs, en version à manches courtes ou à manches longues et est offert en trois tailles différentes. Combien de types de chandails différents sont produit par cette marque? "
 },
 {
-  "id": "exercise-207",
+  "id": "exercise-206",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-207",
+  "url": "sec_prodSomme.html#exercise-206",
   "type": "Question de compréhension",
   "number": "4.1.6.3",
   "title": "",
   "body": "Combien d'entiers : sont divisible par ? sont divisible par , mais pas par ? sont divisible par et par ? sont divisible par ou par ? sont divisible par exactement un des entiers ou ? ne sont divisible ni par ni par ? ont des chiffres différents les uns des autres? ont des chiffres différents les uns des autres et sont pair? "
 },
 {
-  "id": "exercise-208",
+  "id": "exercise-207",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-208",
+  "url": "sec_prodSomme.html#exercise-207",
   "type": "Question de compréhension",
   "number": "4.1.6.4",
   "title": "",
   "body": " On considère des chaînes de trois caractères de chiffres en base . Combien de ces chaînes:  ne contiennent pas le même chiffre trois fois? ont exactement deux chiffres qui sont des . "
 },
 {
-  "id": "exercise-209",
+  "id": "exercise-208",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-209",
+  "url": "sec_prodSomme.html#exercise-208",
   "type": "Question de compréhension",
   "number": "4.1.6.5",
   "title": "",
   "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
 {
-  "id": "exercise-210",
+  "id": "exercise-209",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-210",
+  "url": "sec_prodSomme.html#exercise-209",
   "type": "Exercice",
   "number": "4.1.7.1",
   "title": "",
   "body": " Combien de chaînes de quatre chiffres  sont formées de chiffres différents? . Lorsqu'on choisit le premier chiffre, il y a possibilités. Pour chaque chiffre qu'on choisit par la suite, il y a toujours un choix de moins que pour le chiffre précédent. Ainsi, par le principe du produit, on a  se terminent par un nombre pair? On commence par choisir le dernier chiffre. Pour que celui-ci soit pair, il y a choix possibles. Pour chacun des autres chiffres, il y a possibilités, car les chiffres peuvent se répéter. ont exactement trois chiffres qui sont des ?  On conditionne sur la position du chiffre qui n'est pas un . C'est-à-dire qu'on utilise le principe de la somme selon la position du chiffre qui n'est pas .  Le chiffre est soit à la position , soit à la position , soit à la position ou bien à la position . Dans chacun des cas, il ne reste qu'à trouver la valeur de ce chiffre, car on sait que les autres chiffres sont des . Il y aura donc possibilités, soit , , , , , , , ou .  Ainsi, par le principe de la somme, il y a possibilités.  "
 },
 {
-  "id": "exercise-211",
+  "id": "exercise-210",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-211",
+  "url": "sec_prodSomme.html#exercise-210",
   "type": "Exercice",
   "number": "4.1.7.2",
   "title": "",
   "body": "Lors de la finale de la course du mètres aux derniers jeux Olympiques, il y avait coureurs. De combien de manières possibles le podium pouvait-il être composé?   La notation sera définie à la prochaine section .  "
 },
 {
-  "id": "exercise-212",
+  "id": "exercise-211",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-212",
+  "url": "sec_prodSomme.html#exercise-211",
   "type": "Exercice",
   "number": "4.1.7.3",
   "title": "",
@@ -3295,63 +3286,63 @@ var ptx_lunr_docs = [
   "body": "Combien de chaînes binaires de longueur contiennent quatre consécutifs ou trois consécutifs? Cette question est similaire au numéro précédent , mais plus dificile, car on peut avoir plusieurs fois trois consécutifs dans la même chaîne.  On commence par compter celles qui ont une séquence de quatre consécutifs. De plus, on conditionne sur la position du premier de la première séquence de consécutifs.  Si la séquence commence à la première position, les chaînes seront de la forme , où les sont quelconques ( ). Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la deuxième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la troisième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la quatrième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la cinquième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Ainsi, il y a chaînes ayant une séquence de cinq consécutifs.  Par la suite, on compte celles qui ont une séquence de trois consécutifs. De plus, on conditionne sur la position du premier de la première séquence de consécutifs.  Si la séquence commence à la première position, les chaînes seront de la forme , où les sont quelconques ( ). Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la deuxième position, les chaînes seront de la forme . Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la troisième position, les chaînes seront de la forme . Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la quatrième position, les chaînes seront de la forme , mais ne peut pas être car la première séquence doit commencer à la quatrième position! Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la cinquième position, les chaînes seront de la forme . Cependant, il y a chaînes ayant une séquence d'au moins trois au début de la chaîne. Il s'agit de , et . Il y a donc chaînes dont la première séquence de commence à cette position.  Ainsi, il y a chaînes ayant une séquence de cinq consécutifs.  Finalement, on doit remarquer qu'il y a huit chaînes qui possèdent une séquences de quatre consécutifs et une séquence de trois consécutifs.  Par le principe d'inclusion-exclusion, on a .  "
 },
 {
-  "id": "exercise-215",
+  "id": "exercise-214",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-215",
+  "url": "sec_prodSomme.html#exercise-214",
   "type": "Exercice",
   "number": "4.1.7.6",
   "title": "",
   "body": "Soit un ensemble tel que . Combien de sous-ensembles de possède plus d'un élément? Il y a sous-ensemble au total. Il y a un sous-ensemble qui ne contient aucun élément (l'esemble vide) et il y a sous-ensemble contenant un seul élément. Ainsi, il y aura sous-ensembles avec plus d'un élément. "
 },
 {
-  "id": "exercise-216",
+  "id": "exercise-215",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-216",
+  "url": "sec_prodSomme.html#exercise-215",
   "type": "Exercice",
   "number": "4.1.7.7",
   "title": "",
   "body": "On considère les entiers , . Combien de ces entiers sont divisibles par ou ? Pour être divisible par et par , il faut et il suffit d'être divisible par . Combien de ces entiers ne sont divisibles ni par ni par ? L'énoncé n'est divisible ni par , ni par est la négation de l'éoncé est divisible par ou par . "
 },
 {
-  "id": "exercise-217",
+  "id": "exercise-216",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-217",
+  "url": "sec_prodSomme.html#exercise-216",
   "type": "Exercice",
   "number": "4.1.7.8",
   "title": "",
   "body": "Supposons qu'un mot de passe pour un système informatique doit avoir entre et (inclusivement) caractères, où chaque caractère est soit une lettre minuscule ou manjuscule, un chiffre ou l'un des caractères spéciaux . Combien de mots de passe différents sont disponibles pour ce système informatique? Pour chaque caractère, il y a possibilités. Il faut utiliser le principe de la somme selon le nombre de caractères. Combien de ces mots de passe contiennent au moins un des caractères spéciaux? Combien de ces mots de passe ne contiennt pas de caractères spéciaux? "
 },
 {
-  "id": "exercise-218",
+  "id": "exercise-217",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-218",
+  "url": "sec_prodSomme.html#exercise-217",
   "type": "Exercice",
   "number": "4.1.7.9",
   "title": "",
   "body": "On considère l'ensemble des propositions formées à partir de propositions atomiques. Combien de lignes possède le tableau de vérité d'une de ces propositions? Chaque de ligne dans le tableau de vérité correspond à une combinaison des valeurs de vérités des propositions atomiques. Combien de tableaux de vérité différents y a-t-il pour ces propositions? On considère que deux tableaux sont les mêmes si leur dernière colone sont les mêmes. On considère que deux tableaux de vérités sont les mêmes si les propositions se trouvant à la dernière colone sont équivalentes. Si est une proposition de cet ensemble, pour chaque ligne du tableau de vérité, combien de valeur de vérité est-ce que peut avoir ? "
 },
 {
-  "id": "exercise-219",
+  "id": "exercise-218",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-219",
+  "url": "sec_prodSomme.html#exercise-218",
   "type": "Exercice",
   "number": "4.1.7.10",
   "title": "",
   "body": "On considère les fonctions où . Conbien de ces fonctions sont injectives? Si , il y en a . Si , il y en a aussi 2. Si , il y en a . Combien de ces fonctions sont telles que ? Si ou , il y en a une seule. Si , il y en a . Combien de ces fonctions sont telles que ? Ici, on doit supposer que , car sinon la notation n'est pas cohérente. Si , alors il y aura fonctions qui respectent la condition. "
 },
 {
-  "id": "exercise-220",
+  "id": "exercise-219",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-220",
+  "url": "sec_prodSomme.html#exercise-219",
   "type": "Exercice",
   "number": "4.1.7.11",
   "title": "",
   "body": "Pour un mariage, de combien de façons différentes est-ce qu'un photographe peu arranger en une ligne personnes d'un groupe de , où les mariés sont dans le groupe de, si la mariée doit être sur la photo? On commence par placer la mariée. Une fois la mariée placée, il reste à placer personnes parmi les personnes restantes.  les mariés doivent tous deux être sur la photo? On commence par placer la mariée. Une fois la mariée placée, on place le marié. Une fois les mariés placé, il reste à placer personnes parmi les personnes restantes.  exactement un des mariés doit être sur la photo? On commence par choisir si c'est la marié ou le marié qui est sur la photo. On peut aussi utiliser le principe de la somme selon lequel des deux est sur la photo. "
 },
 {
-  "id": "exercise-221",
+  "id": "exercise-220",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-221",
+  "url": "sec_prodSomme.html#exercise-220",
   "type": "Exercice",
   "number": "4.1.7.12",
   "title": "",
@@ -3547,135 +3538,135 @@ var ptx_lunr_docs = [
   "body": " Combinaisons avec répétition  Déterminer le nombre de solutions à l'équation , pour , avec , si :  il n'y a pas d'autre condition?  pour tout ?  Pour s'assurer que , on introduit des variables intermédiaires telles que . Ainsi, en remplaçant dans l'équation, on a , ce qui devient .  Ainsi, il y aura     Pour s'assurer que , on introduit la variable intermédiaire telle que . Ainsi, en remplaçant dans l'équation, on a , ce qui devient .  Ainsi, il y aura     On compte toutes les solutions à l'équation (sans restriction) et on retire les solutions qui ne respecte pas la condition, c'est-à-dire les solutions telles que . Pour s'assurer que , on introduit la variable intermédiaire telle que . Ainsi, en remplaçant dans l'équation , ce qui devient .  Ainsi, il y aura   "
 },
 {
-  "id": "exercise-222",
+  "id": "exercise-221",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-222",
+  "url": "sec_arrCombinaison.html#exercise-221",
   "type": "Question de compréhension",
   "number": "4.2.4.1",
   "title": "",
   "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
 {
-  "id": "exercise-223",
+  "id": "exercise-222",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-223",
+  "url": "sec_arrCombinaison.html#exercise-222",
   "type": "Exercice",
   "number": "4.2.5.1",
   "title": "",
   "body": "Combien de permutations de l'ensemble y a-t-il? "
 },
 {
-  "id": "exercise-224",
+  "id": "exercise-223",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-224",
+  "url": "sec_arrCombinaison.html#exercise-223",
   "type": "Exercice",
   "number": "4.2.5.2",
   "title": "",
   "body": "Combien de permutations de l'ensemble commencent par ? Puisque est fixé en première position, il suffit de compter les permutations des lettres restantes. Il y en a . "
 },
 {
-  "id": "exercise-225",
+  "id": "exercise-224",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-225",
+  "url": "sec_arrCombinaison.html#exercise-224",
   "type": "Exercice",
   "number": "4.2.5.3",
   "title": "",
   "body": "On lance une pièce à deux faces à reprises. Le résultat est Pile ou Face. Combien de résultats: y a-t-il au total? . contiennent exactement deux Face? On choisit deux positions parmi les possibles pour les Face. contiennent exactement trois Pile?  contiennent le même nombre de Pile que de Face?  "
 },
 {
-  "id": "exercise-226",
+  "id": "exercise-225",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-226",
+  "url": "sec_arrCombinaison.html#exercise-225",
   "type": "Exercice",
   "number": "4.2.5.4",
   "title": "",
   "body": "De combien de manières peut-on sélectionner volontaires dans la classe? (On suppose qu'il y a personnes dans la classe.) Soit le nombre de personnes dans la classe. Si , alors c'est impossible. Sinon, le nombre de possibilités est . Pour cela, on identifie les personnes avec étiquettes pour volontaires et étiquettes pour non volontaires. "
 },
 {
-  "id": "exercise-227",
+  "id": "exercise-226",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-227",
+  "url": "sec_arrCombinaison.html#exercise-226",
   "type": "Exercice",
   "number": "4.2.5.5",
   "title": "",
   "body": "Aux olympiades scolaire de l'école du Bonheur, tous les participants gagnent une médaille. S'il y a élèves et qu'on attribue médailles d'or, médailles d'argent et le reste en bronze, de combien de manières est-ce que la distribution peut être faite? "
 },
 {
-  "id": "exercise-228",
+  "id": "exercise-227",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-228",
+  "url": "sec_arrCombinaison.html#exercise-227",
   "type": "Exercice",
   "number": "4.2.5.6",
   "title": "",
   "body": "Dans un groupe de personnes, on veut former deux équipes. La première sera composée de attaquants, défenseurs, gardiens et réservistes. La deuxième équipe sera formée de avants, passeur, arrières et réservistes. On suppose que personne ne fait partie des deux équipes. Combien y a-t-il de possibilités? "
 },
 {
-  "id": "exercise-229",
+  "id": "exercise-228",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-229",
+  "url": "sec_arrCombinaison.html#exercise-228",
   "type": "Exercice",
   "number": "4.2.5.7",
   "title": "",
   "body": "Pour une fin de semaine au chalet, on veut apporter jeux de société. Dans la collection, on trouve jeux coopératifs et jeux de stratégies. Combien de possibilités y a-t-il si: On ne donne aucune restriction?  On souhaite avoir exactement deux jeux coopératifs?  On utilise le principe du produit pour séparer la tâche en deux étapes. Premièrement, on choisit deux jeux coopratif et ensuite on choisit trois jeux de statégies. Ainsi, la réponse sera . Pour des raisons évidentes, on décide d'exclure des jeux coopératifs le jeu Pandémie et si on veut absolument apporter le jeu de stratégie Smallworld ? "
 },
 {
-  "id": "exercise-230",
+  "id": "exercise-229",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-230",
+  "url": "sec_arrCombinaison.html#exercise-229",
   "type": "Exercice",
   "number": "4.2.5.8",
   "title": "",
   "body": "Pour mon anniversaire, je souhaite faire un petit événement avec invités. J'ai bons amis hommes et bonnes amies femmes que je considère inviter. Combien de choix est-ce que j'ai si: Je ne mets aucune restriction? Je veux hommes et femmes? Roxanne et Samuel forme un couple. Si je décide d'en inviter un des deux, l'autre doit venir aussi. Combien de possibilités s'il n'y a pas d'autres restrictions? On commence par décider si le couple est invité ou non. On obtient leur présence ou absence entraine deux sous-ensembles disjoints de possibilités. Si le couple fait partie des invités, alors il reste places à combler, à choisir parmi les autres personnes. Cela fait .  À cela, on ajoute les possibilités où Roxanne et Samuel ne sont pas invités. Il faut alors choisir les invités parmi les personnes. Cela fait .  Par le principe d'addition, on a un total de possibilités.  Parmi celles-ci, combien comprennent le couple? Combien de possibilités si je veux avoir au total hommes et femmes? Encore une fois, on sépare en deux cas distincts, selon si Roxanne et Samuel sont présents ou non. Dans le cas où ils sont présent, on doit ensute choisir hommes parmi les restant et femmes parmi les restant. Selon le principe de multiplication, ceci donnera .  À cela, on doit ajouter les possiblités où Roxanne et Samuel sont absents. Il faut choisir hommes parmi les qui ne sont pas Samuel et femmes parmi les qui ne sont pas Roxanne. On obtient alors, par le principe de multiplication .  On combine finalement avec le principe d'addition pour avoir un total de possibilités.  Parmi celles-ci, combien comprennent le couple? Parmi mes amis, il y a aussi Christian et Sophie, qui sont en chicane et ne peuvent pas être tous les deux présents. Combien de possibilités y a-t-il s'il n'y a pas d'autres restrictions? Cette-fois, on distingue trois cas: Christian est présent, mais pas Sophie, Sophie est présent, mais pas Christian ou ni Sophie ni Christian sont présents. Ces trois cas sont disctincts et le principe d'addition permettra d'obtenir l'ensemble des possibilités.  Si Christian est présent, il faut ensuite choisir les autres invités parmi les personnes qui ne sont pas Sophie (ou Christian). Cela donne . Le même argument montre que si Sophie est présente, mais pas Christian, le nombre de possibilités est aussi .  Finalement, si les deux sont absents, il faut choisir les invités parmi les autres possibilités. On obtient alors .  En combinant le tout, il y a possibilités.  Combien de possibilités si je veux avoir au total hommes et femmes? "
 },
 {
-  "id": "exercise-231",
+  "id": "exercise-230",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-231",
+  "url": "sec_arrCombinaison.html#exercise-230",
   "type": "Exercice",
   "number": "4.2.5.9",
   "title": "",
   "body": "Soit et Combien y a-t-il de fonctions et ? Il y a fonctions , alors qu'il y a fonctions . Combien y a-t-il de fonctions qui sont surjectives?   Pour que la fonction soit surjective, on doit avoir pour , et on doit aussi avoir . Ainsi, il doit y avoir avoir exactement un élément tel que alors que tous les autres éléments aurons une seule préimage.  Donc, pour définir une fonction surjective , on doit choisir l'élément de ayant deux préimages ( possibilité). Enusite, on choisit les deux préimage de (il y possibilités.) Finalement, on doit choisir la préimage des autres éléments de . Ceci evient à permuter trois éléments (il y a possibilités).  Ainsi, par le principe du produit, il y a  Combien y a-t-il de fonctions qui sont injectives? \\Permutation{5}{4}=\\frac{5!}{(5-4)!}=5! "
 },
 {
-  "id": "exercise-232",
+  "id": "exercise-231",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-232",
+  "url": "sec_arrCombinaison.html#exercise-231",
   "type": "Exercice",
   "number": "4.2.5.10",
   "title": "",
   "body": "Soit . Combien de solutions y a-t-il si sont des naturels (plus grands ou égaux à )?   sont des naturels plus grands ou égaux à ?  "
 },
 {
-  "id": "exercise-233",
+  "id": "exercise-232",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-233",
+  "url": "sec_arrCombinaison.html#exercise-232",
   "type": "Exercice",
   "number": "4.2.5.11",
   "title": "",
   "body": "Soit un ensemble à éléments. Une -partition de est un ensemble de sous-ensembles de qui ont les propriétés suivantes:  ils sont non vides, c'est à dire ;  leur intersection deux à deux sont vides, c'est-à-dire si ;  leur union donne , c'est-à-dire .   Par exemple, pour , les ensembles et forment une -partition de . Combien y a-t-il de -partition de ?  Chaque -partition de est formé de deux ensembles de cardinalité et un ensemble de cardinalité . Chaque -partition est uniquement définie par le sous-ensemble de carinalité qu'elle contient.   "
 },
 {
-  "id": "exercise-234",
+  "id": "exercise-233",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-234",
+  "url": "sec_arrCombinaison.html#exercise-233",
   "type": "Exercice",
   "number": "4.2.5.12",
   "title": "",
   "body": "Une éducatrice en garderie a un groupe de enfants. De combien de manières peut-elle former trois sous-groupes? On suppose qu'un groupe n'est pas vide, mais pourrait contenir un seul enfant. "
 },
 {
-  "id": "exercise-235",
+  "id": "exercise-234",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-235",
+  "url": "sec_arrCombinaison.html#exercise-234",
   "type": "Exercice",
   "number": "4.2.5.13",
   "title": "",
   "body": "On considère l'ensemble . Combien de fonctions de vers ont la propriété que, si , alors . Par exemple, est un telle fonction.  Une telle fonction est dite monotone.  Ce problème est difficile si on ne le prend pas sous le bon angle. Commencer par énumer les possibilités. Il y en a . Considérer les éléments du codomaine comme étant les urnes et les éléments du domaines comme étant les billes. Des fonctions de vers , on cherche à compter celles qui sont monotones. On imagine la représentation d'une fonction en termes de billes et d'urnes. Par exemple, la figure suivante représente la fonction donné en exemple dans l'énoncé.      On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. Dans la première urne, une bille identifiée 1 est présente et des billes identifiées respectivement 2 et 3 sont présentes dans l'urne 2. La troisième urne est vide.    La figure ci-dessous représente quant à elle la fonction non monotone . Les mêmes urnes contiennent le même nombre de billes, mais les billes sont différentes.      On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. Dans l'urne 2, on peut voir des billes identifiées respectivement 1 et 3 et dans l'urne 3, on voit une bille identifiée 2. L'urne 1 est vide.    On prend maintenant une configuration arbitraire de trois billes identiques dans trois urnes distinctes.      On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. L'urne 2 contient deux billes et l'urne 3 en contient une, mais les billes ne sont pas identifiées.    À partir de cette configuration, il n'y a qu'une seule manière de créer une fonction monotone. On prend les billes de la première urne non vide (identifiée par le plus petit nombre) et on numérotte ses billes par les plus petits éléments du domaine. On poursuit ainsi avec les autres urnes non vide. On obtient alors une fonction monotone. Avec la configuration de la figure , on obtient .  "
 },
 {
-  "id": "exercise-236",
+  "id": "exercise-235",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-236",
+  "url": "sec_arrCombinaison.html#exercise-235",
   "type": "Exercice",
   "number": "4.2.5.14",
   "title": "",
