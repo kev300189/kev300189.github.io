@@ -12,10 +12,36 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.7.1.b.1</span><span class="period">.</span>
-</h6>
-<div class="para">On commence par choisir le dernier chiffre. Pour que celui-ci soit pair, il y a <span class="process-math">\(5\)</span> choix possibles. Pour chacun des autres chiffres, il y a <span class="process-math">\(10\)</span> possibilités, car les chiffres peuvent se répéter.</div>
+<h3 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.12.1</span><span class="period">.</span>
+</h3>
+<div class="para">Soit <span class="process-math">\(B\)</span> le nombre de chaînes binaires voulues, et soit <span class="process-math">\(B_1\)</span> les chaînes binaires de longueur <span class="process-math">\(8\)</span> commençant par un <span class="process-math">\(1\)</span> et <span class="process-math">\(B_{00}\)</span> les chaînes binaires de longueur <span class="process-math">\(8\)</span> se terminant avec deux <span class="process-math">\(0\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Si on utilise directement le principe de la somme (de façon erronée), on obtient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=B_1+B_{00}.
+\end{equation*}
+</div>
+<div class="para">Cependant, on ne peut pas utiliser le principe de la somme, car il existe des chaînes binaires de longueur <span class="process-math">\(8\)</span> qui commence par un <span class="process-math">\(1\)</span> <em class="alert">ET</em> se terminent par deux <span class="process-math">\(0\text{.}\)</span> On note ces chaînes <span class="process-math">\(B_{100}=B_1\cap B_{00}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Ainsi, par le principe de la soustraction, on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=B_1+B_{00}-B_{100}.
+\end{equation*}
+</div>
+</div> <div class="para">Par le principe du produit, on a que <span class="process-math">\(B_1=2^7\text{.}\)</span> En effet, chaque caractère, sauf le premier (qui est fixé à <span class="process-math">\(1\)</span>), peut être un <span class="process-math">\(1\)</span> ou un <span class="process-math">\(0\text{.}\)</span> Il reste donc <span class="process-math">\(7\)</span> choix à faire, avec <span class="process-math">\(2\)</span> possibilités pour chaque choix.</div> <div class="para">De même, on peut voir que <span class="process-math">\(B_00= 2^6\text{,}\)</span> car cette fois deux des caractères sont fixés.</div> <div class="para">Enfin, on peut également voir par le principe du produit que <span class="process-math">\(B_{100}=2^5\text{,}\)</span> car trois des caractères sont fixés.</div> <div class="para logical">
+<div class="para">Finalement, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+B\amp=B_1+B_{00}-B_{100}=2^7+2^6-2^5\\
+\amp=1000\ 0000_2+100\ 0000_2-10\ 0000_2\\
+\amp=1010\ 0000_2=160
+\end{align*}
+</div>
+</div>
 </div>
 <span class="incontext"><a href="sec_prodSomme.html#solution-166" class="internal">Contexte</a></span>
 </body>

@@ -13,16 +13,11 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.5.9.b.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.5.8.c.i.1</span><span class="period">.</span>
 </h6>
-<div class="para">Pour que la fonction <span class="process-math">\(h\)</span> soit surjective, on doit avoir <span class="process-math">\(|f^{-1}(b)|\geq 1\)</span> pour <span class="process-math">\(b\in\, B\text{,}\)</span> et on doit aussi avoir <span class="process-math">\(|f^{-1}(1)|+|f^{-1}(2)|+|f^{-1}(3)|+|f^{-1}(4)|=5\text{.}\)</span> Ainsi, il doit y avoir avoir exactement un élément <span class="process-math">\(b\in\,B\)</span> tel que <span class="process-math">\(|f^{-1}(b)|=2\)</span> alors que tous les autres éléments aurons une seule préimage.</div> <div class="para">Donc, pour définir une fonction surjective <span class="process-math">\(h:B\to A\text{,}\)</span> on doit choisir l’élément <span class="process-math">\(b\)</span> de <span class="process-math">\(B\)</span> ayant deux préimages (<span class="process-math">\(4\)</span> possibilité). Enusite, on choisit les deux préimage de <span class="process-math">\(b\)</span> (il y <span class="process-math">\(\Binomial{5}{2}\)</span> possibilités.) Finalement, on doit choisir la préimage des autres éléments de <span class="process-math">\(B\text{.}\)</span> Ceci evient à permuter trois éléments (il y a <span class="process-math">\(3!\)</span> possibilités).</div> <div class="para logical">
-<div class="para">Ainsi, par le principe du produit, il y a</div>
-<div class="displaymath process-math">
-\begin{equation*}
-4\cdot \Binomial{5}{2}\cdot 3!=4\cdot \frac{5!}{3!2!}\cdot 3!=2\cdot 5!
-\end{equation*}
-</div>
-</div>
+<div class="para">On commence par décider si le couple est invité ou non. On obtient leur présence ou absence entraine deux sous-ensembles disjoints de possibilités. Si le couple fait partie des invités, alors il reste <span class="process-math">\(8\)</span> places à combler, à choisir parmi les <span class="process-math">\(12\)</span> autres personnes. Cela fait <span class="process-math">\(\frac{12!}{8!4!}\text{.}\)</span>
+</div> <div class="para">À cela, on ajoute les possibilités où Roxanne et Samuel ne sont pas invités. Il faut alors choisir les <span class="process-math">\(10\)</span> invités parmi les <span class="process-math">\(12\)</span> personnes. Cela fait <span class="process-math">\(\frac{12!}{10!2!}\text{.}\)</span>
+</div> <div class="para">Par le principe d’addition, on a un total de <span class="process-math">\(\frac{12!}{8!4!}+\frac{12!}{10!2!}\)</span> possibilités.</div>
 </div>
 <span class="incontext"><a href="sec_arrCombinaison.html#solution-189" class="internal">Contexte</a></span>
 </body>

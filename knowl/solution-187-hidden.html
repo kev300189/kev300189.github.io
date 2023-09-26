@@ -10,9 +10,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<div class="para">Encore une fois, on sépare en deux cas distincts, selon si Roxanne et Samuel sont présents ou non. Dans le cas où ils sont présent, on doit ensute choisir <span class="process-math">\(4\)</span> hommes parmi les <span class="process-math">\(7\)</span> restant et <span class="process-math">\(4\)</span> femmes parmi les <span class="process-math">\(5\)</span> restant. Selon le principe de multiplication, ceci donnera <span class="process-math">\(\frac{7!}{4!3!}\times\frac{5!}{4!1!}\text{.}\)</span>
-</div> <div class="para">À cela, on doit ajouter les possiblités où Roxanne et Samuel sont absents. Il faut choisir <span class="process-math">\(5\)</span> hommes parmi les <span class="process-math">\(7\)</span> qui ne sont pas Samuel et <span class="process-math">\(5\)</span> femmes parmi les <span class="process-math">\(5\)</span> qui ne sont pas Roxanne. On obtient alors, par le principe de multiplication <span class="process-math">\(\frac{7!}{5!2!}\times \frac{5!}{5!0!}\text{.}\)</span>
-</div> <div class="para">On combine finalement avec le principe d’addition pour avoir un total de <span class="process-math">\(\frac{7!}{4!3!}\times\frac{5!}{4!1!}+\frac{7!}{5!2!}\times \frac{5!}{5!0!}\)</span> possibilités.</div>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
+<div class="para">Soit <span class="process-math">\(n\)</span> le nombre de personnes dans la classe. Si <span class="process-math">\(n&lt; 5\text{,}\)</span> alors c’est impossible. Sinon, le nombre de possibilités est</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{n!}{5!(n-5)!}\text{.}
+\end{equation*}
+</div>
+<div class="para">Pour cela, on identifie les personnes avec <span class="process-math">\(5\)</span> étiquettes <span class="process-math">\(V\)</span> pour volontaires et <span class="process-math">\(n-5\)</span> étiquettes <span class="process-math">\(N\)</span> pour non volontaires.</div>
+</div></div></body>
 </html>

@@ -12,7 +12,8 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraphe</span></h4>
-<div class="para">Dans la réalité, Damien choisirait des nombres beaucoup plus grands, sans quoi la sécurité du système RSA expliqué ci-dessous serait nulle. On considère maintenant Marie, qui souhaite envoyer le message “Bonjour” à Damien. Marie commence par transformer son message en nombres et obtient <code class="code-inline tex2jax_ignore">2 15 14 10 15 21 18 </code>. Puis, elle prend chacun de des chiffres <span class="process-math">\(M\)</span> de son message et les encode à l’aide de la formule <span class="process-math">\(C=M^e\mod pq\text{.}\)</span> Par exemple “B” devient <span class="process-math">\(2^5 \mod 91 =32\text{,}\)</span> puis “O” devient <span class="process-math">\(15^5 \mod 91=71\text{,}\)</span> “N” devient (reste) <span class="process-math">\(14\)</span> et ainsi de suite. Le message devient ainsi <code class="code-inline tex2jax_ignore">32 71 14 82 71 21 44</code>. C’est ce message qui est transmis à Damien.</div>
+<div class="para">La troisième cellule effectue le décalage d’une liste. À partir d’une liste <code class="code-inline tex2jax_ignore">L</code> et d’un nombre <span class="process-math">\(n\text{,}\)</span> on ajoute <span class="process-math">\(n\)</span> à chaque entrée de la liste, en travaillant modulo <span class="process-math">\(26\text{.}\)</span>
+</div>
 <span class="incontext"><a href="sec-modulo.html#p-1692" class="internal">Contexte</a></span>
 </body>
 </html>

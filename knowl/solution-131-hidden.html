@@ -10,23 +10,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<div class="para logical">
-<div class="para">L’idée est de décomposer le nombre <span class="process-math">\(2^{345}\)</span> en quelque chose de plus petit et dont on connait le reste de la division par <span class="process-math">\(7\text{.}\)</span> Dans ce cas-ci, on voit que <span class="process-math">\(345=5\times 69\)</span> et donc <span class="process-math">\(2^{345}=(2^5)^{69}\text{.}\)</span> Comme <span class="process-math">\(2^5=32\equiv 4\mod 7\text{,}\)</span> la troisième propriété appliquée à répétition nous permet de dire que</div>
-<div class="displaymath process-math">
-\begin{equation*}
-2^{345}\equiv 4^{69}\mod 7\text{.}
-\end{equation*}
-</div>
-<div class="para">On peut ensuite observer que <span class="process-math">\(4^3=64\equiv 1\mod 7\)</span> et puisque <span class="process-math">\(69=3\times 23\text{,}\)</span> alors</div>
-<div class="displaymath process-math">
-\begin{align*}
-2^{345}&amp;\equiv 4^{69}\mod 7\\
-&amp;\equiv (4^3)^{23}\mod 7\\
-&amp;\equiv 1^{23}\mod 7\\
-&amp;\equiv 1\mod 7\text{.}
-\end{align*}
-</div>
-</div> <div class="para">Le reste de la division par <span class="process-math">\(7\)</span> du nombre <span class="process-math">\(2^{345}\)</span> est donc <span class="process-math">\(1\text{.}\)</span> On note au passage qu’on aurait pu y arriver plus rapidement en divisant <span class="process-math">\(345\)</span> par <span class="process-math">\(3\)</span> plutôt que par <span class="process-math">\(5\)</span> initialement.</div>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><div class="para">Dans les quatre années suivant <span class="process-math">\(2021\text{,}\)</span> il y a nécessairement une année bissextile. Celle-ci se trouve en <span class="process-math">\(2024\text{.}\)</span> Donc pour calculer le jour de la semaine, il faut ajouter <span class="process-math">\(4\times 365+1\)</span> jours au vendredi <span class="process-math">\((5)\)</span> de <span class="process-math">\(2021\)</span> et travailler encore une fois modulo <span class="process-math">\(7\text{.}\)</span> On trouve alors <span class="process-math">\(5+4\times 365+1=1466\equiv 3\mod 7\text{.}\)</span> Le <span class="process-math">\(17\)</span> septembre <span class="process-math">\(2025\)</span> sera (était?) donc un mercredi.</div></div></body>
 </html>
