@@ -12,11 +12,15 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.3.5</span><span class="period">.</span>
-</h4>
-<div class="para">Dans les quatre années suivant <span class="process-math">\(2021\text{,}\)</span> il y a nécessairement une année bissextile. Celle-ci se trouve en <span class="process-math">\(2024\text{.}\)</span> Donc pour calculer le jour de la semaine, il faut ajouter <span class="process-math">\(4\times 365+1\)</span> jours au vendredi <span class="process-math">\((5)\)</span> de <span class="process-math">\(2021\)</span> et travailler encore une fois modulo <span class="process-math">\(7\text{.}\)</span> On trouve alors <span class="process-math">\(5+4\times 365+1=1466\equiv 3\mod 7\text{.}\)</span> Le <span class="process-math">\(17\)</span> septembre <span class="process-math">\(2025\)</span> sera (était?) donc un mercredi.</div>
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.5.b.1</span><span class="period">.</span>
+</h5>
+<div class="para">Comme à la partie précédente, on compte le nombre de façons qu’il y a de définir une telle fonction <span class="process-math">\(f\text{.}\)</span> Pour se faire, on sépare la tâche en deux étapes: choisir la valeur de <span class="process-math">\(f(0)\)</span> et ensuite choisir la  valeur de <span class="process-math">\(f(1)\text{.}\)</span>
+</div> <div class="para">Lorsqu’on choisit la valeur de <span class="process-math">\(f(0)\text{,}\)</span> on a trois choix possibles: <span class="process-math">\(f(0)=a\text{,}\)</span> <span class="process-math">\(f(0)=b\)</span> ou bien <span class="process-math">\(f(0)=c\text{.}\)</span>
+</div> <div class="para">Une fois qu’on a choisit <span class="process-math">\(f(0)\text{,}\)</span> on doit choisir <span class="process-math">\(f(1)\text{.}\)</span> Attention! Ici, on veut une fonction injective! Supposons par exemple que <span class="process-math">\(f(0)=c\text{,}\)</span> il ne reste alors que <em class="emphasis">deux choix possibles</em>:  <span class="process-math">\(f(1)=a\)</span> ou bien <span class="process-math">\(f(1)=b\text{.}\)</span> La même chose est vrai si on avait choisit une autre valeur pour <span class="process-math">\(f(0)\text{,}\)</span> il ne resterait que deux choix possibles pour <span class="process-math">\(f(1)\text{.}\)</span>
+</div> <div class="para">Par le principe du produit, il y a alors <span class="process-math">\(3\cdot 2 =6\)</span> façons différentes de choisir une fonction <span class="process-math">\(f:A\to B\text{.}\)</span>
 </div>
-<span class="incontext"><a href="sec-modulo.html#solution-131" class="internal">Contexte</a></span>
+</div>
+<span class="incontext"><a href="sec_prodSomme.html#solution-131" class="internal">Contexte</a></span>
 </body>
 </html>

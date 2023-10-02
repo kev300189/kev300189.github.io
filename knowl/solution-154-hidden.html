@@ -10,37 +10,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<div class="para">Clairement, si <span class="process-math">\(x=2\text{,}\)</span> alors <span class="process-math">\(x\)</span> est une solution de la première équation, mais pas de la deuxième. Cependant, on sait que toutes les solutions de la première équation s’écrive comme <span class="process-math">\(x=2+3k\text{,}\)</span> où <span class="process-math">\(k\in \Z\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Ainsi, en remplaçant <span class="process-math">\(x\)</span> par <span class="process-math">\(x=2+3k\)</span> dans la deuxième équation, on obtient</div>
-<div class="displaymath process-math">
-\begin{align*}
-(2+3k)\amp\equiv 3 \mod 5\\
-3k\amp\equiv 3-2 \mod 5\\
-3k\amp\equiv 1 \mod 5\\
-2\cdot 3k\amp\equiv 2\cdot 1 \mod 5\\
-1k\amp\equiv 2 \mod 5.
-\end{align*}
-</div>
-</div> <div class="para logical">
-<div class="para">Ainsi, on peut obtenir une solution en remplaçant cette fois <span class="process-math">\(k\)</span> par <span class="process-math">\(2\)</span> dans <span class="process-math">\(x=2+3k\text{,}\)</span> ce qui donne <span class="process-math">\(x=2+3(2)=8\text{.}\)</span> On peut en effet vérifier que:</div>
-<div class="displaymath process-math">
-\begin{align*}
-x&amp;\equiv 2\mod 3\\
-x&amp;\equiv 3\mod 5
-\end{align*}
-</div>
-</div> <div class="para">En fait, on a montrer que, pour que <span class="process-math">\(x=2+3k\)</span> soit une solution à la deuxième équation, on doit avoir <span class="process-math">\(k\in E_{2,5}\text{,}\)</span> c’est-à-dire <span class="process-math">\(k=2+5k_1\text{,}\)</span> pour <span class="process-math">\(k_1\in \Z\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Ainsi, en remplaçant dans <span class="process-math">\(x=2+3k\text{,}\)</span> on a que <span class="process-math">\(x=2+3(2+5k_1)=8+15k_1\text{,}\)</span> c’est-à-dire que <span class="process-math">\(x\)</span> est une solution aux deux équation si et seulement si <span class="process-math">\(x\)</span> est une solution à l’équation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x\equiv 8 \mod 15,
-\end{equation*}
-</div>
-<div class="para">ou encore <span class="process-math">\(x \in E_{8,15}\text{.}\)</span>
-</div>
-</div>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><div class="para">Une autre solution est de voir le problème comme étant une combinaison. En effet, on peut choisir une telle chaîne binaire en choisissant les positions des <span class="process-math">\(1\text{.}\)</span> Puisqu’il y aura <span class="process-math">\(8\)</span> positions au total et qu’on doit choisir la position pour les quatre caractères <span class="process-math">\(1\text{.}\)</span> Ainsi, il s’agit d’une combinaison de <span class="process-math">\(4\)</span> objets parmi <span class="process-math">\(8\text{.}\)</span>
+</div></div></body>
 </html>

@@ -10,6 +10,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para">En travaillant modulo <span class="process-math">\(24\text{,}\)</span> on a <span class="process-math">\(75\equiv 3\mod 24\)</span> et donc, <span class="process-math">\(75\)</span> heures après l’écriture de ces lignes est équivalent en termes d’heures à <span class="process-math">\(3\)</span> heures après. Il était donc <span class="process-math">\(17:40\text{.}\)</span>
-</div></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">Soit <span class="process-math">\(V\)</span> le nombre de noms de variables possible. Soit aussi <span class="process-math">\(V_1\)</span> le nombre de ces noms formés d’un seul caractère, et soit <span class="process-math">\(V_2\)</span> le nombre des noms formés de deux caractères. Ainsi, par le principe de la somme, on aura <span class="process-math">\(V=V_1+V_2\text{.}\)</span>
+</div> <div class="para">Pour <span class="process-math">\(V_1\text{.}\)</span> Puisque le premier caractère doit être une lettre, il y a seulement <span class="process-math">\(26\)</span>possibilités, c’est-à-dire <span class="process-math">\(V_1=26\text{.}\)</span>
+</div> <div class="para">Pour <span class="process-math">\(V_2\text{.}\)</span> On doit choisir le premier caractère, qui doit être une lettre (donc <span class="process-math">\(26\)</span> possibilités), et ensuite le deuxième caractère qui peut être soit une lettre soit un chiffre (par le principe de la somme, il y a <span class="process-math">\(26+10=36\)</span> possibilités). Ainsi, par le principe du produit, il y a <span class="process-math">\(26\cdot 36=936\)</span> possibilités. Cependant, on doit retirer les <span class="process-math">\(5\)</span> possibilités représentant les noms réservés. On a donc <span class="process-math">\(V_2=936-5=931\text{.}\)</span>
+</div> <div class="para">Finalement, on obtient <span class="process-math">\(V=V_1+V_2=26+931=957\text{.}\)</span>
+</div>
+</div></body>
 </html>

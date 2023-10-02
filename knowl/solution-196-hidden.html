@@ -10,5 +10,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">On doit choisir <span class="process-math">\(6\)</span> beignes parmi les <span class="process-math">\(12\)</span> restants. De plus, on doit les placer en ordre, car on en place un seul dans chaque compartiment. On compte donc les <span class="process-math">\(6\)</span>-permutations de <span class="process-math">\(12\)</span> objets. Il y a <span class="process-math">\(\Permutation{12}{6}=\frac{12!}{6!}\)</span> façons de le faire.</div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">Cette-fois, on distingue trois cas: Christian est présent, mais pas Sophie, Sophie est présent, mais pas Christian ou ni Sophie ni Christian sont présents. Ces trois cas sont disctincts et le principe d’addition permettra d’obtenir l’ensemble des possibilités.</div> <div class="para">Si Christian est présent, il faut ensuite choisir les <span class="process-math">\(9\)</span> autres invités parmi les <span class="process-math">\(12\)</span> personnes qui ne sont pas Sophie (ou Christian). Cela donne <span class="process-math">\(\frac{12!}{9!3!}\text{.}\)</span> Le même argument montre que si Sophie est présente, mais pas Christian, le nombre de possibilités est aussi <span class="process-math">\(\frac{12!}{9!3!}\text{.}\)</span>
+</div> <div class="para">Finalement, si les deux sont absents, il faut choisir les <span class="process-math">\(10\)</span> invités parmi les <span class="process-math">\(12\)</span> autres possibilités. On obtient alors <span class="process-math">\(\frac{12!}{10!2!}\text{.}\)</span>
+</div> <div class="para">En combinant le tout, il y a <span class="process-math">\(2\times \frac{12!}{9!3!}+\frac{12!}{10!2!}\)</span> possibilités.</div>
+</div></body>
 </html>

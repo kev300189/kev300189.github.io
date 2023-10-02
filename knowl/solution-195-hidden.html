@@ -10,5 +10,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">Le problèmes revient à compter le nombre de façons d’attribuer à chaque beigne un compartiment. Pour chaque beigne, il y a <span class="process-math">\(6\)</span> compartiments possibles. Par le principe du produit, il y a <span class="process-math">\(6^6\)</span> façons de faire.</div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">Encore une fois, on sépare en deux cas distincts, selon si Roxanne et Samuel sont présents ou non. Dans le cas où ils sont présent, on doit ensute choisir <span class="process-math">\(4\)</span> hommes parmi les <span class="process-math">\(7\)</span> restant et <span class="process-math">\(4\)</span> femmes parmi les <span class="process-math">\(5\)</span> restant. Selon le principe de multiplication, ceci donnera <span class="process-math">\(\frac{7!}{4!3!}\times\frac{5!}{4!1!}\text{.}\)</span>
+</div> <div class="para">À cela, on doit ajouter les possiblités où Roxanne et Samuel sont absents. Il faut choisir <span class="process-math">\(5\)</span> hommes parmi les <span class="process-math">\(7\)</span> qui ne sont pas Samuel et <span class="process-math">\(5\)</span> femmes parmi les <span class="process-math">\(5\)</span> qui ne sont pas Roxanne. On obtient alors, par le principe de multiplication <span class="process-math">\(\frac{7!}{5!2!}\times \frac{5!}{5!0!}\text{.}\)</span>
+</div> <div class="para">On combine finalement avec le principe d’addition pour avoir un total de <span class="process-math">\(\frac{7!}{4!3!}\times\frac{5!}{4!1!}+\frac{7!}{5!2!}\times \frac{5!}{5!0!}\)</span> possibilités.</div>
+</div></body>
 </html>

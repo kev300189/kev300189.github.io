@@ -10,5 +10,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><div class="para">On suppose que <span class="process-math">\(s\)</span> est une solution à la congruence. Cela signifie que <span class="process-math">\(as\equiv b\mod n\)</span> ou de manière équivalente, <span class="process-math">\(n\mid (as-b)\text{.}\)</span> On réécrit pour obtenir <span class="process-math">\(as-b=kn\)</span> pour un certain <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> On divise maintenant cette équation par <span class="process-math">\(\pgcd{(a,n)}\text{.}\)</span> On obtient alors <span class="process-math">\(r-\frac{b}{\pgcd{(a,n)}}=t\)</span> où <span class="process-math">\(s,t\)</span> sont des entiers. Or puisque <span class="process-math">\(\pgcd{(a,n)}\not \mid b\text{,}\)</span> le terme <span class="process-math">\(\frac{b}{\pgcd{(a,n)}}\)</span> lui, n’est pas entier. Ceci crée une contradiction et donc, il ne peut pas exister de solutions.</div></article></body>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">On commence par choisir les <span class="process-math">\(n_1\)</span> positions parmi les <span class="process-math">\(n\)</span> positions totales pour les objets de type <span class="process-math">\(1\text{.}\)</span> Il y a <span class="process-math">\(\Binomial{n}{n_1}\)</span> façons de le faire.</div> <div class="para">Par la suite, on choisit les <span class="process-math">\(n_2\)</span> positions parmi les <span class="process-math">\(n-n_1\)</span> positions restantes pour les objets de type <span class="process-math">\(2\text{.}\)</span>  Il y a <span class="process-math">\(\Binomial{n-n_1}{n_2}\)</span> façons de le faire.</div> <div class="para">On doit maintenant choisir les <span class="process-math">\(n_3\)</span> positions parmi les <span class="process-math">\(n-n_1-n_2\)</span> positions restantes pour les objets de type <span class="process-math">\(3\text{.}\)</span>  Il y a <span class="process-math">\(\Binomial{n-n_1-n_2}{n_3}\)</span> façons de le faire.</div> <div class="para logical">
+<div class="para">En poursuivant ainsi, jusqu’aux objets de type <span class="process-math">\(k\text{,}\)</span> et en utilisant le principe du produit, on a que le nombres de permutations est</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp = \Binomial{n}{n_1}\Binomial{n-n_1}{n_2}\cdots \Binomial{n-n_1-n_2-\cdots-n_{k-1}}{n_{k}}\\
+\amp = \frac{n!}{(n-n_1)!n_1!}\frac{(n-n_1)!}{(n-n_1-n_2)!n_2!}\cdots \frac{(n-n_1-n_2-\cdots-n_{k-1})!}{0!n_{k}!}\\
+\amp = \frac{n!}{n_1!n_2!\cdots n_k!}
+\end{align*}
+</div>
+</div></article></body>
 </html>

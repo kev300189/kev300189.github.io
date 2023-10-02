@@ -12,7 +12,16 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraphe</span></h6>
-<div class="para"><span class="process-math">\(x_3\geq 2\)</span></div>
+<div class="para logical">
+<div class="para">En poursuivant ainsi, jusqu’aux objets de type <span class="process-math">\(k\text{,}\)</span> et en utilisant le principe du produit, on a que le nombres de permutations est</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp = \Binomial{n}{n_1}\Binomial{n-n_1}{n_2}\cdots \Binomial{n-n_1-n_2-\cdots-n_{k-1}}{n_{k}}\\
+\amp = \frac{n!}{(n-n_1)!n_1!}\frac{(n-n_1)!}{(n-n_1-n_2)!n_2!}\cdots \frac{(n-n_1-n_2-\cdots-n_{k-1})!}{0!n_{k}!}\\
+\amp = \frac{n!}{n_1!n_2!\cdots n_k!}
+\end{align*}
+</div>
+</div>
 <span class="incontext"><a href="sec_arrCombinaison.html#p-1998" class="internal">Contexte</a></span>
 </body>
 </html>
