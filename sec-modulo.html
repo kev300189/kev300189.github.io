@@ -1311,7 +1311,8 @@ print(C)
 </div></article><article class="task exercise-like" id="task-451"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <div class="para" id="p-1749"><span class="process-math">\(4x\equiv 1\mod 6\)</span></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-223" id="answer-223"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-223"><div class="answer solution-like">Cette équation ne possède aucune solution, car \pgcd{(4,6)}=2\not| \ 1.</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-223" id="answer-223"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-223"><div class="answer solution-like">Cette équation ne possède aucune solution, car <span class="process-math">\(\pgcd{(4,6)}=2\not| \ 1\text{.}\)</span>
+</div></div>
 </div></article><article class="task exercise-like" id="task-452"><h6 class="heading"><span class="codenumber">(e)</span></h6>
 <div class="para" id="p-1750"><span class="process-math">\(5x\equiv 1\mod 7\)</span></div>
 <div class="solutions">
@@ -1324,7 +1325,7 @@ print(C)
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-150" id="solution-150"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-150"><div class="solution solution-like">
 <div class="displaymath process-math" id="md-70">
 \begin{align*}
-3\cdots 2x\amp \equiv 3\cdot 3 \mod 5\\
+3\cdot 2x\amp \equiv 3\cdot 3 \mod 5\\
 1x\amp \equiv 9 \mod 5\\
 x\amp \equiv 4 \mod 5.
 \end{align*}
@@ -1357,7 +1358,8 @@ x\amp \equiv 2 \mod 7.
 </div></article><article class="task exercise-like" id="task-456"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <div class="para" id="p-1755"><span class="process-math">\(4x\equiv 5\mod 6\)</span></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-225" id="answer-225"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-225"><div class="answer solution-like">Cette équation ne possède aucune solution, car \pgcd{(4,6)}=2\not| \ 5.</div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-225" id="answer-225"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-225"><div class="answer solution-like">Cette équation ne possède aucune solution, car <span class="process-math">\(\pgcd{(4,6)}=2\not| \ 5.\)</span>
+</div></div>
 </div></article><article class="task exercise-like" id="task-457"><h6 class="heading"><span class="codenumber">(e)</span></h6>
 <div class="para" id="p-1756"><span class="process-math">\(5x\equiv 3\mod 7\)</span></div>
 <div class="solutions">
@@ -1445,56 +1447,73 @@ x\equiv 8 \mod 15,
 <li id="li-401"><div class="para" id="p-1770">que la relation est transitive, c’est-à-dire que si <span class="process-math">\((a,b)\in R\)</span> et <span class="process-math">\((b,c)\in R\text{,}\)</span> alors <span class="process-math">\((a,c)\in R\text{.}\)</span>
 </div></li>
 </ul>
-</div> <div class="para" id="p-1771">Pour la congruence modulo <span class="process-math">\(n\text{,}\)</span> on peut plus simplement écrire <span class="process-math">\((a,b) \leftrightarrow a\equiv b\mod n\text{.}\)</span> Montrer que la congruence modulo est une relation d’équivalence.</div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-156" id="solution-156"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-156"><div class="solution solution-like"><div class="para" id="p-1772"></div></div></div></article></article><article class="subexercises" id="subexercises-11"><h4 class="heading"><span class="title">Exercices supplémentaires</span></h4>
+</div> <div class="para" id="p-1771">Pour la congruence modulo <span class="process-math">\(n\text{,}\)</span> on peut plus simplement écrire <span class="process-math">\((a,b) \leftrightarrow a\equiv b\mod n\text{.}\)</span> Montrer que la congruence modulo est une relation d’équivalence.</div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-156" id="solution-156"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-156"><div class="solution solution-like">
+<div class="para" id="p-1772">On utilise principalement la version de congruence modulo <span class="process-math">\(n\)</span> donnée par la proposition <a href="" class="xref" data-knowl="./knowl/prop-modulodivisibilite.html" title="Proposition 3.3.5: Congruence modulo n et divisibilité">3.3.5</a> On doit vérifier que la relation respecte les trois propriétés d’une relation d’équivalence.</div> <ul class="disc">
+<li id="li-402"><div class="para" id="p-1773">Si <span class="process-math">\(a\equiv b \mod n\text{,}\)</span> on doit montrer que   <span class="process-math">\(b \equiv a \mod n\text{.}\)</span> Or, si <span class="process-math">\(a\equiv b \mod n\text{,}\)</span> on a que <span class="process-math">\(n \mid (a-b)\text{,}\)</span> c’est-à-dire que <span class="process-math">\(nq=(a-b)\)</span> pour un certain <span class="process-math">\(q\in \Z\text{.}\)</span> On a alors <span class="process-math">\(n(-q)=(b-a)\text{,}\)</span> d’où <span class="process-math">\(n\mid (b-a)\text{,}\)</span> c’est-à-dire que <span class="process-math">\(b\equiv a \mod n\text{.}\)</span>
+</div></li>
+<li id="li-403"><div class="para" id="p-1774">On a bien que <span class="process-math">\(a\equiv a \mod n\text{,}\)</span> car <span class="process-math">\(n\mid (a-a)=0\text{.}\)</span>
+</div></li>
+<li id="li-404"><div class="para logical" id="p-1775">
+<div class="para">Supposons que  <span class="process-math">\(a\equiv b\mod n\)</span> et <span class="process-math">\(b\equiv c\mod n\text{.}\)</span> On a alors que <span class="process-math">\(n \mid (a-b)\)</span> et <span class="process-math">\(n \mid (b-c)\text{.}\)</span> Par définition de la divisibilité, on a <span class="process-math">\(nq_1=(a-b)\)</span> et <span class="process-math">\(nq_2=(b-c)\text{,}\)</span> où <span class="process-math">\(q_1,\ q_2 \in \Z\text{.}\)</span> En additionnant, on obtient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a-c=(a-b)+(b-c)=nq_1+nq_2=n(q_1+q_2).
+\end{equation*}
+</div>
+<div class="para">Par ce qui précède, on a bien que <span class="process-math">\(n \mid (a-c)\text{,}\)</span> c’est-à-dire que <span class="process-math">\(a \equiv b \mod n\text{.}\)</span>
+</div>
+</div></li>
+</ul>
+</div></div></article></article><article class="subexercises" id="subexercises-11"><h4 class="heading"><span class="title">Exercices supplémentaires</span></h4>
 <article class="exercise exercise-like" id="exercise-197"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-154"><div class="para" id="p-1773">Encoder les messages suivants avec le décalage de César précisé avec le message.</div></div>
+<div class="introduction" id="introduction-154"><div class="para" id="p-1776">Encoder les messages suivants avec le décalage de César précisé avec le message.</div></div>
 <article class="task exercise-like" id="task-458"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1774">
+<div class="para" id="p-1777">
 <code class="code-inline tex2jax_ignore">Mon enseignant est le meilleur</code> avec décalage <span class="process-math">\(22\)</span>
 </div></article><article class="task exercise-like" id="task-459"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1775">
+<div class="para" id="p-1778">
 <code class="code-inline tex2jax_ignore">Je vais faire tous les devoirs</code> avec décalage <span class="process-math">\(9\)</span>
 </div></article><article class="task exercise-like" id="task-460"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1776">
+<div class="para" id="p-1779">
 <code class="code-inline tex2jax_ignore">Un jour je serai le meilleur dresseur</code> avec décalage <span class="process-math">\(1\)</span>
 </div></article></article><article class="exercise exercise-like" id="exercise-198"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-155"><div class="para" id="p-1777">Décoder les messages suivants, qui ont été chiffrés par un décalage de César précisé avec le message.</div></div>
+<div class="introduction" id="introduction-155"><div class="para" id="p-1780">Décoder les messages suivants, qui ont été chiffrés par un décalage de César précisé avec le message.</div></div>
 <article class="task exercise-like" id="task-461"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1778">
+<div class="para" id="p-1781">
 <code class="code-inline tex2jax_ignore">EHBWEPXAWQZADKNO</code> avec décalage <span class="process-math">\(22\)</span>
 </div></article><article class="task exercise-like" id="task-462"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1779">
+<div class="para" id="p-1782">
 <code class="code-inline tex2jax_ignore">MNBYXVVNBMNBYXRANBMNBJWJWJB</code> avec décalage <span class="process-math">\(9\)</span>
 </div></article><article class="task exercise-like" id="task-463"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1780">
+<div class="para" id="p-1783">
 <code class="code-inline tex2jax_ignore">MFTNBUIFNBUJRVFTEJTDSFUFTDFTUWSBJNFOUHFOJBM</code> avec décalage <span class="process-math">\(1\)</span>
 </div></article></article><article class="exercise exercise-like" id="exercise-199"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-156"><div class="para" id="p-1781">Encoder les messages suivants avec le système RSA dont les paramètres sont précisés avec le message.</div></div>
+<div class="introduction" id="introduction-156"><div class="para" id="p-1784">Encoder les messages suivants avec le système RSA dont les paramètres sont précisés avec le message.</div></div>
 <article class="task exercise-like" id="task-464"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1782">
+<div class="para" id="p-1785">
 <code class="code-inline tex2jax_ignore">Mon enseignant est le meilleur</code> avec paramètres <span class="process-math">\(pq=2077, e=15841\)</span>
 </div></article><article class="task exercise-like" id="task-465"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1783">
+<div class="para" id="p-1786">
 <code class="code-inline tex2jax_ignore">Je vais faire tous les devoirs</code> avec paramètres <span class="process-math">\(pq=18871, e=3261\)</span>
 </div></article><article class="task exercise-like" id="task-466"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1784">
+<div class="para" id="p-1787">
 <code class="code-inline tex2jax_ignore">Un jour je serai le meilleur dresseur</code> avec paramètres <span class="process-math">\(pq=45113,e=5555\)</span>
 </div></article><article class="task exercise-like" id="task-467"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<div class="para" id="p-1785">Qui a-t-il de particulier avec ces messages codés? Est-ce qu’il y a une lettre qui est facile à décoder? En utilisant des blocs de lettres comme dans le vrai RSA, ceci ne se produit pas.</div></article></article><article class="exercise exercise-like" id="exercise-200"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
-<div class="introduction" id="introduction-157"><div class="para" id="p-1786">Décoder les messages suivants, qui ont été chiffrés par RSA avec paramètres précisés avec le message.</div></div>
+<div class="para" id="p-1788">Qui a-t-il de particulier avec ces messages codés? Est-ce qu’il y a une lettre qui est facile à décoder? En utilisant des blocs de lettres comme dans le vrai RSA, ceci ne se produit pas.</div></article></article><article class="exercise exercise-like" id="exercise-200"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-157"><div class="para" id="p-1789">Décoder les messages suivants, qui ont été chiffrés par RSA avec paramètres précisés avec le message.</div></div>
 <article class="task exercise-like" id="task-468"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="para" id="p-1787">
+<div class="para" id="p-1790">
 <code class="code-inline tex2jax_ignore">[8, 349, 1231, 64, 1000, 1, 684, 125, 807, 8, 349, 1231, 64]</code> avec <span class="process-math">\(p=89,q=17,e=531\)</span>
 </div></article><article class="task exercise-like" id="task-469"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="para" id="p-1788">
+<div class="para" id="p-1791">
 <code class="code-inline tex2jax_ignore">[6041, 80552, 64471, 1, 40280, 76462, 6041, 75310, 6041, 40280, 2122, 78295, 80552, 16446, 1, 32487, 2122, 80552, 6041, 73799, 1, 20790, 3336, 6041, 40280, 20790, 16446, 1, 79033, 2122, 46951, 6415, 70263, 2122, 46951, 40280]</code> avec <span class="process-math">\(p=389,q=233,e=111\)</span>
 </div></article><article class="task exercise-like" id="task-470"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="para" id="p-1789">
+<div class="para" id="p-1792">
 <code class="code-inline tex2jax_ignore">[10, 1, 7357, 15878, 6017, 16044, 6017, 1172, 6017, 341, 6017, 10370, 341, 6017, 13378, 1, 16044, 11527, 341, 1518, 11527, 7357, 3855]</code> avec <span class="process-math">\(p=101,q=167,e=333\)</span>
 </div></article></article><article class="exercise exercise-like" id="exercise-201"><h5 class="heading">
 <span class="codenumber">15<span class="period">.</span></span><span class="space"> </span><span class="title">QFINXUFWNYNTS.</span>
 </h5>
-<div class="para logical" id="p-1790">
+<div class="para logical" id="p-1793">
 <div class="para">Le message</div>
 <pre class="code-display tex2jax_ignore">
     AYHOPYXBPKPZWHYBAKHUZSHKPZWHYPAPVUYHCPYHPAHBSPZHUAZBIAPSAVBAWSHPZPYTVABZKVUJZBYSPUJVUUBUVFHBTHUXBHUA
@@ -1502,11 +1521,11 @@ x\equiv 8 \mod 15,
 <div class="para">a été encodé à l’aide d’un décalage César, mais le décalage est inconnu. Déterminer le message original, sans essayer toutes les possibilités.</div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-25" id="hint-25"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-25"><div class="hint solution-like"><div class="para" id="p-1791">Si même après avoir déterminé quelles lettres sont les plus fréquentes le message ne se déchiffre toujours pas, un indice avec décalage 5 a été crypté dans le titre de l’exercice.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-25" id="hint-25"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-25"><div class="hint solution-like"><div class="para" id="p-1794">Si même après avoir déterminé quelles lettres sont les plus fréquentes le message ne se déchiffre toujours pas, un indice avec décalage 5 a été crypté dans le titre de l’exercice.</div></div></div>
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-26" id="hint-26"><span class="type">Indice</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-26"><div class="hint solution-like">
-<div class="para" id="p-1792">Ne pas lire avant d’avoir réfléchi et cherché à propos de l’indice 1. L’indice ci-dessous est un décalage de César avec décalage <span class="process-math">\(21\text{.}\)</span> Décoder chaque phrase individuellement pour une meilleure lisibilité.</div> <div class="para" id="p-1793">QFINXUFWNYNTSJXYZSWTRFSIJLJTWLJUJWJHVZNJXYJHWNYXFSXZYNQNXJWQFQJYYWJJ</div> <div class="para" id="p-1794">FUWJXJVZJQQJXTSYQJXQJYYWJXQJXUQZXZYNQNXJJXIJQFQFSLZJKWFSHFNXJ</div>
+<div class="para" id="p-1795">Ne pas lire avant d’avoir réfléchi et cherché à propos de l’indice 1. L’indice ci-dessous est un décalage de César avec décalage <span class="process-math">\(21\text{.}\)</span> Décoder chaque phrase individuellement pour une meilleure lisibilité.</div> <div class="para" id="p-1796">QFINXUFWNYNTSJXYZSWTRFSIJLJTWLJUJWJHVZNJXYJHWNYXFSXZYNQNXJWQFQJYYWJJ</div> <div class="para" id="p-1797">FUWJXJVZJQQJXTSYQJXQJYYWJXQJXUQZXZYNQNXJJXIJQFQFSLZJKWFSHFNXJ</div>
 </div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-226" id="answer-226"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-226"><div class="answer solution-like"><div class="para" id="p-1795">Le message est un résumé du livre la disparition de George Perec, que l’on peut lire sur le site de <a class="external" href="https://www.renaud-bray.com/Livres_Produit.aspx?id=15116&amp;def=Disparition(La)%2cPEREC%2c+GEORGES%2c9782070715237" target="_blank">Renaud-Bray</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a>. Ce livre a la particularité qu’il ne contient pas la lettre “e”, sauf pour le nom de l’auteur.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-226" id="answer-226"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-226"><div class="answer solution-like"><div class="para" id="p-1798">Le message est un résumé du livre la disparition de George Perec, que l’on peut lire sur le site de <a class="external" href="https://www.renaud-bray.com/Livres_Produit.aspx?id=15116&amp;def=Disparition(La)%2cPEREC%2c+GEORGES%2c9782070715237" target="_blank">Renaud-Bray</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a>. Ce livre a la particularité qu’il ne contient pas la lettre “e”, sauf pour le nom de l’auteur.</div></div></div>
 </div></article></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">Le cas des journées est un peu plus complexe dû aux années bissextiles.</div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn"><code class="code-inline tex2jax_ignore">www.google.com/search?q=55+days+from+september+17&amp;rlz=1C1GCEA_enCA915CA915&amp;sxsrf=AOaemvJTJFUW9YSkjMCqpt2-I1bUR3ONdA%3A1631907814317&amp;ei=5u9EYbzYEr6q5NoPtc6a6AY&amp;oq=55+days+from+september+17&amp;gs_lcp=Cgdnd3Mtd2l6EAMyBggAEBYQHjoHCAAQRxCwAzoHCAAQsAMQQzoICCEQFhAdEB46BQghEKABSgUIOhIBMkoECEEYAFDUpwRY4bcEYIO6BGgCcAJ4AIABuwGIAcYJkgEDOS4zmAEAoAEByAEKwAEB&amp;sclient=gws-wiz&amp;ved=0ahUKEwi848-s4obzAhU-FVkFHTWnBm0Q4dUDCA4&amp;uact=5</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn"><code class="code-inline tex2jax_ignore">www.vendetta-online.com/x/msgboard/15/10908?page=3</code></div></div>

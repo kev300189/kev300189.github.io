@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraphe</span></h6>
-<div class="para">Dans un groupe de <span class="process-math">\(25\)</span> personnes, on veut former deux équipes. La première sera composée de <span class="process-math">\(3\)</span> attaquants, <span class="process-math">\(2\)</span> défenseurs, <span class="process-math">\(2\)</span> gardiens et <span class="process-math">\(3\)</span> réservistes. La deuxième équipe sera formée de <span class="process-math">\(2\)</span> avants, <span class="process-math">\(1\)</span> passeur,<span class="process-math">\(3\)</span> arrières et <span class="process-math">\(2\)</span> réservistes. On suppose que personne ne fait partie des deux équipes. Combien y a-t-il de possibilités?</div>
+<div class="para logical">
+<div class="para">Soit <span class="process-math">\(n\)</span> le nombre de personnes dans la classe. Si <span class="process-math">\(n&lt; 5\text{,}\)</span> alors c’est impossible. Sinon, le nombre de possibilités est</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{n!}{5!(n-5)!}\text{.}
+\end{equation*}
+</div>
+<div class="para">Pour cela, on identifie les personnes avec <span class="process-math">\(5\)</span> étiquettes <span class="process-math">\(V\)</span> pour volontaires et <span class="process-math">\(n-5\)</span> étiquettes <span class="process-math">\(N\)</span> pour non volontaires.</div>
+</div>
 <span class="incontext"><a href="sec_arrCombinaison.html#p-2037" class="internal">Contexte</a></span>
 </body>
 </html>

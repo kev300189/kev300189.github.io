@@ -11,15 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraphe</span></h5>
+<h6 class="heading"><span class="type">Paragraphe</span></h6>
 <div class="para logical">
-<div class="para">On considère l’exemple suivant. Un magasin de bagels vend quatre sortes de bagels différents: nature, sésame, pavot et bleuet. En supposons que le magasin possède plus de <span class="process-math">\(8\)</span> bagels de chaque sorte, de combien de façons peut-on choisir <span class="process-math">\(8\)</span> bagels. Ceci est un exemple de combinaisons avec répétition. Ici,  on pourrait par exemple choisir</div>
+<div class="para">En poursuivant ainsi, jusqu’aux objets de type <span class="process-math">\(k\text{,}\)</span> et en utilisant le principe du produit, on a que le nombres de permutations est</div>
 <div class="displaymath process-math">
 \begin{align*}
-2 \amp \text{ bagels natures;} \amp \text{ ou bien }  \amp\amp2\amp\text{ bagels natures;}\\
-4 \amp \text{ bagels au sésame;} \amp \amp\amp1 \amp\text{ bagels au sésame;}\\
-1 \amp \text{ bagels au pavot;} \amp \amp\amp 3\amp\text{ bagels au pavot;}\\
-1 \amp \text{ bagels au bleuet;} \amp \amp\amp 2 \amp\text{ bagels au bleuet;}
+\amp = \Binomial{n}{n_1}\Binomial{n-n_1}{n_2}\cdots \Binomial{n-n_1-n_2-\cdots-n_{k-1}}{n_{k}}\\
+\amp = \frac{n!}{(n-n_1)!n_1!}\frac{(n-n_1)!}{(n-n_1-n_2)!n_2!}\cdots \frac{(n-n_1-n_2-\cdots-n_{k-1})!}{0!n_{k}!}\\
+\amp = \frac{n!}{n_1!n_2!\cdots n_k!}
 \end{align*}
 </div>
 </div>
