@@ -2665,6 +2665,384 @@ var ptx_lunr_docs = [
   "body": "Le plus petit commun multiple  Soit deux entiers non nuls. On définit le plus petit commun multiple de , noté comme étant le nombre qui satisfait les propriétés suivantes:  ;  et ;  Pour tout , si et , alors .  Calculer les plus petits communs multiples suivants.  "
 },
 {
+  "id": "sec-modulo",
+  "level": "1",
+  "url": "sec-modulo.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "Arithmétique modulaire",
+  "body": "  Arithmétique modulaire    Au moment d'écrire ces lignes, il est 16:00. Quelle heure sera-t-il dans heures? Bien sûr, la réponse est . Si la question avait pourtant été quelle heure sera-t-il dans heures, la réponse n'aurait pourtant pas été , mais plutôt . Cet exemple représente un classique de la notion d'arithmétique modulaire. On utilise l'arithmétique modulaire dans des contextes où un aspect cyclique est présent, pour effectuer certaines formes de vérification et en cryptographie.  Dans cette section, on définit la relation de congruence modulo et on explique les règles de calculs de l'arithmétique modulaire. On présente aussi une introduction à la cryptographie.     Congruence modulo  Lorsqu'on effectue la division d'un entier par , les restes possibles de la forme quotient reste sont ou . Pour une division par , les restes sont limités à l'ensemble . De manière générale, le reste de la division d'un entier par est un élément de . Lorsqu'on parle de la division par un entier spécifique , il est souvent utile d'associer les entiers à leur reste de la division par . On parle alors des classes d'équivalence modulo .   Congruence modulo   Soit des entiers et un autre entier positif. On dit que est congru à modulo si et possède le même reste lors de la division par . On peut alors écrire .  On dit alors que et sont dans la même classe d'équivalence modulo . De manière générale, pour un entier , on définit la classe d'équivalence à modulo par .    Dans le cas des heures de la journée, on peut dire que est dans la même classe d'équivalence que modulo . C'est pourquoi heures après , il est . Les classes d'équivalence établissent un élément qui les représente et associe à tout autre entier équivalent cet élément.   Les classes d'équivalence modulo .  On considère les entiers et la division par . On cherche à décrire en extension les classes d'équivalence modulo , à savoir les ensembles de la définition .   Les restes de la division par possibles sont . À chacun de ces restes correspond une classe d'équivalence qui contient d'autres entiers. Par exemple, contient tous les nombres qui produisent un reste de lorsque divisé par . Ce sont les multiples de : .  Les nombres dans s'écrivent comme . Ce sont donc les nombres qui valent un de plus qu'un multiple de . On aura alors .  D'une manière analogue, on remarque que la classe d'équivalence contient les nombres qui valent deux de plus qu'un multiple de , les nombres qui valent trois de plus qu'un multiple de et finalement, les nombres qui valent quatre de plus qu'un multiple de pour . On a .    En déterminant dans quelle classe d'équivalence un nombre se trouve, on peut obtenir l'information importante sous une forme plus standard, comme avec l'exemple de l'heure. Ceci est aussi vrai pour le mois, la journée Le cas des journées est un peu plus complexe dû aux années bissextiles. , etc.   Classes d'équivalence et moments  Au moment d'écrire ces lignes, la date est et c'est un vendredi. Que peut-on dire de  La journée de la semaine jours après l'écriture de ces lignes;  Le mois de l'année mois après l'écriture de ces lignes;  L'heure heures après l'écriture de ces lignes;  Le jour de la semaine ans après l'écriture de ces lignes;  Le jour de la semaine ans après l'écriture de ces lignes;  La date jours après l'écriture de ces lignes;  La date jours après l'écriture de ces lignes.   On prend comme convention d'ordonner les journées de la semaine du dimanche au samedi, avec dimanche correspondant à et samedi à . On commence à numéroter par afin de correspondre aux classes d'équivalence. Ainsi, vendredi correspond à . Comme il y a sept jours dans une semaine, on veut travailler modulo . jours après l'écriture, on était le jour . En regardant le reste de lors de la division par , on retrouve , ce qui signigie que . On peut donc dire que jours plus tard, c'était l'équivalent du jour , c'est-à-dire un mardi.  On note au passage ici que le choix de faire débuter la semaine au dimanche est arbitraire et ne change rien. Si on avait fait commencer la semaine le mercredi (donc vendredi , alors on aurait eu , ce qui donne encore le mardi.   D'une manière similaire, on pourrait associer les mois de l'année à des nombres en commençant par janvier à . On numérote toutefois déjà les mois de   à , allant de janvier à décembre. Dans ce cas, on peut aussi choisir décembre comme point de départ décembre. Puisque , on a équivalence. Septembre étant le neuvième mois, mois après septembre, ce sera équivalent au , donc au septième mois, soit juillet.  On travaille modulo , avec le début correspondant à minuit. Dans heures, puisque et que , on conclut que heures après l'écriture de ces lignes, il était .  L'année et l'année ne sont pas des années bissextiles. Elle contiennent donc chacun jours. Pour trouver le jour de la semaine ans après le septembre , il suffit de travailler modulo avec le vendredi de . En ajoutant les journées de ces deux années, on trouve , qui est congru à modulo . Dans deux ans, le septembre sera donc un dimanche.  Dans les quatre années suivant , il y a nécessairement une année bissextile. Celle-ci se trouve en . Donc pour calculer le jour de la semaine, il faut ajouter jours au vendredi de et travailler encore une fois modulo . On trouve alors . Le septembre sera (était?) donc un mercredi.  À partir d'ici, les choses se compliquent légèrement. La difficulté vient du fait que les mois n'ont pas tous le même nombre de jours et donc, on ne peut pas travailler modulo un entier régulier. On commence par ajouter les jours à pour obtenir . Puisque septembre compte jours, on travaillera modulo . On apportera toutefois une précision dans la prochaine solution.  Donc, , ce qui signifie que la date jours après le septembre est équivalent à un et donc, le octobre.  Si on essaie la même chose pour trouver la date jours après le septembre, on trouvera . On comprend assez rapidement qu'il ne peut s'agir du octobre. Il serait logique de penser que la date est alors le novembre, mais cela est aussi faux . L'erreur vient du fait que le prochain mois, octobre, compte jours et non pas comme septembre. On doit donc retrancher une journée à la date trouvée pour obtenir le novembre.  Le cas plus général est un problème relativement difficile étant donné la dépendance avec la date de départ, le nombre de jours par mois variant d'un mois à l'autre ainsi que les années bissextiles.   Sur la notation modulo   Après avoir vu plusieurs exemples, il est temps de faire une mise au point sur la notation utilisée pour dénoter la congruence modulo . Si sont congrus modulo , ils sont dits équivalents, en quelque sorte égaux, par rapport à la division par . On ne veut toutefois pas écrire , car au sens usuel de l'égalité, c'est probablement faux. Le symbole est utilisée pour dénoter l'équivalence ou la congruence entre deux objets mathématiques. Il serait par contre erroné de simplement écrire , puisque la congruence est dépendante du choix de . Ainsi , mais .    Si deux entiers sont dans une même classe d'équivalence, alors ils se trouvent à une distance d'un multiple de . On a donc où . Ceci permet de donner une définition alternative à la congruence modulo .   Congruence modulo et divisibilité  Soit deux entiers et un autre entier. Alors si et seulement si .   Puisqu'on a affaire à une double implication, on procède en deux étapes.  Dans un premier temps, on suppose que au sens de la définition . On tente maintenant de montrer que divise . D'une part, on sait qu'il existe tels que . De plus, on sait qu'il existe tels que . Puisque , on doit avoir . On peut alors écrire . Ainsi, puisque , on conclut que .  On suppose maintenant que et on veut montrer que cette hypothèse entraine que . Si divise , alors on peut écrire pour un certain . Si on écrit la division de chaque côté sous la forme quotient reste, il suit du fait que que la forme quotient reste du côté gauche doit s'écrire . De l'autre côté, et le reste est nul. On doit donc avoir et en développant, on est forcé d'avoir . Les nombres ont donc le même reste lors de la division par et ainsi, .      Arithmétique modulaire  La grande utilité des congruences modulo vient de l'arithmétique qu'il est possible d'effectuer dans les classes d'équivalences. Afin d'illustrer par des exemples, on considère à nouveau les classes d'équivalence de la division par établies à l'exemple . Si on prend deux nombres de la classe d'équivalence et qu'on les additionne, par exemple , on obtient toujours un membre de . Qu'en est-il de deux membres de la classe ? Par exemple, avec , cette fois on obtient un membre de la classe puisque . Dans un sens, c'est parfaitement logique puisque et que les membres de sont l'équivalent du nombre au niveau de la division par . Le produit se comporte aussi de cette manière. Un nombre dans multiplié par un nombre dans se retrouvera dans puisque . Par exemple puisque est un de plus qu'un multiple de . On généralise cette idée dans la proposition suivante.   Propriété de l'arithmétique modulaire  Soit et des entiers tels que et . Alors  ;  ;  .   L'idée derrière cette propriété découle du fait suivant: si , alors pour tout , on a . On peut toujours effectuer une même opération de part et d'autre d'une égalité et préserver celle-ci. Dans le contexte des congruences modulo , il n'est pas nécessaire d'ajouter de chaque côté le même nombre, en autant que les ajouts soient dans la même classe d'équivalence. On démontre maintenant la première propriété.  Puisque et , on sait qu'il existe tels que et . En additionnant et , on trouve . De même .  Si , alors on vient de montrer que et ont le même reste lorsque divisés par . Ils sont donc congrus modulo . Si toutefois , alors il faut d'abord écrire . Puisque , on sait que et donc . On a alors et et le résultat tient aussi.   La deuxième propriété peut être démontrée d'une manière identique à la première, mais on choisit ici de présenter une approche différente tirant profit de la proposition . D'une part, si , alors puisque . De même, . On peut alors écrire , qui devient . Or cela signifie que et donc, que . Selon la proposition , on a donc .  Voir l'exercice .   On regarde maintenant un des avantages de ces propriétés. En particulier, quand on travaille avec de grands nombres, on peut considérablement simplifier les calculs en utilisant les propriétés de l'arithmétique modulaire   Application des propriétés de l'arithmétique modulaire  On cherche le reste de la division de par .   L'idée est de décomposer le nombre en quelque chose de plus petit et dont on connait le reste de la division par . Dans ce cas-ci, on voit que et donc . Comme , la troisième propriété appliquée à répétition nous permet de dire que . On peut ensuite observer que et puisque , alors .  Le reste de la division par du nombre est donc . On note au passage qu'on aurait pu y arriver plus rapidement en divisant par plutôt que par initialement.    Dans la proposition , il est question d'addition, de soustraction et de multiplication. Dans un chapitre où la division tient une place si importante, ne devrait-il pas y avoir une propriété de division? Par exemple, et si on divise par de chaque côté, on obtient , qui est vrai. Mais si on considère plutôt et qu'on divise par , l'équivalence ne tient plus puisque . On voit donc que la situation est plus complexe qu'elle en a l'air.  D'où vient le problème? On imagine un cas général où . On peut alors dire que pour un certain . Que se passe-t-il si on divise la congruence par ? Puisque , il s'en suit que . On ne sait toutefois pas si ou . En fait, ça pourrait même être ni l'un ni l'autre, par exemple , mais ne divise ni ni . Dans la congruence avec et , on a et . On peut alors écrire , ce qui donne . Dans ce cas, la division par laisse intact, d'où le fait que la congruence tient le coup après la division. Par contre pour la congruence avec et , on a et toujours , ce qui permet d'écrire , avec . Cette fois, la division par touche en partie , ce qui rend la congruence fausse.  Dans le pire des cas, la division par va simplifier de la plus grande partie commune à , soit . Ceci amène à la proposition suivante.   La division dans une congruence modulo  Soit et des entiers tels que . Alors .  En particulier, si , alors .      Ce que la proposition ne dit pas  À noter que la proposition ne dit pas que . On ne peut tout simplement pas en être certain. En reprenant les exemples qui précèdent la proposition ci-dessus, puisque , on sait que , c'est-à-dire . Cela n'empêchait . Pour l'autre exemple par contre, on n'a que , soit .   On reprend les calculs de l'exemple en les regardant sous l'oeil de la proposition .   Classes d'équivalence et moments, prise deux  On reprend la date ( un vendredi) comme référence et on considère à nouveau les moments suivants (sans les deux derniers):  La journée de la semaine jours après l'écriture de ces lignes;  Le mois de l'année mois après l'écriture de ces lignes;  L'heure heures après l'écriture de ces lignes;  Le jour de la semaine ans après l'écriture de ces lignes;  Le jour de la semaine ans après l'écriture de ces lignes;     En travaillant modulo , puisque , on peut dire que . Puisque , on conclut à nouveau que jours après l'écriture, c'était un mardi. Une autre approche consiste à dire que et donc et ainsi, on retrouve le mardi.  Puisque , plutôt que d'additionner mois, on peut soustraire mois au mois actuel et trouver la réponse, soit et donc, juillet.  En travaillant modulo , on a et donc, heures après l'écriture de ces lignes est équivalent en termes d'heures à heures après. Il était donc .  Tel que discuté précédemment, il n'y a pas d'année bissextile en ni en . Ces deux années comptent donc pour jours. Puisque , la journée de la semaine deux ans après l'écriture de ces lignes est un dimanche.  Les quatre années comptant ici pour jours et que et que , le jour de la semaine ans après l'écriture de ces lignes est un mercredi.   Il est parfois pratique de visualiser les opérations d'addition et de multiplication à l'aide d'une table. À titre d'exemple, voici la table de multiplication pour l'arithmétique usuelle:   Table de la multiplication usuelle       0  1  2  3  4  5  6  7  8  9    0  0  0  0  0  0  0  0  0  0  0    1  0  1  2  3  4  5  6  7  8  9    2  0  2  4  6  8  10  12  14  16  18    3  0  3  6  9  12  15  18  21  24  27    4  0  4  8  12  16  20  24  28  32  36    5  0  5  10  15  20  25  30  35  40  45    6  0  6  12  18  24  30  36  42  48  54    7  0  7  14  21  28  35  42  49  56  63    8  0  8  16  24  32  40  48  56  64  72    9  0  9  18  27  36  45  54  63  72  81     Voici maintenant des tables similaires pour l'addition et la multiplication modulo :   Table de l'addition modulo    +  0  1  2  3  4    0  0  1  2  3  4    1  1  2  3  4  0    2  2  3  4  0  1    3  3  4  0  1  2    4  4  0  1  2  3      Table de la multiplication modulo 5       0  1  2  3  4    0  0  0  0  0  0    1  0  1  2  3  4    2  0  2  4  1  3    3  0  3  1  4  2    4  0  4  3  2  1     Puisque tous les entiers ont leur équivalent modulo dans l'ensemble , il n'est pas nécessaire de construire une table plus grande.    Résolution d'équations en congruence modulo  On considère l'équation . Cette équation se résout en envoyant le à droite et en divisant par , obtenant ainsi . Qu'en est-il de l'équation maintenant? Peut-on trouver des solutions à cette équation? Comme ici la valeur du modulo est petite, on pourrait tester tous les cas possibles (modulo ) et voir que est encore une solution. Bien sûr, n'importe quel autre nombre dans la classe d'équivalence de fera aussi l'affaire. Par exemple, puisque , on peut vérifier que .  On note que dans l'équation obtenue dans la résolution, on peut diviser de chaque côté par puisque (proposition ). On n'a donc pas à modifier le modulo. On regarde d'autres exemples.   Des équations à congruence modulo  On cherche toutes à résoudre les congruences suivantes (indépendamment):    .     Pour la première congruence, on ne peut pas directement diviser par puisque . Mais on peut toutefois ajouter un élément de la classe d'équivalence de à droite sans changer la véracité de la congruence, selon la proposition . En ajoutant , on obtient , qui revient à . Maintenant qu'on a et que , on peut diviser par et obtenir . Les solutions sont donc tous les nombres congrus à modulo .    Pour la seconde congruence, il peut être une bonne idée de réduire dans un premier temps modulo les membres de chaque côté de l'équation. En effet, si et , alors la congruence peut s'écrire de manière plus simple . Puisque et , la congruence peut s'écrire . Cette fois, ajouter ne sera pas suffisant, mais si on ajoute , on obtient et en divisant, on conclut que . Les solutions sont donc tous les nombres congrus à modulo .   Dans cet exemple, peu importe combien de multiples de on ajoute à , on n'obtiendra jamais un nombre pair qui permettra la division par . Cette congruence en fait n'a pas de solutions. Lorsqu'on multiplie par un entier, on obtient un nombre pair, qui ne peut pas être congru à modulo .   Puisqu'il est possible qu'une congruence ne possède pas de solutions, il serait intéressant de savoir quand des solutions seront possibles. En fait, on peut établir un critère pour savoir quand la congruence n'aura pas de solutions.   Congruence sans solutions  Soit avec différents de . Si , alors la congruence ne possède pas de solutions.  On suppose que est une solution à la congruence. Cela signifie que ou de manière équivalente, . On réécrit pour obtenir pour un certain . On divise maintenant cette équation par . On obtient alors où sont des entiers. Or puisque , le terme lui, n'est pas entier. Ceci crée une contradiction et donc, il ne peut pas exister de solutions.   Jusqu'à maintenant, les exemples qui fonctionnaient avaient pour pour pgcd entre et . La proposition ne permet pas de diviser dans une congruence sans changer la valeur du modulo. On considère par exemple . On peut ajouter à droite pour obtenir . En divisant, on doit toutefois ajuster le modulo par un facteur . La nouvelle équation est donc équivalente à . On cherchait toutefois des solutions par rapport au modulo . Peut-on ramener ces solutions dans ce cadre? Quels sont les nombres modulo qui sont congrus à modulo ? Il y a bien sûr , mais aussi . On peut donc dire qu'il y a solutions (en réalité, une infinité, mais deux classes d'équivalence) à cette congruence. La proposition suivante donne le nombre de classes d'équivalence solutions à une congruence modulo . Elle complète la proposition .   Congruence et solutions  Soit et avec différents de . Si , alors la congruence possède des solutions, une infinité provenant d'autant de classes d'équivalence différente que la valeur du .    L'équation qui avait pour solutions et vérifie bel et bien la proposition puisque les solutions proviennent de classes d'équivalence différentes modulo . Un cas particulier découlant directement de la proposition précédente est celui où . Une solution à l'équation est alors appelée l'inverse de modulo .   L'inverse d'un nombre modulo  Soit deux entiers avec . Les nombres dans l'unique classe d'équivalence satisfaisant l'équation sont appelés des inverses de modulo .   On considère l'équation . Puisque , il existe une classe d'équivalence pour laquelle le produit de tout nombre y appartenant multiplié par donne . Ce sont les inverses de en modulo . En regardant la table ou tout simplement en essayant les quelques possibilités, on trouve que est un inverse pour en modulo . C'est donc en fait toute la classe d'équivalence de qui est considérée comme inverse.   Un inverse modulo  On cherche un inverse à modulo , c'est-à-dire un nombre tel que .   Pour trouver un inverse, il faut trouver tel que . En d'autres mots, pour un certain . En réécrivant, on remarque qu'il faut que et de plus, . Le lemme de Bézout et l'algorithme d'Euclide seront utiles pour trouver l'inverse. D'une part, on a , selon l'algorithme d'Euclide. Puis, en réorganisant ces équations, on trouve .  est donc un inverse à modulo .      Introduction à la cryptographie  La transmission de messages secrets existe depuis toujours. Des messages entre amoureux aux codes secrets militaires, on a toujours cherché des moyens d'encoder de l'information afin de la transmettre pour que seul son destinataire puisse la déchiffrer. De nos jours, la majorité des opérations effectuées en ligne sont encryptées mathématiquement afin de les rendres sécuritaires: opérations bancaires, transactions par cartes de crédit, connexion à un compte quelconque, etc.  On illustre ici comment l'arithmétique modulaire peut aider à mettre en place un système d'encodage. La première de ces techniques est un peu primitives et est loin de celles utilisées de nos jours, car elle n'est pas assez sécuritaires, mais elles illustrent tout de même l'idée de la cryptographie.  L'un des premiers systèmes d'encodage est appelé le chiffrement de César. L'histoire veut que Jules César l'utilisait pour envoyer des messages à ses commandants. Il apparait toutefois évident que ce type de chiffrement était connu bien avant César. Son principe est simple, on associe à chaque lettre de l'alphabet un nombre correspondant à sa position, . On effectue par la suite un décalage uniforme des lettres du message à coder. Par exemple, le message BONJOUR est d'abord transformé en nombres, donnant , puis on décale l'alphabet en ajoutant à chaque nombre un paramètre de translation. Avec ce paramètre égal à , on obtient . On reconvertit ensuite en lettres pour avoir le message crypté: ERQMRXU , qui est ensuite transmit au destinaire. Celui-ci pourra le décoder en effectuant la conversion en nombres et le décalage inverse s'il connait le paramètre de translation. L'arithmétique modulaire est utilisé pour faire l'encryption. Si la position d'une lettre additionnée du paramètre de translation dépasse , on se ramène dans le bon intervalle en travaillant modulo .  Les cellules Sage ci-dessous montrent comment on peut coder ce processus. La première cellule crée une fonction qui prend un message ne contenant que des caractères alphabétiques et le convertit en liste de nombres selon la position des lettres. On enlève les espaces et on met la phrase en majuscule.  En passant  On peut parfois utiliser la cryptographie dans un but autre que celui d'envoyer un message secret. Sur certains forums de discussions, un encodage de César est parfois utilisé afin de ne pas divulgâcher une série, un film, un jeu vidéo ou autre. Typiquement, on utilise le chiffrement de César avec décalage de 13 caractères. On l'appelle d'ailleurs ROT-13. Un exemple peut-être vu à cette adresse https:\/\/www.vendetta-online.com\/x\/msgboard\/15\/10908?page=3 concernant Harry Potter.    La deuxième cellule crée une fonction qui, à partir d'une liste de nombres, renvoie un message. Ce message est écrit en majuscule et ne possède pas d'espaces.   La troisième cellule effectue le décalage d'une liste. À partir d'une liste L et d'un nombre , on ajoute à chaque entrée de la liste, en travaillant modulo .   Finalement, la dernière fonction prend un message et un nombre et retourne le message codé.   On teste finalement ici avec les messages secrets Bonjour et Vive les maths . Il faut s'assurer d'avoir exécuter toutes les cellules ci-dessus pour que la prochaine fonctionne.   Pour décoder un message crypté à l'aide de chiffrement de César, il suffit d'appliquer le chiffrement inverse. Ainsi, si on a le message WPDPEFOTLYEDOPDTXDZYEWPDXPTWWPFCD et qu'on sait que le message a été chiffré à l'aide d'un César avec paramètre , on peut appliquer un chiffrement de pour décoder le message.   Le chiffrement de César est simple, mais peu sécuritaire. Avec un message suffisament long, un personne pourrait intercepter le message et utiliser une analyse fréquentielle sur les lettres afin de deviner le paramètre de translation utilisé. Dans la langue française, la lettre e est la plus utilisés, avec un peu plus de selon Wikipedia .  Ainsi, si on reçoit le message HBJSHPYKLSHSBULTVUHTPWPLYYVAWYLALTVPAHWSBTLWVBYLJYPYLBUTVATHJOHUKLSSLLZATVYALQLUHPWSBZKLMLBVBCYLTVPAHWVYALWVBYSHTVBYKLKPLB , on peut vérifier que la lettre la plus fréquente dans ce message est L . Sage peut être utile avec la fonction mode , qui retourne l'élément d'une liste qui apparait le plus souvent.   Il est donc plausible de penser que le chiffrement a envoyé E sur L et on peut tenter de déchiffrer ce message en appliquant un chiffrement inverse. Comme et que , on essaie un chiffrement de .   Une belle chanson!  Pire encore, étant donné le petit nombre de possibilités, même sans avoir recours à l'analyse de la lettre la plus fréquente il est possible de déchiffrer le message. Il suffit d'essayer chacune des possibilités (on n'a certainement pas fait un décalage de caractères) et de constater que la plupart des messages seront insignifiants. On pourra alors rapidement décoder le bon message.  On imagine un instant que les systèmes précédents ne soient pas si facile que cela à décoder. Un autre désavantage de ces systèmes est que pour envoyer un message à quelqu'un, je dois aussi lui transmettre quelle encryption j'ai effectuée, afin qu'il puisse décrypter le messsage. Cette information doit être transmise de manière sécuritaire afin que personne d'autre que la personne visée par le message ne puisse le déchiffrer (encore une fois, on suppose que le décodage n'est pas facile). Un système où l'auteur et le destinataire doivent connaitre la méthode d'encryptage est appelé un système à clé privée.  L'un des système d'encodage les plus populaires et sécuritaire est basé sur un concept simple. Il est facile de multiplier deux nombres, mais factoriser un nombre qui serait le produit de deux nombres (premiers) est difficile. Quand on dit difficile, on parle bien entendu de très grand nombres, contenant des centaines et des centaines de chiffres. Le système de chiffrement RSA utilise ce principe. Contrairement aux autres systèmes précédents, c'est un système à clé publique.  On suppose que Damien veut offrir aux gens la possibilité de lui envoyer des messages privés. Pour ce faire, il choisit deux nombres premiers. Pour l'exemple, il choisit et . Il garde ces deux nombres secrets, mais donne à qui veut bien lui envoyer un message le produit . Ensuite, Damien doit sélectionner un autre nombre tel que . Puisque , Damien choisit . Damien donne aussi à qui veut bien lui envoyer un message ce nombre . Ensemble, la paire constitue la clé publique de Damien.  Dans la réalité, Damien choisirait des nombres beaucoup plus grands, sans quoi la sécurité du système RSA expliqué ci-dessous serait nulle. On considère maintenant Marie, qui souhaite envoyer le message Bonjour à Damien. Marie commence par transformer son message en nombres et obtient 2 15 14 10 15 21 18 . Puis, elle prend chacun de des chiffres de son message et les encode à l'aide de la formule . Par exemple B devient , puis O devient , N devient (reste) et ainsi de suite. Le message devient ainsi 32 71 14 82 71 21 44 . C'est ce message qui est transmis à Damien.  Damien reçoit donc le message 32 71 14 82 71 21 44 et entreprend donc de le décoder. Pour cela, il doit calculer un inverse de modulo . Puisque avait été choisi pour qu'un inverse existe, il sait que c'est posssible. Damien se souvient de l'exemple et sait que est un inverse pour modulo . Pour décoder le message de Marie, Damien applique à chaque nombre reçu la formule . On utilise Sage pour décoder le message.   La sécurité du système RSA vient du fait que, sans connaitre et individuellement, il est impossible de déterminer l'inverse de et ainsi décoder le message. Lorsqu'en pratique, sont choisis de sorte à posséder un très grand nombre de chiffres, même l'ordinateur le plus puissant ne pourra décoder le message en un temps raisonnable sans connaitre .  L'explication du pourquoi le décodage fonctionne avec la formule utilise un résultat appelé le petit théorème de Fermat. On explore ceci dans l'exercice . Les cellules suivantes permettent d'encoder un message avec le cryptage RSA à partir de deux nombres et d'en décoder un à partir des trois nombres . Il faut s'assurer d'avoir exécuter les cellules plus haut afin de d'utiliser certaines fonctions définies dans celles-ci.       Le principe RSA présenté ici est une simplification du vrai système RSA qui est encore utilisé. Dans la réalité, on va faire des blocs de lettres et juxtaposer leur équivalent en nombres avant de faire le cryptage.     Les points importants de cette section sont:  La définition de congruence modulo et des classes d'équivalence;  L'équivalence entre modulo et divisibilité ;  Les propriétés de l'arithmétique modulaire;  Le fait qu'on ne peut pas diviser dans une congruence modulo sans changer la valeur du modulo, sauf si le pgcd est .        Ces questions sont à faire avant de venir en classe et à remettre au début du cours.   Déterminer La journée de la semaine jours après un jeudi; La journée de la semaine jours après un mardi; La journée de la semaine jours avant un samedi.  Donner entiers qui sont congrus à modulo .  Donner les tables d'addition et de multiplication modulo .  Donner les tables d'addition et de multiplication modulo .  Quels sont les entiers dans qui ont un inverse modulo ? Est-ce que cela satisfait la définition .  Quels sont les entiers dans qui ont un inverse modulo ? Est-ce que cela satisfait la définition .  Le message ORTEGAXGVGYJKIXEVZUMXGVNOKGRKDGSKT a été encodé à l'aide d'un chiffrement de César avec décalage correspondant à 6. Quel est ce message.  Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.      Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Déterminer le plus petit entier positif congru à modulo: ;  Ainsi, le plus pentit entirer positif congru à modulo est . Puisque est un nombre impair, on sait que le plus pentit entirer positif congru à modulo est ;  Ainsi, le plus pentit entirer positif congru à modulo est . ;  Ainsi, le plus pentit entirer positif congru à modulo est . ;  Ainsi, le plus pentit entirer positif congru à modulo est .  Pour chaque opération ci-dessous, donner la réponse sous la forme d'un entier entre et . ; ; ; Rappel: On utilise la notation pour représenter le reste de la division de par . Par exemple,   Donner les réponses aux calculs de l'exercice précédent sous la forme d'un entier entre et .         On considère les entiers naturels impairs . Pour , calculer pour quelques entiers. Comment démontrer que cela sera toujours vrai?  En calculant pour les premières valeurs de , on obtient , , , et . Ainsi, on remarque que .  Pour pouvoir démontrer que pour tout les éléments de , on remarque que est impair si et seulement si est congru à , , ou modulo . Ainsi, si est impair, en utilisant les propriétés , on obtient que est congru à , , ou modulo . Par les calculs précédents, on a alors que pour tout .   Un tableau contenant une infinité de lignes et colonnes contenant les nombres naturels est construit. Les premières lignes sont données à la table ci-dessous. On considère l'élément à la première ligne et la première colonne comme la position . De manière générale, un élément en position est à la ligne et colonne . Par exemple, est à la position .   Un tableau de nombres                                                                                                         À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on votre numéro de DA? Votre DA se trouve à la position , où est le reste de votre DA lors de la division par .  Résoudre les congruences suivantes ou expliquer pourquoi il n'y a pas de solutions. Cette équation ne possède aucune solution, car \\pgcd{(4,6)}=2\\not| \\ 1.  Résoudre les congruences suivantes sans essayer toutes les possibilités ou expliquer pourquoi il n'y a pas de solutions.  Ainsi, est une solution à l'équation si et seulement si .  Ainsi, est une solution à l'équation si et seulement si .  Ainsi, est une solution à l'équation si et seulement si . Cette équation ne possède aucune solution, car \\pgcd{(4,6)}=2\\not| \\ 5.  Ainsi, est une solution à l'équation si et seulement si . Les résultats de l'exercice précédent peuvent être utile. On peut aussi y aller par essaie-erreur pour la plus part des équations.  Sachant que est une solution à l'équation , trouver une solution à .  Ainsi, une solution est , ou encore .  On consdière la paire de congruences suivantes: .  Trouver une valeur de qui satisfait simultanément ces deux équations.  Écrire la soution à la première congruence comme et remplacer dans la deuxième.  Clairement, si , alors est une solution de la première équation, mais pas de la deuxième. Cependant, on sait que toutes les solutions de la première équation s'écrive comme , où .  Ainsi, en remplaçant par dans la deuxième équation, on obtient   Ainsi, on peut obtenir une solution en remplaçant cette fois par dans , ce qui donne . On peut en effet vérifier que:   En fait, on a montrer que, pour que soit une solution à la deuxième équation, on doit avoir , c'est-à-dire , pour .  Ainsi, en remplaçant dans , on a que , c'est-à-dire que est une solution aux deux équation si et seulement si est une solution à l'équation ou encore .   Une relation entre deux objets est une relation d'équivalence si pour on a  que la relation est symétrique, c'est-à-dire que si , alors ;  que la relation est réflexive, c'est-à-dire que ;  que la relation est transitive, c'est-à-dire que si et , alors .   Pour la congruence modulo , on peut plus simplement écrire . Montrer que la congruence modulo est une relation d'équivalence.         Exercices supplémentaires  Encoder les messages suivants avec le décalage de César précisé avec le message. Mon enseignant est le meilleur avec décalage Je vais faire tous les devoirs avec décalage Un jour je serai le meilleur dresseur avec décalage  Décoder les messages suivants, qui ont été chiffrés par un décalage de César précisé avec le message. EHBWEPXAWQZADKNO avec décalage MNBYXVVNBMNBYXRANBMNBJWJWJB avec décalage MFTNBUIFNBUJRVFTEJTDSFUFTDFTUWSBJNFOUHFOJBM avec décalage  Encoder les messages suivants avec le système RSA dont les paramètres sont précisés avec le message. Mon enseignant est le meilleur avec paramètres Je vais faire tous les devoirs avec paramètres Un jour je serai le meilleur dresseur avec paramètres Qui a-t-il de particulier avec ces messages codés? Est-ce qu'il y a une lettre qui est facile à décoder? En utilisant des blocs de lettres comme dans le vrai RSA, ceci ne se produit pas.  Décoder les messages suivants, qui ont été chiffrés par RSA avec paramètres précisés avec le message. [8, 349, 1231, 64, 1000, 1, 684, 125, 807, 8, 349, 1231, 64] avec [6041, 80552, 64471, 1, 40280, 76462, 6041, 75310, 6041, 40280, 2122, 78295, 80552, 16446, 1, 32487, 2122, 80552, 6041, 73799, 1, 20790, 3336, 6041, 40280, 20790, 16446, 1, 79033, 2122, 46951, 6415, 70263, 2122, 46951, 40280] avec [10, 1, 7357, 15878, 6017, 16044, 6017, 1172, 6017, 341, 6017, 10370, 341, 6017, 13378, 1, 16044, 11527, 341, 1518, 11527, 7357, 3855] avec  QFINXUFWNYNTS Le message AYHOPYXBPKPZWHYBAKHUZSHKPZWHYPAPVUYHCPYHPAHBSPZHUAZBIAPSAVBAWSHPZPYTVABZKVUJZBYSPUJVUUBUVFHBTHUXBHUA a été encodé à l'aide d'un décalage César, mais le décalage est inconnu. Déterminer le message original, sans essayer toutes les possibilités. Si même après avoir déterminé quelles lettres sont les plus fréquentes le message ne se déchiffre toujours pas, un indice avec décalage 5 a été crypté dans le titre de l'exercice.  Ne pas lire avant d'avoir réfléchi et cherché à propos de l'indice 1. L'indice ci-dessous est un décalage de César avec décalage . Décoder chaque phrase individuellement pour une meilleure lisibilité.  QFINXUFWNYNTSJXYZSWTRFSIJLJTWLJUJWJHVZNJXYJHWNYXFSXZYNQNXJWQFQJYYWJJ  FUWJXJVZJQQJXTSYQJXQJYYWJXQJXUQZXZYNQNXJJXIJQFQFSLZJKWFSHFNXJ  Le message est un résumé du livre la disparition de George Perec, que l'on peut lire sur le site de Renaud-Bray . Ce livre a la particularité qu'il ne contient pas la lettre e , sauf pour le nom de l'auteur.    "
+},
+{
+  "id": "def-modulo",
+  "level": "2",
+  "url": "sec-modulo.html#def-modulo",
+  "type": "Définition",
+  "number": "3.3.1",
+  "title": "Congruence modulo <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " Congruence modulo   Soit des entiers et un autre entier positif. On dit que est congru à modulo si et possède le même reste lors de la division par . On peut alors écrire .  On dit alors que et sont dans la même classe d'équivalence modulo . De manière générale, pour un entier , on définit la classe d'équivalence à modulo par .   "
+},
+{
+  "id": "ex-modulo5",
+  "level": "2",
+  "url": "sec-modulo.html#ex-modulo5",
+  "type": "Exemple",
+  "number": "3.3.2",
+  "title": "Les classes d’équivalence modulo <span class=\"process-math\">\\(5\\text{.}\\)<\/span>.",
+  "body": " Les classes d'équivalence modulo .  On considère les entiers et la division par . On cherche à décrire en extension les classes d'équivalence modulo , à savoir les ensembles de la définition .   Les restes de la division par possibles sont . À chacun de ces restes correspond une classe d'équivalence qui contient d'autres entiers. Par exemple, contient tous les nombres qui produisent un reste de lorsque divisé par . Ce sont les multiples de : .  Les nombres dans s'écrivent comme . Ce sont donc les nombres qui valent un de plus qu'un multiple de . On aura alors .  D'une manière analogue, on remarque que la classe d'équivalence contient les nombres qui valent deux de plus qu'un multiple de , les nombres qui valent trois de plus qu'un multiple de et finalement, les nombres qui valent quatre de plus qu'un multiple de pour . On a .   "
+},
+{
+  "id": "ex-modulotemps",
+  "level": "2",
+  "url": "sec-modulo.html#ex-modulotemps",
+  "type": "Exemple",
+  "number": "3.3.3",
+  "title": "Classes d’équivalence et moments.",
+  "body": " Classes d'équivalence et moments  Au moment d'écrire ces lignes, la date est et c'est un vendredi. Que peut-on dire de  La journée de la semaine jours après l'écriture de ces lignes;  Le mois de l'année mois après l'écriture de ces lignes;  L'heure heures après l'écriture de ces lignes;  Le jour de la semaine ans après l'écriture de ces lignes;  Le jour de la semaine ans après l'écriture de ces lignes;  La date jours après l'écriture de ces lignes;  La date jours après l'écriture de ces lignes.   On prend comme convention d'ordonner les journées de la semaine du dimanche au samedi, avec dimanche correspondant à et samedi à . On commence à numéroter par afin de correspondre aux classes d'équivalence. Ainsi, vendredi correspond à . Comme il y a sept jours dans une semaine, on veut travailler modulo . jours après l'écriture, on était le jour . En regardant le reste de lors de la division par , on retrouve , ce qui signigie que . On peut donc dire que jours plus tard, c'était l'équivalent du jour , c'est-à-dire un mardi.  On note au passage ici que le choix de faire débuter la semaine au dimanche est arbitraire et ne change rien. Si on avait fait commencer la semaine le mercredi (donc vendredi , alors on aurait eu , ce qui donne encore le mardi.   D'une manière similaire, on pourrait associer les mois de l'année à des nombres en commençant par janvier à . On numérote toutefois déjà les mois de   à , allant de janvier à décembre. Dans ce cas, on peut aussi choisir décembre comme point de départ décembre. Puisque , on a équivalence. Septembre étant le neuvième mois, mois après septembre, ce sera équivalent au , donc au septième mois, soit juillet.  On travaille modulo , avec le début correspondant à minuit. Dans heures, puisque et que , on conclut que heures après l'écriture de ces lignes, il était .  L'année et l'année ne sont pas des années bissextiles. Elle contiennent donc chacun jours. Pour trouver le jour de la semaine ans après le septembre , il suffit de travailler modulo avec le vendredi de . En ajoutant les journées de ces deux années, on trouve , qui est congru à modulo . Dans deux ans, le septembre sera donc un dimanche.  Dans les quatre années suivant , il y a nécessairement une année bissextile. Celle-ci se trouve en . Donc pour calculer le jour de la semaine, il faut ajouter jours au vendredi de et travailler encore une fois modulo . On trouve alors . Le septembre sera (était?) donc un mercredi.  À partir d'ici, les choses se compliquent légèrement. La difficulté vient du fait que les mois n'ont pas tous le même nombre de jours et donc, on ne peut pas travailler modulo un entier régulier. On commence par ajouter les jours à pour obtenir . Puisque septembre compte jours, on travaillera modulo . On apportera toutefois une précision dans la prochaine solution.  Donc, , ce qui signifie que la date jours après le septembre est équivalent à un et donc, le octobre.  Si on essaie la même chose pour trouver la date jours après le septembre, on trouvera . On comprend assez rapidement qu'il ne peut s'agir du octobre. Il serait logique de penser que la date est alors le novembre, mais cela est aussi faux . L'erreur vient du fait que le prochain mois, octobre, compte jours et non pas comme septembre. On doit donc retrancher une journée à la date trouvée pour obtenir le novembre.  Le cas plus général est un problème relativement difficile étant donné la dépendance avec la date de départ, le nombre de jours par mois variant d'un mois à l'autre ainsi que les années bissextiles.  "
+},
+{
+  "id": "remark-4",
+  "level": "2",
+  "url": "sec-modulo.html#remark-4",
+  "type": "Remarque",
+  "number": "3.3.4",
+  "title": "Sur la notation modulo.",
+  "body": "Sur la notation modulo   Après avoir vu plusieurs exemples, il est temps de faire une mise au point sur la notation utilisée pour dénoter la congruence modulo . Si sont congrus modulo , ils sont dits équivalents, en quelque sorte égaux, par rapport à la division par . On ne veut toutefois pas écrire , car au sens usuel de l'égalité, c'est probablement faux. Le symbole est utilisée pour dénoter l'équivalence ou la congruence entre deux objets mathématiques. Il serait par contre erroné de simplement écrire , puisque la congruence est dépendante du choix de . Ainsi , mais .   "
+},
+{
+  "id": "prop-modulodivisibilite",
+  "level": "2",
+  "url": "sec-modulo.html#prop-modulodivisibilite",
+  "type": "Proposition",
+  "number": "3.3.5",
+  "title": "Congruence modulo <span class=\"process-math\">\\(n\\)<\/span> et divisibilité.",
+  "body": " Congruence modulo et divisibilité  Soit deux entiers et un autre entier. Alors si et seulement si .   Puisqu'on a affaire à une double implication, on procède en deux étapes.  Dans un premier temps, on suppose que au sens de la définition . On tente maintenant de montrer que divise . D'une part, on sait qu'il existe tels que . De plus, on sait qu'il existe tels que . Puisque , on doit avoir . On peut alors écrire . Ainsi, puisque , on conclut que .  On suppose maintenant que et on veut montrer que cette hypothèse entraine que . Si divise , alors on peut écrire pour un certain . Si on écrit la division de chaque côté sous la forme quotient reste, il suit du fait que que la forme quotient reste du côté gauche doit s'écrire . De l'autre côté, et le reste est nul. On doit donc avoir et en développant, on est forcé d'avoir . Les nombres ont donc le même reste lors de la division par et ainsi, .   "
+},
+{
+  "id": "prop-moduloprop",
+  "level": "2",
+  "url": "sec-modulo.html#prop-moduloprop",
+  "type": "Proposition",
+  "number": "3.3.6",
+  "title": "Propriété de l’arithmétique modulaire.",
+  "body": " Propriété de l'arithmétique modulaire  Soit et des entiers tels que et . Alors  ;  ;  .   L'idée derrière cette propriété découle du fait suivant: si , alors pour tout , on a . On peut toujours effectuer une même opération de part et d'autre d'une égalité et préserver celle-ci. Dans le contexte des congruences modulo , il n'est pas nécessaire d'ajouter de chaque côté le même nombre, en autant que les ajouts soient dans la même classe d'équivalence. On démontre maintenant la première propriété.  Puisque et , on sait qu'il existe tels que et . En additionnant et , on trouve . De même .  Si , alors on vient de montrer que et ont le même reste lorsque divisés par . Ils sont donc congrus modulo . Si toutefois , alors il faut d'abord écrire . Puisque , on sait que et donc . On a alors et et le résultat tient aussi.   La deuxième propriété peut être démontrée d'une manière identique à la première, mais on choisit ici de présenter une approche différente tirant profit de la proposition . D'une part, si , alors puisque . De même, . On peut alors écrire , qui devient . Or cela signifie que et donc, que . Selon la proposition , on a donc .  Voir l'exercice .  "
+},
+{
+  "id": "example-49",
+  "level": "2",
+  "url": "sec-modulo.html#example-49",
+  "type": "Exemple",
+  "number": "3.3.7",
+  "title": "Application des propriétés de l’arithmétique modulaire.",
+  "body": " Application des propriétés de l'arithmétique modulaire  On cherche le reste de la division de par .   L'idée est de décomposer le nombre en quelque chose de plus petit et dont on connait le reste de la division par . Dans ce cas-ci, on voit que et donc . Comme , la troisième propriété appliquée à répétition nous permet de dire que . On peut ensuite observer que et puisque , alors .  Le reste de la division par du nombre est donc . On note au passage qu'on aurait pu y arriver plus rapidement en divisant par plutôt que par initialement.   "
+},
+{
+  "id": "prop-divmodulo",
+  "level": "2",
+  "url": "sec-modulo.html#prop-divmodulo",
+  "type": "Proposition",
+  "number": "3.3.8",
+  "title": "La division dans une congruence modulo <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " La division dans une congruence modulo  Soit et des entiers tels que . Alors .  En particulier, si , alors .    "
+},
+{
+  "id": "remark-5",
+  "level": "2",
+  "url": "sec-modulo.html#remark-5",
+  "type": "Remarque",
+  "number": "3.3.9",
+  "title": "Ce que la proposition ne dit pas.",
+  "body": " Ce que la proposition ne dit pas  À noter que la proposition ne dit pas que . On ne peut tout simplement pas en être certain. En reprenant les exemples qui précèdent la proposition ci-dessus, puisque , on sait que , c'est-à-dire . Cela n'empêchait . Pour l'autre exemple par contre, on n'a que , soit .  "
+},
+{
+  "id": "example-50",
+  "level": "2",
+  "url": "sec-modulo.html#example-50",
+  "type": "Exemple",
+  "number": "3.3.10",
+  "title": "Classes d’équivalence et moments, prise deux.",
+  "body": " Classes d'équivalence et moments, prise deux  On reprend la date ( un vendredi) comme référence et on considère à nouveau les moments suivants (sans les deux derniers):  La journée de la semaine jours après l'écriture de ces lignes;  Le mois de l'année mois après l'écriture de ces lignes;  L'heure heures après l'écriture de ces lignes;  Le jour de la semaine ans après l'écriture de ces lignes;  Le jour de la semaine ans après l'écriture de ces lignes;     En travaillant modulo , puisque , on peut dire que . Puisque , on conclut à nouveau que jours après l'écriture, c'était un mardi. Une autre approche consiste à dire que et donc et ainsi, on retrouve le mardi.  Puisque , plutôt que d'additionner mois, on peut soustraire mois au mois actuel et trouver la réponse, soit et donc, juillet.  En travaillant modulo , on a et donc, heures après l'écriture de ces lignes est équivalent en termes d'heures à heures après. Il était donc .  Tel que discuté précédemment, il n'y a pas d'année bissextile en ni en . Ces deux années comptent donc pour jours. Puisque , la journée de la semaine deux ans après l'écriture de ces lignes est un dimanche.  Les quatre années comptant ici pour jours et que et que , le jour de la semaine ans après l'écriture de ces lignes est un mercredi.  "
+},
+{
+  "id": "table-48",
+  "level": "2",
+  "url": "sec-modulo.html#table-48",
+  "type": "Table",
+  "number": "3.3.11",
+  "title": "Table de la multiplication usuelle",
+  "body": " Table de la multiplication usuelle       0  1  2  3  4  5  6  7  8  9    0  0  0  0  0  0  0  0  0  0  0    1  0  1  2  3  4  5  6  7  8  9    2  0  2  4  6  8  10  12  14  16  18    3  0  3  6  9  12  15  18  21  24  27    4  0  4  8  12  16  20  24  28  32  36    5  0  5  10  15  20  25  30  35  40  45    6  0  6  12  18  24  30  36  42  48  54    7  0  7  14  21  28  35  42  49  56  63    8  0  8  16  24  32  40  48  56  64  72    9  0  9  18  27  36  45  54  63  72  81    "
+},
+{
+  "id": "table-49",
+  "level": "2",
+  "url": "sec-modulo.html#table-49",
+  "type": "Table",
+  "number": "3.3.12",
+  "title": "Table de l’addition modulo <span class=\"process-math\">\\(5\\)<\/span>",
+  "body": " Table de l'addition modulo    +  0  1  2  3  4    0  0  1  2  3  4    1  1  2  3  4  0    2  2  3  4  0  1    3  3  4  0  1  2    4  4  0  1  2  3    "
+},
+{
+  "id": "tab-multmod5",
+  "level": "2",
+  "url": "sec-modulo.html#tab-multmod5",
+  "type": "Table",
+  "number": "3.3.13",
+  "title": "Table de la multiplication modulo 5",
+  "body": " Table de la multiplication modulo 5       0  1  2  3  4    0  0  0  0  0  0    1  0  1  2  3  4    2  0  2  4  1  3    3  0  3  1  4  2    4  0  4  3  2  1    "
+},
+{
+  "id": "example-51",
+  "level": "2",
+  "url": "sec-modulo.html#example-51",
+  "type": "Exemple",
+  "number": "3.3.14",
+  "title": "Des équations à congruence modulo.",
+  "body": " Des équations à congruence modulo  On cherche toutes à résoudre les congruences suivantes (indépendamment):    .     Pour la première congruence, on ne peut pas directement diviser par puisque . Mais on peut toutefois ajouter un élément de la classe d'équivalence de à droite sans changer la véracité de la congruence, selon la proposition . En ajoutant , on obtient , qui revient à . Maintenant qu'on a et que , on peut diviser par et obtenir . Les solutions sont donc tous les nombres congrus à modulo .    Pour la seconde congruence, il peut être une bonne idée de réduire dans un premier temps modulo les membres de chaque côté de l'équation. En effet, si et , alors la congruence peut s'écrire de manière plus simple . Puisque et , la congruence peut s'écrire . Cette fois, ajouter ne sera pas suffisant, mais si on ajoute , on obtient et en divisant, on conclut que . Les solutions sont donc tous les nombres congrus à modulo .   Dans cet exemple, peu importe combien de multiples de on ajoute à , on n'obtiendra jamais un nombre pair qui permettra la division par . Cette congruence en fait n'a pas de solutions. Lorsqu'on multiplie par un entier, on obtient un nombre pair, qui ne peut pas être congru à modulo .  "
+},
+{
+  "id": "prop-congruence0solution",
+  "level": "2",
+  "url": "sec-modulo.html#prop-congruence0solution",
+  "type": "Proposition",
+  "number": "3.3.15",
+  "title": "Congruence sans solutions.",
+  "body": " Congruence sans solutions  Soit avec différents de . Si , alors la congruence ne possède pas de solutions.  On suppose que est une solution à la congruence. Cela signifie que ou de manière équivalente, . On réécrit pour obtenir pour un certain . On divise maintenant cette équation par . On obtient alors où sont des entiers. Or puisque , le terme lui, n'est pas entier. Ceci crée une contradiction et donc, il ne peut pas exister de solutions.  "
+},
+{
+  "id": "proposition-7",
+  "level": "2",
+  "url": "sec-modulo.html#proposition-7",
+  "type": "Proposition",
+  "number": "3.3.16",
+  "title": "Congruence et solutions.",
+  "body": " Congruence et solutions  Soit et avec différents de . Si , alors la congruence possède des solutions, une infinité provenant d'autant de classes d'équivalence différente que la valeur du .   "
+},
+{
+  "id": "def-inversemodulo",
+  "level": "2",
+  "url": "sec-modulo.html#def-inversemodulo",
+  "type": "Définition",
+  "number": "3.3.17",
+  "title": "L’inverse d’un nombre modulo <span class=\"process-math\">\\(n\\)<\/span>.",
+  "body": " L'inverse d'un nombre modulo  Soit deux entiers avec . Les nombres dans l'unique classe d'équivalence satisfaisant l'équation sont appelés des inverses de modulo .  "
+},
+{
+  "id": "ex-inversemodulo",
+  "level": "2",
+  "url": "sec-modulo.html#ex-inversemodulo",
+  "type": "Exemple",
+  "number": "3.3.18",
+  "title": "Un inverse modulo <span class=\"process-math\">\\(72\\)<\/span>.",
+  "body": " Un inverse modulo  On cherche un inverse à modulo , c'est-à-dire un nombre tel que .   Pour trouver un inverse, il faut trouver tel que . En d'autres mots, pour un certain . En réécrivant, on remarque qu'il faut que et de plus, . Le lemme de Bézout et l'algorithme d'Euclide seront utiles pour trouver l'inverse. D'une part, on a , selon l'algorithme d'Euclide. Puis, en réorganisant ces équations, on trouve .  est donc un inverse à modulo .   "
+},
+{
+  "id": "exercise-179",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-179",
+  "type": "Question de compréhension",
+  "number": "3.3.5.1",
+  "title": "",
+  "body": "Déterminer La journée de la semaine jours après un jeudi; La journée de la semaine jours après un mardi; La journée de la semaine jours avant un samedi. "
+},
+{
+  "id": "exercise-180",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-180",
+  "type": "Question de compréhension",
+  "number": "3.3.5.2",
+  "title": "",
+  "body": "Donner entiers qui sont congrus à modulo . "
+},
+{
+  "id": "exercise-181",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-181",
+  "type": "Question de compréhension",
+  "number": "3.3.5.3",
+  "title": "",
+  "body": "Donner les tables d'addition et de multiplication modulo . "
+},
+{
+  "id": "exercise-182",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-182",
+  "type": "Question de compréhension",
+  "number": "3.3.5.4",
+  "title": "",
+  "body": "Donner les tables d'addition et de multiplication modulo . "
+},
+{
+  "id": "exercise-183",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-183",
+  "type": "Question de compréhension",
+  "number": "3.3.5.5",
+  "title": "",
+  "body": "Quels sont les entiers dans qui ont un inverse modulo ? Est-ce que cela satisfait la définition . "
+},
+{
+  "id": "exercise-184",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-184",
+  "type": "Question de compréhension",
+  "number": "3.3.5.6",
+  "title": "",
+  "body": "Quels sont les entiers dans qui ont un inverse modulo ? Est-ce que cela satisfait la définition . "
+},
+{
+  "id": "exercise-185",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-185",
+  "type": "Question de compréhension",
+  "number": "3.3.5.7",
+  "title": "",
+  "body": "Le message ORTEGAXGVGYJKIXEVZUMXGVNOKGRKDGSKT a été encodé à l'aide d'un chiffrement de César avec décalage correspondant à 6. Quel est ce message. "
+},
+{
+  "id": "exercise-186",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-186",
+  "type": "Question de compréhension",
+  "number": "3.3.5.8",
+  "title": "",
+  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
+},
+{
+  "id": "exercise-187",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-187",
+  "type": "Exercice",
+  "number": "3.3.6.1",
+  "title": "",
+  "body": "Déterminer le plus petit entier positif congru à modulo: ;  Ainsi, le plus pentit entirer positif congru à modulo est . Puisque est un nombre impair, on sait que le plus pentit entirer positif congru à modulo est ;  Ainsi, le plus pentit entirer positif congru à modulo est . ;  Ainsi, le plus pentit entirer positif congru à modulo est . ;  Ainsi, le plus pentit entirer positif congru à modulo est . "
+},
+{
+  "id": "exercise-188",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-188",
+  "type": "Exercice",
+  "number": "3.3.6.2",
+  "title": "",
+  "body": "Pour chaque opération ci-dessous, donner la réponse sous la forme d'un entier entre et . ; ; ; Rappel: On utilise la notation pour représenter le reste de la division de par . Par exemple,  "
+},
+{
+  "id": "exercise-189",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-189",
+  "type": "Exercice",
+  "number": "3.3.6.3",
+  "title": "",
+  "body": "Donner les réponses aux calculs de l'exercice précédent sous la forme d'un entier entre et .       "
+},
+{
+  "id": "exercise-190",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-190",
+  "type": "Exercice",
+  "number": "3.3.6.4",
+  "title": "",
+  "body": "On considère les entiers naturels impairs . Pour , calculer pour quelques entiers. Comment démontrer que cela sera toujours vrai?  En calculant pour les premières valeurs de , on obtient , , , et . Ainsi, on remarque que .  Pour pouvoir démontrer que pour tout les éléments de , on remarque que est impair si et seulement si est congru à , , ou modulo . Ainsi, si est impair, en utilisant les propriétés , on obtient que est congru à , , ou modulo . Par les calculs précédents, on a alors que pour tout .  "
+},
+{
+  "id": "exercise-191",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-191",
+  "type": "Exercice",
+  "number": "3.3.6.5",
+  "title": "",
+  "body": "Un tableau contenant une infinité de lignes et colonnes contenant les nombres naturels est construit. Les premières lignes sont données à la table ci-dessous. On considère l'élément à la première ligne et la première colonne comme la position . De manière générale, un élément en position est à la ligne et colonne . Par exemple, est à la position .   Un tableau de nombres                                                                                                         À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on le nombre ? Le nombre se trouve à la position . À quelle ligne et quelle colonne retrouve-t-on votre numéro de DA? Votre DA se trouve à la position , où est le reste de votre DA lors de la division par . "
+},
+{
+  "id": "exercise-192",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-192",
+  "type": "Exercice",
+  "number": "3.3.6.6",
+  "title": "",
+  "body": "Résoudre les congruences suivantes ou expliquer pourquoi il n'y a pas de solutions. Cette équation ne possède aucune solution, car \\pgcd{(4,6)}=2\\not| \\ 1. "
+},
+{
+  "id": "exercise-193",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-193",
+  "type": "Exercice",
+  "number": "3.3.6.7",
+  "title": "",
+  "body": "Résoudre les congruences suivantes sans essayer toutes les possibilités ou expliquer pourquoi il n'y a pas de solutions.  Ainsi, est une solution à l'équation si et seulement si .  Ainsi, est une solution à l'équation si et seulement si .  Ainsi, est une solution à l'équation si et seulement si . Cette équation ne possède aucune solution, car \\pgcd{(4,6)}=2\\not| \\ 5.  Ainsi, est une solution à l'équation si et seulement si . Les résultats de l'exercice précédent peuvent être utile. On peut aussi y aller par essaie-erreur pour la plus part des équations. "
+},
+{
+  "id": "exercise-194",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-194",
+  "type": "Exercice",
+  "number": "3.3.6.8",
+  "title": "",
+  "body": "Sachant que est une solution à l'équation , trouver une solution à .  Ainsi, une solution est , ou encore . "
+},
+{
+  "id": "exercise-195",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-195",
+  "type": "Exercice",
+  "number": "3.3.6.9",
+  "title": "",
+  "body": "On consdière la paire de congruences suivantes: .  Trouver une valeur de qui satisfait simultanément ces deux équations.  Écrire la soution à la première congruence comme et remplacer dans la deuxième.  Clairement, si , alors est une solution de la première équation, mais pas de la deuxième. Cependant, on sait que toutes les solutions de la première équation s'écrive comme , où .  Ainsi, en remplaçant par dans la deuxième équation, on obtient   Ainsi, on peut obtenir une solution en remplaçant cette fois par dans , ce qui donne . On peut en effet vérifier que:   En fait, on a montrer que, pour que soit une solution à la deuxième équation, on doit avoir , c'est-à-dire , pour .  Ainsi, en remplaçant dans , on a que , c'est-à-dire que est une solution aux deux équation si et seulement si est une solution à l'équation ou encore .  "
+},
+{
+  "id": "exercise-196",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-196",
+  "type": "Exercice",
+  "number": "3.3.6.10",
+  "title": "",
+  "body": "Une relation entre deux objets est une relation d'équivalence si pour on a  que la relation est symétrique, c'est-à-dire que si , alors ;  que la relation est réflexive, c'est-à-dire que ;  que la relation est transitive, c'est-à-dire que si et , alors .   Pour la congruence modulo , on peut plus simplement écrire . Montrer que la congruence modulo est une relation d'équivalence.      "
+},
+{
+  "id": "exercise-197",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-197",
+  "type": "Exercice",
+  "number": "3.3.6.11",
+  "title": "",
+  "body": "Encoder les messages suivants avec le décalage de César précisé avec le message. Mon enseignant est le meilleur avec décalage Je vais faire tous les devoirs avec décalage Un jour je serai le meilleur dresseur avec décalage "
+},
+{
+  "id": "exercise-198",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-198",
+  "type": "Exercice",
+  "number": "3.3.6.12",
+  "title": "",
+  "body": "Décoder les messages suivants, qui ont été chiffrés par un décalage de César précisé avec le message. EHBWEPXAWQZADKNO avec décalage MNBYXVVNBMNBYXRANBMNBJWJWJB avec décalage MFTNBUIFNBUJRVFTEJTDSFUFTDFTUWSBJNFOUHFOJBM avec décalage "
+},
+{
+  "id": "exercise-199",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-199",
+  "type": "Exercice",
+  "number": "3.3.6.13",
+  "title": "",
+  "body": "Encoder les messages suivants avec le système RSA dont les paramètres sont précisés avec le message. Mon enseignant est le meilleur avec paramètres Je vais faire tous les devoirs avec paramètres Un jour je serai le meilleur dresseur avec paramètres Qui a-t-il de particulier avec ces messages codés? Est-ce qu'il y a une lettre qui est facile à décoder? En utilisant des blocs de lettres comme dans le vrai RSA, ceci ne se produit pas. "
+},
+{
+  "id": "exercise-200",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-200",
+  "type": "Exercice",
+  "number": "3.3.6.14",
+  "title": "",
+  "body": "Décoder les messages suivants, qui ont été chiffrés par RSA avec paramètres précisés avec le message. [8, 349, 1231, 64, 1000, 1, 684, 125, 807, 8, 349, 1231, 64] avec [6041, 80552, 64471, 1, 40280, 76462, 6041, 75310, 6041, 40280, 2122, 78295, 80552, 16446, 1, 32487, 2122, 80552, 6041, 73799, 1, 20790, 3336, 6041, 40280, 20790, 16446, 1, 79033, 2122, 46951, 6415, 70263, 2122, 46951, 40280] avec [10, 1, 7357, 15878, 6017, 16044, 6017, 1172, 6017, 341, 6017, 10370, 341, 6017, 13378, 1, 16044, 11527, 341, 1518, 11527, 7357, 3855] avec "
+},
+{
+  "id": "exercise-201",
+  "level": "2",
+  "url": "sec-modulo.html#exercise-201",
+  "type": "Exercice",
+  "number": "3.3.6.15",
+  "title": "QFINXUFWNYNTS.",
+  "body": "QFINXUFWNYNTS Le message AYHOPYXBPKPZWHYBAKHUZSHKPZWHYPAPVUYHCPYHPAHBSPZHUAZBIAPSAVBAWSHPZPYTVABZKVUJZBYSPUJVUUBUVFHBTHUXBHUA a été encodé à l'aide d'un décalage César, mais le décalage est inconnu. Déterminer le message original, sans essayer toutes les possibilités. Si même après avoir déterminé quelles lettres sont les plus fréquentes le message ne se déchiffre toujours pas, un indice avec décalage 5 a été crypté dans le titre de l'exercice.  Ne pas lire avant d'avoir réfléchi et cherché à propos de l'indice 1. L'indice ci-dessous est un décalage de César avec décalage . Décoder chaque phrase individuellement pour une meilleure lisibilité.  QFINXUFWNYNTSJXYZSWTRFSIJLJTWLJUJWJHVZNJXYJHWNYXFSXZYNQNXJWQFQJYYWJJ  FUWJXJVZJQQJXTSYQJXQJYYWJXQJXUQZXZYNQNXJJXIJQFQFSLZJKWFSHFNXJ  Le message est un résumé du livre la disparition de George Perec, que l'on peut lire sur le site de Renaud-Bray . Ce livre a la particularité qu'il ne contient pas la lettre e , sauf pour le nom de l'auteur. "
+},
+{
   "id": "sec_prodSomme",
   "level": "1",
   "url": "sec_prodSomme.html",
@@ -2719,9 +3097,9 @@ var ptx_lunr_docs = [
   "body": "  Soit et .   Combien y a-t-il de fonctions .  On compte le nombre de façons qu'il y a de définir une telle fonction . Pour se faire, on sépare la tâche en deux étapes: choisir la valeur de et ensuite choisir la valeur de .  Lorsqu'on choisit la valeur de , on a trois choix possibles: , ou bien .  Une fois qu'on a choisit , on doit choisir . Encore une fois, on a trois choix possibles: , ou bien .  Par le principe du produit, il y a alors façons différentes de choisir une fonction .  On remarque encore une fois que le fait de choisir avant n'a pas d'importance. Puisque celà n'a pas d'importance, on peut donc décider d'un ordre arbitraire.   Combien y a-t-il de fonctions injectives .  Comme à la partie précédente, on compte le nombre de façons qu'il y a de définir une telle fonction . Pour se faire, on sépare la tâche en deux étapes: choisir la valeur de et ensuite choisir la valeur de .  Lorsqu'on choisit la valeur de , on a trois choix possibles: , ou bien .  Une fois qu'on a choisit , on doit choisir . Attention! Ici, on veut une fonction injective! Supposons par exemple que , il ne reste alors que deux choix possibles : ou bien . La même chose est vrai si on avait choisit une autre valeur pour , il ne resterait que deux choix possibles pour .  Par le principe du produit, il y a alors façons différentes de choisir une fonction .   "
 },
 {
-  "id": "remark-5",
+  "id": "remark-7",
   "level": "2",
-  "url": "sec_prodSomme.html#remark-5",
+  "url": "sec_prodSomme.html#remark-7",
   "type": "Remarque",
   "number": "4.1.6",
   "title": "",
@@ -2836,72 +3214,72 @@ var ptx_lunr_docs = [
   "body": " Exemple de base du principe de la division  Supposons qu'on doivent placer quatre personnes, Damien, Jean-Michel, Alexandre et Valérie, autours du table rondes (à quatre chaises). De combien de façons différentes peut-on accomplir cette tâche, si deux façons de s'assoir sont considérées les mêmes si chaque personne possède le même voisin à gauche et le même voisin à droite.    On commence par décider d'assigner une première chaise à Valérie. Celle-ci choisit arbitrairement une chaise qu'on numérote par . Ensuite, on numérote les autres chaises de à de façon systématique (disons en tournant dans le sens horaire). Il y aura façons différentes de faire ceci, car le résultat dépend uniquement du choix de Valérie.  Par la suite, on assigne arbitrairement une personne à la chaise (il y aura façons de faire ce choix). On continue pour la chaise ( façons) et finalement la chaise ( seule façon de faire).  Par le principe du produit, il y a façons d'accomplir cette tâche.  Cependant, on se rend compte que le choix de la première chaise n'a pas d'impacte sur l'arrangement final, car on distingue deux arrangements seulement si les voisins des gens sont différents. Par le principe de la division, il y aura façons différentes d'assoir les gens.   "
 },
 {
-  "id": "exercise-179",
+  "id": "exercise-202",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-179",
+  "url": "sec_prodSomme.html#exercise-202",
   "type": "Question de compréhension",
   "number": "4.1.6.1",
   "title": "",
   "body": " Un test est formé de questions à choix multiples. Chaque question possède réponse possible.  De combien de façons un étudiant peut-il répondre aux questions s'il répond à toutes les questions? De combien de façons un étudiant peut-il répondre aux questions s'il peut laisser une réponse vide à certaines questions? "
 },
 {
-  "id": "exercise-180",
+  "id": "exercise-203",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-180",
+  "url": "sec_prodSomme.html#exercise-203",
   "type": "Question de compréhension",
   "number": "4.1.6.2",
   "title": "",
   "body": "Une marque populaire de vêtements produit des chandails en couleurs, en version à manches courtes ou à manches longues et est offert en trois tailles différentes. Combien de types de chandails différents sont produit par cette marque? "
 },
 {
-  "id": "exercise-181",
+  "id": "exercise-204",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-181",
+  "url": "sec_prodSomme.html#exercise-204",
   "type": "Question de compréhension",
   "number": "4.1.6.3",
   "title": "",
   "body": "Combien d'entiers : sont divisible par ? sont divisible par , mais pas par ? sont divisible par et par ? sont divisible par ou par ? sont divisible par exactement un des entiers ou ? ne sont divisible ni par ni par ? ont des chiffres différents les uns des autres? ont des chiffres différents les uns des autres et sont pair? "
 },
 {
-  "id": "exercise-182",
+  "id": "exercise-205",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-182",
+  "url": "sec_prodSomme.html#exercise-205",
   "type": "Question de compréhension",
   "number": "4.1.6.4",
   "title": "",
   "body": " On considère des chaînes de trois caractères de chiffres en base . Combien de ces chaînes:  ne contiennent pas le même chiffre trois fois? ont exactement deux chiffres qui sont des . "
 },
 {
-  "id": "exercise-183",
+  "id": "exercise-206",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-183",
+  "url": "sec_prodSomme.html#exercise-206",
   "type": "Question de compréhension",
   "number": "4.1.6.5",
   "title": "",
   "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
 {
-  "id": "exercise-184",
+  "id": "exercise-207",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-184",
+  "url": "sec_prodSomme.html#exercise-207",
   "type": "Exercice",
   "number": "4.1.7.1",
   "title": "",
   "body": " Combien de chaînes de quatre chiffres  sont formées de chiffres différents? . Lorsqu'on choisit le premier chiffre, il y a possibilités. Pour chaque chiffre qu'on choisit par la suite, il y a toujours un choix de moins que pour le chiffre précédent. Ainsi, par le principe du produit, on a  se terminent par un nombre pair? On commence par choisir le dernier chiffre. Pour que celui-ci soit pair, il y a choix possibles. Pour chacun des autres chiffres, il y a possibilités, car les chiffres peuvent se répéter. ont exactement trois chiffres qui sont des ?  On conditionne sur la position du chiffre qui n'est pas un . C'est-à-dire qu'on utilise le principe de la somme selon la position du chiffre qui n'est pas .  Le chiffre est soit à la position , soit à la position , soit à la position ou bien à la position . Dans chacun des cas, il ne reste qu'à trouver la valeur de ce chiffre, car on sait que les autres chiffres sont des . Il y aura donc possibilités, soit , , , , , , , ou .  Ainsi, par le principe de la somme, il y a possibilités.  "
 },
 {
-  "id": "exercise-185",
+  "id": "exercise-208",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-185",
+  "url": "sec_prodSomme.html#exercise-208",
   "type": "Exercice",
   "number": "4.1.7.2",
   "title": "",
   "body": "Lors de la finale de la course du mètres aux derniers jeux Olympiques, il y avait coureurs. De combien de manières possibles le podium pouvait-il être composé?   La notation sera définie à la prochaine section .  "
 },
 {
-  "id": "exercise-186",
+  "id": "exercise-209",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-186",
+  "url": "sec_prodSomme.html#exercise-209",
   "type": "Exercice",
   "number": "4.1.7.3",
   "title": "",
@@ -2926,63 +3304,63 @@ var ptx_lunr_docs = [
   "body": "Combien de chaînes binaires de longueur contiennent quatre consécutifs ou trois consécutifs? Cette question est similaire au numéro précédent , mais plus dificile, car on peut avoir plusieurs fois trois consécutifs dans la même chaîne.  On commence par compter celles qui ont une séquence de quatre consécutifs. De plus, on conditionne sur la position du premier de la première séquence de consécutifs.  Si la séquence commence à la première position, les chaînes seront de la forme , où les sont quelconques ( ). Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la deuxième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la troisième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la quatrième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Si la séquence commence à la cinquième position, les chaînes seront de la forme . Il y a donc chaînes dont la séquence de commence à cette position.  Ainsi, il y a chaînes ayant une séquence de cinq consécutifs.  Par la suite, on compte celles qui ont une séquence de trois consécutifs. De plus, on conditionne sur la position du premier de la première séquence de consécutifs.  Si la séquence commence à la première position, les chaînes seront de la forme , où les sont quelconques ( ). Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la deuxième position, les chaînes seront de la forme . Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la troisième position, les chaînes seront de la forme . Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la quatrième position, les chaînes seront de la forme , mais ne peut pas être car la première séquence doit commencer à la quatrième position! Il y a donc chaînes dont la première séquence de commence à cette position.  Si la séquence commence à la cinquième position, les chaînes seront de la forme . Cependant, il y a chaînes ayant une séquence d'au moins trois au début de la chaîne. Il s'agit de , et . Il y a donc chaînes dont la première séquence de commence à cette position.  Ainsi, il y a chaînes ayant une séquence de cinq consécutifs.  Finalement, on doit remarquer qu'il y a huit chaînes qui possèdent une séquences de quatre consécutifs et une séquence de trois consécutifs.  Par le principe d'inclusion-exclusion, on a .  "
 },
 {
-  "id": "exercise-189",
+  "id": "exercise-212",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-189",
+  "url": "sec_prodSomme.html#exercise-212",
   "type": "Exercice",
   "number": "4.1.7.6",
   "title": "",
   "body": "Soit un ensemble tel que . Combien de sous-ensembles de possède plus d'un élément? Il y a sous-ensemble au total. Il y a un sous-ensemble qui ne contient aucun élément (l'esemble vide) et il y a sous-ensemble contenant un seul élément. Ainsi, il y aura sous-ensembles avec plus d'un élément. "
 },
 {
-  "id": "exercise-190",
+  "id": "exercise-213",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-190",
+  "url": "sec_prodSomme.html#exercise-213",
   "type": "Exercice",
   "number": "4.1.7.7",
   "title": "",
   "body": "On considère les entiers , . Combien de ces entiers sont divisibles par ou ? Pour être divisible par et par , il faut et il suffit d'être divisible par . Combien de ces entiers ne sont divisibles ni par ni par ? L'énoncé n'est divisible ni par , ni par est la négation de l'éoncé est divisible par ou par . "
 },
 {
-  "id": "exercise-191",
+  "id": "exercise-214",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-191",
+  "url": "sec_prodSomme.html#exercise-214",
   "type": "Exercice",
   "number": "4.1.7.8",
   "title": "",
   "body": "Supposons qu'un mot de passe pour un système informatique doit avoir entre et (inclusivement) caractères, où chaque caractère est soit une lettre minuscule ou manjuscule, un chiffre ou l'un des caractères spéciaux . Combien de mots de passe différents sont disponibles pour ce système informatique? Pour chaque caractère, il y a possibilités. Il faut utiliser le principe de la somme selon le nombre de caractères. Combien de ces mots de passe contiennent au moins un des caractères spéciaux? Combien de ces mots de passe ne contiennt pas de caractères spéciaux? "
 },
 {
-  "id": "exercise-192",
+  "id": "exercise-215",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-192",
+  "url": "sec_prodSomme.html#exercise-215",
   "type": "Exercice",
   "number": "4.1.7.9",
   "title": "",
   "body": "On considère l'ensemble des propositions formées à partir de propositions atomiques. Combien de lignes possède le tableau de vérité d'une de ces propositions? Chaque de ligne dans le tableau de vérité correspond à une combinaison des valeurs de vérités des propositions atomiques. Combien de tableaux de vérité différents y a-t-il pour ces propositions? On considère que deux tableaux sont les mêmes si leur dernière colone sont les mêmes. On considère que deux tableaux de vérités sont les mêmes si les propositions se trouvant à la dernière colone sont équivalentes. Si est une proposition de cet ensemble, pour chaque ligne du tableau de vérité, combien de valeur de vérité est-ce que peut avoir ? "
 },
 {
-  "id": "exercise-193",
+  "id": "exercise-216",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-193",
+  "url": "sec_prodSomme.html#exercise-216",
   "type": "Exercice",
   "number": "4.1.7.10",
   "title": "",
   "body": "On considère les fonctions où . Conbien de ces fonctions sont injectives? Si , il y en a . Si , il y en a aussi 2. Si , il y en a . Combien de ces fonctions sont telles que ? Si ou , il y en a une seule. Si , il y en a . Combien de ces fonctions sont telles que ? Ici, on doit supposer que , car sinon la notation n'est pas cohérente. Si , alors il y aura fonctions qui respectent la condition. "
 },
 {
-  "id": "exercise-194",
+  "id": "exercise-217",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-194",
+  "url": "sec_prodSomme.html#exercise-217",
   "type": "Exercice",
   "number": "4.1.7.11",
   "title": "",
   "body": "Pour un mariage, de combien de façons différentes est-ce qu'un photographe peu arranger en une ligne personnes d'un groupe de , où les mariés sont dans le groupe de, si la mariée doit être sur la photo? On commence par placer la mariée. Une fois la mariée placée, il reste à placer personnes parmi les personnes restantes.  les mariés doivent tous deux être sur la photo? On commence par placer la mariée. Une fois la mariée placée, on place le marié. Une fois les mariés placé, il reste à placer personnes parmi les personnes restantes.  exactement un des mariés doit être sur la photo? On commence par choisir si c'est la marié ou le marié qui est sur la photo. On peut aussi utiliser le principe de la somme selon lequel des deux est sur la photo. "
 },
 {
-  "id": "exercise-195",
+  "id": "exercise-218",
   "level": "2",
-  "url": "sec_prodSomme.html#exercise-195",
+  "url": "sec_prodSomme.html#exercise-218",
   "type": "Exercice",
   "number": "4.1.7.12",
   "title": "",
@@ -3052,18 +3430,18 @@ var ptx_lunr_docs = [
   "body": "  .  "
 },
 {
-  "id": "example-60",
+  "id": "example-66",
   "level": "2",
-  "url": "sec_arrCombinaison.html#example-60",
+  "url": "sec_arrCombinaison.html#example-66",
   "type": "Exemple",
   "number": "4.2.8",
   "title": "Des anagrammes.",
   "body": " Des anagrammes  Une anagramme d'une suite de lettres est une permutation de ces lettres. Lorsqu'on compte le nombre d'anagrammes possibles, on ne s'intéresse pas à savoir si la permutation est un vrai mot. Combien d'anagrammes des lettres si les lettres doivent apparaître dans cet ordre en un seul bloc?  Puisque la suite doit apparaître dans cet ordre en un seul bloc, il suffit de compter les permutations de lettres différentes (on considère comme une seule lettre). Ainsi, il y en a .  "
 },
 {
-  "id": "example-61",
+  "id": "example-67",
   "level": "2",
-  "url": "sec_arrCombinaison.html#example-61",
+  "url": "sec_arrCombinaison.html#example-67",
   "type": "Exemple",
   "number": "4.2.9",
   "title": "Le parcours d’un vendeur.",
@@ -3088,18 +3466,18 @@ var ptx_lunr_docs = [
   "body": " Soit un ensemble de cardinalité finie et soit tel que alors .   On sait que le nombre de permutations est . Nous allons utiliser le principe du produit afin de compter d'une autre façon. On peut séparer la tâche de choisir une permutation en deux étapes. Premièrement, on choisit éléments de . Deuxièmement, on choisit un ordre pour ces éléments (on permute ces éléments).  Le nombre de façons de choisir les éléments de est . Pour chaque choix de éléments , le nombre de façons d'ordonner ceux-ci est (le nombre de permutations des éléments!). Ainsi, par le principe du produit, on a . Ainsi, on a .   "
 },
 {
-  "id": "example-62",
+  "id": "example-68",
   "level": "2",
-  "url": "sec_arrCombinaison.html#example-62",
+  "url": "sec_arrCombinaison.html#example-68",
   "type": "Exemple",
   "number": "4.2.12",
   "title": "Mains de poker.",
   "body": " Mains de poker  Combien de mains de cinq cartes peuvent être formées à partir d'un jeu de cartes standard de cartes?  Il s'agit de compter les combinaisons de cartes parmi . On sait qu'il y en a  "
 },
 {
-  "id": "example-63",
+  "id": "example-69",
   "level": "2",
-  "url": "sec_arrCombinaison.html#example-63",
+  "url": "sec_arrCombinaison.html#example-69",
   "type": "Exemple",
   "number": "4.2.13",
   "title": "Des chaînes binaires.",
@@ -3124,9 +3502,9 @@ var ptx_lunr_docs = [
   "body": " Soit tels que alors .  Il suffit d'utiliser la proposition et la commutativité du produit dans .  "
 },
 {
-  "id": "example-64",
+  "id": "example-70",
   "level": "2",
-  "url": "sec_arrCombinaison.html#example-64",
+  "url": "sec_arrCombinaison.html#example-70",
   "type": "Exemple",
   "number": "4.2.16",
   "title": "",
@@ -3151,9 +3529,9 @@ var ptx_lunr_docs = [
   "body": " Le nombre de permutations d'un ensemble de objets si on accepte les répétitions est  Choisir une tel permutation est équivalent à choisir une fonction . Par l'exemple , on a que le nombre de permutations de objets avec répétition est .  "
 },
 {
-  "id": "remark-7",
+  "id": "remark-9",
   "level": "2",
-  "url": "sec_arrCombinaison.html#remark-7",
+  "url": "sec_arrCombinaison.html#remark-9",
   "type": "Remarque",
   "number": "4.2.19",
   "title": "",
@@ -3169,144 +3547,144 @@ var ptx_lunr_docs = [
   "body": " Soit pour , le nombre de solutions à l'équation est .  On peut définir une bijection entre ces solutions et les chaînes binaires de longueur formées de caractères et caractère en utilisant la méthode précédente. Ainsi, le nombre de solutions est bien .  "
 },
 {
-  "id": "example-65",
+  "id": "example-71",
   "level": "2",
-  "url": "sec_arrCombinaison.html#example-65",
+  "url": "sec_arrCombinaison.html#example-71",
   "type": "Exemple",
   "number": "4.2.21",
   "title": "Combinaisons avec répétition.",
   "body": " Combinaisons avec répétition  Déterminer le nombre de solutions à l'équation , pour , avec , si :  il n'y a pas d'autre condition?  pour tout ?  Pour s'assurer que , on introduit des variables intermédiaires telles que . Ainsi, en remplaçant dans l'équation, on a , ce qui devient .  Ainsi, il y aura     Pour s'assurer que , on introduit la variable intermédiaire telle que . Ainsi, en remplaçant dans l'équation, on a , ce qui devient .  Ainsi, il y aura     On compte toutes les solutions à l'équation (sans restriction) et on retire les solutions qui ne respecte pas la condition, c'est-à-dire les solutions telles que . Pour s'assurer que , on introduit la variable intermédiaire telle que . Ainsi, en remplaçant dans l'équation , ce qui devient .  Ainsi, il y aura   "
 },
 {
-  "id": "exercise-196",
+  "id": "exercise-219",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-196",
+  "url": "sec_arrCombinaison.html#exercise-219",
   "type": "Question de compréhension",
   "number": "4.2.4.1",
   "title": "",
   "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 },
 {
-  "id": "exercise-197",
+  "id": "exercise-220",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-197",
+  "url": "sec_arrCombinaison.html#exercise-220",
   "type": "Exercice",
   "number": "4.2.5.1",
   "title": "",
   "body": "Combien de permutations de l'ensemble y a-t-il? "
 },
 {
-  "id": "exercise-198",
+  "id": "exercise-221",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-198",
+  "url": "sec_arrCombinaison.html#exercise-221",
   "type": "Exercice",
   "number": "4.2.5.2",
   "title": "",
   "body": "Combien de permutations de l'ensemble commencent par ? Puisque est fixé en première position, il suffit de compter les permutations des lettres restantes. Il y en a . "
 },
 {
-  "id": "exercise-199",
+  "id": "exercise-222",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-199",
+  "url": "sec_arrCombinaison.html#exercise-222",
   "type": "Exercice",
   "number": "4.2.5.3",
   "title": "",
   "body": "On lance une pièce à deux faces à reprises. Le résultat est Pile ou Face. Combien de résultats: y a-t-il au total? . contiennent exactement deux Face? On choisit deux positions parmi les possibles pour les Face. contiennent exactement trois Pile?  contiennent le même nombre de Pile que de Face?  "
 },
 {
-  "id": "exercise-200",
+  "id": "exercise-223",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-200",
+  "url": "sec_arrCombinaison.html#exercise-223",
   "type": "Exercice",
   "number": "4.2.5.4",
   "title": "",
   "body": "De combien de manières peut-on sélectionner volontaires dans la classe? (On suppose qu'il y a personnes dans la classe.) Soit le nombre de personnes dans la classe. Si , alors c'est impossible. Sinon, le nombre de possibilités est . Pour cela, on identifie les personnes avec étiquettes pour volontaires et étiquettes pour non volontaires. "
 },
 {
-  "id": "exercise-201",
+  "id": "exercise-224",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-201",
+  "url": "sec_arrCombinaison.html#exercise-224",
   "type": "Exercice",
   "number": "4.2.5.5",
   "title": "",
   "body": "Aux olympiades scolaire de l'école du Bonheur, tous les participants gagnent une médaille. S'il y a élèves et qu'on attribue médailles d'or, médailles d'argent et le reste en bronze, de combien de manières est-ce que la distribution peut être faite? "
 },
 {
-  "id": "exercise-202",
+  "id": "exercise-225",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-202",
+  "url": "sec_arrCombinaison.html#exercise-225",
   "type": "Exercice",
   "number": "4.2.5.6",
   "title": "",
   "body": "Dans un groupe de personnes, on veut former deux équipes. La première sera composée de attaquants, défenseurs, gardiens et réservistes. La deuxième équipe sera formée de avants, passeur, arrières et réservistes. On suppose que personne ne fait partie des deux équipes. Combien y a-t-il de possibilités? "
 },
 {
-  "id": "exercise-203",
+  "id": "exercise-226",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-203",
+  "url": "sec_arrCombinaison.html#exercise-226",
   "type": "Exercice",
   "number": "4.2.5.7",
   "title": "",
   "body": "Pour une fin de semaine au chalet, on veut apporter jeux de société. Dans la collection, on trouve jeux coopératifs et jeux de stratégies. Combien de possibilités y a-t-il si: On ne donne aucune restriction?  On souhaite avoir exactement deux jeux coopératifs?  On utilise le principe du produit pour séparer la tâche en deux étapes. Premièrement, on choisit deux jeux coopratif et ensuite on choisit trois jeux de statégies. Ainsi, la réponse sera . Pour des raisons évidentes, on décide d'exclure des jeux coopératifs le jeu Pandémie et si on veut absolument apporter le jeu de stratégie Smallworld ? "
 },
 {
-  "id": "exercise-204",
+  "id": "exercise-227",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-204",
+  "url": "sec_arrCombinaison.html#exercise-227",
   "type": "Exercice",
   "number": "4.2.5.8",
   "title": "",
   "body": "Pour mon anniversaire, je souhaite faire un petit événement avec invités. J'ai bons amis hommes et bonnes amies femmes que je considère inviter. Combien de choix est-ce que j'ai si: Je ne mets aucune restriction? Je veux hommes et femmes? Roxanne et Samuel forme un couple. Si je décide d'en inviter un des deux, l'autre doit venir aussi. Combien de possibilités s'il n'y a pas d'autres restrictions? On commence par décider si le couple est invité ou non. On obtient leur présence ou absence entraine deux sous-ensembles disjoints de possibilités. Si le couple fait partie des invités, alors il reste places à combler, à choisir parmi les autres personnes. Cela fait .  À cela, on ajoute les possibilités où Roxanne et Samuel ne sont pas invités. Il faut alors choisir les invités parmi les personnes. Cela fait .  Par le principe d'addition, on a un total de possibilités.  Parmi celles-ci, combien comprennent le couple? Combien de possibilités si je veux avoir au total hommes et femmes? Encore une fois, on sépare en deux cas distincts, selon si Roxanne et Samuel sont présents ou non. Dans le cas où ils sont présent, on doit ensute choisir hommes parmi les restant et femmes parmi les restant. Selon le principe de multiplication, ceci donnera .  À cela, on doit ajouter les possiblités où Roxanne et Samuel sont absents. Il faut choisir hommes parmi les qui ne sont pas Samuel et femmes parmi les qui ne sont pas Roxanne. On obtient alors, par le principe de multiplication .  On combine finalement avec le principe d'addition pour avoir un total de possibilités.  Parmi celles-ci, combien comprennent le couple? Parmi mes amis, il y a aussi Christian et Sophie, qui sont en chicane et ne peuvent pas être tous les deux présents. Combien de possibilités y a-t-il s'il n'y a pas d'autres restrictions? Cette-fois, on distingue trois cas: Christian est présent, mais pas Sophie, Sophie est présent, mais pas Christian ou ni Sophie ni Christian sont présents. Ces trois cas sont disctincts et le principe d'addition permettra d'obtenir l'ensemble des possibilités.  Si Christian est présent, il faut ensuite choisir les autres invités parmi les personnes qui ne sont pas Sophie (ou Christian). Cela donne . Le même argument montre que si Sophie est présente, mais pas Christian, le nombre de possibilités est aussi .  Finalement, si les deux sont absents, il faut choisir les invités parmi les autres possibilités. On obtient alors .  En combinant le tout, il y a possibilités.  Combien de possibilités si je veux avoir au total hommes et femmes? "
 },
 {
-  "id": "exercise-205",
+  "id": "exercise-228",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-205",
+  "url": "sec_arrCombinaison.html#exercise-228",
   "type": "Exercice",
   "number": "4.2.5.9",
   "title": "",
   "body": "Soit et Combien y a-t-il de fonctions et ? Il y a fonctions , alors qu'il y a fonctions . Combien y a-t-il de fonctions qui sont surjectives?   Pour que la fonction soit surjective, on doit avoir pour , et on doit aussi avoir . Ainsi, il doit y avoir avoir exactement un élément tel que alors que tous les autres éléments aurons une seule préimage.  Donc, pour définir une fonction surjective , on doit choisir l'élément de ayant deux préimages ( possibilité). Enusite, on choisit les deux préimage de (il y possibilités.) Finalement, on doit choisir la préimage des autres éléments de . Ceci evient à permuter trois éléments (il y a possibilités).  Ainsi, par le principe du produit, il y a  Combien y a-t-il de fonctions qui sont injectives? \\Permutation{5}{4}=\\frac{5!}{(5-4)!}=5! "
 },
 {
-  "id": "exercise-206",
+  "id": "exercise-229",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-206",
+  "url": "sec_arrCombinaison.html#exercise-229",
   "type": "Exercice",
   "number": "4.2.5.10",
   "title": "",
   "body": "Soit . Combien de solutions y a-t-il si sont des naturels (plus grands ou égaux à )?   sont des naturels plus grands ou égaux à ?  "
 },
 {
-  "id": "exercise-207",
+  "id": "exercise-230",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-207",
+  "url": "sec_arrCombinaison.html#exercise-230",
   "type": "Exercice",
   "number": "4.2.5.11",
   "title": "",
   "body": "Soit un ensemble à éléments. Une -partition de est un ensemble de sous-ensembles de qui ont les propriétés suivantes:  ils sont non vides, c'est à dire ;  leur intersection deux à deux sont vides, c'est-à-dire si ;  leur union donne , c'est-à-dire .   Par exemple, pour , les ensembles et forment une -partition de . Combien y a-t-il de -partition de ?  Chaque -partition de est formé de deux ensembles de cardinalité et un ensemble de cardinalité . Chaque -partition est uniquement définie par le sous-ensemble de carinalité qu'elle contient.   "
 },
 {
-  "id": "exercise-208",
+  "id": "exercise-231",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-208",
+  "url": "sec_arrCombinaison.html#exercise-231",
   "type": "Exercice",
   "number": "4.2.5.12",
   "title": "",
   "body": "Une éducatrice en garderie a un groupe de enfants. De combien de manières peut-elle former trois sous-groupes? On suppose qu'un groupe n'est pas vide, mais pourrait contenir un seul enfant. "
 },
 {
-  "id": "exercise-209",
+  "id": "exercise-232",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-209",
+  "url": "sec_arrCombinaison.html#exercise-232",
   "type": "Exercice",
   "number": "4.2.5.13",
   "title": "",
   "body": "On considère l'ensemble . Combien de fonctions de vers ont la propriété que, si , alors . Par exemple, est un telle fonction.  Une telle fonction est dite monotone.  Ce problème est difficile si on ne le prend pas sous le bon angle. Commencer par énumer les possibilités. Il y en a . Considérer les éléments du codomaine comme étant les urnes et les éléments du domaines comme étant les billes. Des fonctions de vers , on cherche à compter celles qui sont monotones. On imagine la représentation d'une fonction en termes de billes et d'urnes. Par exemple, la figure suivante représente la fonction donné en exemple dans l'énoncé.      On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. Dans la première urne, une bille identifiée 1 est présente et des billes identifiées respectivement 2 et 3 sont présentes dans l'urne 2. La troisième urne est vide.    La figure ci-dessous représente quant à elle la fonction non monotone . Les mêmes urnes contiennent le même nombre de billes, mais les billes sont différentes.      On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. Dans l'urne 2, on peut voir des billes identifiées respectivement 1 et 3 et dans l'urne 3, on voit une bille identifiée 2. L'urne 1 est vide.    On prend maintenant une configuration arbitraire de trois billes identiques dans trois urnes distinctes.      On voit trois urnes identifiées par 1,2 et 3 qui contiennent des billes. L'urne 2 contient deux billes et l'urne 3 en contient une, mais les billes ne sont pas identifiées.    À partir de cette configuration, il n'y a qu'une seule manière de créer une fonction monotone. On prend les billes de la première urne non vide (identifiée par le plus petit nombre) et on numérotte ses billes par les plus petits éléments du domaine. On poursuit ainsi avec les autres urnes non vide. On obtient alors une fonction monotone. Avec la configuration de la figure , on obtient .  "
 },
 {
-  "id": "exercise-210",
+  "id": "exercise-233",
   "level": "2",
-  "url": "sec_arrCombinaison.html#exercise-210",
+  "url": "sec_arrCombinaison.html#exercise-233",
   "type": "Exercice",
   "number": "4.2.5.14",
   "title": "",

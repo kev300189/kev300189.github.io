@@ -10,10 +10,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">On utilise le principe du produit pour séparer la tâche en deux étapes. Premièrement, on choisit deux jeux coopratif <em class="emphasis">et ensuite</em> on choisit trois jeux de statégies. Ainsi, la réponse sera<div class="displaymath process-math">
-\begin{equation*}
-\Binomial{5}{2}\Binomial{8}{3}=\frac{5!}{3!2!}\frac{8!}{5!3!}=\frac{8!}{3!2!3!}\text{.}
-\end{equation*}
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">Comme à la partie précédente, on compte le nombre de façons qu’il y a de définir une telle fonction <span class="process-math">\(f\text{.}\)</span> Pour se faire, on sépare la tâche en deux étapes: choisir la valeur de <span class="process-math">\(f(0)\)</span> et ensuite choisir la  valeur de <span class="process-math">\(f(1)\text{.}\)</span>
+</div> <div class="para">Lorsqu’on choisit la valeur de <span class="process-math">\(f(0)\text{,}\)</span> on a trois choix possibles: <span class="process-math">\(f(0)=a\text{,}\)</span> <span class="process-math">\(f(0)=b\)</span> ou bien <span class="process-math">\(f(0)=c\text{.}\)</span>
+</div> <div class="para">Une fois qu’on a choisit <span class="process-math">\(f(0)\text{,}\)</span> on doit choisir <span class="process-math">\(f(1)\text{.}\)</span> Attention! Ici, on veut une fonction injective! Supposons par exemple que <span class="process-math">\(f(0)=c\text{,}\)</span> il ne reste alors que <em class="emphasis">deux choix possibles</em>:  <span class="process-math">\(f(1)=a\)</span> ou bien <span class="process-math">\(f(1)=b\text{.}\)</span> La même chose est vrai si on avait choisit une autre valeur pour <span class="process-math">\(f(0)\text{,}\)</span> il ne resterait que deux choix possibles pour <span class="process-math">\(f(1)\text{.}\)</span>
+</div> <div class="para">Par le principe du produit, il y a alors <span class="process-math">\(3\cdot 2 =6\)</span> façons différentes de choisir une fonction <span class="process-math">\(f:A\to B\text{.}\)</span>
 </div>
 </div></body>
 </html>

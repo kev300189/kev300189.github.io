@@ -11,8 +11,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Démonstration</span></h5>
-<div class="para">On peut définir une bijection entre ces solutions et les chaînes binaires de longueur <span class="process-math">\(n+ (r-1)\)</span> formées de <span class="process-math">\(n\)</span> caractères <span class="process-math">\(1\)</span> et <span class="process-math">\(r-1\)</span> caractère <span class="process-math">\(0\)</span> en utilisant la méthode précédente. Ainsi, le nombre de solutions est bien <span class="process-math">\(\Binomial{n+r-1}{r}\text{.}\)</span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Démonstration</span></h4>
+<div class="para">On sait que le nombre de <span class="process-math">\(r-\)</span>permutations est <span class="process-math">\(\Permutation{n}{r}=\frac{n!}{(n-r)!}\text{.}\)</span> Nous allons utiliser le principe du produit afin de compter <span class="process-math">\(\Permutation{n}{r}\)</span> d’une autre façon. On peut séparer la tâche de choisir une permutation en deux étapes. Premièrement, on choisit <span class="process-math">\(r\)</span> éléments de <span class="process-math">\(E\text{.}\)</span> Deuxièmement, on choisit un ordre pour ces éléments (on permute ces <span class="process-math">\(r\)</span> éléments).</div> <div class="para logical">
+<div class="para">Le nombre de façons de choisir les <span class="process-math">\(r\)</span> éléments de <span class="process-math">\(E\)</span> est <span class="process-math">\(\Binomial{n}{r}\text{.}\)</span> Pour chaque choix de <span class="process-math">\(r\)</span> éléments , le nombre de façons d’ordonner ceux-ci  est <span class="process-math">\(r!\)</span> (le nombre de permutations des <span class="process-math">\(r\)</span> éléments!). Ainsi, par le principe du produit, on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Permutation{n}{r}=\Binomial{n}{r}\cdot r!\text{.}
+\end{equation*}
+</div>
+<div class="para">Ainsi, on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Binomial{n}{r}=\frac{\Permutation{n}{r}}{r!}=\frac{n!}{r!(n-r)!}\text{.}
+\end{equation*}
+</div>
 </div></article><span class="incontext"><a href="sec_arrCombinaison.html#proof-9" class="internal">Contexte</a></span>
 </body>
 </html>

@@ -11,8 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">Supposons qu’on ordonne les éléments de <span class="process-math">\(A\)</span> d’une manière quelconque, c’est-à-dire qu’on les étiquette par <span class="process-math">\(a_1,\ a_2\,\ \dots, a_n\text{.}\)</span>
-</div> <div class="para">On veut maintenant construire un sous-ensemble <span class="process-math">\(E\)</span> de <span class="process-math">\(A\text{.}\)</span> Pour se faire, regarde successivement chaque élément de <span class="process-math">\(A\text{.}\)</span> Pour chaque élément <span class="process-math">\(a_i\text{,}\)</span> il y a deux choix possibles. Soit <span class="process-math">\(a_i\in\ E\text{,}\)</span> soit <span class="process-math">\(a_i\notin\ E\text{.}\)</span> Par le principe du produit, il y a <span class="process-math">\(2\times 2\times \cdots\times 2 =2^n\)</span> façons différentes de créer le sous-ensemble <span class="process-math">\(E\text{.}\)</span> Ainsi, <span class="process-math">\(\left|\mathscr{P}(A)\right|=2^n\text{.}\)</span>
+<div class="para logical">
+<div class="para">L’idée est de décomposer le nombre <span class="process-math">\(2^{345}\)</span> en quelque chose de plus petit et dont on connait le reste de la division par <span class="process-math">\(7\text{.}\)</span> Dans ce cas-ci, on voit que <span class="process-math">\(345=5\times 69\)</span> et donc <span class="process-math">\(2^{345}=(2^5)^{69}\text{.}\)</span> Comme <span class="process-math">\(2^5=32\equiv 4\mod 7\text{,}\)</span> la troisième propriété appliquée à répétition nous permet de dire que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2^{345}\equiv 4^{69}\mod 7\text{.}
+\end{equation*}
 </div>
+<div class="para">On peut ensuite observer que <span class="process-math">\(4^3=64\equiv 1\mod 7\)</span> et puisque <span class="process-math">\(69=3\times 23\text{,}\)</span> alors</div>
+<div class="displaymath process-math">
+\begin{align*}
+2^{345}&amp;\equiv 4^{69}\mod 7\\
+&amp;\equiv (4^3)^{23}\mod 7\\
+&amp;\equiv 1^{23}\mod 7\\
+&amp;\equiv 1\mod 7\text{.}
+\end{align*}
+</div>
+</div> <div class="para">Le reste de la division par <span class="process-math">\(7\)</span> du nombre <span class="process-math">\(2^{345}\)</span> est donc <span class="process-math">\(1\text{.}\)</span> On note au passage qu’on aurait pu y arriver plus rapidement en divisant <span class="process-math">\(345\)</span> par <span class="process-math">\(3\)</span> plutôt que par <span class="process-math">\(5\)</span> initialement.</div>
 </div></body>
 </html>
