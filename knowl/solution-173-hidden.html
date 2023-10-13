@@ -10,6 +10,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para">Lorsqu’on choisit le premier chiffre, il y a <span class="process-math">\(10\)</span> possibilités. Pour chaque chiffre qu’on choisit par la suite, il y a toujours un choix de moins que pour le chiffre précédent. Ainsi, par le principe du produit, on a <span class="process-math">\(10\cdot 9\cdot 8\cdot 7=5040 \)</span>
-</div></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">Supposons que <span class="process-math">\(E=\{e_1, e_2, e_3, e_4\}\text{.}\)</span> Puisque l’ensemble est de cardinalité relativement petite, on peut essayer d’énumérer ces sous-ensembles de cardinalité paire. On obtient alors</div>
+<div class="displaymath process-math">
+\begin{align*}
+E_1\amp=\{e_3, {\color{red}e_4}\}  \amp  E_2\amp=\{\} \\
+E_3\amp= \{e_1, {\color{red}e_4}\}\amp E_4\amp=\{e_1,e_2\}   \\
+E_5\amp= \{e_2, {\color{red}e_4}\} \amp E_6\amp =\{e_1,e_3\}  \\
+E_7\amp= \{e_1, e_2, e_3, {\color{red}e_4}\} \amp E_8\amp  = \{e_2,e_3\}.
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Avant de considérer le cas général, on fait quelques remarques. Notons <span class="process-math">\(A=E-\{e_4\}=\{e_1, e_2, e_3\}\text{.}\)</span> On peut voir que le nombre de sous-ensembles de cardinalité pair de <span class="process-math">\(E\)</span> est équivalent au nombre de sous-ensembles de <span class="process-math">\(A\text{.}\)</span> En fait, on peut voir un lien entre ceux-ci si on liste les sous-ensembles de <span class="process-math">\(A\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+A_1\amp=\{e_3\}  \amp  A_2\amp=\{\} \\
+A_3\amp= \{e_1\}\amp A_4\amp=\{e_1,e_2\}   \\
+A_5\amp= \{e_2\} \amp A_6\amp =\{e_1,e_3\}  \\
+A_7\amp= \{e_1, e_2, e_3\} \amp A_8\amp  = \{e_2,e_3\}.
+\end{align*}
+</div>
+</div> <div class="para">En effet, si on compares les sous-ensembles <span class="process-math">\(E_i\)</span> aux les sous-ensembles <span class="process-math">\(A_i\text{,}\)</span> on remarque que ceux ayant un indice paire  sont égaux, c’est-à-dire que <span class="process-math">\(E_2=A_2\text{,}\)</span> <span class="process-math">\(E_4=A_4\text{,}\)</span> <span class="process-math">\(E_6=A_6\)</span> et <span class="process-math">\(E_7A_7\text{.}\)</span> De même, chaque sous-ensemble <span class="process-math">\(E_i\)</span> ayant un indice impair est obtenu à partir du sous-ensemble <span class="process-math">\(A_i\text{,}\)</span> auquel on a ajouté l’élément <span class="process-math">\(\color{red}e_4\text{,}\)</span> c’est-à-dire que <span class="process-math">\(E_1=A_1\cup \{{color{red}e_4}}\text{,}\)</span> <span class="process-math">\(E_3=A_3\cup \{{color{red}e_4}}\text{,}\)</span> <span class="process-math">\(E_5=A_5\cup \{{color{red}e_4}}\)</span> et <span class="process-math">\(E_7=A_7\cup \{{color{red}e_4}}\text{.}\)</span>
+</div> <div class="para">On utilisera cette remarque pour déterminer la solution dans le cas général.</div>
+</div></body>
 </html>

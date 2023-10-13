@@ -13,12 +13,20 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.12.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.10.2</span><span class="period">.</span>
 </h4>
-<div class="para">Soit <span class="process-math">\(V\)</span> le nombre de noms de variables possible. Soit aussi <span class="process-math">\(V_1\)</span> le nombre de ces noms formés d’un seul caractère, et soit <span class="process-math">\(V_2\)</span> le nombre des noms formés de deux caractères. Ainsi, par le principe de la somme, on aura <span class="process-math">\(V=V_1+V_2\text{.}\)</span>
-</div> <div class="para">Pour <span class="process-math">\(V_1\text{.}\)</span> Puisque le premier caractère doit être une lettre, il y a seulement <span class="process-math">\(26\)</span>possibilités, c’est-à-dire <span class="process-math">\(V_1=26\text{.}\)</span>
-</div> <div class="para">Pour <span class="process-math">\(V_2\text{.}\)</span> On doit choisir le premier caractère, qui doit être une lettre (donc <span class="process-math">\(26\)</span> possibilités), et ensuite le deuxième caractère qui peut être soit une lettre soit un chiffre (par le principe de la somme, il y a <span class="process-math">\(26+10=36\)</span> possibilités). Ainsi, par le principe du produit, il y a <span class="process-math">\(26\cdot 36=936\)</span> possibilités. Cependant, on doit retirer les <span class="process-math">\(5\)</span> possibilités représentant les noms réservés. On a donc <span class="process-math">\(V_2=936-5=931\text{.}\)</span>
-</div> <div class="para">Finalement, on obtient <span class="process-math">\(V=V_1+V_2=26+931=957\text{.}\)</span>
+<div class="para logical">
+<div class="para">Une solution alternative est de remarquer qu’un mot utilisant les lettres de <span class="process-math">\(ABCDE\)</span> est équivalent à une fonction injective <span class="process-math">\(f: \{1,2,3,4,5\}\to \{A,B,C,D,E\}\text{,}\)</span> où <span class="process-math">\(f(i)\)</span> est la lettre à la position <span class="process-math">\(i\)</span> du mot. Par exemple, les mots <span class="process-math">\(ABCDE\)</span> et <span class="process-math">\(EDCBA\)</span> sont équivalents aux fonctions <span class="process-math">\(f_1\)</span> et <span class="process-math">\(f_2\)</span> définies par</div>
+<div class="displaymath process-math">
+\begin{align*}
+f_1(1)\amp=A \amp f_2(1)\amp=E \\
+f_1(2)\amp=B \amp f_2(2)\amp=D \\
+f_1(3)\amp=C \amp f_2(3)\amp=C \\
+f_1(4)\amp=D \amp f_2(4)\amp=B \\
+f_1(5)\amp=E \amp f_2(5)\amp=A 
+\end{align*}
+</div>
+</div> <div class="para">Ainsi, le nombre de mots différents formés à partir des lettres de <span class="process-math">\(ABCDE\)</span> est aussi le nombre de fonctions injectives de <span class="process-math">\(\{1,2,3,4,5\}\)</span> vers <span class="process-math">\(\{A,B,C,D,E\}\text{.}\)</span> Par l’exemple <a href="" class="xref" data-knowl="./knowl/ex_comptFctInj.html" title="Tâche 4.1.7.b">4.1.7.b</a>, on sait qu’il y en a <span class="process-math">\(5\times 4\times 3\times 2\times 1 =120\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec_prodSomme.html#solution-168" class="internal">Contexte</a></span>

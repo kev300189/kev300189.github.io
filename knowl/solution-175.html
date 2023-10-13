@@ -12,12 +12,16 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h6 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.7.1.c.1</span><span class="period">.</span>
-</h6>
-<div class="para">On conditionne sur la position du chiffre qui n’est pas un <span class="process-math">\(9\text{.}\)</span> C’est-à-dire qu’on utilise le principe de la somme selon la position du chiffre qui n’est pas <span class="process-math">\(9\text{.}\)</span>
-</div> <div class="para">Le chiffre est soit à la position <span class="process-math">\(1\text{,}\)</span> soit à la position <span class="process-math">\(2\text{,}\)</span> soit à la position <span class="process-math">\(3\)</span> ou bien à la position <span class="process-math">\(4\text{.}\)</span> Dans chacun des cas, il ne reste qu’à trouver la valeur de ce chiffre, car on sait que les autres chiffres sont des <span class="process-math">\(9\text{.}\)</span> Il y aura donc <span class="process-math">\(9\)</span> possibilités, soit <span class="process-math">\(0\text{,}\)</span> <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(7\)</span> ou <span class="process-math">\(8\text{.}\)</span>
-</div> <div class="para">Ainsi, par le principe de la somme, il y a <span class="process-math">\(9+9+9+9=36\)</span> possibilités.</div>
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.17.1</span><span class="period">.</span>
+</h4>
+<div class="para">On note <span class="process-math">\(P\)</span> le nombre de mots de passe total, et <span class="process-math">\(P_i\)</span> le nombre de mots de passe à <span class="process-math">\(i\)</span> caractères, pour <span class="process-math">\(i\in\ \{6,\ 7,\ 8\}\text{.}\)</span> Par le principe de la somme, on a <span class="process-math">\(P=P_6+P_7+P_8\text{.}\)</span>
+</div> <div class="para">Pour calculer <span class="process-math">\(P_6\text{,}\)</span> on compte tous les mots de passe à <span class="process-math">\(6\)</span> caractères. Par la suite, on lui soustrait le nombre de mots de passe à <span class="process-math">\(6\)</span> caractères qui ne contiennent pas de chiffres. En effet, par le principe de la somme <span class="process-math">\(\text{Mots de passe à }6\text{ caractères }=\text{Mots de passe à }6\text{ caractères sans chiffre}+\text{Mots de passe à }6\text{ caractères avec chiffres}\text{,}\)</span> et donc <span class="process-math">\(\text{Mots de passe à }6\text{ caractères avec chiffres}=\text{Mots de passe à }6\text{ caractères }-\text{Mots de passe à }6\text{ caractères sans chiffres}\text{.}\)</span>
+</div> <div class="para">Par le principe du produit, il y a <span class="process-math">\(36^6\)</span> chaîne de <span class="process-math">\(6\)</span> caractères alphanumériques. De plus, <span class="process-math">\(26^6\)</span> de ces chaînes ne contiennent que des lettres, c’est-à-dire ne contiennent pas de chiffres. Ainsi, par l’argument donné au paragraphe précédent, <span class="process-math">\(P_6=36^6-26^6=2\ 176\ 782\ 336-308\ 915\ 776=1\ 867\ 866\ 560\text{.}\)</span> On utilise le même argument pour <span class="process-math">\(P_7\)</span> et <span class="process-math">\(P_8\text{.}\)</span>
+</div> <div class="para">Pour <span class="process-math">\(P_7\text{,}\)</span> on obtient <span class="process-math">\(P_7=36^7-26^7= 70\ 332\ 353\ 920 - 78\ 364\ 164\ 096 = 8\ 031\ 810\ 176\)</span>
+</div> <div class="para">Pour <span class="process-math">\(P_8\text{,}\)</span> on obtient <span class="process-math">\(P_8=36^8-26^8= 2\ 821\ 109\ 907\ 456 - 208\ 827\ 064\ 576 =2\ 612\ 282\ 842\ 880\)</span>
+</div> <div class="para">Ainsi, on a <span class="process-math">\(P = P_6+P_7+P_8=2\ 684\ 483\ 063\ 360\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec_prodSomme.html#solution-175" class="internal">Contexte</a></span>
 </body>

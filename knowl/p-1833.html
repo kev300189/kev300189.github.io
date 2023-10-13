@@ -12,7 +12,17 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<div class="para">Par le principe du produit (et le principe de la somme), il y a <span class="process-math">\(36^6\)</span> chaîne de <span class="process-math">\(6\)</span> caractères alphanumériques. De plus, <span class="process-math">\(26^6\)</span> de ces chaînes ne contiennent que des lettres, c’est-à-dire ne contiennent pas de chiffres. Ainsi, par l’argument donné au paragraphe précédent, <span class="process-math">\(P_6=36^6-26^6=2\ 176\ 782\ 336-308\ 915\ 776=1\ 867\ 866\ 560\text{.}\)</span> On utilise le même argument pour <span class="process-math">\(P_7\)</span> et <span class="process-math">\(P_8\text{.}\)</span>
+<div class="para logical">
+<div class="para">Une solution alternative est de remarquer qu’un mot utilisant les lettres de <span class="process-math">\(ABCDE\)</span> est équivalent à une fonction injective <span class="process-math">\(f: \{1,2,3,4,5\}\to \{A,B,C,D,E\}\text{,}\)</span> où <span class="process-math">\(f(i)\)</span> est la lettre à la position <span class="process-math">\(i\)</span> du mot. Par exemple, les mots <span class="process-math">\(ABCDE\)</span> et <span class="process-math">\(EDCBA\)</span> sont équivalents aux fonctions <span class="process-math">\(f_1\)</span> et <span class="process-math">\(f_2\)</span> définies par</div>
+<div class="displaymath process-math">
+\begin{align*}
+f_1(1)\amp=A \amp f_2(1)\amp=E \\
+f_1(2)\amp=B \amp f_2(2)\amp=D \\
+f_1(3)\amp=C \amp f_2(3)\amp=C \\
+f_1(4)\amp=D \amp f_2(4)\amp=B \\
+f_1(5)\amp=E \amp f_2(5)\amp=A 
+\end{align*}
+</div>
 </div>
 <span class="incontext"><a href="sec_prodSomme.html#p-1833" class="internal">Contexte</a></span>
 </body>
