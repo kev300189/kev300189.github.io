@@ -11,8 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraphe</span></h4>
-<div class="para">On regarde maintenant deux exemples typiques faisant intervenir les combinaisons.</div>
+<h5 class="heading"><span class="type">Paragraphe</span></h5>
+<div class="para logical">
+<div class="para">Le nombre de façons de choisir les <span class="process-math">\(r\)</span> éléments de <span class="process-math">\(E\)</span> est <span class="process-math">\(\Binomial{n}{r}\text{.}\)</span> Pour chaque choix de <span class="process-math">\(r\)</span> éléments , le nombre de façons d’ordonner ceux-ci  est <span class="process-math">\(r!\)</span> (le nombre de permutations des <span class="process-math">\(r\)</span> éléments). Ainsi, par le principe du produit, on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Permutation{n}{r}=\Binomial{n}{r}\cdot r!\text{.}
+\end{equation*}
+</div>
+<div class="para">On a alors</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Binomial{n}{r}=\frac{\Permutation{n}{r}}{r!}=\frac{n!}{r!(n-r)!}\text{.}
+\end{equation*}
+</div>
+</div>
 <span class="incontext"><a href="sec_arrCombinaison.html#p-2048" class="internal">Contexte</a></span>
 </body>
 </html>
