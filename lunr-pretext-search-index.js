@@ -3842,6 +3842,150 @@ var ptx_lunr_docs = [
   "number": "4.2.6.13",
   "title": "",
   "body": "Une boite de beignes d'une chaine populaire contient six compartiments qu'un employé remplit pour un client selon les règles suivantes. Il y a trois sortes de beignes, par exemple Chocolat, Erable et Vanille et on remplit la boite. Par exemple VVECCV est une configuration. Même chose, mais on permet de laisser un compartiment vide (et le client sera potentiellement déçu). Par exemple, VVE_C_ est une configuration où _ représente l'absence d'un beigne. On remplit tous les compartiments, en s'assurant que chaque sorte de beignes soit présente dans la boite. Il faut utiliser le principe d'inclusion-exclusion à plusieurs reprises. On remplit tous les compartiments, mais il y a maintenant sortes de beignes! L'employé, un peu maladroit remplit la boite avec six beignes à la vanille, mais en met potentiellement plus d'un par compartiment. Par exemple VV,V,_,VV,_,V est une configuration possible. Il faut compter le nombre de solution entières positives à l'équation . Il y a Même chose que la partie , mais on utilise six beignes différents.  Le problèmes revient à compter le nombre de façons d'attribuer à chaque beigne un compartiment. Pour chaque beigne, il y a compartiments possibles. Par le principe du produit, il y a façons de faire. C'est presque l'heure de la fermeture et il ne reste que beignes dans le présentoir, tous de différentes sortes. On veut remplir la boite de . On doit choisir beignes parmi les restants. De plus, on doit les placer en ordre, car on en place un seul dans chaque compartiment. On compte donc les -permutations de objets. Il y a façons de le faire. On ne met que des beignes au chocolat, en laissant possiblement des compartiments vides. C'est le printemps, le sirop d'érable coule en flot. Obtenez dix beignes à l'érable dans une boite de six! (Aucun compartiment ne sera laissé vide). Par exemple, EE,E,EEE,E,EE,E représenterait une configuration où deux beignes sont placés dans les compartiments 1 et 5, trois beignes sont placés dans le compartiment 3 et un beigne est placé dans chacun des compartiments 2,4 et 6. Il n'y a plus de boite, alors on met les beignes dans des sacs identiques. On veut mettre six beignes à la vanille dans trois sacs (évidemment, aucun sac ne sera vide, pour éviter le gaspillage). Énumérer les possibilités, il n'y en a pas beaucoup. Voici les manières différentes:  Un sac avec quatre beignes et deux sacs avec un beignes;  Un sac avec trois beignes, un sac avec deux beignes et un sac avec un beigne;  Trois sacs avec deux beignes.  Même chose que précédemment, mais avec six beignes différents. C'est un cas plus difficile que ce qu'on a vue en classe! C'est un défi pour le moment! Cela correspond à compter les -partition d'un ensemble à éléments. Si on note le nombre de -partitions d'un ensemble de cardinalité , on peut montrer (comment?) que . Cela correspond à compter les -partition d'un ensemble à éléments. Il y aurait manières de le faire. "
+},
+{
+  "id": "sec-combinatoireExoSupp",
+  "level": "1",
+  "url": "sec-combinatoireExoSupp.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "Exercices supplémentaires",
+  "body": "  Exercices supplémentaires          Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  On a placé 16 cubes de couleurs rouge, vert, bleu et orange en trois quatres colonnes tel qu'illustré ci-dessous. De combien de façons peut-on ramasser ces cubes, si on doit toujours ramasser un cube se trouvant au-dessus d'une colonne.   Dispositions des cubes    Utiliser les lettres et pour représenter, respectivement, les cubes de couleurs rouge, vert, bleu et orange. Représenter une façon de ramasser les cubes à l'aide de ces lettres.  On considère l'ensemble . Combiens de permutations de sont telles que les nombres sont en ordre croissant. Par exemple, et sont en ordre croissant, mais ne l'est pas.  .  On veut assoir huits personnes autour d'une table circulaire.  De combien de façons peut-on accomnplir cette tâche si deux compositions sont équivalentes lorsque tout le monde à les mêmes voisins à gauche et à droite?  .  De combien de façons peut-on accomnplir cette tâche si deux compositions sont équivalentes lorsque tout le monde à les mêmes voisins, peu importe qu'ils soient à gauche ou à droite?  .  On veut assoir personnes autour de deux tables circulaires. On peut Assoir personnes à la première table, et les cinq autres à la seconde table. De combien de façons peut-on accomnplir cette tâche si deux compositions sont équivalentes lorsque tout le monde à les mêmes voisins à gauche et à droite? Commencer par choisir les personnes qui seront à la première table, et ensuite placer tout le monde sur les tables.  Combiens de mots différents peut-on former à partir des lettres du mot ? Parmi les mots formés à la première partie, combiens d'entres eux ont tous les ensembles? Parmi les mots formés à la première partie, combiens d'entres eux ont tous les ensembles? Parmi les mots formés à la première partie, combiens d'entres eux ont tous les ensembles et tous les ensembles? Parmi les mots formés à la première partie, combiens d'entres eux ont tous les ensembles ou tous les ensembles?  De combien de façons peut-on livres différents sur quatre étagères? Représenter un placement à l'aide des nombres à pour les livres et des barres pour séparer les étagères. Par exemple représente le placement avec les livres , et sur la première étagère, les livres et sur la deuxième étagère, les livres et sur la troisième étagère et les livres à sur la dernière.  Un palindrome est un mot qui est le même si on le lit à l'endroit que si on le lit à l'envers. Par exemple, est un palindrome.  Combien de palindromes de cinq lettres peut-on former avec les lettres de l'alphabet ?  Il suffit de choisir les trois premières lettres. .  Combien de palindromes de six lettres peut-on former avec les lettres de l'alphabet ?  Il suffit de choisir les trois premières lettres. .  Combien de palindromes de lettres peut-on former avec les lettres de l'alphabet ?  La réponse dépend de la parité de . Si est pair, on pose . Si est impair, on pose . La réponse est alors .  Combien de palindromes de cinq lettres peut-on former avec les lettres de l'alphabet si chaque lettre ne peut pas être utilisée plus de deux fois?  .  On place huit points, notés de à sur un cercle à égale distance. Combien de triangles peut-on former à partir de ces points, tel qu'illustré sur la figure ci-dessous?   Dispositions des cubes     On place huit personnes autour d'une table carré, en mettant deux personnes par côté. De combien de façons peut-on accomnplir cette tâche si les deux premières compositions ci-dessous sont équivalentes, mais pas la troisièrme?    Trois configurations    Équivalent      Équivalent      Pas équivalent        De combien de façons peut-on placer quatre billes noires (indiscernables) dans cinq urnes différentes?      Déterminer le coefficient du terme dans le développement de:  Un joueur de poker pige cinq cartes d'un paquet de cartes standard. Combien de mains différentes peut-il obtenir: telles que les cinq cartes sont de la même sorte? qui contiennent quatre as? qui contiennent quatre cartes de la même valeur? qui contiennent trois as et deux valets? qui contiennent trois as et une paire? qui contiennent deux paires (et une carte d'une troisième valeur)?  Déterminer le nombre de solutions entières à l'équation où pour . pour . et .  Déterminer le nombre de solutions entières à l'équation où pour . pour .   Combien de solutions entières positives y a-t-il pour la paire d'équations     "
+},
+{
+  "id": "exo-blocsAnagrammes",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exo-blocsAnagrammes",
+  "type": "Exercice",
+  "number": "4.3.1",
+  "title": "",
+  "body": "On a placé 16 cubes de couleurs rouge, vert, bleu et orange en trois quatres colonnes tel qu'illustré ci-dessous. De combien de façons peut-on ramasser ces cubes, si on doit toujours ramasser un cube se trouvant au-dessus d'une colonne.   Dispositions des cubes    Utiliser les lettres et pour représenter, respectivement, les cubes de couleurs rouge, vert, bleu et orange. Représenter une façon de ramasser les cubes à l'aide de ces lettres. "
+},
+{
+  "id": "exo-ordrePasOrdre",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exo-ordrePasOrdre",
+  "type": "Exercice",
+  "number": "4.3.2",
+  "title": "",
+  "body": "On considère l'ensemble . Combiens de permutations de sont telles que les nombres sont en ordre croissant. Par exemple, et sont en ordre croissant, mais ne l'est pas.  . "
+},
+{
+  "id": "exercise-241",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-241",
+  "type": "Exercice",
+  "number": "4.3.3",
+  "title": "",
+  "body": "On veut assoir huits personnes autour d'une table circulaire.  De combien de façons peut-on accomnplir cette tâche si deux compositions sont équivalentes lorsque tout le monde à les mêmes voisins à gauche et à droite?  .  De combien de façons peut-on accomnplir cette tâche si deux compositions sont équivalentes lorsque tout le monde à les mêmes voisins, peu importe qu'ils soient à gauche ou à droite?  . "
+},
+{
+  "id": "exercise-242",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-242",
+  "type": "Exercice",
+  "number": "4.3.4",
+  "title": "",
+  "body": "On veut assoir personnes autour de deux tables circulaires. On peut Assoir personnes à la première table, et les cinq autres à la seconde table. De combien de façons peut-on accomnplir cette tâche si deux compositions sont équivalentes lorsque tout le monde à les mêmes voisins à gauche et à droite? Commencer par choisir les personnes qui seront à la première table, et ensuite placer tout le monde sur les tables. "
+},
+{
+  "id": "exercise-243",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-243",
+  "type": "Exercice",
+  "number": "4.3.5",
+  "title": "",
+  "body": "Combiens de mots différents peut-on former à partir des lettres du mot ? Parmi les mots formés à la première partie, combiens d'entres eux ont tous les ensembles? Parmi les mots formés à la première partie, combiens d'entres eux ont tous les ensembles? Parmi les mots formés à la première partie, combiens d'entres eux ont tous les ensembles et tous les ensembles? Parmi les mots formés à la première partie, combiens d'entres eux ont tous les ensembles ou tous les ensembles? "
+},
+{
+  "id": "exercise-244",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-244",
+  "type": "Exercice",
+  "number": "4.3.6",
+  "title": "",
+  "body": "De combien de façons peut-on livres différents sur quatre étagères? Représenter un placement à l'aide des nombres à pour les livres et des barres pour séparer les étagères. Par exemple représente le placement avec les livres , et sur la première étagère, les livres et sur la deuxième étagère, les livres et sur la troisième étagère et les livres à sur la dernière. "
+},
+{
+  "id": "exercise-245",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-245",
+  "type": "Exercice",
+  "number": "4.3.7",
+  "title": "",
+  "body": "Un palindrome est un mot qui est le même si on le lit à l'endroit que si on le lit à l'envers. Par exemple, est un palindrome.  Combien de palindromes de cinq lettres peut-on former avec les lettres de l'alphabet ?  Il suffit de choisir les trois premières lettres. .  Combien de palindromes de six lettres peut-on former avec les lettres de l'alphabet ?  Il suffit de choisir les trois premières lettres. .  Combien de palindromes de lettres peut-on former avec les lettres de l'alphabet ?  La réponse dépend de la parité de . Si est pair, on pose . Si est impair, on pose . La réponse est alors .  Combien de palindromes de cinq lettres peut-on former avec les lettres de l'alphabet si chaque lettre ne peut pas être utilisée plus de deux fois?  . "
+},
+{
+  "id": "exercise-246",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-246",
+  "type": "Exercice",
+  "number": "4.3.8",
+  "title": "",
+  "body": "On place huit points, notés de à sur un cercle à égale distance. Combien de triangles peut-on former à partir de ces points, tel qu'illustré sur la figure ci-dessous?   Dispositions des cubes    "
+},
+{
+  "id": "exercise-247",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-247",
+  "type": "Exercice",
+  "number": "4.3.9",
+  "title": "",
+  "body": "On place huit personnes autour d'une table carré, en mettant deux personnes par côté. De combien de façons peut-on accomnplir cette tâche si les deux premières compositions ci-dessous sont équivalentes, mais pas la troisièrme?    Trois configurations    Équivalent      Équivalent      Pas équivalent       "
+},
+{
+  "id": "exercise-248",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-248",
+  "type": "Exercice",
+  "number": "4.3.10",
+  "title": "",
+  "body": "De combien de façons peut-on placer quatre billes noires (indiscernables) dans cinq urnes différentes?     "
+},
+{
+  "id": "exercise-249",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-249",
+  "type": "Exercice",
+  "number": "4.3.11",
+  "title": "",
+  "body": "Déterminer le coefficient du terme dans le développement de: "
+},
+{
+  "id": "exercise-250",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-250",
+  "type": "Exercice",
+  "number": "4.3.12",
+  "title": "",
+  "body": "Un joueur de poker pige cinq cartes d'un paquet de cartes standard. Combien de mains différentes peut-il obtenir: telles que les cinq cartes sont de la même sorte? qui contiennent quatre as? qui contiennent quatre cartes de la même valeur? qui contiennent trois as et deux valets? qui contiennent trois as et une paire? qui contiennent deux paires (et une carte d'une troisième valeur)? "
+},
+{
+  "id": "exercise-251",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-251",
+  "type": "Exercice",
+  "number": "4.3.13",
+  "title": "",
+  "body": "Déterminer le nombre de solutions entières à l'équation où pour . pour . et . "
+},
+{
+  "id": "exercise-252",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-252",
+  "type": "Exercice",
+  "number": "4.3.14",
+  "title": "",
+  "body": "Déterminer le nombre de solutions entières à l'équation où pour . pour . "
+},
+{
+  "id": "exercise-253",
+  "level": "2",
+  "url": "sec-combinatoireExoSupp.html#exercise-253",
+  "type": "Exercice",
+  "number": "4.3.15",
+  "title": "",
+  "body": "Combien de solutions entières positives y a-t-il pour la paire d'équations  "
 }
 ]
 
