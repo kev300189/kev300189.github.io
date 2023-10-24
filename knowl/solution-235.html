@@ -13,20 +13,40 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h5 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.2.3.7.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.1.4.12.1</span><span class="period">.</span>
 </h5>
 <div class="para logical">
-<ul class="disc">
-<li><div class="para">Objets: Les élément de <span class="process-math">\(A\)</span>
-</div></li>
-<li><div class="para">Boites: Les éléments de <span class="process-math">\(B\)</span>
-</div></li>
-<li><div class="para">On place un objet <span class="process-math">\(a\)</span> dans une boite <span class="process-math">\(b\)</span> si <span class="process-math">\(f(a)=b\text{.}\)</span>
-</div></li>
-</ul>
-<div class="para">Puisqu’il ya plus d’objets que de boites, il y aura au moins deux objets dans la même boite. Ainsi, il exsite <span class="process-math">\(a_1\neq a_2\in\,A\)</span> tels que <span class="process-math">\(f(a_1)=f(a_2).\)</span> La fonction n’est donc pas injective.</div>
+<div class="para">On suppose que <span class="process-math">\(r=\frac{a}{b}\)</span> où  <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span> Ainsi, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+0 \amp= r^3+r+1 \\
+0 \amp= \left(\frac{a}{b}\right)^3+\frac{a}{b}+1 \\
+0 \amp= \frac{a^3}{b^3}+\frac{a}{b} + 1 \\
+0 \amp= a^3+ab^2 +b^3
+\end{align*}
+</div>
+</div> <div class="para">On veut montrer que <span class="process-math">\(a\)</span> et <span class="process-math">\(b\)</span> sont pairs</div> <div class="para logical">
+<div class="para">Supposons que <span class="process-math">\(b\)</span> soit impair. On a alors</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-sommePuissancePair.html">
+\begin{align*}
+0 = a^3 + ab^2+b^3 \amp\equiv a^3+ a^2 +1  \mod 2\\
+0 \amp\equiv 0+ 1 \mod 2 \text{ par l'exercice }\knowl{./knowl/exo-sommePuissancePair.html}{\text{5.1.4.5}}\\
+0 \amp\equiv 1 \mod 2 
+\end{align*}
+</div>
+<div class="para">ce qui est une contradiction. Ainsi, on doit avoir que <span class="process-math">\(b\)</span> est pair.</div>
+</div> <div class="para logical">
+<div class="para">Sachant que <span class="process-math">\(b\)</span> est pair, on veut également montrer que <span class="process-math">\(a\)</span> est pair. Puisque <span class="process-math">\(b\)</span> est pair, on a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html">
+\begin{align*}
+0 = a^3 + ab^2+b^3 \amp\equiv a^3+ a^2\cdot 0+0   \mod 2\\
+0 \amp\equiv a^3   \mod 2
+\end{align*}
+</div>
+<div class="para">Ainsi, <span class="process-math">\(a^3\)</span> est pair, d’où <span class="process-math">\(a\)</span> est également pair par <a href="" class="xref" data-knowl="./knowl/exo-cubeEvenBaseEven.html" title="Exercice 5.1.4.4">5.1.4.4</a>.</div>
+</div> <div class="para">Avec tout ce travail, on a montrer que <span class="process-math">\(2\mid a\)</span> et <span class="process-math">\(2\mid b\text{,}\)</span> mais alors <span class="process-math">\(2\leq \pgcd(a,b)=1,\)</span> ce qui est une contradiction. Il n’y a donc pas de solution rationnelle à l’équation <span class="process-math">\(x^3+x+1=0\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec_pidgeonHoles.html#solution-235" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec_methodePreuve.html#solution-235" class="internal">Contexte</a></span>
 </body>
 </html>

@@ -11,9 +11,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraphe</span></h5>
-<div class="para">Voici des représentations de <span class="process-math">\(K_n\)</span> pour <span class="process-math">\(n=1,\,2,\,3,\,4,\,5 \text{ et } 6\text{.}\)</span>
+<h6 class="heading"><span class="type">Paragraphe</span></h6>
+<div class="para logical">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1^2+2^2+\cdots + k^2+ (k+1)^2=\frac{(k+1)(k+2)(2k+3)}{6}
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-introGraphes.html#p-2478" class="internal">Contexte</a></span>
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’égalité, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp1^2+2^2+\cdot + k^2+ (k+1)^2\\
+\amp= \left(1^2+2^2+\cdots + k^2\right) + \left(k+1\right)^2 \\
+\amp= \left( \frac{k(k+1)(2k+1)}{6} \right) + \left(k+1\right)^2 \text{ par H.I.}\\
+\amp= \left( \frac{k(k+1)(2k+1)}{6} \right) + \frac{6(k+1)(k+1)}{6} \text{ même dénominateur.}\\
+\amp= \frac{k(k+1)(2k+1)+6(k+1)(k+1)}{6}\\
+\amp=\frac{(k+1)(2k^2+k)+(k+1)(6k+6)}{6} \text{ en distribuant le }k \text{ et le }6.\\
+\amp= \frac{(k+1)(2k^2+k+6k+6)}{6}=\frac{(k+1)(2k^2+7k+6)}{6} \\
+\amp=\frac{(k+1)(k+2)(2k+3)}{6}\text{ en factorisant.}
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="sec_induction.html#p-2478" class="internal">Contexte</a></span>
 </body>
 </html>

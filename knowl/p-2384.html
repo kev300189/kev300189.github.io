@@ -12,8 +12,17 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraphe</span></h6>
-<div class="para">Par le principe de la somme, on a <span class="process-math">\(p_n=p_{n-1} + p_{n-2}+p_{n-5}\text{.}\)</span>
+<div class="para logical">
+<div class="para">Supposons que <span class="process-math">\(b\)</span> soit impair. On a alors</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-sommePuissancePair.html">
+\begin{align*}
+0 = a^3 + ab^2+b^3 \amp\equiv a^3+ a^2 +1  \mod 2\\
+0 \amp\equiv 0+ 1 \mod 2 \text{ par l'exercice }\knowl{./knowl/exo-sommePuissancePair.html}{\text{5.1.4.5}}\\
+0 \amp\equiv 1 \mod 2 
+\end{align*}
 </div>
-<span class="incontext"><a href="sec-relRecLinHom.html#p-2384" class="internal">Contexte</a></span>
+<div class="para">ce qui est une contradiction. Ainsi, on doit avoir que <span class="process-math">\(b\)</span> est pair.</div>
+</div>
+<span class="incontext"><a href="sec_methodePreuve.html#p-2384" class="internal">Contexte</a></span>
 </body>
 </html>

@@ -11,24 +11,36 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">L’équation caractéristique de cette relation est <span class="process-math">\(0=r^2-5r+6=(r-2)(r-3).\)</span> Ainsi, on pose <span class="process-math">\(r_1=2\)</span> et <span class="process-math">\(r_2=3\)</span> les deux solutions à cette équation.</div> <div class="para logical">
-<div class="para">Par la proposition <a href="" class="xref" data-knowl="./knowl/prop-solRecLinHomDeux.html" title="Proposition 6.1.19: Solution aux relations de récurrence linéaires homogènes d’ordre 2 cas 1">6.1.19</a>, on sait que la solution devra avoir la forme</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-solRecLinHomDeux.html">
-\begin{equation}
-a_n=\alpha_1r_1^n+\alpha_2r_2^n=\alpha_1(2)^n+\alpha_2(3)^n\text{.}\tag{6.2}
-\end{equation}
-</div>
+<div class="para">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +n\cdot n!=(n+1)!-1\)</span> pour <span class="process-math">\(n\in\,\N^\ast\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">Ainsi, puisque <span class="process-math">\(a_0=1\)</span> et <span class="process-math">\(a_1=0,\)</span> en remplaçant <span class="process-math">\(n\)</span> par <span class="process-math">\(0\)</span> et <span class="process-math">\(1\)</span> dans <a href="" class="xref" data-knowl="./knowl/eq-formGenn.html" title="Équation 6.2">(6.2)</a>, on obtient le système d’équations suivants.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-formGenn.html">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): 1\cdot 1! = (1+1)!-1,\)</span> ce qui est vrai, puisque <span class="process-math">\(1\cdot 1!=1\)</span> et</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(1+1)!-1=2!-1=1\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 1,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +n\cdot k!=(k+1)!-1\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical">
+<div class="para">Ainsi, on veut montrer que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!+(k+1)(k+1)!=(k+2)!-1
+\end{equation*}
+</div>
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’égalité, on a</div>
+<div class="displaymath process-math">
 \begin{align*}
-1\amp=\alpha_1+\alpha_2;\\
-0\amp= 2\alpha_1 +3\alpha_2.
+\amp 1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!+(k+1)(k+1)!\\
+\amp= \left(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!\right)  +(k+1)(k+1)! \\
+\amp= \left( (k+1)!-1\right) + (k+1)(k+1)! \text{ par H.I.}\\
+\amp=(k+1)! + (k+1)(k+1)! -1\\
+\amp=(1+k+1)(k+1)! -1\text{ (mise en évidence)}\\
+\amp=(k+2)(k+1)! -1\\
+\amp=(k+2)! -1\text{ (par la définition de la factorielle.)}
 \end{align*}
 </div>
-<div class="para">En résolvant ce sytème d’équations, on a que <span class="process-math">\(\alpha_1=3\)</span> et <span class="process-math">\(\alpha_2=-2\text{.}\)</span>
-</div>
-</div> <div class="para">Ainsi, on a que la suite <span class="process-math">\(\{a_n\}\)</span> est la suite dont le terme général est <span class="process-math">\(a_n=3(2)^n-2(3)^n\text{.}\)</span>
+</div> <div class="para">On a montré que <span class="process-math">\(P(1)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 1\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span>
 </div>
 </div></body>
 </html>

@@ -11,37 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">On pose <span class="process-math">\(P(n)\)</span> la proposition <span class="process-math">\(1^2+3^2+5^2+\cdots +(2n+1)^2=\frac{(n+1)(2n+1)(2n+3)}{3}\)</span> pour <span class="process-math">\(n\in\,\N\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">
-<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(0)\)</span> est vraie. Or, on a que <span class="process-math">\(P(0): 1^2 = \frac{(0+1)(2 (0)+1)(2(1)+3)}{3},\)</span> ce qui est vrai, puisque <span class="process-math">\(1^2=1\)</span> et</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{(0+1)(2(0)+1)(2(0)+3)}{3}=\frac{(1)(1)(3)}{3}=1\text{.}
-\end{equation*}
-</div>
-</div> <div class="para">
-<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(k\)</span> est un entier quelconque <span class="process-math">\(k\geq 0,\)</span> et on suppose que <span class="process-math">\(P(k)\)</span> est vraie (c’est à dire que <span class="process-math">\(1^2+3^2+\cdots + (2k+1)^2=\frac{(k+1)(2k+1)(2k+3)}{3}\)</span> est notre H.I.), et on veut montrer que <span class="process-math">\(P(k+1)\)</span> est alors vraie.</div> <div class="para logical">
-<div class="para">Ainsi, on veut montrer que</div>
-<div class="displaymath process-math">
-\begin{equation*}
-1^2+3^2+5^2+\cdots +(2k+1)^2+(2k+3)^2=\frac{(k+2)(2k+3)(2k+5)}{3}
-\end{equation*}
-</div>
-<div class="para">à l’aide de l’H.I. Tout d’abord, remarquons que <span class="process-math">\(\frac{(k+2)(2k+3)(2k+5)}{3}=\frac{(2k+3)(2k^2+9k+10)}{3}\text{.}\)</span> Ensuite, en partant du membre de gauche de l’égalité, on a</div>
-<div class="displaymath process-math">
-\begin{align*}
-\amp1^2+3^2+5^2+\cdots +(2k+1)^2+(2k+3)^2\\
-\amp= \left(1^2+3^2+5^2+\cdots +(2k+1)^2\right) + \left(2k+3\right)^2 \\
-\amp= \left( \frac{(k+1)(2k+1)(2k+3)}{3}\right) + \left(2k+3\right)^2 \text{ par H.I.}\\
-\amp= \left( \frac{(k+1)(2k+1)(2k+3)}{3}\right) + \frac{3(2k+3)(2k+3)}{3} \text{ même dénominateur.}\\
-\amp= \frac{(k+1)(2k+1)(2k+3)+3(2k+3)(2k+3)}{3}\\
-\amp=\frac{(2k^2+3k+1)(2k+3)+(6k+9)(2k+3)}{3} \text{ en développant le }(k+1)(2k+1) \text{ et en distribuant le }3.\\
-\amp= \frac{(2k^2+3k+1+6k+9)(2k+3)}{3}=\frac{(2k^2+9k+10)(2k+3)}{3} \\
-\amp=\frac{(k+2)(2k+3)(2k+5)}{3}\text{ par la remarque.}
-\end{align*}
-</div>
-</div> <div class="para">On a montré que <span class="process-math">\(P(0)\)</span> est vraie, et que si <span class="process-math">\(P(k)\)</span> est vraie pour un entier <span class="process-math">\(k\geq 0\text{,}\)</span> alors <span class="process-math">\(P(k+1)\)</span> est vraie. Ainsi, par le principe d’induction, on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 0\text{.}\)</span>
+<div class="para">On note <span class="process-math">\(a_i\)</span> le nombre de parties jouées avant et durant le jour <span class="process-math">\(i,\)</span> pour <span class="process-math">\(i=1,\,2,\,\dots,30.\)</span> Puisque l’équipe joue au moins une partie par jour et moins de <span class="process-math">\(45\)</span> partie dans le mois, on a <span class="process-math">\(1\geq a_1\lt a_2\lt\cdots \lt a_n \lt \cdots \lt a_{30} \leq 45.\)</span> En particulier, on a que <span class="process-math">\(a_i\neq a_j\)</span> si <span class="process-math">\(i\neq j\text{.}\)</span>
+</div> <div class="para">On considère également les <span class="process-math">\(30\)</span> entiers <span class="process-math">\(a_i +14\)</span> pour <span class="process-math">\(i=1,\,2,\,\dots,30.\)</span> On aura alors <span class="process-math">\(15\leq a_1+14\lt a_2+14\lt \cdots \lt a_n+14\lt \cdots \lt a_{30}+14 \leq 59.\)</span> Encore une fois, on a <span class="process-math">\(a_i+14\neq a_j + 14 \)</span> si  <span class="process-math">\(i\neq j\text{.}\)</span>
+</div> <div class="para">On a donc les <span class="process-math">\(60\)</span> entiers <span class="process-math">\(a_1,a_2\dots,\a_{30},a_1+14,a_2+14,\dots,a_{30}+14\)</span> compris entre <span class="process-math">\(1\)</span> et <span class="process-math">\(59.\)</span> Il y aura donc au moins deux de ces entiers qui sont égaux. Par ce qui précède, on doit avoir <span class="process-math">\(a_j=a_i+14.\)</span> Ainsi, le nombre de parties jouées entre le jour <span class="process-math">\(i\)</span> et le jour <span class="process-math">\(j\)</span> est <span class="process-math">\(14\text{.}\)</span>
 </div>
 </div></body>
 </html>

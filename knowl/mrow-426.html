@@ -13,17 +13,14 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-a_2\amp=-a_1a_{0}=-(1)(-1)=1\\
-a_3\amp=-a_2a_{1}=-(-1)(1)=1\\
-a_4\amp=-a_3a_{2}=-(1)(1)=-1\\
-a_5\amp=-a_4a_{3}=-(-1)(1)=1\\
-a_6\amp=-a_5a_{4}=-(1)(-1)=1\\
-a_7\amp=-a_6a_{5}=-(1)(1)=-1\\
-a_8\amp=-a_7a_{6}=-(-1)(1)=1\\
-a_9\amp=-a_8a_{7}=-(1)(-1)=1\\
-\amp\vdots.
+\amp S(k+1)=\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{k\cdot (k+1)} +\frac{1}{(k+1)(k+2)}\\
+\amp= \left(\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\cdots + \frac{1}{k\cdot (k+1)} \right)  +\frac{1}{(k+1)\cdot (k+2)}\\
+\amp= +\frac{k}{k+1} +\frac{1}{(k+1)(k+2)} \text{ par H.I.}\\
+\amp=\frac{k(k+2)}{(k+1)(k+2)} + \frac{1}{(k+1)(k+2)}\text{ (même dénominateur)}\\
+\amp=\frac{k(k+2)+1}{(k+1)(k+2)}=\frac{k^2+2k+1}{(k+1)(k+2)}\\
+\amp=\frac{(k+1)^2}{(k+1)(k+2)}=\frac{k+1}{k+2}
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-relRecLinHom.html#md-111" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec_induction.html#md-116" class="internal">Contexte</a></span>
 </body>
 </html>

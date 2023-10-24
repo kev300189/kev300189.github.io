@@ -11,21 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para">On considère les <span class="process-math">\(n+1\)</span> nombres suivants: <span class="process-math">\(1,\ 11,\ 111\,\dots,\ 11\dots 1\text{,}\)</span> où le dernier nombre est l’entier formé de <span class="process-math">\(n+1\)</span> chiffres <span class="process-math">\(1\)</span> dans sa représentation en base dix. On numérote <span class="process-math">\(n\)</span> boites de <span class="process-math">\(0\)</span> à <span class="process-math">\(n-1\text{.}\)</span> Ensuite on place chacun des <span class="process-math">\(n+1\)</span> nombres précédents dans la boite étiquettée par sont reste lors de la division par <span class="process-math">\(n\text{.}\)</span>
+<div class="para">On suppose que <span class="process-math">\(m\)</span> est pair et que <span class="process-math">\(n\)</span> est impair. Ainsi, <span class="process-math">\(m\equiv 0 \mod 2,\)</span> alors que <span class="process-math">\(n\equiv 1 \mod 2\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">Puisqu’il y a <span class="process-math">\(n+1\)</span> nombres et <span class="process-math">\(n\)</span> boites (restes), par le principe des tiroirs de Dirichlet, il existe deux de ces entiers, disons <span class="process-math">\(k_1\gt k_2\text{,}\)</span> tels que</div>
+<div class="para">Ainsi, on a</div>
 <div class="displaymath process-math">
-\begin{equation*}
-k_1\equiv k_2 \mod n\text{.}
-\end{equation*}
+\begin{align*}
+5m+5n \amp\equiv 5(0)+5(1) \mod 2 (\text{ par les propriété de }\equiv\mod 2)\\
+\amp\equiv 1 \mod 2
+\end{align*}
 </div>
-<div class="para">Par la définition équivalente decongruence, on a</div>
-<div class="displaymath process-math">
-\begin{equation*}
-n\mid (k_1-k_2)\text{.}
-\end{equation*}
-</div>
-</div> <div class="para">Ainsi, <span class="process-math">\(k_1-k_2\)</span> est un multiple de <span class="process-math">\(n\)</span> et il s’écrit avec uniquement des <span class="process-math">\(1\)</span> et des <span class="process-math">\(0\text{.}\)</span>
+<div class="para">d’où <span class="process-math">\(5m+5n\)</span> est un entier impair.</div>
 </div>
 </div></body>
 </html>

@@ -3986,6 +3986,672 @@ var ptx_lunr_docs = [
   "number": "4.3.15",
   "title": "",
   "body": "Combien de solutions entières positives y a-t-il pour la paire d'équations  "
+},
+{
+  "id": "sec_methodePreuve",
+  "level": "1",
+  "url": "sec_methodePreuve.html",
+  "type": "Section",
+  "number": "5.1",
+  "title": "Méthodes de preuves",
+  "body": " Méthodes de preuves   Depuis le début du cours, (et dans vos autres cours de mathématiques) nous avons présenté plusieurs propriétés pour lesquelles nous avons également fournis une démonstration.  Dans ce chapitre, nous allons explorer plus en détails les différentes méthodes de preuves utilisées en mathématiques.  Dans la présente section, nous présenterons les méthodes de preuves de base, soit les preuves directes, les preuves indirectes et les preuves par contradiction.  Dans les prochaines sections, nous présenterons des méthodes de preuves plus avancées, telles que les preuves pas récurence et les preuves utilisant le principe des tiroirs de Dirichlet.    Un peu de terminologie   Un théorème ou une proposition est un énoncé que l'on peut montrer être vrai. L'argument permettant de vérifier qu'un théorème est vrai est appellé une preuve.  Beaucoup de théorèmes peuvent être énoncés sous la forme d'une implication logique (avec ou sans quantificateurs). Dans ce cas, pour démontrer le théorème, on peut supposer que l'hypothèse est vraie, et à l'aide de propriétés connues et de raisonements d'inférence, montrer que la conclusion est alors vraie.  Dans n'importe quelle théorie mathématique, il y aura des énoncés qui seront considérés comme étant vrais, sans que l'on puisse les démontrer. On appelle ces énoncés des axiomes . Certains théorèmes sont moins importants que d'autres, et on leur donne des noms particuliers. Un lemme est un théorème qu'on utilise principalement pour en démontrer un autre, alors qu'un corollaire est un théormème qui découle directement d'un autre.     Différentes méthodes de preuve   Preuve directe   Une preuve directe sert à démontrer qu'un énoncé de la forme est vrai, en montrant que si est vraie, alors est nécessairement vraie. D'un point de vue logique, cette technique est simple, mais elle peut être difficile à utiliser et peut demander de l'intuition.   La parité et les carrés  Pour si est pair, alors est pair.   Si est pair, alors . Ainsi, . On a alors que est pair.     Les carrés parfaits  Donner une preuve directe que si et sont des carrés parfaits, alors est aussi un carré parfait. Un carré parfait est un entier tel que , pour un entier.   Si et sont des entier parfait, alors par définition, il existe des entiers et tels que et .  Ainsi on a que , où on a utilisé la commutativité et l'associativité du produit dans les entiers. Par définition d'un carré parfait, on peut conclure que est un carré parfait.     Formelement, la plupart des théorèmes sont des énoncés avec quantificateurs. L'énoncé de l'exercice précédent aurait pû être écrit sous la forme suivante. , où est la proposition est un carré parfait .  Pour montrer que l'énoncé est vrai pour tout entier et pour tout entier , il suffit de choisir et des entiers quelconque , c'est-à-dire qu'on utilise uniquement le fait qu'ils sont des entiers, et rien d'autre!   Pour plusieurs des exemples et exercices de la sections, on démontrera des propriétés des nombres rationnels et des nombres irrationnels. On rappelle ici les définitions.   L'ensemble des nombres rationnels est l'ensemble    L'ensemble des nombres irrationnels est l'ensemble    Le produit de rationnels  Montrer que si alors .   Si , alors il existe tels que , , et .  Ainsi, on a , par définition du produit dans . De plus, puisque est fermé sous le produit, et . Finalement, puisque et , alors . Ainsi, .     Le produit d'irrationnels  Soit , peut-on conclure que ou bien que ?   On ne peut pas conclure! En effet, on peut montrer que . Dans ce cas, si on pose , alors . Cependant, si (on montrera également en exercice que ), alors .     La somme de rationnels  Montrer que si alors .   Si , alors il existe tels que , , et .  Ainsi, on a , par définition de la somme dans . De plus, puisque est fermé sous l'adition et le produit, et . De plus, puisque et , alors . Ainsi, .      Preuve indirecte   Il est parfois difficile de trouver un chemin directe pour montrer que . Dans certains cas, il sera plus facile de passer par la contraposée! On rappelle que la contraposée de est l'implication et que .  Ainsi, au lieu de montrer que si est vrai alors , on montre que si est fausse, alors est fausse.    Une preuve indirecte  Montrer que, si pour alors ou .   On suppose que la conclusion est fausse, c'est à dire que . Par les lois de De Morgan, on suppose que la proposition est vraie, et on veut montrer que la proposition est vraie.  On rappel que si et , alors .  Ainsi, si et , on aura . En particulier, si , alors .     La parité et les carrés, prise 2  Pour si est pair, alors est pair.   On montre que si est impair, alors est impair.  Si est impair, alors . Ainsi, . On a alors que est impair.      Preuve par contradiction   Supposons qu'on veuille montrer qu'une proposition est vraie. Suppons également que l'on arrive a montrer que est vraie, où une contradiction (une proposition qui est toujours fausse).  Si est vraie et que est fausse, alors nécessairement est fausse, c'est-à-dire que est vraie. La contradiction sera souvent former par .    Un premier nombre irrationel  Montrer que .   On suppose que , et on cerche à montrer que celà implique une contradiction.  Si , alors , où et . De plus, on peut supposer que cette faction est réduite, c'est-a-dire que .  On a alors . En isolant, on obtient . Ainsi, par un des exemples précédent on a que est un nombre pair, et donc l'est également. On peut donc écrire , pour , d'où .  En divisant par des deux côtés, on a . Par le même argument que précédemment, on a que est pair. Or, si et sont pair, on a que . Ceci est une contradiction, car est faux.     La somme d'un rationnel et d'un irrationel  Montrer par contradiction que la somme d'un nombre rationnel et d'un nombre irrationel est un nombre irrationel.   Soit et , on suppose que On cherche une contradiction.  En isolant on a On sait que par , et donc par . Ceci est une contradiction, car .  Ainsi, .     Une implication par contradiction  Soit Montrer par contradiction que si et sont pairs, alors est pair.   On a une implication , où et  On fait une preuve par contradiction. Puisque , la négation de est  Ainsi, on suppose que et sont pairs, mais que est impair. On cherche ensuite une contradiction.  On sait que la somme de deux nombres pairs est paire et la somme d'un nombre pair et d'un nombre impaire est impaire. Ainsi, est impair, mais est donc pair. On a ainsi une contradiction.  On a montrer qu'il est impossible que les nombres et soient pairs et que soit impair. Ainsi, si et sont pairs, alors est pair.      On rappelle que la proposition est équivalente à . Ainsi, pour montrer que est vraie, il faut montrer que et sont vraies.  Si l'on veut montrer plusieurs doubles implications, on peut souvent négliger certaines implications si on arrive à faire le tour des propositions impliquées. Par exemple, pour montrer que les doubles implications , et sont vraies, il est suffisant de montrer que les implications , et sont vraies.    Si et seulement si  Soit montrer que si et seulement si ou .   On suppose d'abord que On veut montrer que Puisque on a Aisni, soit ou bien , c'est-à-dire que ou .  On supposonse maintenant que ou . Dans ce cas, ou bien , et donc d'où .     Un petit racourci  Montrer que si est un entier, alors les trois énoncés suivants sont équivalents.   est pair,   est impair,   est pair.       On montre que est vraie.  Puisque est pair, on a Ainsi, d'où est impair.    On montre que est vraie.  Puisque est impair, on a Ainsi, et donc c'est à dire que est pair.    Finalement, on montre que est vraie.  Puisque est pair, on sait que est pair, et donc En remplaçant, on a Ainsi, est pair.          Ces questions sont à faire avant de venir en classe et à remettre au début du cours.   Utiliser une preuve directe pour démontrer que la somme de deux entiers impairs est paire.  Utiliser une preuve directe pour démontrer que la somme de deux entiers pairs est paire.  Utiliser une preuve directe pour démontrer que tout nombre entier impair est la différence de deux carrés parfaits.  Utiliser une preuve indirecte pour démontrer que pour tout si est impair, alors est pair.  Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.     À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Montrer que si et , alors . Par preuve directe.  On suppose que et on veut montrer que .  Puisque on sait qu'il existe tels que  Ainsi, car .   Montrer que si alors où est la plus petite valeur entre et alors que est la plus grande valeur entre et . Séparer la preuve en deux cas. Le premier cas lorsque , et le deuxième cas lorsque . Faites une preuve directe dans les deux cas.  On suppose d'abord que Dans ce cas, on a que et Ainsi, par commutativité de l'addition dans .  On ensuite que Dans ce cas, on a que et Ainsi, .   Montrer que si et sont des entiers de parité différente, alors est un entier impair. Sans perdre de généralité, on peut supposer que est pair alors que est impair.  On suppose que est pair et que est impair. Ainsi, alors que .  Ainsi, on a d'où est un entier impair.   Montrer que pour un entier, si est pair, alors est pair. Par preuve indirecte.  On suppose que est un entier impair. On veut montrer qu'alors est impair.  Puisque est impair, on sait que .  Ainsi, d'où est un nombre impair.  On a montré que si est un entier impair, alors est impair. Ainsi, si est pair, on doit nécessairement avoir que est pair.   Soit et soit et des entiers positifs quelconque. Montrer que Ici il est utile de séparer la question en deux cas. On fait une première preuve en supposant que est pair (c'est-à-dire que ). Par la suite , on monbtre que la proposition est vraie lorsque est impair (c'est-à-dire que ).  Supposons que Par les proporiétés de l'équivalence modulo on a que d'où est pair. On remarque ici qu'on a utilisé le fait que et sont non null, car n'est pas défini.  Supposons maintenant que Par les proporiétés de l'équivalence modulo on a que d'où est pair.  Puisque est nécessairement pair ou impair, on a montrer dans tous les cas que est pair.   Montrer que si alors . Par preuve indirecte.  On suppose que On veut montrer que Puisque on sait que En particulier, .  Par le numéro , on a que Or, on sait que On a donc montrer que .  On a montré que si alors Ainsi, si on doit nécessairement avoir que .   Soit , montrer que si alors ou . Par preuve indirecte.  On suppose que et On veut montrer que Puisque et on a que .  On a montré que si et alors Ainsi, si on doit nécessairement avoir que ou .   Soit montrer que si est pair, alors est pair ou est pair. Par preuve indirecte.  On suppose que et sont tous les deux impairs. On veut alors montrer que le produit est également impair.  Puisque et sont impairs, on a que et Ainsi, c'est-à-dire que est impair.  On a montrer que si et sont tous deux impairs, alors est également impair. Ainsi, si est pair, on doit nécessairement avoir que ou est pair.   Montrer qu'au moins un des nombres réels est plus grand ou égal à la moyenne de ces nombres. Par contradiction.  On note la moyenne des et on suppose que pour allant de à  Par les propriétés de la somme dans on a que  Ainsi, .  On vient donc de montrer que ce qui est une contradiction. Il doit donc nécessairement y avoir un des qui est plus grand ou égal à .   Soit un nombre premier et . Montrer que si divise alors divise ou . Par preuve directe, en utilisant passant par . Faire la preuve en deux étapes. Soit ou bien .  On suppose que divise et on veut montrer que divise ou . Si , on a terminer. Si ne divise pas on doit montrer que divise  Puisque ne divise pas et puisque est un nombre premier, on a que Ainsi, on sait que possède un inverse modulo c'est-à-dire qu'il existe un entier tel que .  D'un autre côté, puisque divise , on a que .  On a alors c'est-à-dire que    Montrer que et . Par contradiction. Revoir la preuve que  Posons . On suppose que On peut allors écrire avec et Sans perdre de généralité, on peut également supposer que cette fraction est réduite, c'est-à-dire que .  On a donc , \\text{ d'où } . En particulier, on a que . Par l'exercice , on a que . On peut donc écrire où est un entier quelconque. En remplaçant dans la dernière égalité, on a Ainsi, est pair, et donc est pair, par .  On a donc montrer que et d'où ce qui est une contradiction. Ainsi, on doit nécessairement avoir .   Posons . On suppose que On peut allors écrire avec et Sans perdre de généralité, on peut également supposer que cette fraction est réduite, c'est-à-dire que .  On a donc , \\text{ d'où } . En particulier, on a que . Encore une fois, par , on a que . On peut donc écrire où est un entier quelconque. En remplaçant dans la dernière égalité, on a Ainsi, est pair, et donc est pair, par .  On a donc montrer que et d'où ce qui est une contradiction. Ainsi, on doit nécessairement avoir .   Montrer par contradiction qu'il n'y a pas de nombre tel que . Supposer que où . En remplaçant dans l'équation et en multipliant par , que peut-on dire sur la parité de et ?  On suppose que où . Ainsi, on a   On veut montrer que et sont pairs  Supposons que soit impair. On a alors ce qui est une contradiction. Ainsi, on doit avoir que est pair.  Sachant que est pair, on veut également montrer que est pair. Puisque est pair, on a Ainsi, est pair, d'où est également pair par .  Avec tout ce travail, on a montrer que et , mais alors ce qui est une contradiction. Il n'y a donc pas de solution rationnelle à l'équation .   Montrer ou réfuter que le produit d'un nombre rationnel différent de par un irrationnel est un irrationel. C'est vrai! Par contradiction.  Soit et supposons que Puisque par l'exercice , on sait que Ainsi, par l'exemple .  Ceci est une contradiction, car on avait supposer On doit donc avoir .   Montrer qu'il existe un entier tel que . En posant on a bien que   Montrer que si est un entier, alors les quatres énoncés suivants sont équivalents.   est pair,  est impair,  est impair,  est pair.   Montrer que les implications sont vraies.  Supposons que par les propriétés des équivalences modulo on a que .  Supposons que par les propriétés des équivalences modulo on a que .  Supposons que par les propriétés des équivalences modulo on a que .  Supposons que par les propriétés des équivalences modulo on a que Ainsi, on a que est pair. Par l'exercice , on a que car on sait que est impair.   Montrer ou réfuter que si et , alors . C'est faux! En prenant et , on a que .   Montrer ou réfuter qu'il existe et tel que . On va montrer qu'un tel et un tel existe. Tout d'abord, on remarque que Il y a alors deux cas possible. Soit ou bien . Supposons que alors on peut poser , et on a terminé. Si on peut alors poser et On a alors . Ainsi, on n'a pas explicitement trouver un et un tel que mais on a montrer qu'une telle paire existe. C'est vrai! Considérer . Si on a terminer, on a montrer que l'énoncé est vrai. Sinon, que peut-on dire de ?  Montrer ou réfuter qu'il existe un et un tels que . C'est vrai! Considérer . Si , on a montrer que c'est vrai. Sinon, que peut-on dire sur ?  On va montrer qu'un tel et un tel existe.  Tout d'abord, on remarque que et Il y a alors deux cas possible. Soit ou bien .  Supposons que alors on peut poser et , et on a terminé.  Si on peut alors poser et par l'exercise . On a alors .  Ainsi, on n'a pas explicitement trouver un et un tel que mais on a montrer qu'une telle paire existe.     "
+},
+{
+  "id": "exe-nPairnCarrePair",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-nPairnCarrePair",
+  "type": "Exemple",
+  "number": "5.1.1",
+  "title": "La parité et les carrés.",
+  "body": " La parité et les carrés  Pour si est pair, alors est pair.   Si est pair, alors . Ainsi, . On a alors que est pair.   "
+},
+{
+  "id": "exe-carreParfait",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-carreParfait",
+  "type": "Exemple",
+  "number": "5.1.2",
+  "title": "Les carrés parfaits.",
+  "body": " Les carrés parfaits  Donner une preuve directe que si et sont des carrés parfaits, alors est aussi un carré parfait. Un carré parfait est un entier tel que , pour un entier.   Si et sont des entier parfait, alors par définition, il existe des entiers et tels que et .  Ainsi on a que , où on a utilisé la commutativité et l'associativité du produit dans les entiers. Par définition d'un carré parfait, on peut conclure que est un carré parfait.   "
+},
+{
+  "id": "remark-12",
+  "level": "2",
+  "url": "sec_methodePreuve.html#remark-12",
+  "type": "Remarque",
+  "number": "5.1.3",
+  "title": "",
+  "body": " Formelement, la plupart des théorèmes sont des énoncés avec quantificateurs. L'énoncé de l'exercice précédent aurait pû être écrit sous la forme suivante. , où est la proposition est un carré parfait .  Pour montrer que l'énoncé est vrai pour tout entier et pour tout entier , il suffit de choisir et des entiers quelconque , c'est-à-dire qu'on utilise uniquement le fait qu'ils sont des entiers, et rien d'autre!  "
+},
+{
+  "id": "def-nbrQ",
+  "level": "2",
+  "url": "sec_methodePreuve.html#def-nbrQ",
+  "type": "Définition",
+  "number": "5.1.4",
+  "title": "",
+  "body": " L'ensemble des nombres rationnels est l'ensemble  "
+},
+{
+  "id": "def-nbrQc",
+  "level": "2",
+  "url": "sec_methodePreuve.html#def-nbrQc",
+  "type": "Définition",
+  "number": "5.1.5",
+  "title": "",
+  "body": " L'ensemble des nombres irrationnels est l'ensemble  "
+},
+{
+  "id": "exe-prodQisQ",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-prodQisQ",
+  "type": "Exemple",
+  "number": "5.1.6",
+  "title": "Le produit de rationnels.",
+  "body": " Le produit de rationnels  Montrer que si alors .   Si , alors il existe tels que , , et .  Ainsi, on a , par définition du produit dans . De plus, puisque est fermé sous le produit, et . Finalement, puisque et , alors . Ainsi, .   "
+},
+{
+  "id": "exe-prodQcisWhat",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-prodQcisWhat",
+  "type": "Exemple",
+  "number": "5.1.7",
+  "title": "Le produit d’irrationnels.",
+  "body": " Le produit d'irrationnels  Soit , peut-on conclure que ou bien que ?   On ne peut pas conclure! En effet, on peut montrer que . Dans ce cas, si on pose , alors . Cependant, si (on montrera également en exercice que ), alors .   "
+},
+{
+  "id": "exe-sommeQisQ",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-sommeQisQ",
+  "type": "Exemple",
+  "number": "5.1.8",
+  "title": "La somme de rationnels.",
+  "body": " La somme de rationnels  Montrer que si alors .   Si , alors il existe tels que , , et .  Ainsi, on a , par définition de la somme dans . De plus, puisque est fermé sous l'adition et le produit, et . De plus, puisque et , alors . Ainsi, .   "
+},
+{
+  "id": "exe-preuveInd1",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-preuveInd1",
+  "type": "Exemple",
+  "number": "5.1.9",
+  "title": "Une preuve indirecte.",
+  "body": " Une preuve indirecte  Montrer que, si pour alors ou .   On suppose que la conclusion est fausse, c'est à dire que . Par les lois de De Morgan, on suppose que la proposition est vraie, et on veut montrer que la proposition est vraie.  On rappel que si et , alors .  Ainsi, si et , on aura . En particulier, si , alors .   "
+},
+{
+  "id": "exe-nCarrePairnPair",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-nCarrePairnPair",
+  "type": "Exemple",
+  "number": "5.1.10",
+  "title": "La parité et les carrés, prise 2.",
+  "body": " La parité et les carrés, prise 2  Pour si est pair, alors est pair.   On montre que si est impair, alors est impair.  Si est impair, alors . Ainsi, . On a alors que est impair.   "
+},
+{
+  "id": "exe-sqrt2Qc",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-sqrt2Qc",
+  "type": "Exemple",
+  "number": "5.1.11",
+  "title": "Un premier nombre irrationel.",
+  "body": " Un premier nombre irrationel  Montrer que .   On suppose que , et on cerche à montrer que celà implique une contradiction.  Si , alors , où et . De plus, on peut supposer que cette faction est réduite, c'est-a-dire que .  On a alors . En isolant, on obtient . Ainsi, par un des exemples précédent on a que est un nombre pair, et donc l'est également. On peut donc écrire , pour , d'où .  En divisant par des deux côtés, on a . Par le même argument que précédemment, on a que est pair. Or, si et sont pair, on a que . Ceci est une contradiction, car est faux.   "
+},
+{
+  "id": "exe-sommeQQc",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-sommeQQc",
+  "type": "Exemple",
+  "number": "5.1.12",
+  "title": "La somme d’un rationnel et d’un irrationel.",
+  "body": " La somme d'un rationnel et d'un irrationel  Montrer par contradiction que la somme d'un nombre rationnel et d'un nombre irrationel est un nombre irrationel.   Soit et , on suppose que On cherche une contradiction.  En isolant on a On sait que par , et donc par . Ceci est une contradiction, car .  Ainsi, .   "
+},
+{
+  "id": "example-87",
+  "level": "2",
+  "url": "sec_methodePreuve.html#example-87",
+  "type": "Exemple",
+  "number": "5.1.13",
+  "title": "Une implication par contradiction.",
+  "body": " Une implication par contradiction  Soit Montrer par contradiction que si et sont pairs, alors est pair.   On a une implication , où et  On fait une preuve par contradiction. Puisque , la négation de est  Ainsi, on suppose que et sont pairs, mais que est impair. On cherche ensuite une contradiction.  On sait que la somme de deux nombres pairs est paire et la somme d'un nombre pair et d'un nombre impaire est impaire. Ainsi, est impair, mais est donc pair. On a ainsi une contradiction.  On a montrer qu'il est impossible que les nombres et soient pairs et que soit impair. Ainsi, si et sont pairs, alors est pair.   "
+},
+{
+  "id": "exe-Equiv",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-Equiv",
+  "type": "Exemple",
+  "number": "5.1.14",
+  "title": "Si et seulement si.",
+  "body": " Si et seulement si  Soit montrer que si et seulement si ou .   On suppose d'abord que On veut montrer que Puisque on a Aisni, soit ou bien , c'est-à-dire que ou .  On supposonse maintenant que ou . Dans ce cas, ou bien , et donc d'où .   "
+},
+{
+  "id": "exe-plusieursEquiv",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exe-plusieursEquiv",
+  "type": "Exemple",
+  "number": "5.1.15",
+  "title": "Un petit racourci.",
+  "body": " Un petit racourci  Montrer que si est un entier, alors les trois énoncés suivants sont équivalents.   est pair,   est impair,   est pair.       On montre que est vraie.  Puisque est pair, on a Ainsi, d'où est impair.    On montre que est vraie.  Puisque est impair, on a Ainsi, et donc c'est à dire que est pair.    Finalement, on montre que est vraie.  Puisque est pair, on sait que est pair, et donc En remplaçant, on a Ainsi, est pair.     "
+},
+{
+  "id": "exercise-254",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-254",
+  "type": "Question de compréhension",
+  "number": "5.1.3.1",
+  "title": "",
+  "body": "Utiliser une preuve directe pour démontrer que la somme de deux entiers impairs est paire. "
+},
+{
+  "id": "exercise-255",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-255",
+  "type": "Question de compréhension",
+  "number": "5.1.3.2",
+  "title": "",
+  "body": "Utiliser une preuve directe pour démontrer que la somme de deux entiers pairs est paire. "
+},
+{
+  "id": "exercise-256",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-256",
+  "type": "Question de compréhension",
+  "number": "5.1.3.3",
+  "title": "",
+  "body": "Utiliser une preuve directe pour démontrer que tout nombre entier impair est la différence de deux carrés parfaits. "
+},
+{
+  "id": "exercise-257",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-257",
+  "type": "Question de compréhension",
+  "number": "5.1.3.4",
+  "title": "",
+  "body": "Utiliser une preuve indirecte pour démontrer que pour tout si est impair, alors est pair. "
+},
+{
+  "id": "exercise-258",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-258",
+  "type": "Question de compréhension",
+  "number": "5.1.3.5",
+  "title": "",
+  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
+},
+{
+  "id": "exo-invQisQ",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exo-invQisQ",
+  "type": "Exercice",
+  "number": "5.1.4.1",
+  "title": "",
+  "body": "Montrer que si et , alors . Par preuve directe.  On suppose que et on veut montrer que .  Puisque on sait qu'il existe tels que  Ainsi, car .  "
+},
+{
+  "id": "exercise-260",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-260",
+  "type": "Exercice",
+  "number": "5.1.4.2",
+  "title": "",
+  "body": "Montrer que si alors où est la plus petite valeur entre et alors que est la plus grande valeur entre et . Séparer la preuve en deux cas. Le premier cas lorsque , et le deuxième cas lorsque . Faites une preuve directe dans les deux cas.  On suppose d'abord que Dans ce cas, on a que et Ainsi, par commutativité de l'addition dans .  On ensuite que Dans ce cas, on a que et Ainsi, .  "
+},
+{
+  "id": "exercise-261",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-261",
+  "type": "Exercice",
+  "number": "5.1.4.3",
+  "title": "",
+  "body": "Montrer que si et sont des entiers de parité différente, alors est un entier impair. Sans perdre de généralité, on peut supposer que est pair alors que est impair.  On suppose que est pair et que est impair. Ainsi, alors que .  Ainsi, on a d'où est un entier impair.  "
+},
+{
+  "id": "exo-cubeEvenBaseEven",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exo-cubeEvenBaseEven",
+  "type": "Exercice",
+  "number": "5.1.4.4",
+  "title": "",
+  "body": "Montrer que pour un entier, si est pair, alors est pair. Par preuve indirecte.  On suppose que est un entier impair. On veut montrer qu'alors est impair.  Puisque est impair, on sait que .  Ainsi, d'où est un nombre impair.  On a montré que si est un entier impair, alors est impair. Ainsi, si est pair, on doit nécessairement avoir que est pair.  "
+},
+{
+  "id": "exo-sommePuissancePair",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exo-sommePuissancePair",
+  "type": "Exercice",
+  "number": "5.1.4.5",
+  "title": "",
+  "body": "Soit et soit et des entiers positifs quelconque. Montrer que Ici il est utile de séparer la question en deux cas. On fait une première preuve en supposant que est pair (c'est-à-dire que ). Par la suite , on monbtre que la proposition est vraie lorsque est impair (c'est-à-dire que ).  Supposons que Par les proporiétés de l'équivalence modulo on a que d'où est pair. On remarque ici qu'on a utilisé le fait que et sont non null, car n'est pas défini.  Supposons maintenant que Par les proporiétés de l'équivalence modulo on a que d'où est pair.  Puisque est nécessairement pair ou impair, on a montrer dans tous les cas que est pair.  "
+},
+{
+  "id": "exercise-264",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-264",
+  "type": "Exercice",
+  "number": "5.1.4.6",
+  "title": "",
+  "body": "Montrer que si alors . Par preuve indirecte.  On suppose que On veut montrer que Puisque on sait que En particulier, .  Par le numéro , on a que Or, on sait que On a donc montrer que .  On a montré que si alors Ainsi, si on doit nécessairement avoir que .  "
+},
+{
+  "id": "exercise-265",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-265",
+  "type": "Exercice",
+  "number": "5.1.4.7",
+  "title": "",
+  "body": "Soit , montrer que si alors ou . Par preuve indirecte.  On suppose que et On veut montrer que Puisque et on a que .  On a montré que si et alors Ainsi, si on doit nécessairement avoir que ou .  "
+},
+{
+  "id": "exercise-266",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-266",
+  "type": "Exercice",
+  "number": "5.1.4.8",
+  "title": "",
+  "body": "Soit montrer que si est pair, alors est pair ou est pair. Par preuve indirecte.  On suppose que et sont tous les deux impairs. On veut alors montrer que le produit est également impair.  Puisque et sont impairs, on a que et Ainsi, c'est-à-dire que est impair.  On a montrer que si et sont tous deux impairs, alors est également impair. Ainsi, si est pair, on doit nécessairement avoir que ou est pair.  "
+},
+{
+  "id": "exercise-267",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-267",
+  "type": "Exercice",
+  "number": "5.1.4.9",
+  "title": "",
+  "body": "Montrer qu'au moins un des nombres réels est plus grand ou égal à la moyenne de ces nombres. Par contradiction.  On note la moyenne des et on suppose que pour allant de à  Par les propriétés de la somme dans on a que  Ainsi, .  On vient donc de montrer que ce qui est une contradiction. Il doit donc nécessairement y avoir un des qui est plus grand ou égal à .  "
+},
+{
+  "id": "exo-prime",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exo-prime",
+  "type": "Exercice",
+  "number": "5.1.4.10",
+  "title": "",
+  "body": "Soit un nombre premier et . Montrer que si divise alors divise ou . Par preuve directe, en utilisant passant par . Faire la preuve en deux étapes. Soit ou bien .  On suppose que divise et on veut montrer que divise ou . Si , on a terminer. Si ne divise pas on doit montrer que divise  Puisque ne divise pas et puisque est un nombre premier, on a que Ainsi, on sait que possède un inverse modulo c'est-à-dire qu'il existe un entier tel que .  D'un autre côté, puisque divise , on a que .  On a alors c'est-à-dire que   "
+},
+{
+  "id": "exercise-269",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-269",
+  "type": "Exercice",
+  "number": "5.1.4.11",
+  "title": "",
+  "body": "Montrer que et . Par contradiction. Revoir la preuve que  Posons . On suppose que On peut allors écrire avec et Sans perdre de généralité, on peut également supposer que cette fraction est réduite, c'est-à-dire que .  On a donc , \\text{ d'où } . En particulier, on a que . Par l'exercice , on a que . On peut donc écrire où est un entier quelconque. En remplaçant dans la dernière égalité, on a Ainsi, est pair, et donc est pair, par .  On a donc montrer que et d'où ce qui est une contradiction. Ainsi, on doit nécessairement avoir .   Posons . On suppose que On peut allors écrire avec et Sans perdre de généralité, on peut également supposer que cette fraction est réduite, c'est-à-dire que .  On a donc , \\text{ d'où } . En particulier, on a que . Encore une fois, par , on a que . On peut donc écrire où est un entier quelconque. En remplaçant dans la dernière égalité, on a Ainsi, est pair, et donc est pair, par .  On a donc montrer que et d'où ce qui est une contradiction. Ainsi, on doit nécessairement avoir .  "
+},
+{
+  "id": "exercise-270",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-270",
+  "type": "Exercice",
+  "number": "5.1.4.12",
+  "title": "",
+  "body": "Montrer par contradiction qu'il n'y a pas de nombre tel que . Supposer que où . En remplaçant dans l'équation et en multipliant par , que peut-on dire sur la parité de et ?  On suppose que où . Ainsi, on a   On veut montrer que et sont pairs  Supposons que soit impair. On a alors ce qui est une contradiction. Ainsi, on doit avoir que est pair.  Sachant que est pair, on veut également montrer que est pair. Puisque est pair, on a Ainsi, est pair, d'où est également pair par .  Avec tout ce travail, on a montrer que et , mais alors ce qui est une contradiction. Il n'y a donc pas de solution rationnelle à l'équation .  "
+},
+{
+  "id": "exo-pordQQcisQc",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exo-pordQQcisQc",
+  "type": "Exercice",
+  "number": "5.1.4.13",
+  "title": "",
+  "body": "Montrer ou réfuter que le produit d'un nombre rationnel différent de par un irrationnel est un irrationel. C'est vrai! Par contradiction.  Soit et supposons que Puisque par l'exercice , on sait que Ainsi, par l'exemple .  Ceci est une contradiction, car on avait supposer On doit donc avoir .  "
+},
+{
+  "id": "exercise-272",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-272",
+  "type": "Exercice",
+  "number": "5.1.4.14",
+  "title": "",
+  "body": "Montrer qu'il existe un entier tel que . En posant on a bien que  "
+},
+{
+  "id": "exercise-273",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-273",
+  "type": "Exercice",
+  "number": "5.1.4.15",
+  "title": "",
+  "body": "Montrer que si est un entier, alors les quatres énoncés suivants sont équivalents.   est pair,  est impair,  est impair,  est pair.   Montrer que les implications sont vraies.  Supposons que par les propriétés des équivalences modulo on a que .  Supposons que par les propriétés des équivalences modulo on a que .  Supposons que par les propriétés des équivalences modulo on a que .  Supposons que par les propriétés des équivalences modulo on a que Ainsi, on a que est pair. Par l'exercice , on a que car on sait que est impair.  "
+},
+{
+  "id": "exercise-274",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-274",
+  "type": "Exercice",
+  "number": "5.1.4.16",
+  "title": "",
+  "body": "Montrer ou réfuter que si et , alors . C'est faux! En prenant et , on a que .  "
+},
+{
+  "id": "exercise-275",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-275",
+  "type": "Exercice",
+  "number": "5.1.4.17",
+  "title": "",
+  "body": "Montrer ou réfuter qu'il existe et tel que . On va montrer qu'un tel et un tel existe. Tout d'abord, on remarque que Il y a alors deux cas possible. Soit ou bien . Supposons que alors on peut poser , et on a terminé. Si on peut alors poser et On a alors . Ainsi, on n'a pas explicitement trouver un et un tel que mais on a montrer qu'une telle paire existe. C'est vrai! Considérer . Si on a terminer, on a montrer que l'énoncé est vrai. Sinon, que peut-on dire de ? "
+},
+{
+  "id": "exercise-276",
+  "level": "2",
+  "url": "sec_methodePreuve.html#exercise-276",
+  "type": "Exercice",
+  "number": "5.1.4.18",
+  "title": "",
+  "body": "Montrer ou réfuter qu'il existe un et un tels que . C'est vrai! Considérer . Si , on a montrer que c'est vrai. Sinon, que peut-on dire sur ?  On va montrer qu'un tel et un tel existe.  Tout d'abord, on remarque que et Il y a alors deux cas possible. Soit ou bien .  Supposons que alors on peut poser et , et on a terminé.  Si on peut alors poser et par l'exercise . On a alors .  Ainsi, on n'a pas explicitement trouver un et un tel que mais on a montrer qu'une telle paire existe.  "
+},
+{
+  "id": "sec_pidgeonHoles",
+  "level": "1",
+  "url": "sec_pidgeonHoles.html",
+  "type": "Section",
+  "number": "5.2",
+  "title": "Principe des tiroirs de Dirichlet",
+  "body": " Principe des tiroirs de Dirichlet   Le principe des tiroirs de Dirichlet (ou le principe des nids de piegons), est un principle très simple, qui peut être utilisé afin de démontrer des résultats complexe, si on l'utilise de façon intelligente .    Principe des tiroirs de Dirichlet  Soit , et supposons qu'on veut placer au moins objets dans boites, alors il existe au moins une boite contenant au moins de ces objets.    Soit une classe formée de étudiants ou plus, alors il existe au moins deux étudiants tels que leur prénom commence par la même lettre.  On étiquette boites de A à Z. On place chaque étudiant dans la boite correspondant à la première lettre de son prénom. Par le principe des tiroirs de Dirichlet, il y a au moins deux étudiants dans la même boite. Ainsi, il y a au moins deux étudiants dont la première lettre de leur prénom est la même.   Tel que mentionné plus haut (et comme on peut le constater avec l'exemple précédent), le principe est assez simple et semble même anodin. Cependant, avec un peu d'immagination, on peut s'en servir pour résoudre des problèmes complexes. La partie importante ici est avec un peu d'immagination .   Montrer que pour n'importe quel , il existe un multiple de qui est écrit uniquement avec des et des dans sa représentation en base dix.   On considère les nombres suivants: , où le dernier nombre est l'entier formé de chiffres dans sa représentation en base dix. On numérote boites de à . Ensuite on place chacun des nombres précédents dans la boite étiquettée par sont reste lors de la division par .  Puisqu'il y a nombres et boites (restes), par le principe des tiroirs de Dirichlet, il existe deux de ces entiers, disons , tels que . Par la définition équivalente decongruence, on a .  Ainsi, est un multiple de et il s'écrit avec uniquement des et des .     Montrer que, soit , alors la représentation en base dix de possède une partie fractionnaire périodique de période    Posons la division avec reste de par De plus, notons la division avec reste de par On a alors que .  On remarque que si pour un certain alors popur tout et donc aura une partie fractionnaire de période .  Si aucune des , on utilise le principe des tiroirs pour montrer que la période est de longueur au plus Les objets sont les restes pour (il y a donc objets), et les boites sont les classes d'équivalences modulo , sauf , car les restes sont différents de Il y aura donc boites.  On place les restes dans leurs classes d'équivalences. Puisqu'il y a plus d'objets que de boites, il y aura deux restes et dans la même classe d'équivalence. Sans perdre de généralité, on peut supposer et on aura alors Puisque les restes sont entre et , s'ils sont dans la même classe d'équivalence, ils sont égaux. On a donc d'où .  En écrivant en base dix, on aura .  Ainsi, la partie périodique est et est de longueur .     Durant un mois de jours, une équipe de baseball joue au moins une partie par jour, mais au plus parties durant le mois. Montrer qu'il existe un nombre de jours consécutifs durant lesquels l'équipe doit jouer exatement parties.   On note le nombre de parties jouées avant et durant le jour pour Puisque l'équipe joue au moins une partie par jour et moins de partie dans le mois, on a En particulier, on a que si .  On considère également les entiers pour On aura alors Encore une fois, on a si .  On a donc les entiers compris entre et Il y aura donc au moins deux de ces entiers qui sont égaux. Par ce qui précède, on doit avoir Ainsi, le nombre de parties jouées entre le jour et le jour est .     Montrer que si on prend nimporte quelle ensemble formé de nombres entiers strictement positifs et inférieur ou égal à , alors au moins un des éléments de divise un autre élément de . Symboliquement, si avec , alors il existe et tels que et .   Tout entier peut s'écrire comme où est un entier naturel et est impair. En classe, on a écrit .  Puisqu'il y a éléments de et nombres impairs de il exsite tels que et En supposant on a alors Ainsi, on a .           Ces questions sont à faire avant de venir en classe et à remettre au début du cours.   Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.     Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Montrer que si un élève assiste à six cours durant la semaine, chacun des cours se déroulant la même journée à chaque semaine, alors il y a un jour durant lequel l'élève assiste à au moins deux cours.  En supposant qu'aucun cours n'est durant la fin de semaine, il y a cours (objets) et jours (boites). Il y a donc deux objets dans la même boites, c'est-à-dire qu'il y a deux cours durant le même jour.   Une urne contient billes rouges et billes bleues. Une personne pige au hasard des billes sans les remettre dans l'urne. Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes de la même couleur? billes.  On place les objets (billes) dans les boites (rouge, bleu) selon la couleur de la bille. Puisqu'il y a plus d'objets que de boites, il y aura au moins deux objets dans la même boite, et donc deux billes de la même couleur.  Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes bleue? billes.  On suppose que les premières billes pigées sont des billes rouge. Par la suite, si on pige deux billes supplémentaires, elles seront nécessairement bleu.   Montrer que si on choisit aléatoirement cinq nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par .  On place les objets (les nombres entiers) dans les boites représentant les classes d'équivalence modulo . On place chaque entier dans sa propre classe d'équivalence. Puisqu'il y a plus d'objets que de boites, il ya aura au moins deux objets dans la même boite.  Ainsi, il y aura deux entiers dans la même classe d'équivalence modulo c'est-à-dire que ces deux entiers auront le même reste lorsque divisé par .   Soit . Montrer que si on choisit aléatoirement nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par . Remplacer par et par dans la solution de l'exercice .  On choisit aléatoirement sept entiers dans l'ensemble Montrer qu'il doit y avoir une paire telle que sa somme est . Condidérer les ensembles et .    Objets: Les entiers de l'ensemble  Boites: Les ensembles et   On place un objet dans une boite si .  Puisqu'il ya plus d'objets que de boites, il y aura au moins deux objets dans la même boite. Ainsi, ces deux entiers sommeronts à .   Combien d'entiers doit-on choisir aléatoirement dans l'ensemble afin de garantir qu'au moins une paire aura une somme de ? On doit en choisir .  Soit est une fonction . En utilisant le principe des tiroirs de Dirichlet, montrer que si , alors la fonction n'est pas injective.    Objets: Les élément de  Boites: Les éléments de   On place un objet dans une boite si .  Puisqu'il ya plus d'objets que de boites, il y aura au moins deux objets dans la même boite. Ainsi, il exsite tels que La fonction n'est donc pas injective.   Soit des paires d'entiers ordonnés (c'est-à-dire ) pour Montrer qu'il existe, parmi ces paires d'entirs, deux paires d'entiers et telles que et    Objets: Les paires  Boites: Les paires de classes d'équivalence pour .  On place un objet dans une boite si et c'est à dire que et .  Puisqu'il ya plus d'objets que de boites, il y aura au moins deux objets dans la même boite. Ainsi, on aura et tels que et .   Soit cinq points du plan cartésien . Montrer que si pour alors le point milieu d'au moins un des segments reliant une paire de ces points a des coordonnées entières. Le point milieu entre le point et le point est le point . À quel moment est-ce que et sont des entiers?    "
+},
+{
+  "id": "proposition-20",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#proposition-20",
+  "type": "Proposition",
+  "number": "5.2.1",
+  "title": "Principe des tiroirs de Dirichlet.",
+  "body": " Principe des tiroirs de Dirichlet  Soit , et supposons qu'on veut placer au moins objets dans boites, alors il existe au moins une boite contenant au moins de ces objets.  "
+},
+{
+  "id": "ex_basePigeon",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#ex_basePigeon",
+  "type": "Exemple",
+  "number": "5.2.2",
+  "title": "",
+  "body": " Soit une classe formée de étudiants ou plus, alors il existe au moins deux étudiants tels que leur prénom commence par la même lettre.  On étiquette boites de A à Z. On place chaque étudiant dans la boite correspondant à la première lettre de son prénom. Par le principe des tiroirs de Dirichlet, il y a au moins deux étudiants dans la même boite. Ainsi, il y a au moins deux étudiants dont la première lettre de leur prénom est la même.  "
+},
+{
+  "id": "ex_complexPigeon",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#ex_complexPigeon",
+  "type": "Exemple",
+  "number": "5.2.3",
+  "title": "",
+  "body": " Montrer que pour n'importe quel , il existe un multiple de qui est écrit uniquement avec des et des dans sa représentation en base dix.   On considère les nombres suivants: , où le dernier nombre est l'entier formé de chiffres dans sa représentation en base dix. On numérote boites de à . Ensuite on place chacun des nombres précédents dans la boite étiquettée par sont reste lors de la division par .  Puisqu'il y a nombres et boites (restes), par le principe des tiroirs de Dirichlet, il existe deux de ces entiers, disons , tels que . Par la définition équivalente decongruence, on a .  Ainsi, est un multiple de et il s'écrit avec uniquement des et des .   "
+},
+{
+  "id": "ex_nbrRationnel",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#ex_nbrRationnel",
+  "type": "Exemple",
+  "number": "5.2.4",
+  "title": "",
+  "body": " Montrer que, soit , alors la représentation en base dix de possède une partie fractionnaire périodique de période    Posons la division avec reste de par De plus, notons la division avec reste de par On a alors que .  On remarque que si pour un certain alors popur tout et donc aura une partie fractionnaire de période .  Si aucune des , on utilise le principe des tiroirs pour montrer que la période est de longueur au plus Les objets sont les restes pour (il y a donc objets), et les boites sont les classes d'équivalences modulo , sauf , car les restes sont différents de Il y aura donc boites.  On place les restes dans leurs classes d'équivalences. Puisqu'il y a plus d'objets que de boites, il y aura deux restes et dans la même classe d'équivalence. Sans perdre de généralité, on peut supposer et on aura alors Puisque les restes sont entre et , s'ils sont dans la même classe d'équivalence, ils sont égaux. On a donc d'où .  En écrivant en base dix, on aura .  Ainsi, la partie périodique est et est de longueur .   "
+},
+{
+  "id": "ex_elegantPigeon1",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#ex_elegantPigeon1",
+  "type": "Exemple",
+  "number": "5.2.5",
+  "title": "",
+  "body": " Durant un mois de jours, une équipe de baseball joue au moins une partie par jour, mais au plus parties durant le mois. Montrer qu'il existe un nombre de jours consécutifs durant lesquels l'équipe doit jouer exatement parties.   On note le nombre de parties jouées avant et durant le jour pour Puisque l'équipe joue au moins une partie par jour et moins de partie dans le mois, on a En particulier, on a que si .  On considère également les entiers pour On aura alors Encore une fois, on a si .  On a donc les entiers compris entre et Il y aura donc au moins deux de ces entiers qui sont égaux. Par ce qui précède, on doit avoir Ainsi, le nombre de parties jouées entre le jour et le jour est .   "
+},
+{
+  "id": "ex_elegantPigeon2",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#ex_elegantPigeon2",
+  "type": "Exemple",
+  "number": "5.2.6",
+  "title": "",
+  "body": " Montrer que si on prend nimporte quelle ensemble formé de nombres entiers strictement positifs et inférieur ou égal à , alors au moins un des éléments de divise un autre élément de . Symboliquement, si avec , alors il existe et tels que et .   Tout entier peut s'écrire comme où est un entier naturel et est impair. En classe, on a écrit .  Puisqu'il y a éléments de et nombres impairs de il exsite tels que et En supposant on a alors Ainsi, on a .   "
+},
+{
+  "id": "exercise-277",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#exercise-277",
+  "type": "Question de compréhension",
+  "number": "5.2.2.1",
+  "title": "",
+  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
+},
+{
+  "id": "exercise-278",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#exercise-278",
+  "type": "Exercice",
+  "number": "5.2.3.1",
+  "title": "",
+  "body": "Montrer que si un élève assiste à six cours durant la semaine, chacun des cours se déroulant la même journée à chaque semaine, alors il y a un jour durant lequel l'élève assiste à au moins deux cours.  En supposant qu'aucun cours n'est durant la fin de semaine, il y a cours (objets) et jours (boites). Il y a donc deux objets dans la même boites, c'est-à-dire qu'il y a deux cours durant le même jour.  "
+},
+{
+  "id": "exercise-279",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#exercise-279",
+  "type": "Exercice",
+  "number": "5.2.3.2",
+  "title": "",
+  "body": "Une urne contient billes rouges et billes bleues. Une personne pige au hasard des billes sans les remettre dans l'urne. Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes de la même couleur? billes.  On place les objets (billes) dans les boites (rouge, bleu) selon la couleur de la bille. Puisqu'il y a plus d'objets que de boites, il y aura au moins deux objets dans la même boite, et donc deux billes de la même couleur.  Combien de billes doit-elle piger avant d'être certaine d'avoir deux billes bleue? billes.  On suppose que les premières billes pigées sont des billes rouge. Par la suite, si on pige deux billes supplémentaires, elles seront nécessairement bleu.  "
+},
+{
+  "id": "exo-mod4",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#exo-mod4",
+  "type": "Exercice",
+  "number": "5.2.3.3",
+  "title": "",
+  "body": "Montrer que si on choisit aléatoirement cinq nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par .  On place les objets (les nombres entiers) dans les boites représentant les classes d'équivalence modulo . On place chaque entier dans sa propre classe d'équivalence. Puisqu'il y a plus d'objets que de boites, il ya aura au moins deux objets dans la même boite.  Ainsi, il y aura deux entiers dans la même classe d'équivalence modulo c'est-à-dire que ces deux entiers auront le même reste lorsque divisé par .  "
+},
+{
+  "id": "exercise-281",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#exercise-281",
+  "type": "Exercice",
+  "number": "5.2.3.4",
+  "title": "",
+  "body": "Soit . Montrer que si on choisit aléatoirement nombres entiers, alors il y en aura au moins deux ayant le même reste lorsque divisé par . Remplacer par et par dans la solution de l'exercice . "
+},
+{
+  "id": "exercise-282",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#exercise-282",
+  "type": "Exercice",
+  "number": "5.2.3.5",
+  "title": "",
+  "body": "On choisit aléatoirement sept entiers dans l'ensemble Montrer qu'il doit y avoir une paire telle que sa somme est . Condidérer les ensembles et .    Objets: Les entiers de l'ensemble  Boites: Les ensembles et   On place un objet dans une boite si .  Puisqu'il ya plus d'objets que de boites, il y aura au moins deux objets dans la même boite. Ainsi, ces deux entiers sommeronts à .  "
+},
+{
+  "id": "exercise-283",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#exercise-283",
+  "type": "Exercice",
+  "number": "5.2.3.6",
+  "title": "",
+  "body": "Combien d'entiers doit-on choisir aléatoirement dans l'ensemble afin de garantir qu'au moins une paire aura une somme de ? On doit en choisir . "
+},
+{
+  "id": "exercise-284",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#exercise-284",
+  "type": "Exercice",
+  "number": "5.2.3.7",
+  "title": "",
+  "body": "Soit est une fonction . En utilisant le principe des tiroirs de Dirichlet, montrer que si , alors la fonction n'est pas injective.    Objets: Les élément de  Boites: Les éléments de   On place un objet dans une boite si .  Puisqu'il ya plus d'objets que de boites, il y aura au moins deux objets dans la même boite. Ainsi, il exsite tels que La fonction n'est donc pas injective.  "
+},
+{
+  "id": "exercise-285",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#exercise-285",
+  "type": "Exercice",
+  "number": "5.2.3.8",
+  "title": "",
+  "body": "Soit des paires d'entiers ordonnés (c'est-à-dire ) pour Montrer qu'il existe, parmi ces paires d'entirs, deux paires d'entiers et telles que et    Objets: Les paires  Boites: Les paires de classes d'équivalence pour .  On place un objet dans une boite si et c'est à dire que et .  Puisqu'il ya plus d'objets que de boites, il y aura au moins deux objets dans la même boite. Ainsi, on aura et tels que et .  "
+},
+{
+  "id": "exercise-286",
+  "level": "2",
+  "url": "sec_pidgeonHoles.html#exercise-286",
+  "type": "Exercice",
+  "number": "5.2.3.9",
+  "title": "",
+  "body": "Soit cinq points du plan cartésien . Montrer que si pour alors le point milieu d'au moins un des segments reliant une paire de ces points a des coordonnées entières. Le point milieu entre le point et le point est le point . À quel moment est-ce que et sont des entiers? "
+},
+{
+  "id": "sec_induction",
+  "level": "1",
+  "url": "sec_induction.html",
+  "type": "Section",
+  "number": "5.3",
+  "title": "Les preuves par récurrence (par induction)",
+  "body": " Les preuves par récurrence (par induction)   Son considère la proposition Comment peut-on montrer que la proposition est vraie pour tout En remplaçant par différentes valeurs, on peut remarquer que la proposition est vraie, mais il est difficile (mais pas impossible) de le montrer en utilisant les méthodes utilisés jusqu'à maintenant.  Une méthode efficace de démontrer ce genre de théorème est ce qu'on appelle une preuve par récurrence. Pour ilustré l'idée, considérons l'exemple suivant.  On s'imagine une échelle infinie (avec une infinité de barreaux). On se demande à jusqu'à quel barreau est-ce qu'on peut se rendre si on sait les informations suivantes. Premièrement, on suppose qu'on est en mesure d'atteindre le premier barreau. Ensuite, on suppose que si on est en mesure d'atteindre le -ième barreau, alors on est également capable d'atteindre le -ième barreau. Jusqu'où peut-on se rendre?  Par ce qui précède, on peut conclure qu'on peut se rendre à tous les barreaux de l'échelle! En effet, puisqu'on peut se rendre au premier, on peut se rendre au deuxième. Puisqu'on peut se rendre au deuxième, on peut se rendre au troisième. Puisqu'on peut se rendre au troisième, on peut se rendre au quatrième. Puisqu'on peut... et ainsi de suite.    Les différentes étapes   Si on garde l'exemple de l'échelle infinie en tête, on remarque qu'il y avait deux parties à notre argument . Tout d'abord, on a supposé qu'on pouvait se rendre au premier barreau. C'est l'étape de base.  Par la suite, on a dit que si on pouvait se rendre au -ième barreau, alors on pouvait se rendre au -ième barreau. C'est l'étape d'induction.    Preuve par récurence   Pour démontrer qu'une proposition est vraie pour tout on peut procéder de la façon suivante.   Étape de base: On montre que est vraie.   Étape d'induction: On montre que l'implication est vraie pour un entier positif quelconque, c'est-à-dire que si on suppose vraie, alors on montre que sera vraie également.    À l'étape d'induction, lorsqu'on suppose que est vraie, on dit qu'on fait une hypothèse d'induction. On notera souvent H.I. pour indiquer qu'on utilise cette hypothèse.     Une petite généralisation  En modifiant l'étape de base de la preuve par induction, on peut montrer qu'un proposition est vraie pour tout entier , où est un entier quelconque. L'étape de base sera alors de montrer que est vraie. L'étape d'induction sera alors de montrer que est vraie pour tout .     Exemples de preuves par récurrence  Regardons maintenant quelques exemples de base pour illustrer la méthode, en commençant par la formule de la somme des entiers positifs.   La somme des premiers entiers positifs  Montrer par récurrence que, pour on a    On pose   Étape de base: On veut montrer que est vraie. Tout d'abord on remaque que est la proposition . Ceci est clairement vraie, car  Étape d'induction: On suppose maintenant que est vraie, c'est-à-dire que où est un entier positif quelconque. On veut montrer que est vraie.  On remarque que est la proposition . En partant de l'égalité à gauche, on a   Ainsi, puisqu'on a montrer que la proposition est vraie pour , et qu'on a montrer que si elle est vraie pour , alors elle est également vraie pour , on a montrer que la proposition est vraie pour tout .     Une preuve de divisibilité  Montrer par récurrence que est divisible par pour tout entier naturel .   Étape de base: On montre que la proposition est vraie pour . Pour , on a Puisque , la proposition est bien vraie en .  Étape d'induction: On suppose que est divisible par pour un entier naturel quelconque. Ainsi, on peut écrire pour On veut montrer que est divisible par . Or, on a que   Par la fermeture de la somme dans on a que , et donc est divisible par .  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .     Démonstration d'une inégalité  Montrer par récurrence que pour tout entier naturel on a que .   Étape de base: On veut montrer que la proposition est vraie pour En la proposition devient ce qui est vrai.  Étape d'induction: On suppose que la propoistion est vraie pour un entier naturel quelconque. Ainsi, on suppose que On veut montrer qu'elle est vraie pour , c'est-à-dire que .  On a que Ainsi, sous l'H.I., la proposition est également vraie pour .  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .    Lorsqu'on utilise une preuve par récurrence, il faut s'assurer que l'argument utilisé pour l'étape d'induction fonctionne pour toutes les valeurs de Voici un exemple d'une mauvaise utilisation d'une preuve par récurrence pour montrer une proposition qui est fausse.   Erreur commune d'une preuve par récurrence  Trouver l'erreur dans le raisonement suivant permettant de montrer que pour tout ensemble de plus de droites dans le plan, si aucune n'est parallèle à une autre, alors il existe un point commun à toutes ces droites:  Étape de base : On doit montrer que la proposition est vraie pour Or, si on a deux droites qui ne sont pas parallèles dans le plan, elles ont nécessairement un point en commun.  Étape d'induction : On suppose que la proposition est vraie pour , et on veut montrer qu'elle est vraie pour pour un entier tel que .  On considère un ensemble de droites dans le plan qui ne sont deux à deux non-parallèles. Si on regarde les premières droites, alors par l'H.I., il existe un point qui est en commun aux premières droites.  Par le même argument, il existe un point qui est en commun au dernières droites. On veut montrer que .  Supposons que ces points soient distincts. Alors toutes les droites contenant ces deux points seront les mêmes droites (car il y a une seule droite passant par deux points dans le plan). Ceci est une contradiction, car ces droites son distinctes. On doit donc avoir , et donc toutes les droites possèdent un point en commun.   À l'étape d'induction, l'argument démontrant que ne fonctionne pas en En effet, si alors et est un point de la première et de la deuxième droite, alors que est un point de la deuxième et la troisième droite. Ainsi, seule la deuxième droite contient les points et ce qui n'est pas une contradiction!    La somme des entiers positifs impairs  Montrer par récurrence que, pour la somme des premiers entiers positifs impairs est    Tout d'abord, on remarque qu'on peut écrire le -ième entier positif impair comme . Ainsi, on peut écrire la proposition comme .  Étape de base : On veut montrer que la proposition est vraie pour . Or, en la proposition est ce qui est vrai.  Étape d'induction : On suppose que la proposition est vraie pour où est un entier positif. On veut montrer qu'elle sera alors vraie pour .   Ainsi, la proposition est vraie pour  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .     Une autre preuve de divisibilité   Montrer par récurrence que pour un entier naturel, alors est divisible par .       Les points importants de cette section sont:  L'idée de base d'une preuve par récurrence;   Les étapes d'une preuve par récurrence;   L'erreur à ne pas faire!        Ces questions sont à faire avant de venir en classe et à remettre au début du cours.   Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.     À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Montrer par réccurence que pour un entier positif, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on veut montrer que est vraie. On suppose donc que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   Montrer par récurrence que si est un entier naturel, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. Tout d'abord, remarquons que . Ensuite, en partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   Montrer par récurrence que si est un entier positif, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   Montrer par récurrence que si est un entier positif, alors  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   Montrer par récurrence que si est un entier plus grand que .  On pose la proposition pour et .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   Montrer par récurrence que si est un entier plus grand que .  On pose la proposition pour et .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   On considère l'expression . En remplaçant par certaine valeurs, trouver une formule pour l'expression de . Remarquer que   et  Montrer par récurrence que votre formule est bonne.  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .    On considère l'expression pour un entier naturel.  Montrer par récurrence que   On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .     "
+},
+{
+  "id": "def-induction",
+  "level": "2",
+  "url": "sec_induction.html#def-induction",
+  "type": "Définition",
+  "number": "5.3.1",
+  "title": "Preuve par récurence.",
+  "body": " Preuve par récurence   Pour démontrer qu'une proposition est vraie pour tout on peut procéder de la façon suivante.   Étape de base: On montre que est vraie.   Étape d'induction: On montre que l'implication est vraie pour un entier positif quelconque, c'est-à-dire que si on suppose vraie, alors on montre que sera vraie également.    À l'étape d'induction, lorsqu'on suppose que est vraie, on dit qu'on fait une hypothèse d'induction. On notera souvent H.I. pour indiquer qu'on utilise cette hypothèse.   "
+},
+{
+  "id": "remark-13",
+  "level": "2",
+  "url": "sec_induction.html#remark-13",
+  "type": "Remarque",
+  "number": "5.3.2",
+  "title": "Une petite généralisation.",
+  "body": " Une petite généralisation  En modifiant l'étape de base de la preuve par induction, on peut montrer qu'un proposition est vraie pour tout entier , où est un entier quelconque. L'étape de base sera alors de montrer que est vraie. L'étape d'induction sera alors de montrer que est vraie pour tout .  "
+},
+{
+  "id": "exe-sommeEntiers",
+  "level": "2",
+  "url": "sec_induction.html#exe-sommeEntiers",
+  "type": "Exemple",
+  "number": "5.3.3",
+  "title": "La somme des <span class=\"process-math\">\\(n\\)<\/span> premiers entiers positifs.",
+  "body": " La somme des premiers entiers positifs  Montrer par récurrence que, pour on a    On pose   Étape de base: On veut montrer que est vraie. Tout d'abord on remaque que est la proposition . Ceci est clairement vraie, car  Étape d'induction: On suppose maintenant que est vraie, c'est-à-dire que où est un entier positif quelconque. On veut montrer que est vraie.  On remarque que est la proposition . En partant de l'égalité à gauche, on a   Ainsi, puisqu'on a montrer que la proposition est vraie pour , et qu'on a montrer que si elle est vraie pour , alors elle est également vraie pour , on a montrer que la proposition est vraie pour tout .   "
+},
+{
+  "id": "exe-divisibilite",
+  "level": "2",
+  "url": "sec_induction.html#exe-divisibilite",
+  "type": "Exemple",
+  "number": "5.3.4",
+  "title": "Une preuve de divisibilité.",
+  "body": " Une preuve de divisibilité  Montrer par récurrence que est divisible par pour tout entier naturel .   Étape de base: On montre que la proposition est vraie pour . Pour , on a Puisque , la proposition est bien vraie en .  Étape d'induction: On suppose que est divisible par pour un entier naturel quelconque. Ainsi, on peut écrire pour On veut montrer que est divisible par . Or, on a que   Par la fermeture de la somme dans on a que , et donc est divisible par .  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .   "
+},
+{
+  "id": "exe-inegalite1",
+  "level": "2",
+  "url": "sec_induction.html#exe-inegalite1",
+  "type": "Exemple",
+  "number": "5.3.5",
+  "title": "Démonstration d’une inégalité.",
+  "body": " Démonstration d'une inégalité  Montrer par récurrence que pour tout entier naturel on a que .   Étape de base: On veut montrer que la proposition est vraie pour En la proposition devient ce qui est vrai.  Étape d'induction: On suppose que la propoistion est vraie pour un entier naturel quelconque. Ainsi, on suppose que On veut montrer qu'elle est vraie pour , c'est-à-dire que .  On a que Ainsi, sous l'H.I., la proposition est également vraie pour .  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .   "
+},
+{
+  "id": "exe-faussePreuve",
+  "level": "2",
+  "url": "sec_induction.html#exe-faussePreuve",
+  "type": "Exemple",
+  "number": "5.3.6",
+  "title": "Erreur commune d’une “preuve” par récurrence.",
+  "body": " Erreur commune d'une preuve par récurrence  Trouver l'erreur dans le raisonement suivant permettant de montrer que pour tout ensemble de plus de droites dans le plan, si aucune n'est parallèle à une autre, alors il existe un point commun à toutes ces droites:  Étape de base : On doit montrer que la proposition est vraie pour Or, si on a deux droites qui ne sont pas parallèles dans le plan, elles ont nécessairement un point en commun.  Étape d'induction : On suppose que la proposition est vraie pour , et on veut montrer qu'elle est vraie pour pour un entier tel que .  On considère un ensemble de droites dans le plan qui ne sont deux à deux non-parallèles. Si on regarde les premières droites, alors par l'H.I., il existe un point qui est en commun aux premières droites.  Par le même argument, il existe un point qui est en commun au dernières droites. On veut montrer que .  Supposons que ces points soient distincts. Alors toutes les droites contenant ces deux points seront les mêmes droites (car il y a une seule droite passant par deux points dans le plan). Ceci est une contradiction, car ces droites son distinctes. On doit donc avoir , et donc toutes les droites possèdent un point en commun.   À l'étape d'induction, l'argument démontrant que ne fonctionne pas en En effet, si alors et est un point de la première et de la deuxième droite, alors que est un point de la deuxième et la troisième droite. Ainsi, seule la deuxième droite contient les points et ce qui n'est pas une contradiction!  "
+},
+{
+  "id": "exe-sommeEntierImp",
+  "level": "2",
+  "url": "sec_induction.html#exe-sommeEntierImp",
+  "type": "Exemple",
+  "number": "5.3.7",
+  "title": "La somme des entiers positifs impairs.",
+  "body": " La somme des entiers positifs impairs  Montrer par récurrence que, pour la somme des premiers entiers positifs impairs est    Tout d'abord, on remarque qu'on peut écrire le -ième entier positif impair comme . Ainsi, on peut écrire la proposition comme .  Étape de base : On veut montrer que la proposition est vraie pour . Or, en la proposition est ce qui est vrai.  Étape d'induction : On suppose que la proposition est vraie pour où est un entier positif. On veut montrer qu'elle sera alors vraie pour .   Ainsi, la proposition est vraie pour  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .   "
+},
+{
+  "id": "example-100",
+  "level": "2",
+  "url": "sec_induction.html#example-100",
+  "type": "Exemple",
+  "number": "5.3.8",
+  "title": "Une autre preuve de divisibilité.",
+  "body": " Une autre preuve de divisibilité   Montrer par récurrence que pour un entier naturel, alors est divisible par .   "
+},
+{
+  "id": "exercise-287",
+  "level": "2",
+  "url": "sec_induction.html#exercise-287",
+  "type": "Question de compréhension",
+  "number": "5.3.3.1",
+  "title": "",
+  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
+},
+{
+  "id": "exercise-288",
+  "level": "2",
+  "url": "sec_induction.html#exercise-288",
+  "type": "Exercice",
+  "number": "5.3.4.1",
+  "title": "",
+  "body": "Montrer par réccurence que pour un entier positif, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on veut montrer que est vraie. On suppose donc que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-289",
+  "level": "2",
+  "url": "sec_induction.html#exercise-289",
+  "type": "Exercice",
+  "number": "5.3.4.2",
+  "title": "",
+  "body": "Montrer par récurrence que si est un entier naturel, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. Tout d'abord, remarquons que . Ensuite, en partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-290",
+  "level": "2",
+  "url": "sec_induction.html#exercise-290",
+  "type": "Exercice",
+  "number": "5.3.4.3",
+  "title": "",
+  "body": "Montrer par récurrence que si est un entier positif, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-291",
+  "level": "2",
+  "url": "sec_induction.html#exercise-291",
+  "type": "Exercice",
+  "number": "5.3.4.4",
+  "title": "",
+  "body": "Montrer par récurrence que si est un entier positif, alors  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-292",
+  "level": "2",
+  "url": "sec_induction.html#exercise-292",
+  "type": "Exercice",
+  "number": "5.3.4.5",
+  "title": "",
+  "body": "Montrer par récurrence que si est un entier plus grand que .  On pose la proposition pour et .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-293",
+  "level": "2",
+  "url": "sec_induction.html#exercise-293",
+  "type": "Exercice",
+  "number": "5.3.4.6",
+  "title": "",
+  "body": "Montrer par récurrence que si est un entier plus grand que .  On pose la proposition pour et .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-294",
+  "level": "2",
+  "url": "sec_induction.html#exercise-294",
+  "type": "Exercice",
+  "number": "5.3.4.7",
+  "title": "",
+  "body": "On considère l'expression . En remplaçant par certaine valeurs, trouver une formule pour l'expression de . Remarquer que   et  Montrer par récurrence que votre formule est bonne.  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-295",
+  "level": "2",
+  "url": "sec_induction.html#exercise-295",
+  "type": "Exercice",
+  "number": "5.3.4.8",
+  "title": "",
+  "body": " On considère l'expression pour un entier naturel.  Montrer par récurrence que   On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
 }
 ]
 

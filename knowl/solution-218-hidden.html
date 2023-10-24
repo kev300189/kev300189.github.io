@@ -11,36 +11,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para logical">
-<div class="para">On suppose que <span class="process-math">\(r=\frac{a}{b}\)</span> où  <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span> Ainsi, on a</div>
-<div class="displaymath process-math">
-\begin{align*}
-0 \amp= r^3+r+1 \\
-0 \amp= \left(\frac{a}{b}\right)^3+\frac{a}{b}+1 \\
-0 \amp= \frac{a^3}{b^3}+\frac{a}{b} + 1 \\
-0 \amp= a^3+ab^2 +b^3
-\end{align*}
-</div>
-</div> <div class="para">On veut montrer que <span class="process-math">\(a\)</span> et <span class="process-math">\(b\)</span> sont pairs</div> <div class="para logical">
-<div class="para">Supposons que <span class="process-math">\(b\)</span> soit impair. On a alors</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-sommePuissancePair.html">
-\begin{align*}
-0 = a^3 + ab^2+b^3 \amp\equiv a^3+ a^2 +1  \mod 2\\
-0 \amp\equiv 0+ 1 \mod 2 \text{ par l'exercice }\knowl{./knowl/exo-sommePuissancePair.html}{\text{5.1.4.5}}\\
-0 \amp\equiv 1 \mod 2 
-\end{align*}
-</div>
-<div class="para">ce qui est une contradiction. Ainsi, on doit avoir que <span class="process-math">\(b\)</span> est pair.</div>
+<div class="para">On suppose que <span class="process-math">\(\sqrt{2}\in\,\Q\text{,}\)</span> et on cerche à montrer que celà implique une contradiction.</div> <div class="para">Si <span class="process-math">\(\sqrt{2}\in\,\Q\text{,}\)</span> alors <span class="process-math">\(\sqrt{2}=\frac{a}{b}\text{,}\)</span> où <span class="process-math">\(a,b\in\,\Z\)</span> et <span class="process-math">\(b\neq 0\text{.}\)</span> De plus, on peut supposer que cette faction est réduite, c’est-a-dire que <span class="process-math">\(\pgcd(a,b)=1\text{.}\)</span>
 </div> <div class="para logical">
-<div class="para">Sachant que <span class="process-math">\(b\)</span> est pair, on veut également montrer que <span class="process-math">\(a\)</span> est pair. Puisque <span class="process-math">\(b\)</span> est pair, on a</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-cubeEvenBaseEven.html">
-\begin{align*}
-0 = a^3 + ab^2+b^3 \amp\equiv a^3+ a^2\cdot 0+0   \mod 2\\
-0 \amp\equiv a^3   \mod 2
-\end{align*}
+<div class="para">On a alors</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exe-nCarrePairnPair.html">
+\begin{equation*}
+2=(\sqrt{2})^2=\left(\frac{a}{b}\right)=\frac{a^2}{b^2}\text{.}
+\end{equation*}
 </div>
-<div class="para">Ainsi, <span class="process-math">\(a^3\)</span> est pair, d’où <span class="process-math">\(a\)</span> est également pair par <a href="" class="xref" data-knowl="./knowl/exo-cubeEvenBaseEven.html" title="Exercice 5.1.4.4">5.1.4.4</a>.</div>
-</div> <div class="para">Avec tout ce travail, on a montrer que <span class="process-math">\(2\mid a\)</span> et <span class="process-math">\(2\mid b\text{,}\)</span> mais alors <span class="process-math">\(2\leq \pgcd(a,b)=1,\)</span> ce qui est une contradiction. Il n’y a donc pas de solution rationnelle à l’équation <span class="process-math">\(x^3+x+1=0\text{.}\)</span>
+<div class="para">En isolant, on obtient <span class="process-math">\(a^2=2b^2\text{.}\)</span> Ainsi, par  <a href="" class="xref" data-knowl="./knowl/exe-nCarrePairnPair.html" title="Exemple 5.1.10: La parité et les carrés, prise 2">un des exemples précédent</a> on a que <span class="process-math">\(a^2\)</span> est un nombre pair, et donc <span class="process-math">\(a\)</span> l’est également. On peut donc écrire <span class="process-math">\(a=2k\text{,}\)</span> pour <span class="process-math">\(k\in\,\Z\text{,}\)</span> d’où</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exe-nCarrePairnPair.html">
+\begin{equation*}
+a^2=(2k)^2=4k^2=2b^2\text{.}
+\end{equation*}
 </div>
+</div> <div class="para">En divisant par <span class="process-math">\(2\)</span> des deux côtés, on a <span class="process-math">\(2k^2=b^2\text{.}\)</span> Par le même argument que précédemment, on a que <span class="process-math">\(b\)</span> est pair. Or, si <span class="process-math">\(a\)</span> et  <span class="process-math">\(b\)</span> sont pair, on a que <span class="process-math">\(2\lt\pgcd(a,b)=1\text{.}\)</span> Ceci est une contradiction, car <span class="process-math">\(2\lt 1\)</span> est faux.</div>
 </div></body>
 </html>
