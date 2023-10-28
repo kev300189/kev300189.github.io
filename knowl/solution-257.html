@@ -13,8 +13,25 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.3.6.1</span><span class="period">.</span>
-</h4>À l’étape d’induction, l’argument démontrant que <span class="process-math">\(p_1=p_2\)</span> ne fonctionne pas en <span class="process-math">\(k=2.\)</span> En effet, si <span class="process-math">\(k=2,\)</span> alors <span class="process-math">\(k+1=3,\)</span> et <span class="process-math">\(p_1\)</span> est un point de la première et de la deuxième droite, alors que <span class="process-math">\(p_2\)</span> est un point de la deuxième et la troisième droite. Ainsi, seule la deuxième droite contient les points <span class="process-math">\(p_1\)</span> et <span class="process-math">\(p_2,\)</span> ce qui n’est pas une contradiction!</div>
-<span class="incontext"><a href="sec_induction.html#solution-257" class="internal">Contexte</a></span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.3.3.1</span><span class="period">.</span>
+</h4>
+<div class="para">On considère les <span class="process-math">\(n+1\)</span> nombres suivants: <span class="process-math">\(1,\ 11,\ 111\,\dots,\ 11\dots 1\text{,}\)</span> où le dernier nombre est l’entier formé de <span class="process-math">\(n+1\)</span> chiffres <span class="process-math">\(1\)</span> dans sa représentation en base dix. On numérote <span class="process-math">\(n\)</span> boites de <span class="process-math">\(0\)</span> à <span class="process-math">\(n-1\text{.}\)</span> Ensuite on place chacun des <span class="process-math">\(n+1\)</span> nombres précédents dans la boite étiquettée par sont reste lors de la division par <span class="process-math">\(n\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Puisqu’il y a <span class="process-math">\(n+1\)</span> nombres et <span class="process-math">\(n\)</span> boites (restes), par le principe des tiroirs de Dirichlet, il existe deux de ces entiers, disons <span class="process-math">\(k_1\gt k_2\text{,}\)</span> tels que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+k_1\equiv k_2 \mod n\text{.}
+\end{equation*}
+</div>
+<div class="para">Par la définition équivalente decongruence, on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n\mid (k_1-k_2)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Ainsi, <span class="process-math">\(k_1-k_2\)</span> est un multiple de <span class="process-math">\(n\)</span> et il s’écrit avec uniquement des <span class="process-math">\(1\)</span> et des <span class="process-math">\(0\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="sec_pidgeonHoles.html#solution-257" class="internal">Contexte</a></span>
 </body>
 </html>

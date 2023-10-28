@@ -15,23 +15,28 @@
 <h4 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.2.3.1</span><span class="period">.</span>
 </h4>
-<div class="para">On considère les <span class="process-math">\(n+1\)</span> nombres suivants: <span class="process-math">\(1,\ 11,\ 111\,\dots,\ 11\dots 1\text{,}\)</span> où le dernier nombre est l’entier formé de <span class="process-math">\(n+1\)</span> chiffres <span class="process-math">\(1\)</span> dans sa représentation en base dix. On numérote <span class="process-math">\(n\)</span> boites de <span class="process-math">\(0\)</span> à <span class="process-math">\(n-1\text{.}\)</span> Ensuite on place chacun des <span class="process-math">\(n+1\)</span> nombres précédents dans la boite étiquettée par sont reste lors de la division par <span class="process-math">\(n\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Puisqu’il y a <span class="process-math">\(n+1\)</span> nombres et <span class="process-math">\(n\)</span> boites (restes), par le principe des tiroirs de Dirichlet, il existe deux de ces entiers, disons <span class="process-math">\(k_1\gt k_2\text{,}\)</span> tels que</div>
+<div class="para">On pose <span class="process-math">\(P(n):\, 1+ 2 + \cdots + n = \frac{n(n+1)}{2}.\)</span>
+</div> <div class="para">
+<em class="alert">Étape de base:</em> On veut montrer que <span class="process-math">\(P(1)\)</span> est vraie. Tout d’abord on remaque que <span class="process-math">\(P(1)\)</span> est la proposition <span class="process-math">\(1=\frac{1(1+1)}{2}\text{.}\)</span> Ceci est clairement vraie, car <span class="process-math">\(\frac{2}{2}=1.\)</span>
+</div> <div class="para">
+<em class="alert">Étape d’induction:</em> On suppose maintenant que <span class="process-math">\(P(k)\)</span> est vraie, c’est-à-dire que <span class="process-math">\(1+2+\cdots + k = \frac{k(k+1)}{2},\)</span> où <span class="process-math">\(k \geq 1\)</span> est un entier. On veut montrer que <span class="process-math">\(P(k+1)\)</span> est vraie.</div> <div class="para logical">
+<div class="para">On remarque que <span class="process-math">\(P(k+1)\)</span> est la proposition</div>
 <div class="displaymath process-math">
 \begin{equation*}
-k_1\equiv k_2 \mod n\text{.}
+1+2+\cdots + k + (k+1) = \frac{(k+1)(k+2)}{2}
 \end{equation*}
 </div>
-<div class="para">Par la définition équivalente decongruence, on a</div>
+<div class="para">En partant de l’égalité à gauche, on a</div>
 <div class="displaymath process-math">
-\begin{equation*}
-n\mid (k_1-k_2)\text{.}
-\end{equation*}
+\begin{align*}
+1+2+\dots + k+(k+1) \amp = \frac{k(k+1)}{2} +(k+1) \text{, par H.I.}\\
+\amp= \frac{k(k+1)}{2}+\frac{2(k+1)}{2} = \frac{k(k+1)+2(k+1)}{2}\\
+\amp= \frac{(k+1)(k+2)}{2}
+\end{align*}
 </div>
-</div> <div class="para">Ainsi, <span class="process-math">\(k_1-k_2\)</span> est un multiple de <span class="process-math">\(n\)</span> et il s’écrit avec uniquement des <span class="process-math">\(1\)</span> et des <span class="process-math">\(0\text{.}\)</span>
+</div> <div class="para">Ainsi, puisqu’on a montré que la proposition est vraie pour <span class="process-math">\(n=1\text{,}\)</span> et qu’on a montré que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est également vraie pour <span class="process-math">\(n=k+1\text{,}\)</span> on a montré que la proposition est vraie pour tout <span class="process-math">\(n\geq 1\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec_pidgeonHoles.html#solution-242" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec_induction.html#solution-242" class="internal">Contexte</a></span>
 </body>
 </html>

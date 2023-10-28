@@ -12,8 +12,15 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
-<div class="para">
-<em class="alert">Étape d’induction:</em> On suppose que la propoistion est vraie pour <span class="process-math">\(n=k\)</span> un entier naturel quelconque. Ainsi, on suppose que <span class="process-math">\(k\lt 2^k.\)</span> On veut montrer qu’elle est vraie pour <span class="process-math">\(n=k+1,\text{,}\)</span> c’est-à-dire que <span class="process-math">\((k+1)\lt 2^{k+1}\text{.}\)</span>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+1+3+\cdots +(2k-1) + (2k+1)\amp=k^2 + (2k+1)\text{, par H.I.}\\
+\amp = (k+1)^2
+\end{align*}
+</div>
+<div class="para">Ainsi, la proposition est vraie pour <span class="process-math">\(n=k+1\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec_induction.html#p-2452" class="internal">Contexte</a></span>
 </body>

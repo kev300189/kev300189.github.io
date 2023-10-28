@@ -13,12 +13,21 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraphe</span></h6>
 <div class="para logical">
-<div class="para">
-<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): \frac{1}{2} = 1-\frac{1}{2},\)</span> ce qui est vrai, puisque</div>
+<div class="para">Ainsi, on veut montrer que</div>
 <div class="displaymath process-math">
 \begin{equation*}
-1-\frac{1}{2}=\frac{1}{2}\text{.}
+\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}+\frac{1}{2^{k+1}}=1-\frac{1}{2^{k+1}}
 \end{equation*}
+</div>
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’égalité, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}+\frac{1}{2^{k+1}}\\
+\amp= \left(\frac{1}{2} +\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2^k}\right)  +\frac{1}{2^{k+1}}\\
+\amp= 1-\frac{1}{2^k}+ \frac{1}{2^{k+1}} \text{ par H.I.}\\
+\amp=1-\frac{2}{2^{k+1}}+ \frac{1}{2^{k+1}}\text{ (même dénominateur)}\\
+\amp=1-\frac{1}{2^{k+1}}
+\end{align*}
 </div>
 </div>
 <span class="incontext"><a href="sec_induction.html#p-2491" class="internal">Contexte</a></span>

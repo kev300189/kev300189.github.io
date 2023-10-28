@@ -13,12 +13,23 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraphe</span></h6>
 <div class="para logical">
-<div class="para">
-<em class="alert">Étape de base:</em> On montre que <span class="process-math">\(P(1)\)</span> est vraie. Or, on a que <span class="process-math">\(P(1): 1\cdot 1! = (1+1)!-1,\)</span> ce qui est vrai, puisque <span class="process-math">\(1\cdot 1!=1\)</span> et</div>
+<div class="para">Ainsi, on veut montrer que</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(1+1)!-1=2!-1=1\text{.}
+1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!+(k+1)(k+1)!=(k+2)!-1
 \end{equation*}
+</div>
+<div class="para">à l’aide de l’H.I. En partant du membre de gauche de l’égalité, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp 1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!+(k+1)(k+1)!\\
+\amp= \left(1\cdot 1! +2\cdot 2!+3\cdot 3!+\cdots +k\cdot k!\right)  +(k+1)(k+1)! \\
+\amp= \left( (k+1)!-1\right) + (k+1)(k+1)! \text{ par H.I.}\\
+\amp=(k+1)! + (k+1)(k+1)! -1\\
+\amp=(1+k+1)(k+1)! -1\text{ (mise en évidence)}\\
+\amp=(k+2)(k+1)! -1\\
+\amp=(k+2)! -1\text{ (par la définition de la factorielle.)}
+\end{align*}
 </div>
 </div>
 <span class="incontext"><a href="sec_induction.html#p-2486" class="internal">Contexte</a></span>

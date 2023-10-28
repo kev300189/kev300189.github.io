@@ -4337,6 +4337,213 @@ var ptx_lunr_docs = [
   "number": "5.1.4.18",
   "title": "",
   "body": "Montrer ou réfuter qu'il existe un et un tels que . C'est vrai! Considérer . Si , on a montrer que c'est vrai. Sinon, que peut-on dire sur ?  On va montrer qu'un tel et un tel existe.  Tout d'abord, on remarque que et Il y a alors deux cas possible. Soit ou bien .  Supposons que alors on peut poser et , et on a terminé.  Si on peut alors poser et , par l'exercise . On a alors .  Ainsi, on n'a pas explicitement trouver un et un tel que mais on a montrer qu'une telle paire existe.  "
+},
+{
+  "id": "sec_induction",
+  "level": "1",
+  "url": "sec_induction.html",
+  "type": "Section",
+  "number": "5.2",
+  "title": "Les preuves par récurrence (par induction)",
+  "body": " Les preuves par récurrence (par induction)   Si on considère la proposition Comment peut-on montrer que la proposition est vraie pour tout En remplaçant par différentes valeurs, on peut remarquer que la proposition est vraie, mais il est difficile (mais pas impossible) de le montrer directement en utilisant les méthodes utilisées jusqu'à maintenant.  Une méthode efficace permettant de démontrer ce genre de théorème est ce qu'on appelle une preuve par récurrence. Pour ilustré l'idée, considérons l'exemple suivant.  On s'imagine une échelle infinie (avec une infinité de barreaux). On se demande à jusqu'à quel barreau est-ce qu'on peut se rendre si on sait les informations suivantes. Premièrement, on suppose qu'on est en mesure d'atteindre le premier barreau. Ensuite, on suppose que si on est en mesure d'atteindre le ième barreau, alors on est également capable d'atteindre le ième barreau. Jusqu'où peut-on se rendre?  Par ce qui précède, on peut conclure qu'on peut se rendre à tous les barreaux de l'échelle! En effet, puisqu'on peut se rendre au premier, on peut se rendre au deuxième. Puisqu'on peut se rendre au deuxième, on peut se rendre au troisième. Puisqu'on peut se rendre au troisième, on peut se rendre au quatrième. Puisqu'on peut se rendre au quatrième... et ainsi de suite.    Les différentes étapes   Si on garde l'exemple de l'échelle infinie en tête, on remarque qu'il y avait deux parties à notre argument . Tout d'abord, on a supposé qu'on pouvait se rendre au premier barreau. C'est l'étape de base.  Par la suite, on a dit que si on pouvait se rendre au ième barreau, alors on pouvait se rendre au ième barreau. C'est l'étape d'induction.    Preuve par récurence   Pour démontrer qu'une proposition est vraie pour tout on peut procéder de la façon suivante.   Étape de base: On montre que est vraie.   Étape d'induction: On montre que l'implication est vraie pour un entier positif quelconque, c'est-à-dire que si on suppose vraie, alors on montre que sera vraie également.    À l'étape d'induction, lorsqu'on suppose que est vraie, on dit qu'on fait une hypothèse d'induction. On notera souvent H.I. pour indiquer qu'on utilise cette hypothèse.     Une petite généralisation  En modifiant l'étape de base de la preuve par induction, on peut montrer qu'un proposition est vraie pour tout entier , où est un entier quelconque. L'étape de base sera alors de montrer que est vraie. L'étape d'induction sera alors de montrer que est vraie pour tout .     Exemples de preuves par récurrence  Regardons maintenant quelques exemples pour illustrer la méthode, en commençant par la formule de la somme des entiers positifs.   La somme des premiers entiers positifs  Montrer par récurrence que, pour on a    On pose   Étape de base: On veut montrer que est vraie. Tout d'abord on remaque que est la proposition . Ceci est clairement vraie, car  Étape d'induction: On suppose maintenant que est vraie, c'est-à-dire que où est un entier. On veut montrer que est vraie.  On remarque que est la proposition En partant de l'égalité à gauche, on a   Ainsi, puisqu'on a montré que la proposition est vraie pour , et qu'on a montré que si elle est vraie pour , alors elle est également vraie pour , on a montré que la proposition est vraie pour tout .     Une preuve de divisibilité  Montrer par récurrence que est divisible par pour tout entier naturel .   Étape de base: On montre que la proposition est vraie pour . Pour , on a Puisque , la proposition est bien vraie en .  Étape d'induction: On suppose que est divisible par pour un entier naturel quelconque. Ainsi, on peut écrire pour On veut montrer que est divisible par . Or, on a que   Par la fermeture de la somme dans on a que , et donc est divisible par .  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .     Démonstration d'une inégalité  Montrer par récurrence que pour tout entier naturel , on a que .   Étape de base: On veut montrer que la proposition est vraie pour En la proposition devient ce qui est vrai.  Étape d'induction: On suppose que la propoistion est vraie pour un entier naturel quelconque. Ainsi, on suppose que On veut montrer qu'elle est vraie pour , c'est-à-dire que .  On a que Ainsi, sous l'H.I., la proposition est également vraie pour .  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .    Lorsqu'on utilise une preuve par récurrence, il faut s'assurer que l'argument utilisé pour l'étape d'induction fonctionne pour toutes les valeurs de . Voici un exemple d'une mauvaise utilisation d'une preuve par récurrence pour montrer une proposition qui est fausse.   Erreur commune d'une preuve par récurrence  Trouver l'erreur dans le raisonement suivant permettant de montrer que pour tout ensemble de droites dans le plan, si aucune n'est parallèle à une autre, alors il existe un point commun à toutes ces droites:  Étape de base : On doit montrer que la proposition est vraie pour Or, si on a deux droites qui ne sont pas parallèles dans le plan, elles ont nécessairement un point en commun.  Étape d'induction : On suppose que la proposition est vraie pour , et on veut montrer qu'elle est vraie pour pour un entier tel que .  On considère un ensemble de droites dans le plan qui ne sont deux à deux non-parallèles. Si on regarde les premières droites, alors par l'H.I., il existe un point qui est en commun aux premières droites.  Par le même argument, il existe un point qui est en commun au dernières droites. On veut montrer que .  Supposons que ces points soient distincts. Alors toutes les droites contenant ces deux points seront les mêmes droites (car il y a une seule droite passant par deux points dans le plan). Ceci est une contradiction, car ces droites son distinctes. On doit donc avoir , et donc toutes les droites possèdent un point en commun.   À l'étape d'induction, l'argument démontrant que ne fonctionne pas en En effet, si alors et est un point de la première et de la deuxième droite, alors que est un point de la deuxième et la troisième droite. Ainsi, seule la deuxième droite contient les points et ce qui n'est pas une contradiction!    Une autre preuve par récurrence  Trouver l'erreur dans le raisonement suivant permettant de montrer que toutes les voitures sont de la même couleur:  On considère un ensemble de voitures . On pose la proposition: Toutes les voitures de l'ensemble sont de la même couleur.  Étape de base : On doit montrer que la proposition est vraie pour . Or, si , , et on a bien que toutes les voitures sont de la même couleur (celle de ).  Étape d'induction : On suppose que la proposition est vraie pour tous les ensembles de voitures, et on veut montrer qu'elle est vraie pour tous les enembles de voitures, pour un entier tel que .  On considère l'ensemble formé de voiture. On a alors que Par l'H.I., toutes les voitures de sont de la même couleur que la voiture . De même, toutes les voitures de sont de la même couleur que la voiture .  Ainsi, toutes les voitures de sont de la même couleur que la voiture .    À l'étape d'induction, l'argument démontrant que toutes les voitures sont de la même couleur ne fonctionne pas pour . En effet, dans ce cas, .  On a encore , mais il n'y a pas d'élément en commun dans ces deux ensembles (car ). L'argument ne fonctionne donc pas à cet étape! La proposition n'est donc pas vrai pour .     La somme des entiers positifs impairs  Montrer par récurrence que, pour la somme des premiers entiers positifs impairs est    Tout d'abord, on remarque qu'on peut écrire le -ième entier positif impair comme . Ainsi, on peut écrire la proposition comme .  Étape de base : On veut montrer que la proposition est vraie pour . Or, en la proposition est ce qui est vrai.  Étape d'induction : On suppose que la proposition est vraie pour où est un entier positif. On veut montrer qu'elle sera alors vraie pour .   Ainsi, la proposition est vraie pour  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .     Une autre preuve de divisibilité   Montrer par récurrence que pour un entier naturel, alors est divisible par .   Étape de base: On montre que la proposition est vraie pour . Pour , on a . Puisque , la proposition est bien vraie en .  Étape d'induction: On suppose que est divisible par pour un entier naturel quelconque. Ainsi, on peut écrire pour On veut montrer que est divisible par . Or, on a que   Puisque , on a que est divisible par .  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .       Les points importants de cette section sont:  L'idée de base d'une preuve par récurrence;   Les étapes d'une preuve par récurrence;   L'erreur à ne pas faire!        Ces questions sont à faire avant de venir en classe et à remettre au début du cours.    Expliquer le principe d'une preuve par récurrence.    Soit , , et soit des ensembles quelconques pour allant de à . On considère la proposition .   Rappel: On a et    Faire l'étape de base d'une preuve par récurrence.   L'étape de base est lorsque .   Énoncer l'étape d'induction, sans la faire.    Montrer par récurrence que pour .   Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.     À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.  Montrer par réccurence que pour un entier positif, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on veut montrer que est vraie. On suppose donc que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   Montrer par récurrence que si est un entier naturel, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. Tout d'abord, remarquons que . Ensuite, en partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   Montrer par récurrence que si est un entier positif, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   Montrer par récurrence que si est un entier positif, alors  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .    Soit un ensemble de cardinalité , c'est-à-dire que . Montrer par récurrence que le nombre de sous-ensemble de est .   Montrer par récurrence que si est un entier plus grand que .  On pose la proposition pour et .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   Montrer par récurrence que si est un entier plus grand que .  On pose la proposition pour et .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .   On considère l'expression . En remplaçant par certaine valeurs, trouver une formule pour l'expression de . Remarquer que   et  Montrer par récurrence que votre formule est bonne.  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .    On considère l'expression pour un entier naturel.  Montrer par récurrence que   On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .     "
+},
+{
+  "id": "def-induction",
+  "level": "2",
+  "url": "sec_induction.html#def-induction",
+  "type": "Définition",
+  "number": "5.2.1",
+  "title": "Preuve par récurence.",
+  "body": " Preuve par récurence   Pour démontrer qu'une proposition est vraie pour tout on peut procéder de la façon suivante.   Étape de base: On montre que est vraie.   Étape d'induction: On montre que l'implication est vraie pour un entier positif quelconque, c'est-à-dire que si on suppose vraie, alors on montre que sera vraie également.    À l'étape d'induction, lorsqu'on suppose que est vraie, on dit qu'on fait une hypothèse d'induction. On notera souvent H.I. pour indiquer qu'on utilise cette hypothèse.   "
+},
+{
+  "id": "remark-13",
+  "level": "2",
+  "url": "sec_induction.html#remark-13",
+  "type": "Remarque",
+  "number": "5.2.2",
+  "title": "Une petite généralisation.",
+  "body": " Une petite généralisation  En modifiant l'étape de base de la preuve par induction, on peut montrer qu'un proposition est vraie pour tout entier , où est un entier quelconque. L'étape de base sera alors de montrer que est vraie. L'étape d'induction sera alors de montrer que est vraie pour tout .  "
+},
+{
+  "id": "exe-sommeEntiers",
+  "level": "2",
+  "url": "sec_induction.html#exe-sommeEntiers",
+  "type": "Exemple",
+  "number": "5.2.3",
+  "title": "La somme des <span class=\"process-math\">\\(n\\)<\/span> premiers entiers positifs.",
+  "body": " La somme des premiers entiers positifs  Montrer par récurrence que, pour on a    On pose   Étape de base: On veut montrer que est vraie. Tout d'abord on remaque que est la proposition . Ceci est clairement vraie, car  Étape d'induction: On suppose maintenant que est vraie, c'est-à-dire que où est un entier. On veut montrer que est vraie.  On remarque que est la proposition En partant de l'égalité à gauche, on a   Ainsi, puisqu'on a montré que la proposition est vraie pour , et qu'on a montré que si elle est vraie pour , alors elle est également vraie pour , on a montré que la proposition est vraie pour tout .   "
+},
+{
+  "id": "exe-divisibilite",
+  "level": "2",
+  "url": "sec_induction.html#exe-divisibilite",
+  "type": "Exemple",
+  "number": "5.2.4",
+  "title": "Une preuve de divisibilité.",
+  "body": " Une preuve de divisibilité  Montrer par récurrence que est divisible par pour tout entier naturel .   Étape de base: On montre que la proposition est vraie pour . Pour , on a Puisque , la proposition est bien vraie en .  Étape d'induction: On suppose que est divisible par pour un entier naturel quelconque. Ainsi, on peut écrire pour On veut montrer que est divisible par . Or, on a que   Par la fermeture de la somme dans on a que , et donc est divisible par .  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .   "
+},
+{
+  "id": "exe-inegalite1",
+  "level": "2",
+  "url": "sec_induction.html#exe-inegalite1",
+  "type": "Exemple",
+  "number": "5.2.5",
+  "title": "Démonstration d’une inégalité.",
+  "body": " Démonstration d'une inégalité  Montrer par récurrence que pour tout entier naturel , on a que .   Étape de base: On veut montrer que la proposition est vraie pour En la proposition devient ce qui est vrai.  Étape d'induction: On suppose que la propoistion est vraie pour un entier naturel quelconque. Ainsi, on suppose que On veut montrer qu'elle est vraie pour , c'est-à-dire que .  On a que Ainsi, sous l'H.I., la proposition est également vraie pour .  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .   "
+},
+{
+  "id": "exe-faussePreuve",
+  "level": "2",
+  "url": "sec_induction.html#exe-faussePreuve",
+  "type": "Exemple",
+  "number": "5.2.6",
+  "title": "Erreur commune d’une “preuve” par récurrence.",
+  "body": " Erreur commune d'une preuve par récurrence  Trouver l'erreur dans le raisonement suivant permettant de montrer que pour tout ensemble de droites dans le plan, si aucune n'est parallèle à une autre, alors il existe un point commun à toutes ces droites:  Étape de base : On doit montrer que la proposition est vraie pour Or, si on a deux droites qui ne sont pas parallèles dans le plan, elles ont nécessairement un point en commun.  Étape d'induction : On suppose que la proposition est vraie pour , et on veut montrer qu'elle est vraie pour pour un entier tel que .  On considère un ensemble de droites dans le plan qui ne sont deux à deux non-parallèles. Si on regarde les premières droites, alors par l'H.I., il existe un point qui est en commun aux premières droites.  Par le même argument, il existe un point qui est en commun au dernières droites. On veut montrer que .  Supposons que ces points soient distincts. Alors toutes les droites contenant ces deux points seront les mêmes droites (car il y a une seule droite passant par deux points dans le plan). Ceci est une contradiction, car ces droites son distinctes. On doit donc avoir , et donc toutes les droites possèdent un point en commun.   À l'étape d'induction, l'argument démontrant que ne fonctionne pas en En effet, si alors et est un point de la première et de la deuxième droite, alors que est un point de la deuxième et la troisième droite. Ainsi, seule la deuxième droite contient les points et ce qui n'est pas une contradiction!  "
+},
+{
+  "id": "exe-faussePreuve2",
+  "level": "2",
+  "url": "sec_induction.html#exe-faussePreuve2",
+  "type": "Exemple",
+  "number": "5.2.7",
+  "title": "Une autre “preuve” par récurrence.",
+  "body": " Une autre preuve par récurrence  Trouver l'erreur dans le raisonement suivant permettant de montrer que toutes les voitures sont de la même couleur:  On considère un ensemble de voitures . On pose la proposition: Toutes les voitures de l'ensemble sont de la même couleur.  Étape de base : On doit montrer que la proposition est vraie pour . Or, si , , et on a bien que toutes les voitures sont de la même couleur (celle de ).  Étape d'induction : On suppose que la proposition est vraie pour tous les ensembles de voitures, et on veut montrer qu'elle est vraie pour tous les enembles de voitures, pour un entier tel que .  On considère l'ensemble formé de voiture. On a alors que Par l'H.I., toutes les voitures de sont de la même couleur que la voiture . De même, toutes les voitures de sont de la même couleur que la voiture .  Ainsi, toutes les voitures de sont de la même couleur que la voiture .    À l'étape d'induction, l'argument démontrant que toutes les voitures sont de la même couleur ne fonctionne pas pour . En effet, dans ce cas, .  On a encore , mais il n'y a pas d'élément en commun dans ces deux ensembles (car ). L'argument ne fonctionne donc pas à cet étape! La proposition n'est donc pas vrai pour .   "
+},
+{
+  "id": "exe-sommeEntierImp",
+  "level": "2",
+  "url": "sec_induction.html#exe-sommeEntierImp",
+  "type": "Exemple",
+  "number": "5.2.8",
+  "title": "La somme des entiers positifs impairs.",
+  "body": " La somme des entiers positifs impairs  Montrer par récurrence que, pour la somme des premiers entiers positifs impairs est    Tout d'abord, on remarque qu'on peut écrire le -ième entier positif impair comme . Ainsi, on peut écrire la proposition comme .  Étape de base : On veut montrer que la proposition est vraie pour . Or, en la proposition est ce qui est vrai.  Étape d'induction : On suppose que la proposition est vraie pour où est un entier positif. On veut montrer qu'elle sera alors vraie pour .   Ainsi, la proposition est vraie pour  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .   "
+},
+{
+  "id": "example-96",
+  "level": "2",
+  "url": "sec_induction.html#example-96",
+  "type": "Exemple",
+  "number": "5.2.9",
+  "title": "Une autre preuve de divisibilité.",
+  "body": " Une autre preuve de divisibilité   Montrer par récurrence que pour un entier naturel, alors est divisible par .   Étape de base: On montre que la proposition est vraie pour . Pour , on a . Puisque , la proposition est bien vraie en .  Étape d'induction: On suppose que est divisible par pour un entier naturel quelconque. Ainsi, on peut écrire pour On veut montrer que est divisible par . Or, on a que   Puisque , on a que est divisible par .  Puisque la proposition est vraie pour , et que si la proposition est vraie pour , elle est aussi vraie pour alors la proposition est vraie pour tout .   "
+},
+{
+  "id": "exercise-277",
+  "level": "2",
+  "url": "sec_induction.html#exercise-277",
+  "type": "Question de compréhension",
+  "number": "5.2.3.1",
+  "title": "",
+  "body": " Expliquer le principe d'une preuve par récurrence.  "
+},
+{
+  "id": "exercise-278",
+  "level": "2",
+  "url": "sec_induction.html#exercise-278",
+  "type": "Question de compréhension",
+  "number": "5.2.3.2",
+  "title": "",
+  "body": " Soit , , et soit des ensembles quelconques pour allant de à . On considère la proposition .   Rappel: On a et    Faire l'étape de base d'une preuve par récurrence.   L'étape de base est lorsque .   Énoncer l'étape d'induction, sans la faire.  "
+},
+{
+  "id": "exercise-279",
+  "level": "2",
+  "url": "sec_induction.html#exercise-279",
+  "type": "Question de compréhension",
+  "number": "5.2.3.3",
+  "title": "",
+  "body": " Montrer par récurrence que pour .  "
+},
+{
+  "id": "exercise-280",
+  "level": "2",
+  "url": "sec_induction.html#exercise-280",
+  "type": "Question de compréhension",
+  "number": "5.2.3.4",
+  "title": "",
+  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
+},
+{
+  "id": "exercise-281",
+  "level": "2",
+  "url": "sec_induction.html#exercise-281",
+  "type": "Exercice",
+  "number": "5.2.4.1",
+  "title": "",
+  "body": "Montrer par réccurence que pour un entier positif, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on veut montrer que est vraie. On suppose donc que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-282",
+  "level": "2",
+  "url": "sec_induction.html#exercise-282",
+  "type": "Exercice",
+  "number": "5.2.4.2",
+  "title": "",
+  "body": "Montrer par récurrence que si est un entier naturel, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. Tout d'abord, remarquons que . Ensuite, en partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-283",
+  "level": "2",
+  "url": "sec_induction.html#exercise-283",
+  "type": "Exercice",
+  "number": "5.2.4.3",
+  "title": "",
+  "body": "Montrer par récurrence que si est un entier positif, alors .  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque et .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-284",
+  "level": "2",
+  "url": "sec_induction.html#exercise-284",
+  "type": "Exercice",
+  "number": "5.2.4.4",
+  "title": "",
+  "body": "Montrer par récurrence que si est un entier positif, alors  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-285",
+  "level": "2",
+  "url": "sec_induction.html#exercise-285",
+  "type": "Exercice",
+  "number": "5.2.4.5",
+  "title": "",
+  "body": " Soit un ensemble de cardinalité , c'est-à-dire que . Montrer par récurrence que le nombre de sous-ensemble de est .  "
+},
+{
+  "id": "exercise-286",
+  "level": "2",
+  "url": "sec_induction.html#exercise-286",
+  "type": "Exercice",
+  "number": "5.2.4.6",
+  "title": "",
+  "body": "Montrer par récurrence que si est un entier plus grand que .  On pose la proposition pour et .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-287",
+  "level": "2",
+  "url": "sec_induction.html#exercise-287",
+  "type": "Exercice",
+  "number": "5.2.4.7",
+  "title": "",
+  "body": "Montrer par récurrence que si est un entier plus grand que .  On pose la proposition pour et .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-288",
+  "level": "2",
+  "url": "sec_induction.html#exercise-288",
+  "type": "Exercice",
+  "number": "5.2.4.8",
+  "title": "",
+  "body": "On considère l'expression . En remplaçant par certaine valeurs, trouver une formule pour l'expression de . Remarquer que   et  Montrer par récurrence que votre formule est bonne.  On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'égalité, on a   On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
+},
+{
+  "id": "exercise-289",
+  "level": "2",
+  "url": "sec_induction.html#exercise-289",
+  "type": "Exercice",
+  "number": "5.2.4.9",
+  "title": "",
+  "body": " On considère l'expression pour un entier naturel.  Montrer par récurrence que   On pose la proposition pour .  Étape de base: On montre que est vraie. Or, on a que ce qui est vrai, puisque .  Étape d'induction: On suppose que est un entier quelconque et on suppose que est vraie (c'est à dire que est notre H.I.), et on veut montrer que est alors vraie.  Ainsi, on veut montrer que à l'aide de l'H.I. En partant du membre de gauche de l'inégalité, on a c'est-à-dire que .  On a montré que est vraie, et que si est vraie pour un entier , alors est vraie. Ainsi, par le principe d'induction, on a montré que la proposition est vraie pour tout .  "
 }
 ]
 

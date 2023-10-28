@@ -10,5 +10,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like"><div class="para">On suppose que les <span class="process-math">\(10\)</span> premières billes pigées sont des billes rouge. Par la suite, si on pige deux billes supplémentaires, elles seront nécessairement bleu.</div></div></body>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">
+<em class="alert">Étape de base:</em> On montre que la proposition est vraie pour <span class="process-math">\(n=0\text{.}\)</span> Pour <span class="process-math">\(n=0\text{,}\)</span> on a <span class="process-math">\(7^{n+2}+8^{2n+1}=49+8=57\text{.}\)</span> Puisque <span class="process-math">\(57\mid 57\text{,}\)</span> la proposition est bien vraie en <span class="process-math">\(n=0\text{.}\)</span>
+</div> <div class="para">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(7^{k+2}+8^{2k+1}\)</span> est divisible par <span class="process-math">\(57\)</span> pour <span class="process-math">\(k\)</span> un entier naturel quelconque. Ainsi, on peut écrire <span class="process-math">\(7^{k+2}+8^{2k+1}=57q,\)</span> pour <span class="process-math">\(q\in\,\Z.\)</span> On veut montrer que <span class="process-math">\(7^{k+1+2}+8^{2(k+1)+1}\)</span> est divisible par <span class="process-math">\(57\text{.}\)</span> Or, on a que</div> <div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+7^{k+1+2}+8^{2(k+1)+1} \amp = 7\cdot 7^{k+2} + 8^2\cdot 8^{2k+1}\\
+\amp= 7\cdot 7^{k+2} + 64\cdot 8^{2k+1} \\
+\amp= 7\cdot 7^{k+2} + (7+57)\cdot 8^{2k+1} \\
+\amp  = 7\cdot 7^{k+2} + 7\cdot 8^{2k+1}+57\cdot 8^{2k+1}\\
+\amp  = 7\cdot (7^{k+2} + \cdot 8^{2k+1} )+57\cdot 8^{2k+1}\\
+\amp = 7\cdot (57q )+57\cdot 8^{2k+1}  \text{, par H.I.}\\
+\amp = 57(7q+8^{2k+1}) 
+\end{align*}
+</div>
+<div class="para">Puisque <span class="process-math">\(7q+8^{2k+1}\in\,\Z\text{,}\)</span>  on a que <span class="process-math">\(7^{k+1+2}+8^{2(k+1)+1}\)</span> est divisible par <span class="process-math">\(57\text{.}\)</span>
+</div>
+</div> <div class="para">Puisque la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si la proposition est vraie pour <span class="process-math">\(n=k\text{,}\)</span> elle est aussi vraie pour <span class="process-math">\(n=k+1,\)</span> alors la proposition est vraie pour tout <span class="process-math">\(n\in\, \N\text{.}\)</span>
+</div>
+</div></body>
 </html>
