@@ -15,9 +15,15 @@
 <h4 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.3.5.1</span><span class="period">.</span>
 </h4>
-<div class="para">On note <span class="process-math">\(a_i\)</span> le nombre de parties jouées avant et durant le jour <span class="process-math">\(i,\)</span> pour <span class="process-math">\(i=1,\,2,\,\dots,30.\)</span> Puisque l’équipe joue au moins une partie par jour et moins de <span class="process-math">\(45\)</span> partie dans le mois, on a <span class="process-math">\(1\geq a_1\lt a_2\lt\cdots \lt a_n \lt \cdots \lt a_{30} \leq 45.\)</span> En particulier, on a que <span class="process-math">\(a_i\neq a_j\)</span> si <span class="process-math">\(i\neq j\text{.}\)</span>
-</div> <div class="para">On considère également les <span class="process-math">\(30\)</span> entiers <span class="process-math">\(a_i +14\)</span> pour <span class="process-math">\(i=1,\,2,\,\dots,30.\)</span> On aura alors <span class="process-math">\(15\leq a_1+14\lt a_2+14\lt \cdots \lt a_n+14\lt \cdots \lt a_{30}+14 \leq 59.\)</span> Encore une fois, on a <span class="process-math">\(a_i+14\neq a_j + 14 \)</span> si  <span class="process-math">\(i\neq j\text{.}\)</span>
-</div> <div class="para">On a donc les <span class="process-math">\(60\)</span> entiers <span class="process-math">\(a_1,a_2\dots,\a_{30},a_1+14,a_2+14,\dots,a_{30}+14\)</span> compris entre <span class="process-math">\(1\)</span> et <span class="process-math">\(59.\)</span> Il y aura donc au moins deux de ces entiers qui sont égaux. Par ce qui précède, on doit avoir <span class="process-math">\(a_j=a_i+14.\)</span> Ainsi, le nombre de parties jouées entre le jour <span class="process-math">\(i\)</span> et le jour <span class="process-math">\(j\)</span> est <span class="process-math">\(14\text{.}\)</span>
+<div class="para logical">
+<div class="para">Tout entier <span class="process-math">\(n\in\,A\)</span> peut s’écrire comme <span class="process-math">\(n=2^kq,\)</span> où <span class="process-math">\(k\)</span> est un entier naturel et <span class="process-math">\(q\in\,\{1,2,\dots,2n\}\)</span> est impair. Supposons que la représentation en base deux de <span class="process-math">\(q\)</span> est <span class="process-math">\(d={d_md_{m-1}\cdots d_1d_0}\text{.}\)</span> Ainsi, la représentation en base deux de <span class="process-math">\(n\)</span> est <span class="process-math">\(\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n=\overbrace{d_md_{m-1}\cdots d_1d_0}^{\text{représentation binaire de } q}\underbrace{00\cdots0_2}_{\text{ avec } k \text{ }0}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para">Puisqu’il y a <span class="process-math">\(n+1\)</span> éléments de <span class="process-math">\(A\)</span> et <span class="process-math">\(n\)</span> nombres impairs de <span class="process-math">\(\{1,2,\dots,2n\},\)</span> il exsite <span class="process-math">\(a_1,\,a_2\in\,A\)</span> tels que <span class="process-math">\(a_1=2^{k_1}q\)</span> et <span class="process-math">\(a_2=2^{k_2}q.\)</span> En supposant <span class="process-math">\(a_1\lt a_2,\)</span> on  a alors <span class="process-math">\(2^{k_2-k_1}a_1=2^{k_2-k_1}2^{k_1}q=2^{k_2}q=a_2.\)</span> Ainsi, on a <span class="process-math">\(a_1\mid a_2\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec_pidgeonHoles.html#solution-261" class="internal">Contexte</a></span>
