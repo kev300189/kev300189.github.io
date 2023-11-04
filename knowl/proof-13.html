@@ -11,6 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Démonstration</span></h5>Une preuve par récurrence sera présentée plus tard.</article><span class="incontext"><a href="sec_arrCombinaison.html#proof-13" class="internal">Contexte</a></span>
+<article class="hiddenproof"><h5 class="heading"><span class="type">Démonstration</span></h5>
+<div class="para logical">
+<div class="para">On a</div>
+<div class="displaymath process-math">
+\begin{align*}
+\Binomial{n-1}{r-1}+\Binomial{n-1}{r} \amp = \frac{(n-1)!}{(r-1)!((n-1)-(r-1))!}+\frac{(n-1)!}{(r)!((n-1)-r)!}\\
+\amp = \frac{(n-1)!}{(r-1)!(n-r)!}+\frac{(n-1)!}{(r)!(n-r-1)!}\\
+\amp = \frac{(n-1)!(r)}{(r)(r-1)!(n-r)!}+\frac{(n-1)!(n-r)}{(r)!(n-r-1)!(n-r)}\\
+\amp = \frac{(n-1)!(r)}{(r)!(n-r)!}+\frac{(n-1)!(n-r)}{(r)!(n-r)!}\\
+\amp = \frac{(n-1)!(r)+(n-1)!(n-r)}{(r)!(n-r)!}\\
+\amp = \frac{(n-1)!(r+n-r)}{(r)!(n-r)!}\\
+\amp = \frac{(n-1)!(n)}{(r)!(n-r)!}\\
+\amp = \frac{(n)!}{(r)!(n-r)!}\\
+\amp = \Binomial{n}{r}
+\end{align*}
+</div>
+</div></article><span class="incontext"><a href="sec_arrCombinaison.html#proof-13" class="internal">Contexte</a></span>
 </body>
 </html>

@@ -13,12 +13,15 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-\Binomial{5}{0}\amp= 1 \\
-\Binomial{5}{1}\amp= 5 \\
-\Binomial{5}{2}\amp= 10  \\
-\Binomial{5}{3}\amp= 10 \\
-\Binomial{5}{4}\amp= 5 \\
-\Binomial{5}{5}\amp= 1 
+\Binomial{n-1}{r-1}+\Binomial{n-1}{r} \amp = \frac{(n-1)!}{(r-1)!((n-1)-(r-1))!}+\frac{(n-1)!}{(r)!((n-1)-r)!}\\
+\amp = \frac{(n-1)!}{(r-1)!(n-r)!}+\frac{(n-1)!}{(r)!(n-r-1)!}\\
+\amp = \frac{(n-1)!(r)}{(r)(r-1)!(n-r)!}+\frac{(n-1)!(n-r)}{(r)!(n-r-1)!(n-r)}\\
+\amp = \frac{(n-1)!(r)}{(r)!(n-r)!}+\frac{(n-1)!(n-r)}{(r)!(n-r)!}\\
+\amp = \frac{(n-1)!(r)+(n-1)!(n-r)}{(r)!(n-r)!}\\
+\amp = \frac{(n-1)!(r+n-r)}{(r)!(n-r)!}\\
+\amp = \frac{(n-1)!(n)}{(r)!(n-r)!}\\
+\amp = \frac{(n)!}{(r)!(n-r)!}\\
+\amp = \Binomial{n}{r}
 \end{align*}
 </div>
 <span class="incontext"><a href="sec_arrCombinaison.html#md-82" class="internal">Contexte</a></span>

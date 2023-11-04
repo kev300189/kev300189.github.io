@@ -11,12 +11,19 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-binomNewton.html">
+<div class="displaymath process-math">
 \begin{align*}
-(x+y)^5 \amp=1x^5y^0+5x^4y^1+10x^3y^2+10x^2y^3+5x^1y^4+1x^0y^5\\
-\amp=x^5+5x^4y+10x^3y^2+10x^2y^3+5xy^4+y^5
+\Binomial{n-1}{r-1}+\Binomial{n-1}{r} \amp = \frac{(n-1)!}{(r-1)!((n-1)-(r-1))!}+\frac{(n-1)!}{(r)!((n-1)-r)!}\\
+\amp = \frac{(n-1)!}{(r-1)!(n-r)!}+\frac{(n-1)!}{(r)!(n-r-1)!}\\
+\amp = \frac{(n-1)!(r)}{(r)(r-1)!(n-r)!}+\frac{(n-1)!(n-r)}{(r)!(n-r-1)!(n-r)}\\
+\amp = \frac{(n-1)!(r)}{(r)!(n-r)!}+\frac{(n-1)!(n-r)}{(r)!(n-r)!}\\
+\amp = \frac{(n-1)!(r)+(n-1)!(n-r)}{(r)!(n-r)!}\\
+\amp = \frac{(n-1)!(r+n-r)}{(r)!(n-r)!}\\
+\amp = \frac{(n-1)!(n)}{(r)!(n-r)!}\\
+\amp = \frac{(n)!}{(r)!(n-r)!}\\
+\amp = \Binomial{n}{r}
 \end{align*}
 </div>
-<span class="incontext"><a href="sec_arrCombinaison.html#md-83" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec_arrCombinaison.html#md-82" class="internal">Contexte</a></span>
 </body>
 </html>

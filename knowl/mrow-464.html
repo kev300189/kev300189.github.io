@@ -11,15 +11,16 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-formulePascal.html">
 \begin{align*}
-p_1\amp=1\\
-p_2\amp=2\\
-p_3\amp=3\\
-p_4\amp=5\\
-p_5\amp=9
+(x+y)^{k+1}\amp = (x+y)^k(x+y)^1  \amp\amp\\
+\amp = \left(\Binomial{k}{k}x^ky^0+\Binomial{k}{k-1}x^{k-1}y^1+\cdots +\Binomial{k}{k-(k-1)}x^{1}y^{k-1}+\Binomial{k}{k-k}x^0y^k\right) (x+y)^1 \amp\amp \text{Par H.I.}\\
+\amp = \Binomial{k}{k}x^{k+1}y^0+\Binomial{k}{k-1}x^{k}y^1+\cdots +\Binomial{k}{k-(k-1)}x^{2}y^{k-1}+\Binomial{k}{k-k}x^1y^k  \amp\amp \text{(en multipliant la somme par }x\text{)}\\
+\amp  + \Binomial{k}{k}x^ky^1+\Binomial{k}{k-1}x^{k-1}y^2+\cdots +\Binomial{k}{k-(k-1)}x^{1}y^{k}+\Binomial{k}{k-k}x^0y^k (x+y)^1  \amp\amp \text{(en multipliant la somme par }y\text{)}\\
+\amp = \Binomial{k}{k}x^{k+1}y^0 + \left(\Binomial{k}{k-1} +\Binomial{k}{k} \right)x^{k}y^1+\cdots +\left(\Binomial{k}{k- k}+\Binomial{k}{k-(k-1)}\right)x^{1}y^{k-1}+\Binomial{k}{k-k}x^0y^k \amp\amp \text{En regroupant les termes}\\
+\amp = \Binomial{k+1}{k+1}x^{k+1}y^0 + \left(\Binomial{k+1}{k}\right)x^{k}y^1+\cdots +\left(\Binomial{k+1}{1}\right)x^{1}y^{k-1}+\Binomial{k+1}{0}x^0y^k \amp\amp \text{Par }\knowl{./knowl/prop-formulePascal.html}{\text{4.2.18}}.
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-relRecLinHom.html#md-123" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-preuvesSupp.html#md-120" class="internal">Contexte</a></span>
 </body>
 </html>

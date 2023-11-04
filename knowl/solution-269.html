@@ -13,21 +13,35 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h5 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.3.4.8.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.4.4.1</span><span class="period">.</span>
 </h5>
-<div class="para logical">
-<ul class="disc">
-<li><div class="para">Objets: Les <span class="process-math">\(17\)</span> paires <span class="process-math">\((a_i,b_j)\)</span>
-</div></li>
-<li><div class="para">Boites: Les <span class="process-math">\(16\)</span> paires de classes d’équivalence <span class="process-math">\((E_{i,4},E_{j,4}),\)</span> pour <span class="process-math">\(i,j=1,2,3,4\text{.}\)</span>
-</div></li>
-<li><div class="para">On place un objet <span class="process-math">\((a,b)\)</span> dans une boite <span class="process-math">\((E_{i,4},E_{j,4})\)</span> si <span class="process-math">\(a\in E_{i,4}\)</span> et <span class="process-math">\(b\in E_{j,4},\)</span> c’est à dire que <span class="process-math">\(a\equiv i\mod 4\)</span> et <span class="process-math">\(b\equiv j\mod 4\text{.}\)</span>
-</div></li>
-</ul>
-<div class="para">Puisqu’il ya plus d’objets que de boites, il y aura au moins deux objets dans la même boite. Ainsi, on aura <span class="process-math">\((a,b)\)</span> et <span class="process-math">\((c,d)\)</span> tels que <span class="process-math">\(a\equiv c \mod 4\)</span> et <span class="process-math">\(b\equiv d \mod 4\text{.}\)</span>
+<div class="para">procède par récurrence sur <span class="process-math">\(n\)</span> .</div> <div class="para">
+<em class="alert">Étape de base:</em> On montre que la proposition est vrai pour <span class="process-math">\(n=0\text{.}\)</span> Dans ce cas, on a nécessairement <span class="process-math">\(r=0\text{,}\)</span> et <span class="process-math">\((x+y)^0=1=1x^0y^0\text{,}\)</span> et on a bien que le coefficient devant <span class="process-math">\(x^{n-r}y^{r}=x^0y^0\)</span> est <span class="process-math">\(1=\Binomial{n}{n-r}=\Binomial{0}{0}=1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">
+<em class="alert">Étape d’induction:</em> On suppose que la proposition est vrai pour <span class="process-math">\(n=k\text{,}\)</span> c’est-à-dire que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)^{k}=\Binomial{k}{k}x^ky^0+\Binomial{k}{k-1}x^{k-1}ky^1+\cdots +\Binomial{k}{k-(k-1)}x^{1}y^{k-1}+\Binomial{k}{k-k}x^0y^k
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Ainsi, on a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-formulePascal.html">
+\begin{align*}
+(x+y)^{k+1}\amp = (x+y)^k(x+y)^1  \amp\amp\\
+\amp = \left(\Binomial{k}{k}x^ky^0+\Binomial{k}{k-1}x^{k-1}y^1+\cdots +\Binomial{k}{k-(k-1)}x^{1}y^{k-1}+\Binomial{k}{k-k}x^0y^k\right) (x+y)^1 \amp\amp \text{Par H.I.}\\
+\amp = \Binomial{k}{k}x^{k+1}y^0+\Binomial{k}{k-1}x^{k}y^1+\cdots +\Binomial{k}{k-(k-1)}x^{2}y^{k-1}+\Binomial{k}{k-k}x^1y^k  \amp\amp \text{(en multipliant la somme par }x\text{)}\\
+\amp  + \Binomial{k}{k}x^ky^1+\Binomial{k}{k-1}x^{k-1}y^2+\cdots +\Binomial{k}{k-(k-1)}x^{1}y^{k}+\Binomial{k}{k-k}x^0y^k (x+y)^1  \amp\amp \text{(en multipliant la somme par }y\text{)}\\
+\amp = \Binomial{k}{k}x^{k+1}y^0 + \left(\Binomial{k}{k-1} +\Binomial{k}{k} \right)x^{k}y^1+\cdots +\left(\Binomial{k}{k- k}+\Binomial{k}{k-(k-1)}\right)x^{1}y^{k-1}+\Binomial{k}{k-k}x^0y^k \amp\amp \text{En regroupant les termes}\\
+\amp = \Binomial{k+1}{k+1}x^{k+1}y^0 + \left(\Binomial{k+1}{k}\right)x^{k}y^1+\cdots +\left(\Binomial{k+1}{1}\right)x^{1}y^{k-1}+\Binomial{k+1}{0}x^0y^k \amp\amp \text{Par }\knowl{./knowl/prop-formulePascal.html}{\text{4.2.18}}.
+\end{align*}
+</div>
+<div class="para">Ainsi, la proposition est vrai pour <span class="process-math">\(n=k+1\text{.}\)</span>
+</div>
+</div> <div class="para">On a montré que la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span> Ainsi, la proposition est vraie pour tout <span class="process-math">\(n\in \N\text{.}\)</span>
 </div>
 </div>
-</div>
-<span class="incontext"><a href="sec_pidgeonHoles.html#solution-269" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-preuvesSupp.html#solution-269" class="internal">Contexte</a></span>
 </body>
 </html>
