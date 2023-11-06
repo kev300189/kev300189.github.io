@@ -12,21 +12,11 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.1.15.1</span><span class="period">.</span>
-</h4>
-<div class="para logical">
-<div class="para">On suppose que <span class="process-math">\(a_n=r_1^n\)</span> est une solution à la relation de récurrence, où <span class="process-math">\(r_1\neq 0.\)</span> Ici, on rejette le cas <span class="process-math">\(r_1=0,\)</span> car il s’agit de la solution triviale. En particuler, on a <span class="process-math">\(a_{n-1}=r_1^{n-1}\)</span> et <span class="process-math">\(a_{n-2}=r_1^{n-2}\text{.}\)</span> Ainsi, en remplaçant dans l’équation, on a</div>
-<div class="displaymath process-math">
-\begin{align*}
-r_1^n\amp=c_1r_1^{n-1}+ c_2r_1^{n-2} \\
-0\amp=r_1^n-c_1r_1^{n-1} -c_2r_1^{n-2} = r_1^{n-2}\left(r_1^2-c_1r_1-c_2 \right)\\
-0\amp=r_1^2-c_1r_1-c_2 \text{ car } r_1\neq 0.
-\end{align*}
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.4.10.1</span><span class="period">.</span>
+</h5>
+<div class="para">Par contradiction, supposons que <span class="process-math">\(p\)</span> n’est pas un nombre premier tel que <span class="process-math">\(P(p)\)</span> est vrai. Puisque <span class="process-math">\(p\)</span> n’est pas premier, on peut écrire <span class="process-math">\(p=m\cdot n\)</span> pour <span class="process-math">\(n, m\in \N\)</span> et <span class="process-math">\(1\lt n,m \lt p\text{.}\)</span> En particulier, <span class="process-math">\(p\mid p=(m\cdot n)\text{,}\)</span> mais ne divise ni <span class="process-math">\(m\text{,}\)</span> ni <span class="process-math">\(n\text{.}\)</span> La proposition <span class="process-math">\(P(p)\)</span> est donc fausse, ce qui est en contradiction avec notre hypothèse.</div>
 </div>
-<div class="para">Ainsi, on a que si <span class="process-math">\(r_1\)</span> est une racine du polynôme <span class="process-math">\(r^2-c_1r-c_2\text{,}\)</span> alors <span class="process-math">\(a_n= r_1^n\)</span> est effectivement une solution à la relation de récurrence.</div>
-</div>
-</div>
-<span class="incontext"><a href="sec-relRecLinHom.html#solution-278" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-preuvesSupp.html#solution-278" class="internal">Contexte</a></span>
 </body>
 </html>

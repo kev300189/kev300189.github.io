@@ -502,13 +502,14 @@ $\Box$
 <ul class="structural"><li>
 <div class="toc-item"><a href="sec-relRecLinHom.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-relRecLinHom" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Relations de récurrence  et forme générale</span></a></div></li>
-<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-recLinHom" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div></li>
-<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-solLinHom" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d’odre 2: Cas 1</span></a></div></li>
-<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-solLinHom2" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d’odre 2: Cas 2</span></a></div></li>
-<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-ordrePGDeux" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Relations de récurrence linéaires homogènes d’ordre <span class="process-math">\(k\)</span></span></a></div></li>
-<li><div class="toc-item"><a href="sec-relRecLinHom.html#rq-relRecLinHom" class="internal"><span class="codenumber">6.1.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
-<li><div class="toc-item"><a href="sec-relRecLinHom.html#exo-relRecLinHom" class="internal"><span class="codenumber">6.1.7</span> <span class="title">Exercices</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-defRelRec" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Suites et relations de récurrence</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-relRecLinHom" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Relations de récurrence  et forme générale</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-recLinHom" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-solLinHom" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d’odre 2: Cas 1</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-solLinHom2" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d’odre 2: Cas 2</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-ordrePGDeux" class="internal"><span class="codenumber">6.1.6</span> <span class="title">Relations de récurrence linéaires homogènes d’ordre <span class="process-math">\(k\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#rq-relRecLinHom" class="internal"><span class="codenumber">6.1.7</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#exo-relRecLinHom" class="internal"><span class="codenumber">6.1.8</span> <span class="title">Exercices</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -523,16 +524,67 @@ $\Box$
 <div class="introduction" id="introduction-235"><div class="para" id="p-2556">Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d’apprentissage plus avancés.</div></div>
 <article class="exercise exercise-like" id="exercise-301"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
 <div class="para" id="p-2557">Soit <span class="process-math">\(n\in \N\text{,}\)</span> montrer que <span class="process-math">\(5\)</span> disvie <span class="process-math">\(n^5-n\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-302"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-2558">Montrer que, si <span class="process-math">\(n\in \N\)</span> est tel que <span class="process-math">\(n\geq 3\text{,}\)</span> alors <span class="process-math">\(n^2-1\)</span> est un nombre composé (c’est-à-dire, n’est pas un nombre premier)</div></article><article class="exercise exercise-like" id="exercise-303"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="p-2559">Déterminer quels sont les entiers <span class="process-math">\(n\in \N\)</span> qui respectent l’inégalité <span class="process-math">\(2n+3\leq 2^n\text{.}\)</span> Démontrer votre réponse à l’aide d’une preuve par récurrence.</div></article><article class="exercise exercise-like" id="exercise-304"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="p-2560">Soit <span class="process-math">\(x,\ y \in \R\)</span> et <span class="process-math">\(n,\ r\in \N\)</span> tels que <span class="process-math">\(0\leq r\leq n\text{,}\)</span> alors le coefficient devant le terme <span class="process-math">\(x^{n-r} y^{r}\)</span> de l’expression <span class="process-math">\((x+y)^n\)</span> est donné par <span class="process-math">\(\Binomial{n}{n-r}\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-269" id="solution-269"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-269"><div class="solution solution-like">
-<div class="para" id="p-2561">procède par récurrence sur <span class="process-math">\(n\)</span> .</div> <div class="para" id="p-2562">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-269" id="solution-269"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-269"><div class="solution solution-like"><div class="para logical" id="p-2558">
+<div class="para">On travaille modulo <span class="process-math">\(5\text{.}\)</span> On a</div>
+<div class="displaymath process-math" id="md-120">
+\begin{align*}
+0^5 \amp\equiv 0 \mod 5\\
+1^5 \amp\equiv 1 \mod 5\\
+2^5 = 32 \amp\equiv 2 \mod 5\\
+3^5 = 243 \amp\equiv 3\mod 5\\
+4^5 = 1024 \amp\equiv 4 \mod 5\text{.}
+\end{align*}
+</div>
+<div class="para">Ainsi, dans tous les cas, on a <span class="process-math">\(n^5 \equiv n \mod 5\text{,}\)</span> ou encore <span class="process-math">\(n^5-n\equiv 0 \mod 5\text{,}\)</span> c’est-à-dire que <span class="process-math">\(5\)</span> divise <span class="process-math">\(n^5-n\text{.}\)</span>
+</div>
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-302"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="p-2559">Montrer que, si <span class="process-math">\(n\in \N\)</span> est tel que <span class="process-math">\(n\geq 3\text{,}\)</span> alors <span class="process-math">\(n^2-1\)</span> est un nombre composé (c’est-à-dire, n’est pas un nombre premier).</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-270" id="solution-270"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-270"><div class="solution solution-like"><div class="para logical" id="p-2560">
+<div class="para">On travaille modulo <span class="process-math">\(n-1\text{.}\)</span> On a alors <span class="process-math">\(n \equiv 1 \mod (n-1)\text{,}\)</span> et donc</div>
+<div class="displaymath process-math" id="md-121">
+\begin{align*}
+n^2 \amp \equiv 1 \mod (n-1)\\
+n^2 -1  \amp \equiv 0 \mod (n-1)
+\end{align*}
+</div>
+<div class="para">c’est-à-dire que <span class="process-math">\((n-1)\mid (n^2-1)\text{.}\)</span>  Puisque <span class="process-math">\(n\geq 3\text{,}\)</span> on a que <span class="process-math">\(1 \lt n-1 \lt n^2-1 \text{.}\)</span> Ainsi, <span class="process-math">\(n^2-1\)</span> n’est pas un nombre premier.</div>
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-303"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="p-2561">Déterminer quels sont les entiers <span class="process-math">\(n\in \N\)</span> qui respectent l’inégalité <span class="process-math">\(2n+3\leq 2^n\text{.}\)</span> Démontrer votre réponse à l’aide d’une preuve par récurrence.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-271" id="solution-271"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-271"><div class="solution solution-like">
+<div class="para" id="p-2562">On peut vérifier que <span class="process-math">\(2n+3 \gt 2^n\)</span> pour <span class="process-math">\(n\in\{0,1,2,3\}\text{.}\)</span> On veut montrer que <span class="process-math">\(2n+3\leq 2^n\)</span> pour <span class="process-math">\(n\geq 4\text{.}\)</span>
+</div> <div class="para" id="p-2563">
+<em class="alert">Étape de base:</em> En <span class="process-math">\(n=4\text{,}\)</span> on a <span class="process-math">\(2(4)+3 = 11 \leq 2^4 = 16\text{.}\)</span> Ainsi, la proposition est vraie pour <span class="process-math">\(n=4\)</span>
+</div> <div class="para logical" id="p-2564">
+<div class="para">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(2k+3 \leq 2^k\)</span> pour un certain entier <span class="process-math">\(k \geq 4\)</span> (H.I.). On a alors</div>
+<div class="displaymath process-math" id="md-122">
+\begin{align*}
+2(k+1)+3 \amp =(2k+3) +2 \\
+\amp \leq (2^k) +2 \amp\amp \text{ Par H.I.} \\
+\amp \leq 2^k +2^k \amp\amp \text{ Car } k\geq 4 \\
+\amp \leq 2\cdot 2^k \amp\amp \text{ Mise en évidence} \\
+\amp \leq 2^{k+1} \amp\amp \text{ Propriétés des exposants} \text{.}
+\end{align*}
+</div>
+<div class="para">Ainsi, la proposition est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-2565">On a montré que la proposition est vraie pour <span class="process-math">\(n=4\text{,}\)</span> et que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors est est aussi vraie pour <span class="process-math">\(n=k+1\text{.}\)</span> Ainsi, par le principe de récurrence, la proposition est vraie pour tout entier <span class="process-math">\(n\geq 4\text{.}\)</span>
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-304"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para" id="p-2566">Soit <span class="process-math">\(x,\ y \in \R\)</span> et <span class="process-math">\(n,\ r\in \N\)</span> tels que <span class="process-math">\(0\leq r\leq n\text{,}\)</span> alors le coefficient devant le terme <span class="process-math">\(x^{n-r} y^{r}\)</span> de l’expression <span class="process-math">\((x+y)^n\)</span> est donné par <span class="process-math">\(\Binomial{n}{n-r}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-272" id="solution-272"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-272"><div class="solution solution-like">
+<div class="para" id="p-2567">procède par récurrence sur <span class="process-math">\(n\)</span> .</div> <div class="para" id="p-2568">
 <em class="alert">Étape de base:</em> On montre que la proposition est vrai pour <span class="process-math">\(n=0\text{.}\)</span> Dans ce cas, on a nécessairement <span class="process-math">\(r=0\text{,}\)</span> et <span class="process-math">\((x+y)^0=1=1x^0y^0\text{,}\)</span> et on a bien que le coefficient devant <span class="process-math">\(x^{n-r}y^{r}=x^0y^0\)</span> est <span class="process-math">\(1=\Binomial{n}{n-r}=\Binomial{0}{0}=1\text{.}\)</span>
-</div> <div class="para logical" id="p-2563">
+</div> <div class="para logical" id="p-2569">
 <div class="para">
 <em class="alert">Étape d’induction:</em> On suppose que la proposition est vrai pour <span class="process-math">\(n=k\text{,}\)</span> c’est-à-dire que</div>
 <div class="displaymath process-math">
@@ -540,9 +592,9 @@ $\Box$
 (x+y)^{k}=\Binomial{k}{k}x^ky^0+\Binomial{k}{k-1}x^{k-1}ky^1+\cdots +\Binomial{k}{k-(k-1)}x^{1}y^{k-1}+\Binomial{k}{k-k}x^0y^k
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-2564">
+</div> <div class="para logical" id="p-2570">
 <div class="para">Ainsi, on a</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-formulePascal.html" id="md-120">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-formulePascal.html" id="md-123">
 \begin{align*}
 (x+y)^{k+1}\amp = (x+y)^k(x+y)^1  \amp\amp\\
 \amp = \left(\Binomial{k}{k}x^ky^0+\Binomial{k}{k-1}x^{k-1}y^1+\cdots +\Binomial{k}{k-(k-1)}x^{1}y^{k-1}+\Binomial{k}{k-k}x^0y^k\right) (x+y)^1 \amp\amp \text{Par H.I.}\\
@@ -554,59 +606,180 @@ $\Box$
 </div>
 <div class="para">Ainsi, la proposition est vrai pour <span class="process-math">\(n=k+1\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-2565">On a montré que la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span> Ainsi, la proposition est vraie pour tout <span class="process-math">\(n\in \N\text{.}\)</span>
+</div> <div class="para" id="p-2571">On a montré que la proposition est vraie pour <span class="process-math">\(n=0\text{,}\)</span> et que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span> Ainsi, la proposition est vraie pour tout <span class="process-math">\(n\in \N\text{.}\)</span>
 </div>
 </div></div>
 </div></article><article class="exercise exercise-like" id="exercise-305"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="para logical" id="p-2566">
+<div class="para logical" id="p-2572">
 <div class="para">Montrer que, pour <span class="process-math">\(n\in \N^\ast\text{,}\)</span> la somme des <span class="process-math">\(n\)</span> premiers cubes est</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{n^2(n+1)^2}{4}\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-2567">
+</div> <div class="para logical" id="p-2573">
 <div class="para">Ainsi, on veut montrer que</div>
 <div class="displaymath process-math">
 \begin{equation*}
 1^3+2^3+\cdots + n^3 =\frac{n^2(n+1)^2}{4}
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="exercise-306"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="para" id="p-2568">Montrer que <span class="process-math">\(\sqrt[3]{3}\)</span> est un irrationnel.</div></article><article class="exercise exercise-like" id="exercise-307"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="para" id="p-2569">Soit <span class="process-math">\(p\)</span> un nombre premier. Montrer que <span class="process-math">\(a^2\equiv b^2 \mod p\)</span> si et seulement si <span class="process-math">\(a\equiv b \mod p\)</span> ou <span class="process-math">\(a\equiv -b \mod p\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-308"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<div class="para logical" id="p-2570">
-<div class="para">Montrer que, pour <span class="process-math">\(n\in \N^\ast\text{,}\)</span> alors</div>
-<div class="displaymath process-math">
-\begin{equation*}
-1^4+2^4+\cdots + n^4 =\frac{n(2n+1)(3n^2+3n-1)}{30}
-\end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="exercise-309"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>Soit <span class="process-math">\(n\in \N\)</span> tel que <span class="process-math">\(n\geq 4\text{.}\)</span> Montrer que <span class="process-math">\(n^2-7n+12 \gt 0\text{.}\)</span></article><article class="exercise exercise-like" id="exercise-310"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
-<div class="para" id="p-2571">Soit <span class="process-math">\(k\in \N\text{,}\)</span> on note <span class="process-math">\(P(k)\)</span> la propposition suivante,</div> <div class="para" id="p-2572">
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-273" id="solution-273"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-273"><div class="solution solution-like">
+<div class="para" id="p-2574">
+<em class="alert">Étape de base:</em> On vérifie que la proposition est vraie pour <span class="process-math">\(n=1\text{.}\)</span> En effet, on a <span class="process-math">\(1=1^3=\frac{1^2(1+1)^2}{4}=\frac{4}{4}=1\text{.}\)</span>
+</div> <div class="para" id="p-2575">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(1^3+2^3+\cdots + k^3 =\frac{k^2(k+1)^2}{4}\)</span> pour <span class="process-math">\(k\geq 1\)</span> (H.I.).</div> <div class="para logical" id="p-2576">
+<div class="para">Ici, il sera plus facile de travailler en posant <span class="process-math">\(j=k+1\text{,}\)</span> et donc <span class="process-math">\(k=j-1\text{.}\)</span> Avec ce changement de variables, on a</div>
+<div class="displaymath process-math" id="md-124">
+\begin{align*}
+1^3+2^3+\cdots + k^3 + (k+1)^3 \amp = 1^3+2^3+\cdots + (j-1)^3 + j^3 \amp\amp \text{Par le changement de variables} \\
+\amp = \frac{(j-1)^2j^2}{4} + j^3 \amp\amp \text{Par H.I.} \\
+\amp = \frac{(j-1)^2j^2 +4j^3}{4} \amp\amp \text{Par manipulation algébrique} \\
+\amp = \frac{((j-1)^2 +4j)j^2}{4}\amp\amp \text{Par manipulation algébrique} \\
+\amp = \frac{(j^2-2j+1 +4j)j^2}{4}\amp\amp \text{Par manipulation algébrique} \\
+\amp = \frac{(j^2+2j+1)j^2}{4}\amp\amp \text{Par manipulation algébrique} \\
+\amp = \frac{(j+1)^2j^2}{4}\amp\amp \text{Par manipulation algébrique} \text{.}
+\end{align*}
+</div>
+<div class="para">Ainsi, la proposition est vrai pour <span class="process-math">\(n=k+1\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-2577">On a montré que la proposition est vraie pour <span class="process-math">\(n=1\text{,}\)</span> et que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span> Ainsi, la proposition est vraie pour tout <span class="process-math">\(n\in \N^\ast\text{.}\)</span>
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exo-petitThFermatTrois"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="para" id="p-2578">Soit <span class="process-math">\(n\in \N\text{,}\)</span> montrer que si <span class="process-math">\(3\)</span> divise <span class="process-math">\(n^3\text{,}\)</span> alors <span class="process-math">\(3\)</span> divise <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-274" id="solution-274"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-274"><div class="solution solution-like"><div class="para logical" id="p-2579">
+<div class="para">On peut simplement remarquer que</div>
+<div class="displaymath process-math" id="md-125">
+\begin{gather*}
+0^3 = 0 \equiv 0 \mod 3\\
+1^3 = 1 \equiv 1 \mod 3\\
+2^3 = 8 \equiv 2 \mod 3\text{.}
+\end{gather*}
+</div>
+<div class="para">Ainsi, on a que le seul moment où <span class="process-math">\(n^3\equiv 0 \mod 3\)</span> est lorsque <span class="process-math">\(n \equiv 0 \mod 3\text{.}\)</span> On peut conclure que si <span class="process-math">\(3\mid n^3\text{,}\)</span> alors <span class="process-math">\(3\mid n\text{.}\)</span>
+</div>
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-307"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="para" id="p-2580">Montrer que <span class="process-math">\(\sqrt[3]{3}\)</span> est un irrationnel.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-275" id="solution-275"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-275"><div class="solution solution-like">
+<div class="para" id="p-2581">On procède à l’aide d’une preuve par contradiction. On suppose que <span class="process-math">\(\sqrt[3]{3}\in \Q\text{.}\)</span> On peut alors écrire <span class="process-math">\(\sqrt[3]{3}=\frac{p}{q}\text{,}\)</span> avec <span class="process-math">\(p, q\in \N\)</span> et <span class="process-math">\(q\neq 0\text{.}\)</span> On peut également supposer que la fraction est réduite au maximum, c’est-à-dire que <span class="process-math">\(\pgcd(p,q)=1\)</span>
+</div> <div class="para logical" id="p-2582">
+<div class="para">On a alors</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-petitThFermatTrois.html" id="md-126">
+\begin{align*}
+3=\left(\sqrt[3]{3}\right)^3 \amp \frac{p^3}{q^3}\\
+3 q^3 \amp= p^3\text{.}
+\end{align*}
+</div>
+<div class="para">Ainsi, on a que <span class="process-math">\(3\)</span> divise <span class="process-math">\(p^3\text{.}\)</span> Par l’exercice <a href="" class="xref" data-knowl="./knowl/exo-petitThFermatTrois.html" title="Exercice 5.4.6">5.4.6</a>, on a que <span class="process-math">\(3\)</span> divise <span class="process-math">\(p\text{.}\)</span> On peut alors écrire <span class="process-math">\(p=3k\text{,}\)</span> pour <span class="process-math">\(k\in \Z\text{.}\)</span> En remplaçant <span class="process-math">\(p\)</span> dans l’expression précédente, on obtient</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exo-petitThFermatTrois.html" id="md-127">
+\begin{align*}
+3 q^3 \amp= (3k)^3\\
+\amp = 3^3k^3\\
+q^3 \amp = 3^2k^3\text{.}
+\end{align*}
+</div>
+<div class="para">Ainsi, on a que <span class="process-math">\(3\mid q^3\text{,}\)</span> et par le même argument, on a que <span class="process-math">\(3\mid q\text{.}\)</span> On a donc que <span class="process-math">\(3\leq \pgcd(p,q)= 1\text{,}\)</span> ce qui est un contradiction. On peut alors conclure que <span class="process-math">\(\sqrt[3]{3}\in \Q^c\text{.}\)</span>
+</div>
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-308"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<div class="para" id="p-2583">Soit <span class="process-math">\(p\)</span> un nombre premier. Montrer que <span class="process-math">\(a^2\equiv b^2 \mod p\)</span> si et seulement si <span class="process-math">\(a\equiv b \mod p\)</span> ou <span class="process-math">\(a\equiv -b \mod p\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-276" id="solution-276"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-276"><div class="solution solution-like">
+<div class="para logical" id="p-2584">
+<div class="para">Si <span class="process-math">\(a \equiv \pm b  \mod p\text{,}\)</span> on a clairement que</div>
+<div class="displaymath process-math" id="md-128">
+\begin{align*}
+a^2 \amp \equiv (\pm b)^2 \mod p\\
+\amp \equiv b^2 \mod p
+\end{align*}
+</div>
+</div> <div class="para logical" id="p-2585">
+<div class="para">De l’autre côté, si <span class="process-math">\(a^2\equiv b^2 \mod p\text{,}\)</span> on a</div>
+<div class="displaymath process-math" id="md-129">
+\begin{align*}
+0 \amp \equiv a^2-b^2 \mod p \\
+\amp \equiv (a-b)(a+b) \mod p \text{.}
+\end{align*}
+</div>
+</div> <div class="para logical" id="p-2586">
+<div class="para">Si <span class="process-math">\(a-b \not\equiv 0 \mod p \text{,}\)</span> alors <span class="process-math">\(a-b\)</span> possède un inverse modulo <span class="process-math">\(p\text{.}\)</span> Notons <span class="process-math">\(x\)</span> cet inverse. On a alors</div>
+<div class="displaymath process-math" id="md-130">
+\begin{align*}
+0 \amp \equiv (a-b)(a+b) \mod p \\
+x\cdot 0 = 0 \amp \equiv x(a-b)(a+b) \mod p \\
+0 \amp \equiv (1)(a+b) \mod p \\
+0 \amp \equiv (a+b) \mod p \text{.}
+\end{align*}
+</div>
+</div> <div class="para" id="p-2587">Ainsi, soit <span class="process-math">\(a-b \equiv 0 \mod p \text{,}\)</span> ou bien <span class="process-math">\(a+b \equiv 0 \mod p \text{.}\)</span>
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-309"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>Soit <span class="process-math">\(n\in \N\)</span> tel que <span class="process-math">\(n\geq 4\text{.}\)</span> Montrer que <span class="process-math">\(n^2-7n+12 \geq 0\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-277" id="solution-277"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-277"><div class="solution solution-like">
+<div class="para" id="p-2588">
+<em class="alert">Étape de base:</em> En <span class="process-math">\(n=4\text{,}\)</span> alors <span class="process-math">\(n^2-7n+12=16-28+12=0\text{.}\)</span>
+</div> <div class="para" id="p-2589">
+<em class="alert">Étape d’induction:</em> Supposons que <span class="process-math">\(k^2-7k+12\geq0\text{.}\)</span> On a alor<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"></div></div>
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-310"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<div class="para" id="p-2590">Soit <span class="process-math">\(k\in \N\text{,}\)</span> on note <span class="process-math">\(P(k)\)</span> la propposition suivante,</div> <div class="para" id="p-2591">
 <span class="process-math">\(P(k):\)</span> Pour tout <span class="process-math">\(m,n \in N\text{,}\)</span> si <span class="process-math">\(k\mid (mn)\text{,}\)</span> alors <span class="process-math">\(k\mid m\)</span> ou <span class="process-math">\(k\mid n\text{.}\)</span>
-</div> <div class="para" id="p-2573">On considère <span class="process-math">\(p\in \N\)</span> tel que <span class="process-math">\(p\gt 1\text{.}\)</span> Montrer que si la proposition <span class="process-math">\(P(p)\)</span> est vraie, alors <span class="process-math">\(p\)</span> est un nombre premier.</div></article><article class="exercise exercise-like" id="exercise-311"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
-<div class="para" id="p-2574">Montrer par récurrence que si <span class="process-math">\(p\)</span> est un nombre premier et si <span class="process-math">\(p\mid (a_1a_2\cdots a_n)\text{,}\)</span> alors il existe un <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(1\leq i\leq n\)</span> tel que <span class="process-math">\(p\mid a_i\text{.}\)</span>
+</div> <div class="para" id="p-2592">On considère <span class="process-math">\(p\in \N\)</span> tel que <span class="process-math">\(p\gt 1\text{.}\)</span> Montrer que si la proposition <span class="process-math">\(P(p)\)</span> est vraie, alors <span class="process-math">\(p\)</span> est un nombre premier.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-278" id="solution-278"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-278"><div class="solution solution-like"><div class="para" id="p-2593">Par contradiction, supposons que <span class="process-math">\(p\)</span> n’est pas un nombre premier tel que <span class="process-math">\(P(p)\)</span> est vrai. Puisque <span class="process-math">\(p\)</span> n’est pas premier, on peut écrire <span class="process-math">\(p=m\cdot n\)</span> pour <span class="process-math">\(n, m\in \N\)</span> et <span class="process-math">\(1\lt n,m \lt p\text{.}\)</span> En particulier, <span class="process-math">\(p\mid p=(m\cdot n)\text{,}\)</span> mais ne divise ni <span class="process-math">\(m\text{,}\)</span> ni <span class="process-math">\(n\text{.}\)</span> La proposition <span class="process-math">\(P(p)\)</span> est donc fausse, ce qui est en contradiction avec notre hypothèse.</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-311"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<div class="para" id="p-2594">Soit <span class="process-math">\(n\in \N\text{,}\)</span> <span class="process-math">\(n\geq 2\text{.}\)</span> Montrer  par récurrence que si <span class="process-math">\(p\)</span> est un nombre premier et si <span class="process-math">\(p\mid (a_1a_2\cdots a_n)\text{,}\)</span> alors il existe un <span class="process-math">\(i\text{,}\)</span> <span class="process-math">\(1\leq i\leq n\)</span> tel que <span class="process-math">\(p\mid a_i\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-279" id="solution-279"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-279"><div class="solution solution-like">
+<div class="para" id="p-2595">
+<em class="alert">Étape de base:</em> On veut montrer que la proposition est vraie pour <span class="process-math">\(n=2\text{.}\)</span> Or, pour <span class="process-math">\(n=2\text{,}\)</span> ceci est vraie par <a href="" class="xref" data-knowl="./knowl/exo-prime.html" title="Exercice 5.1.4.10">5.1.4.10</a>.</div> <div class="para" id="p-2596">
+<em class="alert">Étape d’induction:</em> On suppose que la proposition est vraie pour <span class="process-math">\(n=k\text{.}\)</span> Supposons que <span class="process-math">\(p\mid (a_1a_2\cdots a_ka_{k+1}) \text{.}\)</span> Par <a href="" class="xref" data-knowl="./knowl/exo-prime.html" title="Exercice 5.1.4.10">5.1.4.10</a>, on a que <span class="process-math">\(p\mid (a_1a_2\cdots a_k)\)</span> ou bien <span class="process-math">\(p\mid a_{k+1}\text{.}\)</span> Si <span class="process-math">\(p\mid a_{k+1}\text{,}\)</span> on a terminé. Si <span class="process-math">\(p\mid (a_1a_2\cdots a_k)\text{,}\)</span> par notre hypothèse d’induction, on a que <span class="process-math">\(p\mid a_i\)</span> pour <span class="process-math">\(1\leq i \leq k \text{.}\)</span> Ainsi, la proposition est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span>
+</div> <div class="para" id="p-2597">On a montré que la proposition est vraie pour <span class="process-math">\(n=2\text{,}\)</span> et que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span> Ainsi, la proposition est vraie pour tout  les entiers <span class="process-math">\(n \geq 2\text{.}\)</span>
+</div>
+</div></div>
 </div></article><article class="exercise exercise-like" id="exercise-312"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
-<div class="para" id="p-2575">Montrer que si <span class="process-math">\(n\in \N^\ast\)</span> est tel que la somme de ses diviseurs <span class="process-math">\(n+1\text{,}\)</span> alors <span class="process-math">\(n\)</span> est un nombre premier.</div></article><article class="exercise exercise-like" id="exercise-313"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
-<div class="para" id="p-2576">On place les entiers <span class="process-math">\(1\)</span> à <span class="process-math">\(10\)</span> autour d’un cercle, dans n’importe quel ordre. Montrer  qu’il existe trois entiers dans des emplacements consécutifs qutour du cercle dont la somme est plus grande ou égale à <span class="process-math">\(17\text{.}\)</span>
+<div class="para" id="p-2598">Montrer que si <span class="process-math">\(n\in \N^\ast\)</span> est tel que la somme de ses diviseurs <span class="process-math">\(n+1\text{,}\)</span> alors <span class="process-math">\(n\)</span> est un nombre premier.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-280" id="solution-280"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-280"><div class="solution solution-like"><div class="para" id="p-2599">Par contradiction, supposons que la somme des diviseurs de <span class="process-math">\(n\)</span> est <span class="process-math">\(n+1\text{,}\)</span> mais que <span class="process-math">\(n\)</span> n’est pas un nombre premier. Si <span class="process-math">\(n\)</span> n’est pas un nombre premier, alors <span class="process-math">\(n\)</span> possède au moins trois facteurs différents, soit <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(n\)</span> et <span class="process-math">\(1\lt m \lt n\text{.}\)</span> La somme des facteurs est donc au moins de <span class="process-math">\(n+1+m \gt n+1\text{,}\)</span> ce qui est en contradiction avec notre hypothèse. Ainsi, on doit avoir  que <span class="process-math">\(n\)</span>  est un nombre premier.</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-313"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<div class="para" id="p-2600">On place les entiers <span class="process-math">\(1\)</span> à <span class="process-math">\(10\)</span> autour d’un cercle, dans n’importe quel ordre. Montrer  qu’il existe trois entiers dans des emplacements consécutifs qutour du cercle dont la somme est plus grande ou égale à <span class="process-math">\(17\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-281" id="solution-281"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-281"><div class="solution solution-like">
+<div class="para" id="p-2601">Supposons que les entiers sont dans l’ordre <span class="process-math">\(a_1, a_2,\dots , a_{10}\text{.}\)</span> On veut regrouper toutes les sommes de trois voisins consécutifs. Notons donc <span class="process-math">\(A_1=a_{10}+a_{1}+a_2\text{,}\)</span> <span class="process-math">\(A_{10}=a_9+a_{10}+a_1\text{,}\)</span> et <span class="process-math">\(A_{i}=a_{i-1}+a_i+a_{i+1}\)</span> pour <span class="process-math">\(2\leq i \leq 9\text{.}\)</span>
+</div> <div class="para" id="p-2602">On a alors que la moyenne des <span class="process-math">\(A_i\)</span> est  <span class="process-math">\(\frac{3(1+2+\cdots +10)}{10}=16,5\text{.}\)</span> Par l’exercice <a href="" class="xref" data-knowl="./knowl/exo-plusMoyenne.html" title="Exercice 5.1.4.9">5.1.4.9</a>, on a qu’au moins un des <span class="process-math">\(A_i\geq 16,5\text{.}\)</span> Puisque <span class="process-math">\(A_i\)</span> est un entier, on a bien que <span class="process-math">\(A_i\geq 17\text{.}\)</span>
+</div>
+</div></div>
 </div></article><article class="exercise exercise-like" id="exercise-314"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
-<div class="para" id="p-2577">On considère la proposition <span class="process-math">\(P: \)</span> Pour tout entier positif <span class="process-math">\(n\text{,}\)</span> si <span class="process-math">\(x\)</span> et <span class="process-math">\(y\)</span> sont des entiers positifs, et si <span class="process-math">\(\max(x,y)=n\text{,}\)</span> alors <span class="process-math">\(x=y=n\text{.}\)</span>
-</div> <div class="para logical" id="p-2578">
+<div class="para" id="p-2603">On considère la proposition <span class="process-math">\(P: \)</span> Pour tout entier positif <span class="process-math">\(n\text{,}\)</span> si <span class="process-math">\(x\)</span> et <span class="process-math">\(y\)</span> sont des entiers positifs, et si <span class="process-math">\(\max(x,y)=n\text{,}\)</span> alors <span class="process-math">\(x=y=n\text{.}\)</span>
+</div> <div class="para logical" id="p-2604">
 <div class="para">On rappelle aussiq que</div>
 <div class="displaymath process-math">
 \begin{equation*}
 max(x,y) = \begin{cases} x \amp \text{si  }x\geq y\\y \amp \text{si } x\lt y\end{cases}\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-2579">Clairement, la proposition est fausse. Trouver l’erreur dans la démarche ci-dessous.</div> <div class="para" id="p-2580">
+</div> <div class="para" id="p-2605">Clairement, la proposition est fausse. Trouver l’erreur dans la démarche ci-dessous.</div> <div class="para" id="p-2606">
 <em class="alert">Étape de base:</em> Pour <span class="process-math">\(n=1\text{,}\)</span> si <span class="process-math">\(\max(x,y)=1\text{,}\)</span> alors <span class="process-math">\(1\leq x\leq\max(x,y)=1\text{,}\)</span> d’où <span class="process-math">\(1=x\text{.}\)</span> De même, <span class="process-math">\(1\leq y\leq\max(x,y)=1\text{,}\)</span> d’où <span class="process-math">\(1=y\)</span>
-</div> <div class="para" id="p-2581">
+</div> <div class="para" id="p-2607">
 <em class="alert">Étape d’induction:</em> Soit <span class="process-math">\(k\)</span> un entier positif. On suppose que si <span class="process-math">\(x_1\)</span> et <span class="process-math">\(y_1\)</span> sont des entiers positifs, alors <span class="process-math">\(\max(x_1,y_1)=k\)</span> implique que <span class="process-math">\(x_1=y_1=k\text{.}\)</span>
-</div> <div class="para" id="p-2582">On veut montrer que si <span class="process-math">\(x_2\)</span> et <span class="process-math">\(y_2\)</span> sont des entiers positifs tels que <span class="process-math">\(\max(x_2,y_2)=k+1\text{,}\)</span> alors <span class="process-math">\(x_2=y_2=k+1\text{.}\)</span>
-</div> <div class="para" id="p-2583">Si <span class="process-math">\(\max(x_2,y_2)=k+1\text{,}\)</span> alors <span class="process-math">\(\max(x_2-1,y_2-1)=k\text{.}\)</span> Par hypothèse d’induction, on a que <span class="process-math">\(x_2-1=y_2-1=k\text{,}\)</span> donc <span class="process-math">\(x_2=y_2=k+1\text{.}\)</span>
-</div> <div class="para" id="p-2584">Par le principe de récurrence, la proposition est vraie.</div> <div class="para" id="p-2585"><div class="image-box" style="width: 48.46%; margin-left: 25.77%; margin-right: 25.77%;"><img src="generated/latex-image/scaling-tikz.svg" role="img" class="contained"></div></div></article></article><article class="subexercises" id="subexercises-18"><h4 class="heading"><span class="title">Exercices supplémentaires</span></h4></article></section></section></div>
+</div> <div class="para" id="p-2608">On veut montrer que si <span class="process-math">\(x_2\)</span> et <span class="process-math">\(y_2\)</span> sont des entiers positifs tels que <span class="process-math">\(\max(x_2,y_2)=k+1\text{,}\)</span> alors <span class="process-math">\(x_2=y_2=k+1\text{.}\)</span>
+</div> <div class="para" id="p-2609">Si <span class="process-math">\(\max(x_2,y_2)=k+1\text{,}\)</span> alors <span class="process-math">\(\max(x_2-1,y_2-1)=k\text{.}\)</span> Par hypothèse d’induction, on a que <span class="process-math">\(x_2-1=y_2-1=k\text{,}\)</span> donc <span class="process-math">\(x_2=y_2=k+1\text{.}\)</span>
+</div> <div class="para" id="p-2610">Par le principe de récurrence, la proposition est vraie.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-282" id="solution-282"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-282"><div class="solution solution-like"><div class="para" id="p-2611">À l’étape d’induction, si <span class="process-math">\(max(x_2-1,y_2-1)=k\)</span> avec <span class="process-math">\(x_2, y_2\in \N^\ast\text{,}\)</span> on peu avoir <span class="process-math">\(x_2 =0 \notin \N^\ast\)</span> ou <span class="process-math">\(y_2=0\notin \N^\ast\text{.}\)</span> On ne pourrait alors pas utiliser l’hypothèse d’induction.</div></div></div>
+</div></article></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec_pidgeonHoles.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="chap-relationRecurrence.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

@@ -12,12 +12,29 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.1.3.b.1</span><span class="period">.</span>
-</h4>
-<div class="para">On a que <span class="process-math">\(a_2=a_1 - a_0=6-2=4.\)</span> Ainsi, on a également <span class="process-math">\(a_3=a_2-a_1=4-6=-2.\)</span> Finalement, on a <span class="process-math">\(a_4=a_3-a_2=-2-4=-6\text{.}\)</span>
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.4.3.1</span><span class="period">.</span>
+</h5>
+<div class="para">On peut vérifier que <span class="process-math">\(2n+3 \gt 2^n\)</span> pour <span class="process-math">\(n\in\{0,1,2,3\}\text{.}\)</span> On veut montrer que <span class="process-math">\(2n+3\leq 2^n\)</span> pour <span class="process-math">\(n\geq 4\text{.}\)</span>
+</div> <div class="para">
+<em class="alert">Étape de base:</em> En <span class="process-math">\(n=4\text{,}\)</span> on a <span class="process-math">\(2(4)+3 = 11 \leq 2^4 = 16\text{.}\)</span> Ainsi, la proposition est vraie pour <span class="process-math">\(n=4\)</span>
+</div> <div class="para logical">
+<div class="para">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(2k+3 \leq 2^k\)</span> pour un certain entier <span class="process-math">\(k \geq 4\)</span> (H.I.). On a alors</div>
+<div class="displaymath process-math">
+\begin{align*}
+2(k+1)+3 \amp =(2k+3) +2 \\
+\amp \leq (2^k) +2 \amp\amp \text{ Par H.I.} \\
+\amp \leq 2^k +2^k \amp\amp \text{ Car } k\geq 4 \\
+\amp \leq 2\cdot 2^k \amp\amp \text{ Mise en évidence} \\
+\amp \leq 2^{k+1} \amp\amp \text{ Propriétés des exposants} \text{.}
+\end{align*}
+</div>
+<div class="para">Ainsi, la proposition est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span>
+</div>
+</div> <div class="para">On a montré que la proposition est vraie pour <span class="process-math">\(n=4\text{,}\)</span> et que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors est est aussi vraie pour <span class="process-math">\(n=k+1\text{.}\)</span> Ainsi, par le principe de récurrence, la proposition est vraie pour tout entier <span class="process-math">\(n\geq 4\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec-relRecLinHom.html#solution-271" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-preuvesSupp.html#solution-271" class="internal">Contexte</a></span>
 </body>
 </html>

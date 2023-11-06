@@ -12,32 +12,15 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
-</h4>
-<div class="para">L’équation caractéristique est obtenue en remplaçant <span class="process-math">\(a_n\)</span> par <span class="process-math">\(r^n\text{.}\)</span> On a alors <span class="process-math">\(0=r^2-r-2=(r-2)(r+1)\text{.}\)</span>
-</div> <div class="para logical">
-<div class="para">Ainsi, les deux solutions à cette équation sont <span class="process-math">\(r_1=2\)</span> et <span class="process-math">\(r_2=-1.\)</span> En particulier, on a que</div>
-<div class="displaymath process-math">
-\begin{align*}
-r_1^{n}\amp=r_1^{n-1} +2r_1^{n-2}\\
-r_2^{n}\amp=r_2^{n-1} +2r_2^{n-2}
-\end{align*}
-</div>
-</div> <div class="para">Pour vérifier que <span class="process-math">\(a_n=3r_1^n+4r_2^n\)</span> satisfait la relation de récurrence, on doit vérivier que <span class="process-math">\(a_n=a_{n-1}+2a_{n-2}\text{.}\)</span>
-</div> <div class="para">D’une côté, on a que <span class="process-math">\(a_n=3r_1^n+4r_2^n\)</span> (c’est ce qu’on a supposé)</div> <div class="para logical">
-<div class="para">De l’autre côté, on a que</div>
-<div class="displaymath process-math">
-\begin{align*}
-a_{n-1}+2a_{n-2}\amp= (3r_1^{n-1}+4r_2^{n-1})+2(3r_1^{n-2}+4r_2^{n-2})\\
-\amp= (3r_1^{n-1}+3\cdot 2r_1^{n-2})+(4r_2^{n-2}+4\cdot 2r_2^{n-2})\\
-\amp= 3(r_1^{n-1}+ 2r_1^{n-2})+4(r_2^{n-2}+ 2r_2^{n-2})\\
-\amp= 3r_1^n+4r_2^{n}=a_n
-\end{align*}
-</div>
-<div class="para">Ainsi, on a bien que <span class="process-math">\(a_n=3r_1^n+4r_2^n\)</span> satisfait à la relation de récurrence.</div>
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.4.11.1</span><span class="period">.</span>
+</h5>
+<div class="para">
+<em class="alert">Étape de base:</em> On veut montrer que la proposition est vraie pour <span class="process-math">\(n=2\text{.}\)</span> Or, pour <span class="process-math">\(n=2\text{,}\)</span> ceci est vraie par <a href="" class="xref" data-knowl="./knowl/exo-prime.html" title="Exercice 5.1.4.10">5.1.4.10</a>.</div> <div class="para">
+<em class="alert">Étape d’induction:</em> On suppose que la proposition est vraie pour <span class="process-math">\(n=k\text{.}\)</span> Supposons que <span class="process-math">\(p\mid (a_1a_2\cdots a_ka_{k+1}) \text{.}\)</span> Par <a href="" class="xref" data-knowl="./knowl/exo-prime.html" title="Exercice 5.1.4.10">5.1.4.10</a>, on a que <span class="process-math">\(p\mid (a_1a_2\cdots a_k)\)</span> ou bien <span class="process-math">\(p\mid a_{k+1}\text{.}\)</span> Si <span class="process-math">\(p\mid a_{k+1}\text{,}\)</span> on a terminé. Si <span class="process-math">\(p\mid (a_1a_2\cdots a_k)\text{,}\)</span> par notre hypothèse d’induction, on a que <span class="process-math">\(p\mid a_i\)</span> pour <span class="process-math">\(1\leq i \leq k \text{.}\)</span> Ainsi, la proposition est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span>
+</div> <div class="para">On a montré que la proposition est vraie pour <span class="process-math">\(n=2\text{,}\)</span> et que si elle est vraie pour <span class="process-math">\(n=k\text{,}\)</span> alors elle est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span> Ainsi, la proposition est vraie pour tout  les entiers <span class="process-math">\(n \geq 2\text{.}\)</span>
 </div>
 </div>
-<span class="incontext"><a href="sec-relRecLinHom.html#solution-279" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-preuvesSupp.html#solution-279" class="internal">Contexte</a></span>
 </body>
 </html>

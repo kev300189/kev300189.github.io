@@ -13,18 +13,18 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraphe</span></h6>
 <div class="para logical">
-<div class="para">Ainsi, on a</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-formulePascal.html">
+<div class="para">
+<em class="alert">Étape d’induction:</em> On suppose que <span class="process-math">\(2k+3 \leq 2^k\)</span> pour un certain entier <span class="process-math">\(k \geq 4\)</span> (H.I.). On a alors</div>
+<div class="displaymath process-math">
 \begin{align*}
-(x+y)^{k+1}\amp = (x+y)^k(x+y)^1  \amp\amp\\
-\amp = \left(\Binomial{k}{k}x^ky^0+\Binomial{k}{k-1}x^{k-1}y^1+\cdots +\Binomial{k}{k-(k-1)}x^{1}y^{k-1}+\Binomial{k}{k-k}x^0y^k\right) (x+y)^1 \amp\amp \text{Par H.I.}\\
-\amp = \Binomial{k}{k}x^{k+1}y^0+\Binomial{k}{k-1}x^{k}y^1+\cdots +\Binomial{k}{k-(k-1)}x^{2}y^{k-1}+\Binomial{k}{k-k}x^1y^k  \amp\amp \text{(en multipliant la somme par }x\text{)}\\
-\amp  + \Binomial{k}{k}x^ky^1+\Binomial{k}{k-1}x^{k-1}y^2+\cdots +\Binomial{k}{k-(k-1)}x^{1}y^{k}+\Binomial{k}{k-k}x^0y^k (x+y)^1  \amp\amp \text{(en multipliant la somme par }y\text{)}\\
-\amp = \Binomial{k}{k}x^{k+1}y^0 + \left(\Binomial{k}{k-1} +\Binomial{k}{k} \right)x^{k}y^1+\cdots +\left(\Binomial{k}{k- k}+\Binomial{k}{k-(k-1)}\right)x^{1}y^{k-1}+\Binomial{k}{k-k}x^0y^k \amp\amp \text{En regroupant les termes}\\
-\amp = \Binomial{k+1}{k+1}x^{k+1}y^0 + \left(\Binomial{k+1}{k}\right)x^{k}y^1+\cdots +\left(\Binomial{k+1}{1}\right)x^{1}y^{k-1}+\Binomial{k+1}{0}x^0y^k \amp\amp \text{Par }\knowl{./knowl/prop-formulePascal.html}{\text{4.2.18}}.
+2(k+1)+3 \amp =(2k+3) +2 \\
+\amp \leq (2^k) +2 \amp\amp \text{ Par H.I.} \\
+\amp \leq 2^k +2^k \amp\amp \text{ Car } k\geq 4 \\
+\amp \leq 2\cdot 2^k \amp\amp \text{ Mise en évidence} \\
+\amp \leq 2^{k+1} \amp\amp \text{ Propriétés des exposants} \text{.}
 \end{align*}
 </div>
-<div class="para">Ainsi, la proposition est vrai pour <span class="process-math">\(n=k+1\text{.}\)</span>
+<div class="para">Ainsi, la proposition est vraie pour <span class="process-math">\(n=k+1\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="sec-preuvesSupp.html#p-2564" class="internal">Contexte</a></span>

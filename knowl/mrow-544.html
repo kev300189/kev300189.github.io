@@ -11,13 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-somDeg.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-caract.html">
 \begin{align*}
-0\amp\equiv \deg(s_1)+\deg(s_2)+\cdots+\deg(s_n)+\deg(t_1)+\deg(t_2)+\cdots+\deg(t_k) \mod 2\\
-0\amp\equiv \underbrace{1+1+\cdots+1}_{n\text{ fois}}+\underbrace{0+0+\cdots+0}_{k\text{ fois}}\mod 2\\
-0\amp\equiv n\mod 2
+6(n-1)3^{n-1}-9(n-2)3^{n-2}\amp= 6n(3)^{n-1}-6(3)^{n-1}-9n(3)^{n-2} +2\cdot 9(3)^{n-2} \\
+\amp= \left(6n(3)^{n-1}-9n(3)^{n-2}\right)+ \left( -6(3)^{n-1} +2\cdot 9(3)^{n-2} \right)\\
+\amp= n\left(6(3)^{n-1}-9(3)^{n-2}\right)+ \left( -6\cdot 3(3)^{n-2} +2\cdot 9(3)^{n-2} \right)\\
+\amp= n\left(3^n\right)+ \left( 0 \right) \text{ par } \knowl{./knowl/eq-caract.html}{\text{(6.4)}} \\
+\amp= n3^n=a_n.
 \end{align*}
 </div>
-<span class="incontext"><a href="sec-introGraphes.html#md-140" class="internal">Contexte</a></span>
+<span class="incontext"><a href="sec-relRecLinHom.html#md-142" class="internal">Contexte</a></span>
 </body>
 </html>

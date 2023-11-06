@@ -10,25 +10,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<div class="para">À l’exemple <a href="" class="xref" data-knowl="./knowl/exe-equCarPlusieursSol.html" title="Exemple 6.1.17: L’équation caractéristique: Un premier cas">6.1.17</a>, on a déjà montrer que l’équation caractéristique de cette relation possède <span class="process-math">\(r_1=2\)</span> et <span class="process-math">\(r_2=(-1)\)</span> comme solution.</div> <div class="para logical">
-<div class="para">Par la proposition <a href="" class="xref" data-knowl="./knowl/prop-solRecLinHomDeux.html" title="Proposition 6.1.18: Solution aux relations de récurrence linéaires homogènes d’ordre 2 cas 1">6.1.18</a>, on sait que la solution devra avoir la forme</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-solRecLinHomDeux.html">
-\begin{equation}
-a_n=\alpha_1r_1^n+\alpha_2r_2^n=\alpha_1(2)^n+\alpha_2(-1)^n\text{.}\tag{6.1}
-\end{equation}
-</div>
-</div> <div class="para logical">
-<div class="para">Ainsi, puisque <span class="process-math">\(a_0=5\)</span> et <span class="process-math">\(a_1=11,\)</span> en remplaçant <span class="process-math">\(n\)</span> par <span class="process-math">\(0\)</span> et <span class="process-math">\(1\)</span> dans <a href="" class="xref" data-knowl="./knowl/eq-formGen.html" title="Équation 6.1">(6.1)</a>, on obtient un système d’équations suivants.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-formGen.html">
-\begin{align*}
-5\amp= \alpha_1 (2)^0+\alpha_2(-1)^0=\alpha_1+\alpha_2;\\
-11\amp= \alpha_1 (2)^1+\alpha_2(-1)^1=2\alpha_1-\alpha_2.
-\end{align*}
-</div>
-<div class="para">En résolvant ce sytème d’équations, on a que <span class="process-math">\(\alpha_1=\frac{16}{3}\)</span> et <span class="process-math">\(\alpha_2=\frac{-1}{3}\text{.}\)</span>
-</div>
-</div> <div class="para">Ainsi, on a que la suite <span class="process-math">\(\{a_n\}\)</span> est la suite dont le terme général est <span class="process-math">\(a_n=\frac{16}{3}(2)^n+\frac{-1}{3}(-1)^n\text{.}\)</span>
-</div>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><div class="para">Par contradiction, supposons que la somme des diviseurs de <span class="process-math">\(n\)</span> est <span class="process-math">\(n+1\text{,}\)</span> mais que <span class="process-math">\(n\)</span> n’est pas un nombre premier. Si <span class="process-math">\(n\)</span> n’est pas un nombre premier, alors <span class="process-math">\(n\)</span> possède au moins trois facteurs différents, soit <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(n\)</span> et <span class="process-math">\(1\lt m \lt n\text{.}\)</span> La somme des facteurs est donc au moins de <span class="process-math">\(n+1+m \gt n+1\text{,}\)</span> ce qui est en contradiction avec notre hypothèse. Ainsi, on doit avoir  que <span class="process-math">\(n\)</span>  est un nombre premier.</div></div></body>
 </html>

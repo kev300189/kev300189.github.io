@@ -12,7 +12,21 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraphe</span></h6>
-<div class="para">On place les entiers <span class="process-math">\(1\)</span> à <span class="process-math">\(10\)</span> autour d’un cercle, dans n’importe quel ordre. Montrer  qu’il existe trois entiers dans des emplacements consécutifs qutour du cercle dont la somme est plus grande ou égale à <span class="process-math">\(17\text{.}\)</span>
+<div class="para logical">
+<div class="para">Ici, il sera plus facile de travailler en posant <span class="process-math">\(j=k+1\text{,}\)</span> et donc <span class="process-math">\(k=j-1\text{.}\)</span> Avec ce changement de variables, on a</div>
+<div class="displaymath process-math">
+\begin{align*}
+1^3+2^3+\cdots + k^3 + (k+1)^3 \amp = 1^3+2^3+\cdots + (j-1)^3 + j^3 \amp\amp \text{Par le changement de variables} \\
+\amp = \frac{(j-1)^2j^2}{4} + j^3 \amp\amp \text{Par H.I.} \\
+\amp = \frac{(j-1)^2j^2 +4j^3}{4} \amp\amp \text{Par manipulation algébrique} \\
+\amp = \frac{((j-1)^2 +4j)j^2}{4}\amp\amp \text{Par manipulation algébrique} \\
+\amp = \frac{(j^2-2j+1 +4j)j^2}{4}\amp\amp \text{Par manipulation algébrique} \\
+\amp = \frac{(j^2+2j+1)j^2}{4}\amp\amp \text{Par manipulation algébrique} \\
+\amp = \frac{(j+1)^2j^2}{4}\amp\amp \text{Par manipulation algébrique} \text{.}
+\end{align*}
+</div>
+<div class="para">Ainsi, la proposition est vrai pour <span class="process-math">\(n=k+1\text{.}\)</span>
+</div>
 </div>
 <span class="incontext"><a href="sec-preuvesSupp.html#p-2576" class="internal">Contexte</a></span>
 </body>

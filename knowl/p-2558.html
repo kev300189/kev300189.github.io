@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraphe</span></h6>
-<div class="para">Montrer que, si <span class="process-math">\(n\in \N\)</span> est tel que <span class="process-math">\(n\geq 3\text{,}\)</span> alors <span class="process-math">\(n^2-1\)</span> est un nombre composé (c’est-à-dire, n’est pas un nombre premier)</div>
+<div class="para logical">
+<div class="para">On travaille modulo <span class="process-math">\(5\text{.}\)</span> On a</div>
+<div class="displaymath process-math">
+\begin{align*}
+0^5 \amp\equiv 0 \mod 5\\
+1^5 \amp\equiv 1 \mod 5\\
+2^5 = 32 \amp\equiv 2 \mod 5\\
+3^5 = 243 \amp\equiv 3\mod 5\\
+4^5 = 1024 \amp\equiv 4 \mod 5\text{.}
+\end{align*}
+</div>
+<div class="para">Ainsi, dans tous les cas, on a <span class="process-math">\(n^5 \equiv n \mod 5\text{,}\)</span> ou encore <span class="process-math">\(n^5-n\equiv 0 \mod 5\text{,}\)</span> c’est-à-dire que <span class="process-math">\(5\)</span> divise <span class="process-math">\(n^5-n\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-preuvesSupp.html#p-2558" class="internal">Contexte</a></span>
 </body>
 </html>
