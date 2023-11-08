@@ -13,18 +13,40 @@
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraphe</span></h5>
 <div class="para logical">
-<div class="para">Les deux graphes ci-dessous sont isomorphe. On peut donner une isomorphisme <span class="process-math">\(g\)</span> allant des sommets de <span class="process-math">\(G\)</span> vers les sommets de <span class="process-math">\(H\)</span> comme ceci:</div>
+<div class="para">Par la suite, on veut déterminer sous quelles conditions est-ce que <span class="process-math">\(a^{(p)}_n=cn^2+dn.\)</span> est une solution à la relation initiale. Pour cela, on doit avoir</div>
 <div class="displaymath process-math">
 \begin{align*}
-g(a)\amp=s_2\\
-g(b)\amp=s_6\\
-g(c)\amp=s_4\\
-g(d)\amp=s_3\\
-g(e)\amp=s_5\\
-g(f)\amp=s_1
+cn^2+dn \amp= c(n-1)^2+d(n-1) +n \\
+cn^2+dn \amp= c(n^2-2n+1) +dn-d+n \\
+cn^2+dn \amp= (c)n^2+(d-2c+1)n+(c-d) 
 \end{align*}
 </div>
+<div class="para">Pour que cette égalité soit vraie, il faut que les termes devant chaque puissance de <span class="process-math">\(n\)</span> doivents être les mêmes à gauche et à droite de l’égalité. Ainsi,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases}
+c &amp;= c \\
+d &amp;= (d-2c+1) \\
+0 &amp;= c-d
+\end{cases} 
+\end{equation*}
 </div>
-<span class="incontext"><a href="sec-propGraphes.html#p-2787" class="internal">Contexte</a></span>
+<div class="displaymath process-math">
+\begin{equation*}
+\iff
+\begin{cases}
+c &amp;= c \\
+d &amp;= (d-2c+1) \\
+d &amp;= c
+\end{cases} 
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iff d = (d-2d+1) = -d+1 \iff d=\frac{1}{2}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-relRecLinNonHom.html#p-2787" class="internal">Contexte</a></span>
 </body>
 </html>
