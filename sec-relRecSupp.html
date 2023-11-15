@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fr-CA" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MaDIR Exercices supplémentaires</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathématiques discrètes">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.css" integrity="sha512-nXlJLUeqPMp1Q3+Bd8Qds8tXeRVQscMscwysJm821C++9w6WtsFbJjPenZ8cQVMXyqSAismveQJc0C1splFDCA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.8/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.8/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/colors_green_plum.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="madir.html"><span class="title">Mathématiques discrètes:</span> <span class="subtitle">Version préliminaire</span></a></h1>
+<p class="byline"></p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Résultats de la recherche: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>Aucun résultat.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Table des matières</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-relRecLinNonHom.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="chap-relationRecurrence.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button>
+</div></div>
+<span class="nav-runestone-controls"><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}        
+\newcommand{\Z}{\mathbb{Z}}                
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Prob}[1]{\mathbb{P}\left(#1\right)}
+
+\newcommand{\Permutation}[2]{P_{#2}^{#1}}
+\newcommand{\Binomial}[2]{C_{#2}^{#1}}
+
+\newcommand{\Probc}[2]{\mathbb{P}\left(#1~\left|\right .~#2\right)}
+\newcommand{\E}[1]{\mathbb{E}\left(#1\right)}
+\newcommand{\Ec}[2]{\mathbb{E}\left(#1~\left|\right .~#2\right)}
+\newcommand{\indicator}[1]{1{\hskip -2.5 pt}\hbox{I}_{\left\{ {#1} \right\} }}
+\newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\RH}{\overset{\text{\scalebox{0.8}{ R.H.}}}{=}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\vecl}[1]{\overrightarrow{#1}}
+\newcommand{\vecd}[2]{\begin{pmatrix}#1 \\ #2\end{pmatrix}}
+\newcommand{\vecddd}[3]{\begin{pmatrix}#1 \\ #2 \\ #3\end{pmatrix}}
+\newcommand{\pscal}[2]{\vecl{#1}\cdot \vecl{#2}}
+\newcommand{\matcold}[4]{\begin{pmatrix}#1 &amp; #3 \\ #2 &amp; #4\end{pmatrix}}
+\newcommand{\matcolt}[9]{\begin{pmatrix}#1 &amp; #4 &amp; #7 \\ #2 &amp; #5 &amp; #8 \\ #3 &amp; #6 &amp; #9\end{pmatrix}}
+\newcommand{\matsimile}[2]{\overset{\scriptsize L_{#1}\leftrightarrow L_{#2}}{\sim}}
+\newcommand{\matsimils}[2]{\overset{\scriptsize #2L_{#1}\rightarrow L_{#1}}{\sim}}
+\newcommand{\matsimilc}[3]{\overset{\scriptsize #2L_{#1}+L_{#3}\rightarrow L_{#3}}{\sim}}
+\newcommand{\matII}{\begin{pmatrix} 1&amp; 0 \\  0 &amp; 1\end{pmatrix}}
+\newcommand{\matIII}{\begin{pmatrix} 1&amp; 0 &amp; 0\\  0 &amp; 1 &amp; 0 \\ 0&amp; 0&amp; 1\end{pmatrix}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\vspan}{span}
+\DeclareMathOperator{\Det}{det}
+\DeclareMathOperator{\pgcd}{pgcd}
+\DeclareMathOperator{\ppcm}{ppcm}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\CQFD}{\begin{flushright}   
+$\blacksquare$
+\end{flushright}}
+\newcommand{\cqfd}{\begin{flushright}
+$\Box$
+\end{flushright}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="chap-ensfct.html" class="internal"><span class="codenumber">1</span> <span class="title">Ensembles et fonctions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-ens.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Les ensembles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-ens.html#subsection-1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Définitions et exemples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#subsection-2" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Relation entre deux ensembles</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#subsection-3" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Représentation graphique d’ensembles</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#subsection-4" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Ensembles particuliers</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ens.html#exo-ens" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-opens.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Opérations sur les ensembles</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-opens.html#sssec-opens" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Opérations élémentaires sur les ensembles</span></a></div></li>
+<li><div class="toc-item"><a href="sec-opens.html#sssec-propoper" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Propriétés des opérations élémentaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec-opens.html#rq-opens" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-opens.html#exo-opens" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-fonctions.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Les fonctions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-fonctions.html#subsection-7" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Définitions et exemples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#subsection-8" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Représentation d’une fonction</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#subsection-9" class="internal"><span class="codenumber">1.3.3</span> <span class="title">La composition de fonctions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#sssec-injsurj" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Fonctions injectives et surjectives</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#reading-questions-2" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-fonctions.html#exo-" class="internal"><span class="codenumber">1.3.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-logique.html" class="internal"><span class="codenumber">2</span> <span class="title">Logique mathématique</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-logprop.html" class="internal"><span class="codenumber">2.1</span> <span class="title">La logique propositionnelle</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-logprop.html#subsection-11" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Propositions mathématiques et connecteurs logiques</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#subsection-12" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Table de vérité</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#subsection-13" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Implication, réciproque et contraposée</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#reading-questions-3" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logprop.html#exo-logprop" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-eqlogfnc.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Équivalence logique et formes normales</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#subsection-14" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Équivalence logique</span></a></div></li>
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#subsection-15" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Formes normales</span></a></div></li>
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#rq-eqlogfnc" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-eqlogfnc.html#exo-eqlogfnc" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-propquant.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Les propositions quantifiées</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-propquant.html#sssec-predicats" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Prédicats</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#sssec-quantificateurs" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Quantificateurs existentiel et universel</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#subsection-18" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Négation et combinaisons de quantificateurs</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#rq-propquant" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-propquant.html#exo-propquant" class="internal"><span class="codenumber">2.3.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-circuits.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Circuits logiques</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-circuits.html#subsection-19" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Portes logiques</span></a></div></li>
+<li><div class="toc-item"><a href="sec-circuits.html#subsection-20" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Parallèle avec la logique propositionnelle</span></a></div></li>
+<li><div class="toc-item"><a href="sec-circuits.html#rq-circuits" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-circuits.html#exo-circuits" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-reptheonombres.html" class="internal"><span class="codenumber">3</span> <span class="title">Représentation des nombres et arithmétique modulaire</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-representation.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Représentation des nombres</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-representation.html#subsection-21" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Systèmes positionnels</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-22" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Représentation en base deux</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-23" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Représentation en base hexadécimale</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-24" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Opérations élémentaires en base deux</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#subsection-25" class="internal"><span class="codenumber">3.1.5</span> <span class="title">Représentation en circuits d’opérations binaires</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#rq-representation" class="internal"><span class="codenumber">3.1.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-representation.html#exo-representation" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-divisibilite.html" class="internal"><span class="codenumber">3.2</span> <span class="title">La divisibilité dans les entiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-divisibilite.html#subsection-26" class="internal"><span class="codenumber">3.2.1</span> <span class="title">L’opération de division</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#subsection-27" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Retour sur la conversion à partir de la base dix</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#subsection-28" class="internal"><span class="codenumber">3.2.3</span> <span class="title">L’algorithme d’Euclide</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#rq-divisibilite" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-divisibilite.html#exo-divisibilite" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-modulo.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Arithmétique modulaire</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-29" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(n\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-30" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Arithmétique modulaire</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-31" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Résolution d’équations en congruence modulo</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#subsection-32" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Introduction à la cryptographie</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#rq-modulo" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-modulo.html#exo-modulo" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-denombrement.html" class="internal"><span class="codenumber">4</span> <span class="title">Dénombrement</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec_prodSomme.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Méthodes de dénombrement: Principes de base</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-regleProd" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Principe du produit</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-regleSomme" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Principe de la somme</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-combProdSomme1" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Combinaison du principe du produit et du principe de la somme</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-incExclu" class="internal"><span class="codenumber">4.1.4</span> <span class="title">Le principe d’inclusion-exclusion (ou de la soustraction )</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#subs-div" class="internal"><span class="codenumber">4.1.5</span> <span class="title">Le principe de la division</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#rq-prodSomme" class="internal"><span class="codenumber">4.1.6</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_prodSomme.html#exo-prodSomme" class="internal"><span class="codenumber">4.1.7</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_arrCombinaison.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Permutations et combinaisons</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subs_permArr" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Les permutations</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subs_combBinomial" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Les combinaisons</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec_arrCombinaison.html#subs-trianglePascalBinomNewton" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Le triangle de Pascal et le binôme de Newton</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsubsection-1" class="internal"><span class="codenumber">4.2.3.1</span> <span class="title">Le triangle de Pascal</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsubsection-2" class="internal"><span class="codenumber">4.2.3.2</span> <span class="title">Le binôme de Newton</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_arrCombinaison.html#subs-permCombGen" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Les permutations et combinaisons généralisées</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsub-permInd" class="internal"><span class="codenumber">4.2.4.1</span> <span class="title">Permutations avec des objets indiscernables</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsub-permRep" class="internal"><span class="codenumber">4.2.4.2</span> <span class="title">Permutations avec répétitions</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#subsub-combRep" class="internal"><span class="codenumber">4.2.4.3</span> <span class="title">Combinaisons avec répétitions</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#rq-arrCombinaison" class="internal"><span class="codenumber">4.2.5</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_arrCombinaison.html#exo-combinatoire" class="internal"><span class="codenumber">4.2.6</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-combinatoireExoSupp.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercices supplémentaires</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-combinatoireExoSupp.html#exo-combinatoireExoSupp" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-preuveMath.html" class="internal"><span class="codenumber">5</span> <span class="title">Les preuves mathématiques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec_methodePreuve.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Méthodes de preuves</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subs-terminomolgie" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Un peu de terminologie</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec_methodePreuve.html#subs-methodePreuve" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Différentes méthodes de preuves</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-preuveDirecte" class="internal"><span class="codenumber">5.1.2.1</span> <span class="title">Preuve directe</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-preuvInd" class="internal"><span class="codenumber">5.1.2.2</span> <span class="title">Preuve indirecte</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-preuveContradiction" class="internal"><span class="codenumber">5.1.2.3</span> <span class="title">Preuve par contradiction</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#subsub-bidirectionnel" class="internal"><span class="codenumber">5.1.2.4</span> <span class="title">La double implication</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#rq-methodePreuve" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_methodePreuve.html#exo-methodePreuve" class="internal"><span class="codenumber">5.1.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_induction.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Les preuves par récurrence (par induction)</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_induction.html#subs_introInduction" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Les différentes étapes</span></a></div></li>
+<li><div class="toc-item"><a href="sec_induction.html#subs-exemples" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Exemples de preuves par récurrence</span></a></div></li>
+<li><div class="toc-item"><a href="sec_induction.html#rq-induction" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_induction.html#exo-induction" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec_pidgeonHoles.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Principe des tiroirs de Dirichlet</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec_pidgeonHoles.html#subs_statement" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Introduction</span></a></div></li>
+<li><div class="toc-item"><a href="sec_pidgeonHoles.html#subs_exemple" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Exemples</span></a></div></li>
+<li><div class="toc-item"><a href="sec_pidgeonHoles.html#rq-pigeonHoles" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec_pidgeonHoles.html#exo-pigeonHoles" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-preuvesSupp.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercices supplémentaires</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-preuvesSupp.html#exo-preuvesSupp" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chap-relationRecurrence.html" class="internal"><span class="codenumber">6</span> <span class="title">Relations de récurrence</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-relRecLinHom.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-defRelRec" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Suites et relations de récurrence</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-relRecLinHom" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Relations de récurrence  et forme générale</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-recLinHom" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Relations de récurrence linéaires homogènes</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-solLinHom" class="internal"><span class="codenumber">6.1.4</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d’odre 2: Cas 1</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-solLinHom2" class="internal"><span class="codenumber">6.1.5</span> <span class="title">Solutions aux équations de récurrence linéaires homogènes d’odre 2: Cas 2</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#subs-ordrePGDeux" class="internal"><span class="codenumber">6.1.6</span> <span class="title">Relations de récurrence linéaires homogènes d’ordre <span class="process-math">\(k\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#rq-relRecLinHom" class="internal"><span class="codenumber">6.1.7</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinHom.html#exo-relRecLinHom" class="internal"><span class="codenumber">6.1.8</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-relRecLinNonHom.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Relations de récurrence linéaires non-homogènes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-relRecLinNonHom.html#subs-" class="internal"><span class="codenumber">6.2.1</span> <span class="title"></span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinNonHom.html#rq-relRexLinNonHom" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Questions de compréhension de la lecture</span></a></div></li>
+<li><div class="toc-item"><a href="sec-relRecLinNonHom.html#exo-relRecLinNonHom" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="sec-relRecSupp.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercices supplémentaires</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-relRecSupp.html#exo-relRecSupp" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercices</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-relRecSupp"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">6.3</span><span class="space"> </span><span class="title">Exercices supplémentaires</span>
+</h2>
+<section class="introduction" id="intro-relRecSupp"></section><section class="conclusion" id="concl-relRecSupp"></section><section class="exercises" id="exo-relRecSupp"><h3 class="heading hide-type">
+<span class="type">Exercices</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercices</span>
+</h3>
+<article class="subexercises" id="subexercises-20"><h4 class="heading"><span class="title">À faire en classe</span></h4>
+<div class="introduction" id="introduction-266"><div class="para" id="p-2846">Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d’apprentissage plus avancés.</div></div>
+<article class="exercise exercise-like" id="exercise-341"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-267"><div class="para" id="p-2847">Un modèle qu’on peut utilisé pour approximer  le nombre de homards pêchés par année est de supposer que le nombre de homards pêchés dans une année est la moyennes du nombre de homards pêchés dans les deux années précédentes.</div></div>
+<article class="task exercise-like" id="task-659"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="p-2848">En supposant que le modèle est vrai, trouver une relation de récurrence pour la suite <span class="process-math">\(\{L_n\}\text{,}\)</span> où <span class="process-math">\(L_n\)</span> est le nombre de homard pêchés à l’année <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-399" id="answer-399"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-399"><div class="answer solution-like"><div class="para" id="p-2849">On a <span class="process-math">\(L_n=\frac{L_{n-1}}{2}+\frac{L_{n-2}}{2}\text{.}\)</span>
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-660"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-2850">Déterminer <span class="process-math">\(L_n\text{,}\)</span> sachant que 100 000 homards ont été pêchés à l’an 1, et 300 000 ont été pêchés à l’an 2.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-400" id="answer-400"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-400"><div class="answer solution-like"><div class="para" id="p-2851">On a <span class="process-math">\(L_n=\frac{800\ 000}{3}\left(\frac{-1}{2}\right)^n + \frac{700\ 000}{3}\text{.}\)</span>
+</div></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-342"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-268"><div class="para" id="p-2852">Un client d’une banque dépose 100 000 <span class="process-math">\(\$\)</span> dans un compte d’investissement. À la fin de chaque année (le dernier jour de l’année), on ajoute au compte de banque deux montants. Le premier est <span class="process-math">\(20\%\)</span> du montant dans le compte durant cette année, et le deuxième est <span class="process-math">\(45\%\)</span> du montant dans le compte durant l’année précédente.</div></div>
+<article class="task exercise-like" id="task-661"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="p-2853">Trouver une relation de récurrence pour la suite <span class="process-math">\(\{P_n\}\text{,}\)</span> où <span class="process-math">\(P_n\)</span> est le montant en <span class="process-math">\(\$\)</span> dans le compte à la fin de l’an <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-401" id="answer-401"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-401"><div class="answer solution-like"><div class="para" id="p-2854">On a <span class="process-math">\(P_n=1,20 P_{n-1}+045P_{n-2}\text{.}\)</span>
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-662"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-2855">En utilisant <span class="process-math">\(P_{0}=100\ 000\)</span> et <span class="process-math">\(P_1=120\ 000\text{,}\)</span> trouver une expression pour <span class="process-math">\(P_n\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-402" id="answer-402"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-402"><div class="answer solution-like"><div class="para" id="p-2856">À l’aide de l’équation caractéristique est des conditions initiales, on à <span class="process-math">\(P_n=\frac{250\ 000}{3}\left(\frac{3}{2}\right)^n+\frac{50\ 000}{3}\left(\frac{-3}{10}\right)^n\text{.}\)</span>
+</div></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-343"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-269"><div class="para" id="p-2857">Un nouvel enmployé dans une compagnie se fait offrir un salaire de <span class="process-math">\(50\ 000 \$\)</span> par année. De plus, l’employé se fait promettre qu’à la fin de chaque année, son salaire sera le double de celui de l’année précédente plus <span class="process-math">\(10\ 000 \$\)</span> par année passée à travailler pour la compagnie.</div></div>
+<article class="task exercise-like" id="task-663"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="p-2858">Trouver une relation pour la suite <span class="process-math">\(\{s_n\}\text{,}\)</span> où <span class="process-math">\(s_n\)</span> est le salaire en <span class="process-math">\(\$\)</span> de l’employé à l’année <span class="process-math">\(n\text{.}\)</span> Ici, la condition initiale est <span class="process-math">\(s_1=50\ 000\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-403" id="answer-403"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-403"><div class="answer solution-like"><div class="para" id="p-2859">On a <span class="process-math">\(s_n=2s_{n-1}+10\ 000(n-1)\text{.}\)</span>
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-664"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-2860">Trouver l’expression de <span class="process-math">\(s_n\text{.}\)</span> Utiliser une solution particulière de la forme <span class="process-math">\(cn+d\text{,}\)</span> où <span class="process-math">\(c\)</span> et <span class="process-math">\(d\)</span> sont des constantes à déterminer.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-308" id="solution-308"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-308"><div class="solution solution-like">
+<div class="para" id="p-2861">On commence par résoudre la relation homogène. On trouve alors <span class="process-math">\(s_n^{(h)}=\alpha (2)^n \)</span>
+</div> <div class="para logical" id="p-2862">
+<div class="para">Ensuite, on remplaçant par <span class="process-math">\(cn+d\)</span> dans la relation, on obtient</div>
+<div class="displaymath process-math" id="md-159">
+\begin{align*}
+cn+d \amp = 2(c(n-1) + d ) +10\ 000(n-1) \amp\amp \\
+cn+d \amp = 2cn - 2c+2d +10\ 000n-10\ 000 \amp\amp \text{ en distribuant}\\
+(c)n+(d)  \amp = (2c + 10\ 000)n + (2d-2c-10\ 000) \amp\amp  \text{ en distribuant}\text{.}
+\end{align*}
+</div>
+</div> <div class="para" id="p-2863">En comparant les termes devant les <span class="process-math">\(n\)</span> et les termes constant, on obtient les deux équations <span class="process-math">\(c = 2c - 10\ 000 \)</span> et <span class="process-math">\(d = 2d-2c-10\ 000 \text{.}\)</span> On peut alors résoudre ce système d’équations et trouver <span class="process-math">\(c=d=-10\ 000\text{.}\)</span> On a alors que la solution particulière est <span class="process-math">\(-10\ 000 c - 10\ 000\text{.}\)</span>
+</div> <div class="para" id="p-2864">Ainsi, on a que <span class="process-math">\(s_n =\alpha 2^n -10\ 000 (n+1)\text{.}\)</span> À l’aide de la condition initiale, on a <span class="process-math">\(s_1=50\ 000 = \alpha 2  -20\ 000\text{,}\)</span> et donc  <span class="process-math">\(\frac{70\ 000}{2}=\alpha\text{.}\)</span>
+</div> <div class="para" id="p-2865">Par ce qui précède, on a <span class="process-math">\(s_n= 70\ 000 2^{n-1} - 10\ 000(n+1)\text{.}\)</span>
+</div>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-344"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-270">
+<div class="para" id="p-2866">On considère un échiquier de dimension <span class="process-math">\(2\times n\text{,}\)</span> c’est-à-dire un échiquer formé de deux rangés, et chacune de ces rangés est formée de <span class="process-math">\(n\)</span> cases. On veut recouvrir cet échiquer à l’aide de tuiles de dimension <span class="process-math">\(1\time 2\text{,}\)</span> <span class="process-math">\(2\time 1\)</span> et <span class="process-math">\(2\times 2\text{.}\)</span>
+</div> <div class="para" id="p-2867">On note <span class="process-math">\(a_n\)</span> le nombre de façons d’accomplir cette tâche.</div>
+</div>
+<article class="task exercise-like" id="task-665"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="p-2868">Déterminer <span class="process-math">\(a_1\)</span> et <span class="process-math">\(a_2\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-309" id="solution-309"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-309"><div class="solution solution-like">
+<div class="para" id="p-2869">Si <span class="process-math">\(n = 1\text{,}\)</span> l’échiquier est de dimension <span class="process-math">\(2\times 1\text{.}\)</span> Il y a donc une seule façon d’accomplir cette tâche, en plaçant une tuile <span class="process-math">\(2\times 1\text{.}\)</span> Ainsi, <span class="process-math">\(a_1=1\text{.}\)</span>
+</div> <div class="para" id="p-2870">Si <span class="process-math">\(n = 2\text{,}\)</span> l’échiquier est de dimension <span class="process-math">\(2\times 2\text{.}\)</span> Il y a donc trois façons d’accomplir cette tâche. En plaçant deux tuiles  de dimension <span class="process-math">\(2\times 1\text{,}\)</span> en plaçant deux tuiles  de dimension <span class="process-math">\(1\times 2\)</span> ou encore en plaçant une tuile de dimension <span class="process-math">\(2\times 2\text{.}\)</span> Ainsi, <span class="process-math">\(a_2=3\text{.}\)</span>
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-666"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-2871">Trouver une relation de récurrence pour <span class="process-math">\(a_n\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-310" id="solution-310"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-310"><div class="solution solution-like">
+<div class="para" id="p-2872">On sépare la tâche en trois catégories. Pour se faire, on regarde quelle sorte de tuile à été utilisée afin de recouvrir la case en haut à gauche de l’échiquer. Il y a trois façons de le faire, une pour chaque type de tuiles, <span class="process-math">\(1\time 2\text{,}\)</span> <span class="process-math">\(2\time 1\)</span> ou <span class="process-math">\(2\times 2\text{.}\)</span>
+</div> <div class="para" id="p-2873">Si on a utilisé une tuile de dimension <span class="process-math">\(2\times 1\text{,}\)</span> il reste à recouvrir un échiquier de dimension <span class="process-math">\(2\times (n-1)\text{.}\)</span> Il y a <span class="process-math">\(a_{n-1}\)</span> façons d’accomplir cette tâche.</div> <div class="para" id="p-2874">Si on a utilisé une tuile de dimension <span class="process-math">\(1\times 2\text{,}\)</span> alors on a nécessairement urilisé une autre tuile de dimension <span class="process-math">\(1\times 2\)</span> pour recouvrir la case en bas à gauche. Il reste donc à recouvrir un échiquier de dimension <span class="process-math">\(2\times (n-2)\text{.}\)</span> Il y a <span class="process-math">\(a_{n-2}\)</span> façons d’accomplir cette tâche.</div> <div class="para" id="p-2875">Finalement, si on a utilisé une tuile de dimension <span class="process-math">\(2\times 2\text{,}\)</span> il reste à recouvrir un échiquier de dimension <span class="process-math">\(2\times (n-2)\text{.}\)</span> Il y a <span class="process-math">\(a_{n-2}\)</span> façons d’accomplir cette tâche.</div> <div class="para" id="p-2876">Ainsi, par le principe de la somme, on a <span class="process-math">\(a_n=a_{n-1}+a_{n-2}+a_{n-2}=a_{n-1}+2a_{n-2}\text{.}\)</span>
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-667"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-2877">Résoudre la relation de récurrence à l’aide des conditions initiales (à l’aide de <span class="process-math">\(a_1\)</span> et <span class="process-math">\(a_2\)</span>).</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-311" id="solution-311"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-311"><div class="solution solution-like">
+<div class="para" id="p-2878">À l’aide de l’équation caractéristique, on trouve que <span class="process-math">\(a_n=\alpha_1 (2)^n + \alpha_2 (-1)^n\text{.}\)</span>
+</div> <div class="para" id="p-2879">Puisque <span class="process-math">\(1=a_1= 2\alpha_1-\alpha_2\)</span> et <span class="process-math">\(3=a_2=4\alpha_1 +\alpha_2\text{,}\)</span> on peut résoudre ces équations et obtenir <span class="process-math">\(\alpha_1=\frac{2}{3}\)</span> et <span class="process-math">\(\alpha_2=\frac{1}{3}\text{.}\)</span>
+</div> <div class="para" id="p-2880">Ainsi, <span class="process-math">\(a_n=\frac{2\cdot 2^n}{3}+\frac{1(-1)^n}{3}=\frac{2^{n+1}+(-1)^n}{3}\text{.}\)</span>
+</div>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-345"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="introduction" id="introduction-271"><div class="para" id="p-2881">On considère <span class="process-math">\(s_n\)</span> le nombre de chaînes binaites de longueur <span class="process-math">\(n\)</span> qui contiennent la suite de caractères <span class="process-math">\(01\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="task-668"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="para" id="p-2882">Trouver les conditions initiales, c’est-à-dire, déterminer <span class="process-math">\(s_1\)</span> et <span class="process-math">\(s_2\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-404" id="answer-404"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-404"><div class="answer solution-like"><div class="para" id="p-2883">On a <span class="process-math">\(a_1=0\)</span> et <span class="process-math">\(a_2=1\text{.}\)</span>
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-669"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="para" id="p-2884">Trouver une relation re récurrence pour la suite <span class="process-math">\(\{s_n\}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-99" id="hint-99"><span class="type">Indice</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-99"><div class="hint solution-like"><div class="para" id="p-2885">La relation est une relation linéaire non homogène.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-312" id="solution-312"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-312"><div class="solution solution-like">
+<div class="para" id="p-2886">On considère la tâche d’écrire une chaîne binaire de longueur <span class="process-math">\(n\)</span> contenant la suite <span class="process-math">\(01\text{.}\)</span> On utilise le principe de la somme selon le premier caractère utilisé.</div> <div class="para" id="p-2887">Si le premier caractère est un <span class="process-math">\(1\text{,}\)</span> alors il doit y avoir la suite <span class="process-math">\(01\)</span> à quelque part dans les <span class="process-math">\(n-1\)</span> caractères restants. Ainsi, il reste à choisir une chaînes à <span class="process-math">\(n-1\)</span> caractères contenant la suite <span class="process-math">\(01\text{.}\)</span> Il y a <span class="process-math">\(s_{n-1}\)</span> façons d’accomplir cette tâche.</div> <div class="para" id="p-2888">Si le premier caractère utilisé est un <span class="process-math">\(0\text{,}\)</span> il faut faire plus attention. On doit encore séparer en deux cas.</div> <div class="para" id="p-2889">Tout d’abord, si la chaîne commence par <span class="process-math">\(0\text{,}\)</span> il se peut que la suite <span class="process-math">\(01\)</span> se trouve parmi les <span class="process-math">\(n-1\)</span> caractères restants. Ainsi, il reste à choisir une chaînes à <span class="process-math">\(n-1\)</span> caractères contenant la suite <span class="process-math">\(01\text{.}\)</span> Il y a <span class="process-math">\(s_{n-1}\)</span> façons d’accomplir cette tâche.</div> <div class="para" id="p-2890">Cependant, on remarque que dans le cas précédent, on ne compte pas les chaînes qui contiennent la suite <span class="process-math">\(01\)</span> uniquement dans les deux premiers caractères. On suppose donc que la suite <span class="process-math">\(01\)</span> se retouve dans la chaîne uniquement au début de celle-ci. C’est-à-dire que la chaîne commence par <span class="process-math">\(01\text{,}\)</span> mais n’a pas la suite <span class="process-math">\(01\)</span> dans les <span class="process-math">\(n-2\)</span> caractères restants. Ainsi, il reste à choisir une chaîne de <span class="process-math">\(n-2\)</span> caractères qui ne contient pas la suite <span class="process-math">\(01\text{.}\)</span> En passant par le complément, il y a <span class="process-math">\(2^{n-2}-s_{n-2}\)</span> façons d’accomplir cette tâche.</div> <div class="para" id="p-2891">Par le principe de la somme, on a <span class="process-math">\(a_n=2a_{n-1}-a_{n-2}+2^{n-2}\text{.}\)</span>
+</div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-670"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="para" id="p-2892">Trouver une expression pour <span class="process-math">\(s_n\text{.}\)</span> Puisque la relation est non homogène, on devra utiliser une solution particulière. Prendre une solution particulière de la forme <span class="process-math">\(c 2^n\text{,}\)</span> où <span class="process-math">\(c\in \R\)</span> est une constante à déterminer.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-313" id="solution-313"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-313"><div class="solution solution-like">
+<div class="para" id="p-2893">On commence par résoudre la relation homogène. On trouve alors <span class="process-math">\(s_n^{(h)}=\alpha_1 (1)^n + \alpha_2 n (1)^n= \alpha_1  + \alpha_2 n\)</span>
+</div> <div class="para logical" id="p-2894">
+<div class="para">Ensuite, on remplaçant par <span class="process-math">\(c2^n\)</span> dans la relation, on obtient</div>
+<div class="displaymath process-math" id="md-160">
+\begin{align*}
+c2^n \amp = 2(c2^{n-1}) - c2^{n-2} + 2^{n-2} \amp\amp \\
+\Rightarrow  2c \amp = 2c - c+1 \amp\amp \text{ en divisant par } 2^{n-2}\\
+\Rightarrow  c \amp = 1 \amp\amp \text{.}
+\end{align*}
+</div>
+</div> <div class="para" id="p-2895">Ainsi, on a que <span class="process-math">\(s_n = \alpha_1  + \alpha_2 n + 2^n\text{.}\)</span> À l’aide des conditions initiales, on a <span class="process-math">\(s_1=0 = \alpha_1 + \alpha_2\)</span> et <span class="process-math">\(s_2=1=\alpha_1 + 2\alpha_2\text{.}\)</span> On peut résoudre ces équations et obtenir <span class="process-math">\(\alpha_1=-1\)</span> et <span class="process-math">\(\alpha_2=1\text{.}\)</span>
+</div> <div class="para" id="p-2896">Par ce qui précède, on a <span class="process-math">\(s_n= -1 + n + 2^n\text{.}\)</span>
+</div>
+</div></div>
+</div></article></article></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-relRecLinNonHom.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

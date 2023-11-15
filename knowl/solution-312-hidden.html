@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr-CA" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para">On considère la tâche d’écrire une chaîne binaire de longueur <span class="process-math">\(n\)</span> contenant la suite <span class="process-math">\(01\text{.}\)</span> On utilise le principe de la somme selon le premier caractère utilisé.</div> <div class="para">Si le premier caractère est un <span class="process-math">\(1\text{,}\)</span> alors il doit y avoir la suite <span class="process-math">\(01\)</span> à quelque part dans les <span class="process-math">\(n-1\)</span> caractères restants. Ainsi, il reste à choisir une chaînes à <span class="process-math">\(n-1\)</span> caractères contenant la suite <span class="process-math">\(01\text{.}\)</span> Il y a <span class="process-math">\(s_{n-1}\)</span> façons d’accomplir cette tâche.</div> <div class="para">Si le premier caractère utilisé est un <span class="process-math">\(0\text{,}\)</span> il faut faire plus attention. On doit encore séparer en deux cas.</div> <div class="para">Tout d’abord, si la chaîne commence par <span class="process-math">\(0\text{,}\)</span> il se peut que la suite <span class="process-math">\(01\)</span> se trouve parmi les <span class="process-math">\(n-1\)</span> caractères restants. Ainsi, il reste à choisir une chaînes à <span class="process-math">\(n-1\)</span> caractères contenant la suite <span class="process-math">\(01\text{.}\)</span> Il y a <span class="process-math">\(s_{n-1}\)</span> façons d’accomplir cette tâche.</div> <div class="para">Cependant, on remarque que dans le cas précédent, on ne compte pas les chaînes qui contiennent la suite <span class="process-math">\(01\)</span> uniquement dans les deux premiers caractères. On suppose donc que la suite <span class="process-math">\(01\)</span> se retouve dans la chaîne uniquement au début de celle-ci. C’est-à-dire que la chaîne commence par <span class="process-math">\(01\text{,}\)</span> mais n’a pas la suite <span class="process-math">\(01\)</span> dans les <span class="process-math">\(n-2\)</span> caractères restants. Ainsi, il reste à choisir une chaîne de <span class="process-math">\(n-2\)</span> caractères qui ne contient pas la suite <span class="process-math">\(01\text{.}\)</span> En passant par le complément, il y a <span class="process-math">\(2^{n-2}-s_{n-2}\)</span> façons d’accomplir cette tâche.</div> <div class="para">Par le principe de la somme, on a <span class="process-math">\(a_n=2a_{n-1}-a_{n-2}+2^{n-2}\text{.}\)</span>
+</div>
+</div></body>
+</html>
