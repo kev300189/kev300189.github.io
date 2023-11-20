@@ -527,6 +527,18 @@ $\Box$
 </li>
 </ul>
 </li>
+<li>
+<div class="toc-item"><a href="chap-theorieGraphes.html" class="internal"><span class="codenumber">7</span> <span class="title">Théorie des graphes</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="sec-introGraphe.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction à la théorie des graphes</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-introGraphe.html#subs-defGraphe" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Les types de graphes</span></a></div></li>
+<li><div class="toc-item"><a href="sec-introGraphe.html#subs-terminologie" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Terminologie de base</span></a></div></li>
+<li><div class="toc-item"><a href="sec-introGraphe.html#subs-grapheParticulier" class="internal"><span class="codenumber">7.1.3</span> <span class="title">Quelques graphes particuliers</span></a></div></li>
+<li><div class="toc-item"><a href="sec-introGraphe.html#exo-introGraphe" class="internal"><span class="codenumber">7.1.4</span> <span class="title">Exercices</span></a></div></li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-relRecLinHom"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">6.1</span><span class="space"> </span><span class="title">Relations de récurrence linéaires homogènes</span>
@@ -1129,12 +1141,12 @@ p_5\amp=9
 <div class="para" id="p-2745">Trouver la forme générale de la suite de Fibonacci <span class="process-math">\(\{F_n\},\)</span> où <span class="process-math">\(F_{n}=F_{n-1}+F_{n-2}\)</span> pour <span class="process-math">\(n\geq 2,\)</span> et <span class="process-math">\(F_0=F_1=1\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-379" id="answer-379"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-379"><div class="answer solution-like"><span class="process-math">\(F_n=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n\)</span></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-379" id="answer-379"><span class="type">Réponse</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-379"><div class="answer solution-like"><span class="process-math">\(F_n=\left(\frac{5+\sqrt{5}}{10}\right)\left(\frac{1+\sqrt{5}}{2}\right)^n+\left(\frac{5-\sqrt{5}}{10}\right)\left(\frac{1-\sqrt{5}}{2}\right)^n\)</span></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-328"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
-<div class="para" id="p-2746">À l’aide de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-fibo.html" title="Exercice 6.1.8.9">6.1.8.9</a>, montrer que <span class="process-math">\(\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n \in\,\N\)</span> si <span class="process-math">\(n\in\,\N\text{.}\)</span>
+<div class="para" id="p-2746">À l’aide de l’exercice <a href="" class="xref" data-knowl="./knowl/exo-fibo.html" title="Exercice 6.1.8.9">6.1.8.9</a>, montrer que <span class="process-math">\(\left(\frac{5+\sqrt{5}}{10}\right)\left(\frac{1+\sqrt{5}}{2}\right)^n+\left(\frac{5-\sqrt{5}}{10}\right)\left(\frac{1-\sqrt{5}}{2}\right)^n \in\,\N\)</span> si <span class="process-math">\(n\in\,\N\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-300" id="solution-300"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-300"><div class="solution solution-like"><div class="para" id="p-2747">Par <a href="" class="xref" data-knowl="./knowl/exo-fibo.html" title="Exercice 6.1.8.9">6.1.8.9</a>, on sait que  <span class="process-math">\(\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n\)</span> est le <span class="process-math">\(n\)</span> ième terme de la suite de Fibonacci. On sait également que les termes de la suite de Fibonacci sont des entiers naturels. Ainsi,  <span class="process-math">\(\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n \in\,\N\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-300" id="solution-300"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-300"><div class="solution solution-like"><div class="para" id="p-2747">Par <a href="" class="xref" data-knowl="./knowl/exo-fibo.html" title="Exercice 6.1.8.9">6.1.8.9</a>, on sait que  <span class="process-math">\(\left(\frac{5+\sqrt{5}}{10}\right)\left(\frac{1+\sqrt{5}}{2}\right)^n+\left(\frac{5-\sqrt{5}}{10}\right)\left(\frac{1-\sqrt{5}}{2}\right)^n\)</span> est le <span class="process-math">\(n\)</span> ième terme de la suite de Fibonacci. On sait également que les termes de la suite de Fibonacci sont des entiers naturels. Ainsi,  <span class="process-math">\(\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^n-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n \in\,\N\text{.}\)</span>
 </div></div></div>
 </div></article><article class="exercise exercise-like" id="exercise-329"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
 <div class="introduction" id="introduction-253"><div class="para" id="p-2748">Pour chacune des relations de récurrences ci-dessous, trouver la solution générale respectant les conditions initiales données.</div></div>
