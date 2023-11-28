@@ -5443,7 +5443,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.1",
   "title": "Introduction à la théorie des graphes",
-  "body": "  Introduction à la théorie des graphes    La théorie des graphes est une théorie qui a été utilisée pour la première fois par le mathématicien Leonhard Euler afin de traiter le problème des sept pnts de Königsberg. La ville de Königsberg est construite autour de deux îles reliées entre elles. Six autres pnts relient les rives de la rivière à l'une des deux îles.  Euler a représenté la situation à l'aide de sommets (représentant les îles et les rives) et d'êtes (représentant les ponts). Le problème est alors de savoir s'il est possible d'effectuer une marche passant par chaque pont une seule fois.  Depuis, on a utilisé la théorie des graphes pour représenter de noumbreuses situations. Par exemple, lorsqu'on veut vérifier qu'un circuit électronique est planaire (pour savoir s'il est possible de le construire sur une carte), représenter la connection entre plusieurs ordinateurs sur un résau informatique, ou encore pour représenter un réseau téléphonique.  L'algorithme des différents moteurs de recherche utilise la théorie des graphes afin de représenter les différents sites et les liens qu'il existe entre ceux-ci. Finalement, on peut aussi penser aux applications permettant de trouver le chemin le plus rapide pour voyager en voiture, à pied ou à vélo.     Les types de graphes   Tel que mentionné plutôt, beaucoup de situations peuvent être représentées à l'aide de sommets reliés entre eux par des arêtes. Ces représentations sont des objets mathématiques appelés des graphes.  Il existe plusieurs types de graphes selon les situations qu'on veut représenter. Ici, on donne la définition de deux types de graphes différents. Ces définitions sont les définitions formelles et abstraites d'un graphe, mais il faut garder en tête qu'une des forces des graphes est qu'ils peuvent aider à visualiser les liens entre différents objets. Il est donc souvent plus utile de représenter un graphe par une figure que de travailler avec sa définition formelle.    Un graphe simple   Un graphe simple est défini à l'aide d'une paire d'ensembles et .  L'ensemble est un ensemble non-vide quelconque. On l'appel l'ensemble des sommets de .  L'ensemble est un ensemble formé de deux éléments . C'est à dire que les éléments de sont de la forme , où ( et sont des sommets de ). On dit que est l'ensemble des arêtes de .  Soit on dira que et sont les extrémités de . On dira qu'une arête conecte ses deux extrémités ensembles.     Sur la définition des graphes simples   Soit un graphe simple, par la définition de , on sait que  Les deux extrémités d'une même arête sont distincts;  L'ordre dans lequel on écrit les sommets n'a pas d'importance, car . On dit que le graphe est non-orienté;  Deux arêtes distinctes ont au moins un sommet distinct (il n'y a pas deux arêtes différentes qui relient les deux mêmes sommets).    Aussi, en général, il se peut que et soient des ensembles infinis. Cependant, nous allons principalement considérer des graphes dont l'ensemble des sommets est un ensemble fini. On dira alors que le graphe est fini.  Sauf indication contraire, un graphe sera un graphe fini.     Deux graphes   Voici deux graphes simples avec respectivement et sommets.   Deux graphes    Le graphe à sommets     Le graphe à sommets      Les arêtes du graphe sont:   Les arêtes du graphe sont:      Un graphe orienté   Un graphe orienté est défini à l'aide d'une paire d'ensembles et .  L'ensemble est un ensemble non-vide quelconque. On l'appel l'ensemble des sommets de .  L'ensemble est un couple d'éléments de . C'est à dire que les éléments de sont de la forme , où ( et sont des sommets de ). On dit que est l'ensemble des arêtes de .  Soit on dira que et sont les extrémités de . On dira aussi que est l'arête allant de vers . Finalement, on représentera à l'aide d'une flêche partant de et terminant à .     Un graphe orienté   Voici un graphe orienté à sommets.   Un graphe orienté      L'ensemble des sommets du graphe est , et les arêtes sont:      Quelques différences entre graphes simples et graphes orientés   Soit un graphe orienté, par la définition de , on sait que  Les deux extrémités d'une même arête sont distincts;  L'ordre dans lequel on écrit les sommets est important, car ;  Deux arêtes distinctes peuvent avoir les mêmes sommets, mais pas dans le même ordre, il n'y a donc pas deux arêtes différentes qui partent finissent aux mêmes sommets.    Comme pour les graphes simples, nous allons principalement considérer des graphes dont l'ensemble des sommets est un ensemble fini. On dira alors que le graphe est fini.  Sauf indication contraire, un graphe sera un graphe fini.    Finalement, dans les prochaines sections, nous allons étudier des graphes qu'on dira pondérés. Il s'agit simplement de graphes (simples ou orientés) pour lesquels on donne un poids (un nombre réel positif) à chacune des arêtes. C'est ce genre de graphes qui est utilisé pour trouver le chemin le plus cours entre deux points sur une carte.    Terminologie de base   Pour faire l'étude de graphes, on aimerait faire ressortir certaines caractéristiques de ceux-ci. Par exemple, est-il possible de tracer le graphe sans qu'aucune arête n'en croise une autre? Ou encore, est-il possible de tracer un chemin passant par toutes les arêtes une seules fois?  D'un autre côté, on aimetait également être en mesure de différencier les graphes les uns aux autres. En effet, il arrive souvent que deux graphes semblent à priori bien différents, alors qu'il s'agit en fait du même graphe.  On commence donc à regarder certaines des caractéristiques des graphes. Pour ce faire, on peut commencer par étudier individuellement chaque sommet d'un graphe. La propriété de base d'un sommet est l'ensemble des sommets avec lesquels il est relié par une arête. On peut également regarder le nombre de connections partant de ce sommet.    Voisinage et degré   Soit un graphe simple, et soit   On dira que est adjacent à , ou bien que est un voisin de dans si et sont les extrémités d'une arête de , c'est-à-dire si .  Le voisinage de noté est l'ensemble de tous les voisins de .  Soit un sous-ensemble des sommets de , on note l'union de tous les voisinages avec .  Le degré de est le nombre de voisins de .  Le degré du sommet sera noté .       Voisinage et degré  Déterminer le voisinage et le degré de chaque sommets des graphes et de l'exercice . Calculer la somme des degrés de tous les sommets de chacun des graphes.   Pour     De plus, on a    Pour     De plus, on a    En regardant l'exemple précédent, on remarque que, lorsqu'on prend la somme des degrés de tous les sommets d'une graphe, chaque arête est compté deux fois. On peut généraliser pour obtenir le théorème suivant.   Soit un graphe simple tel que à arêtes.      Combien d'arêtes y a-t-il dans un graphe de sommets ayant chacun un degré ?  Il y a arêtes.  Si est le nombre d'arêtes, on a que . Ainsi, on a bien que .    Tout graphe simple possède un nombre impair de sommets à degré impair.    Soit un graphe, on pose où et .  On suppose que et . On veut montrer que est pair.  Par la proposition , on sait que si est le nombre d'arêtes de , alors . Ainsi, on a Ainsi, on a bien que est pair.     Pour les graphes orientés, il faut adapter un peu la notion de degré.   Voisinage et degré   Soit un graphe orienté, et soit   On dira que est adjacent à , ou bien que est un voisin de dans si et sont les extrémités d'une arête de , c'est-à-dire si .  Si , on dira que est l'extrémité initiale de , alors que est l'extrémité terminale ou finale de .  Le degré entrant de , noté , est le nombre d'arêtes ayant comme extrémité terminale.  Le degré sortant de , noté , est le nombre d'arêtes ayant comme extrémité initiale.       Degré entrant et sortant  Déterminer les degrés entrants et sortants de chaque sommet du graphe orienté de l'exercice .      De plus, on remarque que . De même,    En regardant l'exemple précédent, on remarque que, lorsqu'on prend la somme des degrés entrants de tous les sommets d'une graphe, chaque arête est compté une fois. De même, lorsqu'on prend la somme des degrés sortants de tous les sommets d'une graphe, chaque arête est compté une fois. On peut généraliser pour obtenir le théorème suivant.   Soit un graphe orienté tel que à arêtes.  .     Quelques graphes particuliers   Certains graphes simples ont des formes particulières qui se retrouve dans plusieurs applications. Voici quelques exemples de classes de graphes simples.     Un graphe complet à sommets, noté est un graphe qui contient une arête entre chaque paire de sommets distincts.     Les premiers graphes complets   Voici des représentations de pour .                                           Soit Le graphe cyclique (ou le cycle) à sommets est le graphe dont les arêtes sont et .     Les premiers graphes cycliques   Voici des représentations de pour .                                 Soit La roue à sommets est le graphe défini de la façon suivante.  On part du graphe , on note ses sommets et on lui ajoute un sommet .  On ajoute ensuite les arêtes pour .     Les premières roues   Voici des représentations de pour .                               On termine avec les graphes appelés les hypercubes.   Les -Cubes version 1   On construit par récurrence, c'est-à-dire qu'on définit , et ensuite on donne une méthode pour définir à partir de .  Le graphe est l'unique graphe à sommet.  À partir de on définit de la façon suivante. On construit tout d'abord deux copies de .  Ensuite, on ajoute une arête entre chaque sommet de la première copie de vers le sommet correspondant dans la deuxième copie de .      Les premiers -cubes   Voici des représentations de pour .                                        Les points importants de cette section sont:  La définition d'un graphe simple ;  La définition du voisinage et du degré d'un sommet d'un graphe simple;  Le lien entre la somme des degrés des sommets et le nombre d'arête donné par la proposition pour un graphe simple;  La définition d'un graphe orienté ;  La définition du degré entrant et sortant d'un sommet d'un graphe orienté;  Le lien entre la somme des degrés entrants et sortants des sommets et le nombre d'arête donné par la proposition pour un graphe orienté;  Les définitions des graphes particuliers données en ;         Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.   Pour chacun des graphes ci-dessous, déterminer le degré de chaque sommet et calculer la somme des degrés de tous les sommets.    Le graphe      Le graphe       Le graphe       Le graphe      Le graphe       Le graphe       Le graphe       Le graphe       Le graphe      Le graphe       Dans les prochaines sections, nous verrons la notions d'isomorphismes de graphes. Intuitivement, deux graphes sont isomorphes s'ils représentent essentiellement le même graphe, mais sous une forme différente.  Parmi les graphes de l'exercices , est-ce qu'un certains d'entre eux semblents isomorphes? Donner une justification intuitive.    On définit de la façon suivante.  L'ensemble des sommets de est l'ensemble des chaînes binaires de longueur .  Ensuite, l'ensemble des arêtes est l'ensemble tel que pour deux sommets et , alors si et seulement si on peut obtenir la chaîne binaire à partir de la chaîne en changeant un par un ou vise-versa.  Par exemple, dans , il y a une arête entre les sommets et , mais pas entre les sommets et .  Tracer pour . À quel graphe est-ce que fait penser parmi les graphes définis dans la section ?   Soit , , , une collection d'ensembles. Le graphe d'intersection de ces ensembles est le graphe dont les sommets sont les ensembles , et il y a une arête entre deux ensembles différents et si et seulement si . Tracer le graphe d'intersection des ensembles ci-dessous.   , , , et .  , , , , .    Exercices supplémentaires    "
+  "body": "  Introduction à la théorie des graphes    La théorie des graphes est une théorie qui a été utilisée pour la première fois par le mathématicien Leonhard Euler afin de traiter le problème des sept pnts de Königsberg. La ville de Königsberg est construite autour de deux îles reliées entre elles. Six autres pnts relient les rives de la rivière à l'une des deux îles.  Euler a représenté la situation à l'aide de sommets (représentant les îles et les rives) et d'êtes (représentant les ponts). Le problème est alors de savoir s'il est possible d'effectuer une marche passant par chaque pont une seule fois.  Depuis, on a utilisé la théorie des graphes pour représenter de noumbreuses situations. Par exemple, lorsqu'on veut vérifier qu'un circuit électronique est planaire (pour savoir s'il est possible de le construire sur une carte), représenter la connection entre plusieurs ordinateurs sur un résau informatique, ou encore pour représenter un réseau téléphonique.  L'algorithme des différents moteurs de recherche utilise la théorie des graphes afin de représenter les différents sites et les liens qu'il existe entre ceux-ci. Finalement, on peut aussi penser aux applications permettant de trouver le chemin le plus rapide pour voyager en voiture, à pied ou à vélo.     Les types de graphes   Tel que mentionné plutôt, beaucoup de situations peuvent être représentées à l'aide de sommets reliés entre eux par des arêtes. Ces représentations sont des objets mathématiques appelés des graphes.  Il existe plusieurs types de graphes selon les situations qu'on veut représenter. Ici, on donne la définition de deux types de graphes différents. Ces définitions sont les définitions formelles et abstraites d'un graphe, mais il faut garder en tête qu'une des forces des graphes est qu'ils peuvent aider à visualiser les liens entre différents objets. Il est donc souvent plus utile de représenter un graphe par une figure que de travailler avec sa définition formelle.    Un graphe simple   Un graphe simple est défini à l'aide d'une paire d'ensembles et .  L'ensemble est un ensemble non-vide quelconque. On l'appel l'ensemble des sommets de .  L'ensemble est un ensemble formé de deux éléments . C'est à dire que les éléments de sont de la forme , où ( et sont des sommets de ). On dit que est l'ensemble des arêtes de .  Soit on dira que et sont les extrémités de . On dira qu'une arête conecte ses deux extrémités ensembles.     Sur la définition des graphes simples   Soit un graphe simple, par la définition de , on sait que  Les deux extrémités d'une même arête sont distincts;  L'ordre dans lequel on écrit les sommets n'a pas d'importance, car . On dit que le graphe est non-orienté;  Deux arêtes distinctes ont au moins un sommet distinct (il n'y a pas deux arêtes différentes qui relient les deux mêmes sommets).    Aussi, en général, il se peut que et soient des ensembles infinis. Cependant, nous allons principalement considérer des graphes dont l'ensemble des sommets est un ensemble fini. On dira alors que le graphe est fini.  Sauf indication contraire, un graphe sera un graphe fini.     Deux graphes   Voici deux graphes simples avec respectivement et sommets.   Deux graphes    Le graphe à sommets     Le graphe à sommets      Les arêtes du graphe sont:   Les arêtes du graphe sont:      Un graphe orienté   Un graphe orienté est défini à l'aide d'une paire d'ensembles et .  L'ensemble est un ensemble non-vide quelconque. On l'appel l'ensemble des sommets de .  L'ensemble est un couple d'éléments de . C'est à dire que les éléments de sont de la forme , où ( et sont des sommets de ). On dit que est l'ensemble des arêtes de .  Soit on dira que et sont les extrémités de . On dira aussi que est l'arête allant de vers . Finalement, on représentera à l'aide d'une flêche partant de et terminant à .     Un graphe orienté   Voici un graphe orienté à sommets.   Un graphe orienté      L'ensemble des sommets du graphe est , et les arêtes sont:      Quelques différences entre graphes simples et graphes orientés   Soit un graphe orienté, par la définition de , on sait que  Les deux extrémités d'une même arête sont distincts;  L'ordre dans lequel on écrit les sommets est important, car ;  Deux arêtes distinctes peuvent avoir les mêmes sommets, mais pas dans le même ordre, il n'y a donc pas deux arêtes différentes qui partent finissent aux mêmes sommets.    Comme pour les graphes simples, nous allons principalement considérer des graphes dont l'ensemble des sommets est un ensemble fini. On dira alors que le graphe est fini.  Sauf indication contraire, un graphe sera un graphe fini.    Finalement, dans les prochaines sections, nous allons étudier des graphes qu'on dira pondérés. Il s'agit simplement de graphes (simples ou orientés) pour lesquels on donne un poids (un nombre réel positif) à chacune des arêtes. C'est ce genre de graphes qui est utilisé pour trouver le chemin le plus cours entre deux points sur une carte.    Terminologie de base   Pour faire l'étude de graphes, on aimerait faire ressortir certaines caractéristiques de ceux-ci. Par exemple, est-il possible de tracer le graphe sans qu'aucune arête n'en croise une autre? Ou encore, est-il possible de tracer un chemin passant par toutes les arêtes une seules fois?  D'un autre côté, on aimetait également être en mesure de différencier les graphes les uns aux autres. En effet, il arrive souvent que deux graphes semblent à priori bien différents, alors qu'il s'agit en fait du même graphe.  On commence donc à regarder certaines des caractéristiques des graphes. Pour ce faire, on peut commencer par étudier individuellement chaque sommet d'un graphe. La propriété de base d'un sommet est l'ensemble des sommets avec lesquels il est relié par une arête. On peut également regarder le nombre de connections partant de ce sommet.    Voisinage et degré   Soit un graphe simple, et soit   On dira que est adjacent à , ou bien que est un voisin de dans si et sont les extrémités d'une arête de , c'est-à-dire si .  Le voisinage de noté est l'ensemble de tous les voisins de .  Soit un sous-ensemble des sommets de , on note l'union de tous les voisinages avec .  Le degré de est le nombre de voisins de .  Le degré du sommet sera noté .       Voisinage et degré  Déterminer le voisinage et le degré de chaque sommets des graphes et de l'exercice . Calculer la somme des degrés de tous les sommets de chacun des graphes.   Pour     De plus, on a    Pour     De plus, on a    En regardant l'exemple précédent, on remarque que, lorsqu'on prend la somme des degrés de tous les sommets d'une graphe, chaque arête est compté deux fois. On peut généraliser pour obtenir le théorème suivant.   Soit un graphe simple tel que à arêtes.      Combien d'arêtes y a-t-il dans un graphe de sommets ayant chacun un degré ?  Il y a arêtes.  Si est le nombre d'arêtes, on a que . Ainsi, on a bien que .    Tout graphe simple possède un nombre pair de sommets à degré impair.    Soit un graphe, on pose où et .  On suppose que et . On veut montrer que est pair.  Par la proposition , on sait que si est le nombre d'arêtes de , alors . Ainsi, on a Ainsi, on a bien que est pair.     Pour les graphes orientés, il faut adapter un peu la notion de degré.   Voisinage et degré   Soit un graphe orienté, et soit   On dira que est adjacent à , ou bien que est un voisin de dans si et sont les extrémités d'une arête de , c'est-à-dire si .  Si , on dira que est l'extrémité initiale de , alors que est l'extrémité terminale ou finale de .  Le degré entrant de , noté , est le nombre d'arêtes ayant comme extrémité terminale.  Le degré sortant de , noté , est le nombre d'arêtes ayant comme extrémité initiale.       Degré entrant et sortant  Déterminer les degrés entrants et sortants de chaque sommet du graphe orienté de l'exercice .      De plus, on remarque que . De même,    En regardant l'exemple précédent, on remarque que, lorsqu'on prend la somme des degrés entrants de tous les sommets d'une graphe, chaque arête est compté une fois. De même, lorsqu'on prend la somme des degrés sortants de tous les sommets d'une graphe, chaque arête est compté une fois. On peut généraliser pour obtenir le théorème suivant.   Soit un graphe orienté tel que à arêtes.  .     Quelques graphes particuliers   Certains graphes simples ont des formes particulières qui se retrouve dans plusieurs applications. Voici quelques exemples de classes de graphes simples.     Un graphe complet à sommets, noté est un graphe qui contient une arête entre chaque paire de sommets distincts.     Les premiers graphes complets   Voici des représentations de pour .                                           Soit Le graphe cyclique (ou le cycle) à sommets est le graphe dont les arêtes sont et .     Les premiers graphes cycliques   Voici des représentations de pour .                                 Soit La roue à sommets est le graphe défini de la façon suivante.  On part du graphe , on note ses sommets et on lui ajoute un sommet .  On ajoute ensuite les arêtes pour .     Les premières roues   Voici des représentations de pour .                               On termine avec les graphes appelés les hypercubes.   Les -Cubes version 1   On construit par récurrence, c'est-à-dire qu'on définit , et ensuite on donne une méthode pour définir à partir de .  Le graphe est l'unique graphe à sommet.  À partir de on définit de la façon suivante. On construit tout d'abord deux copies de .  Ensuite, on ajoute une arête entre chaque sommet de la première copie de vers le sommet correspondant dans la deuxième copie de .      Les premiers -cubes   Voici des représentations de pour .                                        Les points importants de cette section sont:  La définition d'un graphe simple ;  La définition du voisinage et du degré d'un sommet d'un graphe simple;  Le lien entre la somme des degrés des sommets et le nombre d'arête donné par la proposition pour un graphe simple;  La définition d'un graphe orienté ;  La définition du degré entrant et sortant d'un sommet d'un graphe orienté;  Le lien entre la somme des degrés entrants et sortants des sommets et le nombre d'arête donné par la proposition pour un graphe orienté;  Les définitions des graphes particuliers données en ;         Exercices    À faire en classe  Ces exercices sont faits pour travailler en classe. Ils servent à approfondir les notions de la section et à atteindre les objectifs d'apprentissage plus avancés.   Pour chacun des graphes ci-dessous, déterminer le degré de chaque sommet et calculer la somme des degrés de tous les sommets.    Le graphe      Le graphe       Le graphe       Le graphe      Le graphe       Le graphe       Le graphe       Le graphe       Le graphe      Le graphe       Dans les prochaines sections, nous verrons la notions d'isomorphismes de graphes. Intuitivement, deux graphes sont isomorphes s'ils représentent essentiellement le même graphe, mais sous une forme différente.  Parmi les graphes de l'exercices , est-ce qu'un certains d'entre eux semblents isomorphes? Donner une justification intuitive.    On définit de la façon suivante.  L'ensemble des sommets de est l'ensemble des chaînes binaires de longueur .  Ensuite, l'ensemble des arêtes est l'ensemble tel que pour deux sommets et , alors si et seulement si on peut obtenir la chaîne binaire à partir de la chaîne en changeant un par un ou vise-versa.  Par exemple, dans , il y a une arête entre les sommets et , mais pas entre les sommets et .  Tracer pour . À quel graphe est-ce que fait penser parmi les graphes définis dans la section ?   Soit , , , une collection d'ensembles. Le graphe d'intersection de ces ensembles est le graphe dont les sommets sont les ensembles , et il y a une arête entre deux ensembles différents et si et seulement si . Tracer le graphe d'intersection des ensembles ci-dessous.   , , , et .  , , , , .    Exercices supplémentaires    "
 },
 {
   "id": "def-graphSimple",
@@ -5542,7 +5542,7 @@ var ptx_lunr_docs = [
   "type": "Corollaire",
   "number": "7.1.13",
   "title": "",
-  "body": " Tout graphe simple possède un nombre impair de sommets à degré impair.    Soit un graphe, on pose où et .  On suppose que et . On veut montrer que est pair.  Par la proposition , on sait que si est le nombre d'arêtes de , alors . Ainsi, on a Ainsi, on a bien que est pair.    "
+  "body": " Tout graphe simple possède un nombre pair de sommets à degré impair.    Soit un graphe, on pose où et .  On suppose que et . On veut montrer que est pair.  Par la proposition , on sait que si est le nombre d'arêtes de , alors . Ainsi, on a Ainsi, on a bien que est pair.    "
 },
 {
   "id": "def-DegreOriente",
@@ -5678,6 +5678,285 @@ var ptx_lunr_docs = [
   "number": "7.1.4.4",
   "title": "",
   "body": " Soit , , , une collection d'ensembles. Le graphe d'intersection de ces ensembles est le graphe dont les sommets sont les ensembles , et il y a une arête entre deux ensembles différents et si et seulement si . Tracer le graphe d'intersection des ensembles ci-dessous.   , , , et .  , , , , . "
+},
+{
+  "id": "sec-propGraphes",
+  "level": "1",
+  "url": "sec-propGraphes.html",
+  "type": "Section",
+  "number": "7.2",
+  "title": "Propriétés des graphes",
+  "body": "  Propriétés des graphes    À l'exemple de la section précédente, on a remarqué qu'on pouvait décrire le même graphe de plusieurs façons. On aimerait donc pouvoir être en mesure de déterminer si, lorsqu'on considère deux graphes, est-ce que ceux-ci sont équivalents.  Pour cela, on doit développer le concepte d'isomorphisme. Ce concepte est présent dans toutes les branches des mathématiques. En fait, ce concepte est tellement fondamental en mathématique, que les mathématiciens on même généralisé cette idée au point de définir toutes les branches des mathématiques à l'aide de morphismes (voir la théorie des catégories!).  Avant de parler d'isomorphisme, on va définir certaines caractéristiques des graphes. Celles-ci nous permetrons, entre autre, de différencier certains graphes les uns des autres.  Finalement, on verra aussi comment on peut créer un graphe à partir de graphes déjà connus.     Graphes bipartis et coloration des graphes   L'une des applications récentes de la théories des graphes est la représentation d'énormes réseaux d'informations tels que les réseaux sociaux. Dans ce cas, les usagers sont représentés par des sommets, et les liens entre les usagers sont représentés par des arêtes. L'étude de ces graphes fait l'objet de beaucoups de recherche présentement.  Dans plusieurs situations, il arrive qu'on puisse distinguer deux types de sommets différents. Par exemple, on pourrait construire un graphe où les sommets représentent les utilisateurs d'Amazon, ainsi que les produits vendus sur le site. Dans ce cas, il y a une arête entre un utilisateur et un produit si l'utilisateur à déjà acheté le produit. Il n'y a donc aucun lien possible entre deux utilisateurs ou entre deux produits. Les graphes de ce type sont appellés des graphes bipartis.  On considère ici un exemple plus simple d'utilisation d'un graphe biparti, pour ensuite en donner la définition.     On considère une petite compagnie de quatre employés qui travaille sur un projet quelconque. Pour terminer le projet, les employés doivent accomplir six tâches différentes. De plus, chaque employé est seulement formé à l'accomplissement de certaines tâches.  On peut représenté la situation à l'aide d'un graphe , où est l'ensemble des employés et des tâches à acomplir. Il y aura une arête entre l'employé et la tâche si est formé pour accomplir .   Représentation du projet par le graphe       Graphe biparti   Une graphe est appelé un graphe biparti si on peut écrire l'ensemble des sommets comme l'union disjointe de deux sous-ensemble et telle que chaque arête de a une extrémité dans et une extrémité dans .  Ainsi, est biparti si avec , et si pour tout , on a que si et seulement si .     Un graphe biparti   Le graphe cyclique est un graphe biparti. On peut le voir à l'aide de la représention de ci dessous, en posant et .   Le graphe       Reconnaître un graphe bipartie   Pour déterminer si un graphe est bipartie, on peut choisir aléatoirement un premier sommet et décider de mettre dans .  Ensuite, on place tout le voisinage de dans . Pour chacun des sommets ajoutés dans , on place leur voisinage dans .  On poursuit cette procédure jusqu'à ce que chaque sommet soit dans un seul des (et donc que le graphe est biparti), ou jusqu'à ce qu'un sommet soit dans et (et donc le graphe n'est pas biparti).  En procédant ainsi, on peut voir que le graphe ci-dessous est biparti, mais pas le graphe .   Deux graphes bipartis?    Le graphe est bipartie     Le graphe n'est pas biparti        Pour illustrer la procédure utilisée dans l'exemple précédent, on peut colorier les sommets d'un graphe, en s'assurant que tous les sommets qui sont voisins soient d'une couleur différente.  Un graphe sera alors biparti si et seulement si on peut faire une telle coloration en utilisant deux couleurs. De façon général, on peut résoudre certains procblèmes ou bien différentier certains graphes en déterminant le nombre de couleurs minimal qu'on doit utiliser pour colorier un graphe.   Coloration d'un graphe   La coloration d'un graphe consiste à attribuer une couleur à chacun de ses sommets de manière à ce que deux sommets adjacents soient d'une couleur différente.  Plus formellement, on peut définir une coloration d'un graphe comme une fonction ou est un ensemble de couleurs, tel que si est une arête de , alors .     Une coloration de  Voici une coloration à deux couleurs de .  Coloration à deux couleurs de       Coloration et graphe biparti   Un graphe est un graphe biparti si et seulement si il exsite une coloration à deux couleurs de .     Coloration à deux couleurs et graphes bipartis   En essayant de colorier les graphes de l'exemple avec un minimum de couleur, on obtient les colorations suivantes.   Deux graphes bipartis? Prise deux.    Le graphe est bipartie     Le graphe n'est pas biparti      On voit donc que est biparti, mais pas .    Finalement, on définit une nouvelle famille de graphes, les graphes bipartis complets.    Le graphe biparti complet est un graphe dont l'enemble des sommets est séparé en sous-ensembles, et , qui ont respectivement et sommets. De plus, est une arête de si et seulement si et .    Voici quelques graphes bipartis complets.    Les graphes , et .   Graphes bipartis complets                      Graphes issus d'autres graphes   Un peu comme avec les ensembles, il est possible de former de nouveaux graphes à partir de graphes existants. Tout d'abord, on peut considérer les sous-graphes d'un graphe . Ensuite, on regarde comment on peut transformer un graphe en ajoutant ou en retirant des arêtes d'un graphe. Finalement, on considère l'union de deux graphes.     Soit un graphe , on dira que le graphe est un sous-graphe de si et .     Soit le graphe ci-dessous, les graphes et suivants sont des sous-graphes de .   Un graphe et des sous-graphes                    Étant donné un graphe et un sous-ensemble de sommets , on aimerait considérer le sous-graphe de le plus complet possible formé à partir des sommets de . C'est ce qu'on appelle le sous-graphe de induit par .    Soit un graphe et soit , le sous-graphe induit par est le sous-graphe , où et pour , on a que si et seulement si .     Soit le graphe défini à l'exemple , déterminer le sous-graphe induit par .        On regarde maintenant comment on peut ajouter ou retirer des arêtes d'un graphe.    Soit un graphe et , le sous graphe est le graphe dont les sommets sont et les arêtes sont . C'est-à-dire que .      Soit le graphe représenté ci-dessous, déterminer , où est l'arête   Le graphe        Le graphe        Soit un graphe et , où et sont des sommets de , le graphe est le graphe dont les sommets sont et les arêtes sont . C'est-à-dire que .      Soit le graphe défini à l'exemple , déterminer , où est l'arête .     Le graphe        L'union des graphes et , qu'on note , est le graphe de sommets et d'arêtes .      Soit et les graphes représentés ci-dessous, déterminer .   Deux graphes                 L'union de deux graphes        Isomorphismes de graphes   On est finalement prêt à donner une définition rigoureuse du fait que deux graphes qui sont décrits différemment peuvent en fait représenter le même graphe.    Soit et deux graphes. On dit que et sont isomorphes si il existe une fonction telle que:  est une bijection;  les sommets et sont adjacents dans si et seulement si et sont adjacents dans .  On dira alors que est un isomorphisme de graphe.    Lorsque deux graphes sont isomorphes, ceci veut dire que ces deux graphes représente en fait exactement le même graphe, qu'on a peut-être décrit différemment. En particulier, deux graphes isomorphes ont exactement les mêmes propriétés. De même, les sommets correspondant ont également les mêmes propriétés.    Soit un isomorphisme entre les graphes et .   Pour tout sommet de alors .      Il existe une coloration à couleurs de si et seulement si il existe une coloration à couleurs de .       On peut montrer que les deux graphes ci-dessous ne sont pas isomorphes, car il existe une coloration à deux couleurs pour le graphe mais il faut trois couleurs pour une coloration de .   Deux graphes non isomorphes               Voici des colorations de ces graphes   Coloration pour différencier des graphes                 Voici un exemple de deux graphes qui sont isomorphes.    Les deux graphes ci-dessous sont isomorphes. On peut donner un isomorphisme allant des sommets de vers les sommets de comme ceci:    Graphes isomorphes                 Une autre paire de graphes qui sont isomorphes    Les deux graphes ci-dessous sont isomorphes. On peut donner un isomorphisme allant des sommets de vers les sommets de comme ceci:    Graphes isomorphes                        Ces questions sont à faire avant de venir en classe et à remettre au début du cours.    Pour quelles valeurs de est-ce que les graphes sont bipartis.    Est-ce que les graphes ci-dessous sont bipartis? Si oui, justifier.                      Combien existe-t-il de sous-graphes de ?    Représenter l'union des paires de gaphes ci-dessous.    Union de graphes                 Union de graphes                Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative.   "
+},
+{
+  "id": "example-133",
+  "level": "2",
+  "url": "sec-propGraphes.html#example-133",
+  "type": "Exemple",
+  "number": "7.2.1",
+  "title": "",
+  "body": "  On considère une petite compagnie de quatre employés qui travaille sur un projet quelconque. Pour terminer le projet, les employés doivent accomplir six tâches différentes. De plus, chaque employé est seulement formé à l'accomplissement de certaines tâches.  On peut représenté la situation à l'aide d'un graphe , où est l'ensemble des employés et des tâches à acomplir. Il y aura une arête entre l'employé et la tâche si est formé pour accomplir .   Représentation du projet par le graphe     "
+},
+{
+  "id": "def-grapheBi",
+  "level": "2",
+  "url": "sec-propGraphes.html#def-grapheBi",
+  "type": "Définition",
+  "number": "7.2.3",
+  "title": "Graphe biparti.",
+  "body": " Graphe biparti   Une graphe est appelé un graphe biparti si on peut écrire l'ensemble des sommets comme l'union disjointe de deux sous-ensemble et telle que chaque arête de a une extrémité dans et une extrémité dans .  Ainsi, est biparti si avec , et si pour tout , on a que si et seulement si .   "
+},
+{
+  "id": "exe-grapheBi",
+  "level": "2",
+  "url": "sec-propGraphes.html#exe-grapheBi",
+  "type": "Exemple",
+  "number": "7.2.4",
+  "title": "Un graphe biparti.",
+  "body": " Un graphe biparti   Le graphe cyclique est un graphe biparti. On peut le voir à l'aide de la représention de ci dessous, en posant et .   Le graphe     "
+},
+{
+  "id": "exe-grapheYesNoBi",
+  "level": "2",
+  "url": "sec-propGraphes.html#exe-grapheYesNoBi",
+  "type": "Exemple",
+  "number": "7.2.6",
+  "title": "Reconnaître un graphe bipartie.",
+  "body": " Reconnaître un graphe bipartie   Pour déterminer si un graphe est bipartie, on peut choisir aléatoirement un premier sommet et décider de mettre dans .  Ensuite, on place tout le voisinage de dans . Pour chacun des sommets ajoutés dans , on place leur voisinage dans .  On poursuit cette procédure jusqu'à ce que chaque sommet soit dans un seul des (et donc que le graphe est biparti), ou jusqu'à ce qu'un sommet soit dans et (et donc le graphe n'est pas biparti).  En procédant ainsi, on peut voir que le graphe ci-dessous est biparti, mais pas le graphe .   Deux graphes bipartis?    Le graphe est bipartie     Le graphe n'est pas biparti       "
+},
+{
+  "id": "def-colorationGraphe",
+  "level": "2",
+  "url": "sec-propGraphes.html#def-colorationGraphe",
+  "type": "Définition",
+  "number": "7.2.8",
+  "title": "Coloration d’un graphe.",
+  "body": " Coloration d'un graphe   La coloration d'un graphe consiste à attribuer une couleur à chacun de ses sommets de manière à ce que deux sommets adjacents soient d'une couleur différente.  Plus formellement, on peut définir une coloration d'un graphe comme une fonction ou est un ensemble de couleurs, tel que si est une arête de , alors .   "
+},
+{
+  "id": "exe-colCycle6",
+  "level": "2",
+  "url": "sec-propGraphes.html#exe-colCycle6",
+  "type": "Exemple",
+  "number": "7.2.9",
+  "title": "Une coloration de <span class=\"process-math\">\\(C_6\\)<\/span>.",
+  "body": " Une coloration de  Voici une coloration à deux couleurs de .  Coloration à deux couleurs de     "
+},
+{
+  "id": "prop-colorBiparti",
+  "level": "2",
+  "url": "sec-propGraphes.html#prop-colorBiparti",
+  "type": "Proposition",
+  "number": "7.2.11",
+  "title": "Coloration et graphe biparti.",
+  "body": " Coloration et graphe biparti   Un graphe est un graphe biparti si et seulement si il exsite une coloration à deux couleurs de .   "
+},
+{
+  "id": "exe-colorBiparti",
+  "level": "2",
+  "url": "sec-propGraphes.html#exe-colorBiparti",
+  "type": "Exemple",
+  "number": "7.2.12",
+  "title": "Coloration à deux couleurs et graphes bipartis.",
+  "body": " Coloration à deux couleurs et graphes bipartis   En essayant de colorier les graphes de l'exemple avec un minimum de couleur, on obtient les colorations suivantes.   Deux graphes bipartis? Prise deux.    Le graphe est bipartie     Le graphe n'est pas biparti      On voit donc que est biparti, mais pas .   "
+},
+{
+  "id": "def-graphBipartiComplet",
+  "level": "2",
+  "url": "sec-propGraphes.html#def-graphBipartiComplet",
+  "type": "Définition",
+  "number": "7.2.14",
+  "title": "",
+  "body": "  Le graphe biparti complet est un graphe dont l'enemble des sommets est séparé en sous-ensembles, et , qui ont respectivement et sommets. De plus, est une arête de si et seulement si et .   "
+},
+{
+  "id": "example-138",
+  "level": "2",
+  "url": "sec-propGraphes.html#example-138",
+  "type": "Exemple",
+  "number": "7.2.15",
+  "title": "",
+  "body": "  Les graphes , et .   Graphes bipartis complets                   "
+},
+{
+  "id": "def-sousGraphe",
+  "level": "2",
+  "url": "sec-propGraphes.html#def-sousGraphe",
+  "type": "Définition",
+  "number": "7.2.17",
+  "title": "",
+  "body": "  Soit un graphe , on dira que le graphe est un sous-graphe de si et .   "
+},
+{
+  "id": "ex-sousGraphe",
+  "level": "2",
+  "url": "sec-propGraphes.html#ex-sousGraphe",
+  "type": "Exemple",
+  "number": "7.2.18",
+  "title": "",
+  "body": " Soit le graphe ci-dessous, les graphes et suivants sont des sous-graphes de .   Un graphe et des sous-graphes                   "
+},
+{
+  "id": "def-sousGrapheInduit",
+  "level": "2",
+  "url": "sec-propGraphes.html#def-sousGrapheInduit",
+  "type": "Définition",
+  "number": "7.2.20",
+  "title": "",
+  "body": "  Soit un graphe et soit , le sous-graphe induit par est le sous-graphe , où et pour , on a que si et seulement si .   "
+},
+{
+  "id": "example-140",
+  "level": "2",
+  "url": "sec-propGraphes.html#example-140",
+  "type": "Exemple",
+  "number": "7.2.21",
+  "title": "",
+  "body": " Soit le graphe défini à l'exemple , déterminer le sous-graphe induit par .       "
+},
+{
+  "id": "def-retraitArete",
+  "level": "2",
+  "url": "sec-propGraphes.html#def-retraitArete",
+  "type": "Définition",
+  "number": "7.2.23",
+  "title": "",
+  "body": "  Soit un graphe et , le sous graphe est le graphe dont les sommets sont et les arêtes sont . C'est-à-dire que .   "
+},
+{
+  "id": "ex-retraitArete",
+  "level": "2",
+  "url": "sec-propGraphes.html#ex-retraitArete",
+  "type": "Exemple",
+  "number": "7.2.24",
+  "title": "",
+  "body": "  Soit le graphe représenté ci-dessous, déterminer , où est l'arête   Le graphe        Le graphe     "
+},
+{
+  "id": "def-ajoutArete",
+  "level": "2",
+  "url": "sec-propGraphes.html#def-ajoutArete",
+  "type": "Définition",
+  "number": "7.2.27",
+  "title": "",
+  "body": "  Soit un graphe et , où et sont des sommets de , le graphe est le graphe dont les sommets sont et les arêtes sont . C'est-à-dire que .   "
+},
+{
+  "id": "example-142",
+  "level": "2",
+  "url": "sec-propGraphes.html#example-142",
+  "type": "Exemple",
+  "number": "7.2.28",
+  "title": "",
+  "body": "  Soit le graphe défini à l'exemple , déterminer , où est l'arête .     Le graphe     "
+},
+{
+  "id": "def-unionGraphe",
+  "level": "2",
+  "url": "sec-propGraphes.html#def-unionGraphe",
+  "type": "Définition",
+  "number": "7.2.30",
+  "title": "",
+  "body": "  L'union des graphes et , qu'on note , est le graphe de sommets et d'arêtes .   "
+},
+{
+  "id": "example-143",
+  "level": "2",
+  "url": "sec-propGraphes.html#example-143",
+  "type": "Exemple",
+  "number": "7.2.31",
+  "title": "",
+  "body": "  Soit et les graphes représentés ci-dessous, déterminer .   Deux graphes                 L'union de deux graphes     "
+},
+{
+  "id": "def-isoGraphe",
+  "level": "2",
+  "url": "sec-propGraphes.html#def-isoGraphe",
+  "type": "Définition",
+  "number": "7.2.34",
+  "title": "",
+  "body": " Soit et deux graphes. On dit que et sont isomorphes si il existe une fonction telle que:  est une bijection;  les sommets et sont adjacents dans si et seulement si et sont adjacents dans .  On dira alors que est un isomorphisme de graphe.   "
+},
+{
+  "id": "prop-isoGraphe",
+  "level": "2",
+  "url": "sec-propGraphes.html#prop-isoGraphe",
+  "type": "Proposition",
+  "number": "7.2.35",
+  "title": "",
+  "body": "  Soit un isomorphisme entre les graphes et .   Pour tout sommet de alors .      Il existe une coloration à couleurs de si et seulement si il existe une coloration à couleurs de .    "
+},
+{
+  "id": "exe-nonIso",
+  "level": "2",
+  "url": "sec-propGraphes.html#exe-nonIso",
+  "type": "Exemple",
+  "number": "7.2.36",
+  "title": "",
+  "body": "  On peut montrer que les deux graphes ci-dessous ne sont pas isomorphes, car il existe une coloration à deux couleurs pour le graphe mais il faut trois couleurs pour une coloration de .   Deux graphes non isomorphes               Voici des colorations de ces graphes   Coloration pour différencier des graphes                "
+},
+{
+  "id": "exe-ouiIso",
+  "level": "2",
+  "url": "sec-propGraphes.html#exe-ouiIso",
+  "type": "Exemple",
+  "number": "7.2.39",
+  "title": "",
+  "body": "  Les deux graphes ci-dessous sont isomorphes. On peut donner un isomorphisme allant des sommets de vers les sommets de comme ceci:    Graphes isomorphes                "
+},
+{
+  "id": "exe-ouiIso2",
+  "level": "2",
+  "url": "sec-propGraphes.html#exe-ouiIso2",
+  "type": "Exemple",
+  "number": "7.2.41",
+  "title": "",
+  "body": "  Les deux graphes ci-dessous sont isomorphes. On peut donner un isomorphisme allant des sommets de vers les sommets de comme ceci:    Graphes isomorphes                "
+},
+{
+  "id": "exercise-350",
+  "level": "2",
+  "url": "sec-propGraphes.html#exercise-350",
+  "type": "Question de compréhension",
+  "number": "7.2.4.1",
+  "title": "",
+  "body": " Pour quelles valeurs de est-ce que les graphes sont bipartis.  "
+},
+{
+  "id": "exercise-351",
+  "level": "2",
+  "url": "sec-propGraphes.html#exercise-351",
+  "type": "Question de compréhension",
+  "number": "7.2.4.2",
+  "title": "",
+  "body": " Est-ce que les graphes ci-dessous sont bipartis? Si oui, justifier.                    "
+},
+{
+  "id": "exercise-352",
+  "level": "2",
+  "url": "sec-propGraphes.html#exercise-352",
+  "type": "Question de compréhension",
+  "number": "7.2.4.3",
+  "title": "",
+  "body": " Combien existe-t-il de sous-graphes de ?  "
+},
+{
+  "id": "exercise-353",
+  "level": "2",
+  "url": "sec-propGraphes.html#exercise-353",
+  "type": "Question de compréhension",
+  "number": "7.2.4.4",
+  "title": "",
+  "body": " Représenter l'union des paires de gaphes ci-dessous.    Union de graphes                 Union de graphes               "
+},
+{
+  "id": "exercise-354",
+  "level": "2",
+  "url": "sec-propGraphes.html#exercise-354",
+  "type": "Question de compréhension",
+  "number": "7.2.4.5",
+  "title": "",
+  "body": "Noter toute question qui demeure suite à la lecture de la section et la résolution des exercices ci-dessus ou toute précision\/clarification à apporter. Note: cette question est facultative. "
 }
 ]
 
